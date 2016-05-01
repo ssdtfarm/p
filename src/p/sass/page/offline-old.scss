@@ -1,0 +1,1079 @@
+//layout
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/common-head.scss";    // main-head
+//@import "../components/common-crumbs.scss";  // main-breadcrumb-trail
+@import "../components/common-foot.scss";  // global-footer
+@import "../components/common-search-bar.scss";     // head-search-bar
+@import "../components/common-ads.scss";    // comment-ad style
+@import "../components/common-slider-3d.scss";
+
+@import "../components/common-dialog.scss";    // art-dialog
+
+.main-aside-menu {
+    display: none;
+}
+.page-wrap {
+    width: 1190px;
+    margin: 0 auto;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_content .ui_map_info {
+    padding: 0 0 0px 15px;
+    line-height: 24px;
+    color: #333;
+    font-size: 12px;
+}
+
+/*layout*/
+.mt25{margin-top: 25px;}
+.warp-all {
+    width: 1000px;
+    margin: 0 auto;
+}
+.warp-all_j {
+    width: 1190px;
+    margin: 0 auto;
+}
+.ui-warp-all-j {
+    width: 1190px;
+    margin:50px auto;
+}
+/*oomment*/
+.dis-none{
+    display:none;
+}
+
+.ui-offline-map {
+    position:relative;
+    width: 840px;
+    height: 532px;
+    background: pink;
+}
+
+.ui-offline-map-container{
+    
+    width:840px;
+    height:532px;
+    overflow:hidden;
+}
+.ui-offline-map-logo{
+    position:absolute;
+    z-index:999;
+    left:50%;
+    top:0;
+    width:300px;
+    height:52px;
+    text-align:center;
+    color:#fff;
+    margin:0 0 0 -150px;
+    background:url(../images/map_spire.png) left top no-repeat;
+}
+.ui-offline-map-logo h2{
+    font-size:18px;
+    line-height:30px;
+    font-family:"Microsoft Yahei";
+}
+.ui-offline-map-logo p{
+    line-height:18px;
+    font-family:Arial;
+}
+
+
+.ui-map-control-panel{
+    width:320px;
+    height:266px;
+    padding:20px 10px 20px 10px;
+    background-color:#ffc299;
+}
+.ui-map-selected{
+    position:absolute;
+    z-index:990;
+    left:0;
+    top:3px;
+    display:inline-block;
+    width:100%;
+    height:24px;
+    overflow:hidden;
+    line-height:24px;
+    color:#8c8c8c;
+    text-indent:10px;
+}
+.w143{
+    width:143px;
+}
+.w280{
+    width:280px;
+}
+.ui-map-conrtol-panel-select{
+    position:relative;
+    display:block;
+    width: 148px;
+    height:28px;
+    line-height:28px;
+    margin-right: 10px;
+    border: 1px solid #f60;
+    border-radius:4px;  
+    background: #fff;
+}
+.ui-map-conrtol-panel-select .map-conrtol-select-lable{
+    display: inline-block;
+    position: absolute;
+    z-index: 9988;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+}
+.ui-map-conrtol-panel-select ul{
+    width: 100%;
+    position:absolute;
+    z-index:999;
+    left:0px;
+    top:28px;
+    display:none;
+}
+.ui-map-conrtol-panel-select ul li{
+    width:100%;
+    height:30px;
+    overflow:hidden;
+    line-height:30px;
+    color:#8c8c8c;
+    line-height:27px;
+    text-indent:10px;
+    cursor:pointer;
+    background-color:#fff;
+}
+.ui-map-conrtol-panel-select ul li:hover{
+    background-color:#ccc;
+}
+.w310 {
+    width:310px;
+}
+.mb22 {
+    margin-bottom: 22px;
+}
+.ui-map-search-btn{
+    display:inline-block;
+    
+    height:30px;
+    margin:10px 0 0 0;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    border-radius:4px;
+    background-color:#ff6600;
+}
+.ui-map-search-btn:hover{
+    background-color:#ee950a;
+    color:#fff;
+    text-decoration:none;
+}
+.ui-map-text-tr{
+    height:36px;
+    line-height:36px;
+    font-size: 14px;
+    color:#333;
+}
+/*send msm*/
+.ui-map-send-sms{
+    width:100%;
+    height:30px;
+    text-align:right;
+}
+.ui-map-send-sms-btn{
+    display:inline-block;   
+    width:145px;
+    height:30px;
+    overflow:hidden;
+    line-height:30px;
+    color:#fff;
+    text-decoration:none;
+    text-indent:28px;
+    text-align:left;
+    border-radius:4px;
+    background:url(../images/map_spire.png) left -232px no-repeat;
+}
+.ui-map-send-sms-btn:hover{
+    text-decoration:none;
+    color:#fff;
+    background:url(../images/map_spire.png) left -272px no-repeat;
+}
+.ui-addr-select-1-choosed-icon,.ui-addr-select-2-choosed-icon{
+    position: absolute;
+    z-index:991;
+    top: 1px;
+    right: 0px;
+    display: block;
+    width:28px;
+    height:26px;
+    cursor:pointer;
+    background: url(../images/map_spire.png) no-repeat 0px -58px;
+}
+
+
+.ui-map-newlist{
+    padding: 17px 0  0 12px;
+    height: 207px;
+    overflow:hidden;
+    dt{
+        height:34px;
+        line-height: 34px;
+        color:#333;
+        font-size:14px;
+    }
+    dd {
+        height: 32px;
+        line-height: 32px;
+        border-bottom: 1px dashed #ffcaa6;
+
+    }
+    a {
+        color: #333;
+        padding-left: 12px;
+        &:before {
+            content:"";
+            position: absolute;
+            margin-left: -12px;
+            margin-top: 10px;
+            width: 5px;
+            height: 10px;
+            background: url(../images/offline-icon.png) no-repeat -3px -377px;
+        }
+        &:hover {
+            color: #f60;
+            &:before {
+                background-position: -19px -377px;
+            }
+        }
+    }
+}
+
+
+
+
+.ui-offline-map-control {
+    width: 340px;
+    height: 532px;
+    margin-left: 10px;
+}
+.ui-offline-map-control-top{
+    width: 340px;
+    height: 211px;
+    background: #ffc299;
+}
+
+.ui-offline-map-control-top-nearest{
+    padding: 30px 0 0 20px;
+    width: 300px;
+    height: 152px;
+}
+.ui-addr-select-1,.ui-addr-select-2{
+    cursor: pointer;
+    height: 30px;
+    color: #8c8c8c;
+}
+.ui-addr-select-1{
+    width: 150px;   
+}
+.ui-addr-select-2{
+    width: 140px;
+}
+.ui-addr-select-1-choosed,.ui-addr-select-2-choosed{
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #ccc;
+    border-top: 2px solid #bcbcbc;
+    border-radius: 4px;
+    background: #fff;
+}
+.ui-addr-select-1-choosed{
+    width: 135px;
+}
+.ui-addr-select-2-choosed{
+    width: 125px;
+}
+.ui-offline-HotSpot {
+    width: 1190px;
+    height: 266px
+}
+.ui-offline-HotSpot .left {
+    width: 906px;
+    height: 266px
+}
+.ui-offline-HotSpot-goods {
+    position: relative;
+    float: left;
+    width: 290px;
+    height: 264px;
+    border: 1px solid #fff;
+    margin-right: 10px
+}
+.ui-offline-HotSpot-goods:hover {
+    border-color: #f60
+}
+.ui-offline-HotSpot-goods .pic img {
+    position: relative;
+    z-index: 2;
+    width: 288px;
+    height: 191px;
+    border: 1px solid #ccc
+}
+a {
+    color: #8c8c8c; 
+}
+.ui-offline-HotSpot-goods .name {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 9;
+    font-size: 12px;
+    line-height: 20px;
+}
+.ui-offline-HotSpot-goods .name a:hover {
+    color: #f60
+}
+.ui-offline-HotSpot-goods .name .brand {
+    font-style: normal;
+    color: #fff;
+    background: #f60;
+    padding: 3px;
+    margin-right: 5px;
+    border-radius: 2px
+}
+.ui-offline-HotSpot-goods .name .brand:hover{
+    color: #fff;
+    background: #ee950a;
+    text-decoration:none;
+}
+
+.ui-offline-HotSpot-goods .price {
+    text-align: center
+}
+.ui-offline-HotSpot-goods .price b {
+    font-size: 16px;
+    color: #f60
+}
+.ui-offline-HotSpot-goods .price em {
+    color: #8c8c8c;
+    font-style: normal;
+    text-decoration: line-through;
+    margin-left: 7px
+}
+.ui-offline-HotSpot-more {
+    margin-left: 8px
+}
+.ui-offline-HotSpot-more a {
+    background: url(../images/offline_index_bg_more.png) no-repeat 0 0;
+    width: 276px;
+    height: 265px;
+    display: block
+}
+.ui-offline-HotSpot-more a:hover {
+    background-position: 0 -266px
+}
+.ui-offline-NewExp{
+    overflow: hidden;
+}
+.ui-offline-NewExp-AD {
+    position: relative
+}
+.ui-offline-NewExp-AD img {
+    width: 290px;
+    height: 400px
+}
+.ui-offline-NewExp-more {
+    position: absolute;
+    bottom: 28px;
+    left: 74px;
+    display: inline-block;
+    background: url(../images/offline_index_bg_more.png) no-repeat 0 -531px;
+    width: 140px;
+    height: 40px
+}
+.ui-offline-NewExp-AD:hover .ui-offline-NewExp-more {
+    background-position: 0 -571px
+}
+.ui-offline-NewExp .right {
+    width: 890px;
+    height: 400px;
+    margin-left: 10px
+}
+.ui-offline-NewExp-goods-1 {
+    position: relative;
+    z-index: 990;
+    width: 187px;
+    height: 400px;
+    padding-left: 10px
+}
+.ui-offline-NewExp-goods-1 .pichref {
+    position: relative;
+    display: block;
+    margin: 20px 0 0 6px;
+    width: 200px;
+    height: 192px;
+}
+.ui-offline-NewExp-goods-1 .bgL{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 996;
+    width: 250px;
+    height: 200px;
+    background: url(../images/offline_bg_newL.png);
+}
+.ui-offline-NewExp-goods-2 {
+    position: relative;
+    z-index: 995;
+    width: 404px;
+    height: 400px;
+    background: url(../images/offline_bg_newM.png) no-repeat;
+}
+.ui-offline-NewExp-goods-2 .pichref {
+    position: relative;
+    display: block;
+    margin: 32px 0 0 17px;
+    width: 300px;
+    height: 192px;
+}
+.ui-offline-NewExp-goods-3 {
+    position: relative;
+    width: 272px;
+    height: 400px;
+    padding-right: 14px;
+}
+.ui-offline-NewExp-goods-3 .pichref {
+    position: relative;
+    display: block;
+    margin: 20px 0 0 -54px;
+    width: 309px;
+    height: 195px;
+}
+.ui-offline-NewExp-goods-3 .bgR{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 996;
+    width: 391px;
+    height: 200px;
+    background: url(../images/offline_bg_newR.png);
+}
+.ui-offline-NewExp-goods-1:hover .goods-icon,.ui-offline-NewExp-goods-2:hover .goods-icon,.ui-offline-NewExp-goods-3:hover .goods-icon{position: absolute;left: 45%;top: 35%;display: block;width: 60px;height: 60px;background: url(../images/offline_index_bg_2014.png) no-repeat -149px -47px;}
+.ui-offline-NewExp-goods-1 .name, .ui-offline-NewExp-goods-2 .name, .ui-offline-NewExp-goods-3 .name {
+    clear: both;
+    margin-top: 10px;
+    width: 180px;
+    font-size:12px;
+}
+.ui-offline-NewExp-goods-1 .name {
+    position: relative;
+    z-index: 996;
+    padding-left: 4px;
+}
+.ui-offline-NewExp-goods-2 .name {
+    margin-left: 136px;
+}
+.ui-offline-NewExp-goods-3 .name {
+    position: relative;
+    z-index: 996;
+    margin-left: 32px;
+}
+.ui-offline-NewExp-goods-1 .name a, .ui-offline-NewExp-goods-2 .name a, .ui-offline-NewExp-goods-3 .name a {
+    color: #333
+}
+.ui-offline-NewExp-goods-1 .name a:hover, .ui-offline-NewExp-goods-2 .name a:hover, .ui-offline-NewExp-goods-3 .name a:hover {
+    color: #f60
+}
+.ui-offline-NewExp-goods-1 .price, .ui-offline-NewExp-goods-2 .price, .ui-offline-NewExp-goods-3 .price {
+    margin-top: 7px;
+    font-size: 16px;
+    color: #f60;
+    font-weight: 600;
+    font-family: "microsoft yahei"
+}
+.ui-offline-NewExp-goods-1 .price {
+    position: relative;
+    z-index: 996;
+    margin-left: 2px;
+}
+.ui-offline-NewExp-goods-2 .price {
+    margin-left: 136px;
+    color: #fff;
+}
+.ui-offline-NewExp-goods-3 .price {
+    position: relative;
+    z-index: 996;
+    margin-left: 32px;
+}
+.ui-offline-NewExp-goods-1 .info, .ui-offline-NewExp-goods-2 .info, .ui-offline-NewExp-goods-3 .info {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 152px;
+    max-height: 90px;
+    color: #333;
+}
+.ui-offline-NewExp-goods-1 .info {
+    position: relative;
+    z-index: 996;
+    background: #e8e8e8;
+}
+.ui-offline-NewExp-goods-2 .info {
+    margin-left: 136px;
+    background: #aeaeae;
+}
+.ui-offline-NewExp-goods-3 .info {
+    position: relative;
+    z-index: 996;
+    margin-left: -9px;
+    padding: 5px 12px;
+    width: 233px;
+    background: #cecece;
+}
+.ui-offline-NewExp-goods-1 .info .icon-lt, .ui-offline-NewExp-goods-2 .info .icon-lt, .ui-offline-NewExp-goods-3 .info .icon-lt {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    background: url(../images/offline_index_bg_more.png) no-repeat -144px -531px;
+    width: 54px;
+    height: 40px;
+}
+.ui-offline-NewExp-goods-1 .info .icon-rb, .ui-offline-NewExp-goods-2 .info .icon-rb, .ui-offline-NewExp-goods-3 .info .icon-rb {
+    display: block;
+    position: absolute;
+    right: -5px;
+    bottom: 5px;
+    background: url(../images/offline_index_bg_more.png) no-repeat -198px -531px;
+    width: 52px;
+    height: 29px;
+}
+
+
+/* map base */
+.BMapLib_SearchInfoWindow {
+    font: 12px arial, Microsoft Yahei, sans-serif;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: default
+}
+.BMapLib_SearchInfoWindow form, .BMapLib_SearchInfoWindow ul, .BMapLib_SearchInfoWindow li {
+    margin: 0;
+    padding: 0
+}
+.BMapLib_SearchInfoWindow img {
+    border: 0
+}
+.BMapLib_SearchInfoWindow ul {
+    list-style: none
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_top {
+    border-bottom: 2px solid #333;
+    height: 34px
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_title {
+    position:relative;
+    z-index:991;
+    line-height: 34px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 34px;
+    padding: 0 5px 0 20px;
+    font-size: 14px;
+    font-weight:bold;
+    color:#333;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_title .show_pralion{
+    display:inline-block;
+    right:0;
+    top:0;
+    width:65px;
+    height:20px;
+    padding:0 0 0 5px;
+    margin:0 0 0 10px;
+    line-height:20px;
+    font-weight:normal;
+    font-size:12px;
+    color:#fff;
+    font-family:"宋体";
+    text-decoration:none;
+    background:url(../images/map_spire.png) -50px -62px no-repeat;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_title .show_pralion:hover{
+    text-decoration:none;
+    background:url(../images/map_spire.png) -121px -62px no-repeat;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_tools {
+    padding-right: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 64px;
+    z-index: 10000
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_tools div {
+    float: right;
+    height: 20px;
+    width: 22px;
+    margin:8px 0 0 0;
+    cursor: pointer;
+    cursor: pointer;
+    overflow: hidden
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_close {
+    //background: url(../images/iw_close.gif) no-repeat center center
+}
+.BMapLib_SearchInfoWindow .BMapLib_sendToPhone {
+    //background: url(../images/phone.png) no-repeat center center
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_center {
+    z-index: 3
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_content {
+    padding: 3px 5px;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_content .ui_map_info{
+    padding:0 0 0px 15px;
+    line-height:24px;
+    color:#333;
+    font-size:12px;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_content .ui_map_info em{
+    color:#8c8c8c;
+}
+
+.BMapLib_SearchInfoWindow .BMapLib_bubble_bottom {
+    display: block;
+    z-index: 2
+}
+.BMapLib_SearchInfoWindow .BMapLib_trans {
+    z-index: 5;
+    position: absolute;
+    bottom: -31px;
+*bottom:-32px
+}
+.BMapLib_SearchInfoWindow .BMapLib_nav {
+    width: 100%;
+    height: 75px;
+    overflow: visibile;
+    position: relative
+}
+.BMapLib_SearchInfoWindow .BMapLib_nav input {
+    vertical-align: middle
+}
+.BMapLib_SearchInfoWindow .iw_bt, .BMapLib_SearchInfoWindow .iw_bt_down, .BMapLib_SearchInfoWindow .iw_bt_over {
+    width: 48px;
+    height: 26px;
+    line-height: 18px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') no-repeat 0 -87px;
+    vertical-align: middle
+}
+.BMapLib_SearchInfoWindow .iw_bt_over {
+    background-position: -52px -87px
+}
+.BMapLib_SearchInfoWindow .iw_bt_down {
+    background-position: -104px -87px;
+    font-weight: 700
+}
+.BMapLib_search_text {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #a5acb2
+}
+.BMapLib_trans_text {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #a5acb2;
+    border-radius:3px;
+    -moz-border-radius:3px;
+}
+.BMapLib_nav_tab {
+    height: 30px;
+    width: 100%;
+    background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') repeat-x 0 0
+}
+.BMapLib_nav_tab li {
+    position: relative;
+    float: left;
+    width: 114px;
+    height: 25px;
+    padding-top: 5px;
+    text-align: center;
+    border-left: 1px solid #dadada;
+    cursor: pointer;
+    overflow: hidden;
+    width: 33%
+}
+.BMapLib_nav_tab .BMapLib_icon {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 15px;
+    top: 3px;
+    margin-right: 7px;
+    background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') no-repeat 0 -136px
+}
+.BMapLib_nav_tab .BMapLib_icon_tohere {
+    background-position: -15px -136px
+}
+.BMapLib_nav_tab .BMapLib_icon_nbs {
+    width: 14px;
+    height: 14px;
+    background-position: -30px -136px
+}
+.BMapLib_nav_tab li.BMapLib_first {
+    border-left: 0
+}
+.BMapLib_nav_tab li:hover {
+    text-decoration: none
+}
+.BMapLib_nav_tab li.BMapLib_current {
+    color: #4d4d4d;
+    cursor: default;
+    background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') repeat-x 0 -44px
+}
+.BMapLib_nav_tab_content{
+    text-align:center;
+}
+.BMapLib_nav_tab_content li {
+    padding: 10px 0 0 0;
+    position: relative;
+    height: 22px;
+    font-family: "Microsoft Yahei"
+}
+.BMapLib_sms_tab_container {
+    height: 35px;
+    background: #fcfcfc;
+    position: relative;
+    z-index: 20;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 35px;
+    padding-left: 10px
+}
+.BMapLib_sms_pnl_phone {
+    position: relative;
+    z-index: 10;
+    padding: 10px 15px 10px 15px;
+    border-top: solid 1px #f2f2f2;
+    font-size: 12px
+}
+.BMapLib_ap {
+    float: left;
+    width: 263px;
+    height: 172px;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+.BMapLib_ap th {
+    text-align: right;
+    font-weight: normal
+}
+.BMapLib_mp {
+    background: #f6f6f6;
+    padding: 10px;
+    height: 152px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.BMapLib_mp_title {
+    font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+    padding-bottom: 5px;
+}
+.BMapLib_msgContent {
+font-size:12px;
+line-height:16px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.BMapLib_popup_close {
+    padding: 10px;
+    background: url('../images/iw_close.gif') no-repeat center center transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 13px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 14px;
+    z-index: 50
+}
+.BMapLib_sms_input {
+    ime-mode: disabled
+}
+.BMapLib_sms_input_l {
+    width: 90px
+}
+.BMapLib_sms_input_s {
+    width: 35px
+}
+.BMapLib_sms_declare_phone {
+    color: #707070
+}
+#BMapLib_sms_tip {
+    color: red;
+    padding-left: 20px
+}
+#BMapLib_success_tip {
+    font-size: 12px;
+    text-align: center;
+    padding: 50px 0 20px 0;
+    color: red
+}
+#BMapLib_activateTip {
+    padding-left: 5px;
+    color: red
+}
+
+.ui_area_infoContent{
+    padding:10px 15px;
+    line-height:24px;   
+}
+.ui_area_infoContent a{
+    display:inline-block;
+    color:#333;
+    text-decoration:underline;
+    margin:0 15px 0 0;
+    font-size:13px;
+}
+.ui_area_infoContent a:hover{
+    color:#ff6600;
+    text-decoration:none;
+}
+
+
+.offline-icon {
+    background: url(../images/offline-icon.png) no-repeat;
+}
+.mb50 {
+    margin-bottom: 50px;
+}
+.offline-floor {
+    
+    .title {
+        height: 75px;
+        margin-bottom: 31px;
+        position: relative;
+    }
+    .title-icon {
+        position: absolute;
+        width: 390px;
+        height: 75px;
+        left: 50%;
+        margin-left: -195px;
+    }
+    .info {
+       line-height: 25px; 
+       color: #333;
+       padding: 0 12px;
+    }
+}
+.offline-line {
+    height: 9px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-bottom: 50px;
+}
+.offline-line-2 {
+    height: 11px;
+    background: #ebebeb;
+    position: relative;
+    .triangle {
+        width: 40px;
+        height: 16px;
+        position: absolute;
+        left: 50%;
+        margin-left: -20px;
+        top:11px;
+        background-position: -152px 0;
+    }
+}
+.euro-city {
+    display: none;
+   .title-icon {
+        background-position: 0 -504px;
+    } 
+}
+.smart-home {
+    .title-icon {
+        background-position: 0 -48px;
+    }
+}
+
+.future {
+    .title-icon {
+        background-position: 0 -128px;
+    }
+    .future-more {
+        height: 37px;
+        margin-top: 50px;
+        position: relative;
+        .future-more-link {
+            position: absolute;
+            left: 50%;
+            width: 139px;
+            height: 37px;
+            margin-left: -70px;
+        }
+    }
+}
+
+.hot-sale {
+    padding-top: 50px;
+    background: #fafafa;
+    .title-icon {
+        background-position: 0 -210px;
+    }
+    .hot-sale-list {
+       height: 242px;
+       overflow: hidden;
+       margin-right: -10px;
+    }
+    li {
+        width: 290px;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px; 
+        text-align: center;
+    }
+    img {
+        display: block;
+        width: 290px;
+        height: 193px;
+    }
+    .pro-title {
+       height: 20px;
+       padding-top: 6px;
+       line-height: 20px; 
+       overflow: hidden;
+       &:hover {
+            color: #f60;
+       }
+    }
+    .pro-price {
+        line-height: 23px;
+        font-size: 14px;
+    }
+}
+
+.activity {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background: #fafafa;
+    margin-bottom: -50px;
+    .title-icon {
+        background-position: 0 -297px;
+    }
+    .activity-list {
+        height: 390px;
+        margin-right: -10px;
+    }
+    li {
+        float: left;
+        margin-right: 10px; 
+    }
+    img {
+        display: block;
+    }
+}
+
+.send-msg {
+    width: 360px;
+    padding:0 20px;
+    .title {
+        line-height: 32px;
+        color: #8c8c8c;
+    }
+    .msg-wrap {
+        border: 1px dashed #cdcdcd;
+        padding: 10px;
+        margin-bottom: 10px;
+        p {
+            line-height: 24px;
+        }
+        b {
+           color: #333; 
+        }
+        span {
+           color: #8c8c8c; 
+        }
+    }
+    .input-wrap {
+        padding-left: 113px;
+        margin-bottom: 20px;
+        input {
+            width: 128px;
+            height: 28px;
+            margin-right: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 2px;
+            text-indent: 10px;
+        }
+    }
+    .btn {
+       position: absolute;
+        height: 30px;
+        line-height: 30px;
+        width: 90px;
+        background: #8c8c8c;
+        border-radius: 2px;
+        text-align: center;
+        color:#fff;
+        &:hover {
+            background: #f60;
+        }
+    }
+    .error-info {
+        position: absolute;
+        display: none;
+    }
+    .countDown {
+        display: none;
+        position: absolute;
+        height: 30px;
+        line-height: 30px;
+        width: 90px;
+        background: #8c8c8c;
+        border-radius: 2px;
+        text-align: center;
+        color:#fff;
+     }
+}
+
+.ui-diy-3d-content {
+    position: relative;
+    height: 540px;
+}
+.slider-tab {
+    padding: 60px 0 10px 0;
+    width:480px;
+    margin: 0 auto;
+    text-align: center;
+    a{
+        display: inline-block;
+        width: 90px;
+        height: 25px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background: #cbd2eb;
+        color:#333;
+        font-size: 14px;
+    }
+}

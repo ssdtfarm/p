@@ -1,0 +1,94 @@
+<!-- 浮动客服开始 -->
+<section id="J_minBar" class="min-bar">
+    <div class="min-bar-tabs">
+        <div class="min-bar-tab min-bar-online">
+            <div class="min-bar-online-icon">
+                <a href="<%=live800.clientLink%>" class="blankLink JQ_minBarOnline" target="_blank">
+                    <img src="<%=cdnPath%><%=live800.iconPath%>" width="<%=live800.iconWidth%>" height="<%=live800.iconHeight%>" alt="<%=live800.iconText%>"/>
+                    <label class="min-bar-chat-num"><%=live800.chatNum%></label>
+                </a>
+                <span class="min-bar-online-pop">
+                    <span class="pop-close">&nbsp;</span>
+                    <a href="<%=live800.clientLink%>" class="pop-chat" target="_blank">&nbsp;</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-qq min-text">
+            <div class="min-bar-qq-icon">
+                <a href="<%=wapQQ.clientLink%>" class="blankLink" target="_blank">
+                    <img src="<%=cdnPath%><%=wapQQ.iconPath%>" width="<%=wapQQ.iconWidth%>" height="<%=wapQQ.iconHeight%>" alt="<%=wapQQ.iconText%>"/>
+                </a>
+                <span class="min-bar-qq-text text"><%=wapQQ.iconText%></span>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-cart min-cart">
+            <div class="min-bar-cart-icon">
+                <a href="<%=cart.clientLink%>" class="icon-float-cart">
+                    <span id="J_cartNum" class="min-bar-cart-num"><%=cart.chatNum%></span>
+                </a>
+
+            </div>
+            <div id="J_minBarPlugin" class="min-bar-plugin">
+                <div class="bar-plugin-cart">
+                    <ul id="J_pluginCart">
+                    </ul>
+                    <div class="plugin-cart-info">
+                        <p class="cart-info-price">
+                            <span class="cart-info-num">
+                                共
+                                <label id="J_minBarCartNum">0</label>
+                                件商品
+                            </span>
+                            <span class="cart-info-total">
+                                合计:
+                                <small>&yen;</small>
+                                <label id="J_minBarCartTotal">0</label>
+                            </span>
+                        </p>
+                        <p class="cart-info-shipping">(不含运费)</p>
+                        <p class="cart-info-btn">
+                            <a href="javascript:void(0);" id="J_minBarBtn" class="btn-gray" target="_blank">查看购物车</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-phone min-phone">
+            <div class="min-bar-phone-icon">
+                <a href="<%=mobile.clientLink%>" class="icon-float-phone">&nbsp;</a>
+                <span class="min-bar-phone-img phone">
+                    <img src="<%=cdnPath%><%=mobile.iconPath%>" width="<%=mobile.iconWidth%>" height="<%=mobile.iconHeight%>" alt="<%=mobile.iconText%>" />
+                </span>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-wechat min-wechat">
+            <div class="min-bar-wechat-icon">
+                <a href="<%=wechat.clientLink%>" class="icon-float-wechat">&nbsp;</a>
+                <span class="min-bar-wechat-img wechat">
+                        <img src="<%=cdnPath%><%=wechat.iconPath%>" width="<%=wechat.iconWidth%>" height="<%=wechat.iconHeight%>" alt="<%=wechat.iconText%>" />
+                    </span>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-feedback min-text">
+            <div class="min-bar-feedback-icon">
+                <a href="<%=feedback.clientLink%>" class="icon-float-feedback blankLink" target="_blank">&nbsp;</a>
+                <span class="min-bar-feedback-text text"><%=feedback.iconText%></span>
+            </div>
+        </div>
+
+        <div class="min-bar-tab min-bar-gtop min-text">
+            <div class="min-bar-gtop-icon" id="J_minBarGoTop">
+                <a href="<%=gotop.clientLink%>" class="icon-float-top">&nbsp;</a>
+                <span class="min-bar-gtop-text text"><%=gotop.iconText%></span>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="min-bar-mark"></section>
+<!-- 浮动客服结束 -->

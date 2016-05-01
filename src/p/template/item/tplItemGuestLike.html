@@ -1,0 +1,27 @@
+<dl class="item-guest-like">
+    <dt class="guest-like-title">
+        <span>猜·你·喜·欢</span>
+    </dt>
+    <dt class="guest-like-subtitle">MAYBE YOU LIKE</dt>
+    <dd class="guest-like-list">
+        <%if(list.length!=0){%>
+        <%for(var i=0; i<list.length; i++) {%>
+        <dl class="guest-like-item">
+            <dd>
+                <a href="<%=list[i].linkURL%>" target="_blank">
+                    <img class="lazy" data-original="<%=list[i].imgURL%>!small" alt="<%=list[i].title%>" width="200" height="133" />
+                </a>
+            </dd>
+            <dt>
+                <a href="<%=list[i].linkURL%>" title="<%=list[i].title%>" target="_blank"><%=list[i].title%></a>
+            </dt>
+            <dd class="clearfix">
+                <label>&yen;<%=list[i].salePrice%></label>
+                <span><%=list[i].commentNum%>人评价</span>
+            </dd>
+        </dl>
+        <%}%>
+        <%}%>
+    </dd>
+</dl>
+<div class="blank-20"></div>

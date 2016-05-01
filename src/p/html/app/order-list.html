@@ -1,0 +1,751 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", { "cdn": "@@miscPath", "name": "member-order-list", "title": "我的金海马-我的订单" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", { "cdn": "@@miscPath", "headerName": "我的订单", "search": false })
+    <!-- 头部结束 -->
+    <!-- 订单页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <!--<a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>-->
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="//misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-coupon"></i>
+                            <label>我的优惠券</label>
+                        </a>
+                    </dt>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">账号信息与安全</a>
+                        <a href="javascript:void(0);">个人信息</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 订单列表右边开始 -->
+        <div class="kh-col-20">
+            <!-- 右边顶部筛选栏 -->
+            <div class="member-myorder-top-search clearfix">
+                <!-- 按照实际筛选订单 -->
+                <div id="J_selectTime" class="select-gray fl">
+                    <i class="select-corner icon-gray-left"></i>
+                    <label class="JQ_option select-option w130">最近三个月订单</label>
+                    <i class="select-corner icon-gray-right"></i>
+                    <a href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                    <ul>
+                        <li>
+                            <A href="javascript:void(0);" data-value="0">最近三个月订单</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="1">最近一年订单</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="2">所有订单</A>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 按照状态筛选订单 -->
+                <div id="J_selectStatus" class="select-gray fl">
+                    <i class="select-corner icon-gray-left"></i>
+                    <label class="JQ_option select-option w130">所有状态</label>
+                    <i class="select-corner icon-gray-right"></i>
+                    <a href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                    <ul>
+                        <li>
+                            <A href="javascript:void(0);" data-value="0">待付款</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="1">已付款，代发货</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="2">已发货</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="3">已完成</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="4">已取消</A>
+                        </li>
+                        <li>
+                            <A href="javascript:void(0);" data-value="5">已退货</A>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 按照名称/订单编号/商品编号筛选 -->
+                <div class="search-bar pos-rel">
+                    <form class="JQ_searchForm" action="javascript:void(0);" method="post">
+                        <input type="text" name="keyword" class="search-keyword JQ_searchKeyword w300" />
+                        <a class="seach-btn JQ_searchBarBtn" href="javascript:void(0);"><i class="icon-m-search"></i></a>
+                        <span class="JQ_hotKeyTip hot-keyword-tip">商品名称/订单编号/商品编号</span>
+                    </form>
+                </div>
+            </div>
+            <!-- 右边表头栏 -->
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table-head">
+                <thead>
+                    <Tr>
+                        <th width="65%">订单信息</th>
+                        <th width="12%">订单状态</th>
+                        <th width="13%">订单金额</th>
+                        <th width="10%">交易操作</th>
+                    </Tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" align="right">
+                            <span class="fc-8c8 vtm">共 <label class="fc-333 vtn">1</label> 个订单</span>
+                            <span class="fc-333 table-head-pages">
+                                <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                                <span>1/1</span>
+                            <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td colspan="1" align="left">
+                            <a href="javascript:void(0);" class="buy-together-btn">合并付款</a>
+                        </td>
+                        <td colspan="3" align="right">
+                            <span class="fc-8c8 vtm">共 <label class="fc-333 vtn">1000</label> 个商品</span>
+                            <span class="fc-333 table-head-pages">
+                                <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                                <span>1/30</span>
+                                <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                            </span>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <!-- 列表 -->
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="border-b-ccc">
+                    <tr class="border-b-ccc">
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">待付款</p>
+                            <p><a href="order-detail.html" class="item-link">订单详情</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="1459910520" data-curTime="1459910490">
+                            <p class="order-countdown JQ_orderCountDown"></p>
+                            <p><a href="order-pay.html" class="btns-enable-80x30">付款</a></p>
+                            <p><a href="javascript:void(0);" class="item-link JQ_cancelOrder">取消订单</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">待付款</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td width="2%"></td>
+                        <td width="18%" class="border-r-ccc">付款信息</td>
+                        <td width="80%" colspan="4" class="sub-order-table">
+                            <table cellspacing="0" cellpadding="0" width="100%">
+                                <tbody class="border-b-ccc">
+                                    <tr>
+                                        <td width="25%" align="left">
+                                            <p class="sub-order-item">
+                                                <label class="fc-8c8">支付编号：</label>
+                                                <span class="fc-333">N000403814X11</span>
+                                            </p>
+                                            <p class="fc-8c8 sub-order-item">
+                                                支付方式：支付宝
+                                            </p>
+                                        </td>
+                                        <td width="30%" align="left">
+                                            <p class="fc-8c8 sub-order-item">
+                                                金额：
+                                                <label class="fc-f60">&yen;500.00</label>
+                                                （含运费：&yen;0.00）
+                                            </p>
+                                            <p class="fc-8c8 sub-order-item">支付时间：2015-10-10 23:59:00</p>
+                                        </td>
+                                        <td width="25%">
+                                            <a href="javascript:void(0);" class="btns-enable-80x30">付款</a>
+                                        </td>
+                                        <td width="25%">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td width="25%" align="left">
+                                            <p class="sub-order-item">
+                                                <label class="fc-8c8">支付编号：</label>
+                                                <span class="fc-333">N000403814X11</span>
+                                            </p>
+                                            <p class="fc-8c8 sub-order-item">
+                                                支付方式：支付宝
+                                            </p>
+                                        </td>
+                                        <td width="30%" align="left">
+                                            <p class="fc-8c8 sub-order-item">
+                                                金额：
+                                                <label class="fc-f60">&yen;500.00</label>
+                                                （含运费：&yen;0.00）
+                                            </p>
+                                            <p class="fc-8c8 sub-order-item">支付时间：2015-10-10 23:59:00</p>
+                                        </td>
+                                        <td width="25%">
+                                            <label class="fc-333">已付款</label>
+                                        </td>
+                                        <td width="25%">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">已付款</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="aftersales-apply.html" class="item-link">退款/退货</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">已发货</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">物流跟踪</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="javascript:void(0);" class="btns-enable-80x30">确认收货</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">延长收货时间</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">退款/退货</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">交易成功</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">物流跟踪</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="javascript:void(0);" class="btns-enable-80x30">评价晒单</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">退款/退货</a></p>
+                            <p><a href="javascript:void(0);" class="item-link JQ_delOrder">删除订单</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">再次购买</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">交易成功</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">物流跟踪</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">查看退款</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="javascript:void(0);" class="btns-enable-80x30">追加晒图</a></p>
+                            <p><a href="javascript:void(0);" class="item-link JQ_delOrder">删除订单</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">再次购买</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"></td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">已取消</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="javascript:void(0);" class="item-link">删除订单</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">再次购买</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <span class="fc-61b">总订单号：RZ00289937</span>
+                            <i class="icon-phone-blue"></i>
+                            <i class="icon-o2o-blue"></i>
+                            <span class="fc-333">下单时间：2014-12-21 13:42:39</span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span class="fc-8c8">订单总金额：￥15235.00(含￥20.00物流服务费) </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="2%" valign="top"> </td>
+                        <td width="18%" align="left" class="item-merchant-info">
+                            <p class="fc-333">订单1：RZ089937</p>
+                            <p class="item-merchant-logo">
+                                <img src="http://misc.jjcdn.com/p/images/merchat-small-logo.png" width="84" height="40" />
+                            </p>
+                            <p class="fc-333">顾家家居</p>
+                            <p class="item-merchant-chat">
+                                <A href="javascript:void(0);" class="icon-order-chat"><img src="http://misc.jjcdn.com/p/images/merchant-chat-icon.png" width="20" height="16" /></A>
+                            </p>
+                        </td>
+                        <td width="45%">
+                            <p class="item-thumb-list">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="105" height="70" />
+                                    <span class="thumb-mark">米白色 真皮 双人软床 博士架A<br />￥1899.00</span>
+                                </a>
+                            </p>
+                            <p class="fc-8c8 item-logist">
+                                由顾家家居负责发货
+                            </p>
+                        </td>
+                        <td width="12%" class="item-pay-status">
+                            <p class="fc-333">已退货</p>
+                            <p><a href="javascript:void(0);" class="item-link">订单详情</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">物流跟踪</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">查看退款</a></p>
+                        </td>
+                        <td width="13%">
+                            <p class="fc-f60">￥85999.00</p>
+                            <p class="fc-8c8">含运费：￥100.00</p>
+                            <p class="fc-8c8">门店支付</p>
+                        </td>
+                        <td rowspan="111" class="item-order-manager border-l-ccc JQ_orderStatus" width="10%" data-endTime="" data-curTime="">
+                            <p><a href="javascript:void(0);" class="item-link">删除订单</a></p>
+                            <p><a href="javascript:void(0);" class="item-link">再次购买</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 列表底部 -->
+            <table width="100%" cellpadding="0" cellspacing="0" class="order-list-table-bottom">
+                <tr>
+                    <td width="50%">
+                    </td>
+                    <td width="50%" align="right">
+                        <div class="pages-small">
+                            <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                            <A href="javascript:void(0);" class="page-cur">1</A>
+                            <A href="javascript:void(0);" class="page-nor">2</A>
+                            <A href="javascript:void(0);" class="page-nor">3</A>
+                            <A href="javascript:void(0);" class="page-nor">4</A>
+                            <A href="javascript:void(0);" class="page-nor">5</A>
+                            <A href="javascript:void(0);" class="page-nor">6</A>
+                            <span>...</span>
+                            <A href="javascript:void(0);" class="page-nor">20</A>
+                            <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                            <span class="go-page">
+                                去第
+                                <input type="text" maxlength="4" />
+                                页
+                            </span>
+                            <A href="javascript:void(0);" class="page-btn">确定</A>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <!-- 关于订单 -->
+            <dl class="about-order">
+                <dt>
+                    <label>关于金海马订单</label>
+                </dt>
+                <dd>
+                    1、订单提交后，系统会自动判断订单来源及归属，同时将根据归属自动拆分为多个子订单；
+                    <br /> 2、家具属于大件商品，为了方便支付，金海马建议您先充值余额在个人账户中心，支付时使用账户余额支付；
+                    <br /> 3、订单提交及支付过程中，如有疑问，请联系我们的在线客服MM。
+                    <A href="javascript:void(0);">联系客服</A>
+                </dd>
+            </dl>
+        </div>
+        <!-- 订单列表右边结束 -->
+    </section>
+    <!-- 订单页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", { "cdn": "@@miscPath", "name": "member-order-list" })
+</body>
+
+</html>

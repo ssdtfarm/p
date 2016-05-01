@@ -1,0 +1,451 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用右侧浮动工具栏
+ *      全站通用，所有需要的页面都引用了
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+.min-bar {
+  position: fixed;
+  z-index: 999999;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.min-bar-tabs {
+  width: 40px;
+}
+/* bar tabs */
+.min-bar-tabs .min-bar-tab {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+/*---- online service ----*/
+.min-bar-tabs .min-bar-online {
+//  position: relative;
+  /*top: 20px;*/
+  top: 50%;
+  margin-top: -80px;
+}
+.min-bar-online .min-bar-online-pop {
+  position: absolute;
+  z-index: 3;
+  //right: 40px;
+  display: none;
+  width: 280px;
+  height: 187px;
+  margin-left: -280px;
+  margin-top: -105px;
+  overflow: hidden;
+  background: url("../images/float_min_bar_pop.png") left top no-repeat;
+}
+.min-bar-online .min-bar-online-pop .pop-close {
+  position: absolute;
+  z-index: 4;
+  right: 20px;
+  top: 5px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.min-bar-online .min-bar-online-pop .pop-chat {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.min-bar-online .min-bar-online-icon {
+  cursor: pointer;
+}
+.min-bar-online .min-bar-online-icon a {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 40px;
+  height: 40px;
+  //overflow: hidden;
+}
+.min-bar-online .min-bar-online-text {
+  position: absolute;
+  z-index: 2;
+  right: -80px;
+  top: 0;
+  display: block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  opacity: .1;
+  filter: alpha(opacity=10);
+  background-color: #f60;
+}
+.min-bar-online .min-bar-chat-num {
+  position: absolute;
+  z-index: 3;
+  top: -8px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color: #FF0000;
+}
+/*---- online qq ----*/
+.min-bar-tabs .min-bar-qq {
+  top: 50%;
+  margin-top: -40px;
+}
+.min-bar-qq .min-bar-qq-icon {
+  cursor: pointer;
+}
+.min-bar-qq .min-bar-qq-icon a {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #333;
+}
+.min-bar-qq .min-bar-qq-text {
+  position: absolute;
+  z-index: 2;
+  right: -80px;
+  top: 0;
+  display: block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  opacity: .1;
+  filter: alpha(opacity=10);
+  background-color: #333;
+}
+/*---- cart tab ----*/
+.min-bar-tabs .min-bar-cart {
+  top: 50%;
+  padding-top: 20px;
+  background-color: #333;
+}
+.min-bar-cart .min-bar-cart-num {
+  position: absolute;
+  z-index: 3;
+  right: 6px;
+  top: 17px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  vertical-align: middle;
+  background-color: #ff0000;
+}
+/*---- wechat tab ----*/
+.min-bar-tabs .min-bar-wechat {
+  position: absolute;
+  z-index: 4;
+  bottom: 120px;
+}
+.min-bar-wechat .min-bar-wechat-icon a {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  width: 40px;
+  height:40px;
+  overflow: hidden;
+}
+.min-bar-wechat .min-bar-wechat-img {
+  position: absolute;
+  z-index: 2;
+  right: 40px;
+  top: 0;
+  display: none;
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /*display: none;*/
+}
+/*---- phone tab ----*/
+.min-bar-tabs .min-bar-phone {
+  position: absolute;
+  z-index: 4;
+  bottom: 160px;
+}
+.min-bar-phone .min-bar-phone-icon a {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  width: 40px;
+  height:40px;
+  overflow: hidden;
+}
+.min-bar-phone .min-bar-phone-img {
+  position: absolute;
+  z-index: 2;
+  right: 40px;
+  top: 0;
+  display: none;
+  width: 36px;
+  height: 36px;
+  //padding: 1px;
+  //background-color: #EBEBEB;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /*display: none;*/
+}
+/*---- feedback tab ----*/
+.min-bar-tabs .min-bar-feedback {
+  position: absolute;
+  bottom: 80px;
+}
+.min-bar-feedback .min-bar-feedback-icon {
+  cursor: pointer;
+}
+.min-bar-feedback .min-bar-feedback-icon a {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.min-bar-feedback .min-bar-feedback-text {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: -80px;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  opacity: .1;
+  filter: alpha(opacity=10);
+  background-color: #333;
+}
+/*---- gotop tab ----*/
+.min-bar-tabs .min-bar-gtop {
+  position: absolute;
+  bottom: 40px;
+}
+.min-bar-gtop .min-bar-gtop-icon {
+  cursor: pointer;
+}
+.min-bar-gtop .min-bar-gtop-icon a {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #333;
+}
+.min-bar-gtop .min-bar-gtop-text {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: -80px;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  opacity: .1;
+  filter: alpha(opacity=10);
+  background-color: #333;
+}
+/*
+ *  min bar plugin  -------------
+ */
+.min-bar .min-bar-plugin {
+  position: absolute;
+  z-index: 3;
+  left: -302px;
+  display: none;
+  width: 300px;
+  /*min-height: 100px;*/
+}
+.min-bar-plugin .bar-plugin-cart {
+  /*position: absolute;*/
+  /*z-index: 4;*/
+  /*left: -302px;*/
+  width: 298px;
+  border: 2px solid #7a7a7a;
+  background-color: #fff;
+}
+/* plugin cart list */
+.bar-plugin-cart .plugin-cart-list {
+  position: relative;
+  padding: 0 7px 20px 8px;
+  max-height: 320px;
+  overflow-y: scroll;
+}
+.bar-plugin-cart .plugin-cart-list li {
+  position: relative;
+  height: 60px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.plugin-cart-list .plugin-cart-list-img {
+  /*position: relative;*/
+  float: left;
+  width: 90px;
+  margin-right: 8px;
+}
+.plugin-cart-list .cart-list-delete-btn {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 2px;
+  display: none;
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  font-family: Arial, "Microsoft Yahei";
+  background-color: #000;
+  opacity: .55;
+  filter: alpha(opacity=55);
+}
+.plugin-cart-list .plugin-cart-list-title {
+  float: left;
+  width: 90px;
+  height: 54px;
+  overflow: hidden;
+  margin-right: 0px;
+  color: #8C8C8C;
+  line-height: 18px;
+}
+.plugin-cart-list .plugin-cart-list-title a {
+  color: #8C8C8C;
+}
+.plugin-cart-list .plugin-cart-list-title a:hover {
+  color: #f60;
+}
+.bar-plugin-cart .plugin-cart-list li:hover .cart-list-delete-btn {
+  display: inline-block;
+}
+.bar-plugin-cart .plugin-cart-list li:hover .plugin-cart-list-title a {
+  color: #f60;
+}
+
+.plugin-cart-list .plugin-cart-list-info {
+  float: right;
+  width: 70px;
+  text-align: right;
+}
+.plugin-cart-list .plugin-cart-list-info .list-price {
+  padding-top: 14px;
+  color: #f60;
+  line-height: 22px;
+}
+.plugin-cart-list .plugin-cart-list-info .list-num {
+  color: #8C8C8C;
+}
+/* empty cart */
+.plugin-cart-empty {
+  height: 117px;
+  text-align: center;
+  line-height: 117px;
+  color: #333;
+  font-size: 14px;
+}
+/* cart info */
+.plugin-cart-info {
+  padding: 0 6px 0 8px;
+  border-top: 1px solid #ccc;
+  /*text-align: right;*/
+}
+.plugin-cart-info .cart-info-shipping {
+  text-align: right;
+  color: #8C8C8C;
+}
+.plugin-cart-info .cart-info-price {
+  padding-top: 10px;
+  text-align: right;
+  color: #333;
+}
+.cart-info-price .cart-info-num {
+  padding-right: 10px;
+}
+.cart-info-price .cart-info-num label {
+  color: #f60;
+}
+.cart-info-price .cart-info-total small {
+  padding-left: 5px;
+  color: #f60;
+}
+.cart-info-price .cart-info-total label {
+  font-size: 18px;
+  color: #f60;
+}
+.plugin-cart-info .cart-info-btn {
+  text-align: right;
+  padding: 20px 0 20px 0;
+}
+.plugin-cart-info .cart-info-btn a {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+.plugin-cart-info .cart-info-btn a.btn-orange {
+  background-color: #f60;
+}
+.plugin-cart-info .cart-info-btn a.btn-orange:hover {
+  background-color: #ee950a;
+}
+.plugin-cart-info .cart-info-btn a.btn-gray {
+  background-color: #ccc;
+  cursor: default;
+}
+.plugin-cart-info .cart-info-btn a.btn-gray:hover {
+  background-color: #ccc;
+}
+
+/* min bar mark */
+.min-bar-mark {
+  position: fixed;
+  z-index: 999998;
+  top: 0;
+  right: -40px;
+  width: 40px;
+  height: 100%;
+  background-color: #333;
+}

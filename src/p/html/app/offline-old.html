@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "offline-old",
+    "title" : "o2o体验馆"
+    })
+</head>
+<body>
+
+<!-- 顶部广告开始 -->
+<section class="index-top-ad J_lazy" id="J_TopAd" data-tpl="tplTopAd" data-path="classific_topAd_hash.js" data-time="1440377537"></section>
+<!-- 顶部广告结束 -->
+
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+<!-- 头部开始 -->
+@@include("comment-header.html",{ "cdn" : "@@miscPath" })
+<!-- 头部结束 -->
+<!-- 导航开始 -->
+@@include("comment-head-nav.html")
+<!-- 导航结束 -->
+
+<!-- 页面主体开始 -->
+<section class="page-wrap">
+    <div class="ui-warp-all-j clearfix">
+    <!-- 地图模块 start -->
+      <div class="ui-offline-map fl">
+          <div class="ui-offline-map-container" id="offlineMap"></div>
+          <div class="ui-offline-map-logo">
+              <h2>金海马家居体验店分布图</h2>
+                <p>data from kinhom.com</p>
+          </div>
+      </div>
+    <!-- 地图模块 end -->
+    <!-- 地图控制模块 start -->
+      <div class="ui-offline-map-control fl ml10">
+        <!-- 查询模块 -->
+        <div class="ui-map-control-panel">
+        <div class="ui-map-text-tr">查询离您最近的体验馆：</div>
+            <div class="ui-map-conrtol-panel-select fl mb22">
+                <label id="areaIcon" class="map-conrtol-select-lable"></label>
+                <i class="ui-addr-select-1-choosed-icon"></i>
+                <div class="ui-map-selected" id="selectArea">华南地区</div>
+                <input type="hidden" name="changeArea" id="changeArea" />
+                <ul id="areaList">
+                </ul>
+            </div>
+            <div class="ui-map-conrtol-panel-select fl mb22">
+                <label id="cityIcon" class="map-conrtol-select-lable"></label>
+                <i class="ui-addr-select-1-choosed-icon"></i>
+                <div class="ui-map-selected" id="selectCity">广州市</div>
+                <input type="hidden" name="changeCity" id="changeCity" />
+                <ul id="cityList">
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <a href="javascript:void(0);" class="ui-map-search-btn w310 mb22" id="seachMap">查询</a>
+            <div class="ui-map-text-tr">体验馆地址：</div>
+            <div class="ui-map-conrtol-panel-select w310 mb22">
+                <label id="addressIcon" class="map-conrtol-select-lable"></label>
+                <i class="ui-addr-select-1-choosed-icon"></i>
+                <div class="ui-map-selected" id="selectAddress">华南地区</div>
+                <input type="hidden" name="changeAddress" id="changeAddress" />
+                <input type="hidden" name="changeAddressTitle" id="changeAddressTitle" />
+                <input type="hidden" name="changeAddressTel" id="changeAddressTel" />
+                <input type="hidden" name="changeAddressTime" id="changeAddressTime" />
+                <ul id="addressList">
+                </ul>
+            </div>
+            <a href="javascript:void(0);" class="ui-map-search-btn w310 sms-btn">免费发送到手机</a>
+        </div>
+        <!-- 体验馆资讯 -->
+        <dl class="ui-map-newlist">
+          <dt>体验馆资讯</dt>
+            <dd><a href="http://seller.kinhom.com/index.php?act=article&article_id=274" target="_blank" title="金海马借势O2O+ 创家居电商发展高峰">1.金海马借势O2O+ 创家居电商发展高峰</a></dd>
+            <dd><a href="http://seller.kinhom.com/index.php?act=article&article_id=277" target="_blank" title="金海马商城-全屋家居解决方案提供商，颠覆传统家具行业">2.金海马商城-全屋家居解决方案提供商，颠覆传统家具行业</a></dd>
+            <dd><a href="http://seller.kinhom.com/index.php?act=article&article_id=279" target="_blank" title="移动战场 金海马全方位布局家居电商O2O+">3.移动战场 金海马全方位布局家居电商O2O+</a></dd>
+            <dd><a href="http://seller.kinhom.com/index.php?act=article&article_id=280" target="_blank" title="首创智能家居体验馆 金海马全面开启家居电商 4.0时代">4.首创智能家居体验馆 金海马全面开启家居电商 4.0时代</a></dd>
+            <dd><a href="http://seller.kinhom.com/index.php?act=article&article_id=283" target="_blank" title="拥抱互联网+ 金海马瞄准用户痛点">5.拥抱互联网+ 金海马瞄准用户痛点</a></dd>
+        </dl>
+      </div>
+    <!-- 地图控制模块 end -->  
+    </div>
+</section>
+<!-- 欧洲城新体验店 -->
+<div class="euro-city offline-floor mb50">
+    <div class="page-wrap">
+        <div class="title">
+            <span class="offline-icon title-icon"></span>
+        </div>
+        <img src="@@miscPath/p/images/offline-img1.jpg" alt="">
+        <p class="info">欧洲城新体验店由金海马倾心打造，位于深圳南山区核心地段，占地面积逾5000平方米，是首家涵盖家居家私、办公家具、工程领域整体解决方案的品牌卖场，提供ipad开单、触摸终端机购物、WAP、APP手机下单、扫码支付等数字化购物服务，是全国最大家居电商专业化体验大卖场。</p>
+    </div>
+</div>
+<!-- 欧洲城新体验店结束 -->
+
+<div class="future-wrap">
+    <!-- 时尚家居智能馆 -->
+    <div class="smart-home offline-floor mb50">
+        <div class="page-wrap">
+            <div class="title">
+                <span class="offline-icon title-icon"></span>
+            </div>
+            <img src="@@miscPath/p/images/offline-img1.jpg" alt="">
+            <p class="info">金海马商城智能家居馆位于广州天河区，建筑面积超过1800平方米，共设客厅、餐厅、户外、家具小件、家庭办公、书房、卧室、定制家具区、儿童家具、家居百货等10个体验场景，倾力缔造“绿色、时尚、品位”的全屋家居全新生活，融合多重科技元素，开启数字化购物服务，向消费者提供轻松便捷的家居消费新体验，引领家居电商进入4.0时代。</p>
+        </div>
+    </div>
+    <!-- 时尚家居智能馆结束 -->
+    <div class="page-wrap">
+        <div class="offline-line"></div>
+    </div>
+    <!-- 未来家居 -->
+    <div class="future offline-floor mb50">
+        <div class="page-wrap">
+            <div class="title">
+                <span class="offline-icon title-icon"></span>
+            </div>
+            <img src="@@miscPath/p/images/offline-img2.jpg" alt="">
+            <p class="info">在未来之家，你可以通过手机、电脑、控制面板等5种方式，管理家中所有的带电设备，比如：电灯、家电、影音系统、电动窗帘等等。无论您是身在家中还是在全球的任何一个地方，都可以通过手机、电脑看到您家中所有带电设备的工作状态，并可控制它们的开关及扩展功能，如空调的模式、风速、温度、风向等，还可以通过远程监控功能关爱家中老人、小孩的生活状况，带给您安全、舒适、高品味的智能生活享受。</p>
+            <div class="future-more">
+                <a href="#" class="offline-icon future-more-link"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 未来家居结束 -->
+</div>
+<div class="offline-line-2">
+    <span class="triangle offline-icon"></span>
+</div>
+<!-- 3D切换 -->
+<div class="3d-slider">
+    <div class="page-wrap">
+        <div class="slider-tab"></div>
+        <div class="ui-diy-3d-content">
+            <div class="slider3DList" id="J_slider3D"></div>
+        </div>
+    </div>
+</div>
+<!-- 3D切换结束 -->
+<!-- 热销商品 -->
+<div class="hot-sale offline-floor">
+    <div class="page-wrap">
+        <div class="title">
+            <span class="offline-icon title-icon"></span>
+        </div>
+        <ul class="hot-sale-list">
+            <li>
+                <a href="http://item.kinhom.com/42689.html" target="_blank">
+                    <img src="http://img1.jjcdn.com/g1/M00/02/06/CvoBNFRvwUGAdmBEAANOPveZgdo922.jpg!mid" alt="">
+                    <p class="pro-title">现代简约 水曲柳配米黄色 水曲柳 餐桌椅（1桌4椅） CD851+CY802 </p>
+                </a>
+                <p class="pro-price fc-f60">&yen;4435</p>
+            </li>
+            <li>
+                <a href="http://item.kinhom.com/43127.html" target="_blank">
+                    <img src="http://img.jjcdn.com/g1/M00/02/12/CvoBNFR_Ct6AKAPAAAJK6fBIVpU061.jpg!mid" alt="">
+                    <p class="pro-title">现代简约 白色 冰丝棉 独立袋装弹簧 床垫（1.5*1.9） JSDD2014</p>
+                </a>
+                <p class="pro-price fc-f60">&yen;8490</p>
+            </li>
+            <li>
+                <a href="http://item.kinhom.com/44762.html" target="_blank">
+                    <img src="http://img.jjcdn.com/g1/M00/02/10/CvoBNFR3VoSAEqb4AAI52M1OLHs365.jpg!mid" alt="">
+                    <p class="pro-title">现代简约 杏色 布艺 沙发（3+贵妃）面左贵妃  KHB018</p>
+                </a>
+                <p class="pro-price fc-f60">&yen;4005</p>
+            </li>
+            <li>
+                <a href="http://item.kinhom.com/42653.html" target="_blank">
+                    <img src="http://img0.jjcdn.com/g1/M00/02/06/CvoBNFRvrS-AJ4pLAAQk3YkAs7w921.jpg!mid" alt="">
+                    <p class="pro-title">现代简约 白色 钢化玻璃 餐台椅(一桌4椅) T278A+Y258</p>
+                </a>
+                <p class="pro-price fc-f60">&yen;4010</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 热销商品结束 -->
+<!-- 最新活动 -->
+<div class="activity offline-floor">
+    <div class="page-wrap">
+        <div class="title">
+            <span class="offline-icon title-icon"></span>
+        </div>
+        <ul class="activity-list">
+            <li>
+                <a href="http://sale.kinhom.com/998.html" target="_blank">
+                    <img src="@@miscPath/p/images/offline-active-1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="http://sale.kinhom.com/875.html" target="_blank">
+                    <img src="@@miscPath/p/images/offline-active-2.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 最新活动结束 -->
+<!-- 页面主体结束 -->
+<input type="hidden" id="security" name="3951477" value="9096374"/>
+<!-- 底部开始 -->
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+<script>
+    var provenceData ={"area":["华南地区","华中地区","华东地区","华北地区"],"lat":["113.188399","114.313006","121.490179","117.197773"],"lng":["23.529788","30.655132","31.23976","39.257566"],"areaList":[["广州市","深圳市","汕头市","惠州市","珠海市"],["武汉市","南昌市","成都市","新乡市"],["上海市","苏州市","无锡市","青岛市"],["天津市","沈阳市"]]};  var cityPoiData = {"cityName":["广州市","深圳市","汕头市","惠州市","珠海市","武汉市","南昌市","成都市","新乡市","上海市","苏州市","无锡市","青岛市","天津市","沈阳市"],"proList":[[{"id":"17","title":"金海马维亚店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"天河区黄埔大道中科韵路303号维亚国际广场2-3楼","tel":"020-85577004","lat":"113.385972","lng":"23.126164","metra":"地铁5号线科韵路站B出口","bus":"公交员村东（原化工厂）站"},{"id":"20","title":"金海马广香店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"江南大道南411号香江家居品牌工厂批发城三楼（地铁二号线江泰路站B1出口）","tel":"020-84301729","lat":"113.285622","lng":"23.092044","metra":"2号线/8号线【昌岗站】A出口；2号线【江泰路】站B1出口","bus":"礼岗(省口腔医院)站。","info":"金海马广香体验店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"},{"id":"23","title":"金海马芳村店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"荔湾区花地大道转右进喜鹊路金海马家居四楼（地铁一号线花地湾站D出口）","tel":"020-81529800","lat":"113.237949","lng":"23.090431","metra":"地铁1号线花地湾站D出口","bus":"翠竹苑站71、121A、222、525、556、565、966、公交地铁接驳线1","info":"金海马芳村店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"}],[{"id":"29","title":"金海马欧洲城店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"深圳市南山区沙河东路欧洲城百安居2楼","tel":"0755-82751541、82836760","lat":"113.972","lng":"22.562689","metra":"暂无地铁交通路线。","bus":"681、B683、26、66、54、58","info":"金海马商城首推020线上线下一体化,采用线上家居电子商城与线下体验馆的O2O结合，既通过互联网的平台为消费者提供了足不出户家居信息在线了解的便利，又通过线下体验馆的实体卖场，实现了家居电商的有效落地。"},{"id":"32","title":"金海马泥岗店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"深圳市罗湖区宝安北路金海马家具城","tel":"0755-82751541、82836760","lat":"114.114201","lng":"22.57482","metra":"1号罗宝线【会展中心】；3号龙岗线【石厦站】；4号龙华线【福民站】；","bus":"高峰专线14、17、73、76区间、80、235、M347、374、M390","info":"金海马泥岗店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"},{"id":"35","title":"金海马福田店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"深圳市福田区益田路皇廷世纪北区金海马家居4楼","tel":"0755-86239126","lat":"114.063637","lng":"22.532064","metra":"1号罗宝线【会展中心】；3号龙岗线【石厦站】；4号龙华线【福民站】","bus":"高峰专线14B","info":"金海马福田店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"},{"id":"38","title":"金海马龙华店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"龙华民治大道与布龙路交汇处（万众城家居广场二、三楼）","tel":"0755-28199868","lat":"114.044728","lng":"22.636502","metra":"5号环中线【民治站】；4号龙华线【深圳北站】；","bus":"【水尾站】【沙吓站】","info":"金海马龙华店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"},{"id":"110","title":"金海马欧洲城新体验店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"南山区沙河东路香江家居MALL富一楼","tel":"0755-82833609","lat":"113.972","lng":"22.565690","metra":"暂无地铁交通路线。","bus":"可乘坐B681、B683、26、66、54、58路车到达。","info":"金海马商城首推020线上线下一体化，顾客可以在线下体验，线上购物，亦可在商城现场通过手机等移动终端自动下单，商城全城无纸化办公，畅享全方位智能化购物系统，颠覆传统购物方式，无疑这将是一次购物革命！"}],[{"id":"41","title":"金海马汕头店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"汕头市金平区汕头市金平区潮汕路62号香江家居2楼","tel":"0754-88100548","lat":"116.68665","lng":"23.387749","metra":"暂无地铁交通路线。","bus":"乘4、7、13、28、30、38、102、33B可达","info":"金海马汕头店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"}],[{"id":"44","title":"金海马惠州店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"惠城区惠州市惠城区三环南路金海马家居4楼","tel":"0752-2556113","lat":"114.428473","lng":"23.064207","metra":"暂无地铁交通路线。","bus":"路线1、7、12、15、28、34、K1、41、202、206至河南岸汽车站下车即到","info":"金海马惠州店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"}],[{"id":"47","title":"金海马珠海店","url":"index.php?act=offline_store&op=osdetail","service_time":"10:00-22:00","address":"香洲区珠海市香洲区前山三台石路239号太和广场4楼","tel":"0756-8661998","lat":"113.537813","lng":"22.257537","bus":"46、55、201、992、k2路到暨南大学;18、20、35路到风山工业园","info":"金海马珠海店欢迎各位顾客光临，我们竭诚为您提供最优质的服务，最优质的产品，让您买的舒心，用的放心！"}],[{"id":"56","title":"香江家居品牌工厂批发城","url":"index.php?act=offline_store&op=osdetail","service_time":"09:30-17:30","address":"硚口区汉西三路香江家居四楼","tel":"027-83593097","lat":"114.22807","lng":"30.606795","bus":"香江家居站"}],[{"id":"59","title":"香江家居品牌工厂批发城","url":"index.php?act=offline_store&op=osdetail","address":"解放西路999号","lat":"115.95763","lng":"28.657225"}],[{"id":"62","title":"香江全球家居CBD","url":"index.php?act=offline_store&op=osdetail","address":"老成彭路家具产业园香江.全球家居CBDⅡ期中国家居直销城","lat":"104.027092","lng":"30.859153"},{"id":"65","title":"香江全球家居CBD四川家具批发中心","url":"index.php?act=offline_store&op=osdetail","address":"新繁镇家具产业园列维士路","lat":"104.028665","lng":"30.862765"},{"id":"68","title":"香江全球家居CBD西部罗浮宫","url":"index.php?act=offline_store&op=osdetail","address":"龙桥镇香江全球家居CBD西部罗浮宫馆","lat":"104.027892","lng":"30.860943"}],[{"id":"71","title":"香江家居品牌工厂批发城","url":"index.php?act=offline_store&op=osdetail","address":"和平大道南段光彩市场C区","lat":"113.894564","lng":"35.276225"}],[{"id":"74","title":"金海马家居洛川店","url":"index.php?act=offline_store&op=osdetail","address":"沪太路751号(延长路路口)金海马家居2层","lat":"121.453009","lng":"31.269247"},{"id":"77","title":"金海马家居黄兴路店","url":"index.php?act=offline_store&op=osdetail","address":"黄兴路1621号","lat":"121.527203","lng":"31.293134"},{"id":"80","title":"金海马家居松江店","url":"index.php?act=offline_store&op=osdetail","address":"繁华路889号","lat":"121.248852","lng":"31.028805"}],[{"id":"83","title":"金海马家居苏州园区店","url":"index.php?act=offline_store&op=osdetail","address":"苏州工业园区金鸡湖路202-208号","lat":"120.665431","lng":"31.312171"}],[{"id":"86","title":"金海马家居新区门店","url":"index.php?act=offline_store&op=osdetail","address":"长江北路259号","lat":"120.347798","lng":"31.567208"},{"id":"89","title":"金海马家居中桥门店","url":"index.php?act=offline_store&op=osdetail","address":"贡湖大道2号苏锡路2-1号太湖半岛国际广场B1层","lat":"120.297504","lng":"31.541976"}],[{"id":"92","title":"金海马家具世界","url":"index.php?act=offline_store&op=osdetail","address":"山东路38号（百安居二层）","lat":"120.381447","lng":"36.085926"}],[{"id":"95","title":"金海马家具世界河东店","url":"index.php?act=offline_store&op=osdetail","address":"津塘路与十四经路交口","lat":"117.240898","lng":"39.127011"},{"id":"98","title":"金海马家具商城","url":"index.php?act=offline_store&op=osdetail","address":"卫津路与新兴路交口","lat":"117.186755","lng":"39.123562"},{"id":"101","title":"津金海马家居河北店","url":"index.php?act=offline_store&op=osdetail","address":"狮子林大街与金纬路交口","lat":"117.206817","lng":"39.153008"}],[{"id":"104","title":"沈阳香江家居工厂批发城","url":"index.php?act=offline_store&op=osdetail","address":"建设大路保工南街2号","lat":"123.359559","lng":"41.806992"}]]};
+</script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=540032994E9eBAde72eea6c7f2e65849"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+    "cdn" : "@@miscPath",
+    "name"  : "offline-old"
+})
+</body>
+</html>

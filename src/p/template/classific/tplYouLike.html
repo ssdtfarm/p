@@ -1,0 +1,15 @@
+<div class="title classific-icon"></div>
+<ul class="list">
+    <%for(var i=0; i<list.length; i++) {%>
+    <li class="like-item">
+        <a href="<%=list[i].proLink%>" title="<%=list[i].proTitle%>" class="img-link" target="_blank">
+            <div class="mark-info">
+                <div class="mark"></div>
+                <p class="item-title"><%=list[i].proTitle%></p>
+            </div>
+            <img class="lazy" data-original="<%=list[i].imgURL%>" alt="<%=list[i].proAlt%>" width="119" height="79">
+        </a>
+        <p class="fc-f60 price">&yen;<span><%=list[i].proPrice%></span></p>
+    </li>
+   <%}%>
+</ul> 

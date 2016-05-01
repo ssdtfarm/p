@@ -1,0 +1,48 @@
+<div class="act-1212-title">
+    <span>钜惠爆款</span>0利润清仓，优惠超双11，限量抢购。
+    <a href="<%=moreLink%>" class="act-1212-icon more-link" target="_blank">更多</a>
+</div>
+<ul class="crazy-pro-list crazy-pro-list-1">
+    <% for(var i=0; i<list1.length; i++) {%>
+    <li class="pro-item">
+        <a href="<%=list1[i].proLink%>" class="pro-link" target="_blank">
+            <img class="lazy" data-original="<%=list1[i].imgSrc%>" alt="<%=list1[i].imgAlt%>" width="588" height="391">
+        </a>
+        <div class="pro-info">
+            <div class="bg"></div>
+            <div class="tit">
+                <p class="pro-name">
+                    <a href="<%=list1[i].proLink%>"><%=list1[i].proTitle%></a>
+                </p>
+                <p class="desc"><strong>市场价</strong><span><%=list1[i].markyPrice%></span></p>
+            </div>
+            <div class="price">
+                <p><span>特惠价&yen;</span><strong><%=list1[i].price%></strong></p>
+                <a href="<%=list1[i].proLink%>" class="buy-link " target="_blank">立即抢购<i class="icon act-1212-icon"></i></a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</ul>
+
+<ul class="crazy-pro-list crazy-pro-list-2">
+    <% for(var i=0; i<list2.length; i++) {%>
+    <li class="pro-item">
+        <a href="<%=list2[i].proLink%>" class="pro-link" target="_blank">
+            <img class="lazy" data-original="<%=list2[i].imgSrc%>" alt="<%=list2[i].imgAlt%>" width="388" height="258">
+        </a>
+        <div class="pro-info">
+            <div class="tit">
+                <p class="pro-name">
+                    <a href="<%=list2[i].proLink%>"><%=list2[i].proTitle%></a>
+                </p>
+                <p class="desc"><strong>市场价</strong><span><%=list2[i].markyPrice%></span></p>
+            </div>
+            <div class="price">
+                <p><span>特惠价&yen;</span><strong><%=list2[i].price%></strong></p>
+                <a href="<%=list2[i].proLink%>" class="buy-link act-1212-icon" target="_blank">立即抢购<i class="icon act-1212-icon"></i></a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</ul>

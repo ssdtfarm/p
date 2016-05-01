@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "person-address",
+        "title": "我的金海马-收货地址"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "收货地址",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 收货地址页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <!--<a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>-->
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-coupon"></i>
+                            <label>我的优惠券</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item ">
+                        <span>
+                        <i class="m-icon icon-config"></i>
+                        <label>账户设置</label>
+                    </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">账号信息与安全</a>
+                        <a href="javascript:void(0);" >个人信息</a>
+                        <a href="javascript:void(0);" class="on">收货地址</a>
+                    </dd>
+
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20">
+            <div class="person-address-main">
+                <!-- tab导航 -->
+            	<div class="corner-tab-nav">
+                    <a href="account-information.html" class="clearfix"><i class="icon-c-nav-l"></i><label>账户信息</label><i class="icon-c-nav-r"></i></a>
+                    <a href="person-info.html" class="clearfix"><i class="icon-c-nav-l"></i><label>个人信息</label><i class="icon-c-nav-r"></i></a>
+                    <a href="person-address.html" class="clearfix cur"><i class="icon-c-nav-l"></i><label>收货地址</label><i class="icon-c-nav-r"></i></a>
+                </div>
+                
+                
+                <div class="address-font-gray">
+                    最多保存<lable class="address-account">&nbsp;20&nbsp;</lable>个有效地址，您还可以添加<lable class="address-account">&nbsp;19&nbsp;</lable>个收货地址
+                </div>
+
+                <!-- 地址列表信息 -->
+                <dl class="address-list clearfix">
+                    <dt>
+                        <i class="icon-point-on"></i>
+                        <label class="JQ_userName" title="何旭梅">何旭梅</label>
+                        <span class="JQ_area address-area" title="湖北省武汉市硚口区" data-value="10000,1111,1111,湖北省,武汉市,硚口区">
+                            湖北省武汉市硚口区
+                        </span>
+                        <span class="JQ_address address-detail" title="中山大道215号武汉市第一医院内分泌科">  
+                            中山大道215号武汉市第一医院内分泌科
+                        </span>
+                        <span class="JQ_telephone address-phone" title="手机/电话：15820206143/020-88888888-909" data-value="15820206143,020-88888888-909">
+                            手机/电话：15820206143/020-88888888-909
+                        </span>
+                        <input type="hidden" class="JQ_default" value="1">
+                        <span class="default-address-btn JQ_defaultText">默认地址</span>
+                    </dt>
+                    <dd>
+                        <a href="http://www.baidu.com/" class="icon-modify-8c8 JQ_modifyAddress" title="编辑地址"></a>
+                        <a href="javascript:void(0);" class="icon-delete-8c8 JQ_delAddress" title="删除地址"></a>
+                    </dd>
+                </dl>
+
+                <dl class="address-list clearfix">
+                    <dt>
+                        <i class="icon-point-off"></i>
+                        <label class="JQ_userName" title="何旭梅">何旭梅</label>
+                        <span class="JQ_area address-area" title="湖北省武汉市硚口区" data-value="10000,1111,1111,湖北省,武汉市,硚口区">
+                            湖北省武汉市硚口区
+                        </span>
+                        <span class="JQ_address address-detail" title="中山大道215号武汉市第一医院内分泌科">  
+                            中山大道215号武汉市第一医院内分泌科
+                        </span>
+                        <span class="JQ_telephone address-phone" title="手机/电话：15820206143/020-88888888-909" data-value="15820206143,020-88888888-909">
+                            手机/电话：15820206143/020-88888888-909
+                        </span>
+                        <input type="hidden" class="JQ_default" value="0">
+                    </dt>
+                    <dd>
+                        <a href="javascript:void(0);" class="address-set-default JQ_setDefault">设为默认地址</a>
+                        <a href="javascript:void(0);" class="icon-modify-8c8 JQ_modifyAddress" title="编辑地址"></a>
+                        <a href="javascript:void(0);" class="icon-delete-8c8 JQ_delAddress" title="删除地址"></a>
+                    </dd>
+                </dl>
+
+                <dl class="address-list clearfix">
+                    <dt>
+                        <i class="icon-point-off"></i>
+                        <label class="JQ_userName" title="何旭梅">何旭梅</label>
+                        <span class="JQ_area address-area" title="湖北省武汉市硚口区" data-value="10000,1111,1111,湖北省,武汉市,硚口区">
+                            湖北省武汉市硚口区
+                        </span>
+                        <span class="JQ_address address-detail" title="中山大道215号武汉市第一医院内分泌科">  
+                            中山大道215号武汉市第一医院内分泌科
+                        </span>
+                        <span class="JQ_telephone address-phone" title="手机/电话：15820206143/020-88888888-909" data-value="15820206143,020-88888888-909">
+                            手机/电话：15820206143/020-88888888-909
+                        </span>
+                        <input type="hidden" class="JQ_default" value="0">
+                    </dt>
+                    <dd>
+                        <a href="javascript:void(0);" class="address-set-default JQ_setDefault">设为默认地址</a>
+                        <a href="javascript:void(0);" class="icon-modify-8c8 JQ_modifyAddress" title="编辑地址"></a>
+                        <a href="javascript:void(0);" class="icon-delete-8c8 JQ_delAddress" title="删除地址"></a>
+                    </dd>
+                </dl>
+
+                <dl class="address-list clearfix">
+                    <dt>
+                        <i class="icon-point-off"></i>
+                        <label class="JQ_userName" title="何旭梅">何旭梅</label>
+                        <span class="JQ_area address-area" title="湖北省武汉市硚口区" data-value="10000,1111,1111,湖北省,武汉市,硚口区">
+                            湖北省武汉市硚口区
+                        </span>
+                        <span class="JQ_address address-detail" title="中山大道215号武汉市第一医院内分泌科">  
+                            中山大道215号武汉市第一医院内分泌科
+                        </span>
+                        <span class="JQ_telephone address-phone" title="手机/电话：15820206143/020-88888888-909" data-value="15820206143,020-88888888-909">
+                            手机/电话：15820206143/020-88888888-909
+                        </span>
+                        <input type="hidden" class="JQ_default" value="0">
+                    </dt>
+                    <dd>
+                        <a href="javascript:void(0);" class="address-set-default JQ_setDefault">设为默认地址</a>
+                        <a href="javascript:void(0);" class="icon-modify-8c8 JQ_modifyAddress" title="编辑地址"></a>
+                        <a href="javascript:void(0);" class="icon-delete-8c8 JQ_delAddress" title="删除地址"></a>
+                    </dd>
+                </dl>
+
+                <p>
+                    <!-- 请把action地址放在下面这个标签的href里面 -->
+                    <a id="J_addNewAddress" href="javascript:void(0);" class="btn-130x30 btn-orange">新增收货地址</a>
+                </p>
+            </div>
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 售后列表页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "person-address"
+    })
+</body>
+
+</html>

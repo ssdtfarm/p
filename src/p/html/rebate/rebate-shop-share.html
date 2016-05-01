@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop-share", "title" : "金海马商城-返利小店分享" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{ "cdn" : "@@miscPath", "headerName" : "我的金海马", "search" : false })
+    <!-- 头部结束 -->
+    <!-- 我的金海马导航栏开始 -->
+    <div class="member-nav w1190">
+        <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+        <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+        <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+        <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+    </div>
+    <!-- 我的金海马导航栏结束 -->
+    <!-- 返利详情头部开始 -->
+    <div class="rebate-detail-head">
+        <div class="head-portrait">
+            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/rebate/rebate-portrait.jpg" alt="头像"></a>
+        </div>
+        <div class="head-shopname">
+            <span>老徐的店</span>
+            <input type="text" value="老徐的店" />
+        </div>
+        <div class="head-toshop">
+            <a href="javascript:void(0)">
+                即刻分享<i></i>
+            </a>
+        </div>
+    </div>
+    <!-- 返利详情头部结束 -->
+    <!-- 返利热推 -->
+    <div class="rebate-share-hot">
+        <div class="w1190 ">
+            <p class="hot-title"></p>
+            <ul class="list">
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                    </div>
+                    <i class="icon-hot"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                    </div>
+                    <i class="icon-hot"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                    </div>
+                    <i class="icon-hot"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                    </div>
+                    <i class="icon-hot"></i>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    <!-- 返利热推结束 -->
+    <div class="rebate-content">
+        <div class="w1190">
+            <div class="main">
+                <div class="select-bar">
+                    <!-- 层级刷选 -->
+                    <div class="selector-wrap">
+                        <div class="selector j_selector">
+                            <p class="title">价格区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">返利区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 层级刷选 end-->
+                    <!-- 排序导航条开始 -->
+                    <div class="nav-sort">
+                        <div class="left fl">
+                            <dl>
+                                <dt>排序：</dt>
+                                <dd>推荐</dd>
+                                <dd>人气</i>
+                                </dd>
+                                <dd data-type="price">价格<i class="triangle  triangle-up j_priceAsc"></i><i class="triangle  triangle-down triangle-down-active j_priceDsc"></i></dd>
+                                <dd data-type="rebate">返利<i class="triangle  triangle-up j_rebateAsc"></i><i class="triangle  triangle-down triangle-down-active j_rebatDsc"></i></dd>
+                            </dl>
+                        </div>
+                        <div class="right fr">
+                            <span class="page-item prev-page">上一页</span>
+                            <span class="page-now">1</span>/
+                            <span class="page-all">15</span>
+                            <span class="page-item next-page">下一页</span>
+                        </div>
+                    </div>
+                    <!-- 排序导航条 end -->
+                </div>
+                <div class="list-wrap">
+                    <ul class="list">
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;9999</span>
+                            </div>
+                            <i class="del"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paginator">
+                    <ul class="">
+                        <li><a href="#"><span></span></a></li>
+                        <li><a href="#"><span>上一页</span></a></li>
+                        <li><a href="#"><span>1</span></a></li>
+                        <li><span class="currentpage">2</span></li>
+                        <li><a href="#"><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li><a href="#"><span>6</span></a></li>
+                        <li><a href="#"><span>7</span></a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li>共<b>7</b>页</li>
+                        <li>
+                            <form method="get" action="">
+                                <input name="cat" value="223" type="hidden">
+                                <input name="rid" value="32" type="hidden">去第
+                                <input type="text" size="3" id="toPage" name="curpage">页
+                                <input type="submit" value="确定">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side">
+                <dl class="side-nav">
+                    <dt>全部<span class="num">（3000）</span></dt>
+                    <dd class="cur">
+                        <a href="javascript:void(0);" >卧室<span class="num">（30）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">· 真皮沙发</a></li>
+                            <li><a href="#">· 布艺沙发 </a></li>
+                            <li><a href="#">· 电视柜</a></li>
+                            <li><a href="#">· 茶几</a></li>
+                            <li><a href="#">· 鞋柜</a></li>
+                            <li><a href="#">· 客厅小件</a></li>
+                            <li><a href="#">·  酒柜/饰品柜(架)/间厅柜</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                         <a href="javascript:void(0);">餐厅<span class="num">（8）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                         <a href="javascript:void(0);">书房<span class="num">（0）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                         <a href="javascript:void(0);">儿童<span class="num">（0）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                         <a href="javascript:void(0);">办公家具<span class="num">（0）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                         <a href="javascript:void(0);">家居百货<span class="num">（300）</span></a>
+                        <ul class="sub">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="fix-nav">
+        <div class="bg"></div>
+        <div class="w1190">
+            <div class="share-wrap">
+                <strong>分享</strong>
+                <a href="#">
+                    <i class="qq"></i>
+                    <span>QQ</span>
+                </a>
+                <a href="#">
+                    <i class="qqkj"></i>
+                    <span>QQ空间</span>
+                </a>
+                <a href="#"  class="j_pop">
+                    <i class="wx"></i>
+                    <span>微信</span>
+                    <div class="pop j_wxCode">
+                        <div class="code-img"></div>
+                        <p>扫码分享</p>
+                    </div>
+                </a>
+                <a href="#" class="j_pop">
+                    <i class="pyq"></i>
+                    <span>朋友圈</span>
+                    <div class="pop j_pyqCode">
+                        <div class="code-img"></div>
+                        <p>扫码分享</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <i class="xlwb"></i>
+                    <span>新浪微博</span>
+                </a>
+
+            </div>
+            <div class="copy j_pop">复制链接
+                <div class="pop">
+                    <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    <textarea class="word">亲~老徐推荐您到金海马商城购买家具，尊享独家豪华返利~猛戳：http://item.kinhom.com/52961/xxxx=22222
+                    </textarea>
+                </div>
+            </div>
+            <div class="code j_pop">
+                <div class="pop">
+                    <div class="code-img"></div>
+                    <p>扫码分享</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部开始 --> 
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop-share" })
+</body>
+
+</html>

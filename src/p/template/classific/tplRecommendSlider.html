@@ -1,0 +1,62 @@
+<div class="recommend-title"><i class="classific-icon title-icon"></i>热门推荐</div>
+<div class="recommend-slider-wrap">
+    <div class="recommend-slider J_recommendSlider">
+        <div class="hd">
+            <ul>
+                <%for(var i=0; i<typeList.length; i++) {%> 
+                <li><%=typeList[i]%></li>
+                <%}%> 
+            </ul>
+        </div>
+        <div class="bd">
+            <ul class="list">
+                <%for(var j=0; j<list.length; j++) {%> 
+                <li>
+                    <div class="left">
+                        <a href="<%=list[j].left.proLink%>" title="<%=list[j].left.porTitle%>" target="_blank"><img _src="<%=list[j].left.imgURL%>" alt="<%=list[j].left.proAlt%>" width="590" height="393"></a>
+                        <div class="info">
+                            <div class="bg"></div>
+                            <div class="content">
+                                <h2 class="tit"><%=list[j].left.porTitle%></h2>
+                                <h3 class="tit2"><%=list[j].left.porTitle2%></h3>
+                                <p class="line"></p>
+                                <p class="pro-price">&yen;<strong><%=list[j].left.porPrice%></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <%for(var k=0; k<list[j].middle.length; k++) {%> 
+                        <div class="item">
+                            <div class="pro-title">
+                                <div class="title-bg"></div>
+                                <p class="title"><%=list[j].middle[k].porTitle%></p>
+                            </div>
+                            <a href="<%=list[j].middle[k].proLink%>" class="pro-link" title="<%=list[j].middle[k].porTitle%>" target="_blank">
+                                <img _src="<%=list[j].middle[k].imgURL%>" alt="<%=list[j].middle[k].proAlt%>" width="290" height="193">
+                            </a>
+                            <p class="price">&yen;<span><%=list[j].middle[k].porPrice%></span></p>
+                        </div>
+                        <%}%> 
+                    </div>
+                    <div class="right">
+                        <%for(var l=0; l<list[j].right.length; l++) {%> 
+                        <div class="item">
+                            <div class="pro-title">
+                                <div class="title-bg"></div>
+                                <p class="title"><%=list[j].right[l].porTitle%></p>
+                            </div>
+                            <a href="<%=list[j].right[l].proLink%>" title="<%=list[j].right[l].porTitle%>" class="pro-link" target="_blank">
+                                <img _src="<%=list[j].right[l].imgURL%>" alt="<%=list[j].right[l].proAlt%>" width="190" height="127">
+                            </a>
+                            <p class="price">&yen;<span><%=list[j].right[l].porPrice%></span></p>
+                        </div>
+                        <%}%> 
+                    </div>
+                </li>
+                <%}%> 
+            </ul>
+        </div>
+        <div class="prev classific-icon"></div>
+        <div class="next classific-icon"></div>
+    </div>
+</div>   

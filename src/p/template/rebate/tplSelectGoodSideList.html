@@ -1,0 +1,11 @@
+<%for(var i=0; i<data.list.length; i++) {%>
+    <li class="item" data-id="<%=data.list[i].sku_id%>">
+        <a href="#>" class="img-link"><img src="<%=data.list[i].img%>" ></a>
+        <div class="good-info">
+            <a href="#" class="good-title"><%=data.list[i].sku_title%></a>
+            <p class="price">&yen;<%=data.list[i].price%></p>
+            <p class="rebate-price">返<%= data.list[i].rebatePrice%></p>
+        </div> 
+        <i class="del j_removeGood" data-id="<%=data.list[i].sku_id%>"></i>
+    </li> 
+<%}%>

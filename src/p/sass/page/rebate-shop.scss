@@ -1,0 +1,384 @@
+/**
+ *  ---------------------------------------------
+ *      我的返利小店
+ *      该页面主要用来让店主查看返利小店的商品
+ *      
+ *      zhangzhensheng
+ *      2016-04-06
+ * 
+ *  ---------------------------------------------
+ */
+@charset "UTF-8";
+@import "../layout/layout.scss";
+@import "../components/member-head.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-foot.scss";
+@import "../components/common-top-bar.scss";
+@import "../components/common-dialog.scss";
+@import "../components/rebate-head.scss";
+@import "../components/rebate-profile.scss";
+/**
+ * fav btn icon 
+ */
+.fav {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(#{$cdn}/images/rebate/rebate-icon.png) -90px 0 no-repeat;
+    cursor: pointer;
+    &.on {
+        background-position: -60px 0;
+    }
+}
+/**
+ *  主推弹框
+ *  说明：在已经有四个主推的情况再设主推，
+ *  则出现些弹框。此模块只可在此页面使用。
+ *  author: zhangzhensheng
+ *  date  : 2016-04-06
+ ============================================*/
+.goods-dialog {
+	h6 {
+		margin-top: 12px;
+		margin-bottom: 40px;
+		text-align: center;
+		line-height: 12px;
+	}
+	li {
+		overflow: hidden;
+		margin-top: 10px;
+		margin-left: 32px;
+	}
+	.goods {
+		float: left;
+	}
+	dd {
+	    margin-top: 12px;
+		width: 140px;
+	}
+	.title {
+		display: block;
+    	width: 140px;
+    	height: 32px;
+    	overflow: hidden;
+	}
+	img {
+		display: block;
+		width: 138px;
+		height: 91px;
+		border: 1px solid #ccc;
+	}
+	a {
+		color: #8c8c8c;
+		&:hover {
+			color: #f60;
+		}
+	}
+	span {
+		margin-top: 10px;
+		display: block;
+		color: #333;
+		font-size: 14px;
+		line-height: 10px;
+	}
+	.fc-f60 {
+		color: #f60;
+	}
+	button {
+		float: left;
+		margin-top: 31px;
+		margin-left: 16px;
+		width: 90px;
+		height: 30px;
+		overflow: hidden;
+		overflow: visible;
+		display: inline-block;
+		padding: 6px 12px;
+		_margin-left: 5px;
+		margin-bottom: 0;
+		color: #fff;
+		font-size: 12px;
+		font-weight: normal;
+		font-family: "Microsoft Yahei";
+		line-height: 1.428571429;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	.btn-orange {
+		background-color: #f60;
+	}
+	.btn-gray {
+		background-color: #ccc;
+	}
+}
+/**
+ *  返利小店人气榜
+ *  说明：查看返利小店里浏览量高的商品，只可在此页面使用。
+ *  author: zhangzhensheng
+ *  date  : 2016-04-06
+ ============================================*/
+.rebate-popular {
+	height: 517px;
+	background: #ebebeb;
+	h1 {
+		margin-bottom: 40px;
+	    color: #333;
+	    font-size: 24px;
+	    font-weight: bold;
+	    text-align: center;
+	    letter-spacing: 3px;
+	    a {
+	    	margin-top: 14px;
+	    	font-weight: normal; 
+	    	&:hover {
+	    		color: #f60;
+	    	}
+	    }
+	}
+	h3 {
+		margin: 0 auto;
+		padding-top: 50px;
+		width: 240px;
+		height: 10px;
+		text-align: justify;
+		line-height: 10px;
+		letter-spacing: 1px;
+		span {
+			display: inline-block;
+			padding-left: 100%;
+		}
+	}
+}
+.popular-list {
+    margin-left: -10px;
+    overflow: hidden;
+    .item {
+        position: relative;
+        float: left;
+        margin-left: 10px;
+        width: 290px;
+        height: 335px;
+    	background-color: #fff;
+        &:hover {
+            .good-title {
+                color: #f60;
+            }
+        }
+    }
+    img {
+        display: block;
+        vertical-align: middle;
+        width: 290px;
+        height: 193px;
+    }
+    .good-title {
+        display: block;
+        height: 40px;
+        padding: 15px 40px 5px;
+        overflow: hidden;
+        line-height: 20px;
+        text-align: center;
+        color: #8c8c8c;
+        &:hover {
+            color: #f60;
+        }
+    }
+    .price {
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+    }
+    .tips {
+    	margin: 0 auto;
+        width: 160px;
+        height: 28px;
+        line-height: 28px;
+        span {
+            float: left; 
+	    	width: 78px;
+	        font-size: 14px;
+            text-align: center;
+        }
+    }
+    .rebate-price {
+        background: #f60;
+        color: #fff;
+        border: 1px solid #f60;
+    }
+    .btn {
+        border: 1px solid #f60;
+        background: #fff;
+        color: #f60;
+        cursor: pointer;
+    }
+    .setted { 
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #ccc;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .fav {
+        right: 10px;
+        bottom: 20px;
+    }
+    .watched {
+    	position: absolute;
+    	top: 10px;
+    	left: 10px;
+    	z-index: 1;
+    	padding: 18px 0;
+    	width: 79px;
+    	height: 43px;
+    	background: url(#{$cdn}/images/rebate/rebate-icon.png) -126px -6px no-repeat;
+    	color: #fff;
+    	font-size: 14px;
+    	line-height: 20px;
+    	text-align: center;
+    }
+}
+/**
+ *  返利小店推荐商品
+ *  说明：在返利小店里由系统推荐热门的商品，只可在此页面使用。
+ *  author: zhangzhensheng
+ *  date  : 2016-04-06
+ ============================================*/
+.rebate-recommend {
+	padding-top: 50px;
+	margin: 0 auto -20px;
+	width: 1190px;
+	h2 {
+		margin-bottom: 20px;
+	    color: #333;
+	    font-size: 24px;
+	    font-weight: bold;
+	    a {
+	    	margin-top: 14px;
+	    	font-weight: normal; 
+	    	&:hover {
+	    		color: #f60;
+	    	}
+	    }
+	}
+}
+.recommend-list {
+    overflow: hidden;
+    margin-left: -60px;
+    .item {
+        position: relative;
+        float: left;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        width: 188px;
+        height: 257px;
+        border: 1px solid #ccc;
+        &:hover, &.selected{
+            border-color: #f60;
+        }
+        &:hover {
+            .good-title {
+                color: #f60;
+            }
+        }
+    }
+    img {
+        display: block;
+        vertical-align: middle;
+        width: 188px;
+        height: 127px;
+    }
+    .good-title {
+        display: block;
+        height: 40px;
+        margin-bottom: 5px;
+        padding: 5px 40px 0;
+        overflow: hidden;
+        line-height: 20px;
+        text-align: center;
+        color: #8c8c8c;
+        &:hover {
+            color: #f60;
+        }
+    }
+    .price {
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+    }
+    .tips {
+        margin: 8px 0 0 10px;
+        width: 160px;
+        height: 28px;
+        line-height: 28px;
+        span {
+            float: left; 
+            text-align: center;
+        }
+    }
+
+    .rebate-price {
+    	width: 78px;
+        background: #f60;
+        color: #fff;
+        font-size: 14px;
+        border: 1px solid #f60;
+    }
+    .btn {
+    	width: 58px;
+        border: 1px solid #f60;
+        background: #fff;
+        color: #f60;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .cancel { 
+    	width: 58px;
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #333;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .fav {
+        right: 0px;
+        bottom: 10px;
+    }
+}
+/**
+ *  返利小店（未创建）
+ *  说明：当未创建返利小店时，使用该样式渲染小店概况。
+ *  只可在此页面使用。
+ *  author: zhangzhensheng
+ *  date  : 2016-04-06
+ ============================================*/
+.rebate-detail-profile {
+	&.empty {
+		height: 216px;
+	}
+}
+.profile-item {
+	float: left;
+	padding-top: 76px;
+	width: 33.333%;
+	font-size: 18px;
+	text-align: center;
+	span {
+		margin-right: 8px;
+		font-size: 60px;
+	}
+}

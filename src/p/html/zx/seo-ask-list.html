@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "seo-ask",
+        "title" : "问答列表页_金海马商城"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn" : "@@miscPath",
+        "headerName" : "装修汇",
+        "search" : false
+    })
+    <!-- 头部结束 -->
+    <!-- page start -->
+    <section>
+        <!-- 导航开始 -->
+        <nav class="navigation">
+            <div class="w1190 clearfix">
+                <ul class="nav-list fl">
+                    <li class="nav-list-item"><a href="javascript:void(0)" target="_blank">首页</a></li>
+                    <li class="nav-list-item">
+                        <a href="javascript:void(0)" target="_blank">家具</a>
+                        <ul class="sub-list">
+                            <li><a href="javascript:void(0)" target="_blank">风格</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">评测</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">定制</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">保养</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">风水</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">导购</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="javascript:void(0)" target="_blank">装修</a>
+                        <ul class="sub-list">
+                            <li><a href="javascript:void(0)" target="_blank">设计</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">装饰</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">攻略</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">案例</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">建材</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">创意</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="javascript:void(0)" target="_blank">空间</a>
+                        <ul class="sub-list">
+                            <li><a href="javascript:void(0)" target="_blank">客厅</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">办公</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">厨房</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">卧室</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">餐厅</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">书房</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="javascript:void(0)" target="_blank">品牌</a>
+                        <ul class="sub-list">
+                            <li><a href="javascript:void(0)" target="_blank">家居家饰</a></li>
+                            <li><a href="javascript:void(0)" target="_blank">装修建材</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="javascript:void(0)" target="_blank">问答</a>
+                    </li>
+                </ul>
+                <div class="nav-index fr">
+                    <a href="javascript:void(0)" target="_blank">商城首页</a>
+                </div>
+            </div>
+        </nav>
+        <!-- 导航结束 -->
+        <section class="member-section clearfix">
+            <!-- 面包屑开始 -->
+            <div class="bread w1190">
+                <span>当前位置：</span>
+                <a href="javascript:void(0)" target="_blank">商城首页</a>
+                <span class="fc-2f6">&gt;</span>
+                <a href="javascript:void(0)" target="_blank">装修汇</a>
+                <span class="fc-2f6">&gt;</span>
+                <a href="javascript:void(0)" target="_blank">问答</a>
+                <span class="fc-2f6">&gt;</span>
+                <span href="javascript:void(0);">家具产品</span>
+            </div>
+            <!-- 面包屑结束 -->
+            <div class="seo-ask-container w1190">
+                <!-- 列表内容 -->
+                <div class="ask-list-main">
+                    <div class="classify-stage-1 clearfix">
+                        <p class="ask-list-title"><b>家居产品</b></p>
+                        <div class="classify-main">
+                            <a href="javascript:void(0);" class="tag">沙发</a>
+                            <a href="javascript:void(0);" class="tag">橱柜</a>
+                            <a href="javascript:void(0);" class="tag">床垫</a>
+                            <a href="javascript:void(0);" class="tag">办公室</a>
+                            <a href="javascript:void(0);" class="tag">书房</a>
+                            <a href="javascript:void(0);" class="tag">阳台</a>
+                            <a href="javascript:void(0);" class="tag">餐厅</a>
+                            <a href="javascript:void(0);" class="tag">小户型</a>
+                            <a href="javascript:void(0);" class="tag">厨房电器</a>
+                            <a href="javascript:void(0);" class="tag">餐厅</a>
+                            <a href="javascript:void(0);" class="tag">音箱</a>
+                            <a href="javascript:void(0);" class="tag">空调</a>
+                            <a href="javascript:void(0);" class="tag">电器</a>
+                            <a href="javascript:void(0);" class="tag">电视</a>
+                            <a href="javascript:void(0);" class="tag">豪宅</a>
+                            <a href="javascript:void(0);" class="tag">卫浴电器</a>
+                        </div>
+                    </div>
+                    <div class="ask-question-list clearfix">
+                        <p class="ask-list-title"><b>问题列表</b></p>
+                        <ul class="question-list-main">
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-fff">
+                                <p class="left"><a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                            <li class="item bg-grey">
+                                <p class="left">
+                                    <a class="title" href="javascript:void(0);">[暑假结束倒计时] 妈咪爸比如何大战熊孩子？</a>
+                                    <a href="javascript:void(0);" class="keyword">暑假</a>
+                                    <a href="javascript:void(0);" class="keyword">倒计时</a>
+                                    <a href="javascript:void(0);" class="keyword">孩子</a>
+                                </p>
+                                <p class="right">
+                                    <span>31浏览</span>
+                                    <i class="spacing">|</i>
+                                    <span>2015-06-14</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page clearfix">
+                        <div class="page-line">
+                            <a class="a1">200条</a> <a href="/articles/c-15-0/" class="a1">上一页</a> <span>1</span> <a href="/articles/c-15-2/">2</a> <a href="/articles/c-15-3/">3</a> <a href="/articles/c-15-4/">4</a> <a href="/articles/c-15-5/">5</a> <a href="/articles/c-15-6/">6</a> <a href="/articles/c-15-7/">7</a> <a href="/articles/c-15-8/">8</a> <a href="/articles/c-15-9/">9</a> <a href="/articles/c-15-10/">10</a> <i>...</i><a href="/articles/c-15-200/">200</a> <a href="/articles/c-15-2/" class="a1">下一页</a> </div>
+                    </div>
+                </div>
+                <!-- 列表内容 -->
+                <!-- 侧边栏 -->
+                <div class="ask-list-sidebar">
+                    <p class="ask-list-ad1">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/zx/280X320.jpg" alt=""></a>
+                    </p>
+                </div>
+                <!-- 侧边栏 -->
+            </div>
+        </section>
+    </section>
+    <!-- page end -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "seo-ask"
+    })
+</body>
+
+</html>

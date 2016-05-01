@@ -1,0 +1,75 @@
+@charset "utf-8";
+/**
+/* ===============
+ * 新增会员浮窗
+ * =============== */
+.addUsers{
+  z-index: 998;position: absolute;top:0;left: 0;display: none;
+  width: 100%;
+  height: 100%;
+}
+.addUsers_bg{background: #333;opacity: 0.5;z-index: 997;overflow: hidden;position: absolute;top:0;left: 0;}
+.addUsers_content{position: absolute;top: 0;left: 0;overflow: hidden;z-index:999;}
+.addUsers_wrapper{width: 480px;height: auto;background: #fff;border: 1px solid #ccc;border-radius: 6px;position: fixed;z-index: 999;padding:10px 10px 30px 10px;box-shadow: 3px 3px 2px #aaa;top:12%;}
+ .addUsers_wrapper h1,.addUsers_wrapper h2{padding: 5px 2px;position: relative;height: 20px;margin-bottom: 10px;}
+ .addUsers_wrapper h2{border-bottom: 2px solid #09f;}
+  .addUsers_wrapper h1 a,.addUsers_wrapper h2 a{display: block;position: absolute;right: 0;top:-2px;width:28px;height: 28px;background: url(../images/o2o_bg/close_xx.png) no-repeat; }
+  .addUsers_wrapper .nameIn{width: 226px;height: 40px;color: #888;font-size: 14px;}
+   .addUsers_wrapper .nameIn:focus{font-weight: 600;}
+  .addUsers_wrapper .error{color: #f30;font-size: 13px;display: none;}
+  .addUsers_wrapper a.search_btn{display: inline-block;width: 105px;height: 41px;background: #39f;color: #fff;text-align: center;margin-left: -5px;line-height: 40px;position: relative;top: -1px;}
+    /*webkit hack*/
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+   .addUsers_wrapper a.search_btn{height: 44px;top: -1px;}
+   .addUsers_wrapper .nameIn:focus{border-width: 1px 2px;}
+   input,button,select,textarea{outline:none;}
+  }
+  .addUsers_wrapper ul{margin:30px auto;width:370px;position: relative;}
+  .addUsers_wrapper ul li{
+    margin: 5px auto;
+  }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+         .addUsers_wrapper .searchL .nextR a i{right: 0;}
+    }
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+         .addUsers_wrapper .searchL .nextR a i{right: 0;}
+    }
+
+   .addUsers_wrapper .searchL .listIn{position: relative;width:204px;height: 145px;overflow: hidden;margin: 0 auto;} 
+    .addUsers_wrapper .searchL .listIn ul{position: absolute;width: 999px;z-index: 9999;}
+       .addUsers_wrapper .listIn li{width: 100px;height: 145px;float: left;margin-right: 2px;}
+        .addUsers_wrapper .listIn li a{width: 100px;height: 38px;white-space: nowrap;overflow: hidden;display: block;font-size: 12px;box-shadow: none;margin: 0 2px 2px 0;box-shadow: 1px 1px 1px #ccc;text-align: center;line-height: 15px;padding-top: 8px;background:-moz-linear-gradient(top,#acf,#fff);background:-webkit-gradient(linear, 0% 0%, 0% 70%, from(#acf), to(#fff));}
+   .addUsers_wrapper p{text-align: right;}
+    .addUsers_wrapper p a{padding: 8px 20px;text-align: center;color: #fff;margin-right: 20px;box-shadow: 1px 1px 1px #999;border-radius: 4px;}
+    .addUsers_wrapper p a.cancel{background: #aaa;}
+    .addUsers_wrapper p a.addTcart{background: #f60;}
+
+    .success, .fail{
+      display: none;
+    }
+    .success_head{
+      color: green;
+    }
+    .fail_head{
+      color: red;
+    }
+    .mark_necessary{
+      color: red;
+    }
+    .vip_tips{
+      display: inline-block;
+      width: 70%;
+      line-height: 24px;
+      color: #aaa;
+      margin-left: 80px;
+    }
+    .error_tips{
+      text-align: center;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      color: red;
+      display: none;
+      background: rgb(254, 243, 127);
+    }

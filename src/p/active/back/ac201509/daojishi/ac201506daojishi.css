@@ -1,0 +1,55 @@
+/*
+ *   time countDown module
+ *   author : yansiwen
+ *   date : 2015-08-12
+ */
+.countdown-box {
+    position: relative;
+    width: 1190px;
+    height: 159px;
+    margin: 0 auto;
+    background: url("countdown-bg.png") no-repeat;
+    color: #fff;
+    font: 48px "Microsoft YaHei", Arial;
+}
+.countdown-bg-word {
+    color: black;
+    font-size: 72px;
+    font-weight: bold;
+    text-indent: -9999px;
+}
+.countdown-box p {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
+}
+.countdown-box p em {
+    font-weight: bold;
+    font-style: normal;
+}
+.countdown {
+    margin-left: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.countdown span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.countdown .time {
+    width: 58px;
+    height: 49px;
+     background: #21020a;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -moz-border-radius: 8px; 
+    line-height: 50px;
+}

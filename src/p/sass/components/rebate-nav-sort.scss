@@ -1,0 +1,76 @@
+/**
+ *  ---------------------------------------------
+ *      返利商城排序导航栏
+ *      用于(返利商城创建我的小店、返利商
+ *      城店铺设置、返利商城我的小店分享、返利商城选择
+ *      商品)  
+ *      author : ljrong
+ *      date   : 2016-04-06
+ *  ---------------------------------------------
+ */
+.nav-sort {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    a {
+        color: #333;
+    }
+    dt {
+        float: left;
+        width: 75px;
+    } 
+    dd {
+        position: relative;
+        float: left;
+        width: 34px;
+        margin-right: 36px;
+        cursor: pointer;
+        &:hover {
+            color: #f60;
+        }
+    }
+    .cur {
+        color: #f60;
+    }
+    .triangle {
+        left: 34px;
+    }
+    .triangle-up {
+        top: 14px;
+    }
+    .triangle-down {
+        top: 21px;
+    }
+
+    .selected {
+        a {
+            color: #f60;
+        }
+    }
+
+    .page-item {
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+        background: #cccccc;
+        cursor: pointer;
+        &:hover {
+                //background: #333;
+            }
+    }
+    .page-active {
+        background: #333;
+    }
+    .page-now {
+        color: #333;
+        margin-left: 10px;
+    }
+    .page-all {
+        margin-right: 10px;
+        color: #8c8c8c;
+    }
+}

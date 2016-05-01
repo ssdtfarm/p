@@ -1,0 +1,122 @@
+<%if(list.length>0){%>
+<%for(var i=0; i<list.length; i++){%>
+<section class="floor clearfix">
+    <div class="floor-left">
+        <!-- 楼层头部 -->
+        <p class="floor-head-img">
+            <a href="<%=list[i].head.linkURL%>" target="_blank" title="<%=list[i].head.selAlt%>">
+                <img class="lazy" data-original="<%=list[i].head.imgSRC%>" width="290" height="110" alt="<%=list[i].head.selAlt%>"/>
+            </a>
+        </p>
+        <!-- 楼层标签 -->
+        <p class="floor-cats">
+            <%for(var j=0; j< list[i].cats.length; j++){%>
+            <a href="<%=list[i].cats[j].linkURL%>" target="_blank" title="<%=list[i].cats[j].name%>"><%=list[i].cats[j].name%></a>
+            <%}%>
+        </p>
+        <p class="floor-left-ad">
+            <!-- 左边大广告图 -->
+            <a href="<%=list[i].ad[0].linkURL%>" title="<%=list[i].ad[0].selAlt%>">
+                <img class="lazy" data-original="<%=list[i].ad[0].imgSRC%>" alt="<%=list[i].ad[0].selAlt%>" width="290" height="409" />
+            </a>
+        </p>
+    </div>
+
+    <div class="floor-right">
+        <dl class="floor-right-top clearfix">
+            <!-- 大图片 -->
+            <dt class="floor-one">
+                <a class="floor-one-link" href="<%=list[i].product[0].linkURL%>" target="_blank" title="<%=list[i].product[0].selAlt%>">
+                    <img class="lazy" data-original="<%=list[i].product[0].imgSRC%>" width="590" height="393" alt="<%=list[i].product[0].pTitle%>"/>'
+                                <span class="floor-one-mark">
+                                    <span class="title"><%=list[i].product[0].pTitle%></span>
+                                    <span class="price <%if(list[i].product[0].hot){%>off-sale<%}%>">&yen; <%=list[i].product[0].price%></span>
+                                </span>
+                </a>
+            </dt>
+            <!-- 小广告图 -->
+            <dd class="floor-hot">
+                <a href="<%=list[i].ad[1].linkURL%>" target="_blank" title="<%=list[i].ad[1].selAlt%>">
+                    <img class="lazy" data-original="<%=list[i].ad[1].imgSRC%>!mid" width="290" height="193" alt="<%=list[i].ad[1].selAlt%>"/>
+                    <span>&nbsp;</span>
+                </a>
+            </dd>
+            <!-- 猜你喜欢 -->
+            <dd class="floor-guess-like">
+                <a href="<%=list[i].enjoy.linkURL%>" target="_blank" title="<%=list[i].enjoy.selAlt%>">
+                    <img class="lazy" data-original="<%=list[i].enjoy.imgSRC%>" width="290" height="193" alt="<%=list[i].enjoy.selAlt%>"/>
+                                <span class="guess-like-mark">
+                                    &yen; <%=list[i].enjoy.price%>
+                                </span>
+                </a>
+            </dd>
+        </dl>
+        <!-- 下面三个小图 -->
+        <ul class="floor-right-list clearfix">
+            <li class="li-gap">
+                <a href="<%=list[i].product[1].linkURL%>" target="_blank" title="<%=list[i].product[1].pTitle%>">
+                    <img class="lazy" data-original="<%=list[i].product[1].imgSRC%>" width="290" height="193" alt="<%=list[i].product[1].selAlt%>"/>
+                    <span class="title"><%=list[i].product[1].pTitle%></span>
+                    <span class="price <%if(list[i].product[1].hot){%> off-sale<%}%>">&yen; <%=list[i].product[1].price%></span>
+                </a>
+            </li>
+            <li class="li-gap">
+                <a href="<%=list[i].product[2].linkURL%>" target="_blank" title="<%=list[i].product[1].pTitle%>">
+                    <img class="lazy" data-original="<%=list[i].product[2].imgSRC%>" width="290" height="193" alt="<%=list[i].product[2].selAlt%>"/>
+                    <span class="title"><%=list[i].product[2].pTitle%></span>
+                    <span class="price <%if(list[i].product[2].hot){%> off-sale<%}%>">&yen; <%=list[i].product[2].price%></span>
+                </a>
+            </li>
+            <li>
+                <a href="<%=list[i].product[3].linkURL%>" target="_blank" title="<%=list[i].product[1].pTitle%>">
+                    <img class="lazy" data-original="<%=list[i].product[3].imgSRC%>" width="290" height="193" alt="<%=list[i].product[3].selAlt%>"/>
+                    <span class="title"><%=list[i].product[3].pTitle%></span>
+                    <span class="price <%if(list[i].product[3].hot){%> off-sale<%}%>">&yen; <%=list[i].product[3].price%></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <%if(list[i].subFloor.length>0){%>
+        <%for(var m=0; m<list[i].subFloor.length; m++){%>
+        <dl class="sub-floor">
+            <dt class="sub-floor-title">
+                        <span class="sub-title-wrap">
+                            <i class="icon-sub-right"></i>
+                            <label><%=list[i].subFloor[m].titCh%></label>
+                            <span><%=list[i].subFloor[m].titEn%></span>
+                        </span>
+            </dt>
+            <dd class="sub-floor-list">
+                <ul>
+                    <%for(var n=0; n<list[i].subFloor[m].list.length; n++){%>
+                    <li class="sub-list-item" style="<%if(n==3){%>width:289px<%}else{%>width:290px <%}%>">
+                        <a class="JQ_floorSubListItem" href="<%=list[i].subFloor[m].list[n].linkURL%>" target="_blank">
+                            <img src="<%=list[i].subFloor[m].list[n].imgSRC%>" <%if(n==3){%>width="289"<%}else{%>width="290" <%}%> height="193" alt="<%=list[i].subFloor[m].list[n].pTitle%>"/>
+                                    <span class="list-item-title">
+                                        <span class="item-title-price">&yen; <%=list[i].subFloor[m].list[n].price%></span>
+                                        <span class="item-title"><%=list[i].subFloor[m].list[n].pTitle%></span>
+                                    </span>
+                        </a>
+                    </li>
+                    <%}%>
+                </ul>
+            </dd>
+            <dd class="sub-list-bottom">
+                <span class="list-bottom-line"></span>
+            </dd>
+        </dl>
+        <%}%>
+    <%}%>
+</section>
+<!-- floor ad -->
+    <%if(list[i].floorAd.isShow=="no"){%>
+
+    <%}else{%>
+    <section class="index-wrap-ad">
+        <a href="<%=list[i].floorAd.linkURL%>" target="_blank" title="<%=list[i].floorAd.pTitle%>">
+            <img class="lazy" data-original="<%=list[i].floorAd.imgSRC%>" alt="<%=list[i].floorAd.seoAlt%>"/>
+        </a>
+    </section>
+    <%}%>
+<%}%>
+<%}%>

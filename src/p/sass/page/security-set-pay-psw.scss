@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+@import "../components/common-dialog.scss";	// art-dialog
+
+/*
+ * Security Center
+ * security-set-pay-psw.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-10-16;
+ */
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 设置支付密码
+.pay-psw-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+.pay-psw-form {
+	margin-top: 42px;
+}
+.pay-psw-item {
+	position: relative;
+	height: 50px;
+	line-height: 28px;
+	overflow: hidden;
+	.phone-code {
+		.tip-ok {
+			margin-left: 105px;
+		}
+	}
+	label {
+		float: left;
+		width: 85px;
+		height: 28px;
+		line-height: 28px;
+		text-align: right;
+	}
+	input {
+		float: left;
+		margin-left: 4px;
+		width: 182px;
+		height: 28px;
+		line-height: 28px;
+		padding: 0 8px;
+		border: 1px solid #b4b4b4;
+		border-radius: 3px;
+		&:focus {
+			border-color: #2f6ceb;
+		}
+	}
+	.phone-num {
+		float: left;
+		margin-left: 10px;
+	}
+	.security-code {
+		float: left;
+		width: 72px;
+	}
+	.get-security-code {
+		position: absolute;
+		float: left;
+		margin-left: 10px;
+		width: 88px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #ccc;
+		background: #fff;
+		border-radius: 3px;
+		text-align: center;
+		color: #333;
+		cursor: pointer;
+		&:hover {
+			color: #f60;
+			border-color: #f60;
+		}
+	}
+	.security-code-active {
+		display: none;
+		background: #ccc;
+		color: #f60;
+		&:hover {
+			color: #f60;
+			border-color: transparent;
+		}
+	}
+	.modify-phone {
+		float: left;
+		margin-left: 4px;
+		color: #2f6ceb;
+		&:hover {
+			color: #f60;
+		}
+	}
+	.tips {
+		margin-left: 90px;
+		height: 20px;
+		color: #8c8c8c;
+		line-height: 20px;
+		.icon-tip-wrong {
+			margin: 0 3px 3px 0;
+		}
+	}
+	.tip-ok {
+		margin-left: 5px;
+	}
+	.submit-btn {
+		position: relative;
+		display: block;
+		left: 85px;
+  		width: 200px;
+  		height: 30px;
+  		margin-left: 4px;
+  		background: #ccc;
+  		color: #fff;
+  		border-color: transparent;
+  		border-radius: 3px;
+  		text-align: center;
+  		cursor: default;
+  		&:focus {
+  			border-color: transparent;
+  		}
+	}
+	.on {
+		background: #f60;
+		cursor: pointer;
+		&:hover {
+			background: $commonColor;
+		}
+	}
+}
+.pay-phone {
+	height: 28px;
+	margin-bottom: 3px;
+}

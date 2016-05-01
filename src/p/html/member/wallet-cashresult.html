@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "wallet-cashresult",
+        "title" : "金海马商城-我的钱包"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn": "@@miscPath",
+        "headerName" : "我的钱包",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 我的钱包开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item  item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 clearfix">
+            <div class="wallet-cashresult">
+                <div class="result-title">
+                    <h4>提现详情</h4>
+                    <p><i class="ques-icon"></i><a href="javascript:void(0)">使用遇到问题</a></p>
+                </div>
+                <div class="result-process">
+                    <div class="process-icon">
+                        <span class="icon-1"></span><span class="icon-2"></span>
+                    </div>
+                    <div class="process-dscr ml190">
+                        <span class="dscr-1">提交申请</span><br/><span class="dscr-2">2015-02-02<br/>11 : 20 : 07</span>
+                    </div>
+                    <div class="process-dscr ml-5">
+                        <span class="dscr-1">待处理</span><br/><span class="dscr-2">2015-02-02<br/>11 : 20 : 07</span>
+                    </div>
+                    <div class="process-dscr ml56">
+                        <span class="dscr-1 J_complete">银行处理完成，转账成功</span><br/><span class="dscr-2 J_comtime"></span>
+                    </div>
+                </div>
+                <table class="result-detail">
+                    <thead>
+                        <tr>
+                            <th width="150" height="30"><p class="single-line">类型</p></th>
+                            <th width="300" height="30"><p class="single-line">消费名称</p></th>
+                            <th width="150" height="30"><p class="single-line">金额（元）</p></th>
+                            <th width="150" height="30"><p class="single-line">服务费（元）</p></th>
+                            <th width="240" height="30"><p class="single-line">总金额（元）</p></th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td width="150" height="60"><p class="single-line">提现</p></td>
+                            <td width="300" height="60">
+                                <table class="name">
+                                    <tr>
+                                        <td width="300"><p class="single-line">快速提现</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="300"><p class="single-line">流水号：2015049022222220022565455656565</p></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="150" height="60"><p class="single-line">800.00</p></td>
+                            <td width="150" height="60"><p class="single-line">0.00</p></td>
+                            <td width="240" height="60" class="total"><p class="single-line">800.00</p></td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
+    </section>
+    <!-- 我的钱包结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "wallet-cashresult"
+    })
+</body>
+</html>

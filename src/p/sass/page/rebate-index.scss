@@ -1,0 +1,581 @@
+/**
+ *  ---------------------------------------------
+ *      返利商城首页 
+ *      author : ljrong
+ *      date   : 2016-04-06
+ *  ---------------------------------------------
+ */
+
+@charset "UTF-8";
+@import "../layout/layout.scss"; // base
+// grid-system
+// icon-system
+@import "../components/common-top-bar.scss"; // global-top-bar
+@import "../components/member-head.scss"; // member-head
+@import "../components/common-foot.scss"; // global-footer
+@import "../components/common-min-bar.scss"; // min-bar
+@import "../components/common-crumbs.scss"; // main-breadcrumb-trail
+@import "../components/common-search-bar.scss"; // head-search-bar
+//components
+@import "../components/common-dialog.scss"; // art-dialog
+@import "../components/common-ads.scss"; // index-top-ad style
+
+.w1190 {
+    position: relative;
+}
+//full slider
+.full-wrap {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    .slider {
+        position: relative;
+        height: 399px;
+        width: 100%;
+    }
+
+    .bd {
+        height: 380px;
+        width: 100%;
+        overflow: hidden;
+        background: #ebebeb;
+        a {
+            display: block;
+        }
+        ul, li, a{
+            width: 100%;
+            height: 380px;
+        }
+    }
+    .hd {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        height: 19px;
+        line-height: 19px;
+        text-align: center;
+        font-size: 0;
+        li {
+            display: inline-block;
+            margin-top: 7px;
+            margin-right: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+        .on {
+            background: #f60;
+        }
+    }
+}
+//rebate-indexAdv
+.rebate-indexAdv {
+    padding: 119px 0 100px;
+    height: 300px;
+    background: #fff;
+    .pic-box {
+        height: 300px;
+        background: #8c8c8c;
+    }
+}
+//index-menu
+.rebate-index-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 359px;
+    width: 290px;
+    padding-top: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background: url(#{$cdn}/images/rebate/rebate-index-menu-bg.jpg);
+    .user-face-wrap {
+        margin: 0 auto;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+        border: 2px solid #59b0f7;
+        img {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .user-name {
+        margin-bottom: 30px;
+        height: 34px;
+        line-height: 34px;
+    }
+    .rebate-total {
+        line-height: 30px;
+        span {
+            font-size: 36px;
+        }
+    }
+    .other {
+        margin-bottom: 40px;
+    }
+    .shop-link {
+        position: relative;
+        z-index: 10;
+        margin: 0 auto;
+        display: block;
+        width: 210px;
+        height: 40px;
+        line-height: 40px;
+        background: #f60;
+        border-radius: 4px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        i {
+            margin: -2px 0 0 7px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(#{$cdn}/images/rebate/rebate-icon.png) -5px -36px no-repeat;
+        }
+    }
+}
+//index-not-create 
+.menu-not-create {
+    left: 0;
+    .login-link {
+        display: block;
+        margin-bottom: 26px;
+        height: 34px;
+        line-height: 34px;
+        color: #fff;
+    }
+    .other {
+        width: 160px;
+        margin: 0 auto 20px;
+        line-height: 22px;
+    }
+    .rebate-member {
+        line-height: 30px;
+        .num {
+            font-size: 36px;
+        }
+    }
+}
+//index-menu-logout
+.menu-logout { 
+    left: 0;
+    .other {
+        width: 160px;
+        margin: 0 auto 20px;
+        line-height: 22px;
+    }
+    .rebate-member {
+        line-height: 30px;
+        .num {
+            font-size: 36px;
+        }
+    }
+    .login-link, .create-link {
+        color: #f60;
+    }
+    .login-tips {
+        margin-top: 50px;
+    }
+    .other {
+        margin-bottom: 50px;
+    }
+    .shop-link {
+        margin-bottom: 10px;
+    }
+}
+//hot-share-goods
+.hot-share-wrap {
+    padding: 99px 0 69px;
+    height: 674px;
+    width: 100%;
+    background: #333;
+    .hot-share-content {
+        height: 674px;
+    }
+    .item {
+        float: left;
+        margin-bottom: 11px;
+        &:hover {
+            .good-link {
+                color: #f60;
+            }
+        }
+    }
+    .item-1 {
+        margin-right: 10px;
+        width: 840px;
+        height: 392px;
+        .img-link {
+            float: left;
+            width: 590px;
+        }
+        img {
+            display: block;
+            width: 590px;
+            height: 392px;
+        }
+        .info {
+            margin-left: 590px;
+            height: 322px;
+            padding-top: 70px;
+            text-align: center;
+            background: #fff;
+        }
+        .good-link {
+            margin: 0 auto;
+            display: block;
+            width: 162px;
+            height: 54px;
+            color: #8c8c8c;
+            line-height: 18px;
+            overflow: hidden;
+        }
+        .price {
+            padding-top: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+        .rebate-price {
+            margin-bottom: 37px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+            color: #f60
+        }
+        .rebate-btn {
+            margin: 0 auto;
+            display: block;
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            background: #fff;
+            border: 1px solid #f60;
+            color: #f60;
+            font-size: 18px;
+            border-radius: 4px;
+            &:hover {
+                background: #f60;
+                color: #fff;
+            }
+        }
+        .tips {
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+        }
+    }
+    .item-3,
+    .item-4 {
+        width: 590px;
+        height: 290px;
+        .img-link {
+            float: left;
+            width: 390px;
+        }
+        img {
+            display: block;
+            width: 390px;
+            height: 290px;
+        }
+        .info {
+            width: 200px;
+            margin-left: 390px;
+            height: 290px;
+            text-align: center;
+            background: #fff;
+        }
+        .good-link {
+            margin: 24px auto 0;
+            display: block;
+            width: 162px;
+            height: 36px;
+            color: #8c8c8c;
+            line-height: 18px;
+            overflow: hidden;
+        }
+        .price {
+            padding-top: 6px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+        .rebate-price {
+            margin: 0 auto;
+            height: 48px;
+            padding: 6px 0;
+            width: 60px;
+            background: #f60;
+            color: #fff;
+            p {
+                line-height: 24px;
+                font-size: 18px;
+            }
+        }
+        .rebate-btn {
+            margin: 30px auto 0;
+            display: block;
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            background: #fff;
+            border: 1px solid #f60;
+            color: #f60;
+            font-size: 18px;
+            border-radius: 4px;
+            &:hover {
+                background: #f60;
+                color: #fff;
+            }
+        }
+        .rebate-added {
+            margin: 30px auto 0;
+            display: block;
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            background: #fff;
+            border: 1px solid #ccc;
+            color: #ccc;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+        .tips {
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+        }
+    }
+    .item-3 {
+        margin-right: 10px;
+    }
+}
+//real-time-info scroller
+.real-time-info {
+    height: 270px;
+    overflow: hidden;
+    background: #fff;
+    .title {
+        float: left;
+        width: 290px;
+        line-height: 270px;
+        float: left;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+    .list-wrap {
+        float: left;
+        margin-top: 36px;
+        width: 440px;
+        height: 200px;
+        overflow: hidden;
+        padding: 0 90px;
+        li {
+            height: 40px;
+            line-height: 40px;
+            span {
+                display: inline-block;
+            }
+            .phone {
+                width: 150px;
+            }
+            .total {
+                width: 190px;
+            }
+            .time {
+                width: 90px;
+                color: #8c8c8c;
+            }
+        }
+    }
+    .rule-link {
+        float: right;
+        margin-right: 92px;
+        margin-top: 127px;
+        color: #8c8c8c;
+        position: relative;
+    }
+}
+//recommend goods list
+.recommend-wrap {
+    height: 866px;
+    background: #ffe0cc;
+    .recommend-title {
+        height: 124px;
+        background: url(#{$cdn}/images/rebate/rebate-recomment-title.jpg) center center no-repeat;
+    }
+    .recommend-list {
+        overflow: hidden;
+        margin-right: -10px;
+    }
+    .item {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        float: left;
+        width: 290px;
+        height: 320px;
+        background: #fff;
+        &:hover {
+            .goog-title-wrap {
+                display: block;
+            }
+        }
+    }
+    .img-link {
+        display: block;
+        position: relative;
+        width: 290px;
+        height: 190px;
+        color: #fff;
+        text-align: center;
+        .goog-title-wrap {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 290px;
+            height: 22px;
+        }
+        .bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 290px;
+            height: 22px;
+            background: #000;
+            opacity: .55;
+            filter: alpha(opacity=55);
+        }
+        .good-title {
+            position: relative;
+            z-index: 10;
+            height: 22px;
+            line-height: 22px;
+            overflow: hidden;
+        }
+    }
+    img {
+        display: block;
+        width: 290px;
+        height: 190px;
+    }
+    .price {
+        padding: 14px 0;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .rebate-price {
+        color: #f60;
+    }
+    .rebate-btn {
+        display: block;
+        margin: 0 auto;
+        width: 110px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        background: #f60;
+    }
+    .rebate-added {
+        display: block;
+        margin: 0 auto;
+        width: 110px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        background: #ccc;
+    }
+    .tips {
+        text-align: center;
+        height: 32px;
+        line-height: 32px;
+        color: #333;
+    }
+}
+//rebate rules
+.rebate-rule {
+    height: 248px;
+    background: #fff;
+    h3 {
+        padding-top: 34px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 18px;
+        color: #333333;
+    }
+    p {
+        line-height: 19px;
+        color: #8c8c8c;
+    }
+}
+//float nav
+.fix-nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ccc;
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background: #fff;
+        opacity: .75;
+        filter: alpha(opacity=75);
+    }
+    a {
+        position: relative;
+        z-index: 10;
+        float: right;
+        margin-right: 50px;
+        margin-top: 29px;
+        width: 220px;
+        height: 40px;
+        line-height: 40px;
+        background: #f60;
+        border-radius: 2px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        i {
+            margin: -2px 0 0 7px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(#{$cdn}/images/rebate/rebate-icon.png) -5px -36px no-repeat;
+        }
+    }
+    .add-total {
+        float: right;
+        font-size: 18px;
+        height: 100px;
+        line-height: 100px;
+        margin-right:　50px;
+        .num {
+            color: #f60;
+        }
+    }
+}
+
+.J_flyImg {
+    border-radius: 100%;
+}

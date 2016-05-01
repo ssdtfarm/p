@@ -1,0 +1,1022 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";
+ 
+ 
+@import "../components/common-top-bar.scss";
+@import "../components/common-foot.scss";
+
+@import "../components/member-head.scss"; 
+@import "../components/common-pickDate.scss";
+@import "../components/common-dialog.scss";    // art-dialog
+
+input:focus {
+    border-color: #2f6ceb!important;
+}
+input.error {
+    border-color: #c13d23!important;
+}
+.cashier-icon {
+    background: url(../images/cashier-icon.png) no-repeat;
+}
+.cashier-error-icon {
+    width: 14px;
+    height: 14px;
+    background-position: -119px 0;
+}
+.cashier-succ-icon {
+    display: none;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 8px;
+    width: 14px;
+    height: 14px;
+    background-position: -97px 0;
+}
+.error-info {
+    display: none;
+    position: absolute;
+    margin-left: -188px;
+    margin-top: 30px;
+    color: #c13d23;
+    i {
+        margin-right: 5px;
+        position: relative;
+        margin-top: -3px;
+    }
+}
+.code-wrap {
+    .error-info {
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+}
+.form-item-warp {
+    height: 30px;
+    margin-bottom: 20px;
+}
+.form-item-title {
+    display: block;
+    line-height: 30px;
+    margin-right: 10px;
+    float: left;
+    text-align: right;
+    color: #333;
+}
+.txtInput {
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 188px;
+    text-indent: 10px;
+}
+.txtInput-code {
+    width: 88px;
+}
+.getPhoneCode {
+    display: inline-block;
+    margin-left: 6px;
+    cursor: pointer;
+    width: 88px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.triangle-up {
+    width:0;
+    height:0;
+    width:0;
+    height:0;
+    border-width:0 5px 10px;
+    border-style:solid;
+    border-color:transparent transparent #ebebeb;
+}
+.triangle-down {
+    width:0;
+    height:0;
+    width:0;
+    height:0;
+    border-width:6px 4px 0;
+    border-style:solid;
+    border-color:#333 transparent transparent;
+}
+.kf-icon {
+    display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    height: 24px;
+    background-position: -26px -24px;
+    &:hover {
+        background-position: -64px -24px;
+    }
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.countDown {
+    display:none;
+    margin-left: 6px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #f60;
+    background: #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.go-pay {
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    background: #f60;
+    &:hover {
+        background: #ee950a;
+    }
+    i {
+        margin-left: 6px;
+    }
+}
+.go-pay-disable {
+    background: #ccc;
+    &:hover {
+        background: #ccc;
+    }
+}
+.dis-none {
+    display: none;
+}
+.cashier-page {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    min-height: 523px;
+}
+.cashier-side {
+    width: 190px;
+    float: left;
+
+    .order-info {
+        margin-bottom: 10px;
+        height: 143px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+    .order-number {
+        line-height: 44px;
+    }
+    .play-title {
+        line-height: 20px;
+    }
+    .order-price {
+        margin-bottom: 20px;
+        line-height: 32px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #f60;
+        span {
+            padding-right: 10px;
+            margin-left: -20px;
+        }
+    }
+    .refresh {
+        position: absolute;
+        margin-top: 6px;
+        width: 19px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .order-details {
+        line-height: 20px;
+        color: #333;
+    }
+    .details-box {
+        position: absolute;
+        border: 1px solid #2f6ceb;
+        width: 170px;
+        padding: 6px 9px;
+        background: #fff;
+        z-index: 100;
+        text-align: left;
+        p {
+            line-height: 18px;
+            color: #333;
+        }
+    }
+    .order-info-fail {
+        padding: 50px 20px 0 20px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+    .side-nav {
+        padding: 0 9px;
+        border: 1px solid #ccc;
+        .nav-item {
+            height: 49px;
+            line-height: 49px;
+            border-top: 1px dashed #ccc;
+            font-size: 14px;
+            color: #2f6ceb;
+            cursor: pointer;
+            position: relative;
+            text-align:center;
+            span {
+                position: relative;
+                z-index: 10;
+            }
+            &:first-child {
+                border-top: none;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 9;
+                top: 9px;
+                left: 0;
+                display: none;
+                width: 190px;
+                height: 30px;
+                background: url(../images/cashier-icon.png) no-repeat 0 -52px;
+            }
+        }
+        .active-item,.nav-item:hover {
+            span {
+                color: #fff;
+            }
+            &:before {
+                display: block;
+            }
+        }
+
+        .webpay,.staging {
+            position: absolute;
+            z-index: 10;
+            width: 35px;
+            height: 14px;
+            top: 19px;
+            left: 20px;
+        }
+        .webpay {
+            background-position: -21px 0;
+        }
+        .staging {
+            background-position: -57px 0;
+        }
+    }
+}
+
+.cashier-main {
+    width: 888px;
+    float: right;
+    border: 1px solid #ccc;
+    padding: 15px 50px;
+    //min-height: 424px;
+    min-height: 374px;
+    .pay-title {
+        height: 31px;
+        line-height: 31px;
+        border-bottom: 1px solid #333;
+        margin-bottom: 20px;
+        a {
+            color: #2f6ceb;
+            padding-right: 20px;
+        }
+        .tit1 {
+            font-size: 18px;
+            color: #333;
+        }
+        .tit2 {
+            color: #8c8c8c;
+        }
+        .pay-qustion {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+            margin-left: -26px;
+            background-position: 0 -26px;
+        }
+    }
+}
+
+.pay-type {
+    display: none;
+}
+.pay-type-active {
+    display: block;
+}
+
+.webpay {
+    @at-root .bank-list {
+        overflow: hidden;
+        li {
+            float: left;
+            position: relative;
+            margin-right: 19px;
+            margin-bottom: 20px;
+            width:198px;
+            height: 48px;
+            line-height: 48px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            &:hover {
+                .type-select {
+                    display: block;
+                }
+            }
+
+        }
+        .bank-selected {
+            width:196px;
+            height: 46px;
+            border: 2px solid #f60;
+            img {
+                border: none;
+            }
+        }
+        img {
+            display: block;
+            width:196px;
+            height: 46px;
+            border: 1px solid #fff;
+        }
+        .type-select {
+            position: absolute;
+            display:none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            .bg {
+                position: absolute;
+                z-index:1;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.75;
+                filter:alpha(opacity=75);
+            }
+            span {
+                display: inline-block;
+                position: relative;
+                top: 3px;
+                cursor: pointer;
+                z-index: 10;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+
+        .savings-card {
+            background: #50ad56;
+        }
+        .credit-card {
+            background: #f00;
+            margin-left: 26px;
+        }
+
+        .last {
+            text-align: center;
+            font-size: 16px;
+            border-color:#ebf1fd;
+            background: #ebf1fd;
+            color: #2f6ceb;
+        }
+
+    }
+    .selected-credit {
+        width:196px;
+        height: 46px;
+        border: 2px solid #f60;
+        &:after {
+            content: '';
+            width: 43px;
+            height: 43px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            background: url(../images/cashier-icon.png) no-repeat 0 -86px;
+        }
+    }
+    .selected-savings {
+        width:196px;
+        height: 46px;
+        border: 2px solid #f60;
+        &:after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            width: 43px;
+            height: 43px;
+            background: url(../images/cashier-icon.png) no-repeat -48px -86px;
+        }
+    }
+}
+
+.quick-pay {
+    .bank-number {
+        margin-bottom: 20px;
+        height: 58px;
+        width: 298px;
+        border: 1px solid #ccc;
+        text-indent: 10px;
+        color: #333;
+        font-size: 16px;
+    }
+    .send-wrap {
+        display: none;
+    }
+    .bank-number-wrap {
+        .error-info {
+            margin-left: -300px;
+            margin-top: 60px;
+        }
+        .cashier-succ-icon {
+            margin-top: 25px;
+        }
+    }
+    .send-wrap {
+        .error-info {
+            margin-left: -90px;
+            margin-top: 30px;
+        }
+    }
+
+    .add-wrap {
+        height: 90px;
+        margin-bottom: 20px;
+    }
+    .other-bank {
+        color: #2f6ceb;
+        font-size: 14px;
+        margin-top: 33px;
+        padding-left: 10px;
+        float: left;
+    }
+    .bank-list-item {
+        width: 238px;
+        height: 88px;
+        border: 1px solid #ccc;
+        float: left;
+        cursor: pointer;
+        .img-wrap {
+            width: 200px;
+            height: 50px;
+            padding: 5px 19px;
+        }
+        img {
+            display: block;
+            width: 200px;
+            height: 50px;
+        }
+        .info {
+            border-top: 1px dashed #ccc;
+            text-align: center;
+            height: 29px;
+            line-height: 29px;
+            font-size: 14px;
+            color: #333;
+        }
+        .type {
+            color: #8c8c8c;
+            margin-right: 20px;
+        }
+    }
+    .bank-selected {
+        width: 236px;
+        height: 86px;
+        border: 2px solid #f60;
+    }
+    .bind-comfirm-wrap {
+        .bind-comfirm {
+            height: 189px;
+            padding-top: 20px;
+            background: #ebebeb;
+            margin-bottom: 10px;
+        }
+        .form-item-title {
+            width: 140px;
+        }
+        .protocol {
+            color: #2f6ceb;
+        }
+        .term .error-info {
+            margin-top: 0;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+    }
+    .select-pay {
+        .bank-list-item {
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        .form-item-title {
+            width: 100px;
+        }
+        .phone-info {
+            line-height: 30px;
+            a {
+                color: #2f6ceb;
+            }
+        }
+        .form-item-warp-mb10 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.financing {
+    .bank-number {
+        margin-bottom: 20px;
+        height: 30px;
+        width: 240px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-indent: 10px;
+        color: #333;
+        font-size: 16px;
+        &:focus {
+            border-color: #2f6ceb;
+        }
+    }
+    .send-wrap {
+        display: none;
+    }
+    .error-info {
+        margin-left: -240px;
+        margin-top: 34px;
+    }
+    .tips-tit {
+        display: inline-block;
+        width: 98px;
+        text-align: right;
+        margin-right:8px;
+    }
+    .financing-info {
+        font-size: 14px;
+        color:#333;
+    }
+    .send-wrap {
+        .error-info {
+            margin-left: -90px;
+        }
+    }
+    .financing-one, .financing-num {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .financing-type {
+        padding-top: 22px;
+        .title {
+            height: 54px;
+            line-height: 54px;
+            color: #333;
+            font-size: 14px;
+        }
+    }
+    .triangle {
+        height: 10px;
+        .select-type-0 {
+            margin-left: 40px;
+        }
+        .select-type-1 {
+            margin-left: 145px;
+        }
+        .select-type-2 {
+            margin-left: 242px;
+        }
+        .select-type-3 {
+            margin-left: 340px;
+        }
+        .select-type-4 {
+            margin-left: 440px;
+        }
+        .select-type-5 {
+            margin-left: 540px;
+        }
+    }
+    .financing-info {
+        padding: 7px 0 7px 12px;
+        margin-bottom: 20px;
+        background: #ebebeb;
+        p {
+            line-height: 28px;
+        }
+    }
+    .list {
+        li {
+            float: left;
+            margin-right: 10px;
+            width: 88px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            cursor: pointer;
+            color: #333;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+        .bank-selected {
+            width: 86px;
+            height: 36px;
+            border: 2px solid #f60;
+            color: #f60;
+        }
+    }
+    .bank-number-wrap {
+        display: none;
+    }
+}
+
+.wx-pay {
+    .pay-content {
+        padding-top:20px;
+    }
+    .qr-code {
+        width: 240px;
+        height: 240px;
+        margin-right: 58px;
+        position: relative;
+        &:hover {
+            .code-tips-img {
+                display: block;
+            }
+        }
+    }
+    .code {
+        width: 240px;
+        height: 240px;
+        text-align: center;
+        position:relative;
+        overflow: hidden;
+        img  {
+            display: block;
+            width:240px;
+            height:240px;
+        }
+        span{
+            display: block;
+            margin-top: 60px;
+        }
+    }
+    .code-tips-img {
+        display: none;
+        position: absolute;
+        top: -20px;
+        right: -308px;
+    }
+    .info {
+        padding-top: 53px;
+    }
+    .icon-wrap {
+        padding-bottom: 10px;
+    }
+    .J_payCode {
+        display: block;
+        position: relative;
+        top:-8px;
+        width:100%;
+        height:100%;
+        border:none;
+    }
+    .wx-icon {
+        width: 140px;
+        height: 38px;
+        margin-left: 40px;
+        background: url("../images/weixin-pay/weixin_pay_sprite.png") no-repeat;
+    }
+    .timer {
+        height:53px;
+    }
+    .wx-tips {
+        width:241px;
+        height:80px;
+        margin-bottom:10px;
+        background: url("../images/weixin-pay/weixin_pay_sprite.png") no-repeat 0 -43px;
+    }
+    .txt {
+        height: 40px;
+        line-height: 40px;
+        color: #8c8c8c;
+        font-size: 12px;
+        a {
+            display: inline-block;
+        }
+    }
+
+}
+
+
+.alipay {
+    .alipay-icon {
+        display: block;
+        width: 200px;
+        height: 50px;
+        background-position: 0 -145px;
+        margin-bottom: 20px;
+    }
+}
+
+.remittance{
+    .order-transfer-form {
+        width: 325px;
+    }
+
+    .fc-8c8 {
+        b {
+            color: #c13d23!important;
+        }
+    }
+
+    .datepick {
+        position: absolute;
+        margin-top: 4px;
+        margin-left: -28px;
+        width: 19px;
+        height: 20px;
+        cursor: pointer;
+        background-position: -101px -27px;
+    }
+    .txt-wrap {
+        height: 30px;
+        line-height: 30px;
+    }
+    .form-item-title {
+        width: 92px;
+        font-size: 14px;
+        span {
+            color: #f60;
+            font-size: 20px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -14px;
+        }
+    }
+    .address {
+        float: left;
+        position: relative;
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        width: 188px;
+
+        .triangle {
+            position: absolute;
+            top: 11px;
+            right: 9px;
+        }
+    }
+    .address-tit {
+        cursor: pointer;
+        text-indent: 10px;
+        height:28px;
+    }
+    textarea {
+        height: 68px;
+        width: 188px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        text-indent: 10px;
+    }
+
+
+    .bank-account-info {
+        height: 140px;
+        border-left: 1px solid #ccc;
+        padding-left: 50px;
+        h2 {
+            height: 22px;
+            position: relative;
+            margin-top: -10px;
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 18px;
+        }
+        p {
+            line-height: 24px;
+            color: #333;
+        }
+        label {
+            width:60px;
+            display: inline-block;
+            text-align: right;
+            color: #8c8c8c;
+        }
+        .bank-number {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .mt10 {
+            margin-top: 10px;
+        }
+        .fc-8c8 {
+            color: #8c8c8c;
+        }
+    }
+
+}
+.pay-more-bank {
+    width: 900px;
+    .hd {
+        height:34px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #333;
+        li {
+            float: left;
+            height: 32px;
+            line-height: 32px;
+            border-bottom: 2px solid #fff;
+            margin-right: 20px;
+            cursor: pointer;
+            &:hover {
+                border-color: #f60;
+                color: #f60;
+            }
+        }
+        .on {
+            border-color: #f60;
+            color: #f60;
+        }
+    }
+    .bd {
+        padding-left: 19px;
+        .btn-wrap {
+            padding-left: 82px;
+        }
+        .input-wrap {
+            margin-bottom: 20px;
+            strong {
+                padding-right: 14px;
+                font-weight: bold;
+                color: #333;
+                font-size: 14px;
+            }
+        }
+        .bank-number {
+            width: 248px;
+            height: 38px;
+            text-indent: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .error-info {
+            margin-left: -250px;
+            margin-top: 40px;
+        }
+        .pay-btn {
+            display: inline-block;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 4px;
+            background: #f60;
+            &:hover {
+                background: #ee950a;
+            }
+        }
+        .cancle-btn {
+            display: inline-block;
+            margin-left: 16px;
+            width: 88px;
+            height: 28px;
+            border: 1px solid #ccc;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #5b5b5b;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .con {
+            display: none;
+        }
+        .on {
+            display: block;
+        }
+    }
+    .cashier-succ-icon{
+        margin-top: 12px;
+    }
+}
+
+.address-selector {
+    position: absolute;
+    z-index: 100;
+    margin-left: -1px;
+    margin-top: 32px;
+    background: #fff;
+}
+.address-select {
+    width: 600px;
+    background: #fff;
+    .hd{
+        height:30px;
+        line-height:30px;
+        position: relative;
+        top: 1px;
+        overflow: hidden;
+    }
+    .address-title {
+        text-decoration: none;
+        display: block;
+        float: left;
+        height:30px;
+        line-height:30px;
+        padding:0 8px;
+        margin-right: 6px;
+        border: 1px solid #ccc;
+        background: #337ab7;
+        color: #fff;
+        border-bottom:none;
+        &:hover,&.active {
+            background: #fff;
+            color:  #337ab7;
+            border-bottom:none;
+        }
+    }
+    .bd {
+        overflow:hidden;
+        border:1px solid #ccc;
+    }
+    .con {
+        display: none;
+        padding: 10px;
+        min-height: 100px;
+    }
+    .con.active {
+        display: block;
+    }
+    li {
+        float: left;
+        padding: 2px 6px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border:1px solid #ccc;
+        cursor: pointer;
+        &:hover {
+            background: #428bca;
+            color: #fff;
+        }
+    }
+}
+
+.bandFrameWrap {
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    background: #000;
+    filter:alpha(opacity=75);
+    opacity:0.75;
+
+}
+.h100 {
+    height:100%;
+}
+.ui-dialog-footer button {
+    background: #f60;
+
+    &:hover {
+        color: #fff;
+        background: #ee950a;
+    }
+}
+
+.quick-pay .bank-number-wrap {
+    display: none;
+}
+
+.address .cashier-succ-icon {
+    margin: -22px 0 0 170px;
+}
+.address .error-info {
+    margin: -4px 0 0 0;
+}
+
+.bank-number.focus {
+    font-weight: bold;
+}

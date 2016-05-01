@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";
+ @import "../components/club-aside.scss";
+@import "../components/member-select.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-pages.scss";
+
+
+/*
+ *  rebate-center-diy-list 
+ *
+ *  author:JinJing
+ *  date:20150312
+ */
+
+body {
+    background: #e4e4e4;
+}
+.w90{
+    width: 90px;
+} 
+.pt10{
+    padding-top: 10px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.rebate-center-main .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+.rebate-center-main .icon-box-normal {
+    width: 20px;
+    height: 20px;
+}
+.rebate-center-main .icon-box-checked {
+    width: 20px;
+    height: 20px;
+}
+
+/*rebate-center-menu*/
+
+.rebate-center-menu {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+/* collection nav style */
+
+.rebate-center-nav {
+    width: 740px;
+    height: 40px;
+    padding: 0;
+}
+/* normal nav */
+
+.rebate-center-nav a {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    background: #8c8c8c;
+}
+.rebate-center-nav a i {
+    float: left;
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: hidden;
+}
+.rebate-center-nav a label {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* normal nav hover */
+
+.rebate-center-nav a:hover {
+    color: #fff;
+}
+.rebate-center-nav a:hover i {
+    visibility: visible;
+}
+.rebate-center-nav a:hover label {
+    position: relative;
+    padding: 0 10px;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a:hover label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/* nav cur */
+
+.rebate-center-nav a.cur i {
+    visibility: visible;
+}
+.rebate-center-nav a.cur label {
+    position: relative;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a.cur label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+
+
+.rebate-center-menu .rebate-store-index {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 10px;
+    width: 90px;
+    height: 20px;
+}
+.rebate-center-menu .rebate-store-index a {
+    color: #f60;
+}
+.rebate-center-menu .rebate-store-index a:hover {
+    color: #ee950a;
+}
+
+
+.rebate-center-main .rebate-center-filler {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    /*overflow: hidden;*/
+    background: #fff;
+}
+.rebate-center-filler .filler-item {
+    margin-right: 10px;
+   /* overflow: hidden;*/
+    float: left;
+}
+.rebate-center-filler .filler-item dt {
+    float: left;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+}
+.rebate-center-filler .filler-item dd {
+    /*position: relative;
+    z-index: 990;*/
+    float: left;
+    height: 30px;
+    margin: 0;
+}
+.rebate-center-filler .filler-search-btn{
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background: #f60;
+}
+.rebate-center-filler .filler-search-btn:hover{
+    color: #fff;
+    background: #ee950a;
+}
+
+
+.rebate-center-filler-category {
+    padding: 10px;
+    border-top:1px dashed #ccc; 
+    background: #fff;
+}
+.rebate-center-filler-category .category-item {
+    display: inline-block;
+    margin:0 15px;
+    color: #333;
+}
+.rebate-center-filler-category .cur,.rebate-center-filler-category .category-item:hover {
+    color: #f60;
+}
+
+
+
+.rebate-center-goods-list .goods-list-table {
+    width: 100%;
+    text-align: center;
+}
+.goods-list-table th {
+    text-align: center;
+}
+.goods-list-table thead th, .goods-list-table thead td {
+    padding: 6px 0;
+    background: #ccc;
+}
+.goods-list-table tbody {
+    background: #fff;
+}
+.goods-list-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.goods-list-table tbody th {
+    position: relative;
+}
+.goods-list-table tbody td {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+.goods-list-table tbody th .icon {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 20px;
+}
+.goods-list-table .goods-info .pic {
+    float: left;
+    width: 90px;
+    height: 60px;
+    overflow: hidden;
+}
+.goods-list-table .goods-info .goods-img img {
+    width: 90px;
+    height: 60px;
+}
+.goods-list-table .goods-info .name {
+    width: 140px;
+    height: 60px;
+    float: left;
+    margin-top: -3px;
+    padding-left: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+.goods-list-table .goods-info .goods-name {
+    color: #8c8c8c;
+}
+.goods-list-table .goods-info .goods-name:hover {
+    color: #f60;
+}
+.goods-list-table .rebater-percent, .goods-list-table .rebated-percent, .goods-list-table .repoints-percent {
+    color: #f60;
+}
+.goods-list-table .repoints-percent-none {
+    color: #8c8c8c;
+}
+.goods-list-table .rebater-level, .goods-list-table .repoints-level {
+    color: #8c8c8c;
+}
+
+.rebate-center-main .rebate-center-share-buttons{
+    width: 100%;
+}
+.rebate-center-share-buttons .share-buttons {
+    display: inline-block;
+    height: 40px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+}
+.rebate-center-share-buttons .mass-produce-share-button {
+    width: 190px;  
+    background-color: #f60;
+}
+.rebate-center-share-buttons .icon-circle-right{
+    width: 22px;
+    height: 22px;
+    margin-left: 5px;
+    background: #fff;
+}
+.rebate-center-share-buttons .preview-page-button {
+    width: 143px;
+    background-color: #8c8c8c;
+}

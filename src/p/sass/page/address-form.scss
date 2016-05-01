@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.person-address-add-table {
+    width: 100%;
+    background-color: #fff;
+    min-height: 290px;
+}
+/*table的th固定宽且对右对齐*/
+.address-add-head {
+    width: 85px;
+    text-align: right;
+}
+.person-address-add-table td {
+    text-align: left;
+    padding: 8px 0;
+}
+.person-address-add-table td .person-address-add-tip {
+    color: #8c8c8c;
+}
+.person-address .item td .person-address-add-tip span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #f60;
+}
+.person-address-add-input {
+    width: 200px;
+    height: 30px;
+    padding: 0 0 0 10px;
+    margin-left: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 2px;
+}
+/*详细地址框的宽度*/
+.address-width {
+    width: 100px;
+    height: 28px;
+}
+/*具体地址的长宽,以及默认字体为灰色*/
+.detailed-address-input {
+    width: 410px;
+    height: 30px;
+    color: #8c8c8c;
+}
+/*设为默认地址选择框，设置一个padding-left达到了使选择框右移的效果*/
+.defult-address-choose {
+    padding-left: 10px;
+}
+.defult-address-choose .icon {
+    display: inline-block;
+}
+.defult-address-choose .icon-box-normal,
+.defult-address-choose .icon-box-checked {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}
+
+/*保存收货人信息按钮右移10px*/
+.save-person-information {
+    padding-left: 10px;
+}
+.error {
+    border-color: #c13d23;
+}

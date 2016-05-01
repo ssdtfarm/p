@@ -1,0 +1,63 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用底部样式
+ *      全站每个文件都引入了这个文件
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+// 底部包裹层 
+.member-foot {
+    width: 100%;
+    min-width: 1190px;
+    margin-top: 50px;
+    color: #8c8c8c;
+    text-align: center;
+    background-color: #333;
+    a {
+        color: #8c8c8c;
+        font-size: 12px;
+        &:hover {
+            color: #f60;
+            text-decoration: none;
+        }
+    }
+}
+
+// 底部导航
+.member-foot-nav {
+    padding: 15px 0 5px 0;
+    color: #8c8c8c;
+    text-align: center;
+}
+
+// 底部版权
+.member-foot-copyright {
+    padding: 0 0 10px 0;
+}
+
+// 底部图标
+.member-foot-safe {
+    padding: 15px 0 20px 0;
+}
+
+.foot-icons {
+    text-align: center;
+    vertical-align: middle;
+    .f-icon {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .foot-icon-beian {
+        display: inline-block;
+        width: 108px;
+        overflow: hidden;
+    }
+}

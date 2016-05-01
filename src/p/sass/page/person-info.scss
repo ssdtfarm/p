@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+@import "../layout/sprite.scss";        
+          
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/member-select.scss";
+@import "../components/member-aside.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+ 
+
+/*
+ *  person-info 个人信息
+ *
+ *  author:Liu Dan
+ *  date:20150314
+*/
+body {
+    background: #e4e4e4;
+}
+.w90{
+    width: 60px; 
+}
+.w130{
+    width: 130px;
+}
+.btn-130x30 {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 橙色按钮 */
+.btn-orange {
+    background-color: #f60;    
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+
+/*=================  个人信息列表   ===============*/
+.person-info-main{
+}
+.person-info-main .person-info-form{
+    padding: 30px 0 0 10px;
+    margin: 0 0 0 5px;
+    background: #fff;
+}
+/*个人信息列表项*/
+.person-info-table .person-info-item{
+    clear: both;
+}
+.person-info-table .person-info-item th{
+    width: 70px;
+    padding-bottom: 22px;
+    text-align: right;
+    vertical-align: top;
+    line-height: 30px;
+    
+}
+.person-info-table .person-info-item td{
+    padding-bottom: 22px;
+}
+.info-item-text {
+    padding-left: 10px;
+}
+.person-info-item .person-info-from-voucher label{
+    display: none;
+    color: #c13d23;
+    vertical-align: bottom;
+}
+/*表单输入框*/
+.person-info-item p,
+.person-info-item label,
+.person-info-item i,
+.person-info-item span {
+    vertical-align: inherit;
+}
+.person-info-item td .person-info-tip{
+    color:#8c8c8c;
+}
+.person-info-item td .person-info-tip span {
+    font-size: 14px;
+    color: #ff6600;
+}
+.person-info-item .person-info-input-border{
+    width: 179px;
+    height: 28px;
+    margin-left: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 3px;
+}
+.person-info-item .person-info-input{
+     width:188px;
+     height:28px;
+     padding: 0 0 0 10px;
+     margin-left: 10px;
+     border:1px solid #b4b4b4;
+     border-radius: 2px;   
+}
+.person-info-item .amount-tip {
+    display: block;
+    float: left;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: #8c8c8c;
+}
+.person-info-item .amount-tip label {
+    line-height: 35px;
+}
+/*性别选择框*/
+
+.person-info-sex {
+  
+    margin-left: 10px;
+}
+.person-info-sex .sex-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+.person-info-sex .sex-item span{
+    vertical-align: middle;
+}
+/*兴趣爱好选择框*/
+
+.person-info-habit {
+    
+    margin-left: 10px;
+}
+.person-info-habit .habit-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+.person-info-main .person-info-habit .habit-item a.icon-box-checked {
+    vertical-align: middle;
+}
+/*婚姻状况选择框*/
+
+.person-info-marriage {
+   
+    margin-left: 10px;
+}
+.person-info-marriage .marriage-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+/*性别、兴趣爱好、婚姻状况图标*/
+.person-info-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+.person-info-main .icon-box-normal {
+    width: 20px;
+    height: 20px;
+}
+.person-info-main .icon-box-checked {
+    width: 20px;
+    height: 20px;
+}
+/* 出生日期 */
+.person-birth-year:after {
+    position: absolute;
+    z-index: 991;
+    right: -15px;
+    top: 5px;
+    /*content : '年';*/
+    content : '';
+}
+.person-birth-month:after {
+    position: absolute;
+    z-index: 991;
+    right: -15px;
+    top: 5px;
+    /*content : '月';*/
+    content : '';
+}
+.person-birth-day:after {
+    position: absolute;
+    z-index: 991;
+    right: -15px;
+    top: 5px;
+    /*content : '日';*/
+    content : '';
+}
+
+.submit-btn {
+    margin-left: 10px;
+}

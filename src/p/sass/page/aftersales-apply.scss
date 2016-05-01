@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+@import "../components/member-select.scss";    // select
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-aside.scss";     // member-aside
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  aftersales-service-apply 售后服务申请
+ *
+ *  author:JinJing
+ *  date:20150309
+
+*/
+
+body {
+    background: #e4e4e4;
+}
+.w120{
+    width: 120px;
+}
+.w180{
+    width: 180px;
+}
+/* ============== 页面按钮 ===========================*/
+.btn-130x30 {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 橙色按钮 */
+.btn-orange {
+    background-color: #f60;
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+/* 灰色按钮 */
+.btn-gray {
+    background-color:#ccc;
+}
+/*=================  售后服务申请列表   ===============*/
+.service-apply-main{
+    /*width: 980px;*/
+}
+.service-apply-main .service-apply-form{
+    padding: 30px 0 10px 10px;
+    margin: 30px 0 0 10px;
+    background: #fff;
+}
+/*售后申请表*/
+.service-apply-table .service-apply-item{
+    width: 630px;
+    clear: both;
+}
+.service-apply-table .service-apply-item th{
+    width: 120px;
+    padding-bottom: 22px;
+    text-align: right;
+    vertical-align: top;
+    line-height: 30px;
+    
+}
+.service-apply-table .service-apply-item td{
+    padding-bottom: 22px;
+}
+.service-apply-item .service-apply-from-voucher label{
+    display: none;
+    color: #c13d23;
+    vertical-align: bottom;
+}
+/*表单输入框*/
+.service-apply-item p,
+.service-apply-item label,
+.service-apply-item i,
+.service-apply-item span {
+    vertical-align: inherit;
+}
+.service-apply-item .service-apply-input-border{
+    width: 179px;
+    height: 28px;
+    margin-left: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 3px;
+}
+.service-apply-item .service-apply-input-border .service-apply-input{
+     padding: 5px 10px 0 10px;   
+}
+.service-apply-item .amount-tip {
+    display: block;
+    float: left;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: #8c8c8c;
+}
+.service-apply-item .amount-tip label {
+    line-height: 35px;
+}
+/*售后说明*/
+.service-apply-item .service-apply-note {
+    position: relative;
+    z-index: 990;
+    width: 400px;
+    height: 110px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #8c8c8c;
+}
+.service-apply-item .service-apply-textarea{
+    width: 400px;
+    height: 90px;
+    overflow-y: scroll;
+    resize:none;
+    border: none;
+}
+.service-apply-item .service-apply-note span {
+    position: absolute;
+    z-index: 991;
+    left: 10px;
+    bottom: 5px;
+    display:inline-block;
+}
+/*上传凭证*/
+.service-apply-item .service-apply-from-voucher{
+    height: 40px;
+    padding-left: 10px;
+}
+.service-apply-item .service-apply-from-button{
+    padding: 10px 40px;
+    margin-left: 10px;
+    color: #fff;
+    background: #8c8c8c;
+    border-radius: 4px;
+}
+.service-apply-item .service-apply-from-pictrue{
+    width: 100%;
+}
+.service-apply-item .service-apply-from-pictrue li{
+    position: relative;
+    z-index: 990;
+    float: left;
+    width: 78px;
+    height: 58px;
+    overflow: hidden;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+.service-apply-item .service-apply-from-pictrue .item-mark {
+    position: absolute;
+    z-index: 991;
+    left:0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    -webkit-opacity: 0.7;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background-color: #000;
+}
+.service-apply-item .service-apply-from-pictrue li:hover .item-mark {
+    display: inline-block;
+}
+.service-apply-item .service-apply-from-pictrue .item-mark a {
+    margin: 0 2px;
+    text-indent: -9999px;
+}
+.service-apply-from-pictrue li img{
+    width: 78px;
+    height: 58px;
+}
+.service-apply-item .pictrue-hint {
+    padding-left: 10px;
+}
+.service-apply-item .submit-btn {
+    margin-left: 10px;
+}
+/*.service-apply-item .service-apply-from-pictrue label{
+    display: block;
+    clear: both;
+    padding-top: 10px;
+    color: #8c8c8c;
+}*/
+/*温馨提示*/
+.service-apply-hints{
+    width: 960px;
+    padding-right: 20px;
+    margin: 20px 0 0 10px;
+}
+.service-apply-hints .apply-hints-title{
+    width: 70px;
+    height: 30px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0; 
+}
+.service-apply-hints .apply-hints-item{
+    position: relative;
+    padding-left: 20px;
+    color: #8c8c8c;
+    line-height: 20px;
+}
+.service-apply-hints .apply-hints-item span{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top:0;
+}
+.service-apply-hints .apply-hints-href{
+    display: block;
+    margin-top: 20px;
+    color: #2f6ceb;
+}
+// 修改上传图片按钮样式
+span.ke-button-common {
+    position: absolute;
+}
+.ke-button-common .ke-button {
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    background: #f60;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.ke-upload-file {
+    position: absolute;
+    opacity: 0;
+    // display: none;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+}

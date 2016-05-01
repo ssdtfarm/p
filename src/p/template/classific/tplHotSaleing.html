@@ -1,0 +1,21 @@
+<div class="title classific-icon"></div>
+<i class="classific-icon hot-item hot-1"></i>
+<i class="classific-icon hot-item hot-2"></i>
+<i class="classific-icon hot-item hot-3"></i>
+<ul class="list">
+    <%for(var i=0; i<list.length; i++) {%>
+    <li class="saleing-item">
+        <a href="<%=list[i].proLink%>" title="<%=list[i].proTitle%>" target="_blank" class="img-link">
+            <div class="mark-info">
+                <div class="mark"></div>
+                <p class="item-title"><%=list[i].proTitle%></p>
+            </div>
+            <img class="lazy" data-original="<%=list[i].imgURL%>" alt="<%=list[i].proAlt%>" width="140" height="93">
+        </a>
+        <div class="info">
+            <p class="fc-f60 price">&yen;<span><%=list[i].proPrice%></span></p>
+            <p class="num">销量<%=list[i].saleNum%></p>
+        </div>
+    </li>
+    <%}%>
+</ul>

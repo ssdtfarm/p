@@ -1,0 +1,52 @@
+/**
+ *  ---------------------------------------------
+ *      自定义下拉选择
+ *      用于(返利商城创建我的小店、返利商
+ *      城店铺设置、返利商城我的小店分享、返利商城选择
+ *      商品、返利商城我的返利详情)  
+ *      author : ljrong
+ *      date   : 2016-04-05
+ *  ---------------------------------------------
+ */
+.selector {
+    position: relative;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    .title {
+        height: 28px;
+        line-height: 28px;
+        text-indent: 10px;
+        color: #333;
+    }
+    .selector-input {
+        display: none;
+    }
+    .triangle {
+        right: 14px;
+        top: 12px;
+    }
+    .list {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        margin-left: -1px;
+        margin-top: 2px;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+    li {
+        height: 30px;
+        line-height: 30px;
+        &:hover {
+            background:#ebebeb;
+        }
+        a {
+            display: block;
+            text-indent: 10px;
+            color: #333;
+        }
+    }
+}

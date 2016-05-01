@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "seo-ask",
+        "title" : "提问页_金海马商城"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn" : "@@miscPath",
+        "headerName" : "装修汇",
+        "search" : false
+    })
+    <!-- 头部结束 -->
+    <!-- 页面开始 -->
+    <!-- 导航开始 -->
+    <nav class="navigation">
+        <div class="w1190 clearfix">
+            <ul class="nav-list fl">
+                <li class="nav-list-item active"><a href="javascript:void(0);" target="_blank">首页</a></li>
+                <li class="nav-list-item">
+                    <a href="javascript:void(0);" target="_blank">家具</a>
+                    <ul class="sub-list">
+                        <li><a href="javascript:void(0);" target="_blank">风格</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">评测</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">定制</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">保养</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">风水</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">导购</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item">
+                    <a href="javascript:void(0);" target="_blank">装修</a>
+                    <ul class="sub-list">
+                        <li><a href="javascript:void(0);" target="_blank">设计</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">装饰</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">攻略</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">案例</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">建材</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">创意</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item">
+                    <a href="javascript:void(0);" target="_blank">空间</a>
+                    <ul class="sub-list">
+                        <li><a href="javascript:void(0);" target="_blank">客厅</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">办公</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">厨房</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">卧室</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">餐厅</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">书房</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item">
+                    <a href="javascript:void(0);" target="_blank">品牌</a>
+                    <ul class="sub-list">
+                        <li><a href="javascript:void(0);" target="_blank">家居家饰</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">装修建材</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-index fr">
+                <a href="javascript:void(0);" target="_blank">商城首页</a>
+            </div>
+        </div>
+    </nav>
+    <!-- 导航结束 -->
+    
+    <!-- 面包屑开始 -->
+    <div class="bread w1190">
+        <span>当前位置：</span>
+        <a href="http://www.kinhom.com/" target="_blank">商城首页</a>
+        <span class="fc-2f6">&gt;</span>
+        <a href="http://www.kinhom.com/articles/" target="_blank">装修汇</a>
+        <span class="fc-2f6">&gt;</span>
+        <a href="http://misc.jjcdn.com/p/html/zx/ask/" target="_blank">问答</a>
+        <span class="fc-2f6">&gt;</span>
+        <span href="javascript:void(0);">提问</span>
+    </div>
+    <!-- 面包屑结束 -->
+    <!-- 页面主内容开始 -->
+    <section class="ask-question-layout w1190">
+        <h3>请用一句话描述您的提问：</h3>
+        <form id="J_askQuestionForm" class="ask-question-form" action="javascript:void(0);" method="post">
+            <div class="ask-question-item clearfix">
+                <label class="ask-question-title" for="J_askQuestionTitle">
+                    <b>*</b>
+                    问题标题：
+                </label>
+                <input type="text" name="title" id="J_askQuestionTitle" placeholder="请输入5个字以上的问题标题">
+                <span class="title-tip">您的提问中包含不适合发表的内容，请修改后再提交。</span>
+            </div>
+            <div class="ask-question-item clearfix">
+                <label class="ask-question-title question-add" for="J_askQuestionDetail">问题补充：</label>
+                <textarea name="detail" id="J_askQuestionDetail" cols="100" rows="16"></textarea>
+                <span class="title-tip">您的提问中包含不适合发表的内容，请修改后再提交。</span>
+            </div>
+            <div class="ask-question-submit">
+                <label class="ask-question-anonymous">
+                    <a id="J_askQuestionChk" class="icon-box-normal"></a>
+                    <input type="hidden" name="chk" value="0">
+                    <span class="anonymous-submit">匿名提交</span>
+                </label>
+                <input id="J_askQuestionBtn" class="ask-question-btn" type="button" value="提交问题">
+            </div>
+        </form>
+    </section>
+    <!-- 页面主内容结束 -->
+    <!-- 页面结束 -->
+
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "seo-ask"
+    })
+</body>
+</html>

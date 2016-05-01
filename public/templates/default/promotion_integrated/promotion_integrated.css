@@ -1,0 +1,16 @@
+/**/
+.modifiable_outter {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.modifiable_inner {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+/*动态输入框样式*/
+input.temp {
+	width: 20px;
+	border: 1px solid;
+}

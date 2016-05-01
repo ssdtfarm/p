@@ -1,0 +1,279 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+
+/*
+ * Security Center
+ * security-success.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-09-25;
+ */
+
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 修改登录密码成功
+.modify-login-psw-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h1 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+	.remind {
+		margin: 47px 0 15px;
+		color: #8c8c8c;
+		line-height: 20px;
+	}
+}
+.modify-login-psw-success {
+	width: 562px;
+	margin: 30px auto 0;
+	text-align: center;
+	.icon-face-smile-orange {
+		float: left;
+		margin-left: 6px;
+	}
+	.congratulation {
+		float: left;
+		margin: 18px 0 0 10px;
+		width: 486px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+.success-guide {
+	margin-top: 20px;
+	a {
+		color: #2f6ceb;
+		font-size: 12px;
+		&:hover {
+			color: #f60;
+		}
+	}
+}
+
+// 验证邮箱成功
+.security-email-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+
+// 注：邮件地址不确定宽度
+.security-email-success {
+	float: left;
+	position: relative;
+	left: 50%;
+	margin-top: 30px;
+	.success-description {
+		position: relative;
+		left: -50%;
+		height: 100px;
+		line-height: 22px;
+		.icon-face-smile-orange {
+			float: left;
+		}
+		.congratulation {
+			float: left;
+			margin: 18px 0 0 10px;
+			font-size: 18px;
+			b {
+				color: #f60;
+				font-weight: normal;
+			}
+		}
+		.guide {
+			position: absolute;
+			text-align: center;
+			margin-top: 80px;
+			width: 100%;
+			a, span {
+				color: #2f6ceb;
+			}
+			a {
+				margin: 0 4px 0 3px;
+				&:first-child {
+					margin-left: 0px;
+				}
+				&:hover {
+					color: #f60;
+				}
+			}
+		}
+	}
+}
+
+.security-email-step {
+	overflow: hidden;
+	border-bottom: 1px dashed #ccc;
+	.step {
+		float: left;
+		margin-top: 47px;
+		padding-bottom: 36px;
+		width: 185px;
+		height: 30px;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		line-height: 30px;
+		background: url("../images/security-center/step-sprites.png") 0 0 no-repeat;
+	}
+	.first-step {
+		width: 189px;
+		background-position: 0px 0px;
+	}
+	.second-step,
+	.third-step {
+		background-position: -194px 0px;
+	}
+	.step-ok {
+		background-position: -384px 0px;
+	}
+}
+
+// 设置支付密码成功
+.pay-psw-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+
+.pay-psw-success {
+	width: 422px;
+	margin: 30px auto 0;
+	text-align: center;
+	.icon-face-smile-orange {
+		float: left;
+		margin-left: 40px;
+	}
+	.success-description {
+		float: left;
+		margin: 18px 0 0 10px;
+		line-height: 22px;
+		.congratulation {
+			font-size: 18px;
+		}
+	}
+}
+.success-guide {
+	margin-top: 20px;
+	.guide {
+		a, span {
+			color: #2f6ceb;
+		}
+		a {
+			margin: 0 4px 0 3px;
+			&:first-child {
+				margin-left: 0px;
+			}
+			&:hover {
+				color: #f60;
+			}
+		}
+	}
+}
+
+// 验证手机/修改绑定手机
+.security-phone-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+
+.security-phone-success {
+	width: 395px;
+	margin: 30px auto 0;
+	text-align: center;
+	.icon-face-smile-orange {
+		float: left;
+	}
+	.success-description {
+		float: left;
+		margin: 18px 0 0 10px;
+		line-height: 22px;
+		.congratulation {
+			font-size: 18px;
+			b {
+				color: #f60;
+				font-weight: normal;
+			}
+		}
+		
+	}
+}
+.success-guide {
+	margin-top: 20px;
+	.guide{
+		a, span {
+			color: #2f6ceb;
+		}
+		a {
+			margin: 0 4px 0 3px;
+			&:first-child {
+				margin-left: 0px;
+			}
+			&:hover {
+				color: #f60;
+			}
+		}
+	}
+}
+.security-phone-step {
+	overflow: hidden;
+	border-bottom: 1px dashed #ccc;
+	.step {
+		float: left;
+		margin-top: 47px;
+		padding-bottom: 36px;
+		width: 185px;
+		height: 30px;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		line-height: 30px;
+		background: url("../images/security-center/step-sprites.png") 0 0 no-repeat;
+	}
+	.first-step {
+		width: 189px;
+		background-position: 0px 0px;
+	}
+	.second-step,
+	.third-step {
+		background-position: -194px 0px;
+	}
+	.step-ok {
+		background-position: -384px 0px;
+	}
+}

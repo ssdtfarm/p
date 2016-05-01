@@ -1,0 +1,894 @@
+@charset "UTF-8";
+/*
+ * member index style
+ * author : linyandi
+ * date : 2015-02-15
+ *
+ * author : JinJing
+ * date : 2015-04-02
+ */
+
+body {
+    background-color: #e4e4e4;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.fc-4ca {
+    color: #4ca579;
+}
+
+.w336 {
+    width: 336px;
+}
+
+.w136 {
+    width: 136px;
+}
+/*==================== 页面通用样式 ==================*/
+/*======= 标题 ========*/
+/*标题右端链接样式*/
+
+.title-href {
+    position: absolute;
+    z-index: 991;
+    right: 5px;
+    top: 5px;
+    vertical-align: top;
+    color: #8c8c8c;
+}
+
+.title-href:after {
+    content: ">";
+    font-family: "宋体";
+}
+
+.title-href:hover {
+    color: #f60;
+}
+/*常规标题*/
+
+.title-lightblue {
+    height: 20px;
+    padding: 0 20px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0;
+}
+/*箭尾标题*/
+
+.title-nock-lightblue {
+    position: relative;
+    z-index: 990;
+    height: 30px;
+    display: inline-block;
+    padding: 0 20px 0 20px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    background: #61bbe0;
+}
+
+.title-nock-lightblue:before {
+    position: absolute;
+    z-index: 991;
+    right: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    content: "";
+    font-size: 0;
+    border-style: solid dashed dashed solid;
+    border-width: 0 10px 15px;
+    border-color: #61bbe0 transparent transparent #61bbe0;
+}
+
+.title-nock-lightblue:after {
+    position: absolute;
+    z-index: 991;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    content: "";
+    font-size: 0;
+    border-style: dashed dashed solid solid;
+    border-width: 15px 10px 0;
+    border-color: transparent transparent #61bbe0 #61bbe0;
+}
+/* 列表按钮 */
+
+.list-item-btn {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #f60;
+}
+
+.list-item-btn:hover {
+    background-color: #ee950a;
+}
+/* 右三角 */
+
+.single-triangle {
+    position: relative;
+    z-index: 990;
+    top: -4px;
+    display: inline-block;
+    width: 25px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.single-triangle:before {
+    position: absolute;
+    z-index: 991;
+    left: 0;
+    top: 10px;
+    display: inline-block;
+    border-width: 10px 20px 10px 20px;
+    border-style: solid;
+    content: "";
+}
+/* 背景颜色 */
+/*单个三角*/
+
+.single-bc-57b:before {
+    border-color: transparent transparent transparent #57bb89;
+}
+
+.single-bc-fed:before {
+    border-color: transparent transparent transparent #fed586;
+}
+
+.single-bc-61b:before {
+    border-color: transparent transparent transparent #61bbe0;
+}
+
+.single-bc-f5a:before {
+    border-color: transparent transparent transparent #f5a66e;
+}
+/*
+ * 我的金海马首页右边样式开始 ===============================================
+ */
+/*================== 右边会员个人信息模块  ========================*/
+
+.member-person-info {
+    float: left;
+    width: 790px;
+    height: 120px;
+    padding: 10px 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.member-person-info .person-info-item {
+    height: 110px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.member-person-info a {
+    color: #2f6ceb;
+    text-decoration: none;
+}
+
+.member-person-info a:hover,
+.member-person-info a:focus,
+.member-person-info a:active {
+    color: #f60;
+}
+/* left */
+
+.member-person-info .info-item-left {
+    color: #8c8c8c;
+}
+
+.member-person-info .info-item-left dt {
+    padding-left: 10px;
+    line-height: 22px;
+    color: #8c8c8c;
+}
+
+.member-person-info .info-item-left dd {
+    padding-left: 10px;
+    line-height: 22px;
+    color: #333;
+    font-weight: 600;
+}
+/* main */
+
+.member-person-info .info-item-main .wallet-href {
+    margin-top: 4px;
+}
+
+.member-person-info .info-item-main sub {
+    font-weight: normal;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.member-person-info .info-item-main dd {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+.member-person-info .info-item-main dd div{
+    margin-top: 5px;
+}
+
+.member-person-info .info-item-main dd p {
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.member-person-info .info-item-main dd span {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f60;
+}
+
+.member-person-info .info-item-main dd label {
+    color: #8c8c8c;
+}
+/* right */
+
+.member-person-info .info-item-right {
+    margin-right: -12px;
+}
+
+.member-person-info .info-item-right dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4ca579;
+    vertical-align: middle;
+}
+
+.member-person-info .info-item-right dt i {
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.member-person-info .info-item-right dd {
+    *position: relative!important;
+    /* fixed IE7 */
+    
+    line-height: 24px;
+    color: #333;
+}
+
+.member-person-info .info-item-right span {
+    display: inline-block;
+    *display: block!important;
+    /* fixed IE7 */
+    
+    *float: left!important;
+    /* fixed IE7 */
+}
+/*安全级别*/
+
+.member-person-info .info-item-right .safe-line {
+    position: relative;
+    z-index: 990;
+    width: 120px;
+    height: 10px;
+    overflow: hidden;
+    *margin-top: 7px!important;
+    /* fixed IE7 */
+    
+    *margin-right: 5px!important;
+    /* fixed IE7 */
+    
+    text-indent: -9999px;
+}
+
+.member-person-info .info-item-right .safe-line span {
+    position: absolute;
+    z-index: 992;
+    left: 0;
+    top: 0;
+}
+
+.member-person-info .info-item-right .safe-line span.icon-safe-green {
+    z-index: 993;
+}
+
+.member-person-info .info-item-right .safe-tip {
+    *position: absolute!important;
+    /* fixed IE7 */
+    
+    *z-index: 993!important;
+    /* fixed IE7 */
+    
+    *right: 55px!important;
+    /* fixed IE7 */
+    
+    *top: 0px!important;
+    /* fixed IE7 */
+    
+    padding: 0 5px;
+    color: #fff;
+    background-color: #333;
+    font-size: 12px;
+    line-height: 14px;
+    *line-height: 16px!important;
+    /* fixed IE7 */
+}
+/* N2E会员俱乐部入口按钮*/
+
+.member-club-entrance {
+    float: left;
+    display: inline-block;
+    width: 130px;
+    height: 140px;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    background-color: #7dcec8;
+}
+
+.member-club-entrance:hover {
+    background-color: #6db3ab;
+}
+
+.member-club-entrance .icon-club-vip{
+    display: inline-block;
+    width: 37px;
+    height: 21px;
+    margin: 20px auto 0 auto;
+    cursor: pointer;
+}
+
+.member-club-entrance .title {
+    position: relative;
+    z-index: 90;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+.member-club-entrance .title .white-point{
+    position: absolute;
+    z-index: 92;
+    left: 50%;
+    bottom: -1px;
+    width: 9px;
+    height: 4px;
+    display: block;
+    margin-left: -5px;
+    line-height: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #7dcec8;
+}
+.member-club-entrance:hover .title .white-point{
+    background-color: #6db3ab;
+}
+.member-club-entrance .level-info{
+    display: inline-block;
+    margin-top: 8px;
+    color: #ffeec1;
+}
+.member-club-entrance .level-href{
+    display: inline-block;
+    color: #fff;
+}
+/*===================== 订单列表模块 =============================*/
+
+.rest-order {
+    width: 100%;
+    background-color: #fff;
+}
+
+.rest-order .rest-order-title {
+    position: relative;
+    z-index: 990;
+    height: 30px;
+    padding-bottom: 20px;
+}
+/*列表空*/
+
+.rest-order .order-list-none {
+    height: 100px;
+    padding: 100px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.rest-order .order-list-none .icon-face-frown-blue {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.rest-order .order-list-none .go-href {
+    font-size: 14px;
+    color: #f60;
+}
+
+.rest-order .order-list-none .go-href:hover {
+    color: #f60;
+}
+/* 列表开始 */
+
+.rest-order .rest-order-list {
+    border-top: 1px solid #ccc;
+}
+
+.rest-order .rest-order-list th {
+    vertical-align: top;
+    padding-top: 20px;
+}
+/* 左边日期 */
+
+.rest-order-list .order-list-time {
+    position: relative;
+    z-index: 990;
+}
+
+.rest-order-list .order-list-month {
+    position: absolute;
+    z-index: 991;
+    left: 10px;
+    top: 10px;
+}
+
+.rest-order-list .order-list-days {
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.rest-order-list .order-list-days label,
+.rest-order-list .order-list-days span {
+    display: inline-block;
+    width: 100%;
+}
+
+.rest-order-list .order-list-days label {
+    height: 50px;
+    font-size: 48px;
+}
+
+.rest-order-list .order-list-days span {
+    height: 16px;
+    font-size: 14px;
+}
+/* 列表项 */
+
+.rest-order .list-item {}
+
+.rest-order .list-item td {
+    padding: 20px 0;
+    /*border-bottom: 1px solid #ccc;*/
+}
+/* 产品标题 */
+
+.list-item .list-item-pro-title,
+.list-item .list-item-pro-propery {
+    width: 90%;
+    overflow: hidden;
+    line-height: 16px;
+}
+
+.list-item .list-item-pro-title {
+    margin-top: -9px;
+}
+
+.list-item .list-item-pro-title .goods-name-href {
+    height: 32px;
+    display: block;
+    overflow: hidden;
+    color: #8c8c8c;
+}
+
+.list-item .list-item-pro-title .goods-name-href:hover {
+    color: #f60;
+}
+
+.list-item .list-item-pro-propery {
+    height: 30px;
+}
+/*产品返现*/
+
+.list-item .order-rebate label {
+    display: inline-block;
+    padding: 2px 5px;
+    color: #333;
+    background-color: #fed586;
+}
+/*==================== 我的购物车模块 ============================*/
+
+.my-cart {
+    width: 290px;
+    height: 265px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.my-cart dt {
+    position: relative;
+    z-index: 990;
+}
+/*购物车空*/
+
+.my-cart .cart-list-none {
+    height: 20px;
+    padding-top: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+/*购物车*/
+
+.my-cart ul {
+    padding: 10px;
+}
+
+.my-cart ul li {
+    padding-bottom: 10px;
+}
+
+.my-cart .my-cart-list-img {
+    display: inline-block;
+    width: 110px;
+    height: 67px;
+    vertical-align: top;
+}
+
+.my-cart .my-cart-list-title {
+    display: inline-block;
+    width: 150px;
+    margin-top: -4px;
+    line-height: 18px;
+    vertical-align: top;
+}
+
+.my-cart .my-cart-list-title a {
+    width: 140px;
+    height: 35px;
+    display: block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    color: #8c8c8c;
+}
+
+.my-cart .my-cart-list-title a:hover {
+    color: #f60;
+}
+
+.my-cart-btn {
+    display: block;
+    width: 270px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background-color: #f60;
+}
+
+.my-cart-btn:hover {
+    background-color: #ee950a;
+}
+/*我看过的商品*/
+
+.my-history {
+    width: 690px;
+    height: 265px;
+    overflow: hidden;
+    background: #fff;
+}
+/*看过的商品空*/
+
+.my-history .history-list-none {
+    padding-top: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.history-slider {
+    position: relative;
+    z-index: 990;
+}
+
+.history-slider .hd {
+    display: none;
+}
+
+.history-slider .bd {
+    width: 650px;
+    margin-left: 40px;
+}
+
+.history-slider .prev,
+.history-slider .next {
+    position: absolute;
+    z-index: 991;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/icons_slider.png);
+}
+
+.history-slider .prev {
+    left: 10px;
+    background-position: 0 -30px;
+}
+
+.history-slider .next {
+    right: 10px;
+    background-position: -33px -30px;
+}
+
+.history-slider .prev:hover {
+    background-position: 0 0;
+}
+
+.history-slider .next:hover {
+    background-position: -33px 0;
+}
+
+.history-slider .goods-list {
+    position: relative;
+    z-index: 990;
+    width: 99999px;
+}
+/*我看过的商品 我的收藏 商品列表项*/
+
+.goods-list .goods-item {
+    float: left;
+    margin: 0 5px;
+}
+
+.goods-item .goods-name {
+    margin-top: 3px;
+}
+
+.goods-item .goods-name-href {
+    width: 190px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #8c8c8c;
+}
+
+.goods-item .goods-name-href:hover {
+    color: #f60;
+}
+
+.goods-item .price span {
+    color: #f60;
+}
+
+.goods-item .discount-tip {
+    margin-top: 7px;
+}
+
+.goods-item .discount-tip label {
+    display: block;
+    padding: 1px 0 1px 10px;
+    background: #ccc;
+}
+/*我的收藏*/
+
+.my-collections {
+    width: 490px;
+    height: 266px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.my-collections dt {
+    position: relative;
+    z-index: 990;
+}
+/*我的收藏空*/
+
+.my-collections .collections-list-none {
+    height: 20px;
+    padding-top: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.my-collections .goods-list {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+/*我的优惠券*/
+
+.my-coupons {
+    width: 490px;
+    height: 266px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.my-coupons dt {
+    position: relative;
+    z-index: 990;
+}
+/*我的优惠券空*/
+
+.my-coupons .coupons-list-none {
+    height: 164px;
+}
+
+.my-coupons .coupons-list-none .coupons-href {
+    font-size: 14px;
+    color: #f60;
+}
+
+.my-coupons .coupons-list-none .coupons-href:hover {
+    color: #f60;
+}
+
+.my-coupons .coupons-list-table {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.my-coupons .coupons-list-table thead td {
+    padding: 9px 0;
+    text-align: center;
+    background: #ccc;
+}
+
+.my-coupons .coupons-list-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.my-coupons .coupons-list-table tbody td {
+    padding: 10px 0 15px 0;
+}
+
+.coupons-list-table tbody td .use-now-href {
+    color: #f60;
+}
+
+.coupons-list-table tbody td .use-now-href:hover {
+    color: #f60;
+}
+/*返利商品推荐 积分兑换推荐*/
+
+.rebate-goods-recommendation,
+.points-exchange-recommendation {
+    width: 100%;
+    height: 354px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.store-recommendation-title {
+    position: relative;
+    z-index: 990;
+    height: 70px;
+}
+
+.store-recommendation-title span {
+    line-height: 89px;
+    vertical-align: top;
+}
+
+.store-recommendation-title label {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 20px 0 0 20px;
+    font-size: 18px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.store-recommendation-title .icon-rope {
+    position: absolute;
+    z-index: 991;
+    top: -21px;
+    left: 50%;
+    margin-left: -43px;
+    width: 86px;
+    height: 33px;
+    display: block;
+    background: url(../images/icons_my_kh.png) 0 0;
+}
+
+.recommendation-list {
+    width: 900px;
+    height: 245px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.recommendation-list .recommendation-item {
+    width: 290px;
+    height: 245px;
+    float: left;
+    margin: 0 5px;
+}
+
+.recommendation-item .pic-href img {
+    width: 290px;
+    height: 194px;
+}
+
+.recommendation-item .goods-name {
+    margin-top: 5px;
+}
+
+.recommendation-item .goods-name .goods-name-href {
+    width: 290px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.recommendation-item .goods-name .goods-name-href:hover {
+    color: #f60;
+}
+
+.recommendation-item .price-discount {
+    margin-top: 3px;
+}
+
+.recommendation-item .discount-tip {
+    position: relative;
+    top: -2px;
+    padding: 1px 10px;
+    margin-top: -5px;
+    margin-left: 5px;
+    background: #ccc;
+}
+
+.recommendation-item .price-discount span {
+    position: relative;
+    font-size: 14px;
+    color: #f60;
+}
+/*壹钱包弹框按钮*/
+
+.bindings-wallet-btn{
+    float: left;
+    margin-left: 100px;
+}

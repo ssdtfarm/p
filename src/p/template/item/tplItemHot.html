@@ -1,0 +1,27 @@
+<dl class="item-hot-sale">
+	<dt class="hot-sale-title">
+		<span>同·类·热·销</span>
+	</dt>
+	<dt class="hot-sale-subtitle">TOP RECOMMEND</dt>
+	<dd class="hot-sale-list">
+		<%if(list.length!=0){%>
+		<%for(var i=0; i<list.length; i++) {%>
+		<dl class="hot-list-item">
+			<dd>
+				<a href="<%=list[i].linkURL%>" target="_blank">
+					<img class="lazy" src="<%=list[i].imgURL%>!small" alt="<%=list[i].title%>" width="200" height="133" />
+				</a>
+			</dd>
+			<dt>
+				<a href="<%=list[i].linkURL%>" title="<%=list[i].title%>" target="_blank"><%=list[i].title%></a>
+			</dt>
+			<dd class="clearfix">
+				<label>优惠价: &yen;<%=list[i].salePrice%></label>
+			</dd>
+			<span class="list-item-nums">热销<br /><%=list[i].saleNum%>件</span>
+		</dl>
+		<%}%>
+		<%}%>
+	</dd>
+</dl>
+<div class="blank-20"></div>

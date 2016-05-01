@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "rebate-center-diy-share",
+        "title": "我的金海马-定制返利分享页"
+    })
+</head>
+
+<body>
+    <!-- 分享链接预置 -->
+    <script>
+    var share = {
+        shareURL: 'http://www.baidu.com/' //分享的链接
+    }
+    </script>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "返现中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 售后列表页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <!-- 延迟部分 -->
+        <div class="kh-col-5 pos-rel" id="J_clubAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateClubAside" type="text/html">
+            <aside class="club-aside">
+                <div class="club-aside-icons">
+                    <div class="club-aside-info">
+                        <p class="club-title">会员俱乐部</p>
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p class="club-menber-name"><span>沙发君沙发君沙发君君沙发君沙发君君沙发君沙发君君沙发君沙发君</span><i class="icon icon-level-0"></i>
+                        </p>
+                    </div>
+                    <div class="club-aside-option">
+                        <p><a href="javascript:void(0)">完善个人资料 ></a>
+                        </p>
+                        <p><a href="javascript:void(0)">绑定手机、邮箱，提升账户安全度 ></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="club-hotRebate">
+                    <p class="club-hotRebate-more"><a href="javascript:void(0)">更多></a>
+                    </p>
+                    <div class="club-hotRebate-title">
+                        <p><b>热门返利</b>
+                        </p>
+                        <p><span>RANKING LIST</span>
+                        </p>
+                    </div>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-1"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">返利比例10%</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-2"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">返利比例10%</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-3"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-2"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-4"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-3"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-5"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-4"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="club-help-center"><a href="javascript:void(0);" class="club-help-center-button"><i class="icon icon-help"></i>帮助中心</a></div>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-19 rebate-center-main">
+            <menu class="rebate-center-menu">
+                <div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="page-name clearfix cur"><i class="icon-c-nav-l"></i><label>定制返利分享页</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="page-name clearfixr"><i class="icon-c-nav-l"></i><label>返利商品订单</label><i class="icon-c-nav-r"></i></a>
+                </div>
+                <div class="rebate-store-index"><a href="javascript:void(0)">返利商场首页></a>
+                </div>
+            </menu>
+            <p class="rebate-center-share-title">分享以下您的定制页，邀请好友购买齐返利</p>
+            <p class="rebate-center-share-LOGO"><img src="http://misc.jjcdn.com/p/images/rebate_center_LOGO.jpg" alt="" width="110" height="60" />
+            </p>
+            <div class="rebate-center-share-open">
+                <img src="http://misc.jjcdn.com/p/images/share-ad.jpg" alt="">
+            </div>
+            <div class="rebate-center-share-main">
+                <p class="share-main-title">分享以下商品并邀请好友购买，与好友齐获返利<i class="icon-point-down"></i>
+                </p>
+                <ul class="share-main-list">
+                    <div class="clearfix"></div>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马超值特卖 梵尔特系列 现代简约 白色+斑马超值特卖 梵尔特系列 现代简约 白色+斑马超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有600人购买</span>
+                        </p>
+                    </li>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_2.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有600人购买</span>
+                        </p>
+                    </li>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_3.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有600人购买</span>
+                        </p>
+                    </li>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有600人购买</span>
+                        </p>
+                    </li>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_2.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有600人购买</span>
+                        </p>
+                    </li>
+                    <li class="share-item">
+                        <p class="pic">
+                            <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_3.jpg" />
+                            </a>
+                        </p>
+                        <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                        </p>
+                        <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                        </p>
+                        <p class="share">
+                            <a href="" class="share-rebate-button">分享返利</a><span class="total-sold">已有60000人购买</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!--  <div class="rebate-center-contact-us">
+               <div class="contact-us-conten">
+                   <ul class="media">
+                       <li class="media-item">
+                           <p class="pic"><img src="http://misc.jjcdn.com/p/images/rebate_share_wap_2Dcode.jpg" alt="金海马商城手机端" />
+                           </p>
+                           <p class="description">金海马商城
+                           </p>
+                           <p class="description font-bold">手机端
+                           </p>
+                       </li>
+                       <li class="media-item">
+                           <p class="pic"><img src="http://misc.jjcdn.com/p/images/rebate_share_weixin_2Dcode.jpg" alt="金海马微信公众号" />
+                           </p>
+                           <p class="description">金海马
+                           </p>
+                           <p class="description font-bold">公众微信号
+                           </p>
+                       </li>
+                       <li class="media-item">
+                           <p class="description mt40">金海马
+                           </p>
+                           <p class="description font-bold">新浪微博
+                           </p>
+                           <a href="javascript:void(0);" class="icon icon-focus-sina"></a>
+                       </li>
+                   </ul>
+                   <dl class="base-info">
+                       <dt>联系我们</dt>
+                       <dd>
+                           <label>客服热线：</label><b>4006-538-038</b>
+                       </dd>
+                       <dd>
+                           <label>售后服务：</label><span>020-84560988</span>
+                       </dd>
+                       <dd>（周一至周日09:00-24:00）</dd>
+                   </dl>
+               </div>
+           </div> -->
+            <div class="diy-share-href-main">
+                <i class="icon-triangle-up"></i>
+                <div class="left-part">
+                    <div class="diy-share-href">
+                        <p class="title">您的定制分享链接</p>
+                        <span class="tip">提示：可直接复制以下文字内容并粘贴发送</span>
+                    </div>
+                    <div class="diy-share-href-info"><span id="J_shareText">回水啊回水！我在金海马商城邀请大家购买这货，小伙伴们和我一起抢现金吧！点击：</span><span id="J_shareHref">http://www.kinhom.com/定制分享页ID（定制页内商品批量生成分享返利链接）.html</span></div>
+                    <dl class="diy-share-to mt-20">
+                        <dt>分享到：</dt>
+                        <dd>
+                            <ul class="share-to-list">
+                                <li class="item JQ_share" data-for="0">
+                                    <p>
+                                       <a class="icon-share icon-qq" href="javascript:void(0);" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0);" target="_blank">QQ</a>
+                                    </p>
+                                </li>
+                                <li class="item JQ_share" data-for="1">
+                                    <p>
+                                       <a class="icon-share icon-qq-zone" href="javascript:void(0);" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0);" target="_blank">QQ空间</a>
+                                    </p>
+                                </li>
+                                <li class="item JQ_share" data-for="2">
+                                    <p>
+                                        <a class="icon-share icon-sina-wb" href="javascript:void(0)" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0)" target="_blank">新浪微博</a>
+                                    </p>
+                                </li>
+                                <li class="item JQ_share" data-for="3">
+                                    <p>
+                                        <a class="icon-share icon-tx-wb" href="javascript:void(0)" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0)" target="_blank">腾讯微博</a>
+                                    </p>
+                                </li>
+                                <li class="item JQ_share" data-for="4">
+                                    <p>
+                                        <a class="icon-share icon-douban" href="javascript:void(0)" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0)" target="_blank">豆瓣</a>
+                                    </p>
+                                </li>
+                                <li class="item JQ_share" data-for="5">
+                                    <p>
+                                        <a class="icon-share icon-renren" href="javascript:void(0)" target="_blank"></a>
+                                    </p>
+                                    <p>
+                                        <a class="share-name" href="javascript:void(0)" target="_blank">人人网</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="right-part">
+                    <p class="share-href-2dcode-title">您的定制分享二维码</p>
+                    <p id="J_shareQrcode" class="share-href-2dcode clearfix">
+                    </p>
+                    <p class="share-href-2dcode-tip mt10">通过微信、QQ、微博等应用</p>
+                    <p class="share-href-2dcode-tip"><span>扫码分享</span>到您的好友或朋友圈</p>
+                </div>
+            </div>
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 售后列表页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "rebate-center-diy-share"
+    })
+</body>
+
+</html>

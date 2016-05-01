@@ -1,0 +1,161 @@
+/**
+ *  ---------------------------------------------
+ *      会员系统通用UI 样式
+ *      会员系统广泛引用了这个样式，有点冗余
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+// 倒计时
+.rest-time {
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: middle;
+    color: #8c8c8c;
+    span,
+    i,
+    label {
+        vertical-align: middle;
+    }
+}
+
+.is-countdown {
+    display: inline-block;
+    vertical-align: middle;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.countdown-rtl {
+    direction: rtl;
+}
+
+.countdown-holding span {
+    color: #333;
+}
+
+.countdown-row {
+    display: inline-block;
+    padding: 0px 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.countdown-section {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.countdown-amount {
+    font-size: 12px;
+    padding: 0 5px;
+    color: #f60;
+    vertical-align: middle;
+}
+
+.countdown-period {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.countdown-descr {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// 圆角导航
+.corner-tab-nav {
+    padding: 14px 0;
+    margin-top: 15px;
+    a {
+        display: inline-block;
+        height: 30px;
+        margin: 0 5px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 30px;
+        &:hover {
+            color: #fff;
+            i {
+                visibility: visible;
+            }
+            label {
+                position: relative;
+                padding: 0 10px;
+                background-color: #61bbe0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: -16px;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: -8px;
+                    border-color: #61bbe0 transparent transparent transparent;
+                    border-style: solid dashed dashed dashed;
+                    border-width: 15px 8px 8px 8px;
+                }
+            }
+        }
+        i {
+            float: left;
+            display: inline-block;
+            width: 14px;
+            height: 30px;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 0;
+        }
+        label {
+            display: inline-block;
+            float: left;
+            padding: 0 10px;
+            text-align: center;
+            cursor: pointer;
+            background: #8c8c8c;
+        }
+        span {
+            display: inline-block;
+            float: left;
+            padding: 0 10px;
+            text-align: center;
+            cursor: pointer;
+            background: #8c8c8c;
+        }
+        &.cur {
+            i {
+                visibility: visible;
+            }
+            label {
+                position: relative;
+                padding: 0 10px;
+                color: #fff;
+                background-color: #61bbe0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: -16px;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: -8px;
+                    border-color: #61bbe0 transparent transparent transparent;
+                    border-style: solid dashed dashed dashed;
+                    border-width: 15px 8px 8px 8px;
+                }
+            }
+        }
+    }
+}

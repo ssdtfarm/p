@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "wallet-addcard",
+        "title" : "金海马商城-我的钱包"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn": "@@miscPath",
+        "headerName" : "我的钱包",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 我的钱包开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item  item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 clearfix">
+            <div class="wallet-addcard">
+                <div class="addcard-title"> 
+                    <h4>添加新银行卡用于提现</h4>
+                </div>
+                <form class="addcard-form" method="POST" action="" id="J_addcardForm">
+                    <input type="hidden" id="security" name="5127695" value="6345503">
+                    <p>
+                        <span class="form-title">银行账户类型：</span>
+                        <span class="form-type">借记卡</span>
+                    </p>
+                    <div class="address-select">
+                        <div class="form-title required">开户银行所在地：</div>
+                        <div id="J_selectAddress" class="select-address i-b"></div>
+                        <div class="ml8 cB4 i-b">
+                            如果找不到所在城市，可以选择所在地区或者上级城市。
+                            <i class="danger-tip hide"><i class="icon-tip-wrong"></i>所在地不能为空</i>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="form-title required">开户行：</span>
+                        <input class="form-input" name="bankname" type="text" value=""/>
+                        <i class="icon-tip-ok hide"></i>
+                        <i class="danger-tip hide"></i>
+                    </p>
+                    <p>
+                        <span class="form-title required">银行卡号：</span>
+                        <input class="form-input" type="text" name="cardno" placeholder="请输入16-23位银行卡号" value="" />
+                        <i class="icon-tip-ok hide"></i>
+                        <i class="danger-tip hide"></i>
+                    </p>
+                    <p>
+                        <span class="form-title required">开户人姓名：</span>
+                        <input class="form-input" type="text" name="username" placeholder="请输入银行卡预留的姓名" value="" />
+                        <i class="icon-tip-ok hide"></i>
+                        <i class="danger-tip hide"><i class="icon-tip-wrong"></i>姓名错误</i>
+                    </p>
+                    <p>
+                        <span class="form-title required">手机号：</span>
+                        <input class="form-input" type="text" value="18825180292" readonly="true" disabled="true" name="phone" />
+                        <a class="ml8" href="http://misc.jjcdn.com/p/html/member/security-modify-phone-step-one.html" target="_blank">修改手机号&nbsp;&gt;</a>
+                        <i class="danger-tip hide"><i class="icon-tip-wrong"></i>手机错误</i>
+                    </p>
+                    <p>
+                        <span class="form-title required">短信验证码：</span>
+                        <input class="form-input msg-code" type="text" name="phoneCode" placeholder="请输入6位数字" />
+                        <i class="icon-tip-ok msg-code-ok hide"></i>
+                        <i class="danger-tip ml110 hide"><i class="icon-tip-wrong"></i>验证码错误</i>
+                        <a class="code-btn sendcode">免费获取</a>
+                        <a class="code-btn cF60 bgCCC countdown">60秒</a>
+                    </p>
+                    <div class="addcard-btn">
+                        <span class="form-title"></span>
+                        <a id="J_submit" class="inactive">提交</a>
+                    </div>
+                </form>
+                <div class="addcard-tips">
+                    <h4>温馨提示：</h4>
+                    <p>
+                        1、请填写正确的提现银行卡信息，有助于快速处理您的提现申请；
+                        <br /> 2、提现到账日期依据银行规定而有所不同，一般为T+1到账；
+                        <br /> 3、不支持提现至信用卡账户。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 我的钱包结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "wallet-addcard"
+    })
+</body>
+
+</html>

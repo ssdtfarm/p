@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "club-rebate-single-share",
+        "title": "会员俱乐部-分享商品"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "会员俱乐部",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 会员俱乐部导航菜单部分开始 -->
+    <section class="club-nav-warp">
+        <div class="kh-row-24 clearfix">
+            <!-- 延迟部分 -->
+            <div class="kh-col-24 pos-rel" id="J_clubNav">
+                <div class="loading"><i class="icon-loading-small"></i>
+                </div>
+            </div>
+            <!-- 加载部分 -->
+            <script id="J_templateClubNav" type="text/html">
+                <!-- 会员俱乐部导航栏开始 -->
+                <div class="club-nav kh-col-24">
+                    <a href="javascript:void(0);" class="clearfix cur">
+                        <label>首页</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>积分中心</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>返利中心</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>我的钱包</label>
+                    </a>
+                </div>
+                <!-- 会员俱乐部导航栏结束 -->
+            </script>
+        </div>
+    </section>
+    <!-- 会员俱乐部导航菜单部分结束 -->
+    <section class="kh-row-24 clearfix mt50">
+        <div class="kh-col-18">
+            <table class="goods-single-share-table" border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <td width="340" colspan="2">分享商品</td>
+                        <td width="150">单价</td>
+                        <td width="150">邀请者返利比例</td>
+                        <td width="150">被邀请者返利比例</td>
+                        <td width="100">返利会员等级</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="share-goods-pic">
+                            <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94">
+                            </a>
+                        </td>
+                        <td class="share-goods-name"><a href="javascript:void(0);" class="goods-name">办公家具 圣马丁系列 现代简约 牙买加黄檀配白 三聚氰胺板 大班台（含副柜）</a></td>
+                        <td class="price">￥15000.00</td>
+                        <td class="inviter-rebate-percent">30%</td>
+                        <td class="invited-rebate-percent">20%</td>
+                        <td class="rebate-member-level">V1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="goods-share-href-main clearfix">
+                <i class="icon-triangle-up"></i>
+                <div class="left-part">
+                    <div class="diy-share-href">
+                        <p class="title">您的定制分享链接</p>
+                        <span class="tip">提示：可直接复制以下文字内容并粘贴发送</span>
+                    </div>
+                    <div class="diy-share-href-info">回水啊回水！我在金海马商城邀请大家购买这货，小伙伴们和我一起抢现金吧！点击：http://www.kinhom.com/定制分享页ID（定制页内商品批量生成分享返利链接）.html</div>
+                    <dl class="diy-share-to mt10">
+                        <dt>分享至邮箱：</dt>
+                        <dd>
+                            <ul class="share-to-list">
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share icon-share-email"></a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="diy-share-to">
+                        <dt>或分享到：</dt>
+                        <dd>
+                            <!-- JiaThis Button BEGIN -->
+                            <div class="jiathis_style_32x32">
+                                <a class="jiathis_button_qzone"></a>
+                                <a class="jiathis_button_tsina"></a>
+                                <a class="jiathis_button_tqq"></a>
+                                <a class="jiathis_button_weixin"></a>
+                                <a class="jiathis_button_renren"></a>
+                                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                            </div>
+                            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1427253120608929" charset="utf-8"></script>
+                            <!-- JiaThis Button END -->
+                            <!-- <ul class="share-to-list">
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">QQ空间</a>
+                                    </p>
+                                </li>
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">新浪微博</a>
+                                    </p>
+                                </li>
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">腾讯微博</a>
+                                    </p>
+                                </li>
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">网易微博</a>
+                                    </p>
+                                </li>
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">豆瓣</a>
+                                    </p>
+                                </li>
+                                <li class="share-to-item">
+                                    <p>
+                                        <a href="javascript:void(0)" class="icon-share"></a>
+                                    </p>
+                                    <p>
+                                        <a href="javascript:void(0)" class="share-name">搜狐微博</a>
+                                    </p>
+                                </li>
+                            </ul> -->
+                        </dd>
+                    </dl>
+                </div>
+                <div class="right-part">
+                    <p class="share-href-2dcode-title">您的定制分享二维码</p>
+                    <p class="share-href-2dcode clearfix"><img src="http://misc.jjcdn.com/p/images/rebate_share_diy_2Dcode.jpg" alt="您的定制分享二维码" width="153" height="154"></p>
+                    <p class="share-href-2dcode-tip mt10">通过微信、QQ、微博等应用</p>
+                    <p class="share-href-2dcode-tip"><span>扫码分享</span>到您的好友或朋友圈</p>
+                </div>
+            </div>
+        </div>
+        <div class="kh-col-6">
+            <div class="rebate-rule-info">
+                <h2><i class="icon-star-on"></i>返利规则说明<i class="icon-star-on"></i></h2>
+                <ul class="rule-list">
+                    <li class="rule-item">1.通过分享链接或二维码，分享商品给好友。</li>
+                    <li class="rule-item">2.分享成功后，好友点击分享信息中的链接打开商品页面，通过该链接页面进行购买（跳出该分享链接进行购买无效）。</li>
+                    <li class="rule-item">3.好友完成上述购买流程并确认收货后48小时内可在您的商城资金账户中获得返利金额。</li>
+                    <li class="rule-item">4.确认收货后15天内为返利金额的冻结期，期间不可进行消费、转账及提现，如冻结期内该返利商品出现退换货或退款情况，返利金额将撤销。</li>
+                    <li class="rule-item">5.冻结期结束后，返利金额可进行消费、转账、提现操作。</li>
+                    <li class="rule-item">6.允许用户通过自身分享的同一商品链接获取返利N次。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "club-rebate-single-share"
+    })
+</body>
+
+</html>

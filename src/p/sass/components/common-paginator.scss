@@ -1,0 +1,89 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用分页样式
+ *      用于(分类列表页、返利商城创建我的小店、返利商
+ *      城店铺设置、返利商城我的小店分享、返利商城选择
+ *      商品、返利商城我的返利详情)  
+ *      author : ljrong
+ *      date   : 2016-04-05
+ *  ---------------------------------------------
+ */
+.paginator {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 50px;
+    li {
+        display: inline-block;
+        margin-right: 5px;
+        height: 30px;
+        color: #8c8c8c;
+        a {
+            display: block;
+            padding: 0 12px;
+            background: #ebebeb;
+            color: #333;
+            text-align: center;
+            &:hover {
+                color: #fff;
+                background: #333;
+            }
+        }
+        >span {
+            display: block;
+            padding: 0 12px;
+            background: #ebebeb;
+            cursor: pointer;
+            color: #333;
+        }
+    }
+    .currentpage {
+        color: #fff;
+        background: #333;
+    }
+    .next-page,
+    .prev-page {
+        >span {
+            color: #ccc;
+        }
+    }
+    .prev {
+        padding: 0 7px;
+        margin-right: 6px;
+    }
+    .next {
+        padding: 0 7px;
+        margin-right: 6px;
+    }
+    #toPage {
+        width: 28px;
+        height: 20px;
+        text-align: center;
+        padding: 4px 0;
+        color: #333;
+        border: 1px solid #ccc;
+        margin: 0 5px;
+    }
+    .total-wrap {
+        margin-right: 18px;
+        .total {
+            color: #333;
+        }
+    }
+    .go-wrap {
+        margin-right: 10px;
+    }
+    input[type="submit"] {
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+        background: #ebebeb;
+    }
+    b {
+        color: #333;
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/common-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/common-crumbs.scss";  // main-breadcrumb-trail
+@import "../components/common-search-bar.scss";     // head-search-bar
+
+//components
+@import "../components/common-dialog.scss";    // art-dialog
+
+@import "../components/common-ads.scss";    // comment-ad style
+
+//import page scss
+@import "item/1.0.1/item-sale.scss";

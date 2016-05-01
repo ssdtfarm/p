@@ -1,0 +1,16 @@
+<div class="style-title"><i class="classific-icon title-icon"></i>风格主题</div>
+<div class="style-slider J_styleSlider">
+    <div class="next"><i class="classific-icon"></i>换一换</div>
+    <div class="bd">
+        <div class="list">
+            <%for(var i=0; i<list.length; i++) {%>
+            <li class="item">
+                <a href="<%=list[i].proLink%>" title="<%=list[i].proTitle%>" target="_blank">
+                    <img _src="<%=list[i].imgURL%>" alt="<%=list[i].proAlt%>" width="590" height="280">
+                    <i class="classific-icon go"></i>
+                </a>
+            </li>
+            <%}%>
+        </div>
+    </div>
+</div>

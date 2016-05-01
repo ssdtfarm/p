@@ -1,0 +1,45 @@
+<div class="item-address">
+
+	<div id="J_addressLabel" class="address-label">
+		<div id="J_label"><%=defaultPro%><%=defaultCity%><%=defaultArea%></div>
+		<i class="icon-select-down"></i>
+	</div> 
+
+	<div id="J_selector" class="address-selector">
+		<!-- 关闭按钮 -->
+		<a id="J_close" href="javascript:void(0);" class="address-close icon-address-close"></a>
+
+		<!-- 选择省、市、区 -->
+		<div id="J_selectorNav" class="selector-nav">
+			<a class="JQ_navItem" href="javascript:void(0);">
+				<span class="JQ_pro" data-id="<%=defaultProID%>"><%=defaultPro%></span>
+				<i class="icon-select-down-small"></i>
+			</a>
+			<a class="JQ_navItem" href="javascript:void(0);">
+				<span class="JQ_city" data-id="<%=defaultCityID%>"><%=defaultCity%></span>
+				<i class="icon-select-down-small"></i> 
+			</a>   
+			<a class="JQ_navItem on" href="javascript:void(0);">
+				<span class="JQ_area" data-id="<%=defaultAreaID%>"><%=defaultArea%></span>
+				<i class="icon-select-down-small"></i>
+			</a>
+			<span class="selector-nav-blank"></span>
+		</div>
+
+		<!-- 列表 -->
+		<div id="J_selectorList" class="selector-list"> 
+			<!-- 省份列表 -->
+			<ul class="JQ_selectorItem_0 dis-none clearfix">
+				<div class="loading"><i></i></div>
+			</ul>
+
+			<ul class="JQ_selectorItem_1 dis-none clearfix">
+				<div class="loading"><i></i></div>
+			</ul>
+
+			<ul class="JQ_selectorItem_2 clearfix">
+				<div class="loading"><i></i></div>
+			</ul>
+		</div>
+	</div>
+</div>

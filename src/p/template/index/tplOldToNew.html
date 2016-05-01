@@ -1,0 +1,34 @@
+<div class="act-1111-title">
+    <span>以旧换新</span>全场床垫支持以旧换新
+    <a href="<%=moreLink%>" class="act-1111-icon more-link" target="_blank">更多</a>
+</div>
+<div class="act-rule">
+    <p class="tit">活动规则:</p>
+    <p class="desc">1.活动时间：<span>11月3日至11月13日，全场床垫可参与，享包邮优惠</span>。仅限广州、深圳、东莞、中山、珠海、佛山、江门（市区）客户。</p>
+    <p class="desc">2.抵扣金额：<span>金海马旧床垫每张抵扣200元，其余品牌旧床垫每张抵扣100元</span>。支付前先将旧床垫照片（品牌名可见）发给在线客服确认，并请咨询在线客服减价。<span class="details">活动详情<i></i></span></p>
+    <p class="rule-desc">3.购买的床垫数量和回收的旧床垫数量一一对应，即购买一张床垫，对应回收一张旧床垫，并抵扣一张床垫相应的优惠金额，以此类推。</p>
+    <p class="rule-desc">4.旧床垫将在送货时同时回收，配送人员现场确认旧床垫品牌，如发现与前期提供床垫品牌不符，客户需补差价。</p>
+    <p class="rule-desc">5.如发生退货，则不可享受抵扣优惠（正常换货除外），如损坏产品，需按原价扣除费用。</p>
+    <p class="rule-desc">6.旧床垫如可通过电梯运输无需收取抬楼费，如不可，1-7楼不收取费用，7楼以上 每层20元/件收取。</p>
+    <p class="rule-desc">7.本活动最终解释权归金海马商城所有。</p>
+</div>
+<ul class="crazy-pro-list crazy-pro-list-3">
+    <%for(var i=0; i<list.length; i++) {%>
+    <li class="pro-item">
+        <a href="<%=list[i].proLink%>" class="pro-link" target="_blank">
+            <img class="lazy" data-original="<%=list[i].imgSrc%>" alt="" width="388" height="258">
+        </a>
+        <div class="pro-info">
+            <div class="tit">
+                <p class="pro-name">
+                    <a href="<%=list[i].proLink%>"><%=list[i].proTitle%></a>
+                </p>
+                <p class="desc">特惠价 <span>&yen;<%=list[i].price%></span></p>
+            </div>
+            <div class="price">
+                <a href="<%=list[i].proLink%>" class="buy-link act-1111-icon" target="_blank">立即抢购</a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</ul>

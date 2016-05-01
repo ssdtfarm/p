@@ -1,0 +1,32 @@
+<%if(list.length==0){%>
+<p class="tc">暂时没有成交记录</p>
+<%}else{%>
+<table class="bid-history">
+    <thead>
+        <tr>
+            <th>买家</th>
+            <th>商品名称</th>
+            <th>成交数量</th>
+            <th>成交时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for(var j=0; j<list.length; j++){%>
+            <tr>
+                <td class="fc-2f6">
+                    <%=list[j].buyer%>
+                </td>
+                <td>
+                    <%=list[j].title%>
+                </td>
+                <td>
+                    <%=list[j].num%>
+                </td>
+                <td>
+                    <%=list[j].time%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+<%}%>

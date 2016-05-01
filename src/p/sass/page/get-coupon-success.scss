@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/common-head.scss";    // main-head
+@import "../components/member-head.scss";    // main-head
+
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/common-crumbs.scss";  // main-breadcrumb-trail
+@import "../components/common-search-bar.scss";     // head-search-bar
+
+
+@import "../components/common-foot.scss";  // global-footer
+
+/* 
+ *    领取购物券成功也 
+ *    author : lijinrong
+ *    date   : 2015-05-11 
+*/
+.coupon-wrap {
+	padding: 50px 0;
+	width: 490px; 
+	min-height: 486px;
+	margin:0 auto;
+	text-align: center;
+}
+.coupon-wrap .title {
+	margin-bottom: 18px;
+	font-size: 18px;
+	line-height: 65px;
+	color: #333;
+}
+.coupon-wrap .title  i {
+	margin-right: 10px;
+	position: relative;
+	top: -15px;
+}
+.coupon-wrap .title span {
+	position: relative;
+	top: -20px;
+}
+.coupon-wrap dl {
+	border: 1px solid #ccc;
+	width: 488px;
+	height: 178px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.coupon-wrap dt {
+	float: left;
+	width: 148px;
+	line-height: 178px;
+	border-right: 1px dashed #ccc;
+}
+.coupon-wrap dt span {
+	font-size: 18px;
+}
+.coupon-wrap .price {
+	font-size: 48px;
+}
+.coupon-wrap dd {
+	padding-right: 40px;
+	margin-left: 150px;
+	padding-top: 46px;
+	font-size: 14px;
+}
+.coupon-wrap dd p {
+	margin-bottom: 10px;
+}
+.coupon-wrap dd span{
+	display: block;
+	float: left;
+	width: 114px;
+	text-align: right;
+	color: #8c8c8c;
+}
+.coupon-wrap dd label {
+	display: block;
+	overflow: hidden;
+	color: #333;
+	text-align: left;
+}
+.coupon-wrap .date {
+	color: #f60;
+}
+.use-link {
+	display: block;
+	margin:0 auto;
+	width:90px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	background: #f60;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+.use-link:hover {
+	background: #ee950a;
+}
+.my-coupons {
+	display: inline-block;
+	color: #2f6ceb;
+}
+.my-coupons:hover {
+	color: #f60;
+}

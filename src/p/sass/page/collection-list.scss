@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";     // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-select.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-pages.scss";
+@import "../components/member-aside.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-dialog.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  coupon-list 优惠券列表
+ *
+ *  author:JinJing
+ *  date:20150310
+*/
+
+body {
+    background: #e4e4e4;
+}
+/*===== 我的收藏操作导航菜单  =====*/
+.collection-menu {
+    position: relative;
+    z-index: 990;
+}
+.collection-menu .collection-nav-operation{
+    position: absolute;
+    z-index: 992;
+    right: 0;
+    bottom: 8px;
+    width: 140px;
+    height: 20px;
+}
+.collection-nav-operation .collection-operation-chooseAll {
+    display: inline-block;
+}
+.collection-nav-operation .collection-operation-chooseAll span {
+    padding-left: 5px;
+}
+.collection-main .icon{
+    display: inline-block;
+}
+.collection-main .icon-box-normal,.collection-main .icon-box-checked{
+    position: relative;
+    //top:8px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/*========   底部操作导航    ==========*/
+.collection-underline{
+    position: relative;
+    width: 990px;
+    height: 50px;
+}
+.collection-underline .collection-nav-operation{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 12px;
+    width: 140px;
+    height: 20px;
+}
+/*=========  我的收藏为空 =========*/
+.collection-list-null {
+    padding: 50px 0;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    background-color: #fff;
+}
+.collection-list-null a {
+    color: #f60;
+}
+.collection-list-null a:hover {
+    color: #f60;
+    text-decoration: none;
+}
+/*=========  我的收藏列表  ========*/
+.collection-list{
+
+}
+.collection-list .collection-item{
+    float: left;
+    width: 240px;
+    height: 256px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background: #fff;
+}
+.collection-item .pic{
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+}
+.collection-item .pic .item-img img{
+    width: 240px;
+    height: 160px;
+}
+.collection-item .name {
+    width: 230px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 5px;
+    line-height: 30px;
+}
+.collection-item .name .item-name{
+    color: #8c8c8c;
+}
+.collection-item .item-name:hover{
+    color: #f60;
+}
+.collection-item .price .item-price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #f60;
+}
+.collection-item .price .item-price-original{
+    margin-left: 10px;
+    color: #8c8c8c;
+    text-decoration: line-through;
+}
+.collection-item .price .item-undercarriage{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.collection-item .operation{
+    margin-top: 10px;
+}
+.check-item {
+    display: none;
+}

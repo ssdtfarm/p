@@ -1,0 +1,21 @@
+<!--右侧浮动导航 start-->
+<%if(activity_mddh_status == 1){%>
+<div class="nav_act" style="width:<%=activity_anchor_info.g_width%>px; position:fixed; top:<%=activity_anchor_info.g_top%>px;">
+    <a onclick="cose()">
+        <p style="width:<%=activity_anchor_info.g_close_width%>px;height:<%=activity_anchor_info.g_close_height%>px;position:absolute;top:0;right:0;"></p>
+    </a>
+    <p style="width:<%=activity_anchor_info.g_top_width%>px;height:<%=activity_anchor_info.g_top_height%>px;background:url(<%=activity_anchor_info.g_top_url%>) no-repeat <%=activity_anchor_info.g_top_coordinate_x%>px <%=activity_anchor_info.g_top_coordinate_x%>px;"></p>
+
+    <%for(var i=0; i<list.length; i++){%>
+    <a href="#img_<%=list[i].g_md_id%>">
+        <p style="width:<%=list[i].g_md_width%>px;height:<%=list[i].g_md_height%>px;background:url(<%=list[i].g_md_url%>) no-repeat <%=list[i].g_md_coordinate_x%>px <%=list[i].g_md_coordinate_y%>px;"></p>
+    </a>
+    <% } %>
+
+    <a href="#">
+        <p style="width:<%=activity_anchor_info.g_bottom_width%>px;height:<%=activity_anchor_info.g_bottom_height%>px;background:url(<%=activity_anchor_info.g_bottom_url%>) no-repeat <%=activity_anchor_info.g_bottom_coordinate_x%>px <%=activity_anchor_info.g_bottom_coordinate_y%>px;"></p>
+    </a>
+</div>
+<%}%>
+<!--右侧浮动导航 end-->
+

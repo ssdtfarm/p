@@ -1,0 +1,1 @@
+define("libpage.0.0/member-order-pay-success",[],function(e,n,i){$(function(){function e(){$("#J_orderPaySuccess").css({height:parseInt($(window).innerHeight()-$("header").innerHeight()-$("footer").innerHeight())+"px"})}e(),$(window).resize(function(n){e()})})});

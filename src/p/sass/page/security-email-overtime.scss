@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+
+/*
+ * Security Center
+ * security-email-overtime.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-10-23;
+ */
+
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 验证邮箱失败
+.security-email-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+
+// 注：邮件地址不确定宽度
+.security-email-overtime {
+	float: left;
+	position: relative;
+	left: 50%;
+	margin-top: 30px;
+	.overtime-description {
+		position: relative;
+		left: -50%;
+		height: 100px;
+		line-height: 22px;
+		.icon-face-frown-blue {
+			float: left;
+		}
+		.overtime-tips {
+			float: left;
+			margin: 18px 0 0 10px;
+			font-size: 18px;
+			b {
+				color: #f60;
+				font-weight: normal;
+			}
+		}
+		.guide {
+			position: absolute;
+			text-align: center;
+			margin-top: 80px;
+			width: 100%;
+			a, span {
+				color: #2f6ceb;
+			}
+			a {
+				margin: 0 4px 0 3px;
+				&:first-child {
+					margin-left: 0px;
+				}
+				&:hover {
+					color: #f60;
+				}
+			}
+		}
+	}
+}

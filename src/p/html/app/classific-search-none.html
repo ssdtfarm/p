@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "classific-search",
+    "title" : "金海马商城搜索分类列表-没有找到商品"
+    })
+</head>
+<body>
+
+<!-- 顶部广告开始 -->
+<section class="index-top-ad J_lazy" id="J_TopAd" data-tpl="tplTopAd" data-path="classific_topAd_hash.js" data-time="1440377537"></section>
+<!-- 顶部广告结束 -->
+
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+<!-- 头部开始 -->
+@@include("comment-header.html",{ "cdn" : "@@miscPath" })
+<!-- 头部结束 -->
+<!-- 导航开始 -->
+@@include("comment-head-nav.html")
+<!-- 导航结束 -->
+
+<!-- 页面开始 -->
+<section class="kh-row-24 clearfix">
+    <!-- 分类搜索主体开始 -->
+    <section class="classific-content clearfix">
+        <!-- 右侧区域开始 -->
+        <section class="classific-main fr">
+            <!-- 分类顶部广告区域开始 -->
+            <div class="classific-topAdv J_lazy" data-tpl="tplMainTopAd" data-path="classific_mainTopAd_hash.js" data-time="1440377537"></div>
+            <!-- 分类顶部广告区域结束 -->
+
+            <!-- 没有找到提示 -->
+            <div class="not-fond">  
+                <i class="icon-face-frown-orange"></i>抱歉，没有找到与<span class="fc-f60">xxx</span>相关的商品哦~
+            </div>
+            <!-- 没有找到提示结束 -->
+            
+            <!-- 底部搜索开始 -->
+            <div class="classific-search">
+                <span class="title">重新搜索</span><input type="text" value="沙发" class="keyword"><span class="serch-btn classific-icon"></span>
+            </div>
+            <!-- 底部搜索结束 -->
+            <!-- 最近浏览开始 -->
+            <div class="history J_historySlider J_lazy" data-tpl="tplHistory" data-path="classific_history_hash.js"></div>
+            <!-- 最近浏览结束 -->
+        </section>
+        <!-- 右侧区域结束 -->
+        <!-- 左侧区域开始 -->
+        <aside class="classific-side fl">
+            <!-- 商品分类选择菜单开始 -->
+            <div class="classific-select J_classificSelect J_lazy" data-tpl="tplClassificSelect" data-path="classific_classificSelect_hash.js"></div>
+            <!-- 商品分类选择菜单结束 -->
+            <!-- 热销排行开始 -->
+            <div class="hot-saleing J_lazy" data-tpl="tplHotSaleing" data-path="classific_hotSaleing_hash.js"></div>
+            <!-- 热销排行结束 -->
+            <!-- 猜你喜欢开始 -->
+            <div class="maybe-like J_lazy" data-tpl="tplYouLike" data-path="classific_youLike_hash.js"></div>
+            <!-- 猜你喜欢结束 -->
+            <!-- 侧边广告区域开始 -->
+            <div class="side-ad J_lazy" data-tpl="tplSideAd" data-path="classific_sideAd_hash.js" data-time="1440377537"></div>
+            <!-- 侧边广告区域结束 -->
+        </aside>
+        <!-- 左侧区域结束 -->
+    </section>
+    <!-- 分类搜索主体结束 -->
+</section>
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+    "cdn" : "@@miscPath",
+    "name"  : "classific-search"
+})
+<script>
+    //顶部广告
+    function loadTopAd(){
+        return {
+            "content" : [
+                {
+                    "startTime" : 1440377324,
+                    "endTime" : 1440460800,
+                    "link": "http://sale.kinhom.com",                             //广告链接
+                    "height": "80",
+                    "title": "这里是提示文字111",                                      //广告描述
+                    "imgURL": "http://misc.jjcdn.com/p/images/index_top_ad.jpg",  //广告图片src
+                    "bgColor": "#e0d3b9"                                          //广告区域背景图,默认为#fff,如设置了则为设置后的值,只能为"#000ffd" 这样的格式.#号必须.
+                },
+                {
+                    "startTime" : 1440377324,
+                    "endTime" : 1440460800,
+                    "link": "http://sale.kinhom.com",
+                    "title": "这里是提示文字222",
+                    "imgURL": "http://misc.jjcdn.com/p/images/index_top_ad.jpg",
+                    "bgColor": "#e0d3b9"
+                },
+                {
+                    "startTime" : 1440377324,
+                    "endTime" : 1440460800,
+                    "link": "http://sale.kinhom.com",
+                    "title": "这里是提示文字333",
+                    "imgURL": "http://misc.jjcdn.com/p/images/index_top_ad.jpg",
+                    "bgColor": "#e0d3b9"
+                }
+            ]
+        }
+    }
+    //热销排行 5个产品数据
+    function loadHotSaleing () {
+        return {
+            "content" : {
+                "list" : [
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    //产品链接
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵 2015年新款",                                    //产品标题
+                        "proPrice" : "12999",                                                    //产品价格
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/hot-saleing-img.jpg", //图片地址
+                        "proAlt"   : "图片alt",
+                        "saleNum"  : "1111"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵 2015年新款",                                      
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/hot-saleing-img.jpg", 
+                        "proAlt"   : "图片alt",
+                        "saleNum"  : "222"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵 2015年新款",                                    
+                        "proPrice" : "32999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/hot-saleing-img.jpg", 
+                        "proAlt"   : "图片alt",
+                        "saleNum"  : "333"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵 2015年新款",                                    
+                        "proPrice" : "42999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/hot-saleing-img.jpg", 
+                        "proAlt"   : "图片alt",
+                        "saleNum"  : "4444"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵 2015年新款",                                    
+                        "proPrice" : "52999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/hot-saleing-img.jpg", 
+                        "proAlt"   : "图片alt",
+                        "saleNum"  : "555"
+                    }
+                ]
+            }
+        }
+    }
+    //猜你喜欢
+    function loadYouLike () {
+        return {
+            "content" : {
+                "list" : [
+                    {
+                        "proLink" : "http://www.kinhom.com",                                      //产品链接
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                   //产品标题
+                        "proPrice" : "12999",                                                     //产品价格
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg",         //图片地址
+                        "proAlt"   : "图片alt"                                                    //图片alt
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",
+                        "proPrice" : "12999",                                       
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "32999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "42999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "52999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "32999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "42999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                    
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                                    
+                        "proPrice" : "52999",                                                    
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/maybe-like-img.jpg", 
+                        "proAlt"   : "图片alt"
+                    }
+                ]
+            }
+        }
+    }
+    //侧栏广告区域
+    function loadSideAd () {
+        return {
+            "content" : [
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-ad-1.jpg",  
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-ad-2.jpg",  
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-ad-1.jpg",  
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "startTime" : 1440377437,                                    
+                        "endTime" : 1440377537,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-ad-2.jpg",  
+                        "proAlt"   : "图片alt"
+                    }
+                ]
+        }
+    }
+    //最近浏览
+    function loadHistory() {
+        return {
+            "content" : {
+                "list"    : [
+                    {
+                        "proLink" : "http://www.kinhom.com",                                      //产品链接
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                              //产品标题
+                        "proPrice" : "13999",                                                     //产品价格
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/history-img.jpg",            //图片地址
+                        "proAlt"   : "图片alt"                                                    //图片alt
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                      
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                              
+                        "proPrice" : "14999",                                                     
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/history-img.jpg",         
+                        "proAlt"   : "图片alt"                                                    
+                    },
+                    {
+                        "proLink" : "http://www.kinhom.com",                                      
+                        "proTitle" : "现代简约 蓝色布艺沙发 1+3+贵",                              
+                        "proPrice" : "15999",                                                     
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/history-img.jpg",         
+                        "proAlt"   : "图片alt"                                                    
+                    }
+                ]
+                
+            }
+        }
+    }
+    //列表里面的轮播广告
+    function loadListAd () {
+        return {
+            "content" : {
+                "list" : [
+                    {   
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"     : "http://item.kinhom.com/233.html",                     //产品链接
+                        "imgURL"      : "http://misc.jjcdn.com/p/images/list-adv-img.jpg",     //产品图片src
+                        "proTitle"    : "1宽大头枕·防螨·可拆洗",                                //产品标题
+                        "proAlt"      : "3D立体造型 · 彰显高端品质    人体工学设计 · 不仅仅是舒适", //产品描述
+                    },
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"     : "http://item.kinhom.com/233.html",                     
+                        "imgURL"      : "http://misc.jjcdn.com/p/images/list-adv-img.jpg",   
+                        "proTitle"    : "2宽大头枕·防螨·可拆洗",                                        
+                        "proAlt"      : "3D立体造型 · 彰显高端品质    人体工学设计 · 不仅仅是舒适", 
+                    },
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"     : "http://item.kinhom.com/233.html",                     
+                        "imgURL"      : "http://misc.jjcdn.com/p/images/list-adv-img.jpg",   
+                        "proTitle"    : "3宽大头枕·防螨·可拆洗",                                        
+                        "proAlt"      : "3D立体造型 · 彰显高端品质    人体工学设计 · 不仅仅是舒适", 
+                    },
+                    {
+                        "startTime" : 1440377536,                                    
+                        "endTime" : 1440377537,  
+                        "proLink"     : "http://item.kinhom.com/233.html",                     
+                        "imgURL"      : "http://misc.jjcdn.com/p/images/list-adv-img.jpg",   
+                        "proTitle"    : "宽大头枕·防螨·可拆洗",                                        
+                        "proAlt"      : "3D立体造型 · 彰显高端品质    人体工学设计 · 不仅仅是舒适", 
+                    }
+                ]
+            }
+        }
+    }
+    //右侧顶部广告
+    function loadMainTopAd () {
+        return {
+            "content" : [
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-topAdv-img.jpg",  
+                        "proAlt"   : "图片alt"
+                    },
+                    {
+                        "startTime" : 1440377324,                                    
+                        "endTime" : 1440460800,  
+                        "proLink"  : "http://www.kinhom.com",                          
+                        "proTitle" : "现代简约  棕色  真皮  沙发组合  布艺沙发11",                               
+                        "imgURL"   : "http://misc.jjcdn.com/p/images/classific-topAdv-img.jpg",  
+                        "proAlt"   : "图片alt"
+                    }
+                ]
+        }
+    }
+    //左侧分类筛选
+    function loadClassificSelect() {
+        return {
+            "content" : {
+                    "curSelect" : "231",
+                    "list" : [
+                        {
+                            "proName" : "卧室",
+                            "proLink" : "http://search.kinhom.com/list.html?cat=210",
+                            "typeLink" : [
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=226",
+                                    "catId" : "266",
+                                    "proName" : "床垫"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=231",
+                                    "catId" : "231",
+                                    "proName" : "衣柜"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=237",
+                                    "catId" : "237",
+                                    "proName" : "衣帽架/穿衣镜"
+                                }
+                            ]
+                        },
+                        {
+                            "proName" : "客厅",
+                            "proLink" : "http://search.kinhom.com/list.html?cat=211",
+                            "typeLink" : [
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=244",
+                                    "catId" : "244",
+                                    "proName" : "沙发"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=247",
+                                    "catId" : "247",
+                                    "proName" : "沙发床"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=250",
+                                    "catId" : "250",
+                                    "proName" : "茶几"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=255",
+                                    "catId" : "255",
+                                    "proName" : "鞋柜(架)"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=256",
+                                    "catId" : "256",
+                                    "proName" : "斗柜"
+                                }
+                            ]
+                        },
+                        {
+                            "proName" : "餐厅",
+                            "proLink" : "http://search.kinhom.com/list.html?cat=213",
+                            "typeLink" : [
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=264",
+                                    "catId" : "264",
+                                    "proName" : "餐桌"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=267",
+                                    "catId" : "267",
+                                    "proName" : "餐椅"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=270",
+                                    "catId" : "270",
+                                    "proName" : "餐(边)柜"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=271",
+                                    "catId" : "271",
+                                    "proName" : "餐车"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=274",
+                                    "catId" : "274",
+                                    "proName" : "餐厅套装"
+                                }
+                            ]
+                        },
+                        {
+                            "proName" : "书房",
+                            "proLink" : "http://search.kinhom.com/list.html?cat=213",
+                            "typeLink" : [
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=277",
+                                    "catId" : "277",
+                                    "proName" : "书桌/电脑桌"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=279",
+                                    "catId" : "279",
+                                    "proName" : "书椅/转椅"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=282",
+                                    "catId" : "282",
+                                    "proName" : "书柜(架)"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=283",
+                                    "catId" : "283",
+                                    "proName" : "书房小配件"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=285",
+                                    "catId" : "285",
+                                    "proName" : "书房套装"
+                                }
+                            ]
+                        },
+                        {
+                            "proName" : "儿童房",
+                            "proLink" : "http://search.kinhom.com/list.html?cat=216",
+                            "typeLink" : [
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=286",
+                                    "catId" : "286",
+                                    "proName" : "儿童床"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=289",
+                                    "catId" : "289",
+                                    "proName" : "儿童床头柜"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=291",
+                                    "catId" : "291",
+                                    "proName" : "儿童衣柜"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=294",
+                                    "catId" : "294",
+                                    "proName" : "儿童妆台/妆镜/妆凳"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=295",
+                                    "catId" : "295",
+                                    "proName" : "儿童书桌/电脑桌"
+                                },
+                                {
+                                    "proLink" : "http://search.kinhom.com/list.html?cat=360",
+                                    "catId" : "360",
+                                    "proName" : "儿童书椅/转椅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+        }
+    }
+
+    //右侧属性分类筛选
+    /*function loadAttrSelector() {
+        return {
+            "content" : {
+                    "goodNums" : "115",
+                    "list" : [
+                        {
+                            "attrName" : "品牌",
+                            "attrType" : "brand",
+                            "attrInfo" : [
+                                {
+                                    "id" : "32",
+                                    "value" : "金海马"
+                                },
+                                {
+                                    "id" : "34",
+                                    "value" : "梵尔特"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "风格",
+                            "attrType" : "style",
+                            "attrInfo" : [
+                                {
+                                    "id" : "3",
+                                    "value" : "现代简约"
+                                },
+                                {
+                                    "id" : "6",
+                                    "value" : "现代中式"
+                                },
+                                {
+                                    "id" : "7",
+                                    "value" : "韩式田园"
+                                },
+                                {
+                                    "id" : "10",
+                                    "value" : "欧式简约"
+                                },
+                                {
+                                    "id" : "18",
+                                    "value" : "法式古典"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "类型",
+                            "attrType" : "spec",
+                            "attrInfo" : [
+                                {
+                                    "id" : "397",
+                                    "value" : "0.9*1.9米"
+                                },
+                                {
+                                    "id" : "400",
+                                    "value" : "1.0*1.9米"
+                                },
+                                {
+                                    "id" : "403",
+                                    "value" : "1.2*1.9米"
+                                },
+                                {
+                                    "id" : "406",
+                                    "value" : "1.2*2.0米"
+                                },
+                                {
+                                    "id" : "409",
+                                    "value" : "1.5*1.9米"
+                                },
+                                {
+                                    "id" : "411",
+                                    "value" : "1.5*2.0米"
+                                },
+                                {
+                                    "id" : "414",
+                                    "value" : "1.8*2.0米"
+                                },
+                                {
+                                    "id" : "4039",
+                                    "value" : "1.37*1.9米"
+                                },
+                                {
+                                    "id" : "4485",
+                                    "value" : "0.9*2.0米"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "价格",
+                            "attrType" : "price",
+                            "attrInfo" : [
+                                {
+                                    "id" : "397",
+                                    "value" : "0~999"    
+                                },
+                                {
+                                    "id" : "400",
+                                    "value" : "1000~1999"
+                                },
+                                {
+                                    "id" : "403",
+                                    "value" : "2000~2999"
+                                },
+                                {
+                                    "id" : "406",
+                                    "value" : "3000~5000"
+                                },
+                                {
+                                    "id" : "409",
+                                    "value" : "5000以上"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "材质",
+                            "attrType" : "spec",
+                            "attrInfo" : [
+                                {
+                                    "id" : "415",
+                                    "value" : "整网弹簧+椰棕"
+                                },
+                                {
+                                    "id" : "418",
+                                    "value" : "整网弹簧+天然乳胶"
+                                },
+                                {
+                                    "id" : "421",
+                                    "value" : "独立袋装弹簧+天然乳胶"
+                                },
+                                {
+                                    "id" : "3445",
+                                    "value" : "椰棕"
+                                },
+                                {
+                                    "id" : "3985",
+                                    "value" : "独立袋装弹簧"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "厚度",
+                            "attrType" : "spec",
+                            "attrInfo" : [
+                                {
+                                    "id" : "429",
+                                    "value" : "5cm"
+                                },
+                                {
+                                    "id" : "432",
+                                    "value" : "10cm"
+                                },
+                                {
+                                    "id" : "435",
+                                    "value" : "20cm"
+                                },
+                                {
+                                    "id" : "438",
+                                    "value" : "22cm"
+                                },
+                                {
+                                    "id" : "1552",
+                                    "value" : "27cm"
+                                }
+                            ]
+                        },
+                        {
+                            "attrName" : "颜色",
+                            "attrType" : "spec",
+                            "attrInfo" : [
+                                {
+                                    "id" : "1486",
+                                    "value" : "白色提花"
+                                },
+                                {
+                                    "id" : "1489",
+                                    "value" : "海岛风情"
+                                },
+                                {
+                                    "id" : "1492",
+                                    "value" : "红色"
+                                },
+                                {
+                                    "id" : "1555",
+                                    "value" : "米白"
+                                },
+                                {
+                                    "id" : "1558",
+                                    "value" : "灰白"
+                                },
+                                {
+                                    "id" : "3315",
+                                    "value" : "白色配深咖啡色"
+                                },
+                                {
+                                    "id" : "4033",
+                                    "value" : "蓝色花布"
+                                },
+                                {
+                                    "id" : "4044",
+                                    "value" : "绿色"
+                                },
+                                {
+                                    "id" : "4470",
+                                    "value" : "棕色"
+                                },
+                                {
+                                    "id" : "4482",
+                                    "value" : "白色"
+                                },
+                                {
+                                    "id" : "4582",
+                                    "value" : "深灰色"
+                                },
+                                {
+                                    "id" : "4652",
+                                    "value" : "白色+灰色"
+                                },
+                                {
+                                    "id" : "4470",
+                                    "value" : "棕色"
+                                },
+                                {
+                                    "id" : "4482",
+                                    "value" : "白色"
+                                },
+                                {
+                                    "id" : "4582",
+                                    "value" : "深灰色"
+                                },
+                                {
+                                    "id" : "4652",
+                                    "value" : "白色+灰色"
+                                }
+                            ]
+                        }
+                    ]
+                }
+        }
+    }*/
+
+    /*//产品列表信息
+    function loadClassificList() {
+        return {
+            "content" : {
+                    "totalPage" : "10",
+                    "list" : [
+                        {
+                            "proLink" : "http://kinhom.com",                                    //商品链接
+                            "proTitle" :"现代简约 棕色 真皮 沙发组合 布艺沙发 商品名限制2行！", //商品标题
+                            "proBrand" : "金海马",                                              //商品品牌
+                            "proPrice" : "3999",                                                //商品价格
+                            "proPromotion" : "促销信息：最多不超过1行，限制好！",               //商品促销标题
+                            "imgURL" : "http://misc.jjcdn.com/p/images/classific-item-img.jpg", //商品图片地址
+                            "proAlt" : "这是图片alt",                                           //商品图片alt
+                            "saleNum" : "200",                                                  //商品购买数量
+                            "comments" : "180"                                                  //商品评论数量
+                        },
+                        {
+                            "proLink" : "http://kinhom.com",                                    
+                            "proTitle" :"布艺沙发 商品名限制2行！", 
+                            "proBrand" : "金海马",                                              
+                            "proPrice" : "3999",                                                
+                            "proPromotion" : "促销信息：最多不超过1行，限制好！",               
+                            "imgURL" : "http://misc.jjcdn.com/p/images/classific-item-img.jpg", 
+                            "proAlt" : "这是图片alt",                                           
+                            "saleNum" : "200",                                                  
+                            "comments" : "180"                                                  
+                        },
+                        {
+                            "proLink" : "http://kinhom.com",                                    
+                            "proTitle" :"现代简约 棕色 真皮 沙发组合 布艺沙发 商品名限制2行！", 
+                            "proBrand" : "金海马",                                              
+                            "proPrice" : "3999",                                                
+                            "proPromotion" : "促销信息：最多不超过1行，限制好！",               
+                            "imgURL" : "http://misc.jjcdn.com/p/images/classific-item-img.jpg", 
+                            "proAlt" : "这是图片alt",                                           
+                            "saleNum" : "200",                                                  
+                            "comments" : "180"                                                  
+                        },
+                        {
+                            "proLink" : "http://kinhom.com",                                    
+                            "proTitle" :"现代简约 棕色 真皮 沙发组合 布艺沙发 商品名限制2行！", 
+                            "proBrand" : "金海马",                                              
+                            "proPrice" : "3999",                                                
+                            "proPromotion" : "促销信息：最多不超过1行，限制好！",               
+                            "imgURL" : "http://misc.jjcdn.com/p/images/classific-item-img.jpg", 
+                            "proAlt" : "这是图片alt",                                           
+                            "saleNum" : "200",                                                  
+                            "comments" : "180"                                                  
+                        }
+                    ]
+                }
+        }
+    }*/
+</script>
+</body>
+</html>

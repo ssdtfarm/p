@@ -1,0 +1,550 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+@import "../components/common-top-bar.scss";	    // global-top-bar
+@import "../components/member-head.scss";    // 主站通用头部
+@import "../components/common-foot.scss";  // 全站通用底部
+@import "../components/common-min-bar.scss";    // min-bar
+          // icon-system
+ 		    // grid-system
+
+/*=====================================
+ *   seo: product compare sytle
+ *   author : yansiwen
+ *   date : 2015-12-28
+*======================================*/
+
+/* 导航开始 */
+
+.navigation {
+    background-color: #2f6ceb;
+}
+
+.nav-list-item {
+    float: left;
+    position: relative;
+    width: 110px;
+}
+
+.nav-list-item a {
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.nav-list .active a {
+    background-color: #4d82f2;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 7px 0px 7px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.sub-list {
+    position: absolute;
+    display: none;
+    width: 110px;
+    background-color: #4d82f2;
+}
+
+.nav-list-item:hover .sub-list {
+    display: block;
+}
+
+.nav-list-item:hover a {
+    background-color: #4d82f2;
+}
+
+.sub-list li {
+    float: none;
+    margin-left: 0px;
+}
+
+.sub-list li:hover a {
+    background-color: #2f6ceb;
+}
+
+.nav-index a {
+    display: block;
+    padding: 7px 42px;
+    background-color: #f60;
+    color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.nav-index a:hover {
+    background-color: #ee950a;
+}
+
+/* 导航结束 */
+
+.member-header {
+    border-bottom: 0 solid;
+    overflow: hidden;
+}
+
+/* 面包屑开始 */
+
+.bread {
+    margin: 16px auto 19px;
+    color: #333;
+}
+
+.bread a {
+    color: #2f6ceb;
+}
+
+/* 面包屑结束 */
+
+/* 产品对比开始 */
+.compare-icon {
+    display: block;
+    background: url("../images/zx/sprites.png") no-repeat;
+}
+.compare-main-box {
+    .product {
+        float: left;
+        width: 540px;
+        font-size: 14px;
+        line-height: 20px;
+        h2 {
+            margin-top: 8px;
+        }
+        a {
+            display: block;
+            color: #333;
+            &:hover {
+                color: #f60;
+            }
+        }
+        .act-price {
+            font-weight: bold;
+            color: #f60;
+            b {
+                font-size: 16px;
+                vertical-align: middle;
+            }
+        }
+        img {
+            display: block;
+            width: 540px;
+            height: 360px;
+        }
+    }
+    .product-second {
+        float: right;
+    }
+    .pk-icon {
+        float: left;
+        width: 69px;
+        height: 69px;
+        margin: 143px 0 0 21px;
+        background-position: -85px -232px;
+    }
+}
+
+// 参数对比、口碑对比共同样式
+.compare-content {
+    margin-top: 45px;
+    .title-box {
+        position: relative;
+        width: 190px;
+        height: 45px;
+        margin-bottom: 20px;
+        background: #ebebeb;
+    }
+    .title {
+        width: 116px;
+        height: 32px;
+        margin: 0 auto;
+        padding: 7px 0 6px;
+        line-height: 32px;
+        h3 {
+            padding-left: 35px;
+            font-size: 20px;
+            color: #f60;
+        }
+    }
+    .compare-list {
+        float: left;
+        width: 540px;
+        li {
+            border-top: 1px solid #cbcbcb;
+        }
+        li:first-child {
+            border-top: none;
+        }
+    }
+    .compare-list-second {
+        float: right;
+    }
+}
+
+// 参数对比
+.compare-param {
+    .param-pk-icon {
+        position: absolute;
+        width: 25px;
+        height: 31px;
+        background-position: -50px -276px;
+    }
+    .param-list {
+        font-size: 14px;
+        line-height: 32px;
+        dt {
+            float: left;
+            width: 70px;
+            padding-right: 9px;
+            text-align: right;
+            font-weight: bold;
+        }
+        dd {
+            float: left;
+            width: 425px;
+            padding-top: 5px;
+            line-height: 22px;
+        }
+    }
+}
+
+// 口碑对比
+.compare-praise {
+    .praise-pk-icon {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        background-position: -50px -318px;
+    }
+    .comment-box {
+        padding: 6px 0 8px;
+        dt {
+            line-height: 24px;
+            .name {
+                float: left;
+            }
+            .comment-btn {
+                float: right;
+                margin-right: 36px;
+                color: #f60;
+                cursor: pointer;
+            }
+            // 展开小图标
+            .comment-icon-expand,
+            .comment-icon-collapse {
+                display: inline-block;
+                margin-left: 2px;
+                width: 9px;
+                height: 5px;
+                background-position: -50px -247px;
+            }
+            // 收起小图标
+            .comment-icon-collapse {
+                margin-bottom: 3px;
+                background-position: -50px -262px;
+            }
+        }
+        dd {
+            width: 504px;
+            line-height: 18px;
+        }
+        .comment-hide {
+            height: 36px;
+            overflow: hidden;
+        }
+    }
+}
+/* 产品对比结束 */
+
+/* 相关产品推荐、资讯和问答内容、家居标签、家居专题“标题”样式 */
+.compare-recommend,
+.compare-info,
+.compare-keyword,
+.compare-subject {
+    .title-box {
+        border-bottom: 1px solid #333;
+    }
+    .title {
+        margin: 0 auto;
+    }
+    h4 {
+        font-size: 30px;
+        position: absolute;
+    }
+}
+/* 相关产品推荐开始 */
+.compare-recommend {
+    margin-top: 53px;
+    .title-box {
+        .title {
+            width: 319px;
+        }
+        .recommend-icon {
+            width: 199px;
+            height: 40px;
+            margin: 0 0 -2px 120px;
+            background-position: 0 -462px;
+        }
+    }
+    .recommend-content {
+        margin-top: 19px;
+        li {
+            float: left;
+            width: 290px;
+            margin-left: 10px;
+            line-height: 20px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        img{
+            display: block;
+            width: 290px;
+            height: 193px;
+        }
+        .pro-title {
+            display: block;
+            margin-top: 7px;
+            color: #333;
+        }
+        li a:hover {
+            .pro-title {
+                color: #f60;
+            }
+        }
+        .act-price {
+            color: #f60;
+            font-size: 14px;
+        }
+    }
+}
+/* 相关产品推荐结束 */
+
+/* 资讯与问答内容开始 */
+.compare-info {
+    margin-top: 75px;
+    .title-box {
+        margin-bottom: 20px;
+        .title {
+            width: 334px;
+        }
+        .info-icon {
+            width: 184px;
+            height: 40px;
+            margin: 0 0 -2px 150px;
+            background-position: 0 -512px;
+        }
+    }
+    .aside-info {
+        float: left;
+        img {
+            display: block;
+            width: 390px;
+            height: 260px;
+        }
+    }
+    .info-list-box {
+        float: left;
+        width: 340px;
+        margin-left: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        h5 {
+            margin: 9px 0 18px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        ul {
+            height: 192px;
+            li {
+                font-size: 14px;
+                line-height: 32px;
+                a {
+                    display: block;
+                    width: 320px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #333;
+                    padding-left: 15px;
+                    background: url("../images/zx/sprites.png") no-repeat 0 -420px;
+                    &:hover {
+                        color: #f60;
+                    }
+                }
+            }
+        }
+    }
+    .info-list-box-second {
+        margin-left: 40px;
+    }
+}
+/* 资讯与问答内容结束 */
+
+/* 家居标签内容开始 */
+.compare-keyword {
+    margin-top: 44px;
+    .title-box {
+        .title {
+            width: 270px;
+        }
+        .keyword-icon {
+            width: 150px;
+            height: 40px;
+            margin: 0 0 -2px 120px;
+            background-position: 0 -562px;
+        }
+    }
+    .keyword-list {
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 25px;
+        li {
+            float: left;
+            margin: 10px 20px 10px 0;
+            background: #ebebeb;
+            a {
+                display: block;
+                padding: 2px 11px 3px;
+                color: #333;
+                &:hover {
+                    background: #ccc;
+                }
+            }
+        }
+    }
+}
+/* 家居标签内容结束 */
+
+/* 家居专题内容开始 */
+.compare-subject {
+    margin-top: 36px;
+    .title-box {
+        .title {
+            width: 244px;
+        }
+        .subject-icon {
+            width: 124px;
+            height: 40px;
+            margin: 0 0 -2px 120px;
+            background-position: 0 -612px;
+        }
+    }
+    // 专题内容Tab切换
+    .subject-slider {
+        .hd {
+            width: 235px;
+            margin: 17px auto;
+            li {
+                float: left;
+                cursor: pointer;
+                padding: 0 25px 0 22px;
+                &:first-child {
+                    border-right: 1px solid #333;
+                }
+                &:hover {
+                    color: #f60;
+                    .slider-title-icon {
+                        background-position: -50px -247px;
+                    }
+                }
+            }
+            .subject-slider-title {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .slider-title-icon {
+                display: inline-block;
+                width: 9px;
+                height: 5px;
+                background-position: -50px -232px;
+                *display: block;
+                *zoom: 1;
+            }
+            .on {
+                .subject-slider-title {
+                    color: #f60;
+                }
+                .slider-title-icon {
+                    background-position: -50px -247px;
+                }
+            }
+        }
+        .bd {
+            height: 474px;
+            overflow: hidden;
+            li {
+                float: left;
+                margin: 0 0 17px 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .title {
+                    display: block;
+                    width: 290px;
+                    padding-top: 7px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #333;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                a:hover {
+                    .title {
+                        color: #f60;
+                    }
+                }
+            }
+            img {
+                display: block;
+                width: 290px;
+                height: 193px;
+            }
+        }
+    }
+}
+/* 家居专题内容结束 */
+
+/* 站内链接开始 */
+.compare-link {
+    margin: 28px 0 50px;
+    h4 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .compare-link-list-box {
+        margin-top: 13px;
+    }
+    .compare-link-list {
+        float: left;
+        height: 96px;
+        overflow: hidden;
+        padding: 0 42px;
+        border-left: 1px solid #ccc;
+        &:first-child {
+            padding: 0 82px 0 0;
+            border-left: none;
+        }
+        a {
+            display: block;
+            width: 213px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #333;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+}
+/* 站内链接结束 */

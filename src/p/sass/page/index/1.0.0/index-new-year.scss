@@ -1,0 +1,531 @@
+/*
+ *  春节版本首页样式
+ *  editor: yansiwen
+ *  date: 2016/01/08
+ */
+
+/*
+ *  春节特惠样式 =====================
+ */
+.index-preferentials-box {
+    min-width: 1190px;
+    margin-top: 19px;
+    background: url("../images/index_new_year/preferentials-bg.jpg");
+}
+.index-preferentials-content {
+    width: 1190px;
+    margin: 0 auto;
+}
+// 春节特惠标题
+.preferentials-title {
+    height: 112px;
+    background: url("../images/index_new_year/preferentials-title.png") no-repeat;
+}
+
+// 春节特惠精品推荐
+.preferentials {
+    padding: 18px 0 20px 50px;
+    border-bottom: 1px solid #999;
+    .pro-img {
+        float: left;
+        position: relative;
+        width: 591px;
+        .tag {
+            position: absolute;
+            width: 84px;
+            height: 78px;
+            top: 3px;
+            right: 11px;
+            padding-top: 27px;
+            background: url("../images/index_new_year/new-year-sprites.png") 0px -137px no-repeat;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+            color: #ffebd7;
+        }
+        i {
+            display: block;
+            font-size: 20px;
+        }
+        img {
+            display: block;
+            width: 591px;
+            height: 393px;
+        }
+    }
+    .description {
+        float: right;
+        width: 529px;
+    }
+    .recommend-title {
+        img {
+            display: block;
+        }
+        p {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #da251d;
+        }
+    }
+    .pro-summarize {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 24px;
+        i {
+            padding-right: 8px;
+            width: 10px;
+            height: 26px;
+            background: url("../images/index_new_year/new-year-sprites.png") -315px -167px no-repeat;
+        }
+    }
+    .pro-summarize-detial {
+        padding: 7px 0 18px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .pro-title {
+        display: block;
+        margin: 11px 0 32px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333;
+    }
+    .pro-price {
+        position: relative;
+        margin-top: 24px;
+        width: 399px;
+        height: 70px;
+        background: url("../images/index_new_year/new-year-sprites.png") no-repeat;
+        a {
+            position: absolute;
+            right: 26px;
+            top: 24px;
+            width: 90px;
+            height: 30px;
+            background: #da251d;
+            text-align: center;
+            font-size: 18px;
+            line-height: 30px;
+            color: #ffebd7;
+            z-index: 2;
+        }
+    }
+    .act-price {
+        padding: 7px 0 0 12px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 18px;
+        color: #da251d;
+        dd, dt {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        dd {
+            line-height: 30px;
+            font-size: 24px;
+        }
+        i, span {
+            vertical-align: middle;
+        }
+        i {
+            font-size: 22px;
+        }
+    }
+    .sale-price {
+        /*position: absolute;
+        top: 14px;
+        right: 135px;*/
+        position: relative;
+        top: -25px;
+        left: 85px;
+        color: #333;
+        dd, dt {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        dt {
+            padding-top: 8px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        dd {
+            width: 94px;
+            font-size: 36px;
+            line-height: 56px;
+            text-align: center;
+        }
+    }
+    .line-through {
+        position: absolute;
+        top: 42px;
+        right: 122px;
+        width: 107px;
+        height: 3px;
+        background: url("../images/index_new_year/new-year-sprites.png") -89px -233px no-repeat;
+    }
+}
+.index-preferentials-content ul li {
+    padding: 20px 0 26px 54px;
+    border-left: 1px solid #999;
+    &:first-child {
+        padding: 20px 56px 46px 50px;
+        border-left: none;
+    }
+}
+// 春节特惠商品列表
+.sub-preferentials {
+    float: left;
+    border-bottom: none;
+    .pro-img {
+        float: none;
+        width: 490px;
+        .tag {
+            top: 8px;
+            left: 6px;
+        }
+        img {
+            width: 490px;
+            height: 327px;
+        }
+    }
+    .pro-detail {
+        width: 490px;
+        margin-top: 10px;
+    }
+    .pro-title {
+        margin: 0;
+        padding: 8px 0 14px;
+        width: 490px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #333;
+        border-top: 1px solid #da251d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .pro-price {
+        position: relative;
+        margin: 0 auto;
+        width: 419px;
+        height: 54px;
+        background: url("../images/index_new_year/new-year-sprites.png") 0 -77px no-repeat;
+        a {
+            top: 14px;
+            right: 28px;
+        }
+    }
+    .act-price {
+        padding: 3px 0 0 20px;
+    }
+    .sale-price {
+        position: relative;
+        top: -30px;
+        //top: 6px;
+        left: 118px;
+        right: 0;
+        dt {
+            font-size: 15px;
+        }
+        dd {
+            font-size: 34px;
+        }
+    }
+    .line-through {
+        top: 35px;
+        right: 123px;
+        width: 102px;
+    }
+}
+
+
+/*
+ *  年度排行榜样式 =====================
+ */
+.index-annualList {
+    margin: 50px 0;
+}
+// 春节年度排行榜标题部分
+.annualList-title {
+    a, img {
+        display: block;
+    }
+}
+.annualList-sub-title {
+    margin: 21px auto 0;
+}
+
+// 春节年度排行榜列表——大图部分
+.annualList-hot-list {
+    margin-top: 25px;
+    li {
+        float: left;
+        padding: 0 20px 20px 85px;
+        border-left: 1px solid #e0e0e0;
+        &:first-child {
+            padding: 0 84px 0 20px;
+            border-left: none;
+        }
+    }
+    .pro-img {
+        position: relative;
+        width: 490px;
+        .tag {
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            width: 89px;
+            height: 91px;
+            background: url("../images/index_new_year/new-year-sprites.png") -89px -137px no-repeat;
+            i {
+                display: block;
+                width: 26px;
+                height: 26px;
+                background: url("../images/index_new_year/new-year-sprites.png") -315px -136px no-repeat;
+            }
+        }
+        .tag-name {
+            position: absolute;
+            top: 18px;
+            left: -2px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fef5ca;
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        img {
+            display: block;
+            width: 490px;
+            height: 328px;
+        }
+    }
+    .pro-detail {
+        position: relative;
+        width: 490px;
+        margin-top: 10px;
+    }
+    .pro-detail-title {
+        display: block;
+        margin-bottom: 9px;
+        width: 489px;
+        height: 10px;
+        background: url("../images/index_new_year/new-year-sprites.png") 0 -251px no-repeat;
+    }
+    .taglines {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 20px;
+        text-align: center;
+        color: #da251d;
+    }
+    .pro-title {
+        display: block;
+        width: 490px;
+        margin: 11px 0 8px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .pro-price {
+        position: relative;
+        background: #d80510;
+        height: 55px;
+        a {
+            position: absolute;
+            right: 63px;
+            top: 10px;
+            width: 101px;
+            height: 37px;
+            background: #fef5ca;
+            text-align: center;
+            line-height: 37px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #d80510;
+            z-index: 2;
+        }
+    }
+    .market-price {
+        padding: 6px 0 0 55px;
+        dd, dt {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 18px;
+        }
+        dt {
+            font-size: 16px;
+        }
+        dd, i {
+            font-size: 18px;
+        }
+        i, span {
+            vertical-align: middle;
+        }
+    }
+    .act-price {
+        position: absolute;
+        left: 115px;
+        top: 4px;
+        i {
+            position: relative;
+            top: -11px;
+            font-size: 20px;
+        }
+        dd, dt {
+            display: inline-block;
+            vertical-align: middle;
+            color: #fef5ca;
+        }
+        dt {
+            padding-top: 15px;
+            font-size: 18px;
+        }
+        dd {
+            margin-left: 5px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+    .line-through {
+        position: absolute;
+        left: 64px;
+        top: 16px;
+        width: 104px;
+        height: 2px;
+        background: url("../images/index_new_year/new-year-sprites.png") -172px -244px no-repeat;
+    }
+    .left-bg,
+    .right-bg {
+        position: absolute;
+        bottom: 0;
+        width: 22px;
+        height: 55px;
+        background: url("../images/index_new_year/new-year-sprites.png") no-repeat;
+    }
+    .left-bg {
+        left: 0;
+        background-position: -261px -136px;
+    }
+    .right-bg {
+        right: 0;
+        background-position: -288px -136px;
+
+    }
+}
+
+// 春节年度排行榜列表——小图部分
+.annualList-list {
+    margin-top: 0;
+    border-top: 1px solid #e0e0e0;
+    li {
+        padding: 20px 24px 20px 33px;
+        &:first-child {
+            padding: 20px 33px 0 20px;
+        }
+    }
+    .pro-img {
+        width: 340px;
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 11px;
+            width: 73px;
+            height: 73px;
+            background: url("../images/index_new_year/new-year-sprites.png") -183px -137px no-repeat;
+            p {
+                width: 50px;
+                margin: 15px auto;
+                text-align: center;
+                font-size: 18px;
+                line-height: 20px;
+                color: #fff;
+            }
+        }
+        img {
+            display: block;
+            width: 340px;
+            height: 227px;
+        }
+    }
+    .pro-detail {
+        width: 340px;
+    }
+    .pro-detail-title {
+        display: block;
+        margin-bottom: 6px;
+        width: 340px;
+        height: 12px;
+        background: url("../images/index_new_year/new-year-sprites.png") 0 -267px no-repeat;
+    }
+    .taglines {
+        font-size: 18px;
+    }
+    .pro-title {
+        width: 340px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .pro-price {
+        a {
+            width: 81px;
+            top: 14px;
+            right: 23px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+    .market-price {
+        padding: 10px 0 0 26px;
+        text-decoration: line-through;
+        font-size: 14px;
+    }
+    .act-price {
+        left: 64px;
+        top: 11px;
+        dt {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+        dd {
+            font-size: 32px;
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+    .line-through {
+        width: 90px;
+        left: 24px;
+        top: 19px;
+    }
+}
+
+// 排行榜列表小图部分_最后一行列表
+.annualList-list-last {
+    li {
+        padding-bottom: 0;
+    }
+}
+
+// 排行榜下方的广告
+.new-year-ad {
+    margin-top: 50px;
+    a {
+        display: block;
+        img {
+            display: block;
+            width: 1190px;
+            height: 92px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<dt class="title">
+    <h2><%=mainTitle%></h2>
+    <p><%=subTitle%></p>
+</dt>
+<dd>
+    <%for(var i=0; i<list.length; i++) {%>
+        <a href="<%=list[i].proLink%>" class="type-link" title="<%=list[i].seoTitle%>"><%=list[i].proTitle%></a>
+    <%}%>
+</dd>

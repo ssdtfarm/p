@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+@import "../layout/sprite.scss";         // icon-sprite
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-aside.scss";     // member-aside
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  aftersales-service-list 售后服务列表页样式
+ *
+ *  author:JinJing
+ *  date:20150215
+*/
+
+body {
+    background: #e4e4e4;
+}
+
+/*============================= locatioin ================================*/
+.afftersales-apply-loaction {
+    padding: 30px 0 20px 0;
+}
+.afftersales-apply-loaction span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.afftersales-apply-loaction a {
+    color: #2f6ceb;
+}
+.afftersales-apply-loaction a:hover {
+    color: #f60;
+}
+/*=========================== 订单状态 ====================================*/
+
+.afftersales-apply-status {
+    width: 100%;
+}
+/*===== 售后状态 ======*/
+
+.apply-left {
+    width: 740px;
+    float: left;
+    background-color: #fff;
+}
+/*===== 收货信息 ======*/
+
+.apply-right {
+    width: 240px;
+    float: right;
+}
+/*===== 售后信息 ======*/
+
+.apply-left-info {}
+/* 状态标题 */
+.apply-left-info .apply-status-title {
+    position: relative;
+    z-index: 990;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+}
+.apply-left-info .apply-status-title .apply-delete {
+    position: absolute;
+    z-index: 991;
+    right: 10px;
+    top: 3px;
+}
+/* 状态栏按钮 */
+
+.apply-left-info .apply-status-title .apply-status-btn {
+    display: inline-block;
+    padding: 2px 5px;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #f60;
+}
+.apply-left-info .apply-status-title .apply-status-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/* 提示 */
+
+.apply-left-info .apply-status-tip {
+    padding: 20px 10px;
+}
+.apply-left-info .apply-status-tip span {
+    padding: 5px 10px;
+    background-color: #fed586;
+}
+/* 流程条 */
+
+.apply-status-line {
+    position: relative;
+    z-index: 990;
+    min-height: 120px;
+}
+.apply-status-line .status-line-point {
+    position: absolute;
+    z-index: 992;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+.apply-status-line .status-line-point i, .apply-status-line .status-line-point span, .apply-status-line .status-line-point b {
+    display: inline-block;
+    text-align: center;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.apply-status-line .status-line-point b {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.apply-status-line .status-line-point span {
+    width: 75px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #8c8c8c;
+}
+.apply-status-line .point-1 {
+    left: 0;
+}
+.apply-status-line .point-2 {
+    left: 150px;
+}
+.apply-status-line .point-3 {
+    left: 300px;
+}
+.apply-status-line .point-4 {
+    left: 450px;
+}
+.apply-status-line .status-line {
+    position: absolute;
+    z-index: 991;
+    top: 8px;
+    left: 65px;
+    font-size: 0;
+    height: 4px;
+    background-color: #ccc;
+}
+.apply-status-line .status-line-1 {
+    width: 150px;
+}
+.apply-status-line .status-line-2 {
+    width: 300px;
+}
+.apply-status-line .status-line-3 {
+    width: 450px;
+}
+.apply-status-line .status-line-4 {
+    width: 450px;
+}
+.apply-status-line .status-line span {
+    display: inline-block;
+    font-size: 0;
+    height: 4px;
+    background-color: #61bbe0;
+}
+.apply-status-line .status-line .line-1 {
+    width: 150px;
+}
+.apply-status-line .status-line .line-2 {
+    width: 300px;
+}
+.apply-status-line .status-line .line-3 {
+    width: 450px;
+}
+.apply-status-line .status-line .line-4 {
+    width: 600px;
+}
+/* 操作日记 */
+.apply-status-delivery {
+    padding: 10px;
+}
+.apply-status-delivery .delivery-status h3 {
+    font-size: 14px;
+    color: #61bbe0;
+}
+.apply-status-delivery .delivery-status {
+    margin-top: 10px;
+}
+.apply-status-delivery .delivery-status-begin{
+    margin-top: 10px;
+    color: #333;
+}
+.apply-status-delivery .apply-info {
+    margin-top: 5px;
+    color: #8c8c8c;
+}
+.apply-status-delivery .apply-info .apply-info-item{
+    line-height: 20px;
+}
+.apply-status-delivery .apply-info-item label {
+    
+}
+.apply-status-delivery .apply-info-item span {
+    
+}
+
+/*信息列表*/
+
+.apply-right .apply-info-list {
+    padding: 10px 20px;
+    background-color: #fff;
+}
+.apply-right .apply-info-list dt {
+    padding: 5px 0;
+    color: #61bbe0;
+    font-size: 14px;
+}
+.apply-right .apply-info-list dd {
+    color: #8c8c8c;
+}
+.apply-right .apply-info-list dd label {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+}
+.apply-right .apply-info-list dd span {
+    display: inline-block;
+    width: 135px;
+    color: #333;
+    line-height: 22px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+/*常见问题*/
+
+.apply-right .apply-normalQA {
+    margin-top: 10px;
+    background: #fff;
+}
+.apply-right .apply-normalQA-title {
+    position: relative;
+    width: 90px;
+    height: 30px;
+    padding-left: 20px;
+    line-height: 30px;
+    color: #fff;
+    background: #4ca579;
+    clear: both;
+}
+.apply-right .apply-normalQA-title .icon-top {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 0px;
+    height: 0px;
+    border-style:solid;
+    border-color: transparent transparent transparent #4ca579;
+    border-width: 0 0 20px 20px;
+}
+.apply-right .apply-normalQA-title .icon-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #4ca579;
+    border-width: 20px 0 0 20px;
+}
+.apply-right .apply-normalQA-list {
+    margin-top: 10px;
+    padding: 10px 20px 20px 20px;
+}
+.apply-right .apply-normalQA-list .apply-normalQA-item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.apply-right .apply-normalQA-list .apply-normalQA-item a {
+    color: #333;
+}
+.apply-normalQA-list .apply-normalQA-item a span {
+    position: absolute;
+    left: 0;
+}

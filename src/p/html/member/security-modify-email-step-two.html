@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "security-modify-email-step-two",
+        "title": "我的金海马-安全中心-修改邮箱"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "安全中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 修改绑定邮箱页面开始 -->
+    <section class="kh-row-24 security-main-box clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);" class="on">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 修改绑定邮箱页面右边开始 -->
+        <div class="kh-col-20">
+            <div class="security-email-box">
+                <!-- 修改绑定邮箱——修改邮箱 开始 -->
+                <h2>修改绑定邮箱</h2>
+                <div class="security-email-step clearfix">
+                    <span class="step first-step">1.验证身份</span>
+                    <span class="step second-step step-ok">2.修改邮箱</span>
+                    <span class="step third-step">3.完成</span>
+                </div>
+                <form class="security-email-form modify-email-form">
+                    <div class="security-email-item">
+                        <p class="clearfix">
+                            <label for="#J_email">邮箱地址：</label>
+                            <input type="email" name="email_addr" id="J_email">
+                        </p>
+                        <p class="tips"></p>
+                        <p class="tips-notify" id="J_tipsNotify"><span>验证邮件已发送，请立即<a id="J_checkEmail" class="check-email-btn" target="_blank" href="javascript:void(0);">查看验证邮箱</a>验证邮件24小时有效，请尽快登录您的邮箱完成验证！</span></p>
+                    </div>
+                    <div class="security-email-item clearfix">
+                        <a id="J_submitBtn" class="submit-btn">发送验证邮件</a>
+                    </div>
+                </form>
+                <!-- 修改绑定邮箱——修改邮箱 结束 -->
+            </div>
+        </div>
+        <!-- 修改绑定邮箱页面右边结束-->
+    </section>
+    <!-- 修改邮箱页面结束-->
+    <!-- 底部开始 -->
+    @@include("member-footer.html")
+    <!-- 底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "security-modify-email-step-two"
+    })
+</body>
+
+</html>

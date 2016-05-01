@@ -1,0 +1,413 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";
+@import "../components/common-top-bar.scss";
+@import "../components/member-head.scss";
+@import "../components/common-foot.scss";
+@import "../components/member-aside.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/member-ui.scss";
+@import "../components/common-dialog.scss";
+@import "../components/common-min-bar.scss"; // min-bar
+@import "../components/shareImg.scss";
+body {
+    background-color: #e4e4e4;
+}
+
+$icon-member-order-evaluate:url(../images/member-club/member_order_sprite.png) no-repeat;
+.icon-star-on {
+    width: 21px;
+    height: 21px;
+    background: $icon-member-order-evaluate;
+    background-position: 0 0;
+}
+
+.icon-star-off {
+    width: 21px;
+    height: 21px;
+    background: $icon-member-order-evaluate;
+    background-position: -22px 0;
+}
+
+
+/*=============== 表头信息 ==================*/
+
+.evaluate-top-header {
+    .share-rule {
+        padding-left: 5px;
+        color: #8c8c8c;
+        text-decoration: underline;
+    }
+}
+
+.evaluate-top-header td {
+    padding: 20px 0 0 0;
+    text-align: center;
+    color: #333;
+}
+
+
+/*============== 评价列表 =================*/
+
+.evaluate-item {
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.evaluate-table {
+    width: 100%;
+    padding: 0 10px;
+    td {
+        padding: 20px 0;
+    }
+    .evaluate-table-td {
+        //vertical-align: top;
+        border-bottom: 1px solid #61bbe0;
+        .fc-8c8 {
+            margin-top: -3px;
+            a {
+                color: #8c8c8c;
+                &:link,
+                &:visited,
+                {
+                    color: #8c8c8c;
+                }
+                &:hover,
+                &:active {
+                    color: #f60;
+                }
+            }
+        }
+        .fc-333 {
+            margin-top: 5px;
+        }
+    }
+}
+
+
+/* 未评价样式 */
+
+.evaluate-page {
+    padding: 10px;
+    color: #333;
+    .evaluate-page-tr {
+        padding: 8px 0;
+        clear: both;
+        overflow: hidden;
+        label {
+            display: inline-block;
+            text-align: left;
+        }
+        .evaluate-star {
+            position: relative;
+            top: -3px;
+        }
+        .JQ_evaluateStar i {
+            cursor: pointer;
+        }
+        .evaluate-txt {
+            padding-left: 30px;
+            display: inline-block;
+            color: #f60;
+        }
+        .icon-star-on,
+        .icon-star-off {
+            display: inline-block;
+        }
+    }
+    .kf-voice {
+        display: block;
+        width: 535px;
+        margin-top: 10px;
+        padding-top: 15px;
+        color: #8c8c8c;
+        font-size: 12px;
+        border-top: 1px solid #ccc;
+    }
+}
+
+.evaluate-page .evaluate-textarea-wrap {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    width: 498px;
+    height: 68px;
+    padding: 5px 5px 30px 5px;
+    border: 1px solid #b4b4b4;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    .evaluate-textarea {
+        width: 488px;
+        height: 58px;
+        overflow-y: scroll;
+        padding: 5px;
+        resize: none;
+        border: none;
+    }
+}
+
+.evaluate-page .evaluate-textarea-wrap {
+    .evaluate-textarea:hover,
+    .evaluate-textarea:focus,
+    .evaluate-textarea:blur,
+    .evaluate-textarea:active {
+        border: none;
+    }
+}
+
+.evaluate-page .evaluate-content-tr {
+    position: relative;
+    z-index: 990;
+    padding: 8px 0;
+    label {
+        vertical-align: top;
+    }
+    .evaluate-count {
+        position: absolute;
+        z-index: 991;
+        left: 10px;
+        top: 80px;
+        width: 200px;
+        color: #8c8c8c;
+        vertical-align: middle;
+        i {
+            padding: 0 5px;
+            font-style: normal;
+            color: #f60;
+            vertical-align: baseline;
+        }
+    }
+    .evaluated-info-txt {
+        display: inline-block;
+        width: 490px;
+        .txt-date {
+            color: #8c8c8c;
+        }
+    }
+}
+
+
+/*上传晒图*/
+
+.evaluate-content-tr {
+    &.evaluate-img {
+        label {
+            display: block;
+            float: left;
+        }
+    }
+    .evaluate-upload-container {
+        position: relative;
+        width: 630px;
+        height: 67px;
+        float: left;
+        margin-left: 4px;
+        overflow: hidden;
+    }
+}
+
+.evaluate-upload-container {
+    width: 520px;
+    height: 67px;
+    .webuploader-container {
+        position: relative;
+        width: 90px;
+        height: 67px;
+        float: left;
+        .btn-uplord-mark {
+            display: block;
+            position: absolute;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            width: 90px;
+            height: 67px;
+            background: #000;
+            opacity: 0.8;
+            color: #fff;
+            text-align: center;
+            line-height: 67px;
+        }
+    }
+    .webuploader-element-invisible {
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+    .webuploader-pick {
+        width: 88px;
+        height: 65px;
+        font-size: 30px;
+        line-height: 63px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+    // .webuploader-pick:before {
+    //     width: 20px;
+    //     height: 20px;
+    //     display: inline-block;
+    //     background: url(../images/member-club/member_order_sprite.png) no-repeat -65px 0;
+    // }
+    .webuploader-pick-hover {
+        color: #f60;
+        border-color: #f60;
+    }
+    .webuploader-pick-disable {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    .upload-list {
+        float: left;
+        overflow: hidden;
+        .items {
+            &:hover {
+                cursor: pointer;
+                .btns {
+                    display: block;
+                }
+            }
+            position: relative;
+            width: 88px;
+            height: 65px;
+            float: left;
+            margin-right: 10px;
+            line-height: 63px;
+            text-align: center;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #ccc;
+            .error {
+                position: absolute;
+                z-index: 6;
+                left: 0;
+                bottom: 0;
+                width: 88px;
+                height: 20px;
+                text-align: center;
+                color: #fff;
+                line-height: 20px;
+                .btn-retry {
+                    color: #f60;
+                    &:hover,
+                    &:visited {
+                        color: #f60;
+                    }
+                }
+            }
+            .error-bg {
+                position: absolute;
+                z-index: 5;
+                left: 0;
+                bottom: 0;
+                width: 88px;
+                height: 20px;
+                background: #333;
+                opacity: 0.8;
+            }
+            .btns {
+                display: none;
+                position: absolute;
+                z-index: 5;
+                right: 0;
+                top: 0;
+                width: 88px;
+                height: 20px;
+                overflow: hidden;
+                .btn-file-delet.icon-cancel {
+                    position: absolute;
+                    z-index: 6;
+                    top: 0;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    background: url(../images/member-club/member_order_sprite.png) no-repeat -44px 0;
+                }
+            }
+        }
+    }
+    .share-num {
+        padding-left: 10px;
+        font-size: 12px;
+        color: #8c8c8c;
+        vertical-align: bottom;
+        line-height: 120px;
+        em {
+            color: #f60;
+        }
+    }
+}
+
+
+/*显示晒图*/
+
+.evaluate-img {
+    .evaluate-share-title {
+        display: block;
+        float: left;
+    }
+    .evaluate-img-share {
+        float: left;
+        margin-top: 0;
+    }
+}
+
+
+/* 已评价信息 */
+
+.is-evaluate {
+    padding: 10px;
+    width: 98%;
+    .evaluate-value {
+        width: 10%;
+        float: left;
+        color: #8c8c8c;
+        vertical-align: inherit;
+        label {
+            display: inline-block;
+            padding: 2px 3px;
+            color: #fff;
+            background-color: #61bbe0;
+            vertical-align: inherit;
+        }
+    }
+}
+
+.is-evaluate .evaluate-content {
+    position: relative;
+    top: 2px;
+    width: 90%;
+    float: left;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: inherit;
+    label {
+        color: #8c8c8c;
+        vertical-align: inherit;
+    }
+}
+
+//晒单送积分规则
+.ui-dialog-title {
+    font-family: "microsoft Yahei";
+}
+
+.share-img-dialog {
+    padding: 10px 45px;
+    line-height: 20px;
+    .rule-list {
+        padding-left: 10px;
+        li {
+            position: relative;
+            padding-left: 10px;
+            &:before {
+                content: "·";
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}

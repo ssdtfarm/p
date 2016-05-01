@@ -1,0 +1,758 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "member-index",
+        "title": "我的金海马-首页"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "我的金海马",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 订单页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <!--<a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>-->
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-coupon"></i>
+                            <label>我的优惠券</label>
+                        </a>
+                    </dt>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                        <i class="m-icon icon-service"></i>
+                        <label>售后管理</label>
+                    </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                        <i class="m-icon icon-config"></i>
+                        <label>账户设置</label>
+                    </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">账号信息与安全</a>
+                        <a href="javascript:void(0);">个人信息</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 clearfix">
+        <!--  无信息的情况  -->
+            <!-- 右边顶部会员信息开始 -->
+            <div class="member-person-info mt-20 mr-10 fl clearfix">
+                <dl class="kh-col-8 person-info-item info-item-main  border-r-ccc clearfix">
+                    <dd class="pl-15">
+                        <p>我的余额</p>
+                        <div class="wallet-href"><a id="J_walletBalance" href="javascript:void(0)">查看钱包余额</a></div>
+                        <div><label>返利冻结</label></div>
+                        <div><label>&yen; 108.00</label></div>
+                    </dd>
+                    <dd>
+                        <p>我的优惠券</p>
+                        <span>1000<sub><b>元</b></sub></span>
+                    </dd>
+                    <dd>
+                        <p>我的积分</p>
+                        <span>10000<sub><b>积分</b></sub></span>
+                    </dd>
+                </dl>
+                <dl class="kh-col-8 person-info-item info-item-right">
+                    <dt><i class="icon-member-safe"></i>安全级别</dt>
+                    <dd>
+                        <span class="safe-line">
+                        <span class="icon-safe-green" style="width: 20%;">green</span>
+                        <span class="icon-safe-gray">write</span>
+                        </span>
+                        <a href="javascript:void(0);">立即提升></a>
+                    </dd>
+                    <dd>
+                        <label>手机：</label><span>13560069999</span><a href="javascript:void(0);" class="ml-5">修改</a><a href="javascript:void(0);" class="ml-5">去绑定</a><span class="fc-4ca ml-5">已绑定</span><span class="safe-tip ml-5">绑定成功送50积分</span>
+                    </dd>
+                    <dd>
+                        <label>邮箱：</label><span>skfjsjfklas@qq.com</span><a href="javascript:void(0);" class="ml-5">修改</a><a href="javascript:void(0);" class="ml-5">去绑定</a><span class="fc-4ca ml-5">已绑定</span>
+                    </dd>
+                </dl>
+            </div>
+            <a class="member-club-entrance mt-20 fl" href="javascript:void(0);">
+                <i class="icon-club-vip"></i>
+                <label class="title">会员俱乐部<i class="white-point">.</i></label>
+                <span class="level-info">您是我们的 K3 会员</span>
+                <span class="level-href" href="javascript:void(0);">升级获取更多特权&nbsp;></span>
+            </a>
+            <!-- 右边顶部会员信息结束 -->
+            <!-- 订单列表模块开始 -->
+            <dl class="mt-20 rest-order fl">
+                <dt class="rest-order-title">
+                    <label class="title-nock-lightblue">最新订单</label>
+                </dt>
+                <dd>
+                   <div class="order-list-none">
+                       <i class="icon-face-frown-blue"></i><span class="f14 fc-8c8">您还没有购买过商品，</span><a href="javascript:void(0);" class="go-href">去逛逛先</a>
+                   </div>
+                </dd>
+            </dl>
+            <!-- 订单列表模块结束 -->
+            <!-- 我的购物车模块开始 -->
+            <dl class="fl mt-20 my-cart">
+                <dt>
+                    <i class="single-triangle single-bc-57b"></i>
+                    <label class="fc-333 f18">我的购物车</label>
+                </dt>
+                <dd class="cart-list-none">
+                    <span class="f14 fc-8c8">您的购物车暂无发现商品~</span>
+                </dd>
+            </dl>
+            <!-- 我的购物车模块结束 -->
+            <!-- 我看过的商品模块开始 -->
+            <dl class="fl mt-20 ml-10 my-history">
+                <dt>
+                    <i class="single-triangle single-bc-fed"></i>
+                    <label class="fc-333 f18">我看过的商品</label>
+                </dt>
+                <dd class="history-list-none">
+                    <span class="f14 fc-8c8">我们寻找不到您的足迹哦...</span>
+                </dd>
+            </dl>
+            <!-- 我看过的商品模块结束 -->
+            <!-- 我的收藏模块开始 -->
+            <dl class="fl mt-20 my-collections">
+                <dt><i class="single-triangle single-bc-61b"></i>
+                    <label class="fc-333 f18">我的收藏</label>
+                </dt>
+                <dd class="collections-list-none">
+                    <span class="f14 fc-8c8">喜欢我就赶紧把我收藏起来吧，不然找不到我怎么办？</span>
+                </dd>
+            </dl>
+            <!-- 我的收藏模块结束 -->
+            <!-- 我的优惠券模块开始 -->
+            <dl class="fl mt-20 ml-10 my-coupons">
+                <dt><i class="single-triangle single-bc-f5a"></i>
+                    <label class="fc-333 f18">我的优惠券</label>
+                </dt>
+                <dd>
+                    <table class="coupons-list-table">
+                        <thead>
+                            <tr>
+                                <td width="90">面值</td>
+                                <td width="100">优惠券类别</td>
+                                <td width="110">使用条件</td>
+                                <td width="100">有效期</td>
+                                <td width="90">状态</td>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="coupons-list-none">
+                                    <span class="f14 fc-8c8">优惠券领越多越好哇！都是钱来的~</span><a href="javascript:void(0);" class="coupons-href">优惠券抢先看></a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </dd>
+            </dl>
+            <!-- 我的优惠券模块结束 -->
+            <!-- 返利商品推荐模块开始 -->
+            <dl class="fl rebate-goods-recommendation mt-20">
+                <dt class="store-recommendation-title">
+                    <label>返利商品推荐<i class="icon-rope"></i></label>
+                    <span class="ml-5 fc-61b f18">拥有自己的商城，分享商品给小伙伴，<span class="fc-f60">现金</span>轻松拿！</span>
+                    <a href="javascript:void(0);" class="title-href">浏览更多</a>
+                </dt>
+                <dd>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- 返利商品推荐模块结束 -->
+            <!-- 积分兑换推荐模块开始 -->
+            <dl class="fl points-exchange-recommendation mt-20">
+                <dt class="store-recommendation-title">
+                    <label>积分兑换推荐<i class="icon-rope"></i></label>
+                    <span class="ml-5 fc-4ca f18">喜大普奔！积分兑商品，不用花一分钱，真心省啊！</span>
+                    <a href="javascript:void(0);" class="title-href">浏览更多</a>
+                </dt>
+                <dd>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">10000</b>
+                                <span class="fc-f60">积分</span>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">30000</b>
+                                <span>积分</span><span>+￥800.00</span>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">50000</b>
+                                <span class="fc-f60">积分</span>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- 积分兑换推荐模块结束 -->
+
+            <!-- 有信息的情况 -->
+            <!-- 右边顶部会员信息开始 -->
+            <div class="member-person-info mt-20 mr-10 fl clearfix">
+                <dl class="kh-col-8 person-info-item info-item-main  border-r-ccc clearfix">
+                    <dd class="pl-15">
+                        <p>我的余额</p>
+                        <span><sub>&yen;</sub>10000.00 </span>
+                        <div><label>返利冻结</label></div>
+                        <div><label>&yen; 108.00</label></div>
+                    </dd>
+                    <dd>
+                        <p>我的优惠券</p>
+                        <span>1000<sub><b>元</b></sub></span>
+                    </dd>
+                    <dd>
+                        <p>我的积分</p>
+                        <span>10000<sub><b>积分</b></sub></span>
+                    </dd>
+                </dl>
+                <dl class="kh-col-8 person-info-item info-item-right">
+                    <dt><i class="icon-member-safe"></i>安全级别</dt>
+                    <dd>
+                        <span class="safe-line">
+                        <span class="icon-safe-green" style="width: 20%;">green</span>
+                        <span class="icon-safe-gray">write</span>
+                        </span>
+                        <a href="javascript:void(0);">立即提升></a>
+                    </dd>
+                    <dd>
+                        <label>手机：</label><span>13560069999</span><a href="javascript:void(0);" class="ml-5">修改</a><a href="javascript:void(0);" class="ml-5">去绑定</a><span class="fc-4ca ml-5">已绑定</span><span class="safe-tip ml-5">绑定成功送50积分</span>
+                    </dd>
+                    <dd>
+                        <label>邮箱：</label><span>skfjsjfklas@qq.com</span><a href="javascript:void(0);" class="ml-5">修改</a><a href="javascript:void(0);" class="ml-5">去绑定</a><span class="fc-4ca ml-5">已绑定</span>
+                    </dd>
+                </dl>
+            </div>
+            <a class="member-club-entrance mt-20 fl" href="javascript:void(0);">
+                <i class="icon-club-vip"></i>
+                <label class="mt-10">全球会员俱乐部</label>
+            </a>
+            <!-- 右边顶部会员信息结束 -->
+            <!-- 订单列表模块开始 -->
+            <dl class="mt-20 rest-order fl">
+                <dt class="rest-order-title">
+                    <label class="title-nock-lightblue">最新订单</label>
+                    <a href="order-list.html" class="title-href fr">更多订单</a>
+                </dt>
+                <dd>
+                    <table width="100%" cellpadding="0" cellspacing="0" class="rest-order-list">
+                        <!--第一行开始-->
+                        <tr>
+                            <th rowspan="3" width="15%" class="border-r-ccc border-b-ccc order-list-time">
+                                <p class="fc-8c8 order-list-month">2月</p>
+                                <p class="order-list-days">
+                                    <label>10</label>
+                                    <span>星期二</span>
+                                </p>
+                            </th>
+                            <td width="85%">
+                                <table width="100%" cellpadding="0" cellspacing="0" class="list-item">
+                                    <tr>
+                                        <Td width="13%" class="tc border-b-ccc">
+                                            <p class="fc-8c8">订单号：</p>
+                                            <p class="fc-2f6">RZ000003450</p>
+                                        </Td>
+                                        <td width="13%" class="tc border-b-ccc">
+                                            <a href="javascript:void(0):"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="90" height="60" /></a>
+                                        </td>
+                                        <td width="40%" class="border-b-ccc">
+                                            <p class="fc-8c8 list-item-pro-title"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （3+贵+边几）坐下左skdfhaskjdhf5435sajkhdkjshfkjsdhfjsdhfjksdh382483yf432</a></p>
+                                            <p class="fc-333 list-item-pro-propery">颜色：紫红色 类型：单人位</p>
+                                        </td>
+                                        <td width="17%" class="tc border-b-ccc">
+                                            <p class="fc-f60">&yen;5888.00</p>
+                                            <p class="order-rebate">
+                                                <label>返&yen;23.00</label>
+                                            </p>
+                                        </td>
+                                        <td width="17%" class="tc border-b-ccc">
+                                            <a href="order-pay.html" class="list-item-btn">付款</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border-b-ccc">
+                                <table width="100%" cellpadding="0" cellspacing="0" class="list-item">
+                                    <tr>
+                                        <td width="13%" class="tc">
+                                            <p class="fc-8c8">订单号：</p>
+                                            <p class="fc-2f6">RZ000003450</p>
+                                        </td>
+                                        <td width="13%" class="tc">
+                                            <a href="javascript:void(0):"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="90" height="60" /></a>
+                                        </td>
+                                        <td width="40%">
+                                            <p class="fc-8c8 list-item-pro-title"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （3+贵+边几）坐下左</a></p>
+                                            <p class="fc-333 list-item-pro-propery">颜色：紫红色 类型：单人位</p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <p class="fc-f60">&yen;5888.00</p>
+                                            <p class="order-rebate">
+                                                <label>返3000积分</label>
+                                            </p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <p class="fc-333">交易完成</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border-b-ccc">
+                                <table width="100%" cellpadding="0" cellspacing="0" class="list-item">
+                                    <tr>
+                                        <td width="13%" class="tc">
+                                            <p class="fc-8c8">订单号：</p>
+                                            <p class="fc-2f6">RZ000003450</p>
+                                        </td>
+                                        <td width="13%" class="tc">
+                                            <a href="javascript:void(0):"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="90" height="60" /></a>
+                                        </td>
+                                        <td width="40%">
+                                            <p class="fc-8c8 list-item-pro-title"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （3+贵+边几）坐下左</a></p>
+                                            <p class="fc-333 list-item-pro-propery">颜色：紫红色 类型：单人位</p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <p class="fc-f60">&yen;5888.00</p>
+                                            <p class="order-rebate">
+                                                <label>返3000积分</label>
+                                            </p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <p class="fc-333">交易完成</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 第一行结束 -->
+                        <!-- 第二行开始 -->
+                        <tr>
+                            <th width="15%" class="border-r-ccc order-list-time">
+                                <p class="fc-8c8 order-list-month">2月</p>
+                                <p class="order-list-days">
+                                    <label>10</label>
+                                    <span>星期二</span>
+                                </p>
+                            </th>
+                            <td width="85%">
+                                <table width="100%" cellpadding="0" cellspacing="0" class="list-item">
+                                    <tr>
+                                        <Td width="13%" class="tc">
+                                            <p class="fc-8c8">订单号：</p>
+                                            <p class="fc-2f6">RZ000003450</p>
+                                        </Td>
+                                        <td width="13%" class="tc">
+                                            <a href="javascript:void(0):"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="90" height="60" /></a>
+                                        </td>
+                                        <td width="40%">
+                                            <p class="fc-8c8 list-item-pro-title"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （3+贵+边几）坐下左</a></p>
+                                            <p class="fc-333 list-item-pro-propery">颜色：紫红色 类型：单人位</p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <p class="fc-f60">&yen;5888.00</p>
+                                            <p class="order-rebate">
+                                                <label>返3000积分</label>
+                                            </p>
+                                        </td>
+                                        <td width="17%" class="tc">
+                                            <a href="order-evaluate.html" class="list-item-btn">评价</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                       <!--  第二行结束 -->
+                    </table>
+                </dd>
+            </dl>
+            <!-- 订单列表模块结束 -->
+            <!-- 我的购物车模块开始 -->
+            <dl class="fl mt-20 my-cart">
+                <dt>
+                    <i class="single-triangle single-bc-57b"></i>
+                    <label class="fc-333 f18">我的购物车</label>
+                    <a href="javascript:void(0);" class="title-href">全部商品</a>
+                </dt>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" class="my-cart-list-img"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="100" height="67" /></a>
+                        <span class="my-cart-list-title">
+                        <a href="javascript:void(0);" class="fc-8c8">现代简约 裸色 真皮 沙发</a>
+                        <label class="fc-f60">&yen;1999.00</label>
+                    </span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="my-cart-list-img"><img src="http://misc.jjcdn.com/p/images/order-list-thumb.png" width="100" height="67" /></a>
+                        <span class="my-cart-list-title">
+                        <a href="javascript:void(0);" class="fc-8c8">现代简约 裸色 真皮 沙发</a>
+                        <label class="fc-f60">&yen;1999.00</label>
+                    </span>
+                    </li>
+                </ul>
+                <dd>
+                    <A href="javascript:void(0);" class="my-cart-btn">去结算</A>
+                </dd>
+            </dl>
+            <!-- 我的购物车模块结束 -->
+            <!-- 我看过的商品模块开始 -->
+            <dl class="fl mt-20 ml-10 my-history">
+                <dt>
+                    <i class="single-triangle single-bc-fed"></i>
+                    <label class="fc-333 f18">我看过的商品</label>
+                </dt>
+                <dd class="history-slider" id="J_historySlider">
+                    <div class="hd">
+                        <ul></ul>
+                    </div>
+                    <div class="bd">
+                            <ul class="goods-list">
+                                <li class="goods-item">
+                                    <p class="pic">
+                                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                                    </p>
+                                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                                    <p class="price"><span>￥888.00</span></p>
+                                    <p class="discount-tip">
+                                        <label>优惠信息等最高返利300元</label>
+                                    </p>
+                                </li>
+                                <li class="goods-item">
+                                    <p class="pic">
+                                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                                    </p>
+                                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                                    <p class="price"><span>￥888.00</span></p>
+                                    <p class="discount-tip">
+                                        <label>优惠信息等最高返利300元</label>
+                                    </p>
+                                </li>
+                                <li class="goods-item">
+                                    <p class="pic">
+                                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                                    </p>
+                                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                                    <p class="price"><span>￥888.00</span></p>
+                                    <p class="discount-tip">
+                                        <label>优惠信息等最高返利300元</label>
+                                    </p>
+                                </li>
+                                <li class="goods-item">
+                                    <p class="pic">
+                                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                                    </p>
+                                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                                    <p class="price"><span>￥888.00</span></p>
+                                    <p class="discount-tip">
+                                        <label>优惠信息等最高返利300元</label>
+                                    </p>
+                                </li>
+                            </ul>
+                    </div>
+                     <a href="javascript:void(0);" class="prev icon-slide-prev"></a>
+                    <a href="javascript:void(0);" class="next icon-slide-next"></a>
+                </dd>
+            </dl>
+            <!-- 我看过的商品模块结束 -->
+            <!-- 我的收藏模块开始 -->
+            <dl class="fl mt-20 my-collections">
+                <dt><i class="single-triangle single-bc-61b"></i>
+                    <label class="fc-333 f18">我的收藏</label>
+                    <a href="javascript:void(0);" class="title-href">全部收藏</a>
+                </dt>
+                <dd>
+                    <ul class="goods-list">
+                        <li class="goods-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                            <p class="price"><span>￥888.00</span></p>
+                            <p class="discount-tip">
+                                <label>优惠信息等最高返利300元</label>
+                            </p>
+                        </li>
+                        <li class="goods-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/190X128.jpg" width="190" height="127" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">现代简约 黑配白色 钢化玻璃 餐台</a></p>
+                            <p class="price"><span>￥888.00</span></p>
+                            <p class="discount-tip">
+                                <label>优惠信息等最高返利300元</label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- 我的收藏模块结束 -->
+            <!-- 我的优惠券模块开始 -->
+            <dl class="fl mt-20 ml-10 my-coupons">
+                <dt><i class="single-triangle single-bc-f5a"></i>
+                    <label class="fc-333 f18">我的优惠券</label>
+                    <a href="javascript:void(0);" class="title-href">全部优惠券</a>
+                </dt>
+                <dd>
+                    <table class="coupons-list-table">
+                        <thead>
+                            <tr>
+                                <td width="90">面值</td>
+                                <td width="100">优惠券类别</td>
+                                <td width="110">使用条件</td>
+                                <td width="100">有效期</td>
+                                <td width="90">状态</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>300</td>
+                                <td>金券</td>
+                                <td class="fc-8c8">订单满300元</td>
+                                <td class="fc-8c8">
+                                    <p>2013-08-12</p>
+                                    <p>至2014-08-12</p>
+                                </td>
+                                <td><a href="javascript:void(0);" class="use-now-href">立即使用</a></td>
+                            </tr>
+                            <tr>
+                                <td>500</td>
+                                <td>金券</td>
+                                <td class="fc-8c8">订单满300元</td>
+                                <td class="fc-8c8">
+                                    <p>2013-08-12</p>
+                                    <p>至2014-08-12</p>
+                                </td>
+                                <td>已过期</td>
+                            </tr>
+                            <tr>
+                                <td>500</td>
+                                <td>金券</td>
+                                <td class="fc-8c8">订单满300元</td>
+                                <td class="fc-8c8">
+                                    <p>2013-08-12</p>
+                                    <p>至2014-08-12</p>
+                                </td>
+                                <td>
+                                    <p>2014-01-01</p>
+                                    <p>已使用</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+            <!-- 我的优惠券模块结束 -->
+            <!-- 返利商品推荐模块开始 -->
+            <dl class="fl rebate-goods-recommendation mt-20">
+                <dt class="store-recommendation-title">
+                    <label>返利商品推荐<i class="icon-rope"></i></label>
+                    <span class="ml-5 fc-61b f18">拥有自己的商城，分享商品给小伙伴，<span class="fc-f60">现金</span>轻松拿！</span>
+                    <a href="javascript:void(0);" class="title-href">浏览更多</a>
+                </dt>
+                <dd>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">￥6999.00</b>
+                                <label class="discount-tip">最高返利金额1000元</label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- 返利商品推荐模块结束 -->
+            <!-- 积分兑换推荐模块开始 -->
+            <dl class="fl points-exchange-recommendation mt-20">
+                <dt class="store-recommendation-title">
+                    <label>积分兑换推荐<i class="icon-rope"></i></label>
+                    <span class="ml-5 fc-4ca f18">喜大普奔！积分兑商品，不用花一分钱，真心省啊！</span>
+                    <a href="javascript:void(0);" class="title-href">浏览更多</a>
+                </dt>
+                <dd>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">10000</b>
+                                <span class="fc-f60">积分</span>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">30000</b>
+                                <span>积分</span><span>+￥800.00</span>
+                            </p>
+                        </li>
+                        <li class="recommendation-item">
+                            <p class="pic">
+                                <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/290X194_2.jpg" width="290" height="194" /></a>
+                            </p>
+                            <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href">梵尔特系列 现代简约 灰白色 真皮 沙发组合 （</a></p>
+                            <p class="price-discount">
+                                <b class="fc-f60 f18">50000</b>
+                                <span class="fc-f60">积分</span>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- 积分兑换推荐模块结束 -->
+        </div>
+    </section>
+    <!-- 订单页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "member-index"
+    })
+</body>
+
+</html>

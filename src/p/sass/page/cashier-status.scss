@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";                  
+           
+ 
+@import "../components/common-top-bar.scss";       
+@import "../components/common-foot.scss"; 
+
+@import "../components/member-head.scss";   
+@import "../components/common-dialog.scss";    // art-dialog
+
+.cashier-icon {
+    background: url(../images/cashier-icon.png) no-repeat;
+}
+.cashier-error-icon {
+    width: 14px;
+    height: 14px;
+    background-position: -119px 0;
+}
+.cashier-status {
+    width: 1190px;
+    padding: 50px 5px 0 5px;
+    margin: 0 auto;
+}
+.pay-status {
+    margin-bottom: 70px;
+    .info {
+        width: 595px;
+        margin-right: 54px;
+        .tips {
+            height: 60px;
+            padding-left: 30px;
+            font-size: 18px;
+            color: #333;
+            i {
+                float: left;
+                margin-right: 10px;
+            }
+            span {
+                display: inline-block;
+                width: 370px;
+                line-height: 30px;
+            }
+        }
+        .tips-fail {
+            span {
+                line-height: 60px;
+            }
+        }
+    }
+    .order-details {
+        padding-left: 100px;
+        padding-top: 10px;
+        p {
+            line-height: 30px;
+        }
+    }
+    .links {
+        height: 46px;
+        line-height: 46px;
+        margin-bottom: 14px;
+        padding-left: 100px;
+        a {
+            color: #f60;
+        }
+    }
+    .warning {
+        height: 34px;
+        line-height: 34px;
+        border-top: 1px solid #ccc;
+        i {
+            margin-right: 6px;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+    .img {
+
+    }
+}
+
+.recommend {
+    .title {
+        height: 29px;
+        line-height: 29px;
+        font-size: 18px;
+        color:#333;
+        margin-bottom: 6px;
+    }
+    .list {
+        height: 125px;
+        overflow: hidden;
+        border:1px solid #ebebeb;
+    }
+    .recommend-item {
+        width: 25%;
+        float: left;
+    }
+    .img-link {
+        position:absolute;
+        width:190px;
+        height: 125px;
+    }
+    img {
+        display: block;
+        width: 190px;
+        height: 125px;
+    }
+    .info {
+        padding-left:200px;
+    }
+    .good-title {
+        display: block;
+        width: 90px;
+        margin-bottom:10px;
+        padding-top: 20px;
+        line-height: 18px;
+        height: 54px;
+        overflow: hidden;
+        color:#8c8c8c;
+        &:hover {
+            color:#f60;
+        }
+    }
+    .price {
+        line-height: 20px;
+        font-size: 14px;
+    }
+}
+
+.pay-wrap {
+    padding-left: 100px;
+    padding-top: 16px;
+    margin-bottom: 50px;
+}
+.go-pay {
+    display: block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #f60;
+}
+.kf-icon {
+    margin-left: 5px;
+    width: 30px;
+    height: 24px;
+    background-position: -26px -24px;
+}
+.cashier-face-down {
+    background-repeat: no-repeat;
+    background-position: -118px -82px;
+    overflow: hidden;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}

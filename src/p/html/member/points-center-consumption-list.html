@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "points-center-consumption-list",
+        "title": "我的金海马-积分消费订单记录"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "积分中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <!-- 延迟部分 -->
+        <div class="kh-col-5 pos-rel" id="J_clubAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateClubAside" type="text/html">
+            <aside class="club-aside">
+                <div class="club-aside-icons">
+                    <div class="club-aside-info">
+                        <p class="club-title">会员俱乐部</p>
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p class="club-menber-name"><span>沙发君沙发君沙发君君沙发君沙发君君沙发君沙发君君沙发君沙发君</span>
+                            <i class="icon icon-level-4"></i>
+                        </p>
+                    </div>
+                    <div class="club-aside-option">
+                        <p><a href="javascript:void(0)">完善个人资料 ></a>
+                        </p>
+                        <p><a href="javascript:void(0)">绑定手机、邮箱，提升账户安全度 ></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="club-hotRepoints">
+                    <p class="club-hotRepoints-more"><a href="javascript:void(0)">更多></a>
+                    </p>
+                    <div class="club-hotRepoints-title">
+                        <p><b>热门积分商品</b>
+                        </p>
+                        <p><span>RANKING LIST</span>
+                        </p>
+                    </div>
+                    <dl class="club-hotRepoints-item">
+                        <dt class="pic"><i class="icon icon-hot-1"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="points-price"><a href="javascript:void(0)" class="item-price">30000积分</a>
+                            </p>
+                            <p class="cash-price"><a href="javascript:void(0)" class="item-price">+￥888.00</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRepoints-item">
+                        <dt class="pic"><i class="icon icon-hot-2"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="points-price"><a href="javascript:void(0)" class="item-price">30000积分</a>
+                            </p>
+                            <p class="cash-price"><a href="javascript:void(0)" class="item-price">+￥888.00</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRepoints-item">
+                        <dt class="pic"><i class="icon icon-hot-3"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-2"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="points-price"><a href="javascript:void(0)" class="item-price">30000积分</a>
+                            </p>
+                            <p class="cash-price"><a href="javascript:void(0)" class="item-price">+￥888.00</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRepoints-item">
+                        <dt class="pic"><i class="icon icon-hot-4"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-3"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="points-price"><a href="javascript:void(0)" class="item-price">30000积分</a>
+                            </p>
+                            <p class="cash-price"><a href="javascript:void(0)" class="item-price">+￥888.00</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRepoints-item">
+                        <dt class="pic"><i class="icon icon-hot-5"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-4"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="points-price"><a href="javascript:void(0)" class="item-price">30000积分</a>
+                            </p>
+                            <p class="cash-price"><a href="javascript:void(0)" class="item-price">+￥888.00</a></p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="club-help-center">
+                    <a href="javascript:void(0);" class="club-help-center-button">
+                    <i class="icon icon-help"></i>
+                    帮助中心
+                </a>
+                </div>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-19 points-center-main">
+            <!-- 子菜单导航开始 -->
+            <menu class="points-center-menu">
+                <div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="page-name clearfix"><i class="icon-c-nav-l"></i><label>我的积分</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="page-name clearfixr cur"><i class="icon-c-nav-l"></i><label>积分订单记录</label><i class="icon-c-nav-r"></i></a>
+                </div>
+            </menu>
+            <!-- 子菜单导航结束 -->
+            <!-- 筛选查询部分开始 -->
+            <div class="points-center-filler mt10 pb10">
+                <!-- 筛选切换部分开始 -->
+                <div class="points-center-filler-tab clearfix">
+                    <a href="javascript:void(0)" class="filler-tab-item cur">积分消费订单</a>
+                    <a href="javascript:void(0)" class="filler-tab-item">积分获取订单</a>
+                </div>
+                <!-- 筛选切换部分结束 -->
+                <!-- 搜索部分开始 -->
+                <div class="search-bar points-center-filler-search">
+                    <form class="JQ_searchForm" action="javascript:void(0);" method="post">
+                        <input type="text" name="keyword" class="search-keyword JQ_searchKeyword w290">
+                        <a class="seach-btn JQ_searchBarBtn" href="javascript:void(0);"><i class="icon-m-search"></i></a>
+                        <span class="JQ_hotKeyTip hot-keyword-tip" style="display: block;">商品名称/订单编号/商品编号</span>
+                    </form>
+                </div>
+                <!-- 搜索部分结束 -->
+                <!-- 消费记录筛选部分开始 -->
+                <div class="filler-consumption-type">
+                    <span>商品类型：</span>
+                    <label for="" class="category-item">
+                        <a href="javascript:void(0)" class="icon icon-radio-on"></a><span>全部</span>
+                    </label>
+                    <label for="" class="category-item">
+                        <a href="javascript:void(0)" class="icon icon-radio-off"></a><span>兑换</span>
+                    </label>
+                    <label for="" class="category-item">
+                        <a href="javascript:void(0)" class="icon icon-radio-off"></a><span>换购</span>
+                    </label>
+                    <label for="" class="category-item">
+                        <a href="javascript:void(0)" class="icon icon-radio-off"></a><span>虚拟商品</span>
+                    </label>
+                </div>
+                <!-- 消费记录筛选部分结束 -->
+            </div>
+            <!-- 筛选查询部分结束 -->
+            <!-- 列表部分开始 -->
+            <div class="points-center-consumption-list clearfix">
+                <table class="order-list-table" border="0" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td width="250">商品/下单时间</td>
+                            <td width="100">订单编号</td>
+                            <td width="100">会员等级</td>
+                            <td width="100">积分消耗方式</td>
+                            <td width="150">
+                                <p>积分价</td>
+                            <td width="100">购买数</td>
+                            <td width="140">实付积分</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="order-goods-info">
+                                <p class="pic">
+                                    <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                    </a>
+                                </p>
+                                <dl class="info">
+                                    <dt class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </dt>
+                                    <dd class="order-time">下单时间：</dd>
+                                    <dd class="order-time">2015-01-01 13:42:39</dd>
+                                </dl>
+                            </td>
+                            <td class="order-num">RZ00289937</td>
+                            <td class="repoints-member-level">K3
+                            </td>
+                            <td class="consumption-type">兑换</td>
+                            <td class="points-price">10000积分</td>
+                            <td class="quantity">1</td>
+                            <td class="out-of-pocket-points">10000积分</td>
+                        </tr>
+                        <tr>
+                            <td class="order-goods-info">
+                                <p class="pic">
+                                    <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                    </a>
+                                </p>
+                                <dl class="info">
+                                    <dt class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </dt>
+                                    <dd class="order-time">下单时间：</dd>
+                                    <dd class="order-time">2015-01-01 13:42:39</dd>
+                                </dl>
+                            </td>
+                            <td class="order-num">RZ00289937</td>
+                            <td class="repoints-member-level">K3
+                            </td>
+                            <td class="consumption-type">换购</td>
+                            <td class="points-price">10000积分+￥1800.00</td>
+                            <td class="quantity">2</td>
+                            <td class="out-of-pocket-points">20000积分+￥3600</td>
+                        </tr>
+                        <tr>
+                            <td class="order-goods-info">
+                                <p class="pic">
+                                    <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                    </a>
+                                </p>
+                                <dl class="info">
+                                    <dt class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </dt>
+                                    <dd class="order-time">下单时间：</dd>
+                                    <dd class="order-time">2015-01-01 13:42:39</dd>
+                                </dl>
+                            </td>
+                            <td class="order-num">RZ00289937</td>
+                            <td class="repoints-member-level">K3
+                            </td>
+                            <td class="consumption-type">换购</td>
+                            <td class="points-price">10000积分+￥1800.00</td>
+                            <td class="quantity">2</td>
+                            <td class="out-of-pocket-points">20000积分+￥3600</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 列表部分结束 -->
+            <!-- 页码部分开始 -->
+            <div class="pages-small tr">
+                <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                <a href="javascript:void(0);" class="page-cur">1</a>
+                <a href="javascript:void(0);" class="page-nor">2</a>
+                <a href="javascript:void(0);" class="page-nor">3</a>
+                <a href="javascript:void(0);" class="page-nor">4</a>
+                <a href="javascript:void(0);" class="page-nor">5</a>
+                <a href="javascript:void(0);" class="page-nor">6</a>
+                <span>...</span>
+                <a href="javascript:void(0);" class="page-nor">20</a>
+                <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                <span class="go-page">
+                            去第
+                            <input type="text" maxlength="4">
+                            页
+                        </span>
+                <a href="javascript:void(0);" class="page-btn">确定</a>
+            </div>
+            <!-- 页码部分结束 -->
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 页面结束 -->
+
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "points-center-consumption-list"
+    })
+</body>
+
+</html>

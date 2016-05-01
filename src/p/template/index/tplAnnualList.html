@@ -1,0 +1,92 @@
+
+<!-- 春节年度排行榜标题部分开始 -->
+<div class="annualList-title">
+    <a href="<%=annualListTitle.linkURL%>" target="_blank" title="<%=annualListTitle.pTitle%>">
+        <img class="lazy" data-original="<%=annualListTitle.imgSRC%>"/>
+    </a>
+</div>
+<!-- 春节年度排行榜标题部分开始 -->
+
+<!-- 春节年度排行榜列表——大图部分 开始 -->
+<ul class="annualList-hot-list clearfix">
+    <% for(var i=0; i<2; i++) {%>
+    <li>
+        <div class="pro-img">
+            <a href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>">
+                <% if(list[i].rTitle!="") {%>
+                <div class="tag"><i></i><span class="tag-name"><%=list[i].rTitle%></span></div>
+                <%}%>
+                <img class="lazy" data-original="<%=list[i].imgSRC%>" alt="<%=list[i].seoAlt%>"/>
+            </a>
+        </div>
+        <div class="pro-detail">
+            <div class="pro-detail-title"></div>
+            <p class="taglines"><%=list[i].slogan%></p>
+            <a class="pro-title" href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>"><%=list[i].pTitle%></a>
+            <div class="pro-price">
+                <dl class="market-price">
+                    <dt>市场价</dt>
+                    <dd><i>&yen;</i><span><%=list[i].mPrice%></span></dd>
+                </dl>
+                <dl class="act-price">
+                    <dt>活动价</dt>
+                    <dd><i>&yen;</i><span><%=list[i].price%></span></dd>
+                </dl>
+                <span class="line-through"></span>
+                <a href="<%=list[i].linkURL%>" target="_blank">立即抢购</a>
+            </div>
+            <div class="left-bg"></div>
+            <div class="right-bg"></div>
+        </div>
+    </li>
+    <%}%>
+</ul>
+<!-- 春节年度排行榜列表——大图部分 结束 -->
+
+<!-- 春节年度排行榜列表——小图部分 开始 -->
+<% for(var j = 0, len = ((list.length-2)/3); j < len; j++) {%>
+    <%if(j == len-1) {%>
+    <ul class="annualList-hot-list annualList-list annualList-list-last clearfix">
+    <%} else {%>
+    <ul class="annualList-hot-list annualList-list clearfix">
+    <%}%>
+    <%for(var i = 2; i < 5; i++) {%>
+    <li>
+        <div class="pro-img">
+            <a href="<%=list[3*j+i].linkURL%>" target="_blank" title="<%=list[3*j+i].pTitle%>">
+                <% if(list[3*j+i].rTitle!="") {%>
+                <div class="tag"><p><%=list[3*j+i].rTitle%></p></div>
+                <%}%>
+                <img class="lazy" data-original="<%=list[3*j+i].imgSRC%>" alt="<%=list[3*j+i].seoAlt%>"/>
+            </a>
+        </div>
+        <div class="pro-detail">
+            <div class="pro-detail-title"></div>
+            <p class="taglines"><%=list[3*j+i].slogan%></p>
+            <a class="pro-title" href="<%=list[3*j+i].linkURL%>" target="_blank" title="<%=list[3*j+i].pTitle%>"><%=list[3*j+i].pTitle%></a>
+            <div class="pro-price">
+                <p class="market-price">
+                    市场价&yen;<%=list[3*j+i].mPrice%>
+                </p>
+                <dl class="act-price">
+                    <dt>活动价</dt>
+                    <dd><i>&yen;</i><span><%=list[3*j+i].price%></span></dd>
+                </dl>
+                <a href="<%=list[3*j+i].linkURL%>" target="_blank">立即抢购</a>
+            </div>
+            <div class="left-bg"></div>
+            <div class="right-bg"></div>
+        </div>
+    </li>
+    <%}%>
+    </ul>
+<%}%>
+<!-- 春节年度排行榜列表——小图部分 结束 -->
+
+<!-- 年度排行榜下方的广告部分 开始-->
+<div class="new-year-ad">
+    <a href="<%=ad.linkURL%>" target="_blank" title="<%=ad.pTitle%>">
+        <img class="lazy" data-original="<%=ad.imgSRC%>"/>
+    </a>
+</div>
+<!-- 年度排行榜下方的广告部分 结束-->

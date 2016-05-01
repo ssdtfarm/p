@@ -1,0 +1,161 @@
+/**
+ *  ---------------------------------------------
+ *      会员系统左侧菜单
+ *      会员系统左侧菜单组件，结构请参考会员系统
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+// 左侧框架
+.member-aside {
+    background-color: #333;
+    .member-aside-info {
+        padding: 30px;
+        overflow: hidden;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        background-color: #61bbe0;
+        p {
+            padding: 6px 0 0 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+    .member-aside-icons {
+        padding-bottom: 28px;
+    }
+    .item-on a {
+        border-left: 10px solid #f60;
+    }
+}
+
+// 一级菜单项
+.member-aside-item {
+    height: 49px;
+    border-bottom: 1px dashed #545454;
+    background-color: #333;
+    a {
+        display: inline-block;
+        width: 180px;
+        height: 49px;
+        line-height: 49px;
+        border-left: 10px solid #333;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: middle;
+        &:hover {
+            border-left: 10px solid #f60;
+        }
+        i {
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        label {
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    span {
+        display: inline-block;
+        width: 180px;
+        height: 49px;
+        line-height: 49px;
+        border-left: 10px solid #333;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        i {
+            vertical-align: middle;
+        }
+        label {
+            vertical-align: middle;
+        }
+    }
+}
+
+// 图标
+.member-aside-icons {
+    .m-icon {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        margin: 0 5px;
+        font-size: 0;
+        background: url("../images/member-club/mykh_sprite_15.png") no-repeat;
+    }
+    .icon-customer {
+        left: 1px;
+        background-position: -3px 0;
+        width: 16px;
+        height: 20px;
+    }
+    .icon-order {
+        background-position: -22px 0;
+        width: 18px;
+        height: 20px;
+    }
+    .icon-asset {
+        background-position: -42px -1px;
+        width: 20px;
+        height: 19px;
+    }
+    .icon-favorite {
+        background-position: 0 -24px;
+        width: 20px;
+        height: 16px;
+    }
+    .icon-service {
+        background-position: -21px -24px;
+        width: 20px;
+        height: 16px;
+    }
+    .icon-config {
+        background-position: -42px -21px;
+        width: 20px;
+        height: 20px;
+    }
+    .item-on a {
+        border-left: 10px solid #f60;
+    }
+}
+
+// 二级菜单项
+.member-aside-list {
+    color: #fff;
+    border-bottom: 1px dashed #545454;
+    a {
+        display: inline-block;
+        width: 180px;
+        height: 29px;
+        line-height: 29px;
+        color: #fff;
+        text-decoration: none;
+        text-indent: 30px;
+        border-left: 10px solid #333;
+        &:hover {
+            color: #f60;
+            border-left: 10px solid #f60;
+            text-decoration: none;
+        }
+        &.on {
+            color: #f60;
+            border-color: #f60;
+            &:hover {
+                color: #f60;
+                border-color: #f60;
+            }
+        }
+    }
+}

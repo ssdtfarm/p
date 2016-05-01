@@ -1,0 +1,1 @@
+define("libpage.0.0/cart-empty",[],function(o,i,t){$(function(){function o(){i=n.height(),t=$(window).scrollTop()+$(window).height()-i+"px",$(document.body).height()<$(window).height()?(n.css({position:"absolute",marginTop:0,top:t}),n.show()):(n.css({position:"static"}),n.show())}var i=0,t=0,n=$(".member-foot");o(),$(window).scroll(o).resize(o)})});

@@ -1,0 +1,36 @@
+<!-- <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/base.css" />
+<link rel="stylesheet" href="http://misc.jjcdn.com/p/css/comment.css" />
+<link rel="stylesheet" href="http://misc.jjcdn.com/p/css/one-wallet.css" />
+<script src="http://misc.jjcdn.com/p/sea-modules/js/seajs.js;jquery.js"></script>
+<script src="http://misc.jjcdn.com/p/js/base.js"></script> -->
+<!-- <script src="http://misc.jjcdn.com/p/src/js/one-wallet-dialog.js"></script> -->  
+<form id="J_oneWalletForm" class="one-wallet-form" method="post" action="http://my.kinhom.com/user/registerwallet">
+    <p class="content-msg">我们检测到您的账号还未绑定金海马-壹钱包账户！请绑定，否则您将无法获取返现！<br>现在绑定金海马-壹钱包账号，充值、提现、转账更方便。
+    </p>
+    <input type="hidden" name="gotcode" />
+    <table class="one-wallet-table">
+        <tbody>
+            <tr class="item">
+                <th>您的手机号码：</th>
+                <td>
+                    <input type="text" class="item-input w336" name="phone" />
+                    <p class="text-error JQ_tip"></p>
+                </td>
+            </tr>
+            <tr class="item">
+                <th>手机验证码：</th>
+                <td>
+                    <input type="text" class="item-input w136" name="phonecode" />
+                    <a id="J_getPhoneYzm" href="javascript:void(0)" class="btn-190X30 btn-orange ml-5">获取手机验证码</a>
+                    <!-- <a id="J_unabledBtn" href="javascript:void(0);" class="btn-190X30-unable ml-5"><span id="JQ_countDown">60</span>秒</a> -->
+                    <p class="text-error JQ_tip"></p>
+                </td>
+            </tr>
+            <tr class="item">
+                <th></th>
+                <td class="fc-8c8">
+                    <a id="J_dealAgree" href="javascript:void(0);" class="icon-box-normal"></a><span>同意注册成为</span><a href="javascript:void(0);" target="_blank" class="agreement-href">壹钱包</a><span>用户</span></td>
+            </tr>
+        </tbody>
+    </table>
+</form>

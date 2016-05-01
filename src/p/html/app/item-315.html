@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "item-315",
+    "title" : "315产品详情页"
+    })
+</head>
+<body>
+    <script>
+    var itemConfig = {
+        skuID: 40484, //产品skuID号
+        itemPrice: "1288.00",
+        itemMarketPrice: "2888.00",
+        itemTitle: "现代简约红色布艺软现代简约现代简约红色布艺软现代简约现代简约红色布艺软现代简约", //产品标题
+        itemLinkURL: "http://www.kinhom.com/item/23234.html", //产品链接
+        itemImgURL: "http://img1.jjcdn.com/g1/M00/01/9B/CvoBM1OILyKAIGJyAAHvVjU_QhA126.jpg!small", //产品第一张图的图片路径
+        appDownURL: "http://api.kinhom.com/download/index" //app下载地址
+    }
+    </script>
+    <!-- 顶部广告开始 -->
+    <section class="index-top-ad JQ_lazy" id="J_TopAd" data-tpl="tplTopAd" data-time="1439456400"></section>
+    <!-- 顶部广告结束 -->
+
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("comment-header.html",{ "cdn" : "@@miscPath" })
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    @@include("comment-head-nav.html")
+    <!-- 导航结束 -->
+
+    <!-- 详情页开始 -->
+    <section class="item-bg">
+        <div></div>
+        <div class="kh-row-24 clearfix">
+            <div class="kh-col-24 mt-30">
+                <!-- 产品图片 -->
+                <div class="w590 item-album">
+                    <div id="J_albumBig" class="item-album-big">
+                        <img class="lazy" src="http://misc.jjcdn.com/p/images/item-315-goods.jpg" alt="" width="540" height="360">
+                    </div>
+                </div>
+                <!-- 产品购买 -->
+                <div class="w600 h393 item-op">
+                    <div class="item-information">
+                        <!--  主标题 -->
+                        <h1 class="item-title">
+                            创意户外便携透明水杯
+                        </h1>
+                        <!--  副标题 -->
+                        <h2 class="item-subtitle">
+                            <label class="item-title-ad">满1000人，0元聚划算活动立即生效，只收取邮费，1000个限量抢购。</label>
+                        </h2>
+                    </div>
+                    <!-- 产品属性和按钮等 -->
+                    <div class="item-propery">
+                        <!-- 属性列表 -->
+                        <dl class="item-propery-list">
+                            <dt>可选颜色：</dt>
+                            <dd class="clearfix">
+                                <a href="javascript:void(0);" class="propery-item on">
+                                    随机颜色
+                                    <span class="propery-mark"></span>
+                                </a>
+                            </dd>
+                        </dl>
+                        <!-- 商品价格 + 评论数 + 购买数量 -->
+                        <div class="item-price-info">
+                            <dl class="item-info-list">
+                                <dt class="fs-18">活动价</dt>
+                                <dd class="fs-18 ml-10">&yen;<b id="J_itemActivePrice" class="fs-44">0.00</b><span class="fs-20 ml-10">&yen;49.00</span></dd>
+                            </dl>
+                            <!-- 按钮区域 -->
+                            <div class="item-btns">
+                                <a href="javascript:void(0);" class="item-btn-cart JQ_addToCart">敬请期待<i></i></a>
+                                <input type="hidden" name="beUser" value="linyandi" />
+                                <span class="item-tips J_itemTips">（3月4日10:00准点开抢）</span>
+                            </div>
+                        </div>
+
+                        <dl class="item-info-sp-list" id="J_countDown">
+                            <!-- <dt>距离结束还剩：10天8小时29分18秒</dt> -->
+                            <dt>距离结束还剩：--天--小时--分--秒</dt>
+                            <dd>
+                                已售<b id="J_saled" class="fc-f60">--</b>件
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style_24x24">
+                        <span class="jiathis_txt">分享：</span>
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                    </div>
+                    <!-- JiaThis Button END -->
+                </div>
+            </div>
+            <!-- 抢购规则 -->
+            <div class="kh-col-24 mt-40">
+                <div class="item-rules-title"></div>
+                <ul class="item-rules">
+                    <li>1. 五种颜色，随机发货，1000个限量抢购；</li>
+                    <li>2. 每个ID号单件商品限购一次；</li>
+                    <li>3. 手机注册即可参与此活动；</li>
+                    <li class="fc-f60">4. 满1000人，0元聚划算活动立即生效，只收取邮费。不满1000人，活动不生效，邮费将自动退回到用户支付账户。</li>
+                </ul>
+            </div>
+            <!-- 产品详情 -->
+            <div class="kh-col-24 mt-40 mb-100">
+                <div class="item-detail-title"></div>
+                <div class="item-detail">
+                    <img src="http://misc.jjcdn.com/p/images/item-315-detail.jpg" alt="创意户外便携透明水杯" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 底部广告开始 -->
+    <section class="item-full-ad JQ_lazy" id="J_bottomAd" data-tpl="tplBottomAd" data-path="index_bottomAd_hash.js" data-time="1439456400"></section>
+    <!-- 底部广告结束 -->
+    <!-- 详情页结束 -->
+    <script>
+    var itemData = {
+        "topAd": [{
+            "height": "",
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "link": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg",
+            "bgColor": ""
+        }],
+        "leftAd": [{
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }, {
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }, {
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }],
+        "detailAd": [{
+            "startTime": "1439197200",
+            "endTime": "1439629200",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }],
+        "bottomAd": [{
+            "height": "",
+            "startTime": "1438531211",
+            "endTime": "1439481611",
+            "link": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg",
+            "bgColor": ""
+        }]
+    }
+
+    var detailsFloorAdData = {
+        'nowTime': 1000,
+        'data': [
+            {
+                'endTime': 1999,
+                'list': [
+                    {
+                        'proLink': 'kinhom1.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫 1',
+                        'markyPrice': '1999',
+                        'proPrice': '1999'
+                    },
+                    {
+                        'proLink': 'kinhom2.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫2',
+                        'markyPrice': '2999',
+                        'proPrice': '2999'
+                    }
+                ]
+            },
+            {
+                'endTime': 1999,
+                'list': [
+                    {
+                        'proLink': 'kinhom1.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': 'test error',
+                        'markyPrice': '1999',
+                        'proPrice': '1999'
+                    }
+                ]
+            },
+            {
+                'endTime': 4444,
+                'list': [
+                    {
+                        'proLink': 'kinhom3.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫3',
+                        'markyPrice': '3999',
+                        'proPrice': '3999'
+                    },
+                    {
+                        'proLink': 'kinhom4.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫 4',
+                        'markyPrice': '4999',
+                        'proPrice': '4999'
+                    },
+                    {
+                        'proLink': 'kinhom5.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫 5',
+                        'markyPrice': '5999',
+                        'proPrice': '5999'
+                    }
+                ]
+            },
+            {
+                'endTime': 123,
+                'list': [
+                    {
+                        'proLink': 'kinhom3.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫3',
+                        'markyPrice': '666',
+                        'proPrice': '7777'
+                    },
+                    {
+                        'proLink': 'kinhom4.com',
+                        'imgSrc': 'http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max',
+                        'imgAlt': '图片alt',
+                        'proTitle': '整网弹簧 椰棕 床垫 4',
+                        'markyPrice': '7777',
+                        'proPrice': '8888'
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name"  : "item-315"
+    })
+    <script "text/javascript"> 
+
+    </script> 
+</body>
+
+</html>

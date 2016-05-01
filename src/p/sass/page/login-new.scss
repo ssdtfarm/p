@@ -1,0 +1,264 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+@charset "utf-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";
+@import "../components/common-search-bar.scss";
+
+
+/*
+ *  new register
+ *
+ *  author:ljrong
+ *  date:20150805
+ *  
+ *  修改“免费注册”、“忘记密码”字体样式，以及增加微信按钮
+ *  mender: yansiwen
+ *  date: 2016/03/14
+ */
+input::-ms-clear { display: none; }
+input::-ms-reveal { display: none; }
+body {
+    background:#ecf9ff;
+}
+.login-wrap {
+    width:100%;
+}
+.login-content {
+    width:1190px;
+    margin:0 auto;
+    padding-top:50px;
+
+    .login-left {
+        width:490px;
+        margin-left:100px;
+    }
+    .login-right {
+        margin-right:100px;
+        width:310px;
+        padding:34px 39px 0 39px;;
+        height:404px;
+        border:1px solid #ebebeb;
+        background:#fff;
+    }
+}
+.reg-icon {
+    background:url(../images/reg-icon.png) no-repeat;
+}
+.other-login-wrap {
+    .title {
+        height:0;
+        border-bottom:1px solid #ccc;
+        margin-bottom:26px;
+        white-space: nowrap;
+        span {
+            position:absolute;
+            margin-top:-10px;
+            margin-left:68px;
+            padding:0 17px;
+            height:20px;
+            line-height:20px;
+            background:#fff;
+            font-size:14px; 
+            color:#333;
+        }
+    }
+}
+.other-login {
+    text-align:center;
+    a {  
+        display:inline-block;
+        width:24px;
+        height:24px;
+        opacity:0.7;
+        &:hover {
+            opacity:1;
+        }
+    }
+    .qq {
+        background-position: 0 -22px;
+    }
+    .wx {
+        margin-left: 6px;
+        background-position: -28px -22px;
+    }
+    .zfb {
+        margin-left: 6px;
+        background-position: -56px -22px;
+    }
+    .wb {
+        margin-left: 6px;
+        background-position: -84px -22px;
+    }
+}
+.login-title {
+    height:25px;
+    line-height:25px;
+    span {
+        font-size:18px;
+        color:#4e4e4e;
+    }
+    a {
+        font-size: 14px;
+        color: #f60;
+        text-decoration:underline;
+    }
+}
+.login-msg-wrap {
+    height:25px;
+    line-height:25px;
+    margin-bottom:2px;
+}
+.login-msg {
+    height:25px;
+    line-height:25px;
+    text-indent:9px;
+    color:#f60;
+    background:#ffdfc9;
+   display:none;
+    text-indent:31px;
+    .msg-icon {
+        position:absolute;
+        margin-left:-21px;
+        margin-top:5px;
+        width:14px;
+        height:14px;
+        background-position: -30px 0;
+    }
+
+}
+.kh-login-wrap {
+    border:1px solid #ccc;
+    height:45px;
+    margin-bottom:18px;
+    input {
+       position:absolute;
+       margin-left:48px;
+       height:29px;
+       width:258px;
+       line-height:29px;
+       padding:8px 0;
+       border:none;
+       border-left:1px solid #ccc;
+       text-indent:12px;
+       font-size:14px;
+       color:#333;
+    }
+    .kh-login-user {
+        position:absolute;
+        width:48px;
+        height:45px;
+        background-position:-52px -100px;
+    }
+    .kh-login-clear {
+        position:absolute;
+        display:none;
+        margin-left:282px;
+        margin-top:15px;
+        width:15px;
+        height:15px;
+        background-position:-84px 0;
+        cursor:pointer;
+    }
+    .J_clear {
+        display:none\9!important;
+    }
+    .kh-login-pass {
+        position:absolute;
+        width:48px;
+        height:45px;
+        background-position:-52px -52px;
+    }
+    .fly {
+        top:-9999px;
+    }
+    .mail-fill {
+        display:none;
+        position:absolute;
+        width:259px;
+        z-index: 99;
+        margin-top:46px;
+        margin-left:48px;
+        border:1px solid #2f6ceb;
+        background:#fff;
+        border-top:none;
+        li {
+            height:28px;
+            line-height:28px;
+            font-size:14px;
+            color:#666;
+            text-indent:13px;
+            cursor:pointer;
+            &:hover {
+                background:#e8f2f8;
+            }
+        }
+    }
+}
+
+.kh-login-wrap.error { 
+    border:1px solid #f60;
+    input {
+       border-left:1px solid #f60;
+    }
+    .kh-login-user {
+        background-position:0 -150px;
+    }
+    .kh-login-pass {
+        background-position:-52px -150px;
+    }
+}
+.kh-login-wrap.focus {
+    border:1px solid #2f6ceb;
+    input {
+       border-left:1px solid #2f6ceb;
+    }
+    .kh-login-user {
+        background-position:0 -100px;
+    }
+    .kh-login-pass {
+        background-position:0 -52px;
+    }
+}
+.remember-login {
+    height:20px;
+    line-height:20px;
+    margin-bottom:20px;
+    font-size:14px;
+    .remember {
+        cursor:pointer;
+    }
+    i {
+        margin-right:10px;  
+    }
+    a {
+        // color:#2f6ceb;
+        color: #333;
+        &:hover {
+            color:#f60;
+            //text-decoration:underline;
+        }
+    }
+}
+.login-btn {
+    height:45px;
+    border:1px solid #f60;
+    margin-bottom:37px;
+    line-height:45px;
+    background:#ff7b23;
+    text-align:center;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer;
+    &:hover {
+        background:#ee950a;
+    }
+}
+.icon-box-normal {
+    background-position: -2555px -4px!important; 
+}

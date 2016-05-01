@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/store-gather.css">
+    <!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+    <title>商场导视图</title>
+    <script>
+        var smallImg = new Image();
+        var bigImg = new Image();
+        var imgLoaded = false;
+        smallImg.src = "http://misc.jjcdn.com/p/images/store-gather/navigate-small.png";
+        bigImg.src = "http://misc.jjcdn.com/p/images/store-gather/navigate-big.png";
+        bigImg.onload = function(){
+            imgLoaded = true;
+        }
+    </script>
+</head>
+<body class="hidden">
+    <div class="navigate-div small-div">
+        <img id="J_navigateImg" class="navigate-img small-img" src="http://misc.jjcdn.com/p/images/store-gather/navigate-small.png" alt="" draggable="true">
+    </div>
+    <div class="navigate-zoombar">
+        <span class="zoom zoomin"><i class="active"></i><span style="">放大</span></span>
+        <span class="zoom zoomout"><i class="inactive"></i><span style="">缩小</span></span>
+        <span class="zoom-title">商场导视</span>
+    </div>
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/store-gather.js"></script>
+</body>
+</html>

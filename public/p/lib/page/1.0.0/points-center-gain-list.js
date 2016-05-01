@@ -1,0 +1,1 @@
+define("libpage.0.0/points-center-gain-list",[],function(e,n,t){document.getElementById("J_clubAside").innerHTML=document.getElementById("J_templateClubAside").innerHTML});

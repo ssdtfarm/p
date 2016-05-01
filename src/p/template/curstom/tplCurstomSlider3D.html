@@ -1,0 +1,15 @@
+<div class="ui-diy-3d-content" id="J_slider">
+    <div class="slider3DList" id="sliderList">
+        <ul>
+            <%for(var i=0; i<dataList[0].length; i++) {%>
+            <li class="" style="">
+                <img src="<%=dataList[0][i].imgSrc%>">
+                <div></div>
+                <p class="b_tit"><%=dataList[0][i].thisInfo%></p>
+            </li>
+            <%}%>
+        </ul>
+        <a href="javascript:;" class="prev"></a>
+        <a href="javascript:;" class="next"></a>
+    </div>
+</div>

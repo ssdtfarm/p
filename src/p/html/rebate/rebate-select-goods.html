@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "rebate-select-goods", "title" : "创建返利小店-选择商品" })
+</head>
+
+<body>
+    <!-- 顶部广告开始 -->
+    <section class="index-top-ad JQ_lazy" id="J_TopAd" data-tpl="tplTopAd" data-path="index_TopAd_hash.js" data-time="1437645060000"></section>
+    <!-- 顶部广告结束 -->
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", { "cdn": "@@miscPath", "headerName": "我的金海马", "search": false })
+    <!-- 头部结束 -->
+    <!-- 页面开始 -->
+    <section class="rebate-wrap">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <div class="rebate-content">
+            <h3 class="select-title">选择返利商品</h3>
+            <div class="main">
+                <div class="select-bar">
+                    <!-- 层级刷选 -->
+                    <div class="selector-wrap">
+                        <div class="selector j_selector">
+                            <p class="title">一级分类</p>
+                            <i class="triangle   triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">二级分类</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">价格区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">返利区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 层级刷选 end-->
+                    <!-- 排序导航条开始 -->
+                    <div class="nav-sort">
+                        <div class="left fl">
+                            <dl>
+                                <dt>
+                                    <!-- <span><i class="checked-btn j_checkedAll"></i>全选</span> -->排序：</dt>
+                                <dd data-type="recommend">推荐</dd>
+                                <dd data-type="hot">人气</i>
+                                </dd>
+                                <dd data-type="price">价格<i class="triangle  triangle-up j_priceAsc"></i><i class="triangle  triangle-down j_priceDsc"></i></dd>
+                                <dd data-type="rebate">返利<i class="triangle  triangle-up j_rebateAsc"></i><i class="triangle  triangle-down  j_rebatDsc"></i></dd>
+                            </dl>
+                        </div>
+                        <div class="right fr">
+                            <span class="page-item prev-page">上一页</span>
+                            <span class="page-now">1</span>/
+                            <span class="page-all">15</span>
+                            <span class="page-item next-page">下一页</span>
+                        </div>
+                    </div>
+                    <!-- 排序导航条 end -->
+                </div>
+                <div class="list-wrap">
+                    <ul class="list">
+                        <li class="item" data-id="334">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 3344</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>222</strong></span>
+                            </div>
+                            <i class="checked-btn j_checkedOne"></i>
+                        </li>
+                        <li class="item selected" data-id="335">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg">
+                            </a>
+                            <a href="#" class="good-title">改了试试看</a>
+                            <p class="price">&yen; 334332</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>3354</strong></span>
+                            </div>
+                            <i class="checked-btn j_checkedOne"></i>
+                        </li>
+                        <li class="item" data-id="331225">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 656745</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>43455</strong></span>
+                            </div>
+                            <i class="checked-btn j_checkedOne"></i>
+                        </li>
+                        <li class="item" data-id="33335">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 464747</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>3344</strong></span>
+                            </div>
+                            <i class="checked-btn j_checkedOne"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paginator">
+                    <ul class="">
+                        <li><a href="#"><span></span></a></li>
+                        <li><a href="#"><span>上一页</span></a></li>
+                        <li><a href="#"><span>1</span></a></li>
+                        <li><span class="currentpage">2</span></li>
+                        <li><a href="#"><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li><a href="#"><span>6</span></a></li>
+                        <li><a href="#"><span>7</span></a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li>共<b>7</b>页</li>
+                        <li>
+                            <form method="get" action="">
+                                <input name="cat" value="223" type="hidden">
+                                <input name="rid" value="32" type="hidden">去第
+                                <input type="text" size="3" id="toPage" name="curpage">页
+                                <input type="submit" value="确定">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side">
+                <h3 class="side-title">已选择商品（<span>共<span class="num">1</span>件</span>）</h3>
+                <div class="side-list-wrap"> 
+                    <ul class="list">
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop-link">
+                    <div class="bg"></div>
+                    <a href="#">确认选择 进入小店<i></i></a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+             
+            <div class="side side2">
+                <h3 class="side-title">已选择商品（<span>共<span class="num">1</span>件</span>）</h3>
+                <div class="side-list-wrap"> 
+                    <ul class="list">
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                        <li class="item" data-id="335">
+                            <a href="#" class="img-link"><img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg"> </a>
+                            <div class="good-info">
+                                <a href="#" class="good-title">改了试试看</a>
+                                <p class="price">¥¥ 334332</p>
+                                <p class="rebate-price">返3354</p>
+                            </div> <i class="del j_removeGood" data-id="335"></i> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop-link">
+                    <div class="bg"></div>
+                    <a href="#">确认选择 进入小店<i></i></a>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- 页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", { "cdn": "@@miscPath", "name": "rebate-select-goods" })
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<%if(list.length==0){%>
+    <p class="tc">暂时没有评价</p>
+    <%}else{%>
+        <%for(var i=0; i<list.length; i++){%>
+            <dl class="item-comments-list clearfix">
+                <dt>
+                    <p class="comments-list-img"><img src="<%=list[i].imgURL%>" width="60" height="60"></p>
+                    <p class="fc-2f6">
+                        <%=list[i].buyer%>
+                    </p>
+                </dt>
+                <dd>
+                    <p class="comments-list-info">
+                        <span class="comments-evaluate-star">
+                        <%if(list[i].evalStar){%>
+                          <%for(var j=0; j<list[i].evalStar; j++){%>
+                            <i class="icon-star-on" data-star="<%=j%>"></i>
+                           <%}%>
+                           <%if(list[i].evalStar<5){%>
+                            <%for(var k=0; k < 5-j;k++){%>
+                            <i class="icon-star-off" data-star="<%=k%>"></i>
+                            <%}%>
+                           <%}%>
+                        <%}%>
+                        </span>
+                        <span class="comments-list-time"><%=list[i].time%></span>
+                    </p>
+                    <p class="comments-list-content">
+                        <%=list[i].content%>
+                    </p>
+                    <p class="comments-list-goods">
+                        <%=list[i].goodsInfo%>
+                    </p>
+                    <%if(list[i].evalImgURL){%>
+                    <div class="comments-img-share">
+                        <ul class="img-list">
+                            <%for(var h=0; h<list[i].evalImgURL.length; h++){%>
+                                <li class="img-item JQ_imgItem"><img src="<%=list[i].evalImgURL[h]%>"></li>
+                            <%}%>
+                        </ul>
+                        <p class="show-img JQ_showImg"></p>
+                    </div>
+                    <%}%>
+                </dd>
+            </dl>
+            <%}%>
+                <%}%>

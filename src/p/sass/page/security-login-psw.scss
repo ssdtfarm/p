@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+@import "../components/common-dialog.scss";	// art-dialog
+
+/*
+ * Security Center
+ * security-login-psw.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-09-29;
+ */
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 修改登录密码
+.modify-login-psw-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h1 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+	.remind {
+		margin: 47px 0 15px;
+		color: #8c8c8c;
+		line-height: 20px;
+	}
+}
+.modify-login-psw-item {
+	position: relative;
+	line-height: 28px;
+	overflow: hidden;
+	label {
+		float: left;
+		width: 96px;
+		height: 28px;
+		line-height: 28px;
+		text-align: right;
+	}
+	input {
+		float: left;
+		margin-left: 4px;
+		padding: 0 8px;
+		width: 182px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #b4b4b4;
+		border-radius: 3px;
+		&:focus {
+			border-color: #2f6ceb;
+		}
+	}
+	.error {
+		input {
+			border-color: #c13d23;
+		}
+	}
+	.tips {
+		margin-left: 100px;
+		height: 20px;
+		line-height: 20px;
+		color: #8c8c8c;
+		.icon-tip-wrong {
+			margin: 0 3px 3px 0;
+		}
+	}
+	.tip-ok {
+		margin-left: 5px;
+	}
+	.submit-btn {
+		position: relative;
+		display: block;
+		left: 96px;
+  		width: 200px;
+  		height: 30px;
+  		margin-left: 4px;
+  		background: #ccc;
+  		color: #fff;
+  		border-color: transparent;
+  		border-radius: 3px;
+  		text-align: center;
+  		cursor: default;
+  		&:focus {
+  			border-color: transparent;
+  		}
+	}
+	.on {
+		background: #f60;
+		cursor: pointer;
+		&:hover {
+			background: $commonColor;
+		}
+	}
+}

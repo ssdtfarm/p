@@ -1,0 +1,874 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/base.css" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/comment.css" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/wallet-ui.css" />
+    <!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+    <title>wallet-ui-demo</title>
+</head>
+
+<body>
+    <p class="demo-tip-1">====== 顶部栏 ======</p>
+    <section class="top-bar">
+        <div class="w1190">
+            <div class="top-hot-line">服务热线：4006-538-038</div>
+            <div class="top-nav">
+                <span>|</span>
+                <a href="javascript:void(0);">我的金海马</a>
+                <span>|</span>
+                <a href="javascript:void(0);">会员俱乐部</a>
+                <span>|</span>
+                <a href="javascript:void(0);">在线客服</a>
+                <span>|</span>
+                <a href="javascript:void(0);">帮助中心</a>
+                <span>|</span>
+                <a href="javascript:void(0);">关于我们</a>
+                <span>|</span>
+                <a href="javascript:void(0);">加入收藏</a>
+            </div>
+            <div class="top-login-status">
+                <label>Hi ~ 请 </label>
+                <A href="javascript:void(0);">[登录]</A>
+                <A href="javascript:void(0);">[免费注册]</A>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 头部 ======</p>
+    <header class="member-header">
+        <section class="kh-row-24">
+            <div class="kh-col-7">
+                <div class="member-logo">
+                    <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/logo.png" width="140" height="96" /></a>
+                    <a href="javascript:void(0)" class="member-logo-ad"><img src="http://misc.jjcdn.com/p/images/ad-logo.png" alt="" width="200" height="96"></a>
+                </div>
+            </div>
+            <div class="kh-col-7">
+                <p class="demo-tip-2">↓======== 这里是本页标题 ========↓</p>
+                <p class="member-header-title">
+                    <span>DEMO</span>
+                </p>
+            </div>
+            <div class="kh-col-10 pos-rel">
+                <p class="demo-tip-2">↓======== 顶部搜索 ========↓</p>
+                <div class="search-bar member-header-search">
+                    <form class="JQ_searchForm" action="javascript:void(0);" method="post">
+                        <input type="text" name="keyword" class="search-keyword JQ_searchKeyword w380" />
+                        <a class="seach-btn JQ_searchBarBtn" href="javascript:void(0);"><i class="icon-m-search"></i></a>
+                        <span class="JQ_hotKeyTip hot-keyword-tip">金海马床垫</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </header>
+    <p class="demo-tip-1">====== 一级导航部分 ======</p>
+    <section class="wallet-nav-warp">
+        <div class="kh-row-24 clearfix">
+            <!-- 延迟部分 -->
+            <div class="kh-col-24 pos-rel" id="J_walletNav">
+                <div class="loading"><i class="icon-loading-small"></i>
+                </div>
+            </div>
+            <!-- 加载部分 -->
+            <script id="J_templateWalletNav" type="text/html">
+                <!-- 会员俱乐部导航栏开始 -->
+                <div class="wallet-nav kh-col-24">
+                    <a href="javascript:void(0);" class="clearfix cur">
+                        <label>我的钱包</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>账户管理</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>交易管理</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>安全中心</label>
+                    </a>
+                </div>
+                <!-- 会员俱乐部导航栏结束 -->
+            </script>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 二级导航部分 ======</p>
+    <section class="kh-row-24 clearfix">
+        <!-- 延迟部分 -->
+        <div class="kh-col-24 pos-rel" id="J_walletMenu">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateWalletMenu" type="text/html">
+            <div class="wallet-menu kh-col-24">
+                <a href="javascript:void(0);" class="clearfix cur">
+                    <label>安全等级</label>
+                </a>
+                <a href="javascript:void(0);" class="clearfix">
+                    <label>密码管理</label>
+                </a>
+                <a href="javascript:void(0);" class="clearfix">
+                    <label>修改手机号</label>
+                </a>
+            </div>
+        </script>
+    </section>
+    <p class="demo-tip-1">====== 内容容器 ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <div class="demo-pre">
+                <!-- <pre>&lt;section class="kh-row-24 clearfix"&gt;</pre>
+                <pre>&lt;div class="kh-col-24"&gt;</pre> -->
+                <pre>&lt;div class="wallet-main"&gt;</pre>
+                <pre>&lt;div class="wallet-main-container">&lt;/div&gt;</pre>
+                <pre>&lt;/div&gt;</pre>
+                <!--  <pre>&lt;/div&gt;</pre>
+               <pre>&lt;/section&gt;</pre> -->
+            </div>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 色彩的说明 ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <table class="demo-table">
+                <thead>
+                    <tr>
+                        <th>#ff6600 | 主橙色 | orange</th>
+                        <th>#2f6ceb | 主蓝色 | blue</th>
+                        <th>#61bbe0 | 浅蓝 | lightblue</th>
+                        <th>#333333 | 深灰 | darkgrey</th>
+                        <th>#8c8c8c | 灰色 | grey</th>
+                        <th>#cccccc | 浅灰 | lightgrey</th>
+                        <th>#da1f23 | 红色 | red</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#f60" class="sq-90X30"></a>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#2f6ceb" class="sq-90X30"></td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#61bbe0" class="sq-90X30"></td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#333" class="sq-90X30"></td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#8c8c8c" class="sq-90X30"></td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#cccccc" class="sq-90X30"></td>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#da1f23" class="sq-90X30"></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>#4ca579 | 绿色 | green</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" style="background:#4ca579" class="sq-90X30"></a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>fc-f60</th>
+                        <th>fc-2f6</th>
+                        <th>fc-61b</th>
+                        <th>fc-333</th>
+                        <th>fc-8c8</th>
+                        <th>fc-ccc</th>
+                        <th>fc-da1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="fc-f60">主橙色</span>
+                        </td>
+                        <td>
+                            <span class="fc-2f6">主蓝色</span>
+                        </td>
+                        <td>
+                            <span class="fc-61b">浅蓝</span>
+                        </td>
+                        <td>
+                            <span class="fc-333">深灰</span>
+                        </td>
+                        <td>
+                            <span class="fc-8c8">灰色</span>
+                        </td>
+                        <td>
+                            <span class="fc-ccc">浅灰</span>
+                        </td>
+                        <td>
+                            <span class="fc-da1">红色</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>fc-4ca</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="fc-4ca">绿色</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>border-1-f60</th>
+                        <th>border-1-2f6</th>
+                        <th>border-1-61b</th>
+                        <th>border-1-333</th>
+                        <th>border-1-8c8</th>
+                        <th>border-1-ccc</th>
+                        <th>border-1-da1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-f60"></a>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-2f6"></td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-61b"></td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-333"></td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-8c8"></td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-ccc"></td>
+                        <td>
+                            <a href="javascript:void(0)" class="sq-90X30 border-1-da1"></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>border-1-4ca</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="javascript:void(0)" class="sq-90X30 border-1-4ca"></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 边距 ======</p>
+    <p class="demo-tip-2">↓====== 内边距 ======↓</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <table class="demo-table">
+                <thead>
+                    <tr>
+                        <th>无边距</th>
+                        <th>p-0-20</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="wallet-main">
+                                <div class="wallet-main-container clearfix tl">
+                                    3 月 30 日，李娜在自己的微博上正式发布了个人品牌——“LI NA 李娜”TM，以心形为主体的 logo 在李娜的解释中代表了“你们对我的支持，以及我对家庭和事业的关爱”。 与这个个人品牌共同发布的还有和新元素餐厅的首次合作，作为春夏新菜的共同设计者和灵感来源，李娜在新元素餐厅推出了“娜样活力”系列菜单。 “蓝波芝士苹果鸡肉色拉”、“娜般温暖三文鱼色拉”、“冰火吞拿鱼色拉”、“娜山火龙果橙汁”、“牛油果鲜活果昔”，菜单里，不少新品的命名都融入了李娜名字的元素。 去年 9 月，李娜正式宣布退役，之后宣布怀孕并鲜少参加商业活动。3 月 26 日，“准妈妈”李娜参加了由中国少年儿童基金会和母婴服务平台宝宝树共同发起的孕妇关爱公益活动并担任形象大使，而在几天后又发布了自己的个人品牌，不难看出，退役网坛之后，商业之路才正要开始。
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wallet-main">
+                                <div class="wallet-main-container p-0-20 clearfix tl">
+                                    3 月 30 日，李娜在自己的微博上正式发布了个人品牌——“LI NA 李娜”TM，以心形为主体的 logo 在李娜的解释中代表了“你们对我的支持，以及我对家庭和事业的关爱”。 与这个个人品牌共同发布的还有和新元素餐厅的首次合作，作为春夏新菜的共同设计者和灵感来源，李娜在新元素餐厅推出了“娜样活力”系列菜单。 “蓝波芝士苹果鸡肉色拉”、“娜般温暖三文鱼色拉”、“冰火吞拿鱼色拉”、“娜山火龙果橙汁”、“牛油果鲜活果昔”，菜单里，不少新品的命名都融入了李娜名字的元素。 去年 9 月，李娜正式宣布退役，之后宣布怀孕并鲜少参加商业活动。3 月 26 日，“准妈妈”李娜参加了由中国少年儿童基金会和母婴服务平台宝宝树共同发起的孕妇关爱公益活动并担任形象大使，而在几天后又发布了自己的个人品牌，不难看出，退役网坛之后，商业之路才正要开始。
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="demo-tip-2 mt-20">↓====== 橙色部分为外容器部分 蓝色为内容部分 ======↓</p>
+            <table class="demo-table">
+                <thead>
+                    <tr>
+                        <th>pt-5</th>
+                        <th>pt-10</th>
+                        <th>pt-15</th>
+                        <th>pt-20</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="pt-5" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pt-10" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pt-20" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pt-30" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>pr-5</th>
+                        <th>pr-10</th>
+                        <th>pr-20</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="pr-5" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pr-10" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pr-20" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>pb-5</th>
+                        <th>pb-10</th>
+                        <th>pb-20</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="pb-20" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pb-30" style="height:50;background:#f60;">
+                                <p style="height:50px;background:#61bbe0"></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>pl-5</th>
+                                <th>pl-10</th>
+                                <th>pl-15</th>
+                                <th>pl-20</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="pl-5" style="height:50;background:#f60;">
+                                        <p style="height:50px;background:#61bbe0"></p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="pl-10" style="height:50;background:#f60;">
+                                        <p style="height:50px;background:#61bbe0"></p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="pl-20" style="height:50;background:#f60;">
+                                        <p style="height:50px;background:#61bbe0"></p>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+            </table>
+        </div>
+    </section>
+    <p class="demo-tip-2 mt-20">↓====== 外边距 ======↓</p>
+    <p class="demo-tip-2 mt10 mb-20">====== margin-bottom因为浏览器兼容问题不推荐使用 故不给予预设 ======</p>
+    <p class="demo-tip-2 mt-10 mb-20">↓====== 橙色部分为外容器部分 蓝色为内容部分 ======↓</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <ul class="demo-horizon">
+                <li>
+                    <p class="mt-5" style="height:50px;background:#61bbe0">mt-5</p>
+                </li>
+                <li>
+                    <p class="mt-10" style="height:50px;background:#61bbe0">mt-10</p>
+                </li>
+                <li>
+                    <p class="mt-20" style="height:50px;background:#61bbe0">mt-20</p>
+                </li>
+                <li>
+                    <p class="mt-30" style="height:50px;background:#61bbe0">mt-30</p>
+                </li>
+            </ul>
+            <ul class="demo-horizon mt-20">
+                <li>
+                    <p class="mr-5 tr" style="height:50px;background:#61bbe0">mr-5</p>
+                </li>
+                <li>
+                    <p class="mr-10 tr" style="height:50px;background:#61bbe0">mr-10</p>
+                </li>
+                <li>
+                    <p class="mr-20 tr" style="height:50px;background:#61bbe0">mr-20</p>
+                </li>
+                <li>
+                </li>
+            </ul>
+            <ul class="demo-horizon mt-20">
+                <li>
+                    <p class="ml-5 tl" style="height:50px;background:#61bbe0">ml-5</p>
+                </li>
+                <li>
+                    <p class="ml-10 tl" style="height:50px;background:#61bbe0">ml-10</p>
+                </li>
+                <li>
+                    <p class="ml-20 tl" style="height:50px;background:#61bbe0">ml-20</p>
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 按钮 ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <table class="demo-table">
+                <caption>常用按钮</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>btn-90X30</th>
+                        <th>btn-140X30</th>
+                        <th>btn-190X30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>btn-orange</th>
+                        <td>
+                            <a href="javascript:void(0);" class="btn-90X30 btn-orange">btn-90X30</a>
+                        </td>
+                        <td><a href="javascript:void(0);" class="btn-140X30 btn-orange">btn-140X30</a></td>
+                        <td><a href="javascript:void(0);" class="btn-190X30 btn-orange">btn-190X30</a></td>
+                    </tr>
+                    <tr>
+                        <th>btn-grey</th>
+                        <td>
+                            <a href="javascript:void(0);" class="btn-90X30 btn-grey">btn-90X30</a>
+                        </td>
+                        <td><a href="javascript:void(0);" class="btn-140X30 btn-grey">btn-140X30</a></td>
+                        <td><a href="javascript:void(0);" class="btn-190X30 btn-grey">btn-190X30</a></td>
+                    </tr>
+                    <tr>
+                        <th>btn-darkgrey</th>
+                        <td>
+                            <a href="javascript:void(0);" class="btn-90X30 btn-darkgrey">btn-90X30</a>
+                        </td>
+                        <td><a href="javascript:void(0);" class="btn-140X30 btn-darkgrey">btn-140X30</a></td>
+                        <td><a href="javascript:void(0);" class="btn-190X30 btn-darkgrey">btn-190X30</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="demo-table">
+                <caption>特殊按钮</caption>
+                <thead>
+                    <tr>
+                        <th>btn-90X30-border-orange</th>
+                        <th>btn-download</th>
+                        <th>btn-add-fast-payment</th>
+                        <th>btn-190X30-unable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td><pre>&lt;a href="javascript:void(0);" class="btn-download"&gt;</pre><pre>ios下载&lt;i class="triangle-right-orange"&gt;&lt;/i&gt;&lt;/a&gt;</pre></td>
+                        <td><pre>&lt;a href="javascript:void(0);" class="btn-add-fast-payment"&gt;</pre><pre>&lt;i class="plus-orange"&gt;+&lt;/i&gt;添加快捷支付&lt;/a&gt;</pre></td>
+                        <td><pre>&lt;a href="javascript:void(0);" class="btn-190X30-unable"&gt;</pre><pre>&lt;span&gt;60&lt;/span&gt;</pre><pre>秒&lt;/a&gt;</pre></td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:void(0);" class="btn-90X30-border-orange">提现</a></td>
+                        <td><a href="javascript:void(0);" class="btn-download">ios下载<i class="triangle-right-orange"></i></a></td>
+                        <td><a href="javascript:void(0);" class="btn-add-fast-payment"><i class="plus-orange">+</i>添加快捷支付</a></td>
+                        <td><a href="javascript:void(0);" class="btn-190X30-unable"><span>60</span>秒</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 标题 ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <table class="demo-table">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th width="300">title-lightblue</th>
+                        <th width="590">title-nock-lightblue</th>
+                        <th width="300">title-nock-green</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="wallet-main-head">
+                                <p class="title-lightblue">温馨提示</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wallet-main-head">
+                                <p class="title-nock-lightblue">最近交易记录<i class="before"></i><i class="after"></i></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wallet-main-head">
+                                <p class="title-nock-green">常见问题<i class="before"></i><i class="after"></i></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>常规标题demo</th>
+                        <th colspan="2">title-href | 标题右侧链接样式</th>
+                    </tr>
+                    <tr>
+                        <th><pre>&lt;div class="wallet-main-head clearfix"&gt;</pre>
+                            <pre>&lt;p class="title-lightblue fl"&gt;温馨提示&lt;/p&gt;</pre>
+                            <pre>&lt;/div&gt;</pre></th>
+                        <th><pre>&lt;div class="wallet-main-head clearfix"&gt;</pre>
+                            <pre>&lt;p class="title-nock-lightblue fl"&gt;最近交易记录&lt;i class="before"&gt;&lt;/i&gt;&lt;i class="after"&gt;&lt;/i&gt;&lt;/p&gt;</pre>
+                            <pre>&lt;a href="javascript:void(0);" class="title-href"&gt;查看所有交易记录&lt;/a&gt;</pre>
+                            <pre>&lt;/div&gt;</pre></th>
+                        <th><pre>&lt;div class="wallet-main-head clearfix"&gt;</pre>
+                            <pre>&lt;p class="title-nock-green fl"&gt;常见问题&lt;i class="before"&gt;&lt;/i&gt;&lt;i class="after"&gt;&lt;/i&gt;&lt;/p&gt;</pre>
+                            <pre>&lt;a href="javascript:void(0);" class="title-href"&gt;更多&lt;/a&gt;</pre>
+                            <pre>&lt;/div&gt;</pre></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wallet-main">
+                                <div class="wallet-main-head clearfix">
+                                    <p class="title-lightblue fl">温馨提示</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wallet-main" style="background:#fff">
+                                <div class="wallet-main-head clearfix">
+                                    <p class="title-nock-lightblue fl">最近交易记录<i class="before"></i><i class="after"></i></p>
+                                    <a href="javascript:void(0);" class="title-href">查看所有交易记录<i class="before"></i><i class="after"></i></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wallet-main" style="background:#fff">
+                                <div class="wallet-main-head clearfix">
+                                    <p class="title-nock-green fl">常见问题<i class="before"></i><i class="after"></i></p>
+                                    <a href="javascript:void(0);" class="title-href">更多</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 表格 ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24 wallet-main">
+            <p class="demo-tip-2">↓======== 这里是表格内容切换选项卡 ========↓</p>
+            <p class="wallet-main-tag">
+                <a href="javascript:void(0);" class="tag-href cur">充值记录</a><span>|</span><a href="javascript:void(0);" class="tag-href">提现记录</a><span>|</span><a href="javascript:void(0);" class="tag-href">退款记录</a>
+            </p>
+            <p class="demo-tip-2">↓======== 这里是表格内容部分 ========↓</p>
+            <table class="wallet-main-table" border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <td>创建时间</td>
+                        <td>订单名称</td>
+                        <td>金额（元）</td>
+                        <td>状态</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fc-8c8">2015-02-16</td>
+                        <td>充值</td>
+                        <td class="fc-f60">+100.00</td>
+                        <td>进行中</td>
+                        <td><a href="javascript:void(0);" class="btn-90X30 btn-orange">付款</a></td>
+                    </tr>
+                    <tr>
+                        <td class="fc-8c8">2015-02-16</td>
+                        <td>商城购物</td>
+                        <td class="fc-61b">-100.00</td>
+                        <td>交易完成</td>
+                        <td><a href="javascript:void(0);" class="fc-2f6 table-href">详情</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 表单 ======</p>
+    <p class="demo-tip-2">====== 表单的上下内边距是不需要使用内边距类控制的！ ======</p>
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24 wallet-main">
+            <div class="wallet-container">
+                <form action="">
+                    <table class="wallet-main-form" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>金海马电子钱包账户：</th>
+                                <td>xian****211@126.com</td>
+                            </tr>
+                            <tr>
+                                <th>密码保护问题1：</th>
+                                <td>
+                                    <div id="J_selectType" class="select-gray" style="width: 338px;">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w308">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul style="width: 336px; display: none;">
+                                            <li><a href="javascript:void(0);" data-value="0">我爸爸的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="1">我妈妈的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="2">我爱人的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="3">我初中学校的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="4">我高中学校的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="5">我大学的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="6">我爸爸的生日</a></li>
+                                            <li><a href="javascript:void(0);" data-value="7">我妈妈的生日</a></li>
+                                            <li><a href="javascript:void(0);" data-value="8">我最好的朋友的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="9">我小孩的名字是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="10">我配偶手机号码最后4位数是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="11">我父母手机号码最后4位数是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="12">我的第一个宠物名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="13">自定义</a></li>
+                                        </ul>
+                                        <input type="hidden" name="applyType">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码保护答案1：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w318" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码保护问题2：</th>
+                                <td>
+                                    <div id="J_selectType" class="select-gray" style="width: 338px;">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w308">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul style="width: 336px; display: none;">
+                                            <li><a href="javascript:void(0);" data-value="0">我爸爸的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="1">我妈妈的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="2">我爱人的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="3">我初中学校的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="4">我高中学校的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="5">我大学的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="6">我爸爸的生日</a></li>
+                                            <li><a href="javascript:void(0);" data-value="7">我妈妈的生日</a></li>
+                                            <li><a href="javascript:void(0);" data-value="8">我最好的朋友的名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="9">我小孩的名字是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="10">我配偶手机号码最后4位数是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="11">我父母手机号码最后4位数是什么</a></li>
+                                            <li><a href="javascript:void(0);" data-value="12">我的第一个宠物名字</a></li>
+                                            <li><a href="javascript:void(0);" data-value="13">自定义</a></li>
+                                        </ul>
+                                        <input type="hidden" name="applyType">
+                                    </div>
+                                    <span class="form-tip">密保问题不能相同</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码保护答案1：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w318" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码保护问题1：</th>
+                                <td><span class="pl-10">我爸爸的名字</span></td>
+                            </tr>
+                            <tr>
+                                <th>密码保护答案1：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w318" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>支付密码：</th>
+                                <td>
+                                    <input type="password" class="input-h30 w318" value="">
+                                    <a href="javascript:void(0)" class="form-tip-href">忘记密码？</a>
+                                    <span class="form-tip"></span>
+                                </td>
+                            </tr>
+                            <tr class="licence-photo">
+                                <th>证件照片：</th>
+                                <td><span class="fc-8c8">图片大小为1MB之内，格式为jpeg/jpg/png</span></td>
+                            </tr>
+                            <tr class="licence-photo">
+                                <th></th>
+                                <td><em>手持证件照</em><a href="javascript:void(0)" class="licence-photo-pic">+</a><em>证件正面照</em>
+                                    <a href="javascript:void(0)" class="licence-photo-pic"><img src="http://misc.jjcdn.com/p/images/78X58.jpg" alt=""></a><em>证件背面照</em>
+                                    <a href="javascript:void(0)" class="licence-photo-pic"><img src="http://misc.jjcdn.com/p/images/78X58.jpg" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="form-title-tip" colspan="2">请填写更换后的手机号码，新手机不能为已注册金海马钱包账户：</th>
+                            </tr>
+                            <tr>
+                                <th>手机验证码：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w118" value="">
+                                    <a href="javascript:void(0);" class="btn-190X30 btn-orange ml-10">获取手机验证码</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>手机验证码：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w118" value="" />
+                                    <a href="javascript:void(0);" class="btn-190X30-unable ml-10"><span>60</span>秒</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>手机验证码：</th>
+                                <td>
+                                    <input type="text" class="input-h30 w118" value="">
+                                    <a href="javascript:void(0);" class="btn-190X30 btn-orange ml-10">重新获取验证码</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <td><a href="javascript:void(0);" class="btn-140X30 btn-orange">确定</a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </section>
+    <p class="demo-tip-1">====== 通用底部 ======</p>
+    <footer class="member-foot">
+        <section class="kh-row-24">
+            <!-- 底部导航开始 -->
+            <div class="member-foot-nav">
+                <A href="javascript:void(0);">香江集团</A> |
+                <A href="javascript:void(0);">商户入驻</A> |
+                <A href="javascript:void(0);">装修汇</A> |
+                <A href="javascript:void(0);">装修资讯</A> |
+                <A href="javascript:void(0);">体验馆</A> |
+                <A href="javascript:void(0);">个性定制</A> |
+                <A href="javascript:void(0);">帮助中心</A> |
+                <A href="javascript:void(0);">网站地图</A> |
+                <A href="javascript:void(0);">友情链接</A> |
+            </div>
+            <!-- 版权信息开始 -->
+            <div class="member-foot-copyright">
+                &copy;Copyright 2014 KinHom.com 深圳市香江祥龙电子商务有限公司 All Rights Reserved.
+                <a href="javascript:void(0);">粤ICP备12018989号</a>
+            </div>
+            <!-- 底部图标-->
+            <section class="foot-icons member-foot-safe">
+                <a class="foot-icon-gswj" href="https://cert.ebs.gov.cn/a3b8a777-259b-497c-9e6a-c1bb4f71bbd7" target="_blank"><img src="https://cert.ebs.gov.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="36" height="50" border="0" style="border-width:0px;border:hidden; border:none;"></a>
+                <a class="foot-icon-beian" target="_blank"></a>
+                <!--可信网站图片LOGO安装开始-->
+                <!--<script src="http://kxlogo.knet.cn/seallogo.dll?sn=e14092244030054131ccux000000&amp;size=0"></script>-->
+                <a class="foot-icon-conic" href="https://ss.knet.cn/verifyseal.dll?sn=e14092244030054131ccux000000&amp;ct=df&amp;a=1&amp;pa=0.7425889638252556" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a>
+                <!--可信网站图片LOGO安装结束-->
+                <!--诚信网站图片LOGO安装开始-->
+                <a class="foot-icon-ceca" id="___szfw_logo___" href="https://search.szfw.org/cert/l/CX20140929005222005310" target="_blank"><img src="..//images/ceca.png" /></a>
+                <script type="text/javascript">
+                (function() {
+                    document.getElementById('___szfw_logo___').oncontextmenu = function() {
+                        return false;
+                    }
+                })();
+                </script>
+                <!--诚信网站图片LOGO安装开始-->
+            </section>
+        </section>
+    </footer>
+    <script src="http://misc.jjcdn.com/p/sea-modules/js/seajs.js;jquery.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/wallet-ui.js"></script>
+</body>
+
+</html>

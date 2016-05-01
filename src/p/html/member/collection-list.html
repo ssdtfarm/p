@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "collection-list",
+        "title": "我的金海马-我的收藏"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "我的订单",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    
+    <!-- 售后列表页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                    <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 collection-main">
+            <menu class="collection-menu">
+                <div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="page-name clearfix cur"><i class="icon-c-nav-l"></i><label>商品收藏</label><i class="icon-c-nav-r"></i></a>
+                </div>
+                <div class="collection-nav-operation">
+                    <label for="" class="collection-operation-chooseAll">
+                        <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkAll"></a><span>全选</span>
+                        <input type="hidden" name="chkAllItem" />
+                    </label>
+                    <a href="javascript:void(0)" class="icon icon-cart-8c8"></a>
+                    <a href="javascript:void(0)" class="icon icon-delete-8c8 JQ_delAll"></a>
+                </div>
+            </menu>
+
+            <!-- 数据为空时数据列表 -->
+            <ul class="collection-list-null clearfix">
+                <i class="icon-face-frown-blue"></i>
+                <label>您还没开始收藏心水商品~</label>
+                <a href="javascript:void(0);">去逛逛 ></a>
+            </ul>
+
+            <!-- 有数据时数据列表 -->
+            <ul class="collection-list clearfix">
+                <li class="collection-item">
+                    <p class="pic">
+                        <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" />
+                        </a>
+                    </p>
+                    <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                    </p>
+                    <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                    </p>
+                    <p class="operation">
+                        <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                        <a href="javascript:void(0)" class="icon-cart-8c8"></a>
+                        <a href="javascript:void(0)" class="icon-delete-8c8 JQ_delItem"></a>
+                        <input type="checkbox" class="check-item" name="chkItem" />
+                    </p>
+                </li>
+                <li class="collection-item">
+                    <p class="pic">
+                        <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_2.jpg" />
+                        </a>
+                    </p>
+                    <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                    </p>
+                    <p class="price"><a href="javascript:void(0)" class="item-undercarriage">已下架了~</a>
+                    </p>
+                    <p class="operation">
+                        <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                        <a href="javascript:void(0)" class="icon-cart-ccc"></a>
+                        <a href="javascript:void(0)" class="icon-delete-8c8 JQ_delItem"></a>
+                        <input type="checkbox" class="check-item" name="chkItem" />
+                    </p>
+                </li>
+                <li class="collection-item">
+                    <p class="pic">
+                        <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_3.jpg" />
+                        </a>
+                    </p>
+                    <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                    </p>
+                    <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                    </p>
+                    <p class="operation">
+                        <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                        <a href="javascript:void(0)" class="icon-cart-8c8"></a>
+                        <a href="javascript:void(0)" class="icon-delete-8c8 JQ_delItem"></a>
+                        <input type="checkbox" class="check-item" name="chkItem" />
+                    </p>
+                </li>
+                <li class="collection-item">
+                    <p class="pic">
+                        <a class="item-img" href="javascript:void(0)"><img src="http://misc.jjcdn.com/p/images/240X160_3.jpg" />
+                        </a>
+                    </p>
+                    <p class="name"><a class="item-name" href="javascript:void(0)">超值特卖 梵尔特系列 现代简约 白色+斑马</a>
+                    </p>
+                    <p class="price"><a href="javascript:void(0)" class="item-price">￥1899</a><a href="" class="item-price-original">￥2999</a>
+                    </p>
+                    <p class="operation">
+                        <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                        <a href="javascript:void(0)" class="icon-cart-8c8"></a>
+                        <a href="javascript:void(0)" class="icon-delete-8c8 JQ_delItem"></a>
+                        <input type="checkbox" class="check-item" name="chkItem" />
+                    </p>
+                </li>
+            </ul>
+            <!-- 下面选择区域 -->
+            <div class="collection-underline">
+                <div class="collection-nav-operation">
+                    <label for="" class="collection-operation-chooseAll">
+                        <a href="javascript:void(0)" class="icon icon-box-normal  JQ_chkAll"></a><span>全选</span>
+                        <input type="hidden" name="chkAllItem" />
+                    </label>
+                    <a href="javascript:void(0)" class="icon_cart_8c8"></a>
+                    <a href="javascript:void(0)" class="icon-delete-8c8 JQ_delAll"></a>
+                </div>
+                <!-- 分页 -->
+                <div class="pages-small mt-10 fr">
+                    <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                    <a href="javascript:void(0);" class="page-cur">1</a>
+                    <a href="javascript:void(0);" class="page-nor">2</a>
+                    <a href="javascript:void(0);" class="page-nor">3</a>
+                    <a href="javascript:void(0);" class="page-nor">4</a>
+                    <a href="javascript:void(0);" class="page-nor">5</a>
+                    <a href="javascript:void(0);" class="page-nor">6</a>
+                    <span>...</span>
+                    <a href="javascript:void(0);" class="page-nor">20</a>
+                    <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                    <span class="go-page">
+                            去第
+                            <input type="text" maxlength="4">
+                            页
+                        </span>
+                    <a href="javascript:void(0);" class="page-btn">确定</a>
+                </div>
+            </div>
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 售后列表页面结束 -->
+
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "collection-list"
+    })
+</body>
+
+</html>

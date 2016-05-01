@@ -1,0 +1,59 @@
+<dl>
+    <dt class="index-comment-title">
+        <i class="index-icon icon-index-special"></i>
+        <label class="comment-title-label">限时特价</label>
+        <!-- time count -->
+        <span class="special-time">
+                    <label>还剩:</label>
+                    <span class="time">
+                        <b id="J_sDay">00</b>
+                        <small>天</small>
+                    </span>
+                    <span class="time">
+                        <b id="J_sHour">00</b>
+                        <small>时</small>
+                    </span>
+                    <span class="time">
+                        <b id="J_sMinute">00</b>
+                        <small>分</small>
+                    </span>
+                    <span class="time">
+                        <b id="J_sSecond">00</b>
+                        <small>秒</small>
+                    </span>
+                </span>
+    </dt>
+    <dd id="J_indexSpecialSlider" class="special-slider">
+        <div class="hd"></div>
+        <div class="bd clearfix">
+            <ul>
+                <%for(var i=0; i<list.length; i++){%>
+                <%if(i!=0 && i%3==0){%>
+                <li>
+                    <%}else{%>
+                <li>
+                    <%}%>
+                    <a href="<%=list[i].linkURL%>" target="_blank">
+                                <span class="item-img">
+                                    <img _src="<%=list[i].imgSRC%>" width="240" height="158" alt="<%=list[i].seoAlt%>"/>
+                                    <span class="item-img-text">
+                                        <%=list[i].pTitle%>
+                                    </span>
+                                </span>
+                                <span class="item-label">
+                                    <span class="item-label-price">
+                                        <span class="off">直降 &yen;<%=list[i].offPrice%></span>
+                                        <!--<label></label>-->
+                                        <span class="price">&yen; <%=list[i].price%></span>
+                                    </span>
+                                    <span class="item-label-off">立即抢购 ></span>
+                                </span>
+                    </a>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="s-icon prev"></a>
+        <a href="javascript:void(0);" class="s-icon next"></a>
+    </dd>
+</dl>

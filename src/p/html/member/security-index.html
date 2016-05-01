@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+     @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "security-index",
+        "title": "我的金海马-安全中心"
+     })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "安全中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 安全中心页面开始 -->
+    <section class="kh-row-24 security-main-box clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);" class="on">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 安全中心右边开始 -->
+        <div class="kh-col-20">
+            <div class="security-rank-box">
+                <dl class="security-rank clearfix">
+                    <dt><i class="icon-member-safe"></i>安全等级</dt>
+                    <!-- 用户登录成功后发送手机短信提示 -->
+                    <!-- 根据安全等级显示不同的百分比以及安全等级条开始 -->
+                    <!-- 初始安全等级为25%，每完成支付密码/验证手机/验证邮箱其中一项，增加25% -->
+                    <dd class="security-line">
+                        <span class="icon-security icon-security-red">25%&nbsp;</span>
+                        <span class="icon-security"></span>
+                    </dd>
+                    <dd class="security-line">
+                        <span class="icon-security icon-security-yellow">50%&nbsp;</span>
+                        <span class="icon-security"></span>
+                    </dd>
+                    <dd class="security-line">
+                        <span class="icon-security icon-security-blue">75%&nbsp;</span>
+                        <span class="icon-security"></span>
+                    </dd>
+                    <dd class="security-line">
+                        <span class="icon-security icon-security-green">100%&nbsp;</span>
+                        <span class="icon-security"></span>
+                    </dd>
+                    <!-- 根据安全等级显示不同的百分比以及安全等级条结束 -->
+                </dl>
+                <!-- 获取IP地址并显示 -->
+                <p class="security-ip-address">您上次登录的IP地址是127.0.0.1，若非正常登录，请及时修改密码！</p>
+            </div>
+            <div class="security-content">
+                <h1>安全中心</h1>
+                <ul class="security-list-box clearfix">
+                    <!-- 登录密码部分 开始 -->
+                    <!-- 点击“修改”按钮，当前页重定向到“修改登录密码页” -->
+                    <li>
+                        <h2><i class="icon-tip-ok"></i>登录密码</h2>
+                        <p>登录金海马商城的密码</p>
+                        <a class="btn modify-btn" href="http://misc.jjcdn.com/p/html/member/security-login-psw.html" target="_self">修改</a>
+                    </li>
+                    <!-- 登录密码部分 结束 -->
+                    <!-- 支付密码未设置 开始 -->
+                    <!-- 点击“立即启用”按钮。若用户未验证手机，则弹窗提醒；否则，页面重定向至“设置支付密码页” -->
+                    <li class="security-warn clearfix">
+                        <h2><i class="icon-tip-wrong"></i>支付密码</h2>
+                        <p>启用支付密码后，在使用钱包时，需输入支付密码</p>
+                        <a class="btn enable-btn" id="J_enablePayPsw">立即启用</a>
+                        <input type="hidden" id="J_isPhone" name="phone" value="0"/>
+                    </li>
+                    <!-- 支付密码未设置，显示下述内容 结束 -->
+                    <!-- 支付密码已设置，显示下述内容 开始 -->
+                    <!-- 点击“修改”按钮，页面重定向至“修改支付密码页”；点击“忘记密码”按钮，则跳转至“重置支付密码页” -->
+                    <li class="clearfix">
+                        <h2><i class="icon-tip-ok"></i>支付密码</h2>
+                        <p>启用支付密码后，在使用钱包时，需输入支付密码</p>
+                        <a class="btn modify-btn" href="http://misc.jjcdn.com/p/html/member/security-modify-pay-psw.html" target="_self">修改</a>
+                        <a class="btn forget-btn" href="http://misc.jjcdn.com/p/html/member/security-reset-pay-psw.html" target="_self">忘记密码</a>
+                    </li>
+                    <!-- 支付密码已设置，显示下述内容 结束 -->
+                    <!-- 手机号码未验证，显示下述内容 开始 -->
+                    <!-- 点击“立即验证”按钮，页面跳转至“验证手机页” -->
+                    <li class="security-warn">
+                        <h2><i class="icon-tip-wrong"></i>验证手机</h2>
+                        <p>验证后，可用于快速找回登录密码及支付密码，接收账户余额变动提醒</p>
+                        <a class="btn enable-btn" href="http://misc.jjcdn.com/p/html/member/security-validate-phone.html" target="_self">立即验证</a>
+                    </li>
+                    <!-- 手机号码未验证，显示下述内容 结束 -->
+                </ul>
+                <!-- 超过两行时，套页面要注意！！ -->
+                <ul class="security-list-box clearfix">
+                    <!-- 手机号码已验证，显示下述内容 开始 -->
+                    <!-- 点击“修改”按钮，页面跳转至“修改绑定手机页” -->
+                    <li id="J_validatePhone">
+                        <h2><i class="icon-tip-ok"></i>验证手机</h2>
+                        <p>135&nbsp;****&nbsp;8888</p>
+                        <a class="btn modify-btn" href="http://misc.jjcdn.com/p/html/member/security-modify-phone-step-one.html" target="_self">修改</a>
+                    </li>
+                    <!-- 手机号码已验证，显示下述内容 结束 -->
+                    <!-- 邮箱未验证，显示下述内容 开始 -->
+                    <!-- 点击“立即验证”按钮，页面跳转至“验证邮箱页” -->
+                    <li class="security-warn">
+                        <h2><i class="icon-tip-wrong"></i>验证邮箱</h2>
+                        <p>您的邮箱还没验证，为了保障账户安全，请验证！</p>
+                        <a class="btn enable-btn" href="http://misc.jjcdn.com/p/html/member/security-validate-email.html" target="_self">立即验证</a>
+                    </li>
+                    <!-- 邮箱未验证，显示下述内容 结束 -->
+                    <!-- 邮箱已验证，显示下述内容 开始 -->
+                    <!-- 点击“修改”按钮，页面跳转至“修改邮箱页” -->
+                    <li>
+                        <h2><i class="icon-tip-ok"></i>验证邮箱</h2>
+                        <p>lijiak@qq.com</p>
+                        <a class="btn modify-btn" href="http://misc.jjcdn.com/p/html/member/security-modify-email-step-one.html" target="_self">修改</a>
+                    </li>
+                    <!-- 邮箱已验证，显示下述内容 结束 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 安全中心右边结束-->
+    </section>
+    <!-- 安全中心页面结束-->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "security-index"
+    })
+</body>
+
+</html>

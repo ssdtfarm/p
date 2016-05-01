@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop", "title" : "金海马商城-返利小店（未创建）" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{ "cdn" : "@@miscPath", "headerName" : "我的金海马", "search" : false })
+    <!-- 头部结束 -->
+    <!-- 主体开始 -->
+    <section class="rebate-detail">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav w1190">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 返利小店头部开始 -->
+        <div class="rebate-detail-head">
+            <div class="head-portrait">
+                <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/rebate/rebate-portrait.jpg" alt="头像"></a>
+            </div>
+            <div class="head-shopname">
+                <span id="J_shopname">老徐的店</span>
+                <input type="text" value="老徐的店" id="J_inputname"/>
+                <i id="J_edit"></i>
+            </div>
+            <div class="head-toshop">
+                <a href="javascript:void(0)">
+                    创建专属小店&nbsp;获返利<i></i>
+                </a>
+            </div>
+        </div>
+        <!-- 返利小店头部结束 -->
+        <!-- 返利小店概况开始 -->
+        <div class="rebate-detail-profile empty w1190">
+            <div class="profile-item">
+                <div>已创建小店的用户达</div>
+                <div class="mt-20 fc-f60"><span>14722</span>名</div>
+            </div>
+            <div class="profile-item">
+                <div>被邀请并成功购买的用户达</div>
+                <div class="mt-20 fc-f60"><span>345678</span>名</div>
+            </div>
+            <div class="profile-item">
+                <div>总计返利金额达</div>
+                <div class="mt-20 fc-f60"><span>&yen;345678</span></div>
+            </div>
+        </div>
+        <!-- 返利小店概况结束 -->
+    </section>
+    <!-- 主体结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop" })
+</body>
+
+</html>

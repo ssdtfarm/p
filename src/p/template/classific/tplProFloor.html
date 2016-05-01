@@ -1,0 +1,18 @@
+<div class="floor-title"><strong><%=floorLevel%>F · </strong><%=floorName%> <a href="<%=moreLink%>" class="floor-more" target="_blank">MORE ></a></div>
+<div class="pro-slider J_proSlider">
+    <div class="prev classific-icon"></div>
+    <div class="next classific-icon"></div>
+    <div class="bd">
+        <ul class="list">  
+            <%for(var i=0; i<floorItemList.length; i++) {%>
+            <li class="item">
+                <a href="<%=floorItemList[i].proLink%>" class="pro-link" title="<%=floorItemList[i].proTitle%>" target="_blank">
+                    <h3 class="pro-title"><%=floorItemList[i].proTitle%></h3>
+                    <img _src="<%=floorItemList[i].imgURL%>" alt="<%=floorItemList[i].proAlt%>" width="290" height="193">
+                </a>
+                <p class="pro-price fc-f60">&yen;<strong><%=floorItemList[i].proPrice%></strong></p>
+            </li>
+            <%}%>
+    </div>
+
+</div>

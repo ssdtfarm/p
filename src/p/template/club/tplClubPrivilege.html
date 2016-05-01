@@ -1,0 +1,23 @@
+<%if(list.length!=0){%>
+<div class="hd dis-none">
+	<!-- 可以根据不同的level设置不同的图标 -->
+    <ul></ul>
+</div>
+<div class="bd">
+    <ul class="club-privilege-list">
+    	<%for(var i=0; len=list.length, i<len; i++){%>
+        <li>
+            <a data-name="<%=list[i].name%>" class="JQ_showTipItem" href="<%if(list[i].linkURL==""){%>javascript:void(0);<%}else{%><%=list[i].linkURL%><%}%>">
+                <img src="<%=list[i].imgURL%>" />
+                <i class="tip-item-trungle"></i>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+</div>
+<a href="javascript:void(0);" class="prev last-page-btn"><</a>
+<a href="javascript:void(0);" class="next next-page-btn">></a>
+<span id="J_listTip" class="list-tip">
+    <label id="J_listTipText"></label>
+</span>
+<%}%>

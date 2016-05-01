@@ -1,0 +1,347 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+ 
+          
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/member-aside.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+body {
+	background-color: #e4e4e4;
+}
+.detail-rest-time label {
+	color: #f60;
+	vertical-align: middle;
+}
+/*========= btns ========================*/
+.detail-item-link {
+	display: inline-block;
+	color: #2f6ceb;
+}
+.detail-item-link:hover {
+	color: #f60;
+}
+/*============================= locatioin ================================*/
+.order-detail-loaction {
+	padding: 30px 0 0 0;
+}
+.order-detail-loaction span {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.order-detail-loaction a {
+	color: #2f6ceb;
+}
+.order-detail-loaction a:hover {
+	color: #f60;
+}
+
+/*=========================== 订单状态 ====================================*/
+.order-detail-status {
+	width: 100%;
+	margin-top: 20px;
+}
+/*===== 订单状态 ======*/
+.detail-left {
+	width: 740px;
+	min-height: 411px;
+	float: left;
+	background-color: #fff;
+}
+
+/* 状态标题 */
+.detail-left-info .detail-status-title {
+	position: relative;
+	z-index: 990;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	vertical-align: middle;
+}
+.detail-left-info .detail-status-title span{
+	/*margin-right: 20px;*/
+}
+.detail-left-info .detail-status-title .detail-delete {
+	position: absolute;
+	z-index: 991;
+	right: 10px;
+	top: 3px;
+}
+.detail-left-info .float-right {
+	position: absolute;
+	z-index: 991;
+	right: 5px;
+	top: 8px;
+}
+/* 状态栏按钮 */
+.detail-left-info .detail-status-title .detail-status-btn {
+	display: inline-block;
+	padding: 2px 5px;
+	color: #fff;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #f60;
+}
+.detail-left-info .detail-status-title .detail-status-btn:hover {
+	color: #fff;
+	text-decoration: none;
+}
+/* 提示 */
+.detail-left-info .detail-status-tip {
+	padding:20px 10px;
+}
+.detail-left-info .detail-status-tip span {
+	padding: 5px 10px;
+	background-color: #fed586;
+}
+.detail-left-info .detail-status-tip .icon-detail-chat{
+	vertical-align: middle;
+}
+
+
+/* 流程条 */
+.detail-status-line {
+	position: relative;
+	z-index: 990;
+	min-height: 120px;
+}
+.detail-status-line .status-line-point {
+	position: absolute;
+	z-index: 992;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+.detail-status-line .status-line-point i,
+.detail-status-line .status-line-point span,
+.detail-status-line .status-line-point b {
+	display:inline-block;
+	text-align: center;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.detail-status-line .status-line-point b {
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.detail-status-line .status-line-point span {
+	width: 75px;
+	margin: 0 auto;
+	color: #8c8c8c;
+}
+
+
+.detail-status-line .point-1 {
+	left: 20px;
+}
+.detail-status-line .point-2 {
+	left: 160px;
+}
+.detail-status-line .point-3 {
+	left: 305px;
+}
+.detail-status-line .point-4 {
+	left: 465px;
+}
+.detail-status-line .point-5 {
+	left: 620px;
+}
+
+.detail-status-line .status-line {
+	position: absolute;
+	z-index: 991;
+	top: 8px;
+	left: 65px;
+	font-size: 0;
+	height: 4px;
+	background-color: #ccc;
+}
+.detail-status-line .status-line-1 {
+	width: 150px;
+}
+.detail-status-line .status-line-2 {
+	width: 300px;
+}
+.detail-status-line .status-line-3 {
+	width: 450px;
+}
+.detail-status-line .status-line-4 {
+	width: 600px;
+}
+.detail-status-line .status-line span {
+	display: inline-block;
+	font-size: 0;
+	height: 4px;
+	background-color: #61bbe0;
+}
+.detail-status-line .status-line .line-1 {
+	width: 150px;
+}
+.detail-status-line .status-line .line-2 {
+	width: 300px;
+}
+.detail-status-line .status-line .line-3 {
+	width: 450px;
+}
+.detail-status-line .status-line .line-4 {
+	width: 600px;
+}
+/* 物流跟踪 */
+.detail-status-delivery {
+	padding: 10px;
+}
+.detail-status-delivery .delivery-info {
+	padding: 20px;
+	color: #333;
+	background-color: #ccc;
+}
+.detail-status-delivery .delivery-info span {
+	display: inline-block;
+	margin-right: 20px;
+}
+.detail-status-delivery .delivery-info label {
+	font-size: 16px;
+	font-weight: bold;
+}
+.detail-status-delivery .delivery-status {
+	margin-top: 10px;
+}
+.detail-status-delivery .delivery-status h3 {
+	font-size: 14px;
+	color: #61bbe0;
+}
+.detail-status-delivery .delivery-status p {
+	line-height: 22px;
+	color: #333;
+}
+/*===== 收货信息 ======*/
+.detail-right {
+	width: 240px;
+	float: right;
+	background-color: #fff;
+}
+/*信息列表*/
+.detail-right .detail-info-list {
+	padding: 10px 20px;
+}
+.detail-right .detail-info-list dt {
+	padding: 5px 0;
+	color: #61bbe0;
+	font-size: 14px;
+}
+.detail-right .detail-info-list dd {
+	color: #8c8c8c;
+}
+
+.detail-right .detail-info-list dd label {
+	display: inline-block;
+	width: 60px;
+	line-height: 22px;
+	text-align: right;
+	vertical-align: top;
+}
+.detail-right .detail-info-list dd span {
+	display: inline-block;
+	width: 135px;
+	color: #333;
+	line-height: 22px;
+	word-break: break-all;
+	word-wrap: break-word;
+	vertical-align: top;
+}
+/*============================== 订单统计 =============================*/
+.order-summary {
+	margin-top: 20px;
+	padding-bottom: 10px;
+	background-color: #fff;
+}
+.summary-table {
+	width: 100%;
+}
+.summary-table thead th {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	text-align: center;
+}
+.summary-table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+.summary-table .detail-title {
+	height: 35px;
+	line-height: 18px;
+	overflow: hidden;
+	color: #8c8c8c;
+}
+.summary-table .detail-propery {
+	height: 35px;
+	line-height: 18px;
+	overflow: hidden;
+	color: #333;
+}
+.summary-table .detail-market-price {
+	color: #8c8c8c;
+	text-decoration: line-through;
+}
+
+/* 订单金额统计 */
+.detail-count {
+	margin-top: 8px;	
+}
+.detail-count .detail-count-td {
+	padding: 3px 0;
+	color: #333;
+}
+.detail-count .detail-count-td span {
+	display: inline-block;
+	width: 116px;
+	text-align: left;
+}
+.detail-count .detail-count-td label {
+	display: inline-block;
+	width: 116px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: #f60;
+}
+.detail-count .detail-hr {
+	width: 180px;
+	padding: 0px 0 0 0;
+	margin-top: 10px;
+	border-top: 1px solid #333;
+}
+/*========================= 确认收货弹框内容样式 ============================*/
+detail-confirm {
+	display: none;
+}
+.detail-confirm-tip {
+	color: #333;
+	line-height: 30px;
+}
+.detail-confirm-delivery {
+	padding-left: 160px;
+	padding-bottom: 15px;
+	text-align: left;	
+	line-height: 25px;
+}
+.detail-confirm-delivery label {
+	display: inline-block;
+	width: 60px;
+	text-align: right;
+	color: #8c8c8c;
+}

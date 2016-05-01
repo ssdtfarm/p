@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "wallet-list",
+        "title" : "金海马商城-我的钱包"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn": "@@miscPath",
+        "headerName" : "我的钱包",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 我的钱包开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item  item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 clearfix">
+            <div class="wallet-total">
+                <p>钱包总金额：<strong class="fc-f60">&yen;80.00</strong></p>
+                <p class="fc-8c8">可用<em>&yen;80.00</em>|<em>冻结<em>&yen;0.00</em></em></p>
+                <a id="J_take" href="javascript:void(0);" class="take">提现申请</a>
+            </div>
+            <div class="take-history">
+                <div class="title clearfix">
+                    <div class="fl fs-14"><a href="javascript:void(0)" class="ml-20 mr-20 link">收支明细</a>|<span class="ml-20 mr-20 title-on">提现记录</span></div>
+                    <div class="fr">
+                        <div class="pager">
+                            <a href="javascript:void(0);" class="prev">上一页</a>
+                            <span class="status">
+                                <span class="cur">1</span>/
+                                <span class="total">15</span>
+                            </span>
+                            <a href="javascript:void(0);" class="next active">下一页</a>
+                        </div>
+                    </div>
+                </div>
+                <table class="history-table take">
+                    <thead>
+                        <!--<tr>
+                            <th width="152">交易编号</th>
+                            <th width="100">时间</th>
+                            <th width="100">类型</th>
+                            <th width="100">金额</th>
+                            <th width="150">账号</th>
+                            <th width="100">状态</th>
+                            <th width="100">操作</th>
+                            <th width="190">备注</th>
+                        </tr>-->
+                        <tr>
+                            <th width="198">申请编号</th>
+                            <th width="198">申请时间</th>
+                            <th width="198">提现金额（元）</th>
+                            <th width="198">状态</th>
+                            <th width="198">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--<tr>
+                            <td><p class="single-line serial">k1234556778865357</p></td>
+                            <td><p class="single-line date">2015-8-9</p><p class="single-line date">00：08：16</p></td>
+                            <td><p class="single-line type">提现</td>
+                            <td><p class="single-line price">-10000000000.00</p></td>
+                            <td><p class="single-line account">6225********8814</p></td>
+                            <td><p class="single-line status">提现失败</p></td>
+                            <td><a class="single-line action" href="http://misc.jjcdn.com/p/html/member/wallet-cashresult.html">详情</a></td>
+                            <td><div class="remark-div"><table class="remark-table"><tbody><tr><td class="remark-td">这个客户这个客户这个客户这个客户</td></tr></tbody></table></div></td>
+                        </tr>-->
+                        <tr>
+                            <td><p class="single-line serial">k1234556778865357</p></td>
+                            <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                            <td><p class="single-line price">-10000000000.00</p></td>
+                            <td><p class="single-line status">提现失败</p></td>
+                            <td><a class="single-line action" href="http://misc.jjcdn.com/p/html/member/wallet-cashresult.html">详情</a></td>
+                        </tr>
+                        <tr>
+                            <td><p class="single-line serial">k1234556778865357</p></td>
+                            <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                            <td><p class="single-line price">-10000000000.00</p></td>
+                            <td><p class="single-line status">提现失败</p></td>
+                            <td><a class="single-line action" href="http://misc.jjcdn.com/p/html/member/wallet-cashresult.html">详情</a></td>
+                        </tr>
+                        <tr>
+                            <td><p class="single-line serial">k1234556778865357</p></td>
+                            <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                            <td><p class="single-line price">-10000000000.00</p></td>
+                            <td><p class="single-line status">提现失败</p></td>
+                            <td><a class="single-line action" href="http://misc.jjcdn.com/p/html/member/wallet-cashresult.html">详情</a></td>
+                        </tr>
+                        <tr>
+                            <td><p class="single-line serial">k1234556778865357</p></td>
+                            <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                            <td><p class="single-line price">-10000000000.00</p></td>
+                            <td><p class="single-line status">提现失败</p></td>
+                            <td><a class="single-line action" href="http://misc.jjcdn.com/p/html/member/wallet-cashresult.html">详情</a></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td colspan="5" class="no-history-td">
+                            <div class="no-history">
+                                <i></i>
+                                <span>您还没有任何提现记录，<a href="http://www.kinhom.com" target="_blank" title="去逛逛先">去逛逛先&gt;</a></span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 参照官网页码规则 -->
+                <div class="paginator">
+                     <ul class="">
+                        <li><span>上一页</span></li>
+                        <li><span class="on">1</span></li>
+                        <li><a href="#"><span>2</span></a></li>
+                        <li><a href="#"><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li><a href="#"><span>6</span></a></li>
+                        <li><span class="ellipsis">...</span></li>
+                        <li><a href="#"><span>12</span></a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li>共12页</li>
+                        <li>
+                            <form method="get" action="">
+                                <input type="hidden" name="keyword" value="金海马床垫">去第
+                                <input type="text" name="curpage" value="1" id="toPage">页
+                                <input type="submit" name="submit" value="确定">
+                            </form>
+                        </li>
+                    </ul>                 
+                </div>
+            </div>
+            <div class="take-history">
+                <div class="title clearfix">
+                    <div class="fl fs-14"><span class="ml-20 mr-20 title-on">收支明细</span>|<a href="javascript:void(0)" class="ml-20 mr-20 link">提现记录</a></div>
+                    <div class="fr">
+                        <div class="pager">
+                            <a href="javascript:void(0);" class="prev">上一页</a>
+                            <span class="status">
+                                <span class="cur">1</span>/
+                                <span class="total">15</span>
+                            </span>
+                            <a href="javascript:void(0);" class="next active">下一页</a>
+                        </div>
+                    </div>
+                </div>
+                <table class="history-table income">
+                    <thead>
+                    <tr>
+                        <th width="155">序号</th>
+                        <th width="200">创建时间</th>
+                        <th width="155">类型</th>
+                        <th width="155">金额（元）</th>
+                        <th width="325">描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--<tr>
+                        <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                        <td><p class="single-line price">+10000000000.00</p></td>
+                        <td><p class="single-line price"></p></td>
+                        <td><p class="single-line price"></p></td>
+                        <td><div class="remark-div"><table class="remark-table"><tbody><tr><td class="remark-td">返现</td></tr></tbody></table></div></td>
+                    </tr>-->
+                    <tr>
+                        <td><p class="single-line serial">1480</p></td>
+                        <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                        <td><p class="single-line type">提现</p></td>
+                        <td><p class="single-line price">-100.00</p></td>
+                        <td><div class="remark-div"><table class="remark-table"><tbody><tr><td class="remark-td">买沙发</td></tr></tbody></table></div></td>
+                    </tr>
+                    <tr>
+                        <td><p class="single-line serial">1480</p></td>
+                        <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                        <td><p class="single-line type">提现</p></td>
+                        <td><p class="single-line price">-100.00</p></td>
+                        <td><div class="remark-div"><table class="remark-table"><tbody><tr><td class="remark-td">买沙发</td></tr></tbody></table></div></td>
+                    </tr>
+                    <tr>
+                        <td><p class="single-line serial">1480</p></td>
+                        <td><p class="single-line date">2015-8-9 00：08：16</p></td>
+                        <td><p class="single-line type">提现</p></td>
+                        <td><p class="single-line price">-100.00</p></td>
+                        <td><div class="remark-div"><table class="remark-table"><tbody><tr><td class="remark-td">买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发买沙发</td></tr></tbody></table></div></td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td colspan="5" class="no-history-td">
+                            <div class="no-history">
+                                <i></i>
+                                <span>您还没有任何提现记录，<a href="http://www.kinhom.com" target="_blank" title="去逛逛先">去逛逛先&gt;</a></span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 参照官网页码规则 -->
+                <div class="paginator">
+                    <ul class="">
+                        <li><span>上一页</span></li>
+                        <li><span class="on">1</span></li>
+                        <li><a href="#"><span>2</span></a></li>
+                        <li><a href="#"><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li><a href="#"><span>6</span></a></li>
+                        <li><span class="ellipsis">...</span></li>
+                        <li><a href="#"><span>12</span></a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li>共12页</li>
+                        <li>
+                            <form method="get" action="">
+                                <input type="hidden" name="keyword" value="金海马床垫">去第
+                                <input type="text" name="curpage" value="1" id="toPage">页
+                                <input type="submit" name="submit" value="确定">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="no-history">
+                    <i></i>
+                    <span>您还没有任何提现记录，<a href="http://www.kinhom.com" target="_blank" title="去逛逛先">去逛逛先&gt;</a></span>
+                </div>-->
+            </div>
+        </div>
+    </section>
+    <!-- 我的钱包结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "wallet-list"
+    })
+</body>
+</html>

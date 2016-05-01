@@ -1,0 +1,325 @@
+@charset "UTF-8";
+@import "../layout/layout.scss"; 
+      
+ 
+
+@import "../components/member-head.scss"; 
+@import "../components/common-foot.scss";
+
+ /* 
+  *	第三方微信登录授权后的登录页面
+  * author: yansiwen
+  *	date: 2016/02/18
+  */
+// 圆角
+@mixin border-radius($num: 3px) {
+	border-radius: $num;
+	-webkit-border-radius: $num;
+	-moz-border-radius: $num;
+}
+
+// 页面主内容
+.wrapper {
+	position: relative;
+	width: 989px;
+	margin: 50px auto 0;
+}
+
+// 用户信息
+.user-info { 
+	padding: 2px 0 0 2px;
+	// 头像
+	.portrait {
+		float: left;
+		display: block;
+		width: 50px;
+		height: 50px;
+	}
+	.info {
+		float: left;
+		margin-left: 21px;
+		font-size: 14px;
+		line-height: 25px;
+	}
+	// 用户名
+	.user-name {
+		font-weight: bold;
+		span {
+			color: $base-color-2f6;
+		}
+	}
+}
+
+.content-box {
+	margin-top: 38px;
+	.hd {
+		height: 34px;
+		border-bottom: 2px solid $base-color-ccc;
+		.hd-item {
+			float: left;
+		    width: 140px;
+		    margin-left: 10px;
+		    font-size: 14px;
+		    line-height: 34px;
+		    border-bottom: 2px solid $base-color-ccc;
+		    text-align: center;
+		    cursor: pointer;
+		    &:first-child {
+				margin-left: 0;		
+			}
+		}
+		.active,
+		.on {
+			border-bottom-color: #f60;
+			color: $base-color-f60;
+		}
+	}
+	.bd {
+		padding: 48px 0 0 52px;
+		.active {
+			display: block;
+		}
+	}
+	// tab内容
+	.content {
+		display: none;
+	}
+	// 协议
+	.protocol {
+		position: relative;
+	    margin-bottom: 27px;
+	    cursor: pointer;
+	    .icon {
+	    	*display: inline;
+	    	*zoom: 1;
+	    	vertical-align: middle;
+	    	-webkit-appearance: none;
+	    	cursor: pointer;
+	    }
+	    .icon-box-normal {
+		    background-position: -2555px -4px!important;
+		}
+	    span {
+	    	display: inline-block;
+			*display: inline;
+			position: absolute;
+		    padding-left: 6px;
+			vertical-align: middle;
+			line-height: 20px;
+	    	*zoom: 1;
+	    }
+	    a {
+	    	color: $base-color-2f6;
+	    }
+	    .error-tips {
+    		display: none;
+    		left: 260px;
+    		color: $base-color-c13;
+		}    
+	}
+	// 提交按钮
+	.submit-btn {
+	    width: 240px;
+	    height: 30px;
+	    margin-bottom: 26px;
+	    line-height: 30px;
+	    background: $base-color-f60;
+	    text-align: center;
+	    font-size: 14px;
+	    color: #fff;
+	    cursor: pointer;
+	    @include border-radius;
+	    &:hover {
+	        background: $base-color-ee9;
+	    }
+	}
+	// 忘记密码
+	.forget-psw {
+		width: 240px;
+		a {
+			display: block;
+			color: $base-color-2f6;
+			text-align: right;
+			line-height: 20px;
+		}
+	}
+}
+
+// 表单字段
+.hk-form-wrap {
+	position: relative;
+    margin-bottom: 30px;
+    .kh-form-item {
+	    width: 240px;
+	    height: 28px; 
+	    text-indent: 12px;
+	    line-height: 24px;
+	    border: 1px solid $base-color-b4b;
+	    font-size: 14px;
+	    color: $base-color-8c8;
+	    @include border-radius;
+	    &:-webkit-input-placeholder {
+	    	color: $base-color-b4b;
+	    }
+	}
+	.kh-form-item:focus { 
+	    border-color: $base-color-2f6;
+	}
+	.kh-form-item.error {
+	    border-color: $base-color-c13; 
+	}
+	/****** 注册部分 ******/
+	// 验证码
+	.code-item {
+		width: 140px;
+	}
+	// 获取验证码
+	.get-code,
+	.count-down {
+		position: absolute;
+	    margin-left: 10px;
+	    width: 90px;
+	    height: 28px;
+	    text-align: center;
+	    line-height: 28px;
+	    border: 1px solid $base-color-b4b;
+	    color: $base-color-b4b;
+	    cursor: pointer;
+	    @include border-radius;
+	    &:hover {
+	        color: $base-color-f60;
+	    }
+	}
+	.count-down {
+		display: none;
+		color: $base-color-f60;
+	}
+	// 错误提示
+	.error-tips {
+	    position: absolute;
+	    display: none;
+	    margin-top: 5px; 
+	    padding-left: 18px;
+	    line-height: 18px;
+	    color: $base-color-c13;
+	    i {
+	        position: absolute;
+	        margin-left: -18px;
+	        margin-top: 2px;
+	    }
+	}
+	// 密码提示
+	.info-tips {
+	    position: absolute;
+	    padding: 3px 0;
+	    line-height: 24px;
+	    color: $base-color-b4b;
+	}
+	// 正确提示
+	.icon-tip-ok {
+	    position: absolute;
+	    display: none;
+	    margin: 8px 0 0 -20px;
+	}
+	// 图形验证码
+	.img-code-item { 
+	    width: 140px;   
+	}
+	.img-code {
+	    position: absolute;
+	    width: 90px;
+	    margin-left: 10px;
+	    height: 30px;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.change-code {
+	    position: absolute;
+	    margin-left: 110px;
+	    color: $base-color-2f6;
+	    line-height: 30px; 
+	    span {
+	        color: $base-color-333;
+	    }
+	} 
+	/****** 登录部分 ******/
+	/* .reg-icon {
+    	background: url("../images/reg-icon.png") no-repeat;
+	}
+	.kh-login-clear {
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 220px;
+        width: 15px;
+        height: 15px;
+        margin-top: -7px;
+        background-position: -84px 0;
+        cursor: pointer;
+    } */
+}
+
+
+
+// 密码强度部分
+.level {
+    display: none;
+    position: absolute;
+    margin-left: 10px;
+    line-height: 30px;
+    i {
+        position: absolute;
+        width: 20px;
+        height: 12px;
+        margin-top: 9px;
+        background: $base-color-ccc;
+    }
+    @for $i from 1 through 3 {
+    	.level-icon#{$i} {
+    		margin-left: 3px + (24px * ($i - 1));
+    	}
+    }
+    .level-tips {
+        position: absolute;
+        margin-left: 76px;
+    }
+}
+.level1 {
+   	.level-icon1 {
+       background: $base-color-c13;
+    }
+    .level-tips {
+        color: $base-color-c13;
+    } 
+}
+.level2 {
+   	.level-icon1,
+   	.level-icon2 {
+        background: $base-color-ee9;
+    }
+    .level-tips {
+        color: $base-color-ee9;
+    }
+}
+.level3 {
+  	.level-icon1,
+  	.level-icon2,
+  	.level-icon3 {
+        background: #4ca579;
+    }
+    .level-tips {
+        color: #4ca579;
+    }
+}
+
+// 广告推广图片
+.promotion {
+	position: absolute;
+    top: 174px;
+    right: 0;
+	img {
+		display: block;
+		width: 365px;
+		height: 307px;
+	}
+}

@@ -1,0 +1,127 @@
+ /*
+ * 315活动
+ * zhangzhensheng
+ * 2016-03-01
+ */
+ .active-content {
+     background-color: #F9E900;
+ }
+
+ .limited-wrap {
+     margin: 28px auto 0;
+     width: 1190px;
+     /*height: 449px;*/
+      height: 638px;
+     background: #dd004e url(../img/miaosha-bg.gif) center no-repeat; 
+ }
+ 
+ .limited-content {
+     padding-top: 189px;
+     font-size: 0;
+ }
+ 
+ .limited-hd {
+     position: relative;
+     left: -1px;     
+     text-align: center;
+ }
+ 
+ .hd-item {
+     position: relative;
+     display: inline-block;
+     height: 55px;
+     font-size:0;
+     letter-spacing:-4px; /*实际情况下 -4这个值可能还要调整*/
+     word-spacing:-4px;     
+ }
+ .item-1 {
+     width: 397px;
+     background: #dd004e url(../img/10.jpg) center no-repeat
+ }
+ .item-1.active {
+     width: 397px;
+     background: #dd004e url(../img/10_on.jpg) center no-repeat
+ }
+ .item-2 {
+     width: 396px;
+     background: #dd004e url(../img/15.jpg) center no-repeat
+ }
+ .item-2.active {
+     width: 396px;
+     background: #dd004e url(../img/15_on.jpg) center no-repeat
+ }
+ .item-3 {
+     width: 397px;
+     background: #dd004e url(../img/20.jpg) center no-repeat
+ }
+ .item-3.active {
+     width: 397px;
+     background: #dd004e url(../img/20_on.jpg) center no-repeat
+ }
+ .limited-bd {
+     padding: 5px 0;
+     font-size:0;
+     /* letter-spacing:-4px; 实际情况下 -4这个值可能还要调整
+     word-spacing:-4px;      */
+     background-color: #dd004e;
+ }
+ .limited-bd .active {
+     display: block;
+ }
+
+ .limited-con {
+     display: none;
+     text-align: center;
+ }
+
+ .limited-con li { 
+     position: relative;
+     display: inline-block;
+     margin: 0 3px;
+     width: 290px;
+     height: 380px;
+     background: #fff;
+ }
+ .limited-con li:first-child {
+     /*margin-left: 3px;*/
+ }
+ /*蒙层*/
+ .mark {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: #000;
+     opacity: .65;
+     filter: Alpha(opacity = 60);
+ }
+ .tips {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     color: #fff;
+     font-size: 45px;
+     text-align: center;
+     line-height: 380px;
+ }
+ /*参与人数*/
+ .join {
+     position: absolute;
+     width: 236px; 
+     height: 45px;
+     top: 3321px;
+     right: 55px;
+     font-size: 32px;
+     color: #fff;
+     letter-spacing: 16px;
+     line-height: 46px;
+     /*background: url(../img/join.png) center no-repeat;*/
+ }
+ /*抢购按钮*/
+ .buy {
+     position: absolute;
+     width: 151px; 
+     height: 55px;
+     top: 3379px;
+     right: 97px;
+     /*background: url(../img/buy.png) center no-repeat;*/
+ }

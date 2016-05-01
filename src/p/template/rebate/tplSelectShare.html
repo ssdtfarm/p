@@ -1,0 +1,8 @@
+<p class="title">请选择</p>
+<i class="triangle  triangle-down"></i>
+<input type="text" class="selector-input">
+<ul class="list"> 
+    <%for(var i=0; i<list.length; i++ ){%>
+    <li><a href="/shop/share?catId=<%=list[i].catId%>" data-id="<%=list[i].catId%>"><%=list[i].name%></a></li>
+    <%}%>
+</ul>

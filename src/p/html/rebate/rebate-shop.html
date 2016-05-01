@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop", "title" : "金海马商城-返利小店" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{ "cdn" : "@@miscPath", "headerName" : "我的金海马", "search" : false })
+    <!-- 头部结束 -->
+    <!-- 主体开始 -->
+    <section class="rebate-detail">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav w1190">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 返利小店头部开始 -->
+        <div class="rebate-detail-head">
+            <div class="head-portrait">
+                <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/rebate/rebate-portrait.jpg" alt="头像"></a>
+            </div>
+            <div class="head-shopname">
+                <span id="J_shopname">老徐的店</span>
+                <input type="text" value="老徐的店" id="J_inputname"/>
+                <i id="J_edit"></i>
+            </div>
+            <div class="head-toshop">
+                <a href="javascript:void(0)">
+                    管理我的小店<i></i>
+                </a>
+            </div>
+        </div>
+        <!-- 返利小店头部结束 -->
+        <!-- 返利小店概况开始 -->
+        <div class="rebate-detail-profile w1190">
+            <div class="profile-title">
+                <h3>我的返利</h3>
+                <p class="sub">
+                    <a href="javascript:void(0)">查看返利详情</a>
+                </p>
+            </div>
+            <div class="profile-content">
+                <p class="main">可用返利：<span class="profit">&yen; 99999.00</span><a href="javascript:void(0)">好友成交订单：<span>8000单</span></a><a href="javascript:void(0)">未支付订单：<span>2单</span></a>
+                </p>
+                <p class="sub">待返：&yen; 0.00</p>
+            </div>
+        </div>
+        <!-- 返利小店概况结束 -->
+        <!-- 返利小店人气榜开始 -->
+        <div class="rebate-popular">
+            <div class="w1190">
+                <h3>THE MOST POPULAR COMMODITY<span></span></h3>
+                <h1>我的小店最具人气榜</h1>
+                <ul class="popular-list">
+                    <li class="item selected">
+                        <a href="#">
+                            <img src="@@miscPath/p/images/290X193_1.jpg" alt="">
+                        </a>
+                        <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                        <p class="price">&yen; 10500</p>
+                        <div class="tips">
+                            <span class="rebate-price">返&yen;9999</span>
+                            <span class="setted">已主推</span>
+                        </div>
+                        <i class="fav J_fav on"></i>
+                        <span class="watched">人气<br/>999999</span>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="@@miscPath/p/images/290X193_1.jpg" alt="">
+                        </a>
+                        <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                        <p class="price">&yen; 10500</p>
+                        <div class="tips">
+                            <span class="rebate-price">返&yen;9999</span>
+                            <span class="setted">已主推</span>
+                        </div>
+                        <i class="fav J_fav"></i>
+                        <span class="watched">人气<br/>999999</span>
+                    </li>
+                    
+                    <li class="item">
+                        <a href="#">
+                            <img src="@@miscPath/p/images/290X193_1.jpg" alt="">
+                        </a>
+                        <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                        <p class="price">&yen; 10500</p>
+                        <div class="tips">
+                            <span class="rebate-price">返&yen;9999</span>
+                            <span class="btn J_setMain">设为主推</span>
+                        </div>
+                        <i class="fav J_fav"></i>
+                        <span class="watched">人气<br/>999</span>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="@@miscPath/p/images/290X193_1.jpg" alt="">
+                        </a>
+                        <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                        <p class="price">&yen; 10500</p>
+                        <div class="tips">
+                            <span class="rebate-price">返&yen;9999</span>
+                            <span class="btn J_setMain">设为主推</span>
+                        </div>
+                        <i class="fav J_fav"></i>
+                        <span class="watched">人气<br/>9999</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 返利小店人气榜结束 -->
+        <!-- 返利小店推荐商品开始 -->
+        <div class="rebate-recommend list-wrap">
+            <h2>推荐返利商品<a href="" class="f12 fc-333 fr">管理我的小店&nbsp;&gt;</a></h2>
+            <ul class="recommend-list">
+                <li class="item selected">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="cancel">取消加入</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav on"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="cancel">取消加入</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                    <p class="price">&yen; 10500</p>
+                    <div class="tips">
+                        <span class="rebate-price">返&yen;9999</span>
+                        <span class="btn">加入小店</span>
+                    </div>
+                    <i class="fav J_fav"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- 返利小店推荐商品结束 -->
+    </section>
+    <!-- 主体结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "rebate-shop" })
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+ <!doctype html>
+<html>
+<head>
+    <!-- 载入头部 -->
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//www.kinhom.com">
+    <link rel="dns-prefetch" href="//img0.jjcdn.com">
+    <link rel="dns-prefetch" href="//img1.jjcdn.com">
+    <link rel="dns-prefetch" href="//img2.jjcdn.com">
+    <link rel="dns-prefetch" href="//img3.jjcdn.com">
+    <meta name="keywords" content="家具,家具网,买家具,家具卖场,家具网购,办公家具,网上买家具" />
+    <meta name="description" content="家具网购:中式家具,欧式家具,现代家具,韩式家具,英式家具,古典家具,办公家具，儿童家具，电脑椅，沙发，床垫，衣柜，餐桌。" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com:80/p/css/cashier.css" />
+    <!--[if lt IE 9]><!--><script src="http://misc.jjcdn.com:80/p/js/html5.js"></script><!--<![endif]-->
+    <title>金海马商城--收银台</title>
+</head>
+
+<body>
+
+    <!-- 头部开始 -->
+    <header class="member-header">
+        <section class="kh-row-24">
+            <div class="kh-col-7">
+                <div class="member-logo">
+                    <a href="javascript:void(0);"><img src="http://misc.jjcdn.com:80/p/images/logo.png" width="140" height="96" /></a>
+                    <a href="javascript:void(0)" class="member-logo-ad"><img src="http://misc.jjcdn.com:80/p/images/ad-logo.png" alt="" width="200" height="96"></a>
+                </div>
+            </div>
+            <div class="kh-col-7">
+                <p class="member-header-title">
+                    <span>收银台</span>
+                </p>
+            </div>
+
+        </section>
+    </header>
+
+    <!-- 收银台主体开始-->
+    <section class="clearfix cashier-page">
+        <div class="cashier-side">
+            <div class="order-info"></div>
+            <ul class="side-nav">
+                <li class="nav-item active-item"><i class="cashier-icon webpay"></i><span>网银支付</span></li>
+                <li class="nav-item"><span>快捷支付</span></li>
+                <li class="nav-item"><i class="cashier-icon staging"></i><span>分期付款</span></li>
+                <li class="nav-item J_wxPay"><span>微信支付</span></li>
+                <li class="nav-item"><span>支付宝支付</span></li>
+                <li class="nav-item"><span>转账汇款</span></li>
+            </ul>
+        </div>
+        <div class="cashier-main">
+            <!-- 网银支付开始 -->
+            <div class="webpay pay-type  pay-type-active">
+                <div class="pay-title">
+                    <span class="fl tit1">网银支付</span>
+                    <span class="fr">
+                        <a href="#"><i class="cashier-icon pay-qustion"></i>查看各银行限额说明</a>
+                        <span class="tit2">需跳转至网银页面完成付款，支持国内多家主流银行，付款更方便！</span>
+                    </span>
+                </div>
+
+                <ul class="bank-list"></ul>
+                <div>
+                    <a href="javascript:void(0);" class="go-pay go-pay-disable" target="_blank">去付款<i class="icon-point-right"></i></a>
+                </div>
+            </div>
+            <!-- 网银支付结束 -->
+
+            <!-- 快捷支付 -->
+            <div class="quick-pay pay-type">
+                <div class="pay-title">
+                    <span class="fl tit1">快捷支付</span>
+                    <span class="fr">
+                        <a href="#"><i class="cashier-icon pay-qustion"></i>查看各银行限额说明</a>
+                        <span class="tit2">无需跳转网银，银行预留手机短信验证进行支付</span>
+                    </span>
+                </div>
+
+                <!-- 选择已绑定的银行卡支付-->
+                <div class="select-pay">
+                    <div class="clearfix">
+                    </div>
+                    <div class="send-wrap">
+                        <div class="form-item-warp code-wrap">
+                            <span class="form-item-title">短信验证码：</span>
+                            <input type="text" class="txtInput txtInput-code" name="cartPhoneCode" value="" /><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span><span class="getPhoneCode J_bindCardPay">获取验证码</span>
+                            <span class="J_countDownWrap countDown"  id="J_timeSub"><span class="J_countDown">60</span>秒</span>
+                        </div>
+                        <div class="form-item-warp">
+                            <span class="form-item-title">&nbsp;</span>
+                            <a href="javascript:void(0);" class="go-pay go-pay-disable J_quickPay_list" >去付款<i class="icon-point-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 选择已绑定的银行卡支付结束 -->
+
+                <!-- 添加银行卡 -->
+                <div class="bank-number-wrap">
+                    <div>
+                        <input type="text" class="bank-number" placeholder="请输入银行卡号"><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span>请输入银行卡号</span></span>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0);" class="go-pay go-pay-disable J_checkBankNo">确定<i class="icon-point-right"></i></a>
+                    </div>
+                    <div class="send-wrap">
+                        <form action="">
+                            <div class="form-item-warp code-wrap">
+                                <span class="form-item-title">短信验证码：</span>
+                                <input type="text" class="txtInput txtInput-code" name="cartPhoneCode" value="" /><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i>请输入6位数字验证码</span><!-- <span class="getPhoneCode">获取验证码</span> -->
+                                <span class="J_countDownWrap countDown"  id="J_timeSub"><span class="J_countDown">60</span>秒</span>
+                            </div>
+                            <div class="form-item-warp">
+                                <a href="javascript:void(0);" class="go-pay go-pay-disable J_quickPay_create">去付款<i class="icon-point-right"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 添加银行卡结束 -->
+            </div>
+            <!-- 快捷支付结束 -->
+
+            <!-- 分期付款开始 -->
+            <div class="financing  pay-type  ">
+                <div class="pay-title">
+                    <span class="fl tit1">分期付款</span>
+                    <span class="fr">
+                        <a href="#"><i class="cashier-icon pay-qustion"></i>查看分期付款帮助</a>
+                        <span class="tit2">用信用卡分期支付，按月还款，减轻资金周转压力！</span>
+                    </span>
+                </div>
+
+                <ul class="bank-list clearfix">
+                    <li data-type="ICBC">
+                        <img src="http://misc.jjcdn.com:80/p/images/banks/ICBC.png" alt="">
+                    </li>
+                    <li data-type="CEB">
+                        <img src="http://misc.jjcdn.com:80/p/images/banks/CEB.png" alt="">
+                    </li>
+                    <li data-type="CGB">
+                        <img src="http://misc.jjcdn.com:80/p/images/banks/CGB.png" alt="">
+                    </li>
+                </ul>
+
+                <div class="financing-type"></div>
+                <!-- 添加银行卡 -->
+                <div class="bank-number-wrap">
+                    <div>
+                        <span class="tips-tit">请输入银行卡号：</span><input type="text" class="bank-number" ><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span>请输入银行卡号</span></span>
+                    </div>
+                    <div class="send-wrap" >
+                        <div class="form-item-warp code-wrap">
+                            <span class="tips-tit">短信验证码：</span>
+                            <input type="text" class="txtInput txtInput-code" name="cartPhoneCode" value="" /><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span>请输入手机验证码</span></span><span class="getPhoneCode">获取验证码</span>
+                            <span class="J_countDownWrap countDown"  id="J_timeSub"><span class="J_countDown">60</span>秒</span>
+                        </div>
+                        <div class="form-item-warp">
+                            <span class="form-item-title">&nbsp;</span>
+                            <a href="javascript:void(0);" class="go-pay go-pay-disable J_financing_pay">付款<i class="icon-point-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="form-item-warp">
+                            <span class="form-item-title">&nbsp;</span>
+                            <a href="javascript:void(0);" class="go-pay go-pay-disable go-pay go-pay-disable J_financingCheckBankNo">下一步<i class="icon-point-right"></i></a>
+                    </div>
+                </div>
+                <!-- 添加银行卡结束 -->
+            </div>
+            <!-- 分期付款结束 -->
+
+            <!-- 微信支付开始 -->
+            <div class="wx-pay  pay-type">
+                <div class="pay-title">
+                    <span class="fl tit1">微信支付</span>
+                    <span class="fr">
+                        <span class="tit2">微信扫一扫，即可完成支付，更方便快捷！</span>
+                    </span>
+                </div>
+                <div class="pay-content clearfix">
+                    <div class="qr-code fl">
+                        <div class="wx-icon"></div>
+                        <div class="code J_payCodeWrap"><span>微信二维码生成中，请稍等</span></div>
+                        <img class="code-tips-img" src="http://misc.jjcdn.com:80/p/images/code-pay-tips.png" alt="">
+                    </div>
+                    <div class="info fl">
+                        <div class="timer"></div>
+                        <div class="wx-tips"></div>
+                        <P class="txt">如有疑问，请联系客服<a href="#"><i class="cashier-icon kf-icon"></i></a></P>
+                    </div>
+                </div>
+            </div>
+            <!-- 微信支付结束 -->
+
+            <!-- 支付宝支付开始 -->
+            <div class="alipay pay-type">
+                <div class="pay-title">
+                    <span class="fl tit1">支付宝支付</span>
+                    <span class="fr">
+                        <span class="tit2">大众支付选择，您熟悉的支付方式！</span>
+                    </span>
+                </div>
+                <div class="pay-content">
+                    <a href="javascript:void(0);" class="cashier-icon alipay-icon"></a>
+                    <form action="http://pay.jiajucn.com/pay" id="alipayForm" method="post" target="_blank">
+                        <input type="hidden" value="" name="orderId" class="orderId">
+                        <input type="hidden" value="" name="childId" class="childId">
+                        <input type="hidden" value="" name="payType" class="payType">
+                        <input type="hidden" value="" name="tradeSn" class="tradeSn">
+                    </form>
+                    <div>
+                        <a href="javascript:void(0);" class="go-pay" target="_blank">去付款<i class="icon-point-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 支付宝支付结束 -->
+            <!-- 转账汇款开始 -->
+            <div class="remittance pay-type">
+                <div class="pay-title">
+                    <span class="fl tit1">转账汇款</span>
+                    <span class="fr">
+                        <span class="tit2">金海马商城支持银行柜台转账、网银转账方式进行支付</span>
+                    </span>
+                </div>
+                <div class="pay-content">
+                    <!-- 转账支付 -->
+                    <div  class="clearfix">
+                        <div class="fc-8c8 ">请完整填写转账汇款信息</div>
+                        <div class="order-transfer-form fl  mt10">
+                            <form action="/" id="J_offlineForm">
+                                <div class="txt-wrap">
+                                    <span class="form-item-title">支付方式：</span>
+                                    <span>转账汇款</span>
+                                </div>
+                                <div class="txt-wrap">
+                                    <span class="form-item-title">付款金额：</span>
+                                    <span class="total-price fc-f60">&yen;<sapn class="J_offlineTotalPrice">3000.00</sapn></span>
+                                </div>
+                                <div class="form-item-warp">
+                                    <span class="form-item-title">交易地址：</span>
+                                    <div class="address">
+                                        <div class="address-selector"></div>
+                                        <h3 class="address-tit J_select_address"><span class="userAddress">广东省广州市番禺区</span><span class="triangle triangle-down"></span></h3><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span>
+                                        <input type="hidden" class="J_offlineProvince">
+                                        <input type="hidden" class="J_offlineCity">
+                                        <input type="hidden" class="J_offlineArea">
+                                    </div>
+                                </div>
+                                <div class="form-item-warp">
+                                    <span class="form-item-title"><span>*</span>汇款日期：</span>
+                                    <input type="text" class="txtInput J_datepicker" name="date" value="" id="J_datepicker"><i class="cashier-icon datepick" id="J_pickDateBtn"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span>
+                                </div>
+                                <div class="form-item-warp">
+                                    <span class="form-item-title"><span>*</span>汇款人姓名：</span>
+                                    <input type="text" class="txtInput cartUserName" name="user" placeholder="汇款时填写的姓名或单位名称" value=""><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span>
+                                </div>
+                                <div class="form-item-warp">
+                                    <span class="form-item-title"><span>*</span>交易流水号：</span>
+                                    <input type="text" class="txtInput serialNumber" name="order" value=""><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span>
+                                </div>
+                                <div class="form-item-warp">
+                                    <span class="form-item-title"><span>*</span>交易行名：</span>
+                                    <input type="text" class="txtInput accountCode" name="from_bank" value=""><i class="cashier-icon cashier-succ-icon"></i><span class="error-info"><i class="cashier-icon cashier-error-icon"></i><span></span></span>
+                                </div>
+                                <div class="mb20">
+                                    <span class="form-item-title">备注：</span>
+                                    <textarea name="entend" ></textarea>
+                                </div>
+                                <div>
+                                    <span class="form-item-title">&nbsp;</span>
+                                    <a href="javascript:void(0);" class="go-pay go-pay-disable J_remittanceComfirm">确认付款<i class="icon-point-right"></i></a>
+                                </div>
+
+                                <input type="hidden" name="num" class="J_offlineNum" value="">
+                                <input type="hidden" name="address" class="J_offlineAddress" value="">
+                                <input type="hidden" name="bank" class="J_offlineNank" value="招行广州天安支行">
+                                <input type="hidden" name="account" class="J_offlineAccount" value="7559-2196-5810-113">
+                                <input type="hidden" name="payType" class="J_offlinePayType" value="1">
+                                <input type="hidden" name="orderId" class="J_offlineOrderId" value="">
+                                <input type="hidden" name="childId" class="J_offlineChildId" value="">
+                            </form>
+                        </div>
+                        <div class="bank-account-info fc-8c8 fl">
+                            <h2>金海马商城银行账户信息</h2>
+                            <p><label>商户名称：</label>深圳市金海马电子商务有限公司</p>
+                            <p><label>开户行：</label>招行广州天安支行</p>
+                            <p><label>银行账号：</label><span class="bank-number">7559-2196-5810-113</span></p>
+                            <p class="fc-8c8 mt10">如有疑问，请联系客服 <a href="http://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=542108&configID=76897&jid=4159371206"><i class="cashier-icon kf-icon"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 转账汇款结束 -->
+        </div>
+    </section>
+   <!--<div class="bandFrameWrap">查询中</div>-->
+    <!-- 收银台主体结束 -->
+    <!-- 底部开始 -->
+    <footer class="member-foot">
+    <section class="kh-row-24 clearfix">
+        <!-- 底部导航开始 -->
+        <div class="member-foot-nav">
+            <A href="javascript:void(0);" title="香江集团">香江集团</A> |
+            <A href="javascript:void(0);" title="商户入驻">商户入驻</A> |
+            <A href="javascript:void(0);" title="装修汇">装修汇</A> |
+            <A href="javascript:void(0);" title="装修资讯">装修资讯</A> |
+            <A href="javascript:void(0);" title="体验馆">体验馆</A> |
+            <A href="javascript:void(0);" title="个性定制">个性定制</A> |
+            <A href="javascript:void(0);" title="帮助中心">帮助中心</A> |
+            <A href="javascript:void(0);" title="网站地图">网站地图</A> |
+        </div>
+
+        <!-- 版权信息开始 -->
+        <div class="member-foot-copyright">
+            &copy;Copyright 2014 KinHom.com 深圳市香江祥龙电子商务有限公司 All Rights Reserved.
+            <a href="javascript:void(0);">粤ICP备12018989号</a>
+        </div>
+
+        <!-- 底部图标-->
+        <section class="foot-icons member-foot-safe">
+            <a class="f-icon foot-icon-gswj" href="https://cert.ebs.gov.cn/a3b8a777-259b-497c-9e6a-c1bb4f71bbd7" target="_blank">
+                <img src="http://misc.jjcdn.com/p/Images/govIcon.png" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="40" height="50" border="0"></a>
+            <a class="f-icon foot-icon-beian" target="_blank">
+                <img  src="http://misc.jjcdn.com/p/images/beian_info.png" alt="" width="110" height="40" alt="深圳市市场监督管理局企业主体身份公示"/>
+            </a>
+            <!--可信网站图片LOGO安装开始-->
+            <a class="f-icon foot-icon-conic" href="https://ss.knet.cn/verifyseal.dll?sn=e14092244030054131ccux000000&amp;ct=df&amp;a=1&amp;pa=0.7425889638252556" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;">
+                <img src="http://misc.jjcdn.com/p/images/logo/cnnic.png" style="border:none;" width="110" height="40" oncontextmenu="return false;" alt="可信网站">
+            </a>
+            <!--可信网站图片LOGO安装结束-->
+            <!--安全联盟行业验证 开始-->
+            <a class="f-icon foot-icon-ppb" key="56457126efbfb05d87e1fa51" logo_size="124x47" logo_type="business" href="http://www.anquan.org/authenticate/cert/?site=www.kinhom.com&amp;at=business" target="_blank"><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></a>
+            <!--安全联盟行业验证 结束-->
+            <!--诚信网站图片LOGO安装开始-->
+            <a class="f-icon foot-icon-ceca" id="___szfw_logo___" href="https://search.szfw.org/cert/l/CX20140929005222005310" target="_blank">
+                <img src="http://misc.jjcdn.com/p/images/ceca.png" width="110" height="40" alt="诚信网站" />
+            </a>
+            <script type="text/javascript">(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();</script>
+            <!--诚信网站图片LOGO安装结束-->
+            <!--银联特约商户标志开始-->
+            <span class="f-icon foot-icon-ChinaPay"><img src="http://misc.jjcdn.com/p/images/ChinaPay.png" width="165" height="40" alt="银联特约商户" /></span>
+            <!--银联特约商户标志结束-->
+        </section>
+    </section>
+</footer>
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    <script src="http://misc.jjcdn.com:80/p/js/base.js"></script>
+
+<script src="http://misc.jjcdn.com:80/p/js/cashier.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,626 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/club-nav.scss";    // member-system-nav
+@import "../components/common-search-bar.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  club-points-index-list 会员俱乐部首页
+ *
+ *  author:JinJing
+ *  date:20150318
+ */
+.ml-5{
+    margin-left: 5px;
+}
+label,
+span, 
+b {
+    vertical-align: middle;
+}
+/*幻灯浮层导航*/
+
+aside {
+    position: relative;
+    /*z-index: 990;*/
+    background: transparent;
+    height: 380px;
+    border: 0;
+}
+
+aside .club-index-top-menuBg {
+    position: absolute;
+    z-index: 991;
+    left: 5px;
+    top: -1px;
+    width: 290px;
+    height: 380px;
+    background: #000;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+aside .club-index-top-menu {
+    position: relative;
+    z-index: 992;
+    height: 380px;
+    color: #fff;
+}
+.club-index-top-menu .icon-point-right {
+    position: relative;
+    left: 5px;
+    top: -1px;
+    vertical-align: middle;
+}
+
+/*按钮*/
+
+.btn-90X30 {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.btn-orange {
+    color: #fff;
+    background: #f60;
+}
+
+.btn-orange:hover{
+    color: #fff;
+    background: #ee950a;
+}
+
+.club-index-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+/*未登录*/
+
+.club-index-top-menu .unlogin {
+    position: relative;
+    z-index: 992px;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+}
+.club-index-top-menu .unlogin dt{
+    height: 100px;
+    float: left;
+}
+.club-index-top-menu .unlogin dt img{
+    border: 1px solid #ccc;
+}
+.club-index-top-menu .unlogin dd {
+    width: 140px;
+    height: 97px;
+    float: left;
+    padding-top: 3px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.unlogin .login-now .no-have-id{
+    margin-top: 10px;
+    color: #f60;
+}
+.login-now .no-have-id span{
+    vertical-align: middle;
+}
+.login-now .no-have-id .register-href,.login-now .no-have-id .register-href:visited{
+    color: #f60;
+}
+.login-now .no-have-id .register-href:hover{
+    color: #f60;
+}
+/*会员信息部分*/
+
+aside .club-index-top-menu .member-detail {
+    height: 100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.member-detail dt {
+    float: left;
+}
+
+.member-detail dd {
+    float: left;
+    padding-left: 10px;
+}
+
+.member-detail dt .member-head-img {
+    width: 98px;
+    height: 98px;
+    border: 1px solid #ccc;
+}
+
+.member-detail dd h5 {
+    width: 123px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    color: #fff;
+}
+/*经验条*/
+
+.member-detail dd .experience-line {
+    position: relative;
+    z-index: 990;
+    width: 120px;
+    height: 10px;
+    margin-top: 15px;
+    *margin-top: 7px!important;
+    /* fixed IE7 */
+    
+    *margin-right: 5px!important;
+    /* fixed IE7 */
+    
+    text-indent: -9999px;
+}
+
+.member-detail dd .experience-line p {
+    position: absolute;
+    z-index: 991;
+    left: 0;
+    top: 0;
+}
+
+.member-detail dd .experience-line p.icon-experience-333 {
+    position: absolute;
+    z-index: 993;
+    width: 120px;
+    height: 10px;
+    display: inline-block;
+    background: url(../images/icon_experience_line_333.png);
+}
+
+.member-detail dd .experience-line p.icon-safe-green {
+    z-index: 994;
+    height: 10px;
+}
+
+.member-detail .icon-safe-green .experience-tip {
+    position: absolute;
+    z-index: 994;
+    right: -10px;
+    top: 10px;
+    width: 20px;
+    height: 25px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    text-indent: 0;
+    color: #fff;
+    background: url(../images/icons_my_kh.png) -63px -33px;
+}
+/*积分明细*/
+
+aside .club-index-top-menu .points-detail {
+    padding: 0 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.points-detail dd {
+    margin-top: 3px;
+}
+
+.points-detail .points-detail-href {
+    color: #fff;
+}
+.points-detail .points-detail-href i{
+    margin-left: 3px;
+    font-family: "宋体";
+}
+.points-detail .points-detail-href:hover {
+    color: #f60;
+}
+/*免费赚取积分按钮*/
+
+aside .club-index-top-menu .free-get-points-btn {
+    position: absolute;
+    z-index: 991;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
+    display: block;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    background: #f60;
+}
+aside .club-index-top-menu .free-get-points-btn:hover{
+    color: #fff;
+    background: #ee950a;
+}
+aside .club-index-top-menu .unabled-freeget-points-btn{
+    position: absolute;
+    z-index: 991;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
+    display: block;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    background: #ccc;
+    cursor: default;
+}
+aside .club-index-top-menu .unabled-freeget-points-btn:hover{
+    color: #fff;
+    background: #ccc;
+    cursor: default;
+}
+/*首页顶部模块 幻灯*/
+
+.club-points-slider-warp {
+    position: absolute;
+    z-index: 80;
+    left: 0;
+    top: 181px;
+    width: 100%;
+    min-width: 1190px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.club-points-slider-warp .index-full-slider {
+    position: relative;
+    z-index: 98;
+    width: 100%;
+    height: 380px;
+    min-width: 1190px;
+}
+
+.index-full-slider .slider-item {
+    width: 100%;
+    min-width: 1190px;
+    height: 380px;
+    float: left;
+}
+
+.club-rebate-slider .slider-item .slider-item-href {
+    width: 100%;
+    height: 380px;
+    display: block;
+}
+/*幻灯数字控制按钮*/
+
+.index-full-slider .hd {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    min-width: 1190px;
+    text-align: center;
+}
+
+.index-full-slider .hd li {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    background: #333;
+    text-indent: -9999px;
+}
+
+.index-full-slider .hd .on {
+    background: #f60;
+}
+/*=========== 内容部分 ==========*/
+
+.club-points-container {
+}
+
+.club-points-floor-title {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.club-points-floor-title b {
+    position: relative;
+    top: -3px;
+    font-size: 20px;
+}
+
+.club-points-floor-title i {
+    margin: 0 4px;
+}
+/*今日推荐内容*/
+
+.today-recommendation-list {
+    margin-right: -10px;
+}
+
+.today-recommendation-list .today-item {
+    position: relative;
+    z-index: 990;
+    width: 388px;
+    height: 288px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+.today-recommendation-list .today-item .goods-name{
+    height: 32px;
+    overflow: hidden;
+}
+
+.today-recommendation-list .today-item .goods-name-href {
+    width: 260px;
+    display: block;
+    padding: 9px 112px 9px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    color: #333;
+}
+
+.today-recommendation-list .today-item:hover .goods-name-href {
+    color: #f60;
+}
+
+.today-recommendation-list .today-item .quantity {
+    position: absolute;
+    z-index: 991;
+    top: 9px;
+    right: 12px;
+    width: 112px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.today-item .quantity span {
+    vertical-align: top;
+}
+
+.today-item .pic {
+    position: relative;
+    width: 388px;
+    height: 256px;
+}
+
+.today-item .pic .pic-tip {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    bottom: 10px;
+    display: inline-block;
+    width: 97px;
+    height: 97px;
+}
+
+.today-item .pic-href {
+    display: block;
+}
+
+.today-item .pic-href img {
+    width: 388px;
+    height: 256px;
+}
+
+.today-recommendation-list .today-item .price-info {
+    position: absolute;
+    z-index: 992;
+    left: 10px;
+    bottom: 8px;
+    width: 370px;
+    height: 40px;
+    display: none;
+}
+
+.today-recommendation-list .today-item .price-info-bg {
+    position: absolute;
+    z-index: 81;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: none;
+    background: #000;
+    -moz-opacity: .75;
+    -webkit-opacity: .75;
+    filter: alpha(opacity=75);
+}
+
+.today-item .price-info .exchange-price {
+    color: #f60;
+}
+
+.today-item .price-info .exchange-price b {
+    position: relative;
+    top: -3px;
+}
+
+.today-item .price-info .store-price {
+    margin-top: -2px;
+    color: #fff;
+}
+
+.today-recommendation-list .today-item .exchange-btn {
+    position: absolute;
+    z-index: 992;
+    right: 10px;
+    bottom: 9px;
+    width: 136px;
+    display: none;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
+
+.today-recommendation-list .today-item:hover .price-info,
+.today-recommendation-list .today-item:hover .price-info-bg,
+.today-recommendation-list .today-item:hover .exchange-btn {
+    display: block;
+}
+.today-recommendation-list .today-item:hover .exchange-btn:hover{
+    color: #f60;
+    border-color: #f60;
+}
+/*所有商品*/
+
+.all-products-list {
+    margin-right: -60px;
+}
+
+.all-products-list .all-item {
+    position: relative;
+    z-index: 990;
+    width: 188px;
+    height: 286px;
+    float: left;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 60px;
+    border: 1px solid #ccc;
+}
+
+.all-products-list .all-item:hover {
+    border-color: #f60;
+}
+
+.all-products-list .all-item .pic {
+    width: 188px;
+    height: 125px;
+}
+
+.all-products-list .all-item .pic-href img {
+    width: 188px;
+    height: 125px;
+}
+
+.all-products-list .all-item .goods-name {
+    height: 35px;
+    padding: 0 10px;
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.all-products-list .all-item .goods-name-href {
+    height: 35px;
+    display: block;
+    line-height: 18px;
+    color: #8c8c8c;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.all-products-list .all-item:hover .goods-name-href {
+    color: #f60;
+}
+
+.all-products-list .all-item .price {
+    margin-top: 4px;
+    padding: 0 10px;
+    color: #8c8c8c;
+}
+.all-products-list .all-item .repoints-price {
+    margin-top: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.all-products-list .all-item .exchange-price {
+    margin-top: 20px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #f60;
+}
+
+.all-products-list .all-item .exchange-price b {
+    position: relative;
+    top: -3px;
+}
+.all-products-list .all-item .repoints-msg{
+    margin-top: 2px;
+    padding: 0 10px;
+    color: #333;
+}
+.all-products-list .all-item .exchange-btn {
+    position: absolute;
+    z-index: 991;
+    bottom: 5px;
+    left: 23px;
+    width: 140px;
+    display: none;
+    padding: 7px 0;
+    margin: 0 auto;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    background: #f60;
+    border-radius: 4px;
+}
+.all-products-list .all-item .exchange-btn .icon-point-right{
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.all-products-list .all-item:hover .exchange-btn {
+    display: block;
+}
+.all-products-list .all-item:hover .exchange-btn:hover {
+    background: #ee950a;
+}
+.all-products-list .all-item .message {
+    margin-top: 35px;
+    padding: 0 10px;
+    text-align: left;
+    color: #8c8c8c;
+}
+
+.all-products-list .all-item:hover .message {
+    display: none;
+}
+/*拖动鼠标加载*/
+.loding-line{
+    margin-top: 15px;
+    text-align: center;
+}
+.loding-line p{
+    margin-top: 2px;
+}

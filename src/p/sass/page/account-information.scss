@@ -1,0 +1,549 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-aside.scss";     // head-search-bar
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/member-select.scss";
+@import "../components/common-dialog.scss";    // personal-info-art-dialog
+
+/*
+ *  account-information 个人信息
+ *
+ *  author:Fan Ling
+ *  date:20150316
+*/
+body {
+    background: #e4e4e4;
+}
+.btn-100x30 {
+    display: inline-block;
+    width: 43px;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 橙色按钮 */
+.btn-orange {
+    background-color: #f60;    
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+/*灰色按钮*/
+.btn-gray {
+    background-color: #8c8c8c;
+    margin: 10px;
+}
+
+
+/*===============  个人信息的切换标签导航  ==============*/
+/* account-information nav style */
+
+.account-information-nav {
+    padding: 14px 0;
+    margin-top: 15px;
+}
+/* normal nav */
+
+.account-information-nav a {
+    display: inline-block;
+    height: 30px;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    background: #8c8c8c;
+}
+.account-information-nav a i {
+    float: left;
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: hidden;
+}
+.account-information-nav a label {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* normal nav hover */
+
+.account-information-nav a:hover {
+    color: #fff;
+}
+.account-information-nav a:hover i {
+    visibility: visible;
+}
+.account-information-nav a:hover label {
+	position: relative;
+	padding: 0 10px;
+    background-color: #61bbe0;
+}
+.account-information-nav a:hover label:after {
+    content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -16px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/* nav cur */
+
+.account-information-nav a.cur i {
+    visibility: visible;
+}
+.account-information-nav a.cur label {
+	position: relative;
+	padding: 0 10px;
+	color: #fff;
+    background-color: #61bbe0;   
+}
+.account-information-nav a.cur label:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -16px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/*=================  账户信息列表   ===============*/
+.account-information-main {
+    /*width: 980px;*/
+}
+.account-information-main .account-information-form {
+    padding: 30px 0 30px 10px;
+    margin: 0 0 0 5px;
+    background-color: #ffffff;
+}
+/*上白色底色*/
+.account-information-table0 {    
+    background-color: #ffffff;
+    width: 100%;
+}
+/*账户信息列表项*/
+.account-information-table0 .account-information-item {
+    width: 630px;    
+}
+.account-information-table0 .account-information-item th {
+    width: 120px;
+    text-align: right;
+    line-height: 30px;
+    
+}
+.account-information-table0 .account-information-item td {
+    padding: 10px;
+    font-size: 12px;
+}
+/*可点击按钮*/
+.account-information-modification {
+    color: #2f6ceb;
+    vertical-align: top;
+}
+.account-information-modification:hover {
+    color: #f60;
+}
+.account-information-item .account-information-from-voucher label {
+    display: none;
+    color: #c13d23;
+    vertical-align: bottom;
+}
+.account-information-item span{
+    vertical-align: top;
+}
+/* 帐号头像链接 */
+.portrait-link {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #b4b4b4;
+    vertical-align: inherit;
+}
+.portrait-link:hover {
+    border: 1px solid #f60;
+}
+/*修改昵称输入框*/
+.account-information-input {
+    border: 1px solid #333;
+    width: 250px;
+    height: 30px;
+    line-height: 30px\9;
+    padding: 0 0 0 10px;
+    border:1px solid #b4b4b4;
+    border-radius: 2px; 
+    margin-right: 10px; 
+    color: #333;
+    font-size: 12px;
+ }
+/*下白色底色*/
+.account-information-table1 { 
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 30px;
+    text-align: 10px;
+    padding: 0 0 30px 0;
+
+}
+.account-information-time {
+    width: 100px;
+    padding: 10px 10px 0px 20px;
+    font-size: 12px;
+    line-height: 30px;
+
+}
+.account-information-up {
+    vertical-align: top;
+
+}
+.account-trungle-title {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-indent: 20px;
+    line-height: 30px;
+    background-color: #4ca579;
+}
+.account-trungle-title:before {
+    position: absolute;
+    z-index: 991;
+    right: -14px;
+    top: 0;
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    border-width: 14px 14px 14px 0;
+    border-style: solid;
+    border-color: #4ca579 transparent transparent #4ca579;
+    content: " ";
+}
+.account-trungle-title:after {
+    position: absolute;
+    z-index: 991;
+    right: -14px;
+    bottom: 0;
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    border-width: 14px 14px 14px 0;
+    border-style: solid;
+    border-color:  transparent transparent #4ca579 #4ca579;
+    content: " ";
+}
+/*======================= 修改密码弹窗样式 =================================*/
+.a-edit-pass-tr {
+    /*padding: 8px 0;*/
+}
+.a-edit-pass-tr .edit-input-wrap {
+    position: relative;
+    z-index: 990;
+    width: 178px;
+    height: 28px;
+    // margin: 0 auto;
+    padding: 0 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 2px;
+    margin-left: 80px;
+}
+.a-edit-pass-tr .edit-input-wrap.error {
+    border-color: #c13d23;
+}
+.a-edit-pass-tr .edit-input-wrap input {
+    position:  relative;
+    z-index: 992;
+    width: 178px;
+    height: 28px;
+    line-height: 28px\9;
+    background-color: transparent;
+}
+.a-edit-pass-tr .edit-pass-tip {
+    // width: 320px;
+    height: 22px;
+    line-height: 22px;
+    // text-align: center;
+    // margin: 0 auto;
+    margin-left: 80px;
+}
+.a-edit-pass-tr .tip-ok {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+.edit-input-wrap .edit-tip-text {
+    position: absolute;
+    z-index: 991;
+    left: 10px;
+    top: 5px;
+    top: 7px\9;
+}
+/*================= 绑定邮箱样式 ============================*/
+.set-email-form {
+    padding: 10px 0 0 0;
+}
+.set-email-form .email-btn-tr {
+    padding: 30px 0 0px 0;
+    text-align: center;
+}
+/*发送按钮*/
+.set-email-form .orange {
+    background-color: #f60;
+}
+.set-email-form .orange:hover {
+    background-color: #ee950a;
+}
+.set-email-form .gray {
+    background-color: #ccc;
+    cursor: default;
+}
+.set-email-form .gray:hover {
+    background-color: #ccc;
+}
+
+.set-email-form .send-btn {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+}
+/*提示文字*/
+.email-send-tip {
+    width: 95%;
+    margin-top: 30px;
+    padding: 5px 5px 0 5px;
+    border-top: 1px solid #b4b4b4;
+    color: #8c8c8c;
+    line-height: 22px;
+}
+/*====================== 绑定手机样式 ====================================*/
+/*-------  步骤一 -------------------*/
+.set-phone-form {
+
+}
+/* 步骤提示块 */
+.set-phone-form .set-phone-steps {
+    padding: 20px 0 15px 0;
+    text-align: center;
+}
+/* 亮起来 */
+.set-phone-steps .step-on {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin: 0 15px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+.set-phone-steps .step-on:before {
+    position: absolute;
+    z-index: 991;
+    left: -15px;
+    top: 0;
+    display: inline-block;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 15px 15px 15px 15px;
+    border-style: solid;
+    border-color: #333 transparent #333 transparent;
+    content: " ";
+}
+.set-phone-steps .step-on:after {
+    position: absolute;
+    z-index: 991;
+    right: -30px;
+    top: 0;
+    display: inline-block;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 15px 15px 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+    content: " ";
+}
+/* 不亮起来 */
+.set-phone-steps .step-off {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin: 0 15px;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    background-color: #ccc;
+}
+.set-phone-steps .step-off:before {
+    position: absolute;
+    z-index: 991;
+    left: -15px;
+    top: 0;
+    display: inline-block;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 15px 15px 15px 15px;
+    border-style: solid;
+    border-color: #ccc transparent #ccc transparent;
+    content: " ";
+}
+.set-phone-steps .step-off:after {
+    position: absolute;
+    z-index: 991;
+    right: -30px;
+    top: 0;
+    display: inline-block;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 15px 15px 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ccc;
+    content: " ";
+}
+/* 输入框 */
+.w178 {
+    width: 178px;
+}
+.w78 {
+    width: 78px;
+}
+.set-phone-form .step-tip {
+    padding: 10px 0;
+}
+.set-phone-form .step-tr {
+    padding: 0 0 0 100px;
+
+}
+.step-tr .step-input-wrap {
+    position: relative;
+    /*z-index: 990;*/
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #b4b4b4;
+    color: #333;
+    border-radius: 2px;
+}
+.step-tr .step-input-wrap .tip-ok {
+    position: absolute;
+    z-index: 3;
+    right: -20px;
+    top: 5px;
+}
+.step-tr .step-input-wrap.error {
+    border-color: #c12d23;
+}
+.step-tr .step-input-wrap input {
+    position: relative;
+    z-index: 992;
+    width: 100%;
+    height: 28px;
+    line-height: 28px\9;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.step-tr .step-input-wrap .step-input-tip {
+    position: absolute;
+    z-index: 991;
+    left: 10px;
+    top: 5px;
+    top: 7px\9;
+    color: #8c8c8c;
+    vertical-align: middle;
+}
+.step-tr .edit-pass-tip {
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+}
+.step-tr .step-code-wrap img {
+    padding-left: 5px;
+    padding-top: 2px;
+    height: 26px;
+    line-height: 26px;
+    vertical-align: bottom;
+}
+/*验证码显示样式*/
+.sep-phone-code {
+    display: inline-block;
+    height: 30px;
+    padding:0 10px;
+    margin-left: 10px;
+    color: #fff;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f60;
+}
+/* 刷新验证码按钮 */
+.change-code-btn {
+    display: inline-block;
+    vertical-align: middle;
+    color: #2f6ceb;
+}
+.change-code-btn:hover {
+    color: #f60;
+}
+/*----- 步骤二 -----------------*/
+.phone-code-btn {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f60;
+    border-radius: 2px;
+}
+.phone-code-btn-gray {
+    display: none;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 2px;
+}
+.phone-code-btn:hover {
+    background-color: #ee950a;
+}

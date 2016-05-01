@@ -1,0 +1,368 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/member-nav.scss";
+
+@import "../components/common-dialog.scss";
+@import "../components/common-login-dialog.scss";
+
+/*
+ *  register 注册
+ *
+ *  author:JinJing
+ *  date:2015-03-27
+ *  modify by linyandi
+ *  2015-04-20
+ */
+.register-warp {
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+.name {
+    text-decoration: none;
+}
+/*切换导航部分*/
+
+.register-nav {
+    padding: 0 30px;
+}
+
+.register-nav .nav-tag {
+    padding: 5px 20px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 20px;
+    background: #8c8c8c;
+}
+
+.register-nav .nav-tag:hover,
+.register-nav .cur {
+    position: relative;
+    z-index: 990;
+    background: #f60;
+}
+
+.register-nav .nav-tag:hover:after,
+.register-nav .cur:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #f60 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/*注册表单部分*/
+
+.register-content {
+    width: 450px;
+    padding-left: 30px;
+}
+
+.register-content dl {
+    margin-top: 22px;
+}
+
+.register-content dl dt {
+    position: relative;
+    z-index: 990;
+    width: 450px;
+    height: 60px;
+}
+
+.register-content dl .register-item-input {
+    display: inline-block;
+    width: 428px;
+    padding: 20px 10px 20px 10px;
+    font-size: 16px;
+    color: #b4b4b4;
+    border: 1px solid #b4b4b4;
+    border-radius: 3px;
+}
+.register-content dl input.error {
+    border: 1px solid #c13d23;
+}
+.register-content .register-item-style-verify .register-item-input {
+    width: 303px;
+    padding: 20px 135px 20px 10px;
+}
+
+.register-content .register-item-yzm .register-item-input {
+    width: 278px;
+}
+
+.register-content dl .register-item-input:focus {
+    color: #333;
+    border-color: #2f6ceb;
+}
+/*提示样式*/
+
+.register-content .text-erro .register-item-input {
+    border: 1px solid #f60;
+}
+
+.register-content .register-item-tip {
+    position: absolute;
+    z-index: 991;
+    left: 0;
+    bottom: -20px;
+    color: #c13d23;
+}
+.register-content .text-erro .register-item-tip {
+    color: #c13d23;
+}
+
+.register-content .text-erro .register-item-tip .icon-tip-wrong {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: -3px;
+    background: url(../images/icons_registerLogin.png) -38px -18px;
+}
+
+.register-content dl dt .icon-tip-ok {
+    position: absolute;
+    z-index: 992;
+    right: -20px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(../images/icons_registerLogin.png) -38px -34px;
+}
+/*按钮*/
+
+.register-item-style-verify .activate-card-btn-1,
+.register-item-style-verify .activate-card-btn-2 {
+    position: absolute;
+    z-index: 992;
+    right: 5px;
+    top: 6px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.register-item-style-verify .activate-card-btn-1 {
+    background: #f60;
+}
+
+.register-item-style-verify .activate-card-btn-2 {
+    cursor: default;
+    color: #333;
+    background: #ccc;
+}
+
+.register-item-style-verify .activate-card-btn-2 span {
+    margin-right: 3px;
+    vertical-align: top;
+    color: #f60;
+}
+.register-item-style-verify .activate-card-btn-1:hover {
+    background: #2f6ceb;
+}
+
+.register-item-style-verify .activate-card-btn-2:hover {
+    background: #ccc;
+}
+/*验证码*/
+
+.register-content .register-item-yzm .register-yzm-img {
+    position: absolute;
+    z-index: 992;
+    right: 50px;
+    top: 15px;
+    width: 90px;
+    height: 26px;
+}
+
+.register-content .register-item-yzm .change-yzm-btn {
+    position: absolute;
+    z-index: 992;
+    right: 0;
+    top: 20px;
+    color: #8c8c8c;
+}
+
+.register-content .register-item-yzm .change-yzm-btn:hover {
+    color: #f60;
+}
+/*提交按钮*/
+.register-item-btn {
+    position: relative;
+}
+.register-item-btn .register-btn {
+    width: 450px;
+    height: 60px;
+    display: block;
+    margin-top: 5px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    background: #f60;
+}
+
+.register-item-btn .register-btn:hover {
+    background: #2f6ceb;
+}
+.btn-mark {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    opacity: .7;
+    -webkit-opacity: .7;
+    filter:alpha(opacity=70);
+}
+/*协议 已注册*/
+.register-content .register-deal {
+    margin: 20px 0;
+}
+.register-content .register-deal .icon-box-checked,
+.register-content .register-deal .icon-box-normal {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+}
+.register-content .register-deal .agreement-href{
+    color: #2f6ceb;
+}
+.register-content .register-deal .go-login-href{
+    color: #f60;
+}
+.register-content .register-deal a:hover{
+    color: #f60;
+}
+/*右侧广告图*/
+
+.register-warp-R .register-AD-pic-1 {
+    padding-top: 20px;
+}
+
+
+/*========== 第三方登录授权注册 ============*/
+.register-3style-table{
+    width: 710px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.register-3style-table .register-3style-img{
+    width: 120px;
+    height: 120px;
+    margin-right: 7px;
+}
+.register-3style-table h1{
+    font-size: 30px;
+}
+.register-3style-table h1 span{
+    color: #f60;
+}
+.register-3style-table h2{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.register-3style-warp{
+    position: relative;
+    z-index: 990;
+    width: 708px;
+    margin: 20px auto 40px auto;
+    padding-bottom:30px;
+    border:1px solid #333;
+}
+.register-3style-warp:before{
+    position: absolute;
+    z-index: 991;
+    left: 50%;
+    top: -15px;
+    margin-left: -7px;
+    content: "";
+    font-size: 0;
+    border-width:0 15px 15px 15px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #333 transparent; 
+}
+.register-3style-warp:after{
+    position: absolute;
+    z-index: 992;
+    left: 50%;
+    top: -13px;
+    margin-left: -8px;
+    content: "";
+    font-size: 0;
+    border-width:0 16px 16px 16px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #fff transparent; 
+}
+.register-3style-warp .register-content{
+    margin: 0 auto;
+}
+.register-3style-warp .register-deal{
+    text-align: center;
+}
+.register-3style-warp .register-deal a{
+    color: #f60;
+}
+.register-3style-warp .register-content dl{
+    margin-top: 30px;
+}
+.register-3style-warp .register-content .register-item-btn{
+    margin-top: 30px;
+}
+
+/*第三方登录成功*/
+.register-3style-succful-table{
+    width: 490px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.register-3style-succful-table .icon-smile{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin-right: 13px;
+    background: url(../images/icons_registerLogin.png) 0 -132px;
+}
+.register-3style-succful-table .go-to-btn{
+    width: 290px;
+    height: 60px;
+    display: block;
+    margin: 30px auto;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    background: #f60;
+}
+.register-3style-succful-table .go-to-btn:hover{
+    background: #2f6ceb;
+}

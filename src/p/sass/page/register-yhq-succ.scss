@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";
+ 
+ 
+@import "../components/common-top-bar.scss";
+
+@import "../components/member-head.scss"; 
+@import "../components/common-foot.scss";
+
+@import "../components/member-ui.scss";
+@import "../components/common-search-bar.scss";
+//@import "../components/member-nav.scss";
+
+/* ================================ */
+/* 注册领取优惠券成功   */
+/* Author:      lijinrong   */
+/* Create Date:   2015-5-28    */
+/* ================================ */
+.succ-reg-info {
+  width: 453px;
+  margin: 0 auto;
+  overflow: hidden;
+  .succ-dscr {
+    margin: -10px 0 0 77px;
+    float: left;
+    width: 210px;
+    line-height: 18px;
+    span {
+      color: #F60;
+      vertical-align: top;
+    }
+  }
+  .succ-img {
+    float: right;
+    margin-top: -11px;
+  }
+}
+.succ-tips {
+  float: left;
+  margin-top: 44px;
+  width: 100%;
+  font-size: 19px;
+  color: #333;
+}
+.succ-tips i {
+  position: relative;
+  top: 6px;
+  margin: 0 15px 0 0;
+}
+.buy-btn {
+  margin: 20px 0 0 77px;
+  float: left;
+  .link {
+    display: inline-block;
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    background: #2f6ceb;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 3px;
+  }
+}
+
+.succ-reg-act {
+  margin: 73px auto 0;
+  overflow: hidden;
+  h4 {
+    line-height: 60px;
+    font-size: 16px;
+  }
+  .succ-good-list {
+    float: left;
+    width: 100%;
+  }
+  .succ-good-list li {
+    margin-right: 12px;
+    float: left;
+    width: 288px;
+    height: 191px;
+  }
+  .succ-good-list .img-wrap {
+    float: left;
+    margin-right:13px;
+    img {
+      width: 288px;
+      height: 191px;
+      display: block;
+    }
+  }
+}

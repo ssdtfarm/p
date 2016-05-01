@@ -1,0 +1,75 @@
+<!-- 春节特惠开始 -->
+<section class="index-preferentials-box" id="J_Preferentials">
+    <div class="index-preferentials-content clearfix">
+        <!-- 春节特惠标题开始 -->
+        <div class="preferentials-title"></div>
+        <!-- 春节特惠标题结束 -->
+
+        <!-- 春节特惠精品推荐 开始-->
+        <div class="preferentials clearfix">
+            <div class="pro-img">
+                <a href="<%=list[0].linkURL%>" target="_blank" title="<%=list[0].pTitle%>">
+                    <span class="tag">直降<i><%=list[0].diffPrice%></i></span>
+                    <img class="lazy" data-original="<%=list[0].imgSRC%>" alt="<%=list[0].seoAlt%>"/>
+                </a>
+            </div>
+            <dl class="description">
+                <dt class="recommend-title">
+                    <img src="http://misc.jjcdn.com/p/images/index_new_year/top-recommend.png" alt=""/>
+                    <p>新年精品推荐！</p>
+                </dt>
+                <dd class="pro-detail">
+                    <a class="pro-title" href="<%=list[0].linkURL%>" target="_blank" title="<%=list[0].pTitle%>"><%=list[0].pTitle%></a>
+                    <%for(var i = 0; i < list[0].summarize.length; i++) {%>
+                    <p class="pro-summarize"><i></i><%=list[0].summarize[i].title%></p>
+                    <p class="pro-summarize-detial"><%=list[0].summarize[i].description%></p>
+                    <%}%>
+                    <div class="pro-price">
+                        <dl class="act-price">
+                            <dt>特惠活动价</dt>
+                            <dd><i>&yen;</i><span><%=list[0].price%></span></dd>
+                        </dl>
+                        <dl class="sale-price">
+                            <dt>市场销售价</dt>
+                            <dd><%=list[0].mPrice%></dd>
+                        </dl>
+                        <span class="line-through"></span>
+                        <a href="<%=list[0].linkURL%>" target="_blank">立即抢购</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!-- 春节特惠精品推荐 结束-->
+
+        <!-- 春节特惠商品列表开始 -->
+        <ul class="clearfix">
+            <% for(var i=1; i<list.length; i++) {%>
+            <li class="preferentials sub-preferentials">
+                <div class="pro-img">
+                    <a href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>">
+                        <span class="tag">直降<i><%=list[i].diffPrice%></i></span>
+                        <img class="lazy" data-original="<%=list[i].imgSRC%>" alt="<%=list[i].seoAlt%>"/>
+                    </a>
+                </div>
+                <div class="pro-detail">
+                    <a class="pro-title" href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>"><%=list[i].pTitle%></a>
+                    <div class="pro-price">
+                        <dl class="act-price">
+                            <dt>特惠活动价</dt>
+                            <dd><i>&yen;</i><span><%=list[i].price%></span></dd>
+                        </dl>
+                        <dl class="sale-price">
+                            <dt>市场销售价</dt>
+                            <dd><%=list[i].mPrice%></dd>
+                        </dl>
+                        <span class="line-through"></span>
+                        <a href="<%=list[i].linkURL%>" target="_blank">立即抢购</a>
+                    </div>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+        <!-- 春节特惠商品列表结束 -->
+    </div>
+</section>
+<!-- 春节特惠结束 -->

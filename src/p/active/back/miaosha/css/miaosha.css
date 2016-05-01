@@ -1,0 +1,165 @@
+ .limited-wrap {
+     margin: 0 auto;
+     width: 1024px;
+     height: 621px;
+     background: #e5360f url(../img/miaosha-bg.jpg) center no-repeat;
+ }
+ 
+ .limited-content {
+     padding-top: 140px;
+ }
+ 
+ .limited-hd {
+     text-align: center;
+ }
+ 
+ .hd-item {
+     position: relative;
+     margin-left: 5px;
+     display: inline-block;
+     width: 240px;
+     height: 71px;
+     background: url(../img/miaosha-tab.png) no-repeat;
+     cursor: normal;
+ }
+
+ .hd-item:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 58px;
+     height: 47px;
+     background: url(../img/miaosha-price.png) no-repeat;
+ }
+ 
+ .xiaojian {
+     margin-left: 0;
+     background-position: 0 -73px;
+ }
+
+  .xiaojian:before {
+     background-position: 0 0;
+ }
+ 
+ .xiaojian:hover {
+     background-position: 0 0;
+ }
+
+ .xiaojian.on {
+     background-position: 0 0;
+ }
+ 
+ .chuangdian {
+     background-position: 0 -219px;
+ }
+
+  .chuangdian:before {
+     background-position: -60px 0;
+ }
+ 
+ .chuangdian:hover {
+     background-position: 0 -146px;
+ }
+
+ .chuangdian.on {
+     background-position: 0 -146px;
+ }
+ 
+ .chuang {
+     background-position: 0 -365px;
+ }
+
+  .chuang:before {
+     background-position: -120px 0;
+ }
+ 
+ .chuang:hover {
+     background-position: 0 -292px;
+ }
+
+ .chuang.on {
+     background-position: 0 -292px;
+ }
+ 
+ .shafa {
+     background-position: 0 -511px;
+ }
+
+  .shafa:before {
+     background-position: -180px 0;
+ }
+ 
+ .shafa:hover {
+     background-position: 0 -438px;
+ }
+
+ .shafa.on {
+     background-position: 0 -438px;
+ }
+
+ .limited-bd .active {
+     display: block;
+ }
+
+ .limited-con {
+     display: none;
+     margin-top: 30px;
+     text-align: center;
+ }
+
+ .limited-con li {
+     /*float: left;*/
+     display: inline-block;
+     margin-left: 54px;
+     width: 290px;
+     height: 350px;
+     background: #fff;
+ }
+
+ .limited-con li:first-child {
+     margin-left: 0;
+ }
+
+ .con-img {
+     width: 290px;
+     height: 220px;
+ }
+
+ .con-op .t {
+     margin-top: 12px;
+     height: 19px;
+     font-size: 14px;
+     color: #333;
+ }
+
+ .con-op .p {
+     margin-top: 10px;
+     font-size: 18px;
+     color: #e03e11;
+ }
+
+ .con-op .p .fav {
+     font-size: 32px;
+     font-weight: bold;
+ }
+
+ .con-op .p .cost {
+     color: #333;
+     text-decoration: line-through;
+ }
+
+ .con-op .buy {
+     margin: 5px auto;
+     width: 270px;
+     height: 30px;
+     font-size: 18px;
+     color: #fff;
+     line-height: 30px;
+     background: #8c8c8c;
+ }
+
+ .con-op .on {
+     background: #e03e11;
+     cursor: pointer;
+ }

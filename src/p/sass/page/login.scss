@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";     // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/common-dialog.scss";    // art-dialog
+
+/*
+ *  login 登录页
+ *
+ *  author:JinJing
+ *  date:20150324
+ */
+
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+/*背景图*/
+
+.login-layout {
+    width: 100%;
+    height: auto;
+    min-height: 666px;
+}
+/*容器*/
+
+.login-container {
+    position: relative;
+    z-index: 990;
+}
+/*登录框*/
+
+.login-warp {
+    position: relative;
+    top: 0;
+    width: 490px;
+    height: 518px;
+    margin-right: 56px;
+    float: right;
+    overflow: hidden;
+    background: url(../images/login_warp_bg.png) no-repeat;
+}
+
+.login-warp .login-title {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.login-warp .login-content {
+    width: 390px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+.login-content .login-item {
+    position: relative;
+    z-index: 990;
+    width: 390px;
+    /*height: 60px;*/
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.login-content .login-item dd {
+    height: 20px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.login-content .login-item input {
+    display: inline-block;
+    width: 328px;
+    padding: 20px 10px 20px 50px;
+    font-size: 16px;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+}
+/* 错误显示橙色框 */
+.login-content .login-item input.error {
+    border: 1px solid #c13d23;
+}
+/* 聚焦为蓝色 */
+.login-content .login-item input:focus {
+    border: 1px solid #2f6ceb;
+}
+
+.login-content .login-item .icon-user-name,
+.login-content .login-item .icon-password {
+    position: absolute;
+    z-index: 992;
+    top: 20px;
+    left: 18px;
+    height: 25px;
+    display: inline-block;
+    background: url(../images/icons_registerLogin.png)
+}
+
+.login-content .login-item .icon-user-name {
+    width: 16px;
+    background-position: -35px -51px;
+}
+
+.login-content .login-item .icon-password {
+    width: 20px;
+    background-position: -36px -79px;
+}
+/* 错误提示框 */
+.login-content .text-error {
+    color: #c13d23;
+}
+
+/*登录按钮*/
+.login-content .login-item-btn {
+    position: relative;
+    margin-top: 30px;
+}
+.login-content .login-item-btn .mark {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-style: 24px;
+    font-weight: bold;
+    background: rgba(0,0,0,.75);
+}
+.login-content .login-item-btn .login-btn {
+    width: 390px;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 4px;
+    background: #f60;
+}
+.login-content .login-item-btn .login-btn:hover {
+    background: #2f6ceb;
+}
+.login-content .register-free {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.login-content .register-free a {
+    color: #f60;
+}
+.login-content .register-free a:hover {
+    color: #f60;
+}
+/*忘记密码*/
+.login-content .forgot-href {
+    position: absolute;
+    z-index: 991;
+    right: 0;
+    bottom: -21px;
+    color: #8c8c8c;
+}
+.login-content .forgot-href:hover {
+    color: #f60;
+}
+/*使用其他帐号登录*/
+.login-bottom {
+    margin-top: 5px;
+    padding-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #ccc;
+}
+.login-bottom label {
+    position: relative;
+    top: 2px;
+}
+.login-bottom .login-3-item {
+    color: #f60;
+}
+
+.login-bottom .login-3-item i {
+    display: inline-block;
+    height: 31px;
+    margin:0 3px 0 8px;
+    background: url(../images/icons_registerLogin.png);
+}
+
+.login-bottom .login-3-item i.icon-sina {
+    width: 37px;
+    background-position: 0 0;
+}
+.login-bottom .login-3-item i.icon-alipay {
+    width: 31px;
+    background-position: 0 -33px;
+}
+.login-bottom .login-3-item i.icon-wy163 {
+    width: 28px;
+    background-position: 0 -66px;
+}
+.login-bottom .login-3-item i.icon-QQ {
+    width: 28px;
+    background-position: 0 -100px;
+}

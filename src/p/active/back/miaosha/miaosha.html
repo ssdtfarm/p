@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/active.css" />
+    <link rel="stylesheet" href="css/miaosha.css" />
+    <!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+    <title></title>
+    <script>
+    //activityBg和commonData由后端输出在页面
+    ar activityBg = {};
+    var commonData = {
+        "piAlias": "miaosha",
+        "domain": "sale.kinhom.com",
+        "now": 1454477041, //9:59:55
+        //"now": 1450059600, //10:10
+        //"now": 1450063200, //11:10
+
+        //"now": 1450077600, //15:20
+        //"now": 1450081200, //16:20
+
+        //"now": 1450095600, //20:20
+        //"now": 1450099200, //21:20
+        "login": 0,
+        "choujiang": false,
+        //"miaosha":[{pro_id,type,start_time,end_time,useable,sku:[{sku_id,pro_id,pro_price,pro_num,sales_volume,sku_des,type,sort,v_sale,sku_title,sale_price},{},{}]},{},{},{}]
+        "miaosha": [
+            // 精美小件
+            {
+                "pro_id": "1322",
+                "type": "1",
+                "start_time": "1454256000",//秒杀开始时间
+                "end_time": "1456675200",//秒杀结束时间
+                "useable": "3",
+                "sku": [
+                    {
+                        "sku_id": "50126",//sku
+                        "pro_id": "1322",
+                        "pro_price": "12",//秒杀价
+                        "pro_num": "50",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "50",
+                        "sku_title": "蓬松柔软简约维尚抱枕",//商品名
+                        "sale_price": "48"//原价
+                    },
+                    {
+                        "sku_id": "25944",
+                        "pro_id": "1322",
+                        "pro_price": "9",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "15",
+                        "sku_title": "养神安眠决明子保健枕",
+                        "sale_price": "108"
+                    },
+                    {
+                        "sku_id": "53378",
+                        "pro_id": "1322",
+                        "pro_price": "199",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "17",
+                        "sku_title": "天然纯棉床上四件套",
+                        "sale_price": "640"
+                    }
+                ]
+            },
+            // 床垫
+            {
+                "pro_id": "1322",
+                "type": "1",
+                "start_time": "1454256000",
+                "end_time": "1456675200",
+                "useable": "3",
+                "sku": [
+                    {
+                        "sku_id": "6718",
+                        "pro_id": "1322",
+                        "pro_price": "799",
+                        "pro_num": "50",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "45",
+                        "sku_title": "舒适支撑整网弹簧床垫",
+                        "sale_price": "2300"
+                    },
+                    {
+                        "sku_id": "13570",
+                        "pro_id": "1322",
+                        "pro_price": "799",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "15",
+                        "sku_title": "软硬两面睡进口乳胶床垫",
+                        "sale_price": "2275"
+                    },
+                    {
+                        "sku_id": "41264",
+                        "pro_id": "1322",
+                        "pro_price": "1999",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "18",
+                        "sku_title": "静音设计天然乳胶弹簧床垫",
+                        "sale_price": "5300"
+                    }
+                ]
+            },
+            // 床
+            {
+                "pro_id": "1322",
+                "type": "1",
+                "start_time": "1454256000",
+                "end_time": "1456675200",
+                "useable": "3",
+                "sku": [
+                    {
+                        "sku_id": "41297",
+                        "pro_id": "1322",
+                        "pro_price": "1899",
+                        "pro_num": "50",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "45",
+                        "sku_title": "时尚休闲进口丝光布软床",
+                        "sale_price": "5200"
+                    },
+                    {
+                        "sku_id": "7222",
+                        "pro_id": "1322",
+                        "pro_price": "2299",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "15",
+                        "sku_title": "简约家居风真皮双人软床",
+                        "sale_price": "6750"
+                    },
+                    {
+                        "sku_id": "17103",
+                        "pro_id": "1322",
+                        "pro_price": "2599",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "17",
+                        "sku_title": "宽大舒适欧式真皮软床",
+                        "sale_price": "7950"
+                    }
+                ]
+            },
+            // 沙发
+            {
+                "pro_id": "1322",
+                "type": "1",
+                "start_time": "1454256000",
+                "end_time": "1456675200",
+                "useable": "3",
+                "sku": [
+                    {
+                        "sku_id": "35648",
+                        "pro_id": "1322",
+                        "pro_price": "2799",
+                        "pro_num": "50",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "45",
+                        "sku_title": "经典百搭款绒布沙发",
+                        "sale_price": "9100"
+                    },
+                    {
+                        "sku_id": "53042",
+                        "pro_id": "1322",
+                        "pro_price": "3599",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "15",
+                        "sku_title": "可拆洗设计 绒布沙发",
+                        "sale_price": "11000"
+                    },
+                    {
+                        "sku_id": "18519",
+                        "pro_id": "1322",
+                        "pro_price": "4199",
+                        "pro_num": "20",
+                        "sales_volume": "0",
+                        "sku_des": "0",
+                        "type": "1",
+                        "sort": "0",
+                        "v_sale": "17",
+                        "sku_title": "绒布包边质感牛皮沙发",
+                        "sale_price": "11850"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body> 
+    <!-- 秒杀开始 -->
+    <div id="timeLimited" class="limited-wrap">
+        <div class="limited-content"> 
+            <ul class="limited-hd hd">
+                <li class="hd-item xiaojian on"></li>
+                <li class="hd-item chuangdian"></li>
+                <li class="hd-item chuang"></li>
+                <li class="hd-item shafa"></li>
+            </ul>
+            <div class="limited-bd bd">
+                <ul class="limited-con">
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">蓬松柔软简约维尚抱枕</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">养神安眠决明子保健枕</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">天然纯棉床上四件套</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="limited-con">
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">舒适支撑整网弹簧床垫</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>                       
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">软硬两面睡进口乳胶床垫</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">静音设计天然乳胶弹簧床垫</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="limited-con">
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">时尚休闲进口丝光布软床</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">简约家居风真皮双人软床</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">宽大舒适欧式真皮软床</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="limited-con">
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">经典百搭款绒布沙发</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">可拆洗设计 绒布沙发</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="mark"></div>
+                        <div class="tips"></div> -->
+                        <div class="con-img"></div>
+                        <div class="con-op">
+                            <p class="t">绒布包边质感牛皮沙发</p>
+                            <p class="p">秒杀价<span class="fav"></span><span class="cost"></span></p>
+                            <div class="buy"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 秒杀结束 -->
+
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="http://misc.jjcdn.com/p/active/js/active.js"></script>
+    <script src="js/miaosha.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "wallet-getcash",
+        "title" : "金海马商城-我的钱包"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn": "@@miscPath",
+        "headerName" : "我的钱包",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 我的钱包开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item  item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20 clearfix">
+            <div class="wallet-getcash">
+                <div class="getcash-title">
+                    <h4>提现银行卡</h4>
+                </div>
+                <ul class="getcash-list">
+                    <li class="no-card">
+                        <div class="dscr">
+                            您还没有提现银行卡
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap minsheng">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="getcash-price">
+                    可用金额：<span>0.00</span>
+                </div> 
+                <form class="getcash-form" method="POST" action="" id="J_getcashForm">
+                    <p><span class="form-title">开户人姓名：</span><span class="form-name J_realname">李加坤</span><i class="danger-tip danger-name hide"><i class="icon-tip-wrong"></i></i></p>
+                    <p><span class="form-title">用户名：</span><span class="form-name">LiLi@qq.com</span></p>
+                    <p>
+                        <span class="form-title required">提现金额：<i class="yuan">元</i></span>
+                        <input type="text" class="form-input" name="price" disabled="true" placeholder="如100.04">
+                        <i class="normal-tip">每次最多可提现￥1000.00</i>
+                        <i class="danger-tip danger-price hide"><i class="icon-tip-wrong"></i>提现金额至少为1.00元</i>
+                    </p>
+                    <p>
+                        <span class="form-title required">支付密码：<i class="icon-tip-ok hide"></i></span>
+                        <input type="password" class="form-input" name="password" disabled="true">
+                        <a href="http://misc.jjcdn.com/p/html/member/security-reset-pay-psw.html" class="forget-pwd">忘记密码？</a>
+                        <i class="danger-tip danger-pwd hide"><i class="icon-tip-wrong"></i>密码错误</i>
+                    </p>
+                    <div class="getcash-btn">
+                        <a id="J_subDialog" class="inactive">提交</a>
+                        <a href="http://misc.jjcdn.com/p/html/member/wallet-list.html" target="_self" class="active">取消</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- 我的钱包结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "wallet-getcash"
+    })
+</body>
+</html>

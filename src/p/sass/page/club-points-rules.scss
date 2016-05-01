@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/club-nav.scss";    // member-system-nav
+@import "../components/common-search-bar.scss";         // icon-sprite
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  club-points-rules.css 积分规则
+ *
+ *  author:❤JinJing❤
+ *  date:20150428
+ */
+/*图标*/
+.icon-star-333{
+    width: 14px;
+    height: 13px;
+    display: inline-block;
+    background: url(../images/icons_member_growth.png) -249px -98px;
+}
+
+/*返回积分商城*/
+.points-href-line {
+    margin-top: 50px;
+}
+
+.points-href-line .points-store-href,
+.points-href-line .points-store-href:visited {
+    font-size: 14px;
+    color: #2f6ceb;
+}
+
+.points-href-line .points-store-href:hover {
+    color: #f60;
+}
+
+.points-href-line .points-store-href i {
+    margin-left: 5px;
+    font-family: "宋体";
+    vertical-align: middle;
+}
+
+/*积分获取规则*/
+.points-rules-title-line{
+    margin-top: 20px;
+}
+.points-rules-title-line .points-rules-title{
+    padding: 9px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: 2px dotted #f60;
+    border-radius: 30px;
+}
+
+.points-rules-title-line .points-rules-title .icon-star-on{
+    display: inline-block;
+    margin: -4px 5px 0 5px; 
+}
+
+.points-rules-list{
+    margin-top: 30px;
+    font-size: 14px;
+}
+.points-rules-list .item{
+    position: relative;
+    padding-left: 20px;
+    margin-top: 3px;
+}
+.points-rules-list .item .icon-star-333{
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+/*如何获取积分*/
+.how-get-points-title{
+    margin-top: 50px;
+}
+.how-get-points-title .title {
+    position: relative;
+    width: 160px;
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #f60;
+}
+.how-get-points-title .title i.before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f60;
+    border-width: 0 0 40px 30px;
+}
+.how-get-points-title .title i.after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #f60;
+    border-width: 40px 0 0 30px;
+}
+
+/*获取积分规则表格*/
+.how-get-points-table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.how-get-points-table td{
+    border:1px solid #ccc;
+}
+.how-get-points-table thead td{
+    padding: 7px 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #8c8c8c;
+}
+.how-get-points-table tbody td{
+    padding: 15px 20px;
+    font-size: 12px;
+    text-align: center;
+}
+.how-get-points-table tbody td.explain-sp{
+    text-align: left;
+}
+
+.how-get-points-table .explain-sp .rule-href,.how-get-points-table .explain-sp .rule-href:visited{
+    color: #2f6ceb;
+}
+.how-get-points-table .explain-sp .rule-href:hover{
+    color: #f60;
+}
+.how-get-points-table .explain-sp .rule-href i{
+    margin-left: 3px;
+    font-family: "宋体";
+}

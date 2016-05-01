@@ -1,0 +1,19 @@
+<form action="<%=url%>" id="J_step_2_phone" >
+        <input type="hidden" name="idr" value="<%=idr%>" />
+        <p><label>您的验证手机：</label><span><%=tplPhone%></span></p>
+        <ul class="findPSW-dialog-list">
+            <li class="findPSW-dialog-item-btn">
+                <a href="javascript:void(0)" id="J_getPhoneYzm" class="yzm-btn-1">获取手机验证码</a>
+                <a href="javascript:void(0)" id="J_countDown_wrap" class="yzm-btn-2"><span id="J_countDown">60</span>秒后重新获取</a>
+            </li>
+            <li class="findPSW-dialog-item">
+                <input type="text" class="findPSW-dialog-item-input" id="findPSW-phone-input" placeholder="请输入验证码" value=""/>
+            </li>
+            <li class="findPSW-dialog-item-btn mt20">
+                <a href="javascript:void(0)" id="J_phone_check" class="yzm-submit-btn">验 证</a>
+            </li>   
+             <%if(isBoth){%>
+            <li class="findPSW-dialog-item-otherWay"><a href="javascript:void(0);" id="J_way_mail">邮箱找回密码</a></li>
+            <%}%>
+        </ul>    
+    </form>             

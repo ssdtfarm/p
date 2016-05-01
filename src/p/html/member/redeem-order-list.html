@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "redeem-order-list",
+        "title": "积分兑换优惠券订单确认页"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "订单支付",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 积分兑换优惠券确认页面开始 -->
+    <section class="w1190">
+        <div class="redeem-order-list">
+            <h2 class="title">确认订单信息</h2>
+            <table class="order-list-table">
+                <tbody>
+                    <tr>
+                        <th class="info">商品信息</th>
+                        <th class="price">单价</th>
+                        <th class="num">数量</th>
+                        <th class="subtotal">小计</th>
+                    </tr>
+                    <tr>
+                        <td class="info-tiem">
+                            <a href="http://misc.jjcdn.com/p/club/club-coupons-item.html" target="_blank">
+                               <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/98/CvoBM1OFymWAS8zrAAIOzL-a8GU627.jpg!small" alt="">
+                               <p>【万达广场】乐儿宝高端儿童摄影 价值80元体验券</p>
+                            </a>
+                        </td>
+                        <td class="price-item"><em>100000</em>积分</td>
+                        <td>1</td>
+                        <td  class="fc-f60 subtotal-item"><span class="J_item_price">100000</span>积分</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="total">应付总额：<b class="fc-f60"><span class="total_goods_price">100000</span>积分</b></p>
+            <div class="sub-btn-wrap">
+                <a href="javascript:;" data-user="lijinrong" class="sub-btn J_check_point">提交订单<i class="icon-point-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- 积分兑换优惠券确认页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "redeem-order-list"
+    })
+</body>
+</html>

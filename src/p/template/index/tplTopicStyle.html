@@ -1,0 +1,28 @@
+<dl class="clearfix">
+    <dt class="index-comment-title">
+        <i class="index-icon icon-index-style"></i>
+        <label class="comment-title-label">风格主题</label>
+    </dt>
+    <dd id="J_topicStyleSlider" class="topic-slider">
+        <a href="javascript:void(0);" class="next">
+            <i class="icon-topic-refresh"></i>
+            换一批
+        </a>
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <%for(var i=0; i<list.length; i++){%>
+                <li <%if(i%2==0){%>class="r-10"<%}%>>
+                    <a href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].seoAlt%>">
+                        <img _src="<%=list[i].imgSRC%>" width="590" height="280" alt="<%=list[i].seoAlt%>"/>
+                        <span class="index-style-icon-show">去看看</span>
+                    </a>
+                </li>
+                <%if(i%2==1 && (i+1)!=list.length){%></ul><ul><%}%>
+                <%}%>
+            </ul>
+        </div>
+    </dd>
+</dl>

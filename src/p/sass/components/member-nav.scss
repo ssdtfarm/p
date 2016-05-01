@@ -1,0 +1,68 @@
+/**
+ *  ---------------------------------------------
+ *      会员系统通用一级导航样式
+ *      会员系统通用的导航样式，广泛应用在会员系统各个
+ *      页面中
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+.member-nav {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+    a {
+        display: inline-block;
+        height: 20px;
+        overflow: hidden;
+        margin: 0 10px;
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        &:hover {
+            color: #fff;
+            i {
+                visibility: visible;
+            }
+            label {
+                background-color: #414141;
+            }
+        }
+        &.cur {
+            i {
+                visibility: visible;
+            }
+            label {
+                background-color: #414141;
+                color: #fff;
+            }
+        }
+        i {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            float: left;
+            overflow: hidden;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        label {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+        span {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

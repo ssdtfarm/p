@@ -1,0 +1,38 @@
+<div class="selector-hd">
+    <dl>
+        <dt>筛选（共<span class="fc-f60"><%=goodNums%></span>个商品）</dt>
+    </dl>
+    <a href="javascript:void(0);" class="reset J_reset">全部撤销</a>
+</div>
+<div class="selector-bd">
+    <%for(var i=0; i<list.length; i++) {%>
+    <dl <%if(i>3){%>class="hide"<%}%>>
+        <dt><%=list[i].attrName%></dt>
+        <%if(list[i].attrType == 'price') {%>
+        <dd>
+            <%for(var j=0; j<list[i].attrInfo.length; j++) {%>
+            <a href="javascript:void(0);" data-idx="<%=i%>" data-type="<%=list[i].attrType%>" data-id="<%=list[i].attrInfo[j].id%>"><%=list[i].attrInfo[j].value%></a>
+            <%}%>
+            <span>
+                <input type="text" value="100">
+                <span>~</span>
+                <input type="text" value="">
+                <span class="select-price">确定</span>
+            </span>
+        </dd>
+        <%} else {%>
+        <dd>
+            <%for(var j=0; j<list[i].attrInfo.length; j++) {%>
+            <a href="javascript:void(0);" data-idx="<%=i%>" data-type="<%=list[i].attrType%>" data-id="<%=list[i].attrInfo[j].id%>"><%=list[i].attrInfo[j].value%></a>
+            <%}%>
+            <!-- <div class="more">更多<i class="classific-icon triangle"></i></div> -->
+        </dd>
+        <%}%>
+    </dl>
+    <%}%>
+</div>
+<%if( list.length > 4){%>
+<div class="more-select">
+   <span>更多选项</span><i class="classific-icon triangle"></i>
+</div>
+<%}%>

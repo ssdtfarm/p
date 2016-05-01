@@ -1,0 +1,424 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+@import "../components/member-head.scss";     // 主站通用头部
+@import "../components/common-foot.scss";  // 全站通用底部
+          // icon-system
+@import "../page/zxh.scss";				// zhuang xiu hui
+@import "../components/common-dialog.scss";    // 弹窗模块
+/*
+ *	ask question & question detail info stylesheet
+ * 	author: yansiwen
+ *  date: 2015-08-27
+ */
+
+/* base color */
+$baseColor: #f60;
+$blueColor: #2f6ceb;
+
+/* 详情与提问页共同样式开始 */
+.member-header {
+	border-bottom: none;
+}
+.bread {
+	margin: 17px auto;
+}
+.ask-question-btn {
+	width: 140px;
+	height: 40px;
+	color: #fff;
+	background-color: $blueColor;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 30px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	cursor: pointer;
+	&:hover {
+		background-color: #3267d6;
+	}
+}
+/* 详情与提问页共同样式结束 */
+
+
+/* 提问页面样式开始 */
+.ask-question-layout {
+	margin-top: 38px;
+	h3 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+.ask-question-form {
+	margin-top: 36px;
+}
+.ask-question-item {
+	position: relative;
+	margin-top: 20px;
+	overflow: hidden;
+	.ask-question-title {
+		float: left;
+		padding-top: 7px;
+		width: 85px;
+		font-size: 14px;
+		text-align: right;
+		line-height: 20px;
+		b {
+			color: $baseColor;
+		}
+	}
+	.question-add {
+		padding-top: 0;
+	}
+	input, textarea {
+		float: left;
+		color: #b4b4b4;
+		border: 1px solid #b4b4b4;
+	}
+	input {
+		margin: 0 0 0 13px;
+		padding-left: 9px;
+		width: 631px;
+		height: 32px;
+		line-height: 32px;
+	}
+	.ke-container {
+		float: left;
+  		margin-left: 13px;
+	}
+	textarea {
+		width: 622px;
+		height: 253px;
+		line-height: 20px;
+	}
+	.title-tip {
+		display: none;
+		margin-left: 12px;
+		color: $baseColor;
+		font-size: 12px;
+		line-height: 30px;
+	}
+	.tag-tip {
+		position: absolute;
+		top: 34px;
+		left: 108px;
+		color: #b4b4b4;
+		font-size: 12px;
+		line-height: 30px;
+	}
+}
+.ask-question-item-tag {
+	overflow: inherit;
+}
+.ask-question-submit {
+	position: relative;
+	margin-top: 53px;
+	width: 740px;
+	text-align: right;
+	.ask-question-anonymous {
+		position: relative;
+		top: 6px;
+		.anonymous-submit {
+			margin-right: 24px;
+			position: relative;
+  			top: 2px;
+		}
+	}
+}
+/* 提问页面样式结束 */
+
+
+/* 详情页样式开始 */
+.ask-item-box {
+	float: left;
+	width: 890px;
+}
+.ask-item-content {
+	padding: 26px 50px 30px 50px;
+	border: 1px solid #ccc;
+	h1 {
+		margin: 0 auto;
+		width: 730px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	h2 {
+		margin: 5px auto 0 auto;
+		width: 730px;
+		line-height: 20px;
+		color: #f60;
+		a {
+			color: #f60;
+		}
+	}
+	.ask-item-detail {
+		width: 790px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.ask-item-answer-form {
+		overflow: hidden;
+		h2 {
+			margin: 35px 0 18px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		textarea {
+			width: 786px;
+			height: 198px;
+		}
+		.ask-question-btn {
+			float: right;
+			margin-top: 17px;
+		}
+	}
+}
+/* 回答者账号与回答时间、回答内容开始 */
+.ask-item-info {
+	margin: 20px 0 22px 0;
+	color: #8c8c8c;
+	text-align: right;
+	font-size: 12px;
+	line-height: 20px;
+}
+.ask-item-answers {
+	margin-top: 22px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	h2 {
+		margin-bottom: 7px;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 20px;
+	}
+	.answer-layout {
+		border-top: 1px solid #333;
+	}
+}
+.satisfied-answers {
+	h2 {
+		color: #f60;
+		.good-icon {
+			padding: 0 7px 2px 0;
+			width: 17px;
+			height: 16px;
+			background: url("http://misc.jjcdn.com/p/images/ask-question/good.png") 0 0 no-repeat;
+		}
+	}
+	.answer-layout {
+		.answer-box {
+			padding-bottom: 0;
+		}
+	}
+}
+.answer-layout {
+	.answer-box {
+		padding: 13px 16px 20px 12px;
+		.answer-info {
+			overflow: hidden;
+			.ask-item-info {
+				float: left;
+				margin: 0;
+				text-align: left;
+			}
+			.set-answer-btn {
+				float: right;
+				width: 90px;
+				color: #fff;
+				background: $blueColor;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				-ms-border-radius: 3px;
+				cursor: pointer;
+				&:hover {
+					background: #3267d6;
+				}
+			}
+		}
+		.answer-detail {
+			margin: 18px 0 22px;
+			line-height: 20px;
+		}
+	}
+}
+/* 回答者账号与回答时间、回答内容结束 */
+
+/* 详情页推荐开始 */
+.ask-item-recommend {
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	overflow: hidden;
+	h2 {
+		float: left;
+		padding: 6px 0;
+	}
+	ul {
+		float: left;
+		overflow: hidden;
+		li {
+			float: left;
+			margin-left: 10px;
+			a {
+				display: block;
+				padding: 6px 10px;
+				background: #ebebeb;
+				color: $baseColor;
+				text-align: center;
+				&:hover {
+					background: #ccc;
+				}
+			}
+		}
+	}
+}
+/* 详情页推荐结束 */
+
+/* 相关问题开始 */
+.ask-item-dynamic {
+	margin-top: 48px;
+}
+
+.ask-item-dynamic-title {
+	margin-bottom: 9px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.ask-item-dynamic-content {
+    width: 890px;
+    height: 403px;
+}
+
+.ask-item-content-title {
+    width: 890px;
+    height: 38px;
+    border: 1px solid #ABABAB;
+    background: #D6E3FD;
+}
+
+.dynamic-content-title ul li {
+    float: left;
+    width: 138px;
+    height: 38px;
+    border-right: 1px solid #ABABAB;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    line-height: 38px;
+}
+
+.dynamic-content-title .on {
+    border-bottom: 1px solid #FFF;
+    color: #F60;
+    background: #FFF;
+}
+
+.ask-item-content-question {
+    margin: 20px 0 0 0;
+    width: 890px;
+}
+
+.dynamic-content-question ul {
+    max-height: 343px;
+    overflow: hidden;
+}
+
+.dynamic-content-question ul li {
+    margin: 0 0 17px;
+    font-size: 14px;
+}
+
+.dynamic-content-question li a {
+    display: inline-block;
+    color: #333;
+    max-width: 600px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:hover {
+    	text-decoration: underline;
+    	color: #f60;
+    }
+}
+
+.dynamic-content-question li a:before {
+    content: ".";
+    position: relative;
+    top: -3px;
+    margin-right: 4px;
+}
+
+.content-question-time {
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.content-question-time span {
+    margin: 0 0 0 10px;
+}
+/* 相关问题结束 */
+
+/* 详情页侧边栏开始 */
+.ask-item-aside {
+	float: right;
+	margin-left: 20px;
+	width: 280px;
+	.ad {
+		margin-bottom: 45px;
+		width: 280px;
+		height: 320px;
+		overflow: hidden;
+		img {
+			display: block;
+			width: 280px;
+			height: 320px;
+		}
+	}
+	.ask-item-topic-recommend {
+		margin-bottom: 45px;
+		height: 326px;
+		overflow: hidden;
+		h2 {
+			margin-bottom: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 22px;
+		}
+		li {
+			font-size: 14px;
+			line-height: 26px;
+			margin-bottom: 9px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			a {
+				color: #333;
+				&:hover span {
+					text-decoration: underline;
+					color: #f60;
+				}
+				img {
+					display: block;
+					width: 280px;
+					height: 188px;
+					margin-bottom: 15px;
+				}
+				b {
+					font-weight: normal;
+  					padding: 0 3px;
+				}
+			}
+		}
+	}
+}
+/* 详情页侧边栏结束 */
+/* 详情页样式结束 */

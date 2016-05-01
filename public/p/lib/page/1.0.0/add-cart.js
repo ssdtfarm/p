@@ -1,0 +1,1 @@
+define("libpage.0.0/add-cart",[],function(e,i,n){$(function(){function e(){var e=$("#J_addCartContainer"),i=(e.innerHeight(),$(window).innerHeight()),n=$(".top-bar").outerHeight(),t=$("header").innerHeight(),r=$("footer").outerHeight(),o=i-t-n-r-50;o>=200&&e.height(o)}e(),$(window).resize(function(){e()})})});

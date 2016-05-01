@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";     // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // search-bar
+@import "../components/common-search-bar.scss";     // search-bar
+@import "../components/member-aside.scss";     // search-bar
+@import "../components/member-nav.scss";     // member-nav
+@import "../components/common-pages.scss";     // head-search-bar
+@import "../components/common-dialog.scss";    // art-dialog
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  coupon-list 优惠券列表
+ *
+ *  author:JinJing
+ *  date:20150310
+*/
+
+body {
+    background: #e4e4e4;
+}
+.coupon-list {
+   
+}
+/*优惠券二级菜单*/
+.coupon-list-menu .menu-tab{
+    float: left;
+    margin-right: 15px;
+    color: #333;
+}
+.coupon-list-menu .menu-tab:hover,.coupon-list-menu .menu-tab.cur{
+    color: #f60;
+}
+/*================== 优惠券列表 ==================*/
+
+.coupon-list-table {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "宋体";
+}
+.coupon-list-table .coupon-list-thead th {
+    padding: 8px 0;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0;
+}
+.coupon-list-table .coupon-list-tbody {
+    background: #fff;
+}
+.coupon-list-table .coupon-list-tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.coupon-list-table .coupon-list-tbody tr:last-child {
+    border: none;
+}
+.coupon-list-table .coupon-list-tbody td {
+    padding: 23px 0 22px;
+}
+/*活动来源*/
+.coupon-list-table .coupon-list-tbody .coupon-list-active-original{
+    color: #2f6cab;
+}
+.coupon-list-table .coupon-list-tbody .coupon-list-active-original:hover{
+    color: #f60;
+}
+/*优惠券使用条件*/
+.coupon-list-table .coupon-list-tbody .coupon-conditions{
+    text-align:left;
+    color: #8c8c8c;
+}
+/*立即使用按钮*/
+.coupon-list-table .coupon-list-table-btn {
+    color: #F60;
+}
+.coupon-list-table .coupon-list-table-btn:hover{
+    color: #f60;
+}
+/*没有优惠券记录*/
+
+.coupon-list-table .coupon-list-tbody .coupon-list-none {
+    height: 90px;
+    padding: 30px 0;
+    vertical-align: top;
+}
+.coupon-list-tbody .coupon-list-none .coupon-none{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.coupon-list-none .active-list .active-item{
+    line-height: 20px;
+    color: #f60;
+}
+.coupon-list-none .active-list .active-item:hover{
+    color: #f60;
+}
+/*优惠券规则*/
+.coupon-hints{
+    width: 960px;
+    padding:0 20px 0 15px;
+    margin-left: 20px;
+}
+.coupon-hints .apply-hints-title{
+    width: 70px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0; 
+}
+.coupon-hints .apply-hints-item{
+    position: relative;
+    padding-left: 20px;
+    color: #8c8c8c;
+    line-height: 20px;
+}
+.coupon-hints .apply-hints-item span{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top:0;
+}
+.coupon-hints .apply-hints-href{
+    display: inline-block;
+    margin-top: 20px;
+    color: #2f6ceb;
+}
+.coupon-hints .apply-hints-href:hover{
+    color: #f60;
+}

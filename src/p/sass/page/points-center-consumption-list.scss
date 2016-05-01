@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+@import "../layout/sprite.scss";        
+          
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";    
+ @import "../components/club-aside.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-pages.scss";
+@import "../components/member-select.scss";
+
+/*
+ *  points-center-consumption-list 返积分商品订单
+ *
+ *  author:JinJing
+ *  date:20150316
+ */
+
+body {
+    background: #e4e4e4;
+}
+.w290{
+    width: 290px;
+}
+.mb188 {
+    margin-bottom: 188px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.points-center-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+/*============== 积分中心顶部导航  ================*/
+/*corner-tab-nav*/
+
+.points-center-menu {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+/*=========== 筛选查询部分 ===========*/
+
+.points-center-main .points-center-filler {
+    width: 940px;
+    background: #fff;
+}
+/*筛选切换部分*/
+
+.points-center-filler .points-center-filler-tab {
+    width: 550px;
+    padding: 10px 10px 20px 10px;
+    margin-top: 10px;
+    background: #fff;
+}
+.points-center-filler-tab .filler-tab-item {
+    display: block;
+    width: 138px;
+    height: 28px;
+    float: left;
+    margin: 10px 10px 0 0;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+}
+.points-center-filler-tab .filler-tab-item.cur, .points-center-filler-tab .filler-tab-item:hover {
+    color: #f60;
+    border-color: #f60;
+}
+/*筛选搜索栏部分*/
+
+.points-center-main .points-center-filler {
+    position: relative;
+}
+.points-center-main .points-center-filler .points-center-filler-search {
+    position: absolute;
+    z-index: 990;
+    right: 10px;
+    top: 30px;
+    width: 340px;
+}
+.points-center-filler .search-bar {
+    height: 28px;
+    overflow: hidden;
+    border: 1px solid #b4b4b4
+}
+.points-center-filler .search-bar .seach-btn {
+display: inline-block;
+float: left;
+width: 30px;
+height: 14px;
+padding: 5px 0 7px;
+overflow: hidden;
+text-align: center;
+}
+.points-center-filler .search-bar .seach-btn i {
+display: inline-block;
+width: 14px;
+height: 14px;
+cursor: pointer;
+}
+/*筛选消费类型*/
+
+.points-center-filler .filler-consumption-type {
+    position: relative;
+    top: -10px;
+    width: 920px;
+    padding-left:10px;
+}
+.filler-consumption-type .category-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+.filler-consumption-type .category-item span {}
+/*积分获取订单记录列表*/
+
+.points-center-consumption-list .order-list-table {
+    width: 100%;
+    text-align: center;
+}
+.order-list-table thead th, .order-list-table thead td {
+    padding: 6px 0;
+    background: #ccc;
+}
+.order-list-table tbody {
+    background: #fff;
+}
+.order-list-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.order-list-table tbody th {
+    position: relative;
+}
+.order-list-table tbody td {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+.order-list-table tbody th .icon {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 20px;
+}
+/*商品/下单时间*/
+
+.order-list-table .order-goods-info .pic {
+    float: left;
+    width: 90px;
+    height: 60px;
+    overflow: hidden;
+}
+.order-list-table .order-goods-info .goods-img img {
+    width: 90px;
+    height: 60px;
+}
+.order-list-table .order-goods-info .info {
+    width: 118px;
+    height: 70px;
+    float: left;
+    margin-top: -5px;
+    padding-left: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+.order-goods-info .info .name {
+    height: 35px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.order-list-table .order-goods-info .goods-name {
+    color: #8c8c8c;
+}
+.order-list-table .order-goods-info .goods-name:hover {
+    color: #f60;
+}
+/*返积分会员等级*/
+
+.order-list-table .repoints-member-level {
+    color: #8c8c8c;
+}
+
+/*购买数*/
+
+.order-list-table .quantity {
+    color: #8c8c8c;
+}
+
+/*实付积分*/
+.order-list-table .out-of-pocket-points{
+    color: #f60;
+}

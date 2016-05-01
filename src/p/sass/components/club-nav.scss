@@ -1,0 +1,64 @@
+/**
+ *  ---------------------------------------------
+ *      会员系统通用二级导航
+ *      此组件只在会员系统内引用到
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+// 导航包裹层
+.club-nav-warp {
+    width: 100%;
+    height: 49px;
+    background: #333;
+    .pos-rel {
+        height: 49px;
+    }
+}
+
+// 导航
+.club-nav {
+    padding: 14px 0;
+    a {
+        display: inline-block;
+        height: 21px;
+        overflow: hidden;
+        margin: 0 20px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        i {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            float: left;
+            overflow: hidden;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        span {
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+        &:hover {
+            color: #f60;
+            i {
+                visibility: visible;
+            }
+        }
+        &.cur i {
+            visibility: visible;
+        }
+        &.cur span {
+            color: #f60;
+        }
+    }
+}

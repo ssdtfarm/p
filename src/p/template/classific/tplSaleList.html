@@ -1,0 +1,29 @@
+<div class="left fl classific-icon">
+    <div class="countDown J_countDown" data-start="<%=startTime%>" data-end="<%=endTime%>"></div>
+</div>
+<div class="right fr">
+    <div class="sale-slider J_saleSlider">
+        <div class="bd"> 
+            <ul class="list">
+            <%for(var i=0; i<list.length; i++) {%> 
+                <li class="item">
+                    <div class="pro-title">
+                        <div class="title-bg"></div>
+                        <p class="title"><%=list[i].proTitle%></p>
+                    </div>
+                    <a href="<%=list[i].proLink%>" class="pro-link" target="_blank" title="<%=list[i].proTitle%>">
+                        <img class="lazy" _src="<%=list[i].imgURL%>" width="290" height="193" alt="<%=list[i].proAlt%>" >
+                    </a>
+                    <div class="tips classific-icon"><%=list[i].cutPrice%></div>
+                    <div class="info">
+                        <span class="price fc-f60">&yen;<strong><%=list[i].proPrice%></strong></span>
+                        <a href="<%=list[i].proLink%>" class="go"><span>立即抢&gt;</span></a>
+                    </div>
+                </li>
+            <%}%>
+            </ul>
+        </div>
+        <div class="prev classific-icon"></div>
+        <div class="next classific-icon"></div>
+    </div>
+</div>

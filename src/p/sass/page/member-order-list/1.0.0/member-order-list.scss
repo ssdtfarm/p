@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/*
+ * 我的金海马 - 订单列表页样式
+ * author : linyandi
+ * date : 2015-02-14
+ */
+
+/* body background-color */
+body {
+	background-color:#e4e4e4;
+}
+
+/* order search bar */
+.member-myorder-top-search {
+	height: 32px;
+	padding: 30px 0 0 0;
+}
+
+.myorder-sieve-order {
+	position: relative;
+	z-index: 990;
+	border: 1px solid #b4b4b4;
+	color: #333;
+}
+
+/*================= 右边 表头 ======================*/
+.order-list-table-head {
+	margin-top: 20px;
+	background-color: #fff;
+}
+.order-list-table-head thead th {
+	height: 30px;
+	text-align:center;
+	color: #fff;
+	background-color: #61bbe0;
+}
+.order-list-table-head tbody td {
+	padding: 5px 8px;
+}
+/*合并付款 按钮*/
+/* .order-list-table-head tbody .buy-together-btn,.order-list-table-head tbody .buy-together-unabled-btn{
+	padding: 2px 10px;
+	color: #fff;
+	border-radius: 3px;
+}
+.order-list-table-head tbody .buy-together-btn{
+	background: #f60;
+}
+.order-list-table-head tbody .buy-together-unabled-btn,.order-list-table-head tbody .buy-together-unabled-btn:hover{
+	background: #ccc;
+}
+.order-list-table-head tbody .buy-together-btn:hover{
+	color: #fff;
+	background: #ee950a;
+} */
+/* 表头分页 */
+.table-head-pages {
+	padding-left: 10px;
+}
+.table-head-pages a {
+	vertical-align: middle;
+}
+.table-head-pages span {
+	vertical-align: middle;
+}
+
+/*========== 列表表格 =========================*/
+.order-list-table {
+	margin-top: 20px;
+	background-color: #fff;
+}
+.order-list-table thead th {
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+}
+.order-list-table thead th span {
+	vertical-align: middle;
+}
+
+.order-list-table tbody td {
+	padding: 20px 0;
+	text-align: center;
+}
+.order-list-table tbody td.sub-order-table{
+	padding: 0;
+}
+.order-list-table tbody td table td {
+	padding: 10px 0; 
+}
+.order-list-table tbody td .sub-order-item {
+	padding: 0 10px;
+	text-align: left;
+	line-height: 22px;
+}
+.order-list-table tbody td .sub-order-item label,
+.order-list-table tbody td .sub-order-item span {
+	vertical-align: baseline;
+}
+/* 复选框 */
+.item-checkbox {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+/* 商家信息 */
+.item-merchant-info p{
+	text-align: left;
+}
+.item-merchant-info .item-merchant-logo {
+	height: 42px;
+	margin-top: 10px;
+}
+.item-merchant-info .item-merchant-logo img{
+	border: 1px solid #ccc;
+}
+.item-merchant-info .item-merchant-chat {
+	padding-top: 5px;
+}
+/* 小图列表 */
+.item-thumb-list {
+	padding: 0px 5px 0 5px;
+	text-align: left;
+}
+.item-thumb-list .thumb-mark {
+	position: absolute;
+	z-index: 991;
+	left: 0;
+	top: 0;
+	display: none;
+	height: 60px;
+	padding: 5px 8px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: left;
+	word-break: break-all;
+	word-wrap: break-word;
+	color: #fff;
+	background-color: #000;
+	-webkit-opacity: 0.75;
+	opacity: 0.75;
+	filter:alpha(opacity=75);
+}
+.item-thumb-list a {
+	position: relative;
+	z-index: 990;
+	display: inline-block;
+	width: 105px;
+	height: 70px;
+	margin-bottom: 4px;
+	overflow:hidden;
+	cursor: default;
+}
+.item-thumb-list a:hover .thumb-mark {
+	display: inline-block;
+}
+/* 物流配送 */
+.item-logist {
+	text-align: left;
+	padding-left: 5px;
+}
+/* 付款状态 */
+.item-link {
+	color:#2f6ceb;
+}
+.item-link:hover {
+	color: #f60;
+}
+.item-pay-status {
+	
+}
+.item-pay-status p {
+	padding: 2px 0;
+}
+/* 交易操作 */
+.item-order-manager {
+}
+.item-order-manager p {
+	padding: 2px 0;
+}
+
+/* 列表 底部表格 */
+.order-list-table-bottom {
+	margin-top: 10px;
+}
+.order-list-table-bottom td {
+	padding: 5px;
+}
+/*========== 关于订单 ====================*/
+.about-order {
+	margin-top: 30px;
+}
+.about-order dt {
+	padding-bottom: 10px;
+}
+.about-order dt label {
+	padding: 2px 8px;
+	color: #fff;
+	background-color: #61bbe0;
+}
+.about-order dd {
+	color: #8c8c8c;
+	line-height: 20px;
+}
+.about-order dd a {
+	color: #f60;
+}
+.about-order dd a:hover {
+	color: #f60;
+}

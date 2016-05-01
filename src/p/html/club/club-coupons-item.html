@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "club-coupons-item",
+        "title": "积分兑换优惠券商品详情页"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "会员俱乐部",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 会员俱乐部导航菜单部分开始 -->
+    <section class="club-nav-warp">
+        <div class="kh-row-24 clearfix">
+            <!-- 延迟部分 -->
+            <div class="kh-col-24 pos-rel" id="J_clubNav">
+                <div class="loading"><i class="icon-loading-small"></i>
+                </div>
+            </div>
+            <!-- 加载部分 -->
+            <script id="J_templateClubNav" type="text/html">
+                <!-- 会员俱乐部导航栏开始 -->
+                <div class="club-nav kh-col-24">
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>首页</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>返利商城</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix cur">
+                        <label>积分商城</label>
+                    </a>
+                    <a href="javascript:void(0);" class="clearfix">
+                        <label>会员特权</label>
+                    </a>
+                </div>
+                <!-- 会员俱乐部导航栏结束 -->
+            </script>
+        </div>
+    </section>
+    <!-- 会员俱乐部导航菜单部分结束 -->
+    <!-- 积分兑换优惠券商品详情页主体开始 -->
+    <section class="kh-row-24 clearfix mt50">
+        <!-- 面包屑 -->
+        <div class="kh-col-24">
+            <div class="main-location">
+                当前位置：
+                <a href="javascript:void(0);">首页</a>
+                <span class="location-point">&gt;</span>
+                <a href="javascript:void(0);">积分商城</a>
+                <span class="location-point">&gt;</span>
+                <a href="javascript:void(0);">优惠券兑换专区</a>
+                <span class="location-point">&gt;</span>
+                <label>【万达广场】乐儿宝高端儿童摄影 价值80元体验券</label>
+            </div>
+        </div>
+        <!-- 产品相册开始 -->
+        <div class="kh-col-12 item-album">
+            <div id="J_albumBig" class="item-album-big">
+                <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max" alt="现代简约 米黄色 头层真皮 沙发组合（3+坐下右贵妃）KHP015" width="590" height="392">
+                <!-- 返现的图标 -->
+                <i class="item-rebate-tag icon-item-rebate">返现</i>
+                <!-- 积分的图标 -->
+                <!-- <i class="item-points-tag icon-item-points-exchange">积分兑换</i> -->
+                <!-- <i class="item-points-tag icon-item-points-buy">积分换购</i> -->
+            </div>
+            <!-- 产品缩略图 -->
+            <ul id="J_thumb" class="item-album-small clearfix">
+                <li class="cur">
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/98/CvoBM1OFymWAS8zrAAIOzL-a8GU627.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 产品相册结束 -->
+        <!-- 产品信息开始 -->
+        <div class="kh-col-12">
+            <div class="item-information">
+                <div><span class="coupons-item-title">优惠券兑换</span></div>
+                <div class="coupons-item-company">
+                    <span class="name">万达广场</span>
+                    <h2 class="coupons-item-name">乐儿宝高端儿童摄影 价值80元体验券</h2>
+                </div>
+                
+                <p class="coupons-cost"><span class="fc-f60">积分兑换价：</span><strong class="fc-f60">50000积分</strong> 已兑换：20张</p>
+                <div><p class="date">有效期：2015-04-30至2015-05-30&nbsp;&nbsp;限购数量：5张</p></div>
+                <a href="javascript:void(0)" class="get-points-btn">立即抢购<i class="icon-point-right"></i></a>
+            </div>
+            <div class="item-information">
+                <div><span class="coupons-item-title">优惠券兑换</span></div>
+                <div class="coupons-item-company">
+                    <span class="name">万达广场33333</span>
+                    <h2 class="coupons-item-name">乐儿宝高端儿童摄影 价值80元体验券333333333</h2>
+                </div>
+                
+                <p class="coupons-cost"><span class="fc-f60">积分兑换价：</span><strong class="fc-f60">5000000积分</strong> 已兑换：20张</p>
+                <div><p class="date">有效期：不限&nbsp;&nbsp;限购数量：不限</p></div>
+                <a href="javascript:void(0)" class="get-points-btn">立即抢购<i class="icon-point-right"></i></a>
+            </div>
+        </div>
+        <!-- 产品信息结束 -->
+    </section>
+    <!-- 积分兑换优惠券商品详情页主体结束 -->
+    <section class="kh-row-24 clearfix mt50">
+        <div class="kh-col-5">
+            <aside class="coupons-side">
+                <h3 class="title"><i class="coupons-side-hot"></i>优惠券兑换<sapn class="fc-f60">热销榜</sapn></h3>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                            <p class="item-title"><b>万达广场</b>乐儿宝高端儿童摄影 价值80元体验券</p>
+                        </a>
+                        <p class="cost-info"><b class="fc-f60">50000积分</b>已兑换：20张</p>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                            <p class="item-title"><b>万达广场</b>乐儿宝高端儿童摄影 价值80元体验券乐儿宝高端儿童摄影 价值80元体验券乐儿宝高端儿童摄影 价值80元体验券乐儿宝高端儿童摄影 价值80元体验券</p>
+                        </a>
+                        <p class="cost-info"><b class="fc-f60">50000积分</b>已兑换：20张</p>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                            <p class="item-title"><b>万达广场</b>乐儿宝高端儿童摄影 价值80元体验券</p>
+                        </a>
+                        <p class="cost-info"><b class="fc-f60">50000积分</b>已兑换：20张</p>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="kh-col-19">
+            <ul class="coupons-tab-hd">
+                <li class="coupons-tit cur">商品详情</li>
+            </ul>
+            <div class="coupons-tab-bd">
+                <div class="coupons-tab-con">
+                    商品详情1 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "club-coupons-item"
+    })
+</body>
+
+</html>

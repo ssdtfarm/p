@@ -1,0 +1,29 @@
+<h2 class="title">商品分类</h2>
+<%for(var i=0; i<list.length; i++) {%>
+<dl>     
+    <%var flag = false;%>
+    <%for(var k=0; k<list[i].typeLink.length; k++) {%>
+        <%if(curSelect == list[i].typeLink[k].proName) {%>
+            <dt class="open"><i class="classific-icon triangle"></i><a href="<%=list[i].proLink%>"></a><%=list[i].proName%></dt> 
+            <%flag = true; break%>
+        <%}%>
+    <%}%>
+    <%if(!flag){%>
+        <dt><i class="classific-icon triangle"></i><a href="<%=list[i].proLink%>"></a><%=list[i].proName%></dt>
+    <%}%>
+    
+    <dd <%if(flag){%>class="active"<%}%>>
+        <%for(var j=0; j<list[i].typeLink.length; j++) {%>
+            <%if(j <= 3) {%>
+                <div><a href="<%=list[i].typeLink[j].proLink%>" <%if(curSelect == list[i].typeLink[j].proName){%>class="active"<%}%> ><%=list[i].typeLink[j].proName%></a></div>
+            <%} else {%>
+                <div class="hide"><a href="<%=list[i].typeLink[j].proLink%>"  <%if(curSelect == list[i].typeLink[j].proName){%>class="active"<%}%> ><%=list[i].typeLink[j].proName%></a></div>
+            <%}%>
+        <%}%>
+
+        <%if(list[i].typeLink.length > 3) {%>
+            <span class="more">更多</span>
+        <%}%>
+    </dd>
+</dl>
+<%}%>

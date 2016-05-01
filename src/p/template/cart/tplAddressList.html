@@ -1,0 +1,32 @@
+<%for(var i=0; i<list.length; i++){%>
+<%if(i==0){%>
+<input type="hidden" name="addressID" value="<%=list[i].addressID%>" />
+<%}%>
+<dl class="ship-address-list">
+    <dt class="JQ_chkAddress"  data-value="<%=list[i].addressID%>,<%=list[i].areaID%>">
+        <a href="javascript:void(0);" class="icon-radio-off <%if(i==0){%>icon-radio-on<%}%> JQ_radio"></a>
+        <%if(list[i].def==1){%>
+        <i class="JQ_labelIcon icon-label-f60"></i>
+        <%}else{%>
+        <i class="JQ_labelIcon icon-empty"></i>
+        <%}%>
+        <label class="JQ_userName address-name" title="<%=list[i].name%>"><%=list[i].name%></label>
+        <span class="JQ_area address-area" title="<%=list[i].proName%><%=list[i].cityName%><%=list[i].areaName%>" data-value="<%=list[i].proID%>,<%=list[i].cityID%>,<%=list[i].areaID%>,<%=list[i].proName%>,<%=list[i].cityName%>,<%=list[i].areaName%>">
+                            <%=list[i].proName%><%=list[i].cityName%><%=list[i].areaName%>
+                </span>
+        <span class="JQ_address address-detail" title="<%=list[i].address%>">  
+                            <%=list[i].address%>
+                </span>
+        <span class="JQ_telephone address-phone" title="手机/电话：<%=list[i].mobile%>/<%=list[i].telphone%>" data-value="<%=list[i].mobile%>,<%=list[i].telphone%>">
+                            手机/电话：<%=list[i].mobile%>/<%=list[i].telphone%>
+                </span>
+        <input type="hidden" class="JQ_default" value="<%=list[i].def%>">
+        <%if(list[i].def==1){%>
+        <span class="default-address-text JQ_defaultText">默认地址</span>
+        <%}else{%>
+        <a href="javascript:void(0);" data-id="<%=list[i].addressID%>" class="list-set-label JQ_setDefault">设为默认地址</a>
+        <%}%>
+        <a href="//my.kinhom.com/user/addressdo?type=3" class="icon-modify-8c8  JQ_modifyAddress"></a>
+    </dt>
+</dl>
+<%}%>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";
+@import "../components/member-select.scss";
+@import "../components/common-search-bar.scss";
+
+
+/* 
+ *  支付成功页面样式 
+ */
+.order-pay-success {
+	width: 500px;
+	padding-top: 40px;
+	margin-left: 360px;
+	font-size: 14px;
+}
+.order-pay-success p {
+	padding: 5px;
+}
+.order-pay-success p span{
+	vertical-align: top;
+}
+.order-pay-success p i {
+	margin-right: 10px;
+}
+.order-pay-success .pay-success-tip {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.order-pay-success .pay-success-btns a {
+	color: #2f6ceb;
+	text-decoration:none;
+}
+.order-pay-success .pay-success-btns a:hover {
+	color: #f60;
+}

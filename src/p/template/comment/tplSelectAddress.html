@@ -1,0 +1,36 @@
+<div id="J_selectProvience" class="select-gray fl">
+    <i class="select-corner icon-gray-left"></i>
+    <%if(valCity==""){%>
+    <label class="JQ_option select-option w90" data-value="0">请选择省</label>
+    <%}else{%>
+    <label class="JQ_option select-option w90" data-value="0"><%=textPro%></label>
+    <%}%>
+    <i class="select-corner icon-gray-right"></i>
+    <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+    <ul id="J_proList"></ul>
+    <input type="hidden" name="valProvince" value="<%=valPro%>" />
+</div>
+<div class="select-gray fl JQ_addressCity">
+    <i class="select-corner icon-gray-left"></i>
+    <%if(valCity==""){%>
+    <label class="JQ_option select-option w90" data-value="0">请选择市</label>
+    <%}else{%>
+    <label class="JQ_option select-option w90" data-value="0"><%=textCity%></label>
+    <%}%>
+    <i class="select-corner icon-gray-right"></i>
+    <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+    <ul id="J_cityList"></ul>
+    <input type="hidden" name="valCity" value="<%=valCity%>" />
+</div>
+<div class="select-gray fl JQ_addressArea">
+    <i class="select-corner icon-gray-left"></i>
+    <%if(valArea==""){%>
+    <label class="JQ_option select-option w90" data-value="0">请选择区</label>
+    <%}else{%>
+    <label class="JQ_option select-option w90" data-value="0"><%=textArea%></label>
+    <%}%>
+    <i class="select-corner icon-gray-right"></i>
+    <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+    <ul id="J_areaList"></ul>
+    <input type="hidden" name="valArea" value="<%=valArea%>" />
+</div>

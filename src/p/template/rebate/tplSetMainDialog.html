@@ -1,0 +1,16 @@
+<div class="goods-dialog">
+    <h6>只可以设置4个主推商品，请先删除已有的主推商品</h6>
+    <ul class="goods-list">
+        <%for(var i=0; i<data.length; i++) {%>
+            <li>
+                <dl class="goods">
+                    <dt class="fl w140 ml-10 mr-10">
+                        <a href="javascript:void(0);"><img src="<%=data[i].img%>" alt=""></a>
+                    </dt>
+                    <dd class="fl"><a href="" class="title"><%=data[i].sku_title%></a><span>&yen;<%=data[i].price%></span><span class="fc-f60">返&yen;<%=data[i].price%></span></dd>
+                </dl>
+                <button class="btn-orange J_cancelMain" data-id="<%=data[i].sku_id%>">取消主推</button>
+            </li>
+        <%}%>
+    </ul>
+</div>

@@ -1,0 +1,89 @@
+ <!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "login-new",
+        "title" : "金海马商城--欢迎登录金海马"
+    })
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn" : "@@miscPath",
+        "headerName" : "登录",
+        "search" : false
+    })
+    <!-- 头部结束 -->
+    <!-- 主体内容 -->
+    <section class="login-wrap">
+        <div class="login-content clearfix">
+            <div class="login-right fr">
+                <div class="login-title">
+                    <span>会员登录</span> 
+                    <a href="#" class="reg-link fr">免费注册</a>   
+                </div>
+                <div class="login-msg-wrap">
+                    <div class="login-msg"><i class="reg-icon msg-icon"></i><span>帐户名与密码不匹配，请重新输入</span></div>
+                </div>
+                
+                <form action="" id="J_loginForm" method="post">
+                    <div class="kh-login-wrap J_loginItem">
+                        <ul class="mail-fill">
+                            <li><span></span>qq.com</li>
+                            <li><span></span>163.com</li>
+                            <li><span></span>126.com</li>
+                            <li><span></span>sina.com</li>
+                            <li><span></span>hotmail.com</li>
+                            <li><span></span>gmail.com</li>
+                            <li><span></span>soho.com</li>
+                            <li><span></span>139.com</li>
+                            <li><span></span>189.cn</li>
+                        </ul>
+                        <i class="kh-login-user reg-icon"></i>
+                        <input type="text" class="userName" name="username" placeholder="用户名/手机号/邮箱">
+                        <i class="kh-login-clear J_clear reg-icon"></i>
+                    </div>
+                    <div class="kh-login-wrap J_loginItem">
+                        <i class="reg-icon kh-login-pass"></i>
+                        <input type="password" class="userPass" name="password" placeholder="密码">
+                        <i class="kh-login-clear J_clear reg-icon"></i>
+                    </div>
+                </form>
+                <div class="remember-login">
+                    <span class="remember"><i class="icon icon-box-checked"></i>自动登录</span>
+                    <a href="#" class="forgot-pass fr">忘记密码？</a>
+                </div>
+                <div class="login-btn J_login">登&nbsp;&nbsp;录</div> 
+                <div class="other-login-wrap">
+                    <div class="title">
+                        <span>使用合作网站账号登录</span>
+                    </div>
+                    <div class="other-login">
+                        <a href="http://openapi.qzone.qq.com/oauth/show?which=ConfirmPage&display=pc&response_type=code&client_id=101057307&redirect_uri=http://passport.kinhom.com/Oauth/qqCallback&state=b0049ccfddc98784effd4c14c94bb052&scope=get_user_info" class="reg-icon qq"></a>
+                        <a href="javascript:void(0);" class="reg-icon wx"></a>
+                        <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D7edfeded8c07406eb44ec9e4c6ce910a" class="reg-icon zfb"></a>
+                        <a href="https://api.weibo.com/oauth2/authorize?client_id=1543020520&redirect_uri=http%3A%2F%2Fpassport.kinhom.com%2FOauth%2FweiboCallback&response_type=code" class="reg-icon wb"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-left fl">
+                <img src="http://misc.jjcdn.com/p/images/login-img.png" alt="" >
+            </div>
+            
+        </div>
+    </section>
+    <!-- 主体内容结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "login-new"
+    })
+</body>
+</html>

@@ -1,0 +1,91 @@
+/**
+ *  ---------------------------------------------
+ *      新增收货地址和编辑收货地址表单样式
+ *      这个文件只在确认订单页和个人中心的地址列表引用
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+.address-add-head {
+    width: 85px;
+    text-align: right;
+}
+
+.person-address-add-table {
+    width: 100%;
+    background-color: #fff;
+    min-height: 290px;
+    td {
+        text-align: left;
+        padding: 8px 0;
+        .person-address-add-tip {
+            color: #8c8c8c;
+        }
+    }
+}
+
+.person-address {
+    .item {
+        td {
+            .person-address-add-tip {
+                span {
+                    font-size: 14px;
+                    color: #ff6600;
+                }
+            }
+        }
+    }
+}
+
+.person-address-add-input {
+    width: 200px;
+    height: 30px;
+    padding: 0 0 0 10px;
+    margin-left: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 2px;
+}
+
+
+/* address width */
+
+.address-width {
+    width: 100px;
+    height: 28px;
+}
+
+.detailed-address-input {
+    width: 410px;
+    height: 30px;
+    color: #8c8c8c;
+}
+
+
+/* fix left 10px */
+
+.defult-address-choose {
+    padding-left: 10px;
+    .icon {
+        display: inline-block;
+    }
+    .icon-box-normal {
+        width: 20px;
+        height: 20px;
+    }
+    .icon-box-checked {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+}
+
+/* btn fix right 10px */
+.save-person-information {
+    padding-left: 10px;
+}

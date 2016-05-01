@@ -1,0 +1,265 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+@import "../layout/sprite.scss";         // icon-sprite
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  rebate-goods-single-share 会员俱乐部返现商品单品分享页
+ *
+ *  author:JinJing
+ *  date:20150326
+ */
+
+.mt50 {
+    margin-top: 50px;
+}
+/*单品分享表格*/
+
+.goods-single-share-table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.goods-single-share-table thead{
+    color: #8c8c8c;
+    border-bottom: 1px solid #ccc;
+}
+
+.goods-single-share-table thead td {
+    padding: 6px 0;
+}
+.goods-single-share-table tbody td {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+.goods-single-share-table .share-goods-info .pic {
+    float: left;
+    width: 140px;
+    height: 94px;
+    overflow: hidden;
+}
+.goods-single-share-table .share-goods-pic .goods-img img {
+    width: 140px;
+    height: 94px;
+}
+.goods-single-share-table .share-goods-name{
+    width: 170px;
+    height: 94px;
+    padding-left: 10px;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.goods-single-share-table .share-goods-name .goods-name {
+    color: #8c8c8c;
+}
+.goods-single-share-table .share-goods-name .goods-name:hover {
+    color: #f60;
+}
+
+.goods-single-share-table .inviter-rebate-percent,.goods-single-share-table .invited-rebate-percent{
+    color: #f60;
+}
+
+/*============== 您的定制分享链接 ============*/
+.goods-share-href-main {
+    margin-top: 20px;
+    background: #fff;
+}
+/*定制分享链接发送 左部分*/
+.goods-share-href-main .left-part {
+    width: 440px;
+    height: 260px;
+    float: left;
+    padding-right: 49px;
+    border-right: 1px solid #ccc;
+}
+.goods-share-href-main .left-part .diy-share-href {
+    width: 440px;
+    height: 50px;
+}
+.left-part .diy-share-href .title {
+    position: relative;
+    float: left;
+    width: 170px;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #61bbe0;
+}
+.left-part .diy-share-href .title:before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #61bbe0;
+    border-width: 0 0 40px 20px;
+}
+.left-part .diy-share-href .title:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #61bbe0;
+    border-width: 40px 0 0 20px;
+}
+.left-part .diy-share-href .tip {
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    line-height: 50px;
+    color: #61bbe0;
+}
+.left-part .diy-share-href-info {
+    width: 420px;
+    height: 56px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    background: #ffc299;
+}
+.left-part .diy-share-to dt {
+    width: 72px;
+    height: 50px;
+    float: left;
+    line-height: 35px;
+    text-align: right;
+}
+.left-part .diy-share-to dd {
+    float: left;
+}
+.left-part .diy-share-to .share-to-list {
+    width: 368px;
+    height: 50px;
+    overflow: hidden;
+}
+.diy-share-to .share-to-list .share-to-item {
+    width: 50px;
+    height: 47px;
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+}
+.share-to-list .share-to-item .icon-share {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+.share-to-list .share-to-item .share-name {
+    display: inline-block;
+    margin-top: 3px;
+    color: #8c8c8c;
+}
+.share-to-list .share-to-item:hover .share-name{
+    color: #f60;
+}
+/*商品分享链接发送 右部分*/
+.goods-share-href-main .right-part {
+    width: 200px;
+    height: 260px;
+    float: left;
+    padding-left: 50px;
+}
+.right-part .share-href-2dcode-title {
+    position: relative;
+    width: 170px;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #57bb89;
+}
+.right-part .share-href-2dcode-title:before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #57bb89;
+    border-width: 0 0 40px 20px;
+}
+.right-part .share-href-2dcode-title:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #57bb89;
+    border-width: 40px 0 0 20px;
+}
+.right-part .share-href-2dcode{
+    width: 153px;
+    height: 154px;
+    margin-top: 10px;
+}
+.right-part .share-href-2dcode img{
+    width: 153px;
+    height: 154px;
+}
+.right-part .share-href-2dcode-tip{
+    color: #8c8c8c;
+}
+.right-part .share-href-2dcode-tip span{
+    color: #57bb89;
+}
+
+/*============= 返现规则说明 ============*/
+.rebate-rule-info{
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.rebate-rule-info h2{
+    width: 170px;
+    margin: 0 auto;
+    padding: 9px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: 2px dotted #f60;
+    border-radius: 30px;
+}
+.rebate-rule-info .rule-list .rule-item{
+    text-align: left;
+    margin-top: 20px;
+}
+.rebate-rule-info .icon-star-on{
+    display: inline-block;
+    margin: -4px 5px 0 5px; 
+}

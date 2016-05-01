@@ -1,0 +1,80 @@
+/*-------------------------*/
+/*  National active style
+/*  author : linyandi
+/*  update by 2014-09-23
+/*-------------------------*/
+/*layout*/
+.ui-national-wrap{
+	width:100%;
+	background-color:#de2020;
+}
+/*左边浮动导航样式*/
+.ui-national-left{
+	display:block;
+	position:fixed;
+	z-index:9998;
+	left:0;
+	top:0;
+	width:195px;
+	height:525px;
+	overflow:hidden;
+	background:url(img/ui-national-left-bg.png) no-repeat;
+}
+.ui-national-left ul{
+	display:block;
+	width:146px;
+	margin:96px auto 0 auto;
+	*margin:96px auto 0 auto!important;
+}
+.ui-national-left .mt9{
+	margin-top:6px;
+	*margin-top:6px!important;
+}
+.ui-national-left ul li{
+	width:146px;
+	height:37px;
+	line-height:37px;
+	*line-height:28px!important;
+	text-align:center;
+	*float:left!important;
+	*clear:both!important;
+}
+.ui-national-left ul li a{
+	padding:0px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+	text-decoration:none;
+	color:#fffca0;
+}
+.ui-national-left ul li a:hover{
+	color:#ee0d00;
+	text-decoration:none;
+}
+.ui-national-left li.big{
+	font-size:22px;
+}
+.ui-national-left li.small{
+	font-size:18px;
+}
+/*返回顶部按钮*/
+.ui-national-left li.top{
+	font-size:22px;
+}
+.ui-national-left li.top a{
+	color:#241627;
+	text-decoration:none;
+}
+.ui-national-left li.top a:hover{
+	color:#241627;
+	text-decoration:none;
+}
+
+.ui-national-left .national-close-btn{
+	position:absolute;
+	right:4px;
+	top:28px;
+	width:44px;
+	height:31px;
+	overflow:hidden;
+	background:url(img/national-close-btn-bg.png) no-repeat;
+}

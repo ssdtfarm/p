@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/member-aside.scss";     // member-aside
+@import "../components/member-nav.scss";    // member-system-nav
+
+/*
+ *  sales-center-index 卖家中心首页
+ *
+ *  author:JinJing
+ *  date:20150324
+ */
+.merchant-location-based{
+	padding: 5px 15px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+}
+.merchant-location-based .href-before{
+	color: #4384b7;
+}
+.merchant-location-based .href-before:hover{
+	color: #f60; 
+}
+.merchant-location-based .bread-interval{
+	margin: 0 5px;
+	font-style: normal;
+	color: #4384b7;
+}
+
+p{
+	padding-top: 5px;
+}
+
+
+.font-color{
+	color: #000;
+}
+
+.order-info {
+	border: solid 1px #ccc;
+	padding: 10px;
+	color: #999;
+	display: table;
+	font-size: 12px;
+	margin-top: 15px;
+
+}
+
+.order-info p{
+	padding-top: 0px;
+}
+
+
+.order-info .order-status {
+	width: 13%;
+	padding: 10px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	border-right: 1px solid #ccc;
+
+
+}
+
+.order-info .order-opinion{
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	text-align: center;
+	padding-left: 20px;
+	float: left;
+
+}
+
+.order-info .order-opinion .opinior-div{
+	padding: 5px;
+	width: 110px;
+	text-align: center;
+	background-color: #ff6600;
+	border: none;
+	margin: 10px 20px 10px 20px;
+	float: left;
+	font-weight: bold;
+	color: #fff;
+}
+
+.aftersales-midle{
+	color: #999;
+	margin-top: 15px;
+}
+
+
+.aftersales-midle .midle-part{
+	width: 100px;
+	background-color: #c3d4de;
+	padding: 3px;
+	text-align: center;
+	color: #000;
+	margin-bottom: 1px;
+}
+
+.aftersales-midle .midle-left{
+	border: 1px #ccc solid;
+	padding: 20px;
+	width: 64%;
+	margin-right: 10px;
+	float: left;
+}
+
+.aftersales-midle .midle-right{
+	border: 1px #ccc solid;
+	padding: 20px;
+	width: 26.5%;
+	float: right;
+}
+
+.aftersales-midle .midle-left .left-img{
+	padding-top: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+.aftersales-midle .midle-left .product-info{
+	padding-top: 10px;
+	width: 140;
+	margin-right: 60px;
+	float: left;
+}
+
+.aftersales-midle .midle-left .product-info p{
+	padding-top: 3px;
+}
+
+.aftersales-midle .midle-left .buyer-info{
+	float: left;
+}
+
+.process-bar{
+	margin-top: 15px;
+	border: 1px #ccc solid;
+	z-index: 990;
+	position: relative;
+	vertical-align: middle;
+	min-height: 130px;
+}
+
+.process-bar span{
+	vertical-align: middle;
+}
+
+.process-bar .status-line-point{
+	position: absolute;
+	z-index: 992;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+.process-bar .icon-circle-blue{
+	background-position: 0 -1567px;
+}
+
+.process-bar .fc-61b{
+	color: #61bbe0;
+}
+
+.process-bar .status-line-point{
+	position: absolute;
+	z-index: 992;
+	left: 0;
+	top: 0;
+	margin: 20px 25px;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+.process-bar  .point-1 {
+	left: 0;
+}
+
+.process-bar .point-2{
+	left: 200px;
+}
+
+.process-bar .point-3{
+	left: 400px;
+}
+
+.process-bar .status-line-point b{
+	width: 100%;
+	margin: 5px 0;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.process-bar .status-line-point i{
+	display: inline-block;
+	text-align: center;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.process-bar .status-line-point .time{
+	width: 75px;
+	margin: 5px auto;
+	font-size: 12px;
+	color: #8c8c8c;
+}
+.process-bar .status-line {
+	position: absolute;
+	z-index: 991;
+	top: 8px;
+	left: 65px;
+	font-size: 0;
+	margin: 25px;
+	height: 4px;
+	width: 400px;
+	background-color: #ccc;
+}
+
+.process-bar .status-line .line-1{
+	width: 200px;
+	background-color: #61bbe0;
+	height: 4px;
+	z-index: 990;
+}
+
+.process-bar .status-line .line-2{
+	width: 400px;
+	background-color: #61bbe0;
+	height: 4px;
+	z-index: 990;
+}
+
+.refund-info{
+	color: #999;
+	border: 1px solid #ccc;
+	border-top: none;
+	padding: 20px;
+}
+
+.refund-info .content-align{
+	vertical-align: top;
+}
+
+.refund-info .refund-img{
+	position: relative;
+	text-align: center;
+	vertical-align: center;
+	width: 80px;
+	height: 60px;
+	border:  1px solid #ccc;
+	display: inline-block;
+}
+
+.refund-info .refund-img .mengchen-img{
+	position: absolute;	
+	width: 80px;
+	height: 60px;
+	z-index: 991;
+}
+
+.refund-info .refund-img .img{
+	z-index: 990;
+	
+}
+
+.refund-info .refund-img:hover{
+	
+}

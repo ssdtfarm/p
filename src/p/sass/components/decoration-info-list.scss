@@ -1,0 +1,65 @@
+/**
+ *  ---------------------------------------------
+ *      装修汇样式
+ *      这样式用在一级列表页，二级列表页，详情页
+ *      
+ *      author : jinjing
+ *      date   : 2015-11-18
+ * 
+ *  ---------------------------------------------
+ */
+
+/*decoration-info*/
+
+.decoration-info-list {
+    width: 240px;
+    margin-top: 40px;
+    overflow: hidden;
+    .hd {
+        ul {
+            width: 240px;
+            height: 25px;
+            border-bottom: 1px solid #333;
+        }
+        li {
+            width: 120px;
+            height: 18px;
+            padding-bottom: 4px;
+            float: left;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-bottom: 3px solid #fff;
+            cursor: pointer;
+            &.on {
+                border-bottom: 3px solid #f60;
+            }
+        }
+    }
+    .bd {
+        width: 240;
+        li {
+            width: 100%;
+            height: 370px;
+        }
+        a.item {
+            display: block;
+            width: 225px;
+            height: 36px;
+            padding: 0 0 0 15px;
+            line-height: 36px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #8c8c8c;
+            border-bottom: 1px solid #ebebeb;
+            background: url("../images/index_sprite_2015.png") -132px 17px no-repeat;
+            &:visited {
+                color: #8c8c8c;
+            }
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+}

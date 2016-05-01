@@ -1,0 +1,13 @@
+<div class="prev classific-icon"></div>
+    <div class="next classific-icon"></div>
+    <div class="bd">
+        <ul>
+            <%for(var i=0; i<list.length; i++) {%>
+            <li class="bd-item">
+                <a href="<%=list[i].proLink%>" title="<%=list[i].proTitle%>" target="_blank">
+                    <img _src="<%=list[i].imgURL%>" alt="<%=list[i].proAlt%>" width="288" height="345">
+                </a>
+            </li>
+            <%}%>
+        </ul>
+    </div>

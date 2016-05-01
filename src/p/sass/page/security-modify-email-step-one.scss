@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+@import "../components/common-dialog.scss";	// art-dialog
+
+/*
+ * Security Center
+ * security-modify-email-step-one.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-10-16;
+ */
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 修改绑定邮箱
+.security-email-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+.security-email-form {
+	margin-top: 56px;
+}
+.security-email-item {
+	position: relative;
+	min-height: 30px;
+	line-height: 28px;
+	overflow: hidden;
+	label {
+		float: left;
+		width: 60px;
+		height: 28px;
+		line-height: 28px;
+		text-align: right;
+	}
+	input {
+		float: left;
+		margin-left: 4px;
+		width: 172px;
+		height: 28px;
+		line-height: 28px;
+		padding: 0 8px;
+		border: 1px solid #b4b4b4;
+		border-radius: 3px;
+		&:focus {
+			border-color: #2f6ceb;
+		}
+	}
+	.security-code {
+		float: left;
+		width: 72px;
+	}
+	.get-security-code {
+		position: absolute;
+		float: left;
+		margin-left: 10px;
+		width: 88px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #ccc;
+		background: #fff;
+		border-radius: 3px;
+		text-align: center;
+		color: #333;
+		cursor: pointer;
+		&:hover {
+			color: #f60;
+			border-color: #f60;
+		}
+	}
+	.security-code-active {
+		display: none;
+		background: #ccc;
+		color: #f60;
+		&:hover {
+			color: #f60;
+			border-color: transparent;
+		}
+	}
+	.submit-btn {
+		position: relative;
+		display: block;
+		left: 60px;
+  		width: 190px;
+  		height: 30px;
+  		margin-left: 4px;
+  		color: #fff;
+  		background: #f60;
+  		border-color: transparent;
+  		border-radius: 3px;
+  		text-align: center;
+  		cursor: pointer;
+  		&:hover {
+			background: $commonColor;
+		}
+  		&:focus {
+  			border-color: transparent;
+  		}
+	}
+	.on {
+		background: #ccc;
+		cursor: default;
+		span {
+			color: #f60;
+		}
+		&:hover {
+			background: #ccc;
+		}
+	}
+}
+.tips {
+	//margin-left: 64px;
+	min-height: 20px;
+	line-height: 20px;
+	color: #8c8c8c;
+	.icon-tip-wrong {
+		margin: 0 3px 3px 0;
+	}
+}
+.tip-ok {
+	margin-left: 5px;
+}
+.tips-notify {
+	display: none;
+	// min-height: 20px;
+	line-height: 20px;
+	color: #8c8c8c;
+	margin: 20px 0;
+	.check-email-btn {
+		margin: 0 10px;
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		width: 90px;
+		height: 30px;
+		color: #fff;
+		background: #f60;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 3px;
+		&:hover {
+			background: $commonColor;
+		}
+	}
+}
+
+.security-email-step {
+	overflow: hidden;
+	border-bottom: 1px dashed #ccc;
+	.step {
+		float: left;
+		margin-top: 47px;
+		padding-bottom: 36px;
+		width: 185px;
+		height: 30px;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		line-height: 30px;
+		background: url("../images/security-center/step-sprites.png") 0 0 no-repeat;
+	}
+	.first-step {
+		width: 189px;
+		background-position: 0px 0px;
+	}
+	.second-step,
+	.third-step {
+		background-position: -194px 0px;
+	}
+	.step-ok {
+		background-position: -384px 0px;
+	}
+}
+
+// 修改绑定邮箱——验证身份
+.validate-identity-form {
+	margin-top: 20px;
+	.security-email-item {
+		label {
+			width: 85px;
+		}
+		.submit-btn {
+			margin-left: 0;
+			left: 0;
+		}
+	}
+}
+.security-email-remind {
+	padding-top: 10px;
+	margin-top: 29px;
+	color: #8c8c8c;
+	line-height: 30px;
+	border-top: 1px dashed #ccc;
+	.security-service {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		margin: -8px 0 0 10px;
+		width: 30px;
+		height: 24px;
+		background: url("../images/security-center/security-service.png") 0 0 no-repeat;
+		cursor: pointer;
+		&:hover {
+			background-position: -35px 0px;
+		}
+	}
+}

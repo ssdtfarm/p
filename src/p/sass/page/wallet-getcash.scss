@@ -1,0 +1,296 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";  
+       // grid
+      // icon-system
+@import "../components/common-top-bar.scss";   
+@import "../components/member-head.scss";  
+@import "../components/common-foot.scss"; 
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";      
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/common-dialog.scss";	// art-dialog
+
+body {
+    background: #e4e4e4;
+}
+/* 弹框样式开始 */
+/* 默认样式开始 */
+.ui-dialog-content {
+	padding: 0 20px;
+}
+.ui-dialog-body {
+	padding: 0 0 8px;
+	.icon-tip-wrong {
+		margin: -2px 5px 0 0;
+	}
+}
+.ui-dialog-footer {
+    padding-bottom: 20px;
+}
+.ui-dialog-button {
+	margin-top: 14px;
+}
+.ui-dialog-title,
+.ui-dialog-footer button.ui-btns-ok,
+.ui-dialog-footer button.ui-btns-cancel {
+    font-family: Microsoft Yahei;
+}
+/* 默认样式结束 */
+.btn-cancel {
+	text-align: center;
+	position: relative;
+	top: 58px;
+    span {
+    	color: #2F6CEB;
+    	cursor: pointer;
+    }
+}
+.chk-tip-1 {
+    margin-top: 4px;    
+    font-size: 14px;
+    color: #333;
+    line-height: 48px;
+}
+.chk-tip-2 {
+    color: #C13D23;
+    font-size: 12px;
+}
+.chk-tip-3 {
+    margin-top: 4px;    
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+    line-height: 80px;
+}
+.mt-9 {
+	margin-top: -9px !important;
+}
+.confirm-table {
+	margin: 10px 0 0;
+	width: 100%;
+	border: 1px solid #CCC;
+	color: #333;
+	.confirm-td {
+		width: 124px;
+		height: 40px;
+		color: #8C8C8C;
+		text-align: right;
+	}
+	span {
+	    margin-right: 10px;
+		float: left;
+	    line-height: 40px;
+	}
+	img {
+		display: block;
+	    width: 158px;
+	    height: 38px;
+		border: 1px solid #ccc;
+	}
+	.pt5 {
+		padding-top: 5px;
+	}
+	.pb5 {
+		padding-bottom: 5px;
+	}
+}
+/* 弹框样式结束 */
+/* 主体开始 */
+.wallet-getcash {
+		width: 990px;
+		height: 733px;
+		background: #FFF;
+		.getcash-title {
+			margin: 0 0 0 50px;
+		    width: 890px;
+		    border-bottom: 1px solid #333;
+		    h4 {
+			    padding: 8px 0 0;
+			    color: #333;
+			    font-size: 18px;
+			    line-height: 40px;
+		    }
+		}
+		.getcash-list {
+		    margin: 0 0 0 50px;
+		    width: 890px;
+		    overflow: hidden;
+		    li {
+		    	position: relative;
+		    	z-index: 10;
+		        margin: 20px 20px 0 0;
+		        float: left;
+		        width: 238px;
+		        height: 88px;
+		        border: 1px solid #CCC;
+		        -webkit-user-select: none;
+		        -moz-user-select: none;
+		        -ms-user-select: none;
+		        cursor: default;
+		        .img-wrap {
+		            width: 100%;
+		            height: 58px;
+		            border-bottom: 1px dashed #CCC;
+		            overflow: hidden;//解决collapsing margins
+		            img {
+		            	margin: 0 auto;
+		            	display: block;
+		            	width: 238px;
+		            	height: 58px;
+		            	// background: url(../images/member-card/member_card_sprites.png) no-repeat 0 0;
+		            }
+		        }
+		        .dscr {
+		        	position: relative;
+		            width: 100%;
+		            font-size: 14px;
+		            line-height: 28px;
+		            .type {
+		                margin: 0 0 0 50px;
+		                color: #8C8C8C;
+		            }
+		            .tail-num {
+		                margin: 0 0 0 16px;
+		                color: #333;
+		            }
+		        }
+		    }
+		    .no-card {
+		    	display: none;
+		        border-style: dashed;
+		        .dscr {
+		        	color: #CCC;
+		        	font-size: 14px;
+		        	text-align: center;
+			        line-height: 90px;
+		        }
+		    }
+		    .no-card-on {
+		    	display: inline;
+		    }
+		    .selected-box {
+		    	position: absolute;
+		    	z-index: 0;
+				width: 238px;
+                height: 88px;
+                border: 2px solid #F60;
+		    }
+		}
+		.getcash-price {
+			margin: 0 0 0 50px;
+			padding: 20px 0;
+		    width: 890px;
+		    border-bottom: 1px dashed #CCC;
+		    color: #333;
+		    span {
+		    	display: inline-block;
+		    	color: #F60;
+    			font-size: 18px;
+    			line-height: 18px;
+		    }
+		    span:before {
+		    	content: "￥";
+		    }
+		    .loading-t {
+			    position: relative;
+	            top: 4px;
+	            margin-top: -2px;
+	            width: 18px;
+	            height: 18px;
+		    }
+
+		}
+		.danger-tip {
+			margin: -3px 0 0 10px;
+			color: #C13D23;
+			.icon-tip-wrong {
+				margin: -2px 5px 0 0;
+			}
+		}
+		.getcash-form {
+			margin: 13px 0 0 50px;
+			width: 100%;
+			.form-title {
+				position: relative;
+				display: inline-block;
+				width: 96px;
+				height: 20px;
+				text-align: right;
+				line-height: 28px;
+				.yuan {
+					position: absolute;
+					left: 264px;
+				}
+				.icon-tip-ok {
+					position: absolute;
+					left: 264px;
+					top: 8px;
+					display: none;
+				}
+			}
+			.form-name {
+				margin: 0 0 0 12px;
+			}
+			.required:before {
+				content: "*";
+				margin: 0 5px 0 0;
+				color: #F60;
+			}
+			.form-input {
+				margin: 10px 0 0 4px;
+				padding: 0 40px 0 8px;
+				width: 140px;
+				height: 28px;
+				border: 1px solid #B4B4B4;
+				border-radius: 3px;
+				line-height: 28px;
+				&:focus {
+					border-color: #2F6CEB;
+				}
+			}
+			.bcB4 {
+				border-color: #B4B4B4;
+			}
+			.bcC13D23 {
+				border-color: #C13D23;
+			}
+			.forget-pwd {
+				margin: 0 0 0 10px;
+				color: #8D8D8D;
+				&:hover {
+					color: #F60;
+				}
+			}
+			.normal-tip {
+				margin: 0 0 0 10px;
+				color: #F60;
+			}
+			.getcash-btn {
+				padding: 20px 0 0 100px;
+				a {
+				    display: inline-block;
+				    margin: 0 7px 0 0;
+					width: 88px;
+				    height: 28px;
+				    border: 1px solid #CCC;
+				    border-radius: 3px;
+				    text-align: center;
+				    line-height: 28px;
+				}
+				.active {
+				    color: #333;
+					background: #FFF;
+				    &:hover {
+				    	border-color: #F60;
+				    	color: #F60;
+				    }
+				}
+				.inactive {
+					color: #FFF;
+					background: #CCC;
+				}
+			}
+		}
+	}
+
+/* 主体结束 */

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "future",
+    "title" : "未来之家"
+    })
+</head>
+<body>
+<script>
+    var imgArr = ['@@miscPath/p/images/future-img-1.jpg','@@miscPath/p/images/future-img-2.jpg','@@miscPath/p/images/future-img-3.jpg','@@miscPath/p/images/future-img-4.jpg','@@miscPath/p/images/future-img-5.jpg'];
+
+    for(var i=0; i<imgArr.length; i++) {
+        var newimages=new Image();
+        newimages.src=imgArr[i];
+    }
+</script>
+<!-- 页面主体开始 -->
+        <div class="fix-nav">
+            <span class="nav-item home" data-idx="0">
+                <span class="future-icon icon"></span>
+                <span class="future-icon icon" ></span>
+                <span class="txt">未来<br>之家</span>
+            </span>
+            <span class="nav-item livingroom" data-idx="1">
+                <span class="future-icon icon" ></span>
+                <span class="txt">客厅</span>
+            </span>
+            <span class="nav-item berdroom" data-idx="2">
+                <span class="future-icon icon"></span>
+                <span class="txt">卧室</span>
+            </span>
+             <span class="nav-item cookroom" data-idx="3">
+                <span class="future-icon icon" ></span>
+                <span class="txt">厨房</span>
+                
+            </span>
+            <span class="nav-item schoolroom" data-idx="4">
+                <span class="future-icon icon"></span>
+                <span class="txt">书房</span>
+            </span>
+        </div>
+        <!-- 第一屏 -->
+        <div class="future-page future-page1">
+            <div class="page-in">
+                <a href="javascript:void(0);" class="future-icon next-page" data-idx="1"></a>
+            </div>
+        </div>
+        <!-- 第二屏 -->
+        <div class="future-page future-page2">
+            <div class="page-in">
+                <img src="@@miscPath/p/images/future-kt.png" class="kt" alt="">
+                <img src="@@miscPath/p/images/future-kt-wine-1.png" class="kt-wind kt-wind1" alt="">
+                <img src="@@miscPath/p/images/future-kt-wine-2.png" class="kt-wind kt-wind2" alt="">
+                <img src="@@miscPath/p/images/future-kt-wine-2.png" class="kt-wind kt-wind3" alt="">
+                <img src="@@miscPath/p/images/future-kt-wine-2.png" class="kt-wind kt-wind4" alt="">
+                <img src="@@miscPath/p/images/future-linght-1.png" class="kt-light" alt="">
+                <img src="@@miscPath/p/images/future-linght-2.png" class="kt-light-2" alt="">
+                <img src="@@miscPath/p/images/future-wind-5.png" class="kt-kq-wind kt-kq-wind-1" alt="">
+                <img src="@@miscPath/p/images/future-wind-6.png" class="kt-kq-wind kt-kq-wind-2" alt="">
+                <img src="@@miscPath/p/images/future-kq-1.png" class="kt-kq" alt="">
+                <img src="@@miscPath/p/images/future-feather-1.png" class="kt-feather kt-feather-1" alt="">
+                <img src="@@miscPath/p/images/future-feather-2.png" class="kt-feather kt-feather-2" alt="">
+                <img src="@@miscPath/p/images/future-feather-3.png" class="kt-feather kt-feather-3" alt="">
+                <img src="@@miscPath/p/images/future-feather-4.png" class="kt-feather kt-feather-4" alt="">
+                <img src="@@miscPath/p/images/future-feather-5.png" class="kt-feather kt-feather-5" alt="">
+                <div class="kt-2-wrap">
+                    <img src="@@miscPath/p/images/future-kt-2.png" class="kt-2" alt="">
+                </div>
+                <a href="javascript:void(0);" class="future-icon next-page" data-idx="2"></a>
+            </div>
+        </div>
+        <!-- 第三屏 -->
+        <div class="future-page future-page3">
+            <div class="page-in">
+                <img src="@@miscPath/p/images/future-wind-5.png" class="ws-kq-wind ws-kq-wind-1" alt="">
+                <img src="@@miscPath/p/images/future-wind-6.png" class="ws-kq-wind ws-kq-wind-2" alt="">
+                <img src="@@miscPath/p/images/future-kq-1.png" class="ws-kq" alt="">
+                <img src="@@miscPath/p/images/ws-linght-2.png" class="ws-light-on" alt="">
+                <img src="@@miscPath/p/images/future-feather-1.png" class="ws-feather ws-feather-1" alt="">
+                <img src="@@miscPath/p/images/future-feather-2.png" class="ws-feather ws-feather-2" alt="">
+                <img src="@@miscPath/p/images/future-feather-3.png" class="ws-feather ws-feather-3" alt="">
+                <img src="@@miscPath/p/images/future-feather-4.png" class="ws-feather ws-feather-4" alt="">
+                <img src="@@miscPath/p/images/future-feather-5.png" class="ws-feather ws-feather-5" alt="">
+                <img src="@@miscPath/p/images/future-cl.png" class="ws-cl " alt="">
+                <img src="@@miscPath/p/images/feture-bed.png" class="ws-bed" alt="">
+
+                <a href="javascript:void(0);" class="future-icon next-page" data-idx="3"></a>
+            </div>
+        </div>
+        <!-- 第四屏 -->
+        <div class="future-page future-page4">
+            <div class="page-in">
+                <img src="@@miscPath/p/images/future-smoke-0.png" class="future-smoke future-smoke-0" alt="">
+                <img src="@@miscPath/p/images/future-smoke-1.png" class="future-smoke future-smoke-1" alt="">
+                <img src="@@miscPath/p/images/future-smoke-2.png" class="future-smoke future-smoke-2" alt="">
+                <img src="@@miscPath/p/images/future-smoke-3.png" class="future-smoke future-smoke-3" alt="">
+                <img src="@@miscPath/p/images/future-smoke-4.png" class="future-smoke future-smoke-4" alt="">
+                <img src="@@miscPath/p/images/future-smoke-5.png" class="future-smoke future-smoke-5" alt="">
+                <img src="@@miscPath/p/images/future-smoke-6.png" class="future-smoke future-smoke-6" alt="">
+                <a href="javascript:void(0);" class="future-icon next-page" data-idx="4"></a>
+            </div>
+        </div>
+        <!-- 第五屏 -->
+        <div class="future-page future-page5">
+            <div class="page-in">
+                <img src="@@miscPath/p/images/future-music-0.png" class="future-music future-music-0" alt="">
+                <img src="@@miscPath/p/images/future-music-1.png" class="future-music future-music-1" alt="">
+                <img src="@@miscPath/p/images/future-music-2.png" class="future-music future-music-2" alt="">
+                <img src="@@miscPath/p/images/future-music-3.png" class="future-music future-music-3" alt="">
+                <img src="@@miscPath/p/images/future-music-4.png" class="future-music future-music-4" alt="">
+                <img src="@@miscPath/p/images/future-music-5.png" class="future-music future-music-5" alt="">
+                <img src="@@miscPath/p/images/future-music-6.png" class="future-music future-music-6" alt="">
+                <img src="@@miscPath/p/images/future-music-light.png" class="future-music future-music-light" alt="">
+            </div>
+        </div>
+        <!-- 页尾 -->
+        <div class="future-footer">
+            <p class="p1">金海马邀您来感受未来之家</p>
+            <p class="p2">地       址：广州市天河区黄埔大道中303号维亚国际广场金海马家居2楼</p>
+            <p class="p3">服务热线：<strong>020-85577004</strong></p>
+        </div>
+<!-- 页面主体结束 -->
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+    "cdn" : "@@miscPath",
+    "name"  : "future"
+})
+</body>
+</html>

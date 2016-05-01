@@ -1,0 +1,23 @@
+<!--创客专题活动模块开始-->
+    <div class="acContent">
+        <form action="" id="regForm" method="get">
+            <input type="text" name="projectName" class="txt J_checkInput"/>
+            <textarea name="projectDes" class="projectDesTxt J_checkInput"></textarea>
+            <textarea name="memberInfo" class="memberInfoTxt J_checkInput"></textarea>
+            <textarea name="financeInfo" class="financeInfoTxt J_checkInput"></textarea>
+            <label class="planSelect hasPlan check"></label>
+            <label class="planSelect hasNoPlan"></label>
+            <input type="hidden" name="plan" class="planInput" value="1" / > 
+            <span class="mailto">
+                <a href="mailto:zhangxiaodan@heungkong.com">zhangxiaodan@heungkong.com</a>
+            </span>
+            <a href="javascript:;" class="subBtn"></a>
+        </form>
+    </div>
+    <div class="winMark"></div>
+    <div class="activeDialog">
+        <span class="closeBtn"></span>
+        <span class="okBtn"></span>
+        <div class="dialogContent"></div>
+    </div>
+    <!--创客专题活动模块结束-->

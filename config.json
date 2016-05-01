@@ -1,0 +1,36 @@
+{
+    "protocal": "http://",
+    "host": "misc.jjcdn.com",
+    "port": "80",
+    "src": "src/p",
+    "static": "p",
+    "assets": "public",
+    "public": "public/p",
+    "releaseAssets": "release",
+    "release": "release/p",
+    "releaseHost": "misc.jjcdn.com",
+    "seaPaths": [
+        "src/p/lib/**/*.js",
+        "!src/p/lib/jquery/**/**/*.js",
+        "!src/p/lib/components/**/*.js",
+        "!src/p/lib/template/*.js"
+    ],
+    "coreList": [
+        "src/p/js/util/sea.js",
+        "src/p/js/util/seajs-preload.js",
+        "src/p/js/util/path.js",
+        "src/p/js/util/config.js"
+    ],
+    "staticLink": {
+        "base": "./src/p/map",
+        "merge": true,
+        "path": "./src/p/map/static-map.json"
+    },
+    "moduleLink": {
+        "base": "./src/p/map",
+        "merge": true,
+        "path": "./src/p/map/module-map.json"
+    },
+    "mapDest": "./src/p/map",
+    "autoprefixer": ["last 2 Chrome versions", "iOS 8", "Firefox >= 20", "> 5%", "not ie <= 9"]
+}

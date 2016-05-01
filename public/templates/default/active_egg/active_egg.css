@@ -1,0 +1,191 @@
+/*主窗口样式*/
+.ac-egg-dialog{
+	position:fixed;
+	z-index:997;
+	width:819px;
+	height:666px;
+	left:50%;
+	top:50%;
+	margin:-333px 0 0 -409px;
+	overflow:hidden;
+	background:url(img/ac-egg-dialog-bg.png) left top no-repeat;
+}
+/*遮罩层样式*/
+.ac-egg-mark{
+	position:absolute;
+	z-index:996;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	background-color:#4e0909;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	-webkit-opacity:0.4;
+}
+/*顶部样式*/
+.ac-egg-dialog-top{
+	position:absolute;
+	z-index:998;
+	left:0;
+	top:0;
+	width:819px;
+	height:128px;
+	background:url(img/ac-egg-spire.png) left top no-repeat;
+}
+.ac-egg-dialog-top .ac-egg-close-btn{
+	position:absolute;
+	z-index:997;
+	right:22px;
+	top:18px;
+	width:49px;
+	height:49px;
+	overflow:hidden;
+	display:inline-block;
+	background:url(img/ac-egg-spire.png) left -128px no-repeat;
+}
+/*中间部分*/
+.ac-egg-dialog-main{
+	position:relative;
+	z-index:997;
+	height:498px;
+	overflow:hidden;
+	cursor:pointer;
+}
+/*一层遮罩层,用来遮罩下面的层*/
+.ac-egg-hammer-mark{
+	position:absolute;
+	z-index:999;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+/*锤子*/
+.ac-egg-hammer{
+	position:absolute;
+	z-index:998;
+	left:0;
+	top:0;
+	display:none;
+	width:154px;
+	height:173px;
+	cursor:pointer;
+	background:url(img/ac-egg-spire.png) -6px -207px no-repeat;
+}
+/*金蛋左边效果*/
+.ac-egg-nor{
+	position:absolute;
+	z-index:997;
+	width:245px;
+	height:249px;	
+	background:url(img/ac-egg-spire.png) -408px -302px no-repeat;
+}
+.nor-left{
+	left:125px;
+	bottom:47px;
+}
+.nor-right{
+	left:435px;
+	bottom:47px;
+}
+/*左边砸出来的效果*/
+.ac-egg-smash{
+	position:absolute;
+	z-index:997;
+	left:0;
+	top:0;
+	width:375px;
+	height:440px;
+}
+.smash-left{
+	display:none;
+	left:90px;
+	top:10px;
+	background:url(img/ac-egg-spire.png) -655px -110px no-repeat;
+}
+.smash-right-1{
+	display:none;
+	left:398px;
+	top:10px;
+	background:url(img/ac-egg-spire.png) -1030px -110px no-repeat;
+}
+.smash-right-2{
+	display:none;
+	left:398px;
+	top:10px;
+	background:url(img/ac-egg-spire.png) -1405px -110px no-repeat;
+}
+.smash-right-3{
+	display:none;
+	left:398px;
+	top:10px;
+	background:url(img/ac-egg-spire.png) -1780px -110px no-repeat;
+}
+/*礼物显示样式*/
+.ac-egg-gift{
+	position:absolute;
+	z-index:998;
+	width:255px;
+	height:65px;
+	overflow:hidden;
+	display:none;
+}
+.gift-left-1{
+	left:130px;
+	bottom:15px;
+	background:url(img/ac-egg-spire.png) -6px -406px no-repeat;
+}
+.gift-left-2{
+	left:130px;
+	bottom:15px;
+	background:url(img/ac-egg-spire.png) -6px -470px no-repeat;
+}
+.gift-right-1{
+	left:440px;
+	bottom:15px;
+	background:url(img/ac-egg-spire.png) -6px -537px no-repeat;
+}
+.gift-right-2{
+	left:440px;
+	bottom:15px;
+	background:url(img/ac-egg-spire.png) -6px -609px no-repeat;
+}
+.gift-right-3{
+	left:440px;
+	bottom:15px;
+	background:url(img/ac-egg-spire.png) -6px -675px no-repeat;
+}
+/*提示参加过活动了*/
+.ac-egg-tip{
+	position:absolute;
+	z-index:999;
+	left:50%;
+	top:50%;
+	display:none;
+	width:500px;
+	height:50px;
+	line-height:50px;
+	font-family:"Microsoft Yahei";
+	margin:-25px 0 0 -250px;
+	text-align:center;
+	font-size:24px;
+	color:#fff;
+}
+.ac-egg-tip .ac-egg-tip-text{
+	position:relative;
+	z-index:1000;
+	color:#fff;
+}
+.ac-egg-tip .ac-egg-tip-mark{
+	position:absolute;
+	z-index:999;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	-webkit-opacity:0.3;
+}

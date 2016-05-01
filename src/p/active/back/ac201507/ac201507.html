@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/base.css" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/comment.css" />
+    <link rel="stylesheet" href="css/ac201507.css" />
+    <title>办公活动预报名</title>
+</head>
+
+<body>
+    <!-- 模块开始 -->
+    <section class="subscribe-form-wrap">
+        <div class="subscribe-form clearfix">
+            <form action="javascript:void(0);" method="post" id="J_subscriptForm">
+            <div class="form-title">
+                <div class="title-1">
+                    免费预约上门量尺设计
+                    <span class="title-block-1"></span>
+                    <span class="title-block-2"></span>
+                    <span class="title-block-3"></span>
+                </div>
+                <div class="title-2">金海马办公家具线下门店</div>
+            </div>
+
+            <div class="form-left">
+                <div class="form-tr">
+                    <label class="tr-label">您的姓名：</label>
+                    <input type="text" name="username"/>
+                    <span class="form-tr-require">*</span>
+                    <span class="form-tr-tip"></span>
+                </div>
+
+                <div class="form-tr">
+                    <label class="tr-label">您的手机：</label>
+                    <input type="text" name="phone"/>
+                    <span class="form-tr-require">*</span>
+                    <span class="form-tr-tip"></span>
+                </div>
+
+                <div class="form-tr">
+                    <label class="tr-label">您的QQ号：</label>
+                    <input type="text" name="qq"/>
+                    <span class="form-tr-require">*</span>
+                    <span class="form-tr-tip"></span>
+                </div>
+
+                <div class="form-tr clearfix">
+                    <label class="tr-label fl">省    份：</label>
+                    <span class="form-select" id="J_formProvince">
+                        <label class="select-label">广东</label>
+                        <span class="select-point"></span>
+                        <span class="select-list">
+                            <a href="javascript:void(0);" data-value="广东" data-id="0">广东</a>
+                            <a href="javascript:void(0);" data-value="湖北" data-id="5">湖北</a>
+                        </span>
+                        <input type="hidden" name="province" value="广东" />
+                    </span>
+                    <span class="form-select" id="J_formCity">
+                        <label class="select-label">广州市</label>
+                        <span class="select-point"></span>
+                        <span class="select-list">
+                            <a href="javascript:void(0);" data-value="广州市" data-id="0">广州市</a>
+                            <a href="javascript:void(0);" data-value="深圳市" data-id="1">深圳市</a>
+                            <a href="javascript:void(0);" data-value="惠州市" data-id="2">惠州市</a>
+                            <a href="javascript:void(0);" data-value="汕头市" data-id="3">汕头市</a>
+                            <a href="javascript:void(0);" data-value="珠海市" data-id="4">珠海市</a>
+                        </span>
+                        <input type="hidden" name="city" value="广州市" data-id="0" />
+                    </span>
+                </div>
+
+                <div class="form-tr">
+                    <label class="tr-label">详细地址：</label>
+                    <input type="text" name="address"/>
+                    <span class="form-tr-require">*</span>
+                    <span class="form-tr-tip"></span>
+                </div>
+
+                <div class="form-tr">
+                    <a href="javascript:void(0);" id="J_formBtn" class="form-tr-btn">一键预约</a>
+                </div>
+
+                <div class="form-quan"></div>
+                </form>
+            </div>
+            <!-- 地图 -->
+            <div class="form-right" id="J_formMap"></div>
+        </div>
+    </section>
+    <!-- 模块结束 -->
+    <script src="http://misc.jjcdn.com/p/sea-modules/js/seajs.js;jquery.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lAbIuN64lN26DsTep6sBDCqS"></script>-->
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>-->
+    <script src="js/ac201507.js"></script>
+</body>
+
+</html>

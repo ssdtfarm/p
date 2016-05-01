@@ -1,0 +1,268 @@
+/**
+ *  ---------------------------------------------
+ *      会员中心左侧样式
+ *      会员中心有左侧的都会引用到这个组件
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+.club-aside {
+    .club-aside-info {
+        padding: 20px;
+        overflow: hidden;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        background-color: #61bbe0;
+        .club-title {
+            position: relative;
+            width: 92px;
+            padding: 0 4px 5px 4px;
+            margin: 10px auto;
+            font-size: 18px;
+            color: #16458b;
+            border-bottom: 1px solid #16458b;
+            &:after {
+                position: absolute;
+                left: 50%;
+                top: 23px;
+                content: ".";
+                width: 10px;
+                height: 10px;
+                margin-left: -5px;
+                line-height: 1px;
+                background: #61bbe0;
+            }
+        }
+        p {
+            padding: 6px 0 0 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+    .club-menber-name {
+        width: 200px;
+        height: 20px;
+        overflow: hidden;
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 20px;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .icon {
+            position: relative;
+            top: -1px;
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    }
+    .club-aside-option {
+        padding: 10px 0;
+        background: #16458b;
+        p {
+            width: 200px;
+            margin: 0 auto;
+        }
+        a {
+            line-height: 20px;
+            color: #fff;
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+    .club-hotRebate,
+    .club-hotRepoints {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        background: #fff;
+        .club-hotRebate-title {
+            position: relative;
+            width: 120px;
+            height: 60px;
+            margin: 0 auto;
+            padding: 10px 0 0 0;
+            text-align: center;
+        }
+        .club-hotRebate-more,
+        .club-hotRepoints-more {
+            height: 22px;
+            padding-right: 5px;
+            line-height: 22px;
+            text-align: right;
+            a {
+                color: #8c8c8c;
+                &:hover {
+                    color: #f60;
+                }
+            }
+        }
+    }
+}
+
+.club-aside .club-hotRepoints .club-hotRepoints-title {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.club-aside .club-hotRebate .club-hotRebate-title:before,
+.club-aside .club-hotRepoints .club-hotRepoints-title:before {
+    position: absolute;
+    z-index: 2;
+    left: -9px;
+    top: 4px;
+    content: "";
+    width: 8px;
+    height: 58px;
+    border: 1px solid #000;
+    border-right: none;
+}
+
+.club-aside .club-hotRebate .club-hotRebate-title:after,
+.club-aside .club-hotRepoints .club-hotRepoints-title:after {
+    position: absolute;
+    z-index: 2;
+    right: -9px;
+    top: 4px;
+    content: "";
+    width: 8px;
+    height: 58px;
+    border: 1px solid #000;
+    border-left: none;
+}
+
+.club-hotRebate .club-hotRebate-title p b,
+.club-hotRepoints .club-hotRepoints-title p b {
+    font-size: 20px;
+}
+
+.club-hotRebate .club-hotRebate-item,
+.club-hotRepoints .club-hotRepoints-item {
+    width: 230px;
+    height: 74px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.club-hotRebate .club-hotRebate-item .pic,
+.club-hotRepoints .club-hotRepoints-item .pic {
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 74px;
+    overflow: hidden;
+}
+
+.club-hotRebate-item .pic .icon,
+.club-hotRepoints-item .pic .icon {
+    position: absolute;
+    width: 20px;
+    height: 29px;
+}
+
+.club-hotRebate-item .pic img,
+.club-hotRepoints-item .pic img {
+    width: 110px;
+    height: 74px;
+}
+
+.club-hotRebate .club-hotRebate-item .info,
+.club-hotRepoints .club-hotRepoints-item .info {
+    float: left;
+    width: 104px;
+    height: 74px;
+    padding-left: 7px;
+}
+
+.club-hotRebate-item .info .name,
+.club-hotRepoints-item .info .name {
+    height: 35px;
+    margin-top: -4px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.club-hotRebate-item .info .item-name,
+.club-hotRepoints-item .info .item-name {
+    height: 35px;
+    display: block;
+    color: #8c8c8c;
+}
+
+.club-hotRebate-item:hover .info .item-name,
+.club-hotRepoints-item:hover .info .item-name {
+    color: #f60;
+}
+
+.club-hotRebate-item .info .price,
+.club-hotRepoints-item .info .points-price {
+    margin-top: 5px;
+}
+
+.club-hotRepoints-item .info .cash-price {}
+
+.club-hotRebate-item .info .item-price {
+    color: #333;
+}
+
+.club-hotRepoints-item .info .item-price {
+    color: #f60;
+}
+
+.club-hotRebate-item .info .rebate-percent {
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.club-hotRebate-item .info .item-rebate-percent {
+    color: #f60;
+}
+
+.club-aside .club-help-center {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    background: #57bb89;
+    vertical-align: middle;
+}
+
+.club-aside .club-help-center .club-help-center-button {
+    display: block;
+    padding-left: 10px;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.club-aside .club-help-center:hover {
+    background: #ee950a;
+}
+
+.club-aside .club-help-center .club-help-center-button .icon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}

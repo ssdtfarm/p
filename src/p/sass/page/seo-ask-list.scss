@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@import "../layout/layout.scss"; // base
+@import "../components/member-head.scss";  // 主站通用头部
+@import "../components/common-foot.scss"; // 全站通用底部
+  // icon-system
+@import "../page/zxh.scss"; // zhuang xiu hui
+
+/*
+ *	seo-ask-list stylesheet
+ * 	author: jinjing
+ *  date: 2015-08-29
+ */
+
+.seo-ask-container {
+    font-family: "Microsoft Yahei";
+    color: #333;
+}
+
+.ask-list-main {
+    float: left;
+    width: 890px;
+    .ask-list-title {
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.classify-stage-1 {
+    width: 100%;
+    padding-bottom: 20px;
+    .classify-main {
+        float: left;
+        width: 635px;
+        .tag {
+            display: inline-block;
+            float: left;
+            padding: 10px;
+            margin: 20px 10px 0 0;
+            color: #333;
+            text-decoration: none;
+            background: #ebebeb;
+        }
+    }
+}
+
+.ask-question-list {
+    width: 100%;
+    margin-top: 50px;
+    .icon-aq-list {
+        display: inline-block;
+        width: 15px;
+        height: 14px;
+        background: url(http://misc.jjcdn.com/p/images/zx/question-icon.png);
+    }
+}
+
+.question-list-main {
+    width: 100%;
+    .item {
+        padding: 24px 50px 16px 15px;
+        vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        clear: both;
+        &.bg-fff {
+            background: #fff;
+        }
+        &.bg-grey {
+            background: #ebebeb;
+        }
+        .left {
+        	float: left;
+        	width: 670px;
+        	overflow: hidden;
+        	a{
+        		text-decoration: none;
+        	}
+            .title {
+            	display: inline-block;
+            	width: 400px;
+                color: #333;
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
+            .keyword{
+            	position: relative;
+            	top: -5px;
+            	color: #f60;
+            	padding-left: 10px;
+            }
+        }
+        .right{
+        	float: left;
+        	width: 154px;
+        	color: #8c8c8c;
+        	text-align: right;
+        	overflow: hidden;
+        	.spacing{
+        		position: relative;
+        		top:-2px;
+        		padding: 0 5px;
+        	}
+        }
+    }
+}
+
+.ask-list-sidebar {
+    float: left;
+    width: 280px;
+    margin-left: 20px;
+}
+
+.ask-list-ad1 {
+    width: 280px;
+    height: 320px;
+    text-align: center;
+    img {
+        width: 280px;
+        height: 320px;
+        vertical-align: middle;
+    }
+}

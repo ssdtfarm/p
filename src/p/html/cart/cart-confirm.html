@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "cart-confirm", "title" : "确认购物车页面" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{"cdn":"@@miscPath","search":false, "headerName": "确认购物车"})
+    <!-- 头部结束 -->
+    <!-- 确认订单页开始 -->
+    <!-- 购物步骤 -->
+    <section class="kh-row-24 clearfix">
+        <section class="shoping-step">
+            <ul class="clearfix">
+                <li class="fc-f60">
+                    <i class="icon-step-on">1</i>
+                    <span>确认购物车</span>
+                    <i class="icon-step-point-on"></i>
+                </li>
+                <li class="fc-f60">
+                    <i class="icon-step-on">2</i>
+                    <span>确认订单</span>
+                    <i class="icon-step-point-on"></i>
+                </li>
+                <li class="fc-8c8">
+                    <i class="icon-step-off">3</i>
+                    <span>购买完成</span>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="kh-row-24 clearfix">
+        <form action="//cart.kinhom.com/createorder" id="J_form" method="post">
+            <!-- 收货地址管理 -->
+            <section class="ship-address clearfix">
+                <!-- 地址列表表头 -->
+                <div class="ship-address-top clearfix">
+                    <label>确认收货地址</label>
+                    <a href="../member/person-address.html" target="_blank">管理收货地址</a>
+                    <a class="JQ_addNewAddress" href="javascript:void(0);">使用新地址</a>
+                </div>
+                <!-- 地址列表 -->
+                <section id="J_addressWrap" class="ship-address-wrap">
+                    <div class="confirm-loading"><i></i></div>
+                </section>
+                <!-- 产品列表表头 -->
+                <div class="ship-address-top clearfix">
+                    <label>确认订单信息</label>
+                </div>
+                <section class="ship-product">
+                    <!-- 产品列表 -->
+                    <table class="ship-pro-list" width="100%">
+                        <thead>
+                            <tr>
+                                <td colspan="2">店铺商品</td>
+                                <td>单价</td>
+                                <td>数量</td>
+                                <td>优惠（元）</td>
+                                <td>小计</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pro-list-item">
+                                <td width="10%">
+                                    <a href="javascript:void(0);">
+                                        <img src="#" alt="" width="90" height="60">
+                                    </a>
+                                </td>
+                                <td width="20%">
+                                    <p class="pro-list-title">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</p>
+                                    <p class="pro-list-propery">颜色: 紫红色 类型: 单人位</p>
+                                </td>
+                                <td width="8%">
+                                    <p class="fc-8c8">
+                                        <s>&yen;2999.00</s>
+                                    </p>
+                                    <p class="fc-333">10000积分+&yen;800.00</p>
+                                </td>
+                                <td width="7%">
+                                    <p class="fc-8c8">1</p>
+                                </td>
+                                <td width="15%">
+                                    <p class="fc-8c8">无优惠</p>
+                                </td>
+                                <td width="30%">
+                                    <p class="fc-f60">
+                                        <span>&yen;</span>
+                                        <label class="JQ_subtotal">800</label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="pro-list-item">
+                                <td width="10%">
+                                    <a href="javascript:void(0);">
+                                        <img src="#" alt="" width="90" height="60">
+                                    </a>
+                                </td>
+                                <td width="20%">
+                                    <p class="pro-list-title">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</p>
+                                    <p class="pro-list-propery">颜色: 紫红色 类型: 单人位</p>
+                                </td>
+                                <td width="8%">
+                                    <p class="fc-8c8">
+                                        <s>&yen;2999.00</s>
+                                    </p>
+                                    <p class="fc-333">10000积分+&yen;800.00</p>
+                                </td>
+                                <td width="7%">
+                                    <p class="fc-8c8">1</p>
+                                </td>
+                                <td width="15%">
+                                    <p class="fc-f60">返：&yen;9999</p>
+                                </td>
+                                <td width="30%">
+                                    <p class="fc-f60">
+                                        <span>&yen;</span>
+                                        <label class="JQ_subtotal">800</label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="pro-list-item">
+                                <td>
+                                    <a href="javascript:void(0);">
+                                        <img src="#" alt="" width="90" height="60">
+                                    </a>
+                                </td>
+                                <td>
+                                    <p class="pro-list-title">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</p>
+                                    <p class="pro-list-propery">颜色: 紫红色 类型: 单人位</p>
+                                </td>
+                                <td>
+                                    <p class="fc-8c8">
+                                        <s>&yen;2999.00</s>
+                                    </p>
+                                    <p class="fc-333">10000积分+&yen;1600.00</p>
+                                </td>
+                                <td>
+                                    <p class="fc-8c8">1</p>
+                                </td>
+                                <td>
+                                    <div id="J_privilege" class="select-gray">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option">满100减10</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn">
+                                            <i class="triangle-down"></i>
+                                        </a>
+                                        <ul></ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="fc-f60">
+                                        <span>&yen;</span>
+                                        <label class="JQ_subtotal">1600</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 备注和优惠信息选择 -->
+                    <table class="ship-privilege">
+                        <tbody>
+                            <tr>
+                                <td width="8%" valign="top" align="right">
+                                    <p class="fc-b4b">给商家留言：</p>
+                                </td>
+                                <td width="33%" valign="top">
+                                    <div id="J_summary" class="privilege-textarea">
+                                        <textarea name="summary"></textarea>
+                                        <span class="privilege-placeholder JQ_placeHolder">
+									选填，告诉商家您的特殊要求，200字以内
+								</span>
+                                        <span class="privilege-tip">
+									<span>（</span>
+                                        <label id="J_textMount" data-max="200" class="fc-f60">0</label>
+                                        <span>/200）</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td width="22%">
+                                    &nbsp;
+                                </td>
+                                <td width="33%" valign="top">
+                                    <table class="privilege-table" cellspacing="0" cellpadding="0">
+                                        <!-- 使用优惠券 -->
+                                        <tr class="privilege-list clearfix">
+                                            <td id="J_useCouponWrap">
+                                                <p class="list-checkbox">
+                                                    <a href="javascript:void(0);" class="icon-box-normal JQ_useConpon"></a>
+                                                    使用优惠券
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <!-- 使用红包 -->
+                                        <tr class="privilege-list clearfix">
+                                            <td id="J_useRedWallet">
+                                                <p class="list-checkbox">
+                                                    <a href="javascript:void(0);" class="icon-box-normal JQ_useRedWallet"></a>
+                                                    使用红包
+                                                </p>
+                                                <div id="J_redWalletWrap" style="display: none;">
+                                                    <div id="J_redWallet" class="select-gray fl" style="display: inline-block; min-width: 30px;"> <i class="select-corner icon-gray-left"></i>
+                                                        <label class="JQ_option select-option ">选择可用的红包</label> <i class="select-corner icon-gray-right"></i>
+                                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"> <i class="triangle-down"></i> </a>
+                                                        <input type="hidden" name="selectRedWallet" value="0">
+                                                        <input type="hidden" name="selectRedWalletPrice" value="0">
+                                                        <ul id="J_redWalletWrapList">
+                                                            <li> <a href="javascript:void(0);" data-value="HZJNSABA" data-price="100.00"> 限商品，限金额满3000.00减100.00 </a> </li>
+                                                            <li> <a href="javascript:void(0);" data-value="HZJNSABC" data-price="10.00"> 限商品，限金额满1000.00减10.00 </a> </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 使用现金券 -->
+                                        <tr class="privilege-list clearfix">
+                                            <td id="J_useCashWrap">
+                                                <p class="list-checkbox">
+                                                    <a href="javascript:void(0);" class="icon-box-normal JQ_useCash"></a>
+                                                    使用现金券
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <!-- 使用金海马商城积分 -->
+                                        <tr class="privilege-list clearfix">
+                                            <td>
+                                                <p class="list-checkbox">
+                                                    <a href="javascript:void(0);" class="icon-box-normal JQ_usePoints"></a>
+                                                    使用金海马商城积分
+                                                </p>
+                                                <div class="list-points JQ_chkPoints">
+                                                    <input type="text" id="J_pointInput" class="list-points-input" name="shopPoints" data-max="0">
+                                                    <span class="list-points-all">
+												<label id="J_shopPoints">0</label>
+												<span>积分可用</span>
+                                                    </span>
+                                                    <span class="list-points-use">
+												<span>抵</span>
+                                                    <label id="J_toUse" class="fc-f60">0</label>
+                                                    <span>元</span>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 统计区域 -->
+                    <section class="ship-statistical">
+                        <!-- 商品总额 -->
+                        <div class="statis-item">
+                            <span>商品总额：</span>
+                            <span class="statis-right">
+						&yen;
+						<label id="J_totalPrice">0.00</label>
+					</span>
+                        </div>
+                        <!-- 优惠券 -->
+                        <div class="statis-item">
+                            <span>-优惠券：</span>
+                            <span class="statis-right">
+						&yen;
+						<label id="J_couponPrice">0.00</label>
+					</span>
+                        </div>
+                        <!-- 红包 -->
+                        <div class="statis-item">
+                            <span>-红包：</span>
+                            <span class="statis-right">
+						&yen;
+						<label id="J_redWalletPrice">0.00</label>
+					</span>
+                        </div>
+                        <!-- 现金券 -->
+                        <div class="statis-item">
+                            <span>-现金券：</span>
+                            <span class="statis-right">
+						&yen;
+						<label id="J_cashPrice">0.00</label>
+					</span>
+                        </div>
+                        <!-- 积分 -->
+                        <div class="statis-item">
+                            <span>-积分：</span>
+                            <span class="statis-right">
+						&yen;
+						<label id="J_pointsPrice">0.00</label>
+					</span>
+                        </div>
+                        <!-- 运费 -->
+                        <div class="statis-ship-item clearfix">
+                            <div class="statis-right">
+                                &yen;
+                                <label id="J_shipPrice">0.00</label>
+                            </div>
+                            <div>+运费：</div>
+                            <div id="J_shiping" class="select-gray"></div>
+                            <div>物流服务：</div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- 分割线 -->
+                        <div class="cut-line-wrap">
+                            <span class="cut-line"></span>
+                        </div>
+                        <!-- 应付金额 -->
+                        <div class="statis-item">
+                            <span>应付金额：</span>
+                            <span>
+						<b class="fc-f60 fs-18">&yen;</b>
+						<b class="fc-f60 fs-18 JQ_payPrice">0.00</b>
+					</span>
+                        </div>
+                        <!-- 获得积分 -->
+                        <div class="points-item">
+                            <span>获得积分：</span>
+                            <span class="JQ_orderPoints">1000</span>
+                        </div>
+                        <!-- 按钮行 -->
+                        <div class="btns-item">
+                            <a href="javascript:void(0);" class="back-cart-btn">返回购物车</a>
+                            <a id="J_submitBtn" href="javascript:void(0);" class="submit-cart-btn">
+						提交订单
+						<i class="icon-point-right"></i>
+					</a>
+                            <a href="javascript:void(0);" class="disable-btn">
+						提交订单
+						<i class="icon-point-right"></i>
+					</a>
+                        </div>
+                        <!-- 下载app连接 -->
+                        <div class="loadWrap">
+                            <a href="#" class="loadAppLink">手机下单立减5元，去下载APP &gt;</a>
+                            <span class="loadAppImg"></span>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </form>
+    </section>
+    <!-- 确认订单页结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath" ,"name" : "cart-confirm"})
+</body>
+
+</html>

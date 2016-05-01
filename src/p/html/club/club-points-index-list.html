@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+    "cdn": "@@miscPath",
+    "name": "club-points-index-list",
+    "title": "会员俱乐部-积分商城首页"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "积分商城",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 会员俱乐部导航菜单部分开始 -->
+    <section class="club-nav-warp">
+        <div class="kh-row-24 clearfix">
+            <!-- 延迟部分 -->
+            <div class="kh-col-24 pos-rel" id="J_clubNav">
+                <div class="loading"><i class="icon-loading-small"></i>
+                </div>
+            </div>
+            <!-- 加载部分 -->
+            <script id="J_templateClubNav" type="text/html">
+                <!-- 会员俱乐部导航栏开始 -->
+                <div class="club-nav kh-col-24">
+                    <a target="_blank" href="club-index.html" class="clearfix">
+                        <span>首页</span>
+                    </a>
+                    <a target="_blank" href="club-points-index-list.html" class="clearfix cur">
+                        <span>积分中心</span>
+                    </a>
+                    <a target="_blank" href="club-rebate-index-list.html" class="clearfix">
+                        <span>返利中心</span>
+                    </a>
+                    <a target="_blank" href="javascript:void(0);" class="clearfix">
+                        <span>我的钱包</span>
+                    </a>
+                </div>
+                <!-- 会员俱乐部导航栏结束 -->
+            </script>
+        </div>
+    </section>
+    <!-- 会员俱乐部导航菜单部分结束 -->
+    <!-- 会员俱乐部幻灯浮层导航开始 -->
+    <aside class="kh-row-24">
+        <div class="club-index-top-menuBg"></div>
+        <!-- 未登录部分 开始 -->
+        <div class="club-index-top-menu kh-col-6 clearfix">
+            <dl class="unlogin">
+                <dt><img src="http://misc.jjcdn.com/p/images/unlogin_pic.jpg" width="98" height="98" alt=""></dt>
+                <dd class="login-now">
+                    <h5>登录后查看我的积分</h5>
+                    <a href="javascript:void(0);" class="btn-90X30 btn-orange mt-20">登录</a>
+                    <p class="no-have-id"><span>还没有账号？</span><a class="register-href">立即注册</a></p>
+                </dd>
+            </dl>
+            <a href="javascript:void(0)" class="unabled-freeget-points-btn">免费赚取积分<i class="icon-point-right"></i></a>
+        </div>
+        <!-- 未登录部分 结束 -->
+        <!-- 已登录部分 开始 -->
+        <!-- <div class="club-index-top-menu kh-col-6 clearfix">
+            <dl class="member-detail">
+                <dt><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="98" height="98" alt="" class="member-head-img"></dt>
+                <dd>
+                    <h5>您好，沙发君</h5>
+                    <div class="experience-line">
+                        <p class="icon-safe-green" style="width: 50%;"><i class="experience-tip">K2</i></p>
+                        <p class="icon-experience-333"></p>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="points-detail">
+                <dd>
+                    <label>总积分：</label><span>500</span></dd>
+                <dd class="fc-f60">
+                    <label>可用积分：</label><b class="f18">300</b></dd>
+                <dd><a href="javascript:void(0)" class="points-detail-href">查看明细<i>></i></a></dd>
+            </dl>
+            <a href="javascript:void(0)" class="free-get-points-btn">免费赚取积分<i class="icon-point-right"></i></a>
+        </div> -->
+        <!-- 已登录部分 结束 -->
+    </aside>
+    <!-- 会员俱乐部幻灯浮层导航结束 -->
+    <!-- 会员俱乐部幻灯开始 -->
+    <section class="club-points-slider-warp">
+        <div id="J_pointsFullSlider" class="index-full-slider">
+            <div class="bd">
+                <ul class="club-rebate-slider">
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul class="club-rebate-slider-num"></ul>
+            </div>
+        </div>
+    </section>
+    <!-- 会员俱乐部幻灯结束 -->
+    <!-- 积分商城首页开始 -->
+    <section class="kh-row-24 clearfix club-points-container">
+        <!-- 今日推荐开始 -->
+        <div class="kh-col-24 today-recommendation">
+            <div class="club-points-floor-title"><b>今日推荐</b><i>|</i><span>TODAY RECOMMENDATION</span></div>
+            <ul class="today-recommendation-list clearfix">
+                <li class="today-item">
+                    <p class="goods-name">
+                        <a class="goods-name-href" href="javascript:void(0);" title="现代简约 猫咪 陶瓷 情侣马克杯">现代简约 猫咪 陶瓷 情侣马克杯</a>
+                    </p>
+                    <p class="quantity">
+                        已有
+                        <span class="fc-f60">200人</span> 兑换
+                    </p>
+                    <p class="pic">
+                        <a class="pic-href">
+                            <img src="http://misc.jjcdn.com/p/images/388X258.png" width="388" height="256" alt="">
+                        </a>
+                        <span class="pic-tip icon-points-tip-limit"></span>
+                    </p>
+                    <div class="price-info">
+                        <p class="exchange-price">
+                            <b class="f18">1500</b> 积分+￥50.00
+                        </p>
+                        <p class="store-price">商城价：￥99.00</p>
+                    </div>
+                    <a href="javascript:void(0)" class="exchange-btn">
+                        立即换购<i></i>
+                    </a>
+                    <p class="price-info-bg"></p>
+                </li>
+                <li class="today-item">
+                    <p class="goods-name">
+                        <a class="goods-name-href" href="javascript:void(0);" title="现代简约 猫咪 陶瓷 情侣马克杯">现代简约 猫咪 陶瓷 情侣马克杯</a>
+                    </p>
+                    <p class="quantity">
+                        已有
+                        <span class="fc-f60">200人</span> 兑换
+                    </p>
+                    <p class="pic">
+                        <a class="pic-href">
+                            <img src="http://misc.jjcdn.com/p/images/388X258.png" width="388" height="256" alt="">
+                        </a>
+                        <span class="pic-tip icon-points-tip-limit"></span>
+                    </p>
+                    <div class="price-info">
+                        <p class="exchange-price">
+                            <b class="f18">1500</b> 积分+￥50.00
+                        </p>
+                        <p class="store-price">商城价：￥99.00</p>
+                    </div>
+                    <a href="javascript:void(0)" class="exchange-btn">
+                        立即换购<i></i>
+                    </a>
+                    <p class="price-info-bg"></p>
+                </li>
+                <li class="today-item">
+                    <p class="goods-name">
+                        <a class="goods-name-href" href="javascript:void(0);" title="现代简约 猫咪 陶瓷 情侣马克杯">现代简约 猫咪 陶瓷 情侣马克杯</a>
+                    </p>
+                    <p class="quantity">
+                        已有
+                        <span class="fc-f60">200人</span> 兑换
+                    </p>
+                    <p class="pic">
+                        <a class="pic-href">
+                            <img src="http://misc.jjcdn.com/p/images/388X258.png" width="388" height="256" alt="">
+                        </a>
+                        <span class="pic-tip icon-points-tip-limit"></span>
+                    </p>
+                    <div class="price-info">
+                        <p class="exchange-price">
+                            <b class="f18">1500</b> 积分+￥50.00
+                        </p>
+                        <p class="store-price">商城价：￥99.00</p>
+                    </div>
+                    <a href="javascript:void(0)" class="exchange-btn">
+                        立即换购<i></i>
+                    </a>
+                    <p class="price-info-bg"></p>
+                </li>
+                <li class="today-item">
+                    <p class="goods-name"><a class="goods-name-href" href="javascript:void(0);" title="现代简约 猫咪 陶瓷 情侣马克杯">现代简约 猫咪 陶瓷 情侣马克杯</a></p>
+                    <p class="quantity">已有<span class="fc-f60">200人</span>兑换</p>
+                    <p class="pic">
+                        <a class="pic-href">
+                            <img src="http://misc.jjcdn.com/p/images/388X258.png" width="388" height="256" alt="">
+                        </a>
+                        <span class="pic-tip icon-points-tip-limit"></span>
+                    </p>
+                    <div class="price-info">
+                        <p class="exchange-price"><b class="f18">1500</b>积分+￥50.00</p>
+                        <p class="store-price">商城价：￥99.00</p>
+                    </div>
+                    <a href="javascript:void(0)" class="exchange-btn">立即换购<i></i></a>
+                    <p class="price-info-bg"></p>
+                </li>
+                <li class="today-item">
+                    <p class="goods-name"><a class="goods-name-href" href="javascript:void(0);" title="现代简约 猫咪 陶瓷 情侣马克杯">现代简约 猫咪 陶瓷 情侣马克杯</a></p>
+                    <p class="quantity">已有<span class="fc-f60">200人</span>兑换</p>
+                    <p class="pic">
+                        <a class="pic-href">
+                            <img src="http://misc.jjcdn.com/p/images/388X258.png" width="388" height="256" alt="">
+                        </a>
+                        <span class="pic-tip icon-points-tip-limit"></span>
+                    </p>
+                    <div class="price-info">
+                        <p class="exchange-price"><b class="f18">1500</b>积分+￥50.00</p>
+                        <p class="store-price">商城价：￥99.00</p>
+                    </div>
+                    <a href="javascript:void(0)" class="exchange-btn">立即换购<i></i></a>
+                    <p class="price-info-bg"></p>
+                </li>
+            </ul>
+        </div>
+        <!-- 今日推荐结束 -->
+        <!-- 积分商城所有商品列表开始 -->
+        <div class="kh-col-24 all-products">
+            <div class="club-points-floor-title"><b>积分兑换推荐</b><i>|</i><span>RECOMMEND</span></div>
+            <ul class="all-products-list clearfix">
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title=="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 </a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分+￥1200.00</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="repoints-price">￥1800.00</p>
+                    <p class="exchange-price">返积分比例：<b class="f18">10%</b></p>
+                    <p class="repoints-msg">K0以上会员均可参加</p>
+                    <a href="javascript:void(0);" class="exchange-btn">立即购买<i class="icon-point-right"></i></a>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+            </ul>
+        </div>
+        <div class="kh-col-24 all-products">
+            <div class="club-points-floor-title"><b>所有商品</b><i>|</i><span>ALL PRODUCTS</span></div>
+            <ul class="all-products-list clearfix">
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title=="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 </a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分+￥1200.00</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="repoints-price">￥1800.00</p>
+                    <p class="exchange-price">返积分比例：<b class="f18">10%</b></p>
+                    <p class="repoints-msg">K0以上会员均可参加</p>
+                    <a href="javascript:void(0);" class="exchange-btn">立即购买<i class="icon-point-right"></i></a>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+                <li class="all-item">
+                    <p class="pic">
+                        <a href="javascript:void(0);" class="pic-href"><img src="http://misc.jjcdn.com/p/images/188X125.png" width="188" height="125" alt=""></a>
+                    </p>
+                    <p class="goods-name"><a href="javascript:void(0);" class="goods-name-href" title="现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约">现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约现代简约 猫咪 陶瓷 情侣马克杯现代简约 猫咪 陶瓷 情侣马克杯现代简约</a></p>
+                    <p class="price">￥1800.00</p>
+                    <p class="exchange-price"><b class="f18">8000</b>积分</p>
+                    <a href="" class="exchange-btn">立即换购<i class="icon-point-right"></i></a>
+                    <p class="message">数量有限 兑完即止</p>
+                </li>
+            </ul>
+        </div>
+        <div class="kh-col-24 loding-line">
+            <p>鼠标滚动加载下一页</p>
+            <p><i class="icon-point-down-333"></i></p>
+            <p class="fc-8c8">没有更多了</p>
+        </div>
+        <!-- 积分商城所有商品列表结束 -->
+    </section>
+    <!-- 积分商城首页结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "club-points-index-list"
+    })
+</body>
+
+</html>

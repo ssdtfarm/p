@@ -1,0 +1,799 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";     // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/club-nav.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  club-index 会员俱乐部首页
+ *
+ *  author:JinJing
+ *  date:20150318
+ */
+
+.ml0 {
+    margin-left: 0;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+/*按钮*/
+
+.btn-90X30 {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.btn-orange {
+    color: #fff;
+    background: #f60;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background: #ee950a;
+}
+/*幻灯浮层导航*/
+
+aside {
+    position: relative;
+    /*z-index: 90;*/
+    
+    background: transparent;
+    height: 450px;
+    border: 0;
+}
+
+aside .club-index-top-menuBg {
+    position: absolute;
+    z-index: 91;
+    left: 5px;
+    top: -2px;
+    width: 240px;
+    height: 451px;
+    background: #000;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+@media screen and (min-width: 0\0) {
+    aside .club-index-top-menuBg {
+        top: -2px;
+    }
+}
+/*未登录*/
+
+aside .index-unlogin-top-menu {
+    position: relative;
+    z-index: 92;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+aside .index-unlogin-top-menu .login-now {
+    color: #fff;
+}
+
+.index-unlogin-top-menu .login-now .no-have-id {
+    margin-top: 10px;
+    color: #f60;
+}
+
+.login-now .no-have-id .register-href,
+.login-now .no-have-id .register-href:visited {
+    color: #f60;
+}
+
+.login-now .no-have-id .register-href:hover {
+    color: #f60;
+}
+/*已登录*/
+
+aside .club-index-top-menu {
+    position: relative;
+    z-index: 92;
+    padding: 20px 0 0 0;
+}
+
+aside .club-index-top-menu .club-member-info {
+    text-align: center;
+}
+
+.club-member-info .club-member-name {
+    width: 123px;
+    margin: 0 auto;
+    padding-top: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    color: #fff;
+    overflow: hidden;
+}
+
+.club-member-info .club-member-level {
+    padding-top: 5px;
+    color: #8c8c8c;
+    text-align: center;
+}
+
+.club-member-info .club-member-level span {
+    position: relative;
+    top: -2px;
+    padding: 0 5px;
+    color: #57bb89;
+    vertical-align: middle;
+}
+/*会员经验槽*/
+
+.club-index-top-menu .club-member-experience {
+    position: relative;
+    z-index: 98;
+    width: 220px;
+    height: 20px;
+    margin: 8px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #000;
+}
+
+.club-index-top-menu .club-member-experience p {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    height: 20px;
+}
+
+.club-index-top-menu .club-member-experience .experience-schedule {
+    padding-right: 5px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    background: #57bb89;
+}
+
+.club-member-experience .experience-schedule .get-experience {
+    position: absolute;
+    z-index: 98;
+    right: 2px;
+    top: 2px;
+    display: inline-block;
+    width: 50px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.club-member-experience .experience-schedule .distance-experience {
+    position: absolute;
+    z-index: 98;
+    right: -58px;
+    top: 2px;
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+
+.club-index-top-menu .distance-experience-text {
+    padding-left: 10px;
+    text-align: left;
+    color: #57bb89;
+}
+/*我的积分 我的返利*/
+
+.club-index-top-menu .club-member-points {
+    padding-top: 28px;
+}
+
+.club-index-top-menu .club-member-points table {
+    width: 100%;
+    color: #8c8c8c;
+}
+
+.club-member-points table th {
+    padding-right: 10px;
+    text-align: right;
+    vertical-align: top;
+    border-right: 1px solid #8c8c8c;
+}
+
+.club-member-points table td {
+    padding-left: 10px;
+}
+
+.club-member-points .my-points th {
+    padding-top: 3px;
+}
+
+.club-member-points .my-points .points-quantity {
+    font-size: 18px;
+    color: #f60;
+}
+
+.my-points .points-quantity .earn-points-href {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #f60;
+}
+
+.my-points .points-quantity .earn-points-href:hover {
+    color: #f60;
+}
+
+.club-member-points .line-none {
+    height: 20px;
+}
+
+.club-member-points .my-rebate th {
+    padding-top: 1px;
+}
+
+.club-member-points .my-rebate td {
+    color: #f60;
+}
+
+.club-member-points .my-rebate .my-repoints-href {
+    color: #fff;
+}
+
+.club-member-points .my-rebate .my-repoints-href:hover {
+    color: #f60;
+}
+/*我的特权*/
+
+.club-index-top-menu .club-member-privilege {
+    margin-top: 30px;
+    padding: 10px 0 0 0;
+    color: #8c8c8c;
+    border-top: 1px dashed #333;
+}
+
+.club-index-top-menu .club-member-privilege .club-privilege-title {
+    padding-left: 17px;
+}
+
+.club-member-privilege .club-privilege-warp {
+    position: relative;
+    /*z-index: 98;*/
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+}
+
+.club-member-privilege .club-privilege-warp .last-page-btn {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.club-member-privilege .club-privilege-warp .next-page-btn {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.club-member-privilege .club-privilege-warp-limt {
+    /*width: 140px;*/
+    
+    height: 30px;
+    margin: 8px auto;
+    /*overflow: hidden;*/
+    
+    text-align: center;
+}
+
+.club-member-privilege .bd {
+    padding-left: 25px;
+}
+
+.club-member-privilege .club-privilege-list {
+    position: relative;
+    height: 60px;
+}
+
+.club-member-privilege .club-privilege-list li {
+    /*position: relative;*/
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 8px;
+}
+.club-member-privilege .club-privilege-list li a {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.club-member-privilege .list-tip {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #61bbe0;
+}
+.tip-item-trungle {
+    position: absolute;
+    z-index: 1000;
+    bottom: -10px;
+    left: 10px;
+    display: none;
+    *display: block!important;
+    _display: block;
+    border-width: 10px 5px 10px 5px;
+    border-style: solid;
+    border-color: transparent transparent #61bbe0 transparent;
+}
+.club-member-privilege .club-privilege-list li a:hover .tip-item-trungle {
+    display: block;
+}
+/*首页顶部模块 幻灯*/
+
+.club-index-slider-warp {
+    position: absolute;
+    z-index: 80;
+    left: 0;
+    top: 180px;
+    width: 100%;
+    min-width: 1190px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.club-index-slider-warp .index-full-slider {
+    position: relative;
+    z-index: 98;
+    width: 100%;
+    height: 450px;
+    min-width: 1190px;
+}
+
+.index-full-slider .slider-item {
+    width: 100%;
+    min-width: 1190px;
+    height: 420px;
+    float: left;
+}
+
+.club-index-slider .slider-item .slider-item-href {
+    width: 100%;
+    height: 420px;
+    display: block;
+}
+/*幻灯数字控制按钮*/
+
+.index-full-slider .hd {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    min-width: 1190px;
+    text-align: center;
+}
+
+.index-full-slider .hd li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    background: #ccc;
+    text-indent: -9999px;
+}
+
+.index-full-slider .hd .on {
+    background: #333;
+}
+/*=============== 楼层部分 ===============*/
+
+.club-index-floor {
+    margin-top: 50px;
+}
+
+.club-index-floor .club-index-floor-title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-left: 0;
+}
+
+.club-index-floor .club-index-floor-title span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+/* 特殊虚线 */
+
+.dash-line {
+    position: relative;
+    top: 4px;
+    width: 198px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 8px;
+    line-height: 18px;
+    background: url(../images/club_index_title_line.png);
+}
+
+.dash-line:after {
+    display: block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+.club-index-floor .club-index-floor-title .floor-title-more {
+    position: relative;
+    top: 1px;
+    width: 50px;
+    height: 12px;
+    display: inline-block;
+    margin-left: -2px;
+    color: #fff;
+    line-height: 12px;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    background: #8c8c8c;
+}
+
+.club-index-floor .club-index-floor-title .floor-title-more i {
+    margin-left: 2px;
+    font-family: "宋体";
+}
+
+.club-index-floor .club-index-floor-title .floor-title-more:hover {
+    background: #ee950a;
+}
+/*积分兑换*/
+
+.points-exchange-hot-sale .hot-sale-title {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    background: #fed586;
+}
+
+.points-exchange-hot-sale .hot-sale-title .icon {
+    margin-right: 10px;
+}
+
+.club-index-points-exchange .points-exchange-hot-sale .hot-sale-pic {
+    position: relative;
+}
+
+.points-exchange-hot-sale .hot-sale-pic .points {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 80px;
+    height: 80px;
+    vertical-align: bottom;
+    text-align: center;
+    color: #fff;
+}
+
+.hot-sale-pic .points .points-quantity {
+    display: block;
+    padding-top: 30px;
+    font-size: 18px;
+}
+/*积分兑换列表*/
+
+.points-exchange-list .points-exchange-item {
+    position: relative;
+    z-index: 80;
+    width: 240px;
+    height: 160px;
+    float: left;
+    margin: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.points-exchange-list .points-exchange-item .info-bg {
+    position: absolute;
+    z-index: 81;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    -moz-opacity: 0.75;
+    -webkit-opacity: 0.75;
+    filter: alpha(opacity=60);
+    transition:All 0.3s ease-in-out;
+    -webkit-transition:All 0.3s ease-in-out;
+    -moz-transition:All 0.3s ease-in-out;
+    -o-transition:All 0.3s ease-in-out;
+}
+.points-exchange-list .points-exchange-item:hover .info-bg{
+    bottom: 0;
+    transform:translate(0,0);
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -o-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+}
+.points-exchange-list .points-exchange-item .info {
+    position: absolute;
+    z-index: 82;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 24px;
+    font-size: 12px;
+    transition:All 0.3s ease-in-out;
+    -webkit-transition:All 0.3s ease-in-out;
+    -moz-transition:All 0.3s ease-in-out;
+    -o-transition:All 0.3s ease-in-out;
+}
+.points-exchange-list .points-exchange-item:hover .info{
+    bottom: 3px;
+    transform:translate(0,0);
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -o-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+}
+.points-exchange-item .info a {
+    height: 50px;
+    display: block;
+    color: #ccc;
+    padding: 0 10px;
+}
+.points-exchange-item .info .name {
+    display: block;
+    line-height: 20px;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.points-exchange-item .info .name:hover {
+    color: #f60; 
+}
+
+.points-exchange-item .info .points-quantity {
+    display: block;
+    font-size: 18px;
+    color: #f60;
+}
+
+.points-exchange-item .info .points-quantity em {
+    font-size: 12px;
+    font-style: normal;
+}
+
+.points-exchange-list .item-1,
+.points-exchange-list .item-2,
+.points-exchange-list .item-3 {
+    margin-top: 0;
+}
+
+.points-exchange-list .item-3,
+.points-exchange-list .item-6 {
+    margin-right: 0;
+}
+/*积分兑换广告位*/
+
+.points-exchange-AD {
+    padding-top: 5px;
+}
+/*积分换购*/
+
+.club-index-points-trade .points-trade-list .points-trade-item {
+    width: 290px;
+    height: 284px;
+    float: left;
+    margin-right: 10px;
+}
+
+.points-trade-list .points-trade-item.item-4 {
+    margin-right: 0;
+}
+
+.points-trade-list .points-trade-item p {
+    margin-top: 5px;
+}
+
+.points-trade-list .points-trade-item .name {
+    width: 100%;
+    height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.points-trade-item .name a {
+    color: #8c8c8c;
+}
+
+.points-trade-item .name a:hover {
+    color: #f60;
+}
+
+.points-trade-item .price {
+    color: #8c8c8c;
+}
+
+.points-trade-item .price b {
+    display: inline-block;
+    font-size: 18px;
+    color: #f60;
+}
+
+.points-trade-item .price span {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    color: #f60;
+}
+
+.points-trade-item .market-price {
+    color: #8c8c8c;
+    text-decoration: line-through;
+}
+/*分享返利*/
+
+.club-index-share-rebate {}
+
+.share-rebate-item .name {
+    width: 100%;
+    height: 42px;
+    margin-top: -5px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.share-rebate-item .name a {
+    color: #8c8c8c;
+}
+
+.share-rebate-item .name a:hover {
+    color: #f60;
+}
+
+.share-rebate-item .market-price {
+    margin-top: 8px;
+}
+
+.share-rebate-item .top-rebate {
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.share-rebate-item .top-rebate b {
+    position: relative;
+    top: 3px;
+    font-size: 18px;
+    color: #f60;
+}
+.share-rebate-item.item-1-1 .top-rebate{
+    margin-top: 10px;
+}
+.share-rebate-item.item-1-1 .share {
+    margin-top: 30px;
+}
+
+.share-rebate-item.item-1-1 .share .share-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: #f60;
+}
+
+.share-rebate-item.item-1-1 .share .share-btn:hover {
+    background-color: #ee950a;
+}
+
+.share-rebate-item.item-1-1 .share-btn i {
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+/*1-1*/
+
+.share-rebate-list .item-1-1 {
+    height: 194px;
+    padding: 18px 48px;
+    border: 1px solid #ccc;
+}
+
+.share-rebate-list .item-1-1 dt {
+    width: 290px;
+    float: left;
+}
+
+.share-rebate-list .item-1-1 dd {
+    width: 190px;
+    padding-left: 10px;
+    float: left;
+}
+/*1-1-1*/
+
+.share-rebate-list .item-1-1-1 {
+    height: 127px;
+    padding: 18px 5px 18px 48px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.share-rebate-list .item-1-1-1 dt {
+    width: 190px;
+    float: left;
+}
+
+.share-rebate-list .item-1-1-1 dd {
+    width: 135px;
+    padding-left: 10px;
+    float: left;
+}
+.share-rebate-list .item-1-1-1 .top-rebate{
+    margin-top: 0;
+}
+.share-rebate-item.item-1-1-1 .share {
+    margin-top: 13px;
+}
+
+.share-rebate-item.item-1-1-1 .share .share-btn {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background: #f60;
+}
+
+.share-rebate-item.item-1-1-1 .share-btn i {
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.share-rebate-item.item-1-1-1 .share-btn:hover {
+    background: #ee950a;
+}

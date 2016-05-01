@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "redeem-success",
+        "title": "优惠券成功兑换页面"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "订单支付",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 优惠券成功兑换页面开始 -->
+    <section class="w1190" id="J_orderredeemSuccess">
+        <div class="order-redeem-success">
+            <p class="fc-333 redeem-success-tip">
+                <i class="icon-face-smile-orange"></i><span>商品兑换成功！</span>
+            </p>
+            <p class="fc-333 redeem-price">
+                付款金额：<span class="fc-f60">30000积分</span>
+            </p>
+            <p class="redeem-success-btns">
+                <a href="javascript:void(0);">查看商品详细</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:void(0);">查看兑换记录</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:void(0);">商城首页</a>
+            </p>
+            <div class="fc-333 share-content">
+                <span class="title">分享刚入手的商品：</span>
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style_32x32">
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a class="jiathis_button_kaixin001"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+
+                </div>
+                <script type="text/javascript" >
+                var jiathis_config={
+                    summary:"",
+                    shortUrl:true,
+                    hideMore:false
+                }
+                </script>
+                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+            </div>
+            <div class="redeem-send-code J_redeem_succ_info">
+                <p class="J_redeem_send_info"><span class="fc-f60">优惠券编码</span>已发送到您的手机号码<span class="fc-f60 J_redeem_phone_num">13800138000</span>，请注意查收&nbsp;&nbsp;<em class=" J_send_other send_other_btn">发送到其它手机</em></p>
+                <div class="J_input_wrap redeem-send-wrap">
+                    <p class="mt15 wrap">
+                        <label for="otherPhone">手机：</label> <input type="text" name="otherPhone" class="text phone-input J_other_phone_num" value="" />
+                        <span class="j_redeem_tips redeem-tips"></span>
+                    </p>
+                    <a href="javascript:void(0);" class="J_redeem_send_btn btn-orange btn-130x30 mt15">确认</a>
+                </div>
+            </div>
+
+            <div class="redeem-send-code J_redeem_succ_info redeem-send-code-succ">
+                <p class="J_redeem_send_info"><span class="fc-f60">优惠券编码</span>已发送到您的手机号码<span class="fc-f60 J_redeem_phone_num">13800138000</span>，请注意查收&nbsp;&nbsp;<em class=" J_send_other send_other_btn">发送到其它手机</em></p>
+                <div class="J_input_wrap redeem-send-wrap">
+                    <p class="mt15 wrap">
+                        <label for="otherPhone">手机：</label> <input type="text" name="otherPhone" class="text phone-input J_other_phone_num" value="" />
+                        <span class="j_redeem_tips redeem-tips"></span>
+                    </p>
+
+                    <a href="javascript:void(0);" class="J_redeem_send_btn btn-orange btn-130x30 mt15">确认</a>
+                </div>
+            </div>
+            <div class="redeem-send-code J_redeem_reg_wrap">
+                <p>您的手机还未验证，验证成功后<span class="f60">优惠券编</span>码将发送到您手机。</p>
+                <div class="J_input_wrap">
+                    <p class="mt15 wrap">
+                        <label for="otherPhone">手机：</label><input type="text" name="otherPhone" class="text phone-input J_redeem_reg_phone" value="" />
+                        <span class="j_redeem_tips redeem-tips"></span>
+                    </p>
+                    <p class="mt15 wrap">
+                        <label for="code">验证码：</label><input type="text" name="code" class="text code-input J_code_input" value="" />
+                        <a href="javascript:void(0);" class="J_get_code btn-orange get-code-btn">获取手机验证码</a>
+                        <a id="J_btnUnabled" class="btn-190X30-unable ml-5"><span id="J_countDown">60</span>秒</a>
+                        <span class="j_redeem_code_tips redeem-tips"></span>
+                    </p>
+                    <a href="javascript:void(0);" class="J_redeem_reg btn-orange btn-130x30 mt15">确认</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 优惠券成功兑换页面结束 -->
+
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "redeem-success"
+    })
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/active/css/active.css">
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/active/ac201506/css/pubuliu.css">
+    <!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+    <title>瀑布流</title>
+    <script type="text/javascript">
+    var commonData = 
+        [{
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test11.jpg",
+            "imgWidth": "600",
+            "imgHeight": "675",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得内容……"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/img4.jpg",
+            "imgWidth": "1334",
+            "imgHeight": "1334",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "286",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "286",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test1.jpg",
+            "imgWidth": "3156",
+            "imgHeight": "1720",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test2.jpg",
+            "imgWidth": "3008",
+            "imgHeight": "2008",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test3.jpg",
+            "imgWidth": "5609",
+            "imgHeight": "2258",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "123",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "234",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "345",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }];
+    var commonData2 = 
+        [{
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test11.jpg",
+            "imgWidth": "600",
+            "imgHeight": "675",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得内容……"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/img4.jpg",
+            "imgWidth": "1334",
+            "imgHeight": "1334",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "286",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "286",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test1.jpg",
+            "imgWidth": "3156",
+            "imgHeight": "1720",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test2.jpg",
+            "imgWidth": "3008",
+            "imgHeight": "2008",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/test3.jpg",
+            "imgWidth": "5609",
+            "imgHeight": "2258",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "123",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "234",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }, {
+            "imgHref": "http://misc.jjcdn.com/p/active/ac201506/pubuliu-info.html",
+            "imgSrc": "http://misc.jjcdn.com/p/active/ac201506/img/pubuliu_data.jpg",
+            "imgWidth": "369",
+            "imgHeight": "345",
+            "imgName": "小马迷迷",
+            "imgContent": "用户使用心得内容用户使用心得内容心得内容心得内容心得内容心得内容用户使用心得内容用户使用心得内容用户使用心得"
+        }]
+    </script>
+</head>
+
+<body>
+    <!-- 新闻开始 -->
+    <section class="pbl-top">
+        <div class="news-bg"></div>
+        <div class="pbl-news w1190">
+            <div class="news-img">
+                <a href="javascript:void(0)" target="_blank">
+                    <span>立即购买<i></i></span>
+                </a>
+            </div>
+            <div class="news-content">
+                <h1>媒体新闻</h1>
+                <ul class="n-c-list">
+                    <li>
+                        <a href="javascript:void(0)" target="_blank">
+                            <h2>商品软文、检测报告、新闻等标闻等标闻等标闻等标闻等标题  副本 2</h2>
+                            <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正正文内容正文内容内容内容内容内容内容内容内容内容正文内容正文内容正文内容正文内容 副本</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank">
+                            <h2>商品软文、检测报告、新闻等标题  副本 2</h2>
+                            <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正正文内容正文内容正文内容正文内容正文内容正文内容 副本</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank">
+                            <h2>商品软文、检测报告、新闻等标题  副本 2</h2>
+                            <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正正文内容正文内容正文内容正文内容正文内容正文内容 副本</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="btn">我要加载数据</button>
+    </section>
+    <!-- 新闻结束 -->
+    <!-- 标头开始 -->
+    <header class="pbl-header">
+        <div class="w1190">
+            <div class="pbl-title"></div>
+        </div>
+    </header>
+    <!-- 标头结束 -->
+    <!-- 瀑布流开始 -->
+    <div class="pbl-container w1190">
+        <div id="J_pbl-c-action" class="pbl-c-action">
+        </div>
+        <p class="pbl-no-more" id="J_noMore">没有更多了</p>
+    </div>
+    <input id="J_warterfallPage" type="hidden" value="2"/>
+    <!-- 瀑布流结束 -->
+    <!-- 底部开始 -->
+    <!-- <footer class="pbl-footer">
+        <div class="w1190">
+            <div class="pbl-logo"></div>
+        </div>
+    </footer> -->
+    <!-- 底部结束 -->
+</body>
+<script src="http://misc.jjcdn.com/p/js/base.js"></script>
+<script src="http://misc.jjcdn.com/p/active/ac201506/js/pubuliu.js"></script>
+
+</html>

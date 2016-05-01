@@ -1,0 +1,185 @@
+/*
+ *   module : active check in
+ *   author : zhangzhensheng
+ *   date : 2015-08-12
+*/
+/*弹框样式*/
+.ui-dialog-footer button{
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    color: #fff;
+    background: #f60;
+    border-radius: 3px;
+}
+.ui-dialog-footer button:hover{
+    color: #fff;
+    background: #ee950a;
+}
+
+.pre-dialog-content .preheat-state {
+    width: 280px;
+    height: 44px;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pre-dialog-content .preheat-state th{
+    text-align: right;
+}
+.pre-dialog-content .preheat-state .icon-smile{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: url(../img/icon_smile.png) no-repeat;
+}
+.pre-dialog-content .preheat-state td{
+    padding-left: 10px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+.pre-dialog-content .preheat-text{
+    margin-top: 10px;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #807e7e;
+}
+
+.pre-dialog-content .preheat-text span{ 
+    padding: 0 3px;
+    color: #f60;
+}
+.pre-dialog-content .enroll-table{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.pre-dialog-content .enroll-table th,.pre-dialog-content .enroll-table td{
+    position: relative;
+    height: 30px;
+    padding-top: 15px;
+}
+.pre-dialog-content .enroll-table .enroll-input{
+    padding:3px 15px; 
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+}
+.enroll-table td .enroll-tip{
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    bottom: -15px;
+    color: #f60;
+}
+.ac-preheat{
+    position: relative;
+    z-index: 990;
+    width: 1190px;
+    height: 290px;
+    margin: 0 auto;
+}
+.ac-preheat .ac-preheat-bg{
+    width: 1190px;
+    height: 290px;
+    background: url(../img/ac_2015_preheat.jpg) no-repeat;
+}
+.ac-preheat .enroll-btn{
+    display: block;
+    position: absolute;
+    z-index: 990;
+    left: 123px;
+    top: 151px;
+    width: 182px;
+    height: 66px;
+}
+
+/*签到*/
+.ac-preheat .checkin-btn {
+    position: absolute;
+    left: 759px;
+    top: 124px;
+    display: block;
+    width: 53px;
+    height: 120px;
+}
+
+.ac-preheat .layer {
+    position: absolute;
+    z-index: 1;
+    left: 759px;
+    top: 124px;
+    display: none;
+    width: 53px;
+    height: 120px;
+    background: url(../img/layer.png) no-repeat;
+}
+
+.ac-preheat .price {
+    position: absolute;
+    z-index: 1;
+    left: 600px;
+    top: 154px;
+    display: none;
+    width: 65px;
+    height: 65px;
+    /*background: url(../img/price.png) no-repeat 0px -65px ;*/
+    background: url(../img/price.png) no-repeat 0px 0px;
+}
+
+/* zhangzhensheng */
+.active-check-in h1{
+    margin-top: 17px;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.active-check-in h1 i {
+    margin-right: 10px;
+    display: inline-block;
+    width: 43px;
+    height: 44px;
+    background: url(../img/sprite.png) no-repeat 0 0;
+}
+
+.active-check-in p {
+    margin: 0 auto;
+    width: 406px;
+    color: #807E7E;
+    line-height: 22px;
+    text-align: center;
+}
+
+.active-check-in p.content {
+    font-size: 14px;
+}
+
+.active-check-in p.content em {
+    color: #FF6600;
+}
+
+.active-check-in p.foot {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    font-size: 13px;
+    text-align: right;
+}
+
+.active-check-in p.foot a {
+    color: #2F6CEB;
+}
+
+.ui-dialog-title {
+    font-family: "Microsoft Yahei";
+}
+
+.ui-btns-orange {
+    font-family: "Microsoft Yahei";
+    letter-spacing: 3px;
+}

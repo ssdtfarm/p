@@ -1,0 +1,1 @@
+define("libpage.0.0/register-yhq-succ",[],function(o,i,t){$(function(){function o(){i=e.height(),t=$(window).scrollTop()+$(window).height()-i+"px",$(document.body).height()<$(window).height()?(e.css({position:"absolute",marginTop:0,top:t}),e.show()):(e.css({position:"static"}),e.show())}var i=0,t=0,e=$(".member-foot");o(),$(window).scroll(o).resize(o)})});

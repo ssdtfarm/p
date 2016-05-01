@@ -1,0 +1,17 @@
+<div class="item-floor-ad">
+    <ul class="floor-list ad-type-<%=listType%>">
+        <%for(var i=0; i<list.length; i++) {%>
+        <li class="ad-pro-item">
+            <a href="<%=list[i].proLink%>" class="pro-link">
+                <img src="<%=list[i].imgSrc%>" alt="<%=list[i].imgAlt%>" class="pro-img">
+                <div class="title-mark"></div>
+                <p class="pro-title"><%=list[i].proTitle%></p>
+                <div class="price-info">
+                    <p class="txt-1">市场价&yen;<span class="marky-price"><%=list[i].markyPrice%></span></p>
+                    <p class="txt-2">&yen;&nbsp;<%=list[i].proPrice%></p>
+                </div>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+</div>

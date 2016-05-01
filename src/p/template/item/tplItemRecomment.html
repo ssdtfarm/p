@@ -1,0 +1,143 @@
+<%if(!hotList && !recList){%>
+
+<%}else{%>
+    <nav id="J_hotTitle" class="recommend-tab-title clearfix">
+	    <%if(!hotList){%>
+	        <a href="javascript:void(0)" class="tab-item on">同类推荐</a>
+	    <%}else{%>
+	        <a href="javascript:void(0)" class="tab-item on">人气搭配</a>
+	        <a href="javascript:void(0)" class="tab-item">同类推荐</a>
+	    <%}%>
+</nav>
+
+<section id="J_hotContent" class="recommend-tab-content">
+   
+    <%if(!hotList){%>
+    <%}else{%>
+        <form id="J_hotForm" action="<%=apiPath%>/addCarts" method="post" target="_blank">
+                <dl class="item-recomment-hot JQ_tabContent">
+                    <dd class="recoment-hot-left">
+                        <p class="recomment-hot-img">
+                            <a href="<%=itemLinkURL%>" target="_blank">
+							<img src="<%=itemImgURL%>!small" class="lazy" alt="<%=itemTitle%>" width="165" height="110" />
+						</a>
+                        </p>
+                        <p class="recomment-hot-title">
+                            <a href="<%=itemLinkURL%>" target="_blank">
+                                <%=itemTitle%>
+                            </a>
+                        </p>
+                        <p class="recomment-hot-price">&yen;
+                            <%=itemPrice%>
+                        </p>
+                        <span class="recomment-hot-add">+</span>
+                        <input type="hidden" name="itemPrice" value="<%=itemPrice%>" />
+                        <input type="hidden" name="itemMarketPrice" value="<%=itemMarketPrice%>" />
+                        <input type="hidden" name="itemSkuID" value="<%=itemSkuID%>" />
+                    </dd>
+                    <dd class="recomment-hot-main">
+                        <!-- 人气搭配数据列表 -->
+                        <div id="J_hotSlider" class="recomment-slider">
+                            <div class="hd">
+                                <ul></ul>
+                            </div>
+                            <div class="bd">
+                                <ul>
+                                    <%for(var i=0; i<hotList.length; i++){%>
+                                        <li>
+                                            <p>
+                                                <a href="<%=hotList[i].linkURL%>" target="_blank">
+											<img src="<%=hotList[i].imgURL%>!small" alt="<%=hotList[i].title%>" class="lazy" width="165" height="110">
+										</a>
+                                            </p>
+                                            <p class="recomment-slider-title">
+                                                <a href="<%=hotList[i].linkURL%>" target="_blank">
+                                                    <%=hotList[i].title%>
+                                                </a>
+                                            </p>
+                                            <p class="recoment-slider-text clearfix">
+                                                <a href="javascript:void(0);" class="item-hot-check-off vtm JQ_hotCheck"></a>
+
+                                                <label class="fc-f60 fs-14">&yen;
+                                                    <%=hotList[i].salePrice%>
+                                                </label>
+                                            </p>
+                                            <p class="fc-333 recoment-slider-form">
+                                                <input type="checkbox" style="display: none;" name="hotItem" />
+                                                <input type="hidden" name="hotNum" value="1" />
+                                                <input type="hidden" value="<%=hotList[i].storePrice%>" name="storePrice" />
+                                                <input type="hidden" value="<%=hotList[i].salePrice%>" name="salePrice" />
+                                                <input type="hidden" value="<%=hotList[i].skuId%>" name="skuID" />
+                                            </p>
+                                        </li>
+                                        <%}%>
+                                </ul>
+                            </div>
+                            <a href="javascript:void(0)" class="prev item-hot-point-up">上一页</a>
+                            <a href="javascript:void(0)" class="next item-hot-point-down">下一页</a>
+                        </div>
+                    </dd>
+                    <dd class="recomment-hot-right">
+                        <p class="hot-right-choice">
+                            <span id="J_choiceNum" class="fc-f60">0</span>件商品搭配购买
+                        </p>
+                        <p class="hot-all-price">
+                            搭配价：<span id="J_hotAllPrice" class="fc-f60 fs-18">&yen;<%=itemPrice%></span>
+                        </p>
+                        <p class="hot-off-price">
+                            立省：<span id="J_offPriceCount">&yen;<%=(itemMarketPrice-itemPrice).toFixed(2)%></span>
+                        </p>
+                        <p class="hot-market-price">
+                            原价：<span id="J_marketPriceCount">&yen;<%=itemPrice%></span>
+                        </p>
+
+                        <input type="hidden" name="skuArr" value="<%=skuID%>" />
+                        <input type="hidden" name="numArr" value="1" />
+                        <p class="hot-choice-btn">
+                            <a href="javascript:void(0)" id="J_hotBtnCart" class="hot-btn-cart">组合购买</a>
+                        </p>
+                    </dd>
+                </dl>
+        </form>
+    <%}%>
+
+    <%if(!recList){%>
+    <%}else{%>
+        <dl class="dis-none JQ_tabContent">
+                            <dd id="J_recommentSlider" class="similar-recomment-slider">
+                                <div class="hd">
+                                    <ul></ul>
+                                </div>
+                                <div class="bd">
+                                    <ul class="clearfix">
+                                        <%for(var j=0; j<recList.length; j++){%>
+                                            <li>
+                                                <p>
+                                                    <a href="<%=recList[j].linkURL%>" target="_blank">
+					                    <img src="<%=recList[j].imgURL%>!small" class="lazy" alt="<%=recList[j].title%>" width="165" height="110">
+					                </a>
+                                                </p>
+                                                <p class="recomment-slider-title">
+                                                    <a href="<%=recList[j].linkURL%>" target="_blank">
+                                                        <%=recList[j].title%>
+                                                    </a>
+                                                </p>
+                                                <p class="tc fc-f60 fs-14">&yen;
+                                                    <%=recList[j].salePrice%>
+                                                </p>
+                                            </li>
+                                            <%}%>
+                                    </ul>
+                                </div>
+                                <%if(recList.length>5){%>
+                                <a href="javascript:void(0)" class="prev icon-item-rec-prev">上一页</a>
+                                <a href="javascript:void(0)" class="next icon-item-rec-next">下一页</a>
+                                <%}%>
+                            </dd>
+        </dl>
+    <%}%>
+</section>
+
+<div class="blank-20"></div>
+
+<%}%>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "member-order-pay-success",
+        "title": "我的金海马-订单支付-支付成功"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "我的订单",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 订单支付页面开始 -->
+    <section class="w1190" id="J_orderPaySuccess">
+        <div class="order-pay-success">
+            <p class="fc-333 pay-success-tip">
+                <i class="icon-face-smile-orange"></i>您已成功付款！
+            </p>
+            <p class="fc-333">
+                付款金额：<span class="fc-f60">￥10500.00</span>
+            </p>
+            <p class="pay-success-btns">
+                <a href="javascript:void(0);">查看已买到的商品</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:void(0);">查看交易详情</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:void(0);">商城首页</a>
+            </p>
+            <p class="fc-333">
+                <span>交易成功后您将获得：</span>
+                <p>
+                    积分：<span class="fc-f60">1050积分</span>
+                </p>
+                <p>
+                    返利：<span class="fc-f60">￥10500.00元</span>
+                </p>
+            </p>
+        </div>
+    </section>
+    <!-- 订单支付页面结束 -->
+
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "member-order-pay-success"
+    })
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+    "cdn": "@@miscPath",
+    "name": "club-rebate-index-list",
+    "title": "会员俱乐部-返现商城首页"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "返现商城",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 会员俱乐部导航菜单部分开始 -->
+    <section class="club-nav-warp">
+        <div class="kh-row-24 clearfix">
+            <!-- 延迟部分 -->
+            <div class="kh-col-24 pos-rel" id="J_clubNav">
+                <div class="loading"><i class="icon-loading-small"></i>
+                </div>
+            </div>
+            <!-- 加载部分 -->
+            <script id="J_templateClubNav" type="text/html">
+                <!-- 会员俱乐部导航栏开始 -->
+                <div class="club-nav kh-col-24">
+                    <a target="_blank" href="club-index.html" class="clearfix">
+                        <span>首页</span>
+                    </a>
+                    <a target="_blank" href="club-points-index-list.html" class="clearfix">
+                        <span>积分中心</span>
+                    </a>
+                    <a target="_blank" href="club-rebate-index-list.html" class="clearfix cur">
+                        <span>返利中心</span>
+                    </a>
+                    <a target="_blank" href="javascript:void(0);" class="clearfix">
+                        <span>我的钱包</span>
+                    </a>
+                </div>
+                <!-- 会员俱乐部导航栏结束 -->
+            </script>
+        </div>
+    </section>
+    <!-- 会员俱乐部导航菜单部分结束 -->
+    <!-- 会员俱乐部幻灯开始 -->
+    <section class="club-rebate-slider-warp">
+        <div id="J_fullSlider" class="index-full-slider">
+            <div class="bd">
+                <ul class="club-rebate-slider">
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                    <li class="slider-item" style="background: url(http://misc.jjcdn.com/p/images/club-rebate-index-slide-1.jpg) no-repeat scroll 50% 0;">
+                        <a href="javascript:void(0)" class="slider-item-href"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul class="club-rebate-slider-num"></ul>
+            </div>
+        </div>
+    </section>
+    <!-- 会员俱乐部幻灯结束 -->
+    <!-- 创建我的商城开始 -->
+    <section class="kh-row-24 clearfix">
+        <div class="kh-col-24">
+            <dl class="club-rebate-total">
+                <dd class="fc-61b">
+                    <p class="parameters">邀请返利参与人数：</p>
+                    <p class="quantity">
+                        <span id="J_peopleMount" data-value="800000">0</span> 人
+                    </p>
+                </dd>
+                <dd class="fc-ff9">
+                    <p class="parameters">产生收益累计达：</p>
+                    <p class="quantity">
+                        <em>&yen;</em>
+                        <span id="J_moneyMount" data-value="11300">0.00</span>
+                    </p>
+            </dl>
+        </div>
+        <div class="kh-col-18 creat-my-store-pic mt-30">
+            <img src="http://misc.jjcdn.com/p/images/AD_890X290.jpg" width="890" height="290" alt="" class="creat-my-store-img">
+        </div>
+        <div class="kh-col-6 mt-30">
+            <div class="creat-my-store">
+                <!-- 未登录部分 开始 -->
+                <dl class="unlogin">
+                    <dt><img src="http://misc.jjcdn.com/p/images/unlogin_pic.jpg" width="98" height="98" alt=""></dt>
+                    <dd class="login-now">
+                        <h5>登录后查看我的积分</h5>
+                        <a href="javascript:void(0);" class="btn-90X30 btn-orange mt-20">登录</a>
+                        <p class="no-have-id"><span>还没有账号？</span><a class="register-href">立即注册</a></p>
+                    </dd>
+                </dl>
+                <!-- 未登录部分 结束 -->
+                <!-- 已登录部分 开始 -->
+                <!-- <dl class="member-detail">
+                    <dt><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="98" height="98" alt="" class="member-head-img"></dt>
+                    <dd>
+                        <h5>您好，沙发君沙发君沙发君沙发君沙发君</h5>
+                        <div class="experience-line">
+                            <p class="icon-safe-green" style="width: 50%;"><i class="experience-tip">K2</i></p>
+                            <p class="icon-experience-333"></p>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="rabate-invite-info">
+                    <dl class="info-1">
+                        <dd class="fc-8c8">返利收益：</dd>
+                        <dd class="fc-f60 f18"><b>￥800.00</b></dd>
+                        <dd><a href="javascript:void(0)" class="detail-href">查看明细</a></dd>
+                    </dl>
+                    <dl class="info-2">
+                        <dd class="fc-8c8">邀请订单数：</dd>
+                        <dd class="fc-f60 f18"><b>30笔</b></dd>
+                        <dd><a href="javascript:void(0)" class="detail-href">查看明细</a></dd>
+                    </dl>
+                </div> -->
+                <!-- 已登录部分 结束 -->
+                <a href="javascript:void(0)" class="creat-my-store-btn">一键创建我的商城<i class="icon-point-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- 创建我的商城结束 -->
+    <section class="kh-row-24 clearfix mt-20">
+        <!-- 返利商城左边开始 -->
+        <!-- 延迟部分 -->
+        <div class="kh-col-6 pos-rel" id="J_clubAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateClubAside" type="text/html">
+            <aside class="club-aside">
+                <div class="club-diy-share">
+                    <h3>看看大家都在分享哪些商品？<i class="triangle-down"></i></h3>
+                    <div class="share-goods-top-2">
+                        <dl class="top-2-item clearfix">
+                            <dt class="pic">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94"></a>
+                            </dt>
+                            <dd class="goods-info">
+                                <a href="javascript:void(0)" class="name">银配茶色 涤纶 床品五件套 博士架</a>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </dd>
+                        </dl>
+                        <dl class="top-2-item clearfix">
+                            <dt class="pic">
+                                <a href="javascript:void(0)">
+                                    <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94"></a>
+                            </dt>
+                            <dd class="goods-info">
+                                <a href="javascript:void(0)" class="name">银配茶色 涤纶 床品五件套 博士架</a>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <ul class="share-goods-top-4 clearfix">
+                        <li class="top-4-item item-1">
+                            <a href="javascript:void(0)">
+                                <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94"></a>
+                            <p class="info-bg"></p>
+                            <a href="javascript:void(0)" class="info">
+                                <p class="name">银配茶色 涤纶 床品五件套 博士架博士架博士架博士架博士架</p>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </a>
+                        </li>
+                        <li class="top-4-item item-2">
+                            <a href="javascript:void(0)">
+                                <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94"></a>
+                            <p class="info-bg"></p>
+                            <a href="javascript:void(0)" class="info">
+                                <p class="name">银配茶色 涤纶 床品五件套 博士架</p>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </a>
+                        </li>
+                        <li class="top-4-item item-3">
+                            <a href="javascript:void(0)">
+                                <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94"></a>
+                            <p class="info-bg"></p>
+                            <a href="javascript:void(0)" class="info">
+                                <p class="name">银配茶色 涤纶 床品五件套 博士架</p>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </a>
+                        </li>
+                        <li class="top-4-item item-4">
+                            <a href="javascript:void(0)">
+                                <img src="http://misc.jjcdn.com/p/images/140X94.jpg" alt="" width="140" height="94" /></a>
+                            <p class="info-bg"></p>
+                            <a href="javascript:void(0)" class="info">
+                                <p class="name">银配茶色 涤纶 床品五件套 博士架</p>
+                                <p class="price">￥855.00</p>
+                                <p class="rebate-percent">返现比例：<b>10%</b></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <dl class="share-top clearfix">
+                    <dt><i class="icon-star-on"></i>分享排行榜<i class="icon-star-on"></i></dt>
+                    <dd>
+                        <table class="share-top-table">
+                            <thead>
+                                <tr>
+                                    <td width="40">排名</td>
+                                    <td width="110">分享人</td>
+                                    <td width="140">累计返现金额</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><i class="icon-hot-1"></i></th>
+                                    <td>
+                                        <p class="name">余丹*</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-2"></i></th>
+                                    <td>
+                                        <p class="name">****66666@qq.com7545</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-3"></i></th>
+                                    <td>
+                                        <p class="name">*大肠</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-4"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-5"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-6"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-7"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-8"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-9"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="icon-hot-10"></i></th>
+                                    <td>
+                                        <p class="name">林*6666</p>
+                                    </td>
+                                    <td class="fc-f60">￥53456.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </dd>
+                </dl>
+                <dl class="aside-AD-area clearfix">
+                    <a href="javascript:void(0);" title="">
+                        <img src="http://misc.jjcdn.com/p/images/AD290X308.jpg" alt="" width="290" height="308" />
+                    </a>
+                </dl>
+            </aside>
+        </script>
+        <!-- 返利商城左边结束 -->
+        <!-- 返利商城右边开始 -->
+        <div class="kh-col-18 club-rebate-index-main">
+            <!-- 筛选部分开始 -->
+            <div class="club-rebate-filler-warp">
+                <!-- 下拉筛选表单开始 -->
+                <form action="javascript:void(0);">
+                    <div class="club-rebate-filler">
+                        <dl class="filler-item clearfix">
+                            <dt>返利方式：</dt>
+                            <dd id="J_selectStyle" class="select-gray">
+                                <i class="select-corner icon-gray-left"></i>
+                                <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-value="0">返现</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="0">返现+返积分</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="selectStyle">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="club-rebate-filler">
+                        <dl class="filler-item">
+                            <dt>返现比例：</dt>
+                            <dd id="J_selectRebatePer" class="select-gray">
+                                <i class="select-corner icon-gray-left"></i>
+                                <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-value="0">0%~20%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="1">21%~50%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="2">51%~80%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="3">81%~100%</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="selectPercent">
+                            </dd>
+                        </dl>
+                        <dl class="filler-item">
+                            <dt>返积分比例：</dt>
+                            <dd id="J_selectPointsPer" class="select-gray">
+                                <i class="select-corner icon-gray-left"></i>
+                                <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a id="J_applyReason" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-value="0">0%~20%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="1">21%~50%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="2">51%~80%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="3">81%~100%</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="selectRebatePer">
+                            </dd>
+                        </dl>
+                        <a href="javascript:void(0)" class="filler-search-btn JQ_fillterBtn">确定</a>
+                    </div>
+                </form>
+                <!-- 下拉筛选表单结束 -->
+                <div class="club-rebate-filler-category">
+                    <span>商品类型：</span>
+                    <a href="javascript:void(0)" class="category-item cur">全部</a>
+                    <a href="javascript:void(0)" class="category-item" class="category-item">客厅</a>
+                    <a href="javascript:void(0)" class="category-item">餐厅</a>
+                    <a href="javascript:void(0)" class="category-item">卧房</a>
+                    <a href="javascript:void(0)" class="category-item">书房</a>
+                    <a href="javascript:void(0)" class="category-item">办公家具</a>
+                    <a href="javascript:void(0)" class="category-item">儿童家具</a>
+                    <a href="javascript:void(0)" class="category-item">家居百货</a>
+                </div>
+            </div>
+            <!-- 筛选部分结束 -->
+            <!-- 列表部分开始 -->
+            <table class="club-rebate-list-tab">
+                <tr class="club-rebate-item">
+                    <td class="club-rebate-list-pict">
+                        <a href="javascript:void(0);">
+                            <img class="dis-block" src="http://misc.jjcdn.com/p/images/club-rebate-index-left-pict.png" width="440" height="294" />
+                        </a>
+                    </td>
+                    <td class="club-rebate-brand-td">
+                        <p class="club-rebate-pic-title"><a href="javascript:void(0);" target="_blank">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米）博士架</a></p>
+                        <p class="club-rebate-pic-activity">岁末分享，无节操购物大返现</p>
+                        <p class="club-rebate-price">￥1999.00</p>
+                        <p class="club-highest-rebate-price">最高返：￥1000</p>
+                        <p class="club-rebate-share">
+                            <a href="javascript:void(0);" class="btn-190x40 btn-orange submit-btn">分享购买获返现
+                                <i class="icon-point-right"></i>
+                            </a>
+                        </p>
+                        <p class="club-rebate-percent">邀请返现比例：<span class="fc-f60">20%</span>，被邀请返现比例：<span class="fc-f60">10%</span></p>
+                        <p class="club-rebate-level">KO以上会员均可参加</p>
+                        <p>
+                            <span class="count-time"><i class="icon-count-time"></i> 活动时间：2014-12-03至2015-01-03</span>
+                            <a href="javascript:void(0);" class="club-rebate-brand">
+                                <img src="http://misc.jjcdn.com/p/src/images/club-rebate-brand3.png" width="90" height="30" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="club-rebate-blank-td"></td>
+                </tr>
+                <tr class="club-rebate-item">
+                    <td class="club-rebate-list-pict">
+                        <a href="javascript:void(0);">
+                            <img class="dis-block" src="http://misc.jjcdn.com/p/images/club-rebate-index-left-pict.png" width="440" height="294" />
+                        </a>
+                    </td>
+                    <td class="club-rebate-brand-td">
+                        <p class="club-rebate-pic-title"><a href="javascript:void(0);" target="_blank">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米）博士架</a></p>
+                        <p class="club-rebate-pic-activity">岁末分享，无节操购物大返现</p>
+                        <p class="club-rebate-price">￥1999.00</p>
+                        <p class="club-highest-rebate-price">最高返：￥1000</p>
+                        <p class="club-rebate-share">
+                            <a href="javascript:void(0);" class="btn-190x40 btn-orange submit-btn">分享购买获返现
+                                <i class="icon-point-right"></i>
+                            </a>
+                        </p>
+                        <p class="club-rebate-percent">邀请返现比例：<span class="fc-f60">20%</span>，被邀请返现比例：<span class="fc-f60">10%</span></p>
+                        <p class="club-rebate-level">KO以上会员均可参加</p>
+                        <p>
+                            <span class="count-time"><i class="icon-count-time"></i> 活动时间：2014-12-03至2015-01-03</span>
+                            <a href="javascript:void(0);" class="club-rebate-brand">
+                                <img src="http://misc.jjcdn.com/p/src/images/club-rebate-brand3.png" width="90" height="30" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="club-rebate-blank-td"></td>
+                </tr>
+                <tr class="club-rebate-item">
+                    <td class="club-rebate-list-pict">
+                        <a href="javascript:void(0);">
+                            <img class="dis-block" src="http://misc.jjcdn.com/p/images/club-rebate-index-left-pict.png" width="440" height="294" />
+                        </a>
+                    </td>
+                    <td class="club-rebate-brand-td">
+                        <p class="club-rebate-pic-title"><a href="javascript:void(0);" target="_blank">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米）博士架</a></p>
+                        <p class="club-rebate-pic-activity">岁末分享，无节操购物大返现</p>
+                        <p class="club-rebate-price">￥1999.00</p>
+                        <p class="club-highest-rebate-price">最高返：￥1000</p>
+                        <p class="club-rebate-share">
+                            <a href="javascript:void(0);" class="btn-190x40 btn-orange submit-btn">分享购买获返现
+                                <i class="icon-point-right"></i>
+                            </a>
+                        </p>
+                        <p class="club-rebate-percent">邀请返现比例：<span class="fc-f60">20%</span>，被邀请返现比例：<span class="fc-f60">10%</span></p>
+                        <p class="club-rebate-level">KO以上会员均可参加</p>
+                        <p>
+                            <span class="count-time"><i class="icon-count-time"></i> 活动时间：2014-12-03至2015-01-03</span>
+                            <a href="javascript:void(0);" class="club-rebate-brand">
+                                <img src="http://misc.jjcdn.com/p/src/images/club-rebate-brand3.png" width="90" height="30" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="club-rebate-blank-td"></td>
+                </tr>
+                <tr>
+                    <td class="club-rebate-mouse" colspan="2">
+                        <p>鼠标滚动加载下一页<p>
+                        <p><i class="icon-point-down-333"></i></p>
+                        <p class="fc-8c8">没有更多了</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- 列表部分结束 -->
+        </div>
+        <!-- 返利商城右边结束 -->
+    </section>
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "club-rebate-index-list"
+    })
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+.d-content .big, .d-content .small, .d-footer, .text-center {
+    text-align: center
+}
+
+#lucky {
+    width: 1032px;
+    height: 746px;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    font-family: "微软雅黑";
+    background: url(../img/act-bg.gif) center center no-repeat #fff
+}
+
+.ac-kf, .d-close, .d-footer, .egg, .listWrap, .lotteryResult, .tips-dialog, .tree-wrap {
+    position: absolute
+}
+
+.tree-wrap {
+    width: 557px;
+    height: 746px;
+    cursor: url(http://misc.jjcdn.com/p/active/ac201506/img/hammer2.ico), auto
+}
+
+.egg {
+    width: 78px;
+    height: 77px;
+    background: url(../img/ball.png)
+}
+
+.egg:hover {
+    cursor: url(http://misc.jjcdn.com/p/active/ac201506/img/hammer1.ico), auto
+}
+
+.eggOpen {
+    width: 159px;
+    height: 135px;
+    margin-left: -40px;
+    margin-top: -30px;
+    background: url(../img/ball-open.png)
+}
+
+.egg1 {
+    left: 288px;
+    top: 186px
+}
+
+.egg2 {
+    left: 152px;
+    top: 243px
+}
+
+.egg3 {
+    left: 333px;
+    top: 293px
+}
+
+.egg4 {
+    left: 174px;
+    top: 350px
+}
+
+.egg5 {
+    left: 280px;
+    top: 416px
+}
+
+.egg6 {
+    left: 94px;
+    top: 518px
+}
+
+.egg7 {
+    left: 252px;
+    top: 562px
+}
+
+.egg8 {
+    left: 432px;
+    top: 488px
+}
+
+.lotteryResult {
+    width: 480px;
+    padding-top: 380px;
+    margin-left: 540px;
+    top: 0
+}
+
+.listWrap {
+    left: 36px;
+    height: 160px;
+    width: 286px;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+.listWrap li {
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    text-align: left
+}
+
+.prize-time {
+    float: right;
+    padding-right: 6px
+}
+
+.ac-kf {
+    width: 20px;
+    height: 20px;
+    bottom: 58px;
+    right: 194px;
+    cursor: pointer
+}
+
+.tips-dialog {
+    padding: 0;
+    z-index: 10000;
+    width: 565px;
+    height: 338px;
+    background: url(../img/dialog-bg.png) no-repeat;
+    top: 50%;
+    left: 50%;
+    margin-left: -283px;
+    margin-top: -192px;
+    display: none
+}
+
+.d-close {
+    right: 23px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer
+}
+
+.d-footer {
+    width: 100%;
+    bottom: 38px;
+    height: 35px
+}
+
+.d-footer .btn {
+    display: inline-block;
+    width: 117px;
+    height: 31px;
+    line-height: 31px;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #ffe71d;
+    border-bottom: 4px solid #fa9741;
+    border-top: 1px solid #fa9741;
+    font-size: 20px;
+    color: #bf1e2e;
+    margin-left: 24px
+}
+
+.d-footer .btn:first-child {
+    margin-left: 0
+}
+
+.d-content {
+    width: 360px;
+    margin: 150px auto 0
+}
+
+.d-content p {
+    line-height: 34px;
+    padding-left: 10px;
+    font-size: 25px;
+    color: #ffe71d
+}
+
+.d-content p span {
+    font-size: 27px;
+    color: #fdee9e
+}
+
+.d-content .big {
+    font-size: 39px;
+    position: relative;
+    top: -8px
+}
+
+.d-content .small {
+    font-size: 17px;
+    color: #fff
+}
+
+.screenMark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    display: none
+}

@@ -1,0 +1,317 @@
+ <!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+        "cdn"   : "@@miscPath",
+        "name"  : "rebate-detail",
+        "title" : "金海马商城-返利详情"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html") 
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn" : "@@miscPath",
+        "headerName" : "我的金海马",
+        "search" : false
+    })
+    <!-- 头部结束 -->
+    <!-- 主体开始 -->
+    <section class="rebate-detail">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav w1190">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 返利详情头部开始 -->
+        <div class="rebate-detail-head">
+            <div class="head-portrait">
+                <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/rebate/rebate-portrait.jpg" alt="头像"></a>
+            </div>
+            <div class="head-shopname">
+                <span id="J_shopname">老徐的店</span>
+                <input type="text" value="老徐的店" id="J_inputname"/>
+                <i id="J_edit"></i>
+            </div>
+            <div class="head-toshop">
+                <a href="javascript:void(0)">
+                    返回我的小店<i></i>
+                </a>
+            </div>
+        </div>
+        <!-- 返利详情头部结束 -->
+        <!-- 返利详情概况开始 -->
+        <div class="rebate-detail-profile w1190">
+            <div class="profile-title">
+                <h3>我的返利</h3>
+                <p class="sub">
+                    <a href="javascript:void(0)">返回我的小店</a>
+                </p>
+            </div>
+            <div class="profile-content">
+                <p class="main">可用返利：<span class="profit">￥99999.00</span><a href="javascript:void(0)">好友成交订单：<span>8000单</span></a><a href="javascript:void(0)">未支付订单：<span>2单</span></a>
+                </p>
+                <p class="sub">待返：￥0.00</p>
+            </div>
+        </div>
+        <!-- 返利详情概况结束 -->
+        <!-- 返利详情列表开始 -->
+        <div class="rebate-detail-main">
+            <h1>我的返利详情</h1>
+            <div class="main-select">
+                <!-- 层级刷选 -->
+                <div class="selector-wrap">
+                    <div class="selector">
+                        <p class="title">好友订单</p>
+                        <i class="triangle  triangle-up-active"></i>
+                        <input type="text" class="selector-input">
+                        <ul class="list">
+                            <li><a href="#">全部订单</a></li>
+                            <li><a href="#">我的订单</a></li>
+                            <li><a href="#">好友订单</a></li>
+                        </ul>
+                    </div>
+                    <div class="selector">
+                        <p class="title">未付款</p>
+                        <i class="triangle  triangle-down"></i>
+                        <input type="text" class="selector-input">
+                        <ul class="list">
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">未付款</a></li>
+                            <li><a href="#">已付款</a></li>
+                            <li><a href="#">已返利</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 层级刷选 end-->
+            </div>
+            <table class="main-list">
+                <thead>
+                    <tr>
+                        <th class="w140 tc">订单号</th>
+                        <th class="w250 tc">返利商品</th>
+                        <th class="w100 tc">单价</th>
+                        <th class="w100 tc">购买数量</th>
+                        <th class="w100 tc">订单状态</th>
+                        <th class="w100 tc">返利状态</th>
+                        <th class="w100 tc">返利金额</th>
+                        <th class="w150 tc">邀请人/被邀请人</th>
+                        <th class="w150 tc">备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">未付款</td>
+                        <td class="tc fc-f60">待返</td>
+                        <td class="tc fc-8c8">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已售后</td>
+                        <td class="tc fc-8c8">------</td>
+                        <td class="tc fc-8c8">------</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                    <tr class="border-b-ccc">
+                        <td class="tc">N9000038445</td>
+                        <td class="tl">
+                            <dl class="goods">
+                                <dt class="fl w140 ml-10 mr-10"><a href=""><img src="@@miscPath/p/images/rebate/rebate-goods.jpg" alt=""></a></dt>
+                                <dd class="fl"><a href="">超值特卖 韩式田园 现代简约 茉莉花白 实木 妆台凳套装</a></dd>
+                            </dl>
+                        </td>
+                        <td class="tc">￥1999</td>
+                        <td class="tc">1</td>
+                        <td class="tc">已付款</td>
+                        <td class="tc fc-f60">已返</td>
+                        <td class="tc fc-f60">￥30</td>
+                        <td class="tl">
+                            <dl class="invite">
+                                <dt class="ml-10"><span class="invite-flag">邀</span></dt>
+                                <dd class="w140 ml-10">老徐老徐老徐老徐老徐@heungkong.com</dd>
+                            </dl>
+                        </td>
+                        <td class="tl"><p class="w150">初始绑定者：宝宝</p></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="paginator">
+                <ul class="">
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span>上一页</span></a></li>
+                    <li><a href="#"><span>1</span></a></li>
+                    <li><span class="currentpage">2</span></li>
+                    <li><a href="#"><span>3</span></a></li>
+                    <li><a href="#"><span>4</span></a></li>
+                    <li><a href="#"><span>5</span></a></li>
+                    <li><a href="#"><span>6</span></a></li>
+                    <li><a href="#"><span>7</span></a></li>
+                    <li><a href="#"><span>下一页</span></a></li>
+                    <li>共<b>7</b>页</li>
+                    <li>
+                        <form method="get" action="">
+                            <input name="cat" value="223" type="hidden">
+                            <input name="rid" value="32" type="hidden">去第
+                            <input type="text" size="3" id="toPage" name="curpage">页
+                            <input type="submit" value="确定">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 返利详情列表结束 -->
+    </section>
+    <!-- 主体结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "rebate-detail"
+    })
+</body>
+</html>

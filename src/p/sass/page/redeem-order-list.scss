@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";         
+          
+ 
+@import "../components/common-top-bar.scss";      
+
+@import "../components/member-head.scss";   
+@import "../components/common-foot.scss"; 
+
+@import "../components/common-dialog.scss";
+//@import "../components/member-nav.scss";
+
+
+/* 
+ *  积分兑换优惠券订单确认页
+ */  
+.redeem-order-list {
+	padding-top: 42px;
+}
+.redeem-order-list .title {
+	margin-bottom: 10px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #333;
+	font-size: 14px;
+	color: #333;
+	text-indent: 20px;
+}
+.order-list-table {
+	margin-bottom: 18px;
+	border: 1px solid #ccc;
+	width: 100%;
+	text-align: center;
+}
+.order-list-table th {
+	text-align: center;
+	height: 31px;
+	background-color: #ccc;
+	font-size: 14px;
+	color: #333;
+}
+.order-list-table .info {
+	width: 340px;
+}
+.order-list-table .price {
+	width: 160px;
+}
+.order-list-table .num {
+	width: 90px;
+}
+.order-list-table .subtotal {
+	width: 600px;
+}
+.info-tiem {
+	text-align: left;
+	padding: 20px;
+}
+.info-tiem img {
+	display: block;
+	float: left;
+	width: 90px;
+	height: 60px;
+}
+.info-tiem a {
+	color: #333;
+}
+.info-tiem a:hover {
+	color: #f60;
+}
+.info-tiem p {
+	margin-left: 100px;
+	line-height: 18px;
+}
+.price-item {
+	color: #8c8c8c;
+}
+.redeem-order-list .total {
+	text-align: right;
+	margin-bottom: 18px;
+}
+.redeem-order-list .total b{
+	font-size: 18px;
+}
+.sub-btn-wrap {
+	text-align: right;
+}
+.sub-btn-wrap .sub-btn {
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	background: #f60;
+	border-radius: 4px;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 21px;
+	color: #fff;
+}
+.sub-btn-wrap .sub-btn:hover {
+	background:#ee950a;
+}
+.sub-btn-wrap .icon-point-right {
+	margin-left: 5px;
+	position: relative;
+	top: -2px;
+
+}
+.dialog-tips {
+	text-align: center;
+	font-size: 18px;
+	color: #333;
+}
+.dialog-tips i {
+	margin-right: 10px;
+}
+.dialog-tips a {
+	font-size: 14px;
+	color: #2f6ceb;
+}
+.dialog-tips a:hover {
+	color: #f60;
+}
+

@@ -1,0 +1,18 @@
+<div class="bg">
+    <span>最近浏览</span>
+</div>
+<div class="hd">
+    <ul></ul>
+</div>
+<div class="bd">
+    <div class="list">
+        <%for(var i=0; i<list.length; i++) {%>
+        <li class="bd-item">
+            <a href="<%=list[i].proLink%>" title="<%=list[i].proTitle%>">
+                <img class="lazy" data-original="<%=list[i].imgURL%>" alt="<%=list[i].proAlt%>" width="190" height="127">
+                <p class="price fc-f60">&yen;<span><%=list[i].proPrice%></span></p>
+            </a>
+        </li>
+        <%}%>
+    </div>
+</div>

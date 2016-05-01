@@ -1,0 +1,274 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+@import "../layout/sprite.scss";         // icon-sprite
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-ui.scss";     // head-search-bar
+@import "../components/club-nav.scss";    // member-system-nav
+@import "../components/common-search-bar.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  club-member-privilegs-growth.css 会员特权-我的成长
+ *
+ *  author:❤JinJing❤
+ *  date:20150428
+ */
+
+/*❤❤❤❤❤❤ 图标 ❤❤❤❤❤❤*/
+.icon-level-k0,.icon-level-k1,.icon-level-k2,.icon-level-k3,.icon-level-k4{
+    width: 31px;
+    height: 30px;
+    display: inline-block;
+    background: url(../images/icons_member_growth.png);
+}
+.icon-level-k0{
+    background-position: 0 -197px;
+}
+.icon-level-k1{
+    background-position: -49px -197px;
+}
+.icon-level-k2{
+    background-position: -100px -197px;
+}
+.icon-level-k3{
+    background-position: -148px -197px;
+}
+.icon-level-k4{
+    background-position: -198px -197px;
+}
+.icon-growth{
+    width: 22px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/icons_member_growth.png) -199px -99px;
+}
+.icon-member-vip{
+    width: 26px;
+    height: 15px;
+    background: url(../images/icons_member_growth.png) -221px -99px;
+}
+/*称号图标*/
+.icon-level-title-k0,.icon-level-title-k1,.icon-level-title-k2,.icon-level-title-k3,.icon-level-title-k4{
+    width: 94px;
+    height: 92px;
+    display: inline-block;
+    background: url(../images/icons_member_growth.png);
+}
+.icon-level-title-k0{
+    background-position: 0 0;
+}
+.icon-level-title-k1{
+    background-position: -101px 0;
+}
+.icon-level-title-k2{
+    background-position: -202px 0;
+}
+.icon-level-title-k3{
+    background-position: 0 -98px;
+}
+.icon-level-title-k4{
+    background-position: -101px -98px;
+}
+
+/*会员信息*/
+.member-detail{
+    padding: 8px;
+    background: #fed586;
+    border:2px dotted #f60;
+}
+.member-detail dt,.member-detail dd{
+    float: left;
+}
+.member-detail .member-info{
+    padding-left: 20px;
+}
+.member-detail .member-info h2 {
+    height: 30px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.member-detail .member-info h2 .member-name{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.member-detail .member-info h2 .member-name:hover{
+    color: #f60;
+}
+.member-detail .member-info .growth-value{
+    position: relative;
+    top: -2px;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #57bb89;
+}
+.member-detail .member-info .growth-msg{
+    position: relative;
+    top: -2px;
+    margin-left: 20px;
+}
+/*会员经验槽*/
+
+.member-info .experience-schedule-warp{
+    position: relative;
+    z-index: 990;
+    width: 300px;
+    height: 20px;
+    margin-top: 15px;
+    background: url(../images/icons_member_growth.png) -1px -279px;
+}
+.member-info .experience-schedule-warp p {
+    position: absolute;
+    z-index: 991;
+    left: 0;
+    top: 0;
+    height: 20px;
+}
+
+.member-info .experience-schedule-warp .experience-schedule {
+    padding-right: 5px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    background: url(../images/icons_member_growth.png) -1px -303px;
+}
+
+.experience-schedule-warp .experience-schedule .get-experience {
+    position: absolute;
+    z-index: 98;
+    right: 2px;
+    top: 2px;
+    display: inline-block;
+    width: 50px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.experience-schedule-warp .experience-schedule .distance-experience {
+    position: absolute;
+    z-index: 98;
+    right: -58px;
+    top: 2px;
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+.member-detail .member-info .distance-experience-text{
+    margin-top: 5px;
+}
+/*会员信息 等级标识*/
+.member-detail .level-pic .level-title{
+    margin-top: 5px;
+    margin-left: 45px;
+}
+.member-info .icon-growth{
+    position: relative;
+    top:-4px;
+    margin-right: 3px;
+}
+.member-info .icon-level-k0,.member-info .icon-level-k1,.member-info .icon-level-k2,.member-info .icon-level-k3,.member-info .icon-level-k4{
+    position: relative;
+    top: -3px;
+    margin-left: 10px;
+}
+
+/*❤❤❤❤❤❤ 成长值说明 会员升级条件 会员等级规则 ❤❤❤❤❤❤*/
+.member-grow-section{
+    margin-top: 50px;
+}
+/*成长值说明 会员升级条件 会员等级规则 标题*/
+.member-grow-section .section-title {
+    position: relative;
+    width: 160px;
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #333;
+}
+.member-grow-section .section-title i.before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+    border-width: 0 0 40px 30px;
+}
+.member-grow-section .section-title i.after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #333;
+    border-width: 40px 0 0 30px;
+}
+
+/*成长值说明*/
+.member-grow-section .section-title .icon-growth{
+    margin-right: 10px;
+}
+.growth-value-container .growth-value{
+    margin-top: 7px;
+    font-size: 18px;
+}
+.growth-value-container .growth-value b{
+    color: #57bb89;
+}
+.growth-value-container .explain-msg{
+    margin-top: 7px;
+}
+/*会员升级条件*/
+.member-grow-section .section-title .icon-member-vip{
+    margin-right: 10px;
+}
+.member-grow-section .level-up-table{
+    width: 100%;
+    margin-top: 20px;
+}
+.level-up-table tbody th{
+    width: 20%;
+    text-align: center;
+}
+.level-up-table tbody td{
+    padding: 20px 50px;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+/*会员等级规则*/
+.member-grow-section .level-rule-table{
+    width: 100%;
+    margin-top: 10px;
+}
+.member-grow-section .level-rule-table th,.member-grow-section .level-rule-table td{
+    font-size: 12px;
+    text-align: center;
+    border:1px solid #ccc;
+}
+.level-rule-table thead td{
+    padding: 10px 20px;
+    color: #8c8c8c;
+}
+.level-rule-table tbody th,.level-rule-table tbody td{
+    padding: 10px 20px;
+}

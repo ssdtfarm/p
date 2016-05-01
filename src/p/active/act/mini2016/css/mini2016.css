@@ -1,0 +1,222 @@
+/**
+ *  ---------------------------------------------
+ *      五一活动抽奖
+ *      
+ *      author: zhangzhensheng
+ *      date  : 2016-04-20
+ * 
+ *  ---------------------------------------------
+ */
+/* 抽奖活动 */
+.lucky {
+    position: relative;
+    margin: 0 auto;
+    width: 1190px;
+    height: 411px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    background: url(../img/lottery-bg.gif) center center no-repeat #fff;
+}
+
+.lotteryResult {
+    position: relative;
+    margin-left: 804px;
+    padding-top: 347px;
+    width: 250px;
+}
+
+.listWrap {
+    height: 115px;
+    width: 250px; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.listWrap li {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+    text-align: left;
+}
+
+.list {
+    padding: 10px 10px;
+}
+
+.list-cover1 {
+    position: absolute;
+    z-index: 10;
+    height: 10px;
+    width: 233px;
+    background-color: #F8F3E6;
+}
+
+.list-cover2 {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    height: 10px;
+    width: 233px;
+    background-color: #F8F3E6;
+}
+
+.ac-kf {
+    position: absolute;
+    left: 322px;
+    bottom: 24px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: url(../img/act-kf.png) center center no-repeat;
+}
+
+.start {
+    position: absolute;
+    left: 777px;
+    top: 140px;
+    width: 128px;
+    height: 128px;
+}
+
+.start-btn {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url(../img/act-start.png) center center no-repeat;
+}
+
+.pointer {
+    position: absolute;
+    z-index: 2;
+    left: 51px;
+    top: -84px;
+    width: 27px;
+}
+
+.pointer img {
+    padding-bottom: 86px;
+}
+
+/* 自定义弹窗 */
+.ui-dialog-header {
+    padding: 6px 0;
+}
+
+.ui-dialog-title {
+    font-family: "Microsoft Yahei";
+}
+
+.ui-dialog-close {
+    color: #fff;
+    background-color: transparent;
+    opacity: .35;
+    filter: Alpha(opacity = 35);
+}
+
+.ui-dialog-content {
+    font-size: 18px;
+    font-family: "Microsoft Yahei";
+}
+
+.my-dialog-content {
+    margin: 19px auto;
+    max-width: 468px;
+}
+
+.my-dialog-dscr {
+    margin-left: 10px;
+    float: left;
+    max-width: 407px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.my-dialog-address {
+    height: 208px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.list-left {
+    float: left;
+    margin-left: 14px;
+    width: 210px;
+}
+
+.list-left li {
+    margin-bottom: 15px;
+}
+
+.list-right {
+    float: right;
+    margin-right: 14px;
+    width: 210px;
+}
+
+.list-right li {
+    margin-bottom: 10px;
+}
+
+.my-dialog-address .list-name {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.my-dialog-prize {
+    margin: 0 2px;
+    font-weight: bold;
+    color: #cb080d;    
+}
+
+.my-dialog-prizedscr {
+    float: left;
+    margin: ;
+    max-width: 353px;
+    height: 60px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.icon-face-smile-orange {
+    float: left;
+}
+
+/* 自定义登录弹窗 */
+.ui-login-dialog-header {
+    padding: 6px 0;
+}
+
+.ui-login-dialog-title {
+    font-family: "Microsoft Yahei";
+}
+
+.ui-login-dialog-close {
+    color: #fff;
+    background-color: transparent;
+    opacity: .35;
+    filter: Alpha(opacity = 35);
+}
+
+.lucky-dialog-content {
+     margin: 20px auto 0;
+}
+
+.msg-16,
+.msg-20 {
+     margin-left: 10px;
+}
+
+.sp {
+     margin: 0 5px;
+     color: #f60;
+     font-weight: bold;
+}
+
+

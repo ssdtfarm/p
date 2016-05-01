@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "item",
+    "title" : "产品详情页-预售"
+    })
+</head>
+<body>
+    <script>
+    var itemConfig = {
+        skuID: 40484, //产品skuID号
+        itemPrice: "1288.00",
+        itemMarketPrice: "2888.00",
+        itemTitle: "现代简约红色布艺软现代简约现代简约红色布艺软现代简约现代简约红色布艺软现代简约", //产品标题
+        itemLinkURL: "http://www.kinhom.com/item/23234.html", //产品链接
+        itemImgURL: "http://img1.jjcdn.com/g1/M00/01/9B/CvoBM1OILyKAIGJyAAHvVjU_QhA126.jpg!small", //产品第一张图的图片路径
+        appDownURL: "http://api.kinhom.com/download/index" //app下载地址
+    }
+    </script>
+    <!-- 顶部广告开始 -->
+    <section class="index-top-ad JQ_lazy" id="J_TopAd" data-tpl="tplTopAd" data-time="1439456400"></section>
+    <!-- 顶部广告结束 -->
+
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("comment-header.html",{ "cdn" : "@@miscPath" })
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    @@include("comment-head-nav.html")
+    <!-- 导航结束 -->
+
+    <!-- 详情页开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 面包屑 -->
+        <div class="kh-col-24">
+            <div class="main-location">
+                当前位置：
+                <a href="javascript:void(0);">首页</a>
+                <span class="location-point">&gt;</span>
+                <a href="javascript:void(0);">商品分类</a>
+                <span class="location-point">&gt;</span>
+                <a href="javascript:void(0);">客厅</a>
+                <span class="location-point">&gt;</span>
+                <a href="javascript:void(0);">沙发</a>
+                <span class="location-point">&gt;</span>
+                <label>现代简约红色布艺软现代简约现代简约红色布艺软现代简约现代简约红色布艺软现代简约</label>
+            </div>
+        </div>
+        <!-- 产品相册 -->
+        <div class="kh-col-11 item-album">
+            <div id="J_albumBig" class="item-album-big">
+                <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!max" alt="现代简约 米黄色 头层真皮 沙发组合（3+坐下右贵妃）KHP015" width="540" height="360">
+                <!-- 返现的图标 -->
+                <!-- <i class="item-rebate-tag icon-item-rebate">返现</i> -->
+                <i class="pre-sale-icon album-icon"></i>
+                <!-- 积分的图标 -->
+                <!-- <i class="item-points-tag icon-item-points-exchange">积分兑换</i> -->
+                <!-- <i class="item-points-tag icon-item-points-buy">积分换购</i> -->
+            </div>
+            <!-- 产品缩略图 -->
+            <ul id="J_thumb" class="item-album-small clearfix">
+                <li class="cur">
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/98/CvoBM1OFymWAS8zrAAIOzL-a8GU627.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" src="http://img3.jjcdn.com/g1/M00/01/F8/CvoBM1RsJwmAMIeKAAGHfAmB0RE418.jpg!small" class="lazy">
+                    </a>
+                </li>
+            </ul>
+            <!-- 商品编码 商品型号 收藏数 -->
+            <div class="item-album-info">
+                <dl class="album-info-list">
+                    <dt>商品编码: </dt>
+                    <dd>5253</dd>
+                </dl>
+                <a href="javascript:void(0);" id="J_favorite" class="album-info-fav">
+                    <i class="icon-item-fav-off"></i> 收藏商品（4161人气）
+                </a>
+            </div>
+        </div>
+        <!-- 产品信息 -->
+        <div class="kh-col-13">
+            <div class="item-information">
+                <!--  主标题 -->
+                <h1 class="item-title">
+                <label class="item-brand-tag">焚尔特</label>
+                现代简约红色布艺软现代简约现代简约红色布艺软现代简约现代简约红色布艺软现代简约
+                <span class="item-propery-tag">A564+B56k</span>
+            </h1>
+                <!--  副标题 -->
+                <h2 class="item-subtitle">
+                <label class="item-title-ad">广东专场，现货现卖！低至五折，急速发货，先到先得，查询具体库存信息请咨询客服</label>
+            </h2>
+                <!-- 商品价格 + 评论数 + 购买数量 -->
+                <div class="item-price-info">
+                    <dl class="item-info-list">
+                        <dt>预售价：</dt>
+                        <dd><b id="J_itemActivePrice" class="fs-24">&yen;1799.00</b><span class="pre-sale-tips">定金 + ￥1900尾款</span></dd>
+                    </dl>
+                    <dl class="item-info-list">
+                        <dt>
+                            <label class="info-price-tag">限时</label>
+                        </dt>
+                        <dd class="presale-price-info">
+                            <label class="presale-price-tag">定金可抵用￥1200</label><span>市场价 ¥ <em>5699</em></span><span>已售100件</span>
+                        </dd>
+                    </dl>
+                    <!-- app下载 -->
+                    <p class="app-qrcode-big"><span id="J_appDownBig" class="qrcode-big"></span>
+                        <img src="{cdn}/p/images/download_wapLogo.png" alt="" />
+                        <span class="app-qrcode-txt">手机下单立减5元</span>
+                    </p>
+                </div>
+                <!-- 预售信息 -->
+                <div class="item-presale-info">
+                    <p class="item-info-pre">
+                        <i class="icon-warn-c13"></i><span>定金支付时间：2015-8-22至2015-8-28 | 尾款支付时间：2015-8-22至2015-8-28 </span>
+                    </p>
+                    <a href="javascript:void(0);" class="pre-rule" id="J_preRule">预售规则</a>
+                </div>
+                <!-- 配送地址 -->
+                <dl class="item-ship-list">
+                    <dt>配送至：</dt>
+                    <dd id="J_selectAddress"></dd>
+                </dl>
+                <!-- 服务 -->
+                <dl class="item-service-list">
+                    <dt>&nbsp;</dt>
+                    <dd id="J_service" class="item-propery-service"> <span href="javascript:void(0);" class="service-text">物流点自提<label>¥0</label></span> <span href="javascript:void(0);" class="service-text">送货上门并安装<label>¥1</label></span> </dd>
+                </dl>
+                <!-- 产品属性和按钮等 -->
+                <div class="item-propery">
+                    <!-- 属性列表 -->
+                    <dl class="item-propery-list">
+                        <dt>类型：</dt>
+                        <dd class="clearfix">
+                            <a href="javascript:void(0);" class="propery-item on">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                        </dd>
+                    </dl>
+                    <dl class="item-propery-list">
+                        <dt>规格：</dt>
+                        <dd class="clearfix">
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            沙发组合
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item on">
+                            坐下右转角
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            坐下左转角
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                        </dd>
+                    </dl>
+                    <dl class="item-propery-list">
+                        <dt>材质：</dt>
+                        <dd class="clearfix">
+                            <a href="javascript:void(0);" class="propery-item normal">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                            <a href="javascript:void(0);" class="propery-item on">
+                            双人床
+                            <span class="propery-mark"></span>
+                        </a>
+                        </dd>
+                    </dl>
+                    <!-- 数量 -->
+                    <dl class="item-propery-list">
+                        <dt class="vtm">数量：</dt>
+                        <dd>
+                            <div class="item-numbers">
+                                <input type="text" id="J_itemNum" max-length="6" value="1">
+                                <a href="javascript:void(0);" class="item-add-number" id="J_addNum">+</a>
+                                <a href="javascript:void(0);" class="item-sub-number" id="J_subNum">-</a>
+                            </div>
+                            <div class="item-num-tip">
+                                <label id="J_itemNumTip">预定</label>
+                            </div>
+                        </dd>
+                    </dl>
+                    <!-- 按钮区域 -->
+                    <div class="item-btns">
+                        <a href="javascript:void(0);" class="item-btn-cart J_fullPay">全额付款</a>
+                        <a href="javascript:void(0);" class="item-btn-cart J_deposit">立即付定金</a>
+                        <span class="item-go-offline"><a target="_blank" href="//www.kinhom.com/offline">可到店体验</a></span>
+                        <input type="hidden" name="beUser" value="linyandi" />
+                    </div>
+                    <!-- 规则说明文字 -->
+                    <div id="J_preRuleText" class="dis-none">
+                        <p class="fc-333 pre-rule-txt">1、定金下单后，请在60分钟内付款，超时将自动关闭订单</p>
+                        <p class="fc-333 pre-rule-txt">2、定金付款后，申请退款如非卖家责任，定金恕不退还</p>
+                        <p class="fc-333 pre-rule-txt">3、预售结束时，请至“我的订单”内付尾款</p>
+                        <p class="fc-333 pre-rule-txt">4、尾款开始付款后，请在要求的时间内支付尾款，若超时将自动关闭订单，且定金不予退还，赠品不予赠送。</p>
+                        <p class="fc-333 pre-rule-txt">请注意预售的结束时间，并及时支付尾款</p>
+                        <p class="fc-333 pre-rule-txt">5、如果提供赠品，赠品赠送依据的排序按照定金付款成功时间来计算，而不是定金下单时间</p>
+                        <p class="fc-333 pre-rule-txt">6、预售活动不与其他优惠一同使用</p>
+                        <p class="fc-333 pre-rule-txt">7、发货时间请以预售商品详情页面中的“发货时间”描述为准</p>
+                        <p class="fc-333 pre-rule-txt">8、金海马预售商品，预售商品若带有“定金”或其他称谓或表述，其定义及性质等同于“订金”</p>
+                        <p class="fc-333 pre-rule-txt">9、针对金海马商城的商品，买家支付了订金并如期支付尾款后，若商家延迟 发货，且订单状态为“已取消”，商家需返还买家订单全额，并赔偿买家的支付订金的同等金额。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 华丽而优雅的分割空行 -->
+        <div class="blank-20 fl"></div>
+        <!-- 热销排行榜  + 浏览历史 -->
+        <div id="J_itemLeft" class="kh-col-5 mt-20">
+            <div id="J_itemLeftLoading" class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <!-- 右边开始 -->
+        <section id="J_itemRight" class="kh-col-19 item-recomment">
+            <!-- 商品详情+规格+评论+成交+配送 -->
+            <section id="J_itemDetail">
+                <a href="javascript:void(0);" id="navAnchor"></a>
+                <!-- 浮动标题 -->
+                <nav id="J_itemDetailTitle" class="item-tab-title clearfix">
+                    <a href="javascript:void(0);" class="tab-item on">商品详情</a>
+                    <a href="javascript:void(0)" class="tab-item">规格参数</a>
+                    <a id="J_commentsBtn" href="javascript:void(0)" class="tab-item">商品评价<span class="font-color">(<span id="J_detailCommentsTotal">0</span>)</span></a>
+                    <a id="J_bidHistoryBtn" href="javascript:void(0)" class="tab-item">成交记录<span class="font-color">(<span id="J_bidDetailTotal">0</span>)</span></a>
+                    <a href="javascript:void(0)" class="tab-item">服务保障 </a>
+                    <!-- 加入购物车 -->
+                    <span href="javascript:void(0)" class="item-tab-cart">
+                    <span id="J_detailAddCart" href="javascript:void(0);" class="tab-cart-btn J_fullPay">全额付款</span>
+                    <span id="J_detailAddCart" href="javascript:void(0);" class="tab-cart-btn J_deposit">立即付定金</span>
+                    <!-- <span class="tab-cart-list JQ_tabCartList"></span> -->
+                    </span>
+                </nav>
+                <a id="J_detailNav"></a>
+                <section id="J_itemDetailCon" class="item-tab-content">
+                    <!-- 商品详情 -->
+                    <dl class="JQ_tabContent">
+                        <!-- 部分参数 -->
+                        <dd id="J_simpleParam" class="item-detail-simple clearfix">
+                            <ul class="simple-list">
+                                <li class="clearfix">
+                                    <label>商品编码:</label>
+                                    <span>6452</span>
+                                </li>
+                                <li class="clearfix">
+                                    <label>商品型号:</label>
+                                    <span>A1103M+A1201M+A1202+A1403+A1704+A1503+A1801</span>
+                                </li>
+                                <li class="clearfix">
+                                    <label>商品名称:</label>
+                                    <span>坐下左代简约 咖啡色 真皮 咖啡色 真皮</span>
+                                </li>
+                                <li class="clearfix">
+                                    <label>商品名称:</label>
+                                    <span>代简约 咖啡色 真皮 沙发组合（3+贵）坐下左</span>
+                                </li>
+                                <li class="clearfix">
+                                    <label>商品名称:</label>
+                                    <span>坐下左代简约 咖啡色 真皮 咖啡色 真皮 沙发组合（3+贵）坐下左代简约 咖啡色 真皮 沙发组合（3+贵）坐下左</span>
+                                </li>
+                                <li class="clearfix">
+                                    <label>商品名称:</label>
+                                    <span>代简约 咖啡色 真皮 沙发组合（3+贵）坐下左</span>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dd class="pre-sale-step">
+                            <img src="{cdn}/p/images/pre-sale-step.jpg" alt="">
+                        </dd>
+                        <!-- 商品广告 -->
+                        <dd id="J_detailAd" class="item-detail-ad" data-time="1439456400"></dd>
+                        <!-- 产品相册 -->
+                        <dd id="J_detailContent">
+                            <span class="item-loading-icon"></span>
+                        </dd>
+                    </dl>
+                    <!-- 规格参数 -->
+                    <dl class="dis-none JQ_tabContent item-detail-params">
+                        <div id="J_productPara">
+                            <table class="mt20" width="100%" cellpadding="0" cellspacing="0">
+                                <caption title="产品参数"></caption>
+                                <thead>
+                                    <tr>
+                                        <th class="w150 h29 bg_DeepBlue f14 nb_r"><strong>产品参数</strong></th>
+                                        <th class="bg_DeepBlue"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">包装体积</td>
+                                        <td class="h29" id="goods_MainNorm">0.7立方米</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">商品尺寸</td>
+                                        <td class="h29" id="goods_MainNorm">130*70*40厘米（详细尺寸请参照商品尺寸图）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">材质说明</td>
+                                        <td class="w820 h29" id="goods_Norm">钢化玻璃+优质密度板+双层复合PU皮+优质五金件</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">主材质</td>
+                                        <td class="h29" id="goods_MainNorm">钢化玻璃+优质密度板</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">副材质</td>
+                                        <td class="h29" id="goods_DepNorm">双层复合PU皮</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">配件</td>
+                                        <td class="h29" id="goods_Fitting">优质五金件</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">定制说明</td>
+                                        <td class="h29" id="goods_tailor-made">定制范围：为了让您购买到实惠的家具，我们的家具使用标准化生产，可确保质量和有效减低成本。本站商品除了页面尺寸与颜色外，其他暂时不可以定制，如有疑问请联系客服。</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">保养说明</td>
+                                        <td class="h29" id="goods_Maintain">
+                                            1、不要用力碰撞玻璃面，为防玻璃面刮花，最好铺上台布。玻璃家具上搁放东西时，要轻拿轻放，切忌碰撞。 2、日常清洁时，用湿毛巾或报纸擦拭即可，如遇污迹可用毛巾浇啤酒或温热的食醋擦除。忌用酸碱性较强的溶液清洁。 3、有花纹的玻璃 一旦脏了，可用浇有清洁剂的牙刷，顺着图样打圈擦拭即可去除。 4、玻璃家具最好安放在一个较固定的地方，不要随意地来回移动。 5、要平稳放置物件，沉重物件应放置玻璃家具底部，防止家具重心不稳造成翻倒。 6、要避免潮湿，远离炉灶。要与酸、碱等化工试剂隔绝，防止腐蚀变质。 7、要想保持玻璃光洁明亮，必须经常动手清洁，玻璃上若有笔迹，可用橡皮浸水摩擦，然后再用湿布擦拭。 8、玻璃上若有油漆，可用棉花浇热醋擦洗，或用清洁干布浇酒精擦拭玻璃，可使其亮如水晶。 </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h29 bg_DeepBlue t-alR">拍摄说明</td>
+                                        <td class="h29" id="goods_Shooting">关于色差：我们的产品图片均采用的是实物拍摄，摄影师距离实体家具50-70厘米距离拍摄，确保为你展示产品的真实性。但是由于拍摄环境、光线以及显示频率等原因实物和图片可能存在微小色差，这个微小色差不会影响到您购买。您也可以到我们的实体店免费体验。</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </dl>
+                    <!-- 商品评价 -->
+                    <dl class="dis-none JQ_tabContent item-detail-comments">
+                        <section class="item-comments-top">
+                            <table class="item-comments-top-table">
+                                <tr>
+                                    <td width="15%" class="comment-border-r">
+                                        <p class="comments-percent JQ_goodsPercent">100%</p>
+                                    </td>
+                                    <td width="30%" class="comment-border-r">
+                                        <p class="comments-status">
+                                            <label>好评</label>
+                                            <span class="comments-status-line">
+                                            <span class="status-line JQ_goodsLine" style="width: 100%;">
+                                            </span>
+                                            </span>
+                                            <label class="JQ_goodsPercent">100%</label>
+                                        </p>
+                                        <p class="comments-status">
+                                            <label>中评</label>
+                                            <span class="comments-status-line">
+                                            <span class="status-line JQ_normalPercent" style="width: 0%;">
+                                            </span>
+                                            </span>
+                                            <label class="JQ_normalPercent">0%</label>
+                                        </p>
+                                        <p class="comments-status">
+                                            <label>差评</label>
+                                            <span class="comments-status-line">
+                                            <span class="status-line JQ_badLine" style="width: 0%;">
+                                            </span>
+                                            </span>
+                                            <label class="JQ_badPercent">0%</label>
+                                        </p>
+                                    </td>
+                                    <td width="35%" class="comment-border-r">
+                                        <p class="fc-8c8 tl">海量商品 高性价比 品牌实力
+                                        </p>
+                                        <p class="fc-8c8 tl">金海马商城打造最装爷家具网购平台
+                                        </p>
+                                        <p class="fc-8c8 tl">如满意请亮起好评，您的肯定是我们走向更好的动力！
+                                        </p>
+                                    </td>
+                                    <td width="20%">
+                                        <p class="fc-2f6 tc">我在金海马购买过此商品</p>
+                                        <p class="tc mt-10">
+                                            <a href="javascript:void(0);" class="item-commments-btn">我要评价</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                        <!-- 评论内容的tab菜单 -->
+                        <nav id="J_commmentsNav" class="item-comments-nav clearfix">
+                            <a href="javascript:void(0);" class="nav-item on">
+                            全部评价
+                            (<span id="J_allCommentsNum">0</span>)
+                        </a>
+                            <a id="J_goodCommetsBtn" href="javascript:void(0);" class="nav-item">
+                            好评
+                            (<span id="J_goodCommentsNum">0</span>)
+                        </a>
+                            <a id="J_normalcommentsBtn" href="javascript:void(0);" class="nav-item">
+                            中评
+                            (<span id="J_normalCommentsNum">0</span>)
+                        </a>
+                            <a id="J_badCommentsBtn" href="javascript:void(0);" class="nav-item">
+                            差评
+                            (<span id="J_badCommentsNum">0</span>)
+                        </a>
+                            <span class="nav-item-blank">&nbsp;</span>
+                        </nav>
+                        <!-- 评论的列表容器 -->
+                        <section id="J_commentsContent" class="item-comments-main">
+                            <!-- 全部评论 -->
+                            <dl class="JQ_comContent">
+                                <section id="J_commentsAllTable" class="item-loading">
+                                    <span class="item-loading-icon"></span>
+                                </section>
+                                <!-- 评论的分页容器 -->
+                                <section id="J_commentsAllPage" class="item-comments-page"></section>
+                            </dl>
+                            <!-- 好评 -->
+                            <dl class="JQ_comContent dis-none">
+                                <section id="J_commentsGoodTable" class="item-loading">
+                                    <span class="item-loading-icon"></span>
+                                </section>
+                                <!-- 评论的分页容器 -->
+                                <section id="J_commentsGoodPage" class="item-comments-page"></section>
+                            </dl>
+                            <!-- 中评 -->
+                            <dl class="JQ_comContent dis-none">
+                                <section id="J_commentsNormalTable" class="item-loading">
+                                    <span class="item-loading-icon"></span>
+                                </section>
+                                <!-- 评论的分页容器 -->
+                                <section id="J_commentsNormalPage" class="item-comments-page"></section>
+                            </dl>
+                            <!-- 差评 -->
+                            <dl class="JQ_comContent dis-none">
+                                <section id="J_commentsBadTable" class="item-loading">
+                                    <span class="item-loading-icon"></span>
+                                </section>
+                                <!-- 评论的分页容器 -->
+                                <section id="J_commentsBadPage" class="item-comments-page"></section>
+                            </dl>
+                        </section>
+                    </dl>
+                    <!-- 成交记录 -->
+                    <dl class="dis-none JQ_tabContent item-detail-deals">
+                        <div id="J_bidLoad" class="item-loading">
+                            <span class="item-loading-icon"></span>
+                        </div>
+                        <div id="J_bidPage" class="item-page-wrap"></div>
+                    </dl>
+                    <!-- 配送信息 -->
+                    <dl class="dis-none JQ_tabContent item-detail-service">
+                        这里是服务保障
+                    </dl>
+                </section>
+            </section>
+        </section>
+        <!-- 右边结束 -->
+    </section>
+    <!-- 详情页结束 -->
+    <script>
+    var itemData = {
+        "topAd": [{
+                "height": "",
+                "startTime": "1438531200",
+                "endTime": "1439481600",
+                "link": "http://sale.kinhom.com/ac201506?from=dbggt",
+                "title": "这里广告描述",
+                "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg",
+                "bgColor": ""
+            }
+
+        ],
+        "leftAd": [{
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }, {
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }, {
+            "startTime": "1438531200",
+            "endTime": "1439481600",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }],
+        "detailAd": [{
+            "startTime": "1439197200",
+            "endTime": "1439629200",
+            "linkURL": "http://sale.kinhom.com/ac201506?from=dbggt",
+            "title": "这里广告描述",
+            "imgURL": "http://img1.jjcdn.com//g1/M00/02/BA/CvoBNFW8eSOACdIpAAHt12QeMhw443.jpg"
+        }]
+    }
+    </script>
+
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name"  : "item"
+    })
+</body>
+
+</html>

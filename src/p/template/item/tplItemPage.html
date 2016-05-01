@@ -1,0 +1,30 @@
+<%if(list.length!=0){%>
+<div class="item-page">
+    <a href="javascript:void(0);" data-page="1">首页</a>
+    <%if(curPage<=1){%>
+        <a href="javascript:void(0);" data-page="1">上一页</a>
+    <%}else{%>
+        <a href="javascript:void(0);" data-page="<%=curPage-1%>">上一页</a>
+    <%}%>
+
+    <%if(curPage>=4){%>
+        <a href="javascript:void(0);" data-page="1">1</a>
+        <span>...</span>
+    <%}%>
+
+    <% for(var j=sPage; j<ePage; j++){%>
+        <a href="javascript:void(0);" <%if(j==curPage){%>class="cur"<%}%> data-page="<%=j%>"><%=j%></a>
+    <%}%>
+
+    <%if(curPage==pages){%>
+    	<a href="javascript:void(0);" class="cur" data-page="<%=pages%>"><%=pages%></a>
+    <%}else{%>
+    	<span>...</span>
+    	<a href="javascript:void(0);" data-page="<%=pages%>"><%=pages%></a>
+	<%}%>
+
+    <a href="javascript:void(0)" data-page="<%=nextPage%>">下一页</a>
+
+    <a href="javascript:void(0)" data-page="<%=pages%>">末页</a>
+</div>
+<%}%>

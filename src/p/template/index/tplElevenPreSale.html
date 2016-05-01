@@ -1,0 +1,56 @@
+<div class="act-1212-title">
+    <span>双12预售</span>预付<i>100</i> 元抵<i>500</i> 元，比双11更划算。 
+    <a href="<%=moreLink%>" class="act-1212-icon more-link" target="_blank">更多</a>
+</div>
+<div class="pre-sale-big">
+    <div class="left fl">
+        <a href="<%=preSaleBig.proLink%>" target="_blank"><img class="lazy" data-original="<%=preSaleBig.imgSrc%>" alt="" width="697" height="465"></a> 
+    </div>
+    <div class="pre-info">
+        <div class="content-top">
+            <h3><%=preSaleBig.proDesc1%></h3>
+            <h4><%=preSaleBig.proDesc2%></h4>
+            <h5><%=preSaleBig.proDesc3%></h5> 
+            <% if(nowTime*1000 < 1446825599000) {%>
+            <img class="lazy" data-original="http://misc.jjcdn.com/p/images/act-1212/pre-time-0.png" alt="">
+            <%} else {%>
+                <img class="lazy" data-original="http://misc.jjcdn.com/p/images/act-1212/pre-time-0.png" alt="">
+            <%}%>
+
+        </div>
+        <div class="content-foot">
+            <div class="marky-price">
+                <p class="cut"><span>市场价</span><strong>&yen;<%=preSaleBig.markyPrice%></strong></p>
+                <p class="pre-price">预售价 &yen;<strong><%=preSaleBig.skuPrice%></strong></p>
+            </div>
+            <div class="price">
+                <p class="tail"><span>定金</span><strong>&yen;<%=preSaleBig.bookPrice%></strong><span>抵<%=preSaleBig.asPrice%></span></p>
+                <a href="<%=preSaleBig.proLink%>" class="link" target="_blank"><span>立即预定</span><i class="act-1212-icon pointer"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<ul class="pre-pro-list">
+    <%for(var i=0; i<list.length; i++) {%>
+    <li class="pro-item">
+        <a href="<%=list[i].proLink%>" class="pro-link" target="_blank">
+            <img class="lazy" data-original="<%=list[i].imgSrc%>" alt="" width="388" height="258">
+            <div class="tit">
+                <div class="bg"></div>
+                <div class="pro-title"><%=list[i].proTitle%></div>
+            </div>
+           <!-- <div class="tips act-1212-icon"></div> -->
+        </a>
+        <div class="pro-info">
+            <div class="marky-price">
+                <p class="cut"><span>市场价</span><strong>&yen;<%=list[i].markyPrice%></strong></p>
+                <p class="pre-price">预售价 &yen;<strong><%=list[i].skuPrice%></strong></p>
+            </div>
+            <div class="price">
+                <p class="tail"><span>定金</span><strong>&yen;<%=list[i].bookPrice%></strong><span>抵<%=list[i].asPrice%></span></p>
+                <a href="<%=list[i].proLink%>" class="link" target="_blank"><span>立即预定</span><i class="act-1212-icon pointer"></i></a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</ul>

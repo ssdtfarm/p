@@ -1,0 +1,75 @@
+/**
+ *  ---------------------------------------------
+ *      全站广告通用样式
+ *      此组件用在需要顶部广告的页面，如首页，列表页
+ *      详情页等
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+.index-top-ad ,.item-full-ad{
+  /*position: relative;*/
+  width: 100%;
+  min-width: 1190px;
+}
+.index-top-ad .top-ad-wrap div,.item-full-ad .full-ad-wrap div {
+  position: relative;
+  //width: 1190px;
+  margin: auto;
+}
+.index-top-ad .index-top-ad-close,.item-full-ad .full-ad-close {
+  position: absolute;
+  z-index: 9;
+  top: 10px;
+  right: 50px;
+  display: inline-block;
+  *display: block!important;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRUM0M0I0RjE2ODIxMUU1QjdFMERGRTVGQjMwQTI0MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRUM0M0I1MDE2ODIxMUU1QjdFMERGRTVGQjMwQTI0MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZFQzQzQjREMTY4MjExRTVCN0UwREZFNUZCMzBBMjQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZFQzQzQjRFMTY4MjExRTVCN0UwREZFNUZCMzBBMjQxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+kKKllQAAAjhJREFUeNqslk1IVFEUx988y5Gpxo8UbVFZhK40TRcy2kLatRapTesgiKaCWYkVtBGqjW3aBO6itbhxIyjWVoU+pkmUwJ5BMcw01qTV/8j/weHy7ntvsgO/xbv3cv+cc8/HSzjh1gCGwRDoBh3gMPgFPoM34DVYAj9tlyQs60kwBsZB2om2IngJXoDdOCJnwD1wyqnd1sF9sKEX64xDveAxaHX+zZrBJbAGtoM86QTT4IhzcPsObvge+Z7Ug0egzTgsh6oRwiWGSXsv9/WDWfDbF7kKRgMEboN5cNEiJAJ3+egS6na11wQqEjqXaToeIJAFX8EWuKVjrATugPdgB+TAinHminglIoPgWEB9NKhvX8gzBPLqjNRPyrinEVyooxddxuZRMMIiK3OtzO/zYNIQSPNNzwUlgWTXDDhpeVSPYdsyautPTIH92nHZKmwmD/kEnFBrtQjs3+Eylk6E0ANLd8hFCIilXDY7J6IOpgwPfJtWyWCzistuGiZgZpFjZF02QsgTkbc1CMgbPDTeKEronct5EFdAHjkTkAxhQq9EZJHzQNsnYsuioKyTjlAw7vkGlqUY95g5A2pTGmUPWGAVB6WpLtgfYII9TttzsJpQLeEZ2722FYqEpalHDzLGuqxdl0mpc/80ePqf5omE/ybYNCejbKwyBMkDCJRYpAXb+N1mjPs4Smu1PAU+xvlbOQQug2vgeIzLv7DRzjGRYv0S6TGa4X/XWdDCGVHkQPsgdUCqtkv+CjAAMCyGJb17XzIAAAAASUVORK5CYII=");
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+/*================================ item ad style ================================*/
+/* item ad */
+.item-detail-ad {
+  width: 900px;
+  //height: 182px;
+  margin: 20px auto;
+  //overflow: hidden;
+}
+.item-detail-ad img {
+  display: block;
+}
+.item-detail-ad a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* left ad */
+.item-left-ad {
+  width: 200px;
+}
+.item-left-ad .left-ad-item {
+  display: block;
+  width: 200px;
+  height: 270px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+

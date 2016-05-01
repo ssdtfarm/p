@@ -1,0 +1,53 @@
+<!-- 315活动标题部分开始 -->
+<div class="feastList-title">
+    <!-- <a href="<%=feastTitle.linkURL%>" target="_blank" title="<%=feastTitle.pTitle%>"> -->
+        <img class="lazy" data-original="<%=feastTitle.imgSRC%>"/>
+    <!-- </a> -->
+</div>
+<!-- 315活动标题部分开始 -->
+<!-- 315活动主推单品 开始 -->
+<p class="feastList-sp">
+    <a href="<%=feastSp.linkURL%>"><img class="lazy" data-original="<%=feastSp.imgSRC%>" alt=""></a>
+</p>
+<!-- 315活动主推单品 结束 -->
+<!-- 315活动列表——大图部分 开始 -->
+<ul class="feastList-list clearfix">
+    <% for(var i=0; i<list.length; i++) {%>
+        <li class="item-<%=i+1%>">
+            <div class="pro-img">
+                <a href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>">
+                    <img class="lazy" data-original="<%=list[i].imgSRC%>" alt="<%=list[i].seoAlt%>" />
+                </a>
+                <i class="icon icon-like100p"></i><i class="icon icon-48h"></i>
+            </div>
+            <div class="pro-detail">
+                <div class="pro-detail-title">
+                    <span class="tag-txt">
+                        <%=list[i].slogan%>
+                    </span>
+                    <p class="tag-line"></p>
+                </div>
+                <a class="pro-title" href="<%=list[i].linkURL%>" target="_blank" title="<%=list[i].pTitle%>">
+                    <%=list[i].pTitle%>
+                </a>
+                <div class="pro-price">
+                    <p class="market-price">
+                        <span class="market-price-txt">市场价</span><span class="market-price-line"><i>¥</i><em class="price"><%=list[i].mPrice%></em><i class="line-through"></i></span>
+                    </p>
+                    <p class="act-price"><span class="act-price-txt">开仓价</span>
+                        <br/><span class="price"><i>&yen;</i><em><%=list[i].price%></em></span></p>
+                    <a class="btn-buy" href="<%=list[i].linkURL%>" target="_blank">立即抢购 ></a>
+                    <i class="icon icon-cheap"></i>
+                </div>
+            </div>
+        </li>
+        <%}%>
+</ul>
+<!-- 春节年度排行榜列表——大图部分 结束 -->
+<!-- 年度排行榜下方的广告部分 开始-->
+<!-- <div class="index-315-ad">
+    <a href="<%=ad.linkURL%>" target="_blank" title="<%=ad.pTitle%>">
+        <img class="lazy" data-original="<%=ad.imgSRC%>"/>
+    </a>
+</div> -->
+<!-- 年度排行榜下方的广告部分 结束-->

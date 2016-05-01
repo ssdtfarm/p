@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<!-- 载入头部 -->
+	@@include("include_head.html",{
+	"cdn"   : "@@miscPath",
+	"name"  : "get-coupon-success",
+	"title" : "金海马商城-领取优惠券成功"
+	})
+</head>
+<body>
+
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+<!-- 头部开始 -->
+@@include("comment-header.html",{ "cdn" : "@@miscPath" })
+<!-- 头部结束 -->
+<!-- 导航开始 -->
+@@include("comment-head-nav.html")
+<!-- 导航结束 -->
+
+<!-- 领取优惠券成功开始 -->
+<section class="kh-row-24 clearfix">
+	<div class="coupon-wrap">
+		<h2 class="title"><i class="icon-face-smile-orange"></i><span>恭喜您已成功领取了优惠券！</span></h2>
+		<dl class="coupon-info">
+			<dt class="fc-f60"><span>￥</span><b class="price">800</b></dt>
+			<dd>
+				<p><span>优惠券码：</span><label>XNELV8U</label></p>
+				<p><span>有效期：</span><label class="date">2015-05-10至2015-05-30</label></p>
+				<p><span>使用条件：</span><label>单次消费满¥3999.00,全场（除团购/限购/秒杀）可用</label></p>
+			</dd>
+		</dl>
+		<a class="use-link">立即使用</a>
+		<a class="my-coupons">查看我的所有优惠券></a>
+	</div>
+</section>
+<!-- 领取优惠券成功结束 -->
+
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+	"cdn" : "@@miscPath",
+	"name"  : "get-coupon-success"
+})
+</body>
+</html>

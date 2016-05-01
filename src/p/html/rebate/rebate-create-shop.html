@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "rebate-create-shop", "title" : "创建返利小店" })
+</head>
+
+<body>
+    <!-- 顶部广告开始 -->
+    <section class="index-top-ad JQ_lazy" id="J_TopAd" data-tpl="tplTopAd" data-path="index_TopAd_hash.js" data-time="1437645060000"></section>
+    <!-- 顶部广告结束 -->
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", { "cdn": "@@miscPath", "headerName": "我的金海马", "search": false })
+    <!-- 头部结束 -->
+    <!-- 页面开始 -->
+    <section class="rebate-wrap">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 设置店铺基本信息 -->
+        <div class="shop-info">
+            <dl>
+                <dt>店铺名：</dt>
+                <dd>
+                    <input type="text" class="shop-name j_shopName" name="" />
+                    <span class="total"><span class="cur j_shopNameCur">0</span>/10</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><span>*</span>个性域名：</dt>
+                <dd>
+                    <span>www.kinhom.com.112/</span>
+                    <input type="text" class="shop-name j_shopWebUrl" name="" />
+                    <span class="total"><span class="cur j_shopWebUrlCur">0</span>/20（请输入英文、数字组合，设置后不可修改。）</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>模板选择：</dt>
+                <dd>
+                    <div class="style-type selected" data-type="1">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="title">简约经典</div>
+                    </div>
+                    <div class="style-type" data-type="1">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="title">简约经典</div>
+                    </div>
+                    <div class="style-type" data-type="1">
+                        <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="title">简约经典</div>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!-- 设置店铺基本信息 end-->
+        <div class="rebate-content">
+            <div class="main">
+                <div class="selected-info">
+                    <span>已选商品：客厅120种，卧房89种，餐厅100种，书房99种，儿童189种，办公9种，家居100种 共706种</span> <a href="#" class="add-more">继续添加商品</a>
+                </div>
+                <div class="select-bar">
+                    <!-- 层级刷选 -->
+                    <div class="selector-wrap">
+                        <div class="selector j_selector">
+                            <p class="title">一级分类</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="javascript:void(0);">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">二级分类</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">价格区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                        <div class="selector j_selector">
+                            <p class="title">返利区间</p>
+                            <i class="triangle  triangle-down"></i>
+                            <input type="text" class="selector-input">
+                            <ul class="list">
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                                <li><a href="#">模拟下拉的列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 层级刷选 end-->
+                    <!-- 排序导航条开始 -->
+                    <div class="nav-sort">
+                        <div class="left fl">
+                            <dl>
+                                <dt>排序：</dt>
+                                <dd>推荐</dd>
+                                <dd>人气</i>
+                                </dd>
+                                <dd data-type="price">价格<i class="triangle  triangle-up j_priceAsc"></i><i class="triangle  triangle-down triangle-down-active j_priceDsc"></i></dd>
+                                <dd data-type="rebate">返利<i class="triangle  triangle-up j_rebateAsc"></i><i class="triangle  triangle-down triangle-down-active j_rebatDsc"></i></dd>
+                            </dl>
+                        </div>
+                        <div class="right fr">
+                            <span class="page-item prev-page">上一页</span>
+                            <span class="page-now">1</span>/
+                            <span class="page-all">15</span>
+                            <span class="page-item next-page">下一页</span>
+                        </div>
+                    </div>
+                    <!-- 排序导航条 end -->
+                </div>
+                <div class="list-wrap">
+                    <ul class="list">
+                        <!-- 已选择 -->
+                        <li class="item selected" data-id="22">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">【限2行】沙发君沙发君沙发君沙发君沙发君沙发君</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>9999</strong></span>
+                                <span class="setted" data-id="3333">已主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                        <!-- 已选择 end-->
+                        <li class="item" data-id="1234">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">删除试试看</a>
+                            <p class="price">&yen; 10500</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>9999</strong></span>
+                                <span class="btn j_setMainGood" data-id="3333">设为主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                        <li class="item" data-id="333">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">删除试试看</a>
+                            <p class="price">&yen; 32112</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>333</strong></span>
+                                <span class="btn j_setMainGood" data-id="3333">设为主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                        <li class="item" data-id="206">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">删除试试看</a>
+                            <p class="price">&yen; 3333</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>333</strong></span>
+                                <span class="btn j_setMainGood" data-id="112">设为主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                        <li class="item" data-id="2026">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">删除试试看</a>
+                            <p class="price">&yen; 13333</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>3323</strong></span>
+                                <span class="btn j_setMainGood" data-id="112">设为主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                        <li class="item" data-id="44026">
+                            <a href="#">
+                                <img src="@@miscPath/p/images/240X160_1.jpg" alt="">
+                            </a>
+                            <a href="#" class="good-title">删除试试看</a>
+                            <p class="price">&yen; 443333</p>
+                            <div class="tips">
+                                <span class="rebate-price">返&yen;<strong>1323</strong></span>
+                                <span class="btn j_setMainGood" data-id="112">设为主推</span>
+                            </div>
+                            <i class="del j_delGood" data-id="333"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paginator">
+                    <ul class="">
+                        <li><a href="#"><span></span></a></li>
+                        <li><a href="#"><span>上一页</span></a></li>
+                        <li><a href="#"><span>1</span></a></li>
+                        <li><span class="currentpage">2</span></li>
+                        <li><a href="#"><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li><a href="#"><span>6</span></a></li>
+                        <li><a href="#"><span>7</span></a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li>共<b>7</b>页</li>
+                        <li>
+                            <form method="get" action="">
+                                <input name="cat" value="223" type="hidden">
+                                <input name="rid" value="32" type="hidden">去第
+                                <input type="text" size="3" id="toPage" name="curpage">页
+                                <input type="submit" value="确定">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side">
+                <h3>设置主推商品</h3>
+                <p class="tips">从左侧商品中，选择4个主推商品</p>
+                <ul class="list">
+                    <li class="selected">
+                        <a href="#"> <img src="http://misc.jjcdn.com:80/p/images/240X160_1.jpg" alt="">
+                            <p class="good-title">删除试试看</p>
+                        </a>
+                        <p><span class="price">¥ 10500</span><i class="del j_delMainGood" data-id="22"></i></p>
+                        <div class="tips">
+                            <p>返</p>
+                            <p>¥9999</p>
+                        </div>
+                    </li>
+                    <li class="empty">主推2</li>
+                    <li class="empty">主推3</li>
+                    <li class="empty">主推4</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="fix-nav">
+        <div class="bg"></div>
+        <div class="rebate-wrap">
+            <a href="javascript:void(0);" class="save-change">确定保存</a>
+            <a href="javascript:void(0);" class="preview">小店预览</a>
+        </div>
+    </div>
+    <!-- 页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", { "cdn": "@@miscPath", "name": "rebate-create-shop" })
+</body>
+
+</html>

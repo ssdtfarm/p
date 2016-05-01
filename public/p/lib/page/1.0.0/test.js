@@ -1,0 +1,1 @@
+define("libpage.0.0/test",[],function(e,i,n){});

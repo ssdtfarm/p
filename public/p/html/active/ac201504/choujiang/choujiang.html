@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/base.css" />
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/comment.css" />
+    <link rel="stylesheet" href="../css/ac_201504.css" />
+    <title></title>
+    <script>
+        var acConfig = {
+            'isLogin'   : false,             //是否登陆，默认值为false，已登录值为true，未登录值为false。
+            'startTime' : 1434071866045,     //倒计时开始时间，输出服务器当前时间毫秒数。
+            'endTime'   : 1434071886154,    //倒计时结束时间，输出服务器结束时间毫秒数（本次活动为当天早上10:00）。
+            'hasCoupon' : -1,               //是否已经取得优惠券， 未取得默认值为-1，已经获取优惠券的值数组[券id1，券id2]。
+            'hasLucky'  : -1,               //是否已经抽过奖，未抽奖默认值为-1，已经抽过奖的值[奖品id1，奖品id2]。
+            'stock'     : 0                //抢购商品库存
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <!--姓运值抽奖模块开始-->
+    <div class="luckyName">
+        <input type="hidden" value="-1" name="hasNum" />
+        <input type="text" class="luckyInput" placeholder="输入姓氏" value="" />
+        <a href="javascript:;" class="consultLink"></a>
+        <a href="javascript:;" class="JQ_lucky luckyBtn"></a>
+    </div>
+    <div class="luckyDialog">
+        <div class="closeBtn JQ_lucky_close"></div>
+        <div class="dialogContent"></div>   
+    </div>
+    <!--姓运值抽奖模块结束-->
+
+
+
+
+
+    
+    <script src="http://misc.jjcdn.com/p/sea-modules/js/seajs.js;jquery.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="../js/ac_201504.js"></script>
+</body>
+
+</html>

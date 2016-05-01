@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    @@include("include_head.html", { "cdn": "@@miscPath", "name": "500", "title": "金海马商城|500" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    <!-- @@include("top-bar.html") -->
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    <!-- @@include("comment-header.html",{ "cdn" : "@@miscPath" }) -->
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    <!-- @@include("comment-head-nav.html") -->
+    <!-- 导航结束 -->
+    <section class="erro-content">
+        <div class="w1190">
+            <div class="erro-main-bg">
+                <span class="erro-mainPic"></span>
+                <!-- <p class="erro-title"><b>404 ERROR</b></p> -->
+                <p class="erro-main-msg">服务器出错了~攻城狮正在紧急抢修ing！</p>
+                <p class="erro-back">倒数<span id="J_secOut"></span>秒后自动返回</p>
+                <p class="btn-line"><a id="J_btnBack" class="btn-back" href="http://www.kinhom.com">返回首页</a></p>
+            </div>
+        </div>
+    </section>
+     <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "500" })
+</body>
+
+</html>

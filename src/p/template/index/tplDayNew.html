@@ -1,0 +1,39 @@
+<dl>
+    <dt class="index-comment-title">
+        <i class="index-icon icon-index-newer"></i>
+        <label class="comment-title-label">每周上新</label>
+    </dt>
+    <dd id="J_newerSlider" class="index-newer-slider">
+        <div class="hd">
+            <ul>
+                <%for(var i=0; i<list.length; i++){%>
+                <li>
+                    <i class="icon-newer-<%=i+1%>"></i>
+
+                    <span class="text-<%=i+1%>"><%if(i==0){%>上<%}%><%if(i==1){%>本<%}%><%if(i==2){%>下<%}%>周<%=list[i].startTime%>-<%=list[i].endTime%></span>
+
+                </li>
+                <%}%>
+            </ul>
+            <span class="newer-slider-line"></span>
+        </div>
+        <div class="bd">
+            <%for(var i=0; i<list.length; i++){%>
+            <ul>
+                <%for(var j=0; j<list[i].dList.length; j++){%>
+                <li <%if(j!=list[i].dList.length-1){%>class="r-10"<%}%>>
+                <a href="<%=list[i].dList[j].linkURL%>" target="_blank" title="<%=list[i].dList[j].seoAlt%>">
+                    <img _src="<%=list[i].dList[j].imgSRC%>" width="290" height="193" alt="<%=list[i].dList[j].seoAlt%>"/>
+                    <span class="text-money">&yen;</span>
+                        <span class="text-wrap">
+                            <span class="text-price"><%=list[i].dList[j].price%></span>
+                            <span class="text-title"><%=list[i].dList[j].pTitle%></span>
+                        </span>
+                </a>
+                </li>
+                <%}%>
+            </ul>
+            <%}%>
+        </div>
+    </dd>
+</dl>

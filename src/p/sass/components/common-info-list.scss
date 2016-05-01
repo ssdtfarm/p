@@ -1,0 +1,117 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用金海马资讯模块
+ *      暂时用到的首页、详情页
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+.index-kh-info {
+    margin-bottom: 50px;
+    .kh-info-list {
+        position: relative;
+        height: 198px;
+        border: 1px solid #ebebeb;
+        li {
+            position: absolute;
+            overflow: hidden;
+            img {
+                position: absolute;
+                -webkit-transition: 0.2s ease all;
+                -moz-transition: 0.2s ease all;
+            }
+            &:hover img {
+                -webkit-transform: translateX(5px);
+                -moz-transform: translateX(5px);
+            }
+        }
+        .list-item-1 {
+            left: 0;
+            top: 0;
+            width: 299px;
+            height: 98px;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .list-item-2 {
+            left: 0;
+            top: 99px;
+            width: 299px;
+            height: 99px;
+            border-right: 1px solid #ebebeb;
+        }
+        .list-item-3 {
+            left: 300px;
+            top: 0;
+            width: 198px;
+            height: 198px;
+            border-right: 1px solid #ebebeb;
+        }
+        .list-item-4 {
+            left: 499px;
+            top: 0;
+            width: 199px;
+            height: 98px;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .list-item-5 {
+            left: 499px;
+            top: 99px;
+            width: 199px;
+            height: 99px;
+            border-right: 1px solid #ebebeb;
+        }
+        .list-item-6 {
+            left: 699px;
+            top: 0;
+            width: 199px;
+            height: 98px;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .list-item-7 {
+            left: 699px;
+            top: 99px;
+            width: 199px;
+            height: 99px;
+            border-right: 1px solid #ebebeb;
+        }
+        .list-item-8 {
+            right: 0;
+            top: 0;
+            width: 289px;
+            height: 198px;
+        }
+        .info-list {
+            padding: 15px 10px 10px 49px;
+            dt {
+                padding-bottom: 5px;
+                line-height: 40px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+            dd {
+                line-height: 24px;
+            }
+            a {
+                color: #8C8C8C;
+                b {
+                    color: #333;
+                }
+                &:hover {
+                    color: #f60;
+                    b {
+                        color: #f60;
+                    }
+                }
+            }
+        }
+    }
+}

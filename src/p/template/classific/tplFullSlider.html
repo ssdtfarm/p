@@ -1,0 +1,14 @@
+<div class="J_fullSlider" class="full-slider">
+    <div class="bd">
+        <ul class="list">
+            <%for(var i=0; i<list.length; i++) {%>
+            <li class="slider-item" style="background: url(<%=list[i].imgURL%>)  no-repeat center top;">
+                <a href="<%=list[i].proLink%>" class="slider-link" target="_blank" title="<%=list[i].proTitle%>"></a>
+            </li> 
+            <%}%>
+        </ul>
+    </div>
+    <div class="hd">
+        <ul></ul>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="http://misc.jjcdn.com/p/css/store-gather.css" />
+	<!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+	<title>体验机——用户反馈</title>
+	<script>
+	/* 
+	 *	feedbackPath：用户反馈表单提交路径
+	 *	indexPath: 用户提交表单失败，返回体验机-首页的路径
+	 */
+	var commonData = {
+		feedbackPath: "http://misc.jjcdn.com/p/html/gather/test.php",
+		indexPath: "http://misc.jjcdn.com/p/html/gather/index.html"
+	};
+	</script>
+</head>
+<body>
+	<div class="feedback-wrap">
+		<div class="back-index">
+			<a href="http://misc.jjcdn.com/p/html/gather/index.html" target="_self">
+				<i class="icon"></i>
+				<span>返回首页</span>
+			</a>
+		</div>
+		<!-- 反馈内容开始 -->
+		<section class="feedback-box">
+			<div class="feedback-explanation clearfix">
+				<h1>用户反馈</h1>
+				<p>尊敬的用户：<br>您对金海马商城有任何意见和建议，或在使用过程中遇到问题，请在本页反馈。<br>我们会每天关注您的反馈，不断优化页面，为您提供更好的服务！</p>
+			</div>
+			<form class="feedback-form clearfix" id="J_feedbackForm" name="feedback-form" action="javascript:void(0);" method="post">
+				<textarea id="J_feedback" class="feedback-textarea" name="content" cols="30" rows="10" placeholder="请输入问题描述及建议"></textarea>
+				<dl class="clearfix">
+					<dt>怎么称呼您：</dt>
+					<dd>
+						<input class="feedback-input" type="text" name="member_name" id="J_feedbackAccount" maxlength="18">
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>手机号：</dt>
+					<dd>
+						<input class="feedback-input" type="text" name="member_phone" id="J_feedbackPhone" maxlength="13">
+					</dd>
+				</dl>
+				<a class="feedback-btn" id="J_feedbackBtn">提&nbsp;交&nbsp;<i class="icon"></i></a>
+			</form>
+		</section>
+		<!-- 反馈内容结束 -->
+	</div>
+	<script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/store-gather.js"></script>
+</body>
+</html>

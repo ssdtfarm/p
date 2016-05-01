@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";     // main-head
+@import "../components/common-foot.scss";  // main-footer
+
+.cart-empty {
+  padding: 50px 0 200px 0;
+}
+.cart-empty .cart-empty-left {
+  float: left;
+  width: 40%;
+  text-align: right;
+}
+.cart-empty .cart-empty-right {
+  float: left;
+  width: 55%;
+}
+.cart-empty .empty-tip {
+  padding-top: 10px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+.cart-empty .empty-btns {
+  padding: 10px 0;
+}
+.cart-empty .empty-btns a {
+  display: inline-block;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+/* 蓝色按钮 */
+.cart-empty .empty-btns .btn-blue {
+  background-color: #2f6ceb;
+}
+.cart-empty .empty-btns .btn-blue:hover {
+  background-color: #ee950a;
+}
+/*橙色按钮*/
+.cart-empty .empty-btns .btn-orange {
+  background-color: #f60;
+}
+.cart-empty .empty-btns .btn-orange:hover {
+  background-color: #ee950a;
+}
+

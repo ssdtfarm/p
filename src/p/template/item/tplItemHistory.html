@@ -1,0 +1,21 @@
+<dl class="item-history <%if(hasMt){%>mt-20<%}%>">
+    <dt>
+        <span>最近浏览</span>
+    </dt>
+    <dd>
+            <ul class="clearfix">
+                <%for(var i=0; i<list.length; i++) {%>
+                <li>
+                    <a href="<%=list[i].linkURL%>"><img src="<%=list[i].imgURL%>!small" alt="<%=list[i].title%>" width="152" height="102" /></a>
+                    <a class="item-history-title" href="<%=list[i].linkURL%>" title="<%=list[i].title%>"><%=list[i].title%></a>
+                    <p class="item-history-store clearfix">
+                        <label class="fl fc-f60">&yen;<%=list[i].salePrice%></label>
+                        <span class="fr">
+                            <span class="fc-8c8">已售</span>
+                            <span class="fc-f60"><%=list[i].saleNum%>件</span></span>
+                    </p>
+                </li>
+                <%}%>
+            </ul>
+    </dd>
+</dl>

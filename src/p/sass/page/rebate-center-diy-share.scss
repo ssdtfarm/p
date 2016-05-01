@@ -1,0 +1,567 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";
+@import "../components/common-search-bar.scss";
+ @import "../components/club-aside.scss";
+
+
+/*
+ *  rebate-center-diy-share 返利中心定制分享页
+ *
+ *  author:JinJing
+ *  date:20150312
+ */
+
+body {
+    background: #e4e4e4;
+}
+.w60 {
+    width: 60px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt40 {
+    margin-top: 40px;
+}
+.mb188 {
+    margin-bottom: 188px;
+}
+.font-bold {
+    font-weight: bold;
+}
+.rebate-center-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+.rebate-center-main .icon-box-normal {
+    width: 20px;
+    height: 20px;
+}
+.rebate-center-main .icon-box-checked {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*============== 返利中心定制分享顶部导航  ================*/
+/*rebate-center-menu*/
+
+.rebate-center-menu {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+/* rebate-center nav style */
+
+.rebate-center-nav {
+    width: 740px;
+    height: 40px;
+    padding: 0;
+}
+/* normal nav */
+
+.rebate-center-nav a {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    background: #8c8c8c;
+}
+.rebate-center-nav a i {
+    float: left;
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: hidden;
+}
+.rebate-center-nav a label {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* normal nav hover */
+
+.rebate-center-nav a:hover {
+    color: #fff;
+}
+.rebate-center-nav a:hover i {
+    visibility: visible;
+}
+.rebate-center-nav a:hover label {
+    position: relative;
+    padding: 0 10px;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a:hover label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/* nav cur */
+
+.rebate-center-nav a.cur i {
+    visibility: visible;
+}
+.rebate-center-nav a.cur label {
+    position: relative;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a.cur label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/*===== 我的收藏操作导航菜单  =====*/
+/*返利商场首页*/
+
+.rebate-center-menu .rebate-store-index {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 10px;
+    width: 90px;
+    height: 20px;
+}
+.rebate-center-menu .rebate-store-index a {
+    color: #f60;
+}
+.rebate-center-menu .rebate-store-index a:hover {
+    color: #f60;
+}
+/*分享以下定制页*/
+
+.rebate-center-main .rebate-center-share-title {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 0;
+    text-align: center;
+    border: 3px dotted #333;
+    border-radius: 30px;
+}
+/*LOGO*/
+
+.rebate-center-main .rebate-center-share-LOGO {
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+}
+.rebate-center-main .rebate-center-share-open {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    color: #fff;
+    background: #f3e7a4;
+}
+.rebate-center-main .rebate-center-share-open p {
+    width: 585px;
+    height: 90px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+/*点击以下商品并购买*/
+
+.rebate-center-share-main .share-main-title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #f60;
+    background: #fff;
+}
+.rebate-center-share-main .share-main-title .icon-point-down{
+    margin-left: 10px;
+}
+.rebate-center-share-main .share-main-list {
+    width: 885px;
+    padding-left: 55px;
+    background: #fff;
+    clear: both;
+    overflow: hidden;
+}
+.rebate-center-share-main .share-main-list .share-item {
+    float: left;
+    width: 240px;
+    height: 246px;
+    margin: 0 55px 40px 0;
+    text-align: left;
+    background: #fff;
+}
+.share-item .pic {
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+}
+.share-item .pic .item-img img {
+    width: 240px;
+    height: 160px;
+}
+.share-item .name {
+    width: 230px;
+    height: 30px;
+    padding: 0 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.share-item .name .item-name {
+    color: #8c8c8c;
+}
+.share-item:hover .name .item-name {
+    color: #f60;
+}
+.share-item .price .item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f60;
+}
+.share-item .price .item-price-original {
+    margin-left: 10px;
+    color: #8c8c8c;
+    text-decoration: line-through;
+}
+.share-item .share {
+    height: 30px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.share-item .share .share-rebate-button {
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background: #f60;
+}
+.share-item .share .share-rebate-button:hover {
+    background: #ee950a;
+}
+/*联系我们*/
+
+.rebate-center-contact-us {
+    width: 100%;
+    height: 134px;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+.rebate-center-contact-us .contact-us-conten {
+    width: 640px;
+    height: 134px;
+    margin: 0 auto;
+}
+/*二维码组*/
+
+.rebate-center-contact-us .media {
+    float: left;
+    width: 300px;
+    height: 134px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+.rebate-center-contact-us .media-item {
+    float: left;
+    width: 90px;
+    height: 134px;
+    margin-right: 10px;
+    background: #ccc;
+}
+.rebate-center-contact-us .media-item .pic {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+.media-item .pic img {
+    width: 90px;
+    height: 90px;
+}
+.rebate-center-contact-us .media-item .description {
+    text-align: center;
+}
+.rebate-center-contact-us .media-item .icon {
+    display: block;
+    width: 60px;
+    height: 20px;
+    margin: 8px auto;
+}
+/*基本联系方式*/
+
+.rebate-center-contact-us .base-info {
+    float: left;
+    width: 192px;
+    padding-left: 30px;
+    text-align: left;
+}
+.rebate-center-contact-us .base-info dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.rebate-center-contact-us .base-info dd {
+    line-height: 20px;
+    color: #8c8c8c;
+}
+.base-info dd b {
+    position: relative;
+    top: 3px;
+    font-size: 18px;
+    color: #333;
+}
+/*您的定制分享链接*/
+
+.rebate-center-main .diy-share-href-main {
+    position: relative;
+    z-index: 991;
+    width: 900px;
+    height: 260px;
+    padding: 20px;
+    margin-top: 26px;
+    background: #fff;
+    border: 2px solid #333;
+}
+.rebate-center-main .diy-share-href-main:before {
+    position: absolute;
+    z-index: 990;
+    display: block;
+    left: 50%;
+    top: -35px;
+    margin-left: -12px;
+    border-width: 17px 10px 18px 10px;
+    border-color: transparent transparent #333 transparent;
+    border-style: solid;
+    content: " ";
+}
+.rebate-center-main .diy-share-href-main:after {
+    position: absolute;
+    z-index: 992;
+    display: block;
+    left: 50%;
+    top: -29px;
+    margin-left: -8px;
+    border-width: 15px 6px 14px 6px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    content : " ";
+}
+/*定制分享链接发送 左部分*/
+.diy-share-href-main .left-part {
+    width: 440px;
+    height: 260px;
+    float: left;
+    padding-right: 49px;
+    border-right: 1px solid #ccc;
+}
+.diy-share-href-main .left-part .diy-share-href {
+    width: 440px;
+    height: 50px;
+}
+.left-part .diy-share-href .title {
+    position: relative;
+    float: left;
+    width: 170px;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #61bbe0;
+}
+.left-part .diy-share-href .title:before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #61bbe0;
+    border-width: 0 0 40px 20px;
+}
+.left-part .diy-share-href .title:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #61bbe0;
+    border-width: 40px 0 0 20px;
+}
+.left-part .diy-share-href .tip {
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    line-height: 50px;
+    color: #61bbe0;
+}
+.left-part .diy-share-href-info {
+    width: 420px;
+    height: 56px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    background: #ffc299;
+}
+.left-part .diy-share-to dt {
+    width: 72px;
+    height: 50px;
+    float: left;
+    line-height: 35px;
+    text-align: right;
+}
+.left-part .diy-share-to dd {
+    float: left;
+}
+.left-part .diy-share-to .share-to-list {
+    width: 368px;
+    height: 50px;
+    overflow: hidden;
+}
+.diy-share-to .share-to-list .item {
+    width: 50px;
+    height: 47px;
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+}
+.share-to-list .item .icon-share {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(../images/icons_share.png);
+}
+/*图标*/
+.share-to-list .item .icon-qq{
+    background-position: 0 0;
+}
+.share-to-list .item .icon-qq-zone{
+    background-position: -34px 0;
+}
+.share-to-list .item .icon-sina-wb{
+    background-position: 0 -34px;
+}
+.share-to-list .item .icon-tx-wb{
+    background-position: -34px -34px;
+}
+.share-to-list .item .icon-douban{
+    background-position: 0 -68px;
+}
+.share-to-list .item .icon-renren{
+    background-position: -34px -68px;
+}
+.share-to-list .item .share-name {
+    display: inline-block;
+    color: #8c8c8c;
+}
+.share-to-list .item:hover .share-name{
+    color: #f60;
+}
+/*定制分享链接发送 右部分*/
+.diy-share-href-main .right-part {
+    width: 200px;
+    height: 260px;
+    float: left;
+    padding-left: 50px;
+}
+.right-part .share-href-2dcode-title {
+    position: relative;
+   /* float: left;*/
+    width: 170px;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #57bb89;
+}
+.right-part .share-href-2dcode-title:before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #57bb89;
+    border-width: 0 0 40px 20px;
+}
+.right-part .share-href-2dcode-title:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -15px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #57bb89;
+    border-width: 40px 0 0 20px;
+}
+.right-part .share-href-2dcode{
+    width: 153px;
+    height: 154px;
+    margin-top: 10px;
+}
+.right-part .share-href-2dcode img{
+    width: 153px;
+    height: 154px;
+}
+.right-part .share-href-2dcode-tip{
+    color: #8c8c8c;
+}
+.right-part .share-href-2dcode-tip span{
+    vertical-align: top;
+    color: #57bb89;
+}

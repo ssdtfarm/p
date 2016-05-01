@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";	// 全站基本样式
+@import "../components/common-top-bar.scss";	// 页面顶部top-bar
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/member-head.scss";  // 通用头部
+@import "../components/common-foot.scss"; // 通用底部
+  	// icon-system
+ 		// grid
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";		// 页面侧边栏
+@import "../components/common-dialog.scss";	// art-dialog
+
+/*
+ * Security Center
+ * security-validate-email.scss
+ *
+ * Author: Yan Siwen
+ * date: 2015-10-16;
+ */
+$commonColor: #ee950a;
+body {
+	background-color: #e4e4e4;
+}
+
+// 验证邮箱
+.security-email-box {
+	height: 725px;
+	padding: 9px 50px 0;
+	margin-top: 20px;
+	background: #fff;
+	h2 {
+		font-size: 18px;
+		line-height: 38px;
+		border-bottom: 1px solid;
+	}
+}
+.security-email-form {
+	margin-top: 56px;
+}
+.security-email-item {
+	position: relative;
+	min-height: 50px;
+	line-height: 28px;
+	overflow: hidden;
+	.phone-code {
+		.tip-ok {
+			margin-left: 105px;
+		}
+	}
+	label {
+		float: left;
+		width: 60px;
+		height: 28px;
+		line-height: 28px;
+		text-align: right;
+	}
+	input {
+		float: left;
+		margin-left: 4px;
+		width: 172px;
+		height: 28px;
+		line-height: 28px;
+		padding: 0 8px;
+		border: 1px solid #b4b4b4;
+		border-radius: 3px;
+		&:focus {
+			border-color: #2f6ceb;
+		}
+	}
+	.security-code {
+		float: left;
+		width: 72px;
+	}
+	.get-security-code {
+		position: absolute;
+		float: left;
+		margin-left: 10px;
+		width: 88px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #ccc;
+		background: #fff;
+		border-radius: 3px;
+		text-align: center;
+		color: #333;
+		cursor: pointer;
+		&:hover {
+			color: #f60;
+			border-color: #f60;
+		}
+	}
+	.tips {
+		margin-left: 64px;
+		min-height: 20px;
+		line-height: 20px;
+		color: #8c8c8c;
+		.icon-tip-wrong {
+			margin: 0 3px 3px 0;
+		}
+	}
+	.tip-ok {
+		margin-left: 5px;
+	}
+	.tips-notify {
+		display: none;
+		min-height: 20px;
+		line-height: 20px;
+		color: #8c8c8c;
+		margin: 20px 0 20px 64px;
+		.check-email-btn {
+			margin: 0 10px;
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			width: 90px;
+			height: 30px;
+			color: #fff;
+			background: #f60;
+			line-height: 30px;
+			text-align: center;
+			border-radius: 3px;
+			&:hover {
+				background: $commonColor;
+			}
+		}
+	}
+	.submit-btn {
+		position: relative;
+		display: block;
+		left: 60px;
+		margin-left: 4px;
+		width: 190px;
+		height: 30px;
+		border-radius: 3px;
+		background: #ccc;
+		color: #fff;
+		text-align: center;
+		border-color: transparent;
+		cursor: default;
+		span {
+			color: #f60;
+		}
+  		&:focus {
+  			border-color: transparent;
+  		}
+	}
+	.on {
+		background: #f60;
+		cursor: pointer;
+		&:hover {
+			background: $commonColor;
+		}
+	}
+}

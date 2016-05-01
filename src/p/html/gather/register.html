@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://misc.jjcdn.com/p/css/store-gather.css">
+    <!--[if lt IE 9]><!-->
+    <script src="http://misc.jjcdn.com/p/js/html5.js"></script>
+    <!--<![endif]-->
+    <title>会员注册</title>
+</head>
+
+<body>
+    <section class="reg-wrapper w1190">
+        <div class="back-index">
+            <a href="http://misc.jjcdn.com/p/html/gather/index.html" target="_self">
+                <i class="icon"></i>
+                <span>返回首页</span>
+            </a>
+        </div>
+        <div class="reg-form">
+            <h1>金海马商城会员注册</h1>
+            <form id="J_regPhoneForm" method="post" action="/aggregation/register">
+                <input type="hidden" id="security" name="5127695" value="6345503">
+                <div class="reg-input">
+                    <div class="reg-input-item">
+                        <input type="text" name="userphone" class="userphone" placeholder="请输入您的手机号码">
+                        <i class="icon-tip-ok"></i>
+                    </div>
+                    <div class="reg-tips">
+                        <i class="icon-tip-wrong"></i>
+                        <span class="reg-error-tips"></span>
+                    </div>
+                </div>
+                <div class="reg-input">
+                    <div class="reg-input-item">
+                        <input type="password" name="password" class="password" placeholder="请设置您的密码">
+                        <i class="icon-tip-ok"></i>
+                        <span class="pwd-level">密码强度：<i></i><i></i><i></i><b>弱</b></span>
+                    </div>
+                    <div class="reg-tips">
+                        <i class="info-tips">6~20个字符，区分大小写，需为字母、数字、点、减号、下划线组成。</i>
+                        <i class="icon-tip-wrong"></i>
+                        <i class="reg-error-tips"></i>
+                    </div>
+                </div>
+                <div class="reg-input">
+                    <div class="reg-input-item">
+                        <input type="text" name="vcode" class="vcode" placeholder="请输入验证码">
+                        <i class="icon-vcode icon-tip-ok"></i>
+                        <input type="button" name="vcodebtn" class="vcode-btn" value="获取验证码">
+                        <span class="countdown"></span>
+                    </div>
+                    <div class="reg-tips">
+                        <i class="icon-tip-wrong"></i>
+                        <i class="reg-error-tips"></i>
+                    </div>
+                </div>
+                <div class="reg-input">
+                    <div class="reg-input-item">
+                        <input type="text" name="pcode" class="pcode" placeholder="请输入图形验证码">
+                        <i class="icon-pcode icon-tip-ok"></i>
+                        <img id="J_findImgCode" name="pcodebtn" class="pcode-btn">
+                        <span class="changecode">看不清？<a id="J_changeCode">换一张</a></span>
+                        <input type="hidden" id="token" name="token" value="">
+                    </div>
+                    <div class="reg-tips">
+                        <i class="icon-tip-wrong"></i>
+                        <i class="reg-error-tips"></i>
+                    </div>
+                </div>
+                <div class="reg-input">
+                    <i id="J_regCheck" class="reg-check reg-check-active"></i>
+                    <span class="service-protocol">我已阅读并同意<a href="http://www.kinhom.com/help/reggreement" target="_blank">《金海马商城用户服务协议》</a></span>
+                    <i class="icon-tip-wrong"></i>
+                    <i class="reg-error-tips">请先阅读金海马商城用户服务协议，并同意。</i>
+                </div>
+                <div class="reg-input reg-submit">
+                    <input type="submit" name="submit" class="reg-submit-btn" value="立即注册" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="reg-ad">
+            <a href="http://item.kinhom.com/default/download" target="_blank"><img src="http://misc.jjcdn.com/p/images/store-gather/register_1.png" alt=""></a>
+        </div>
+    </section>
+    <script src="http://misc.jjcdn.com/p/js/base.js"></script>
+    <script src="http://misc.jjcdn.com/p/js/store-gather.js"></script>
+</body>
+
+</html>

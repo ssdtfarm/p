@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";    
+@import "../components/common-empty.scss";
+@import "../components/common-dialog.scss";
+
+/* 
+ *  支付成功页面样式 
+ */
+.order-redeem-success {
+	width: 600px;
+	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.order-redeem-success p {
+	padding: 5px;
+}
+.order-redeem-success .redeem-success-tip {
+	font-size: 18px;
+}
+.order-redeem-success .redeem-success-tip .icon-face-smile-orange{
+	margin-right: 10px;
+}
+.order-redeem-success .redeem-success-tip span {
+	position: relative;
+	//top: -20px;
+}
+.order-redeem-success .redeem-success-btns a {
+	color: #2f6ceb;
+	text-decoration:none;
+}
+.order-redeem-success .redeem-success-btns a:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+.share-content {
+	padding-top: 14px;
+	margin-bottom: 46px;
+}
+.share-content .title{
+	display: inline-block;
+	position: relative;
+	top: -15px;
+}
+.jiathis_style_32x32{
+	display: inline-block;
+}
+.redeem-price {
+	font-size: 14px;
+}
+.redeem-price span{
+}
+.redeem-send-code {
+	padding-top: 20px; 
+	border-top: 1px dashed #ccc;
+	font-size: 14px;
+	padding-bottom: 50px;
+}
+
+.redeem-send-code span {
+}
+.redeem-send-code a {
+	color: #2f6ceb;
+}
+.send_other_btn {
+	color: #2f6ceb;
+}
+.send_other_btn:hover {
+	color: #f60;
+	cursor: pointer;
+}
+.redeem-send-code .disable {
+	color: #ccc;
+}
+.redeem-send-code .text {
+	margin-right: 6px;
+	border: 1px solid #b4b4b4;
+  	border-radius: 2px;
+  	padding: 4px;
+  	height: 21px;
+}
+.redeem-send-code .phone-input {
+  	width: 330px;
+}
+.redeem-send-code .phone-input.error,.redeem-send-code .code-input.error {
+	border-color: #c13d23;
+}
+.redeem-send-code .code-input {
+	width: 132px;
+}
+.redeem-send-code .mt15{
+	margin-top: 15px;
+}
+.redeem-send-code .btn-orange {
+	background-color: #f60;
+	border-radius: 3px;
+}
+.redeem-send-code .btn-130x30{
+	width: 130px;
+	height: 30px; 
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	display: block;
+	margin-left: 230px;
+}
+.redeem-send-code .get-code-btn {
+	position: relative;
+	top: -1px;
+	height: 30px;
+	line-height: 30px;
+	width: 190px;
+	text-align: center;
+	color: #fff;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.redeem-send-code label {
+	display: inline-block;
+	width: 141px;
+	text-align: right;
+}
+
+.redeem-send-code .wrap {
+	text-align: left;
+	position: relative;
+}
+.redeem-send-code .btn-190X30-unable {
+	position: relative;
+	top: 1px;
+    width: 190px;
+    height: 30px;
+    display: none;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #ccc;
+    border-radius: 3px;
+}
+.btn-190X30-unable span {
+	color: #f60;
+	padding-right: 6px;
+}
+.redeem-send-wrap {
+	display: none;
+}
+.redeem-send-code .redeem-tips {
+	position: absolute;
+	left: 141px;
+	top: 36px;
+	color: #c13d23;
+}
+.redeem-send-code-succ{
+	display: none;
+}

@@ -1,0 +1,363 @@
+/**
+ *  ---------------------------------------------
+ *      我的返利小店-选择商品
+ *      author : ljrong 
+ *      date   : 2016-04-05
+ *  ---------------------------------------------
+ */
+
+@charset "UTF-8";
+@import "../layout/layout.scss"; // base
+// grid-system
+// icon-system
+@import "../components/common-top-bar.scss"; // global-top-bar
+@import "../components/member-head.scss"; // member-head
+@import "../components/common-foot.scss"; // global-footer
+@import "../components/common-min-bar.scss"; // min-bar
+@import "../components/common-crumbs.scss"; // main-breadcrumb-trail
+@import "../components/common-search-bar.scss"; // head-search-bar
+//components
+@import "../components/common-dialog.scss"; // art-dialog
+@import "../components/common-ads.scss"; // index-top-ad style
+@import "../components/member-nav.scss"; //member-nav style
+@import "../components/common-paginator.scss"; //paginator style
+@import "../components/common-selector.scss"; //selector style
+@import "../components/rebate-nav-sort.scss"; //nav-sort style
+.rebate-wrap {
+    width: 1190px;
+    margin: 0 auto; 
+}
+
+
+/**
+ * del btn icon 
+ */
+
+.del {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(#{$cdn}/images/rebate/rebate-icon.png);
+    cursor: pointer;
+    &:hover {
+        background-color: #ccc;
+    }
+}
+
+
+/**
+ * css triangle
+ */ 
+.triangle { 
+        position: absolute;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;      
+}
+.triangle-up {
+    border-bottom: 6px solid #333;
+}
+.triangle-down {
+    border-top: 6px solid #333;
+}
+.triangle-down-active {
+    border-top: 6px solid #f60;
+}
+.triangle-up-active {
+    border-top: none;
+    border-bottom: 6px solid #f60;
+}
+
+
+/**
+ * checked icon
+ */
+
+.checked-btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$cdn}/images/rebate/rebate-icon.png);
+    background-position: -4px -64px;
+    cursor: pointer;
+    &.checked {
+        background-position: -34px -64px;
+    }
+}
+.selected .checked-btn {
+    background-position: -34px -64px;
+}
+.rebate-content {
+    overflow: hidden;
+    .select-title {
+        padding-top: 20px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #333;
+    }
+}
+
+.nav-sort {
+    dt {
+        position: relative;
+        //padding-left: 90px;
+        color: #8c8c8c;
+        span {
+            position: absolute;
+            left: 0;
+            line-height: 40px;
+            padding-left: 28px;
+            font-size: 14px;
+            color: #333;
+        }
+        .checked-btn {
+            top: 11px;
+            left: 0;
+        }
+    }
+}
+
+.main {
+    width: 840px;
+    float: left;
+    .select-bar {
+        height: 78px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+    .selector-wrap {
+        height: 33px;
+        padding-top: 4px;
+        padding-left: 9px;
+        border-bottom: 1px solid #ccc;
+    }
+    .selector {
+        width: 138px;
+        float: left;
+        margin-right: 10px;
+    }
+    .list {
+        overflow: hidden;
+        margin-right: -60px;
+        .item {
+            position: relative;
+            float: left;
+            margin-bottom: 18px;
+            margin-right: 60px;
+            width: 238px;
+            height: 290px;
+            border: 1px solid #ccc;
+            &:hover,
+            &.selected {
+                border-color: #f60;
+            }
+            &:hover {
+                .good-title {
+                    color: #f60; 
+                }
+            }
+        }  
+        img { 
+            display: block;
+            vertical-align: middle;
+            width: 238px;
+            height: 159px;
+        }
+        .good-title {
+            display: block;
+            height: 40px;
+            padding: 10px 40px 0;
+            overflow: hidden;
+            line-height: 20px;
+            text-align: center;
+            color: #8c8c8c;
+            &:hover {
+                color: #f60;
+            }
+        }
+        .price {
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        .tips {
+            margin: 0 auto;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            background: #f60;
+        }
+        .checked-btn {
+            right: 4px;
+            bottom: 24px;
+        }
+    }
+}
+
+.side {
+    position: relative;
+    float: right;
+    width: 338px;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    .side-title {
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+        font-size: 14px;
+        color: #414141;
+        span {
+            color: #f60;
+        }
+    }
+    .list {
+        padding-left: 50px;
+    }
+    .item {
+        position: relative;
+        margin-bottom: 20px;
+        height: 93px;
+        overflow: hidden;
+        .img-link {
+            float: left;
+        }
+        img {
+            display: block;
+            height: 91px;
+            width: 138px;
+            border: 1px solid #ccc;
+        }
+        .good-info {
+            position: relative;
+            padding-top: 6px;
+            margin-left: 150px;
+            height: 87px;
+            width: 100px;
+        }
+        .good-title {
+            display: block;
+            margin-bottom: 10px;
+            height: 36px;
+            line-height: 18px;
+            overflow: hidden;
+            color: #8c8c8c;
+        }
+        .price {
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #333333;
+        }
+        .rebate-price {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #f60;
+            font-size: 14px;
+        }
+        &:hover {
+            img {
+                border-color: #f60;
+            }
+            a {
+                color: #f60;
+            }
+            .del {
+                display: block;
+            }
+        }
+        .del {
+            display: none;
+            bottom: 0;
+            right: 10px;
+        }
+    }
+    .fade-in {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .shop-link {
+        position: absolute;
+        bottom: 0;
+        width: 338px;
+        border-top: 1px solid #ccc;
+        height: 80px;
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: #fff;
+            opacity: .75;
+            filter: alpha(opacity=75);
+        }
+        a {
+            position: relative;
+            z-index: 10;
+            margin: 19px auto 0;
+            display: block;
+            width: 240px;
+            height: 40px;
+            line-height: 40px;
+            background: #f60;
+            border-radius: 2px;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            i {
+                margin: -2px 0 0 7px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(http://misc.jjcdn.com/p/images/rebate/rebate-icon.png) -5px -36px no-repeat;
+            }
+        }
+    }
+}
+
+#secondCats {
+    display: none;
+}
+
+
+.side-list-wrap {
+    position: relative;
+    height: 466px;
+    width: 338px;
+    overflow: hidden;
+    .list {
+        position: absolute;
+    }
+    .scrollbox{ 
+            opacity:0; 
+            position: absolute; 
+            right: 0; 
+            top: 0; 
+            width:2px; 
+            height:100%; 
+            background: #ccc; 
+        }
+    .scrollbar{ 
+        position:absolute; 
+        left:0; 
+        top:0;
+        width:100%; 
+        height:20px; 
+        background:#f60; 
+        
+    }
+
+    &:hover {
+        .scrollbox {
+            opacity: 1;
+        }
+    }
+}
+

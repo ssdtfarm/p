@@ -1,0 +1,388 @@
+@charset "utf-8";
+@import "../layout/layout.scss"; // base
+  // grid-system
+  // icon-system
+@import "../components/common-top-bar.scss"; // global-top-bar
+@import "../components/member-head.scss";  // 主站通用头部
+@import "../components/common-foot.scss"; // 全站通用底部
+@import "../components/member-ui.scss"; // 头部搜索框样式
+@import "../components/common-dialog.scss"; // 弹窗模块
+
+/*
+ * 购物车页面样式
+ * author : linyandi
+ * date : 2015-04-05
+*/
+
+
+/*====================== 购物步骤样式 ============================*/
+
+.shoping-step {
+    width: 1190px;
+    height: 80px;
+    margin: 0 auto;
+    line-height: 80px;
+}
+
+.shoping-step ul {
+    width: 100%;
+    text-align: center;
+    /*padding:0 0 0 160px;*/
+}
+
+.shoping-step li {
+    display: inline-block;
+    /*float:left;*/
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.shoping-step i {
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+
+/*购物车列表结构样式*/
+
+.cart-list {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.cart-list-left {
+    float: left;
+    width: 798px;
+    border: 1px solid #ccc;
+}
+
+.cart-list-right {
+    float: right;
+    width: 379px;
+    height: 424px;
+    overflow: hidden;
+    //display: none;
+    background: url(../images/qrcode-bg.png) no-repeat;
+}
+
+
+/*左边样式*/
+
+.cart-list-table {
+    width: 100%;
+}
+
+.cart-list-table th {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.cart-list-item td {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-list-item td a {
+    vertical-align: middle;
+}
+
+
+/*图片*/
+
+.cart-list-img {
+    position: relative;
+}
+
+.cart-list-img img {
+    width: 98px;
+    height: 65px;
+    border: 1px solid #ccc;
+}
+
+.cart-list-img img:hover {
+    border: 1px solid #f60;
+}
+
+.cart-list-img i {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 0;
+    width: 20px;
+    height: 30px;
+    background: url(#{$cdn}/images/rebate/rebate-icon.png) -215px 0 no-repeat;
+    color: #fff;
+    line-height: 30px;
+}
+
+.cart-list-item i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart-list-item .cart-list-tip {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #fff;
+    background-color: #f60;
+}
+
+.cart-list-item p {
+    padding: 3px 0;
+}
+
+.cart-list-item .cart-list-propery {
+    height: 20px;
+    padding: 0 10px;
+    overflow: hidden;
+    color: #333;
+    line-height: 20px;
+}
+
+.cart-list-item .delete-failure-item {
+    color: #2f6ceb;
+}
+
+.cart-list-item .delete-failure-item:hover {
+    color: #f60;
+}
+
+
+/*标题*/
+
+.cart-list-item .cart-list-title {
+    height: 40px;
+    overflow: hidden;
+    padding: 0 10px;
+    color: #8c8c8c;
+}
+
+.cart-list-item .cart-list-title a {
+    color: #8c8c8c;
+}
+
+.cart-list-item .cart-list-title a:hover {
+    color: #F60;
+}
+
+
+/*数量*/
+
+.cart-list-item .cart-list-number {
+    height: 30px;
+    padding: 0 0 0 14px;
+}
+
+.cart-list-number .list-number {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+    color: #fff;
+    background-color: #8c8c8c;
+}
+
+.cart-list-number .list-number:hover {
+    background-color: #f60;
+}
+
+.cart-list-number .input-number {
+    width: 38px;
+    height: 18px;
+    float: left;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+
+/*继续购物--结算按钮*/
+
+.cart-account-btn {
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-color: #f60;
+}
+
+.cart-account-btn:hover {
+    background-color: #ee950a;
+}
+
+.cart-account-btn i {
+    vertical-align: middle;
+}
+
+
+/*右边样式*/
+
+.cart-qrcode {
+    position: relative;
+    width: 122px;
+    height: 122px;
+    padding: 6px;
+    margin: 70px auto 0 auto;
+    background-color: #fff;
+    //display: none;
+}
+
+.cart-qrcode i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.cart-qrcode i img {
+    width: 36px;
+    height: 36px;
+}
+
+
+/*===================*/
+
+
+/*     热销单品样式    */
+
+
+/*==================*/
+
+.cart-hot-list {
+    position: relative;
+    width: 1148px;
+    padding: 50px 0 15px 40px;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+}
+
+.cart-hot-list dt {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 40px;
+    top: 0;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #333;
+}
+
+.cart-hot-list dd {
+    float: left;
+    width: 190px;
+    margin-right: 39px;
+}
+
+.cart-hot-list .cart-hot-list-title {
+    display: inline-block;
+    color: #333;
+    padding: 3px 10px;
+    overflow: hidden;
+}
+
+.cart-hot-list .cart-hot-list-title:hover {
+    color: #f60;
+}
+
+.cart-hot-list p {
+    height: 20px;
+    overflow: hidden;
+    padding: 0 10px;
+    line-height: 20px;
+}
+
+.cart-hot-list p label {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #f60;
+    font-family: "Microsoft Yahei";
+    float: left;
+}
+
+.cart-hot-list p span {
+    float: right;
+    color: #8c8c8c;
+}
+
+.cart-hot-list p span i {
+    font-style: normal;
+    color: #f60;
+}
+
+
+/* 内容loading */
+
+.cart-loading {
+    width: 100%;
+    min-height: 40px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.cart-loading .loading {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../images/loading-small.gif) no-repeat;
+}
+
+
+/*download app*/
+
+.loadWrap {
+    margin-top: 18px;
+    width: 800px;
+}
+
+.loadAppImg {
+    display: block;
+    float: right;
+    margin-right: 4px;
+    width: 50px;
+    height: 40px;
+    background: url(../images/loadAppImg.gif) no-repeat;
+}
+
+.loadAppLink {
+    display: block;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    color: #2f6ceb;
+}
+
+.item-full-ad {
+    width: 100%;
+    min-width: 1190px;
+    .full-ad-close {
+        display: none;
+    }
+}
+
+.member-foot {
+    margin-top: 0 !important;
+}

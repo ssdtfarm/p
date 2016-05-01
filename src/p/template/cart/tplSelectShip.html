@@ -1,0 +1,19 @@
+<i class="select-corner icon-gray-left"></i>
+<label class="JQ_option select-option"><%=labelName%></label>
+<i class="select-corner icon-gray-right"></i>
+<a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn">
+    <i class="triangle-down"></i>
+</a>
+<%if(list.length!=0){%>
+<input name="shipType" type="hidden" value="<%=list[0].shipType%>" />
+<ul>
+
+	<%for(var j=0; len = list.length, j<len; j++){%>
+		<li>
+			<a href="javascript:void(0);" data-value="<%=list[j].shipType%>" data-price="<%=list[j].price%>"><%=list[j].name%></a>
+		</li>
+	<%}%>
+</ul>
+<%}else{%>
+	<ul></ul>
+<%}%>

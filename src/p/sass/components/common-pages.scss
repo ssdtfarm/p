@@ -1,0 +1,68 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用分页样式
+ *      这个分页样式只用在会员系统，列表页和详情页的
+ *      分页样式没有在这里
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+// 会员系统使用的分页样式
+.pages-small {
+    padding: 10px 0;
+    span,
+    a,
+    input {
+        vertical-align: middle;
+    }
+    .go-page {
+        padding: 0 8px;
+        color: #8c8c8c;
+        input {
+            width: 30px;
+            height: 18px;
+            border: 1px solid #ccc;
+            line-height: 18px;
+            text-align: center;
+            color: #333;
+        }
+    }
+    .page-cur {
+        padding: 0 5px;
+        font-size: 14px;
+        color: #61bbe0;
+        &:hover {
+            color: #61bbe0;
+        }
+    }
+    .page-nor {
+        padding: 0 5px;
+        font-size: 14px;
+        color: #333;
+        &:hover {
+            color: #f60;
+        }
+    }
+    .page-btn {
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        font-size: 12px;
+        background-color: #333;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+

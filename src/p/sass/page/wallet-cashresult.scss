@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";  
+       // grid
+      // icon-system
+@import "../components/common-top-bar.scss";   
+@import "../components/member-head.scss";  
+@import "../components/common-foot.scss"; 
+@import "../components/member-nav.scss";
+@import "../components/member-aside.scss";     
+@import "../components/common-min-bar.scss";    // min-bar
+
+body {
+    background: #e4e4e4;
+}
+
+.wallet-cashresult {
+	width: 990px;
+	height: 733px;
+	background: #FFF;
+	.result-title {
+		margin: 0 0 0 50px;
+		width: 890px;
+		border-bottom: 1px solid #333;
+		overflow: hidden;//解决子元素浮动无法撑开父元素的问题
+		h4 {
+			margin: 8px 0 0;
+			float: left;
+			color: #333;
+			font-size: 18px;
+			line-height: 40px;
+		}
+		p {
+			position: relative;
+			margin: 23px 0 0;
+			float: right;
+			color: #8C8C8C;
+			a {
+				color: #2F6CEB;
+				&:hover {
+					color: #F60;
+				}
+			}
+			i {
+				position: absolute;
+				left: -30px;
+				top: -1px;
+				width: 20px;
+				height: 20px;
+				background: url(../images/member-card/member_card_sprites.png) no-repeat -215px 0;
+			}
+		}
+	}
+	.result-process {
+		margin: 0 0 0 50px;
+		padding: 50px 0;
+		width: 890px;
+		overflow: hidden;//解决子元素浮动无法撑开父元素的问题
+		.process-icon {
+			text-align: center;
+			span {
+				height: 20px;
+				display: inline-block;
+			}
+			.icon-1 {
+				width: 170px;
+				background: url(../images/wallet/wallet-sprites.png) no-repeat -65px 0;
+			}
+			.icon-2 {
+				width: 210px;
+				background: url(../images/wallet/wallet-sprites.png) no-repeat -235px 0;
+			}
+		}
+		.ml190 {
+			margin-left: 190px;
+		}
+		.ml-5 {
+			margin-left: -5px;
+		}
+		.ml56 {
+			margin-left: 56px;
+		}
+		.process-dscr {
+			width: 154px;
+			float: left;
+			text-align: center;
+			.dscr-1 {
+				color: #61BBE0;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.dscr-2 {
+				color: #8C8C8C;
+				font-size: 12px;
+			}
+			.J_complete {
+				color: #CCC;
+			}
+		}
+	}
+	.result-detail {
+		width: 100%;
+		color: #333;
+		text-align: center;
+		th {
+			background: #CCC;
+			text-align: center;
+		}
+		.tbody {
+			border-bottom: 1px solid #CCC;
+		}
+		.name {
+			line-height: 22px;
+			text-align: left;
+		}
+		.total {
+			color: #F60;
+		}
+		.single-line {
+			margin: 0 auto;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

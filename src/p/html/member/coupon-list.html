@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "coupon-list",
+        "title": "我的金海马-我的优惠券"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "我的优惠券",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 售后列表页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <!--<a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>-->
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-coupon"></i>
+                            <label>我的优惠券</label>
+                        </a>
+                    </dt>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <span>
+                        <i class="m-icon icon-config"></i>
+                        <label>账户设置</label>
+                    </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">账号信息与安全</a>
+                        <a href="javascript:void(0);">个人信息</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20">
+            <div class="coupon-list clearfix">
+                <div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="clearfix cur"><i class="icon-c-nav-l"></i><label>未使用</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="clearfix "><i class="icon-c-nav-l"></i><label>已使用</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="clearfix "><i class="icon-c-nav-l"></i><label>已过期</label><i class="icon-c-nav-r"></i></a>
+                </div>
+
+                <!--<div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="clearfix cur"><i class="icon-c-nav-l"></i><label>商城优惠券</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="clearfix"><i class="icon-c-nav-l"></i><label>我兑换的优惠券</label><i class="icon-c-nav-r"></i></a>
+                </div>-->
+                <!--<div class="coupon-list-menu clearfix">
+                    <a href="javascript:void(0);" class="menu-tab cur">未使用</a>
+                    <a href="javascript:void(0);" class="menu-tab">已使用</a>
+                    <a href="javascript:void(0);" class="menu-tab">已过期</a>
+                </div>-->
+                <table class="coupon-list-table">
+                    <thead class="coupon-list-thead">
+                        <tr>
+                            <th width="170">编号</th>
+                            <th width="100">类别</th>
+                            <th width="100">面额</th>
+                            <th width="200">使用条件</th>
+                            <th width="200">有效期</th>
+                            <th width="150">来源</th>
+                            <th width="90">使用状态</th>
+                        </tr>
+                    </thead>
+                    <tbody class="coupon-list-tbody">
+                        <tr>
+                            <td class="coupon-list-none" colspan="7">
+                                <p class="coupon-none">您还没有优惠券哦，去看看以下正在进行的活动，更多优惠等着您！</p>
+                                <p class="active-list"><a href="" class="active-item">周年大庆，满5000，送29寸液晶彩电 ></a>
+                                </p>
+                                <p class="active-list"><a href="" class="active-item">年底清仓，满5000减300 ></a>
+                                </p>
+                                <p class="active-list"><a href="" class="active-item">春节换新季 ></a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="coupon-list-table">
+                    <thead class="coupon-list-thead">
+                        <tr>
+                            <th width="170">编号</th>
+                            <th width="100">类别</th>
+                            <th width="100">面额</th>
+                            <th width="200">使用条件</th>
+                            <th width="200">有效期</th>
+                            <th width="150">来源</th>
+                            <th width="90">使用状态</th>
+                        </tr>
+                    </thead>
+                    <tbody class="coupon-list-tbody">
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td><a class="coupon-list-table-btn" href="javascript:void(0);">立即使用</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td><a class="coupon-list-table-btn" href="javascript:void(0);">立即使用</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td>2013-09-01
+                                <br/>已使用
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满500.00元</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td>已过期
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td><a class="coupon-list-table-btn" href="javascript:void(0);">立即使用</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td><a class="coupon-list-table-btn" href="javascript:void(0);">立即使用</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>193434192</td>
+                            <td>优惠券</td>
+                            <td>￥300.00</td>
+                            <td class="coupon-conditions">订单金额满3000.00元可用，只限于卧室家具使用</td>
+                            <td>2013-08-15至2013-09-03 </td>
+                            <td><a href="javascript:void(0);" class="coupon-list-active-original">元旦活动</a>
+                            </td>
+                            <td><a class="coupon-list-table-btn" href="javascript:void(0);">立即使用</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pages-small mt-10 fr">
+                    <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                    <a href="javascript:void(0);" class="page-cur">1</a>
+                    <a href="javascript:void(0);" class="page-nor">2</a>
+                    <a href="javascript:void(0);" class="page-nor">3</a>
+                    <a href="javascript:void(0);" class="page-nor">4</a>
+                    <a href="javascript:void(0);" class="page-nor">5</a>
+                    <a href="javascript:void(0);" class="page-nor">6</a>
+                    <span>...</span>
+                    <a href="javascript:void(0);" class="page-nor">20</a>
+                    <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                    <span class="go-page">
+                            去第
+                            <input type="text" maxlength="4">
+                            页
+                        </span>
+                    <a href="javascript:void(0);" class="page-btn">确定</a>
+                </div>
+            </div>
+            <ul class="coupon-hints">
+                <p class="apply-hints-title">优惠券规则</p>
+                <li class="apply-hints-item"><span>1．</span>订单结算时，符合使用条件的订单将自动使用对应的优惠券；</li>
+                <li class="apply-hints-item"><span>2．</span>每个订单同一厂商发货的商品仅限使用一张优惠券；</li>
+                <li class="apply-hints-item"><span>3．</span>有多张可用优惠券时，可在订单结算页自行选择订单使用的优惠券；</li>
+                <li class="apply-hints-item"><span>4．</span>如果您的账户内有优惠券，而在提交订单时没有优惠券可用，请您检查确认优惠券的有效期、使用条件和是否购买了发券厂商的商品。</li>
+                <a href="javascript:void(0);" class="apply-hints-href">退换货标准详情 ></a>
+            </ul>
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 售后列表页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "coupon-list"
+    })
+</body>
+
+</html>

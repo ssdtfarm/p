@@ -1,0 +1,146 @@
+/**
+ *  ---------------------------------------------
+ *      我的返利详情
+ *      该页面主要用来查看返利订单的详情
+ *      
+ *      zhangzhensheng
+ *      2016-04-05
+ * 
+ *  ---------------------------------------------
+ */
+@charset "UTF-8";
+@import "../layout/layout.scss";
+@import "../components/member-head.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-foot.scss";
+@import "../components/common-top-bar.scss";
+@import "../components/common-paginator.scss"; //paginator style
+@import "../components/common-selector.scss"; //selector style
+@import "../components/rebate-head.scss";
+@import "../components/rebate-profile.scss";
+
+/**
+ * css triangle
+ */
+.triangle { 
+        position: absolute;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;      
+}
+.triangle-up {
+    border-bottom: 6px solid #333;
+}
+.triangle-up-active {
+    border-bottom: 6px solid #f60;
+}
+.triangle-down {
+    border-top: 6px solid #333;
+}
+.triangle-down-active {
+    border-top: 6px solid #f60;
+}
+// main-select
+.selector-wrap {
+    height: 33px;
+}
+.selector {
+	margin-right: 10px;
+    width: 138px;
+    float: left;
+    background-color: #fff;
+    border-color: #b4b4b4;
+}
+/**
+ *  返利详情列表
+ *  说明：成功生成订单的返利订单出现在这个列表
+ *  此模块只可在此页面使用。
+ *  author: zhangzhensheng
+ *  date  : 2016-04-05
+ ============================================*/
+.rebate-detail-main {
+	padding: 50px 0 45px;
+	color: #333;
+	background-color: #ebebeb;
+	h1 {
+		margin: 0 auto 20px;
+		width: 1190px;
+		font-size: 18px;
+	}
+	.paginator {
+		// margin-top: 30px;
+		height: auto;
+		margin-bottom: 0;
+	}
+}
+.main-select {
+	margin: 20px auto;
+	width: 1190px;
+}
+.main-list {
+	margin: 0 auto 30px;
+	width: 1190px;
+	.w110 {
+		width: 110px;
+	}
+	.w140 {
+		width: 140px;
+	}
+	.w250 {
+		width: 250px;
+	}
+	.w150 {
+		width: 150px;
+	}
+	img {
+		display: block;
+		width: 140px;
+		height: 93px;
+	}
+	a {
+		color: #333;
+		&:hover {
+			color: #f60;
+		}
+	}
+	thead {
+		border-top: 1px solid;
+	    border-bottom: 1px solid;
+	    border-color: #333;
+	    font-size: 14px;
+		tr {
+			height: 35px;
+		}
+	}
+	tbody {
+		tr {
+			height: 120px;
+		}
+	}
+	.goods {
+		dd {
+		    margin-top: 12px;
+			width: 90px;
+		    height: 64px;
+		    overflow: hidden;
+		}
+	}
+	.invite {
+		dt {
+			margin-top: -36px;
+			line-height: 32px;
+		}
+		dd {
+			height: 32px;
+			overflow: hidden;
+		}
+	}
+	.invite-flag {
+		display: inline-block;
+		width: 30px;
+		height: 18px;
+		color: #fff;
+		background-color: #f60;
+		text-align: center;
+		line-height: 18px;
+	}
+}

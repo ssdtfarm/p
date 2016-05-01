@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";
+@import "../page/zxh.scss";
+
+/* 头图区开始 */
+.topic-headfigure img {
+  display: block;
+  width: 1190px;
+  height: 350px;
+}
+
+/* 头图区结束 */
+/* 专题介绍区开始 */
+.topic-introduce h1 {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 55px;
+}
+
+.topic-introduce-label {
+  display: inline-block;
+}
+
+.topic-introduce-label a {
+  padding: 0 13px;
+  display: inline-block;
+  height: 25px;
+  color: #4B4B4B;
+  background-color: #EBEBEB;
+  line-height: 24px;
+}
+
+.topic-introduce-label a:hover {
+  color: #F60;
+}
+
+.topic-introduce-dscr {
+  margin-top: -2px;
+  line-height: 20px;
+}
+
+.topic-introduce-catalog p {
+  margin-top: 18px;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.topic-introduce-catalog ul {
+  margin-top: -4px;
+}
+
+.topic-introduce-catalog li {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.topic-introduce-catalog a {
+  color: #333;
+}
+
+.topic-introduce-catalog a:before {
+  content: ".";
+  position: relative;
+  top: -3px;
+  margin-right: 4px;
+}
+
+.topic-introduce-catalog a:hover {
+  color: #F60;
+}
+
+/* 专题介绍区结束 */
+/* 内容展示区开始 */
+.topic-contentshow {
+  margin-top: 19px;
+}
+
+.topic-contentshow li {
+  zoom: 1;
+  margin-bottom: 49px;
+  border-top: 1px solid #CCC;
+}
+
+.topic-contentshow h2 {
+  color: #333;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.topic-contentshow-img img {
+  display: block;
+}
+
+.topic-contentshow-dscr {
+  margin-left: 20px;
+}
+
+.topic-contentshow-dscr dl {
+  margin-top: 3px;
+  height: 224px;
+  overflow: hidden;
+}
+
+.topic-contentshow-dscr dt {
+  font-size: 14px;
+}
+
+.topic-contentshow-dscr dd {
+  margin-bottom: 23px;
+  width: 830px;
+  color: #333;
+  -moz-white-space: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topic-contentshow-dscr a {
+  color: #333;
+}
+
+.topic-contentshow-dscr a:hover {
+  color: #F60;
+}
+
+.topic-contentshow-dscr a:before {
+  content: ".";
+  position: relative;
+  top: -3px;
+  margin-right: 4px;
+}
+
+.topic-contentshow-dscr, .topic-contentshow-img {
+  float: left;
+}
+
+/* 内容展示区结束 */
+/* 推荐专题区开始 */
+.topic-recommend {
+  overflow: hidden;
+}
+
+.topic-recommend p {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.topic-recommend ul {
+  zoom: 1;
+  margin-right: -10px;
+  padding-top: 20px;
+  border-top: 1px solid #CCC;
+}
+
+.topic-recommend li {
+  zoom: 1;
+  float: left;
+  margin-right: 10px;
+  /*margin: 0 55px;*/
+}
+
+.topic-recommend img {
+  display: block;
+}
+
+.topic-recommend a {
+  display: inline-block;
+  color: #333;
+  text-align: center;
+}
+
+.topic-recommend a:hover {
+  color: #F60;
+}
+
+.topic-recommend span {
+  width: 290px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 41px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.topic-recommend span:before {
+  content: ".";
+  position: relative;
+  top: -3px;
+  margin-right: 4px;
+}
+
+/* 推荐专题区开始 */

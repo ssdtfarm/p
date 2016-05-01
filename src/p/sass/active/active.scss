@@ -1,0 +1,94 @@
+/**
+ *  ---------------------------------------------
+ *      活动页面通用样式
+ *      
+ *      author : linyandi
+ *      date   : 2016-04-03
+
+ *  ---------------------------------------------
+ */
+@import "../layout/layout.scss";
+
+@import "../components/common-top-bar.scss";
+@import "../components/common-head.scss";
+@import "../components/common-foot.scss";
+@import "../components/common-min-bar.scss";
+@import "../components/common-crumbs.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-dialog.scss";
+@import "../components/common-login-dialog.scss";
+
+/*
+ *  active-base 
+ *    
+ *  author:JinJing
+ *  date:20150608 
+ */
+
+.active-container {
+    width: 100%;
+    min-height: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.active-content,
+.active-content .cHTML {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.active-content img {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border: 0 none;
+    /*float: left;*/
+}
+
+.active-content .active-html {
+    clear: both;
+}
+
+.active-content .active-json img {
+    float: left;
+}
+
+.active-content img:before,
+.active-content img:after {
+    font-size: 0;
+    clear: both;
+}
+
+/**
+ *  秒杀活动预报名样式
+ *  
+ *  author : lijingrong
+ *  date   : 2015-06-09
+ *  
+ ============================================*/
+.prediction-form {
+    padding-top: 10px;
+    text-align: left;
+    .line {
+        position: relative;
+        height: 20px;
+        padding-left: 100px;
+        padding-top: 25px;
+        color: #000;
+        label {
+            padding-right: 10px;
+        }
+        input {
+            border-bottom: 1px solid #000;
+            color: #333;
+        }
+        .required {
+            padding: 0 5px;
+            color: #ff0000;
+        }
+    }
+    .tr-tip {
+        color: #f00;
+    }
+}

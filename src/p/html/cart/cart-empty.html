@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 载入头部 -->
+@@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "cart-empty", "title" : "购物车页面" })
+</head>
+<body>
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+
+<!-- 头部开始 -->
+@@include("member-header.html",{"cdn":"@@miscPath","search":false, "headerName": "加入购物车"})
+<!-- 头部结束 -->
+
+<!-- 页面开始  -->
+<section class="kh-row-24 cart-empty clearfix">
+	<div class="cart-empty-left">
+		<i class="icon-shopping-cart"></i>
+	</div>
+    <div class="cart-empty-right">
+		<p class="empty-tip">您的购物车空空如也~</p>
+		<p class="empty-btns">
+			<a href="javascript:void(0);" class="btn-orange">查看自己的订单</a>
+			<a href="http://www.kinhom.com/" class="btn-blue">马上去购物</a>
+		</p>
+	</div>
+</section>
+<!-- 页面结束 -->
+
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{ "cdn" : "@@miscPath" ,"name" : "cart-empty"})
+</body>
+</html>

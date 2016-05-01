@@ -1,0 +1,29 @@
+<div id="J_cashWrap" style="display: none;">
+	<div id="J_cash" class="select-gray fl"> 
+		<i class="select-corner icon-gray-left"></i> 
+		<%if(list.length==0){%>
+		<label class="JQ_option select-option "><%=labelName%></label>  
+		<%}else{%>
+		<label class="JQ_option select-option ">选择可用的现金券</label>  
+		<%}%>
+		<i class="select-corner icon-gray-right"></i> 
+		<a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn">
+		<i class="triangle-down"></i> 
+		</a> 
+		<input type="hidden" name="selectCash" />
+		<input type="hidden" name="selectCashPrice" value="0.00" />
+
+		<%if(list.length!=0){%>
+			<ul id="J_cashList">
+			<%for(var j=0; j<list.length; j++){%>
+			    <li>
+			        <a href="javascript:void(0);" data-value="<%=list[j].cash%>" data-price="<%=list[j].price%>">
+			       		<%=list[j].name%>
+			        </a>
+			    </li>
+			<%}%>
+			</ul>
+		<%}%>
+		
+	</div>
+</div>

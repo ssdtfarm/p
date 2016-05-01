@@ -1,0 +1,59 @@
+<form id="J_addressForm" action="<%=actionURL%>" method="post">
+    <input type="hidden" name="addressID" value="<%=addressID%>">
+    <table id="J_add" class="person-address-add-table">
+        <tbody class="person-address">
+            <tr class="item">
+                <th class="address-add-head">收货人：</th>
+                <td>
+                    <input id="J_userName" class="person-address-add-input" name="userName" value="<%=userName%>" />
+                    <span class="fc-f60">*</span>
+                </td>
+            </tr>
+            <tr class="item">
+                <th class="address-add-head">详细地址：</th>
+                <td id="J_selectAddress"></td>
+            </tr>
+            <tr class="item">
+                <th>&nbsp;</th>
+                <td>
+                    <p>
+                        <input id="J_address" class="person-address-add-input detailed-address-input" name="address" placeholder="具体地址" value="<%=address%>" />
+                        <span class="fc-f60">*</span>
+                    </p>
+                    <p>
+                        <label class="person-address-add-tip">&nbsp;&nbsp;&nbsp;(不需要重复填写省/市/区)</label>
+                    </p>
+                    
+                </td>
+            </tr>
+            <tr class="item">
+                <th class="address-add-head">固定电话：</th>
+                <td>
+                    <input id="J_tel" class="person-address-add-input" name="tel" value="<%=telephone%>" />
+                    <label class="person-address-add-tip"><span>*</span>&nbsp;&nbsp;（示例：020-88888888-999）</label>
+                </td>
+            </tr>
+            <tr class="item">
+                <th class="address-add-head">手机：</th>
+                <td>
+                    <input id="J_phone" class="person-address-add-input" name="phone" value="<%=mobilephone%>" />
+                    <label class="person-address-add-tip"><span>*</span>&nbsp;&nbsp;（手机或固话必填一项）</label>
+                </td>
+            </tr>
+            <tr class="item">
+                <th>&nbsp;</th>
+                <td>
+                    <div class="defult-address-choose">
+                        <%if(defaultAdd=="1"){%>
+                        <a id="J_setDefault" href="javascript:void(0);" class="icon icon-box-checked"></a>
+                        <%}else{%>
+                        <a id="J_setDefault" href="javascript:void(0);" class="icon icon-box-normal"></a>
+                        <%}%>
+                        <span class="address-font-gray">设为默认地址</span>
+                        <input type="hidden" name="setDefault" value="<%=defaultAdd%>" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,85 @@
+/**
+ *  ---------------------------------------------
+ *      全站通用搜索框样式
+ *      这个组件在全站范围内都有引用，部分样式与
+ *      common-head有重叠，得查清楚去除冗余部分
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+.search-bar {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    height: 30px;
+    border: 2px solid #f60;
+    vertical-align: middle;
+    .search-keyword {
+        position: relative;
+        z-index: 992;
+        display: block;
+        float: left;
+        height: 30px;
+        line-height: 30px\9;
+        padding: 0 10px;
+        color: #333;
+        background: none;
+        vertical-align: middle;
+    }
+    .seach-btn {
+        display: inline-block;
+        float: left;
+        width: 30px;
+        height: 14px;
+        padding: 7px 0;
+        overflow: hidden;
+        text-align: center;
+        i {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+        }
+    }
+    .seach-btn-big {
+        position: absolute;
+        z-index: 991;
+        right: -91px;
+        top: -2px;
+        display: inline-block;
+        float: left;
+        width: 90px;
+        height: 34px;
+        line-height: 34px;
+        font-size: 14px;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+        background-color: #f60;
+        &:hover {
+            background-color: #ee950a;
+        }
+        i {
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+        }
+    }
+    .hot-keyword-tip {
+        position: absolute;
+        z-index: 991;
+        left: 10px;
+        top: 0px;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        color: #b4b4b4;
+        cursor: text;
+    }
+}

@@ -1,0 +1,569 @@
+
+@mixin sprite-wrap($sprite) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+  @extend .khicons;
+}
+
+i {
+  	display: inline-block;
+	vertical-align: middle;
+	font-style: normal;
+}
+
+/*=============== top bar ===================================*/
+.icon-top-hotline {
+  @include sprite-wrap($icon_phone_20x20);
+}
+/*=============== member header search form =================*/
+.icon-m-search {
+  	@include sprite-wrap($icon_magnify_f60);
+} 
+.icon-s-small-fff {
+	@include sprite-wrap($icon_magnify_fff);
+}
+
+/*================ member index nav icon ================*/
+.icon-m-nav-l {
+	@include sprite-wrap($icon-member-nav-l);
+}
+.icon-m-nav-r {
+	@include sprite-wrap($icon-member-nav-r);
+}
+
+/*================ member index icons ====================*/
+.icon-club-vip {
+	@include sprite-wrap($icon_club_vip_fff);
+}
+
+.icon-member-safe {
+	@include sprite-wrap($icon_safe);
+}
+
+.icon-safe-green {
+	@include sprite-wrap($icon_safe_line_green);
+}
+.icon-safe-gray {
+	@include sprite-wrap($icon_safe_line_gray);
+}
+
+/*================ order-pay ==========================*/
+.icon-radio-off {
+	*display: block!important;
+	@include sprite-wrap($icon_radio_ccc);
+	vertical-align:middle;
+}
+.icon-radio-on {
+	*display: block!important;
+	@include sprite-wrap($icon_radio_f60);
+	vertical-align:middle;
+}
+
+.icon-order-pay {
+	vertical-align: middle;
+	@include sprite-wrap($customer_chat_30x30_f60);
+}
+.icon-date-picker {
+	width: 19px;
+	height: 20px;
+	@include sprite-wrap($icon-pick-time19x20);
+}
+
+/*================ btns =======================*/
+/* btn 130x30 */
+.btns-130x30 {
+	*display: block!important;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	@include sprite-wrap($btn_bg_130x30_f60);
+}
+.btns-130x30:hover {
+	color: #fff;
+	@include sprite-wrap($btn_bg_130x30_ee9);
+}
+/* btn 67x20 */
+.btns-enable-67x20 {
+	*display: block!important;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	@include sprite-wrap($btn_bg_67x20_f60);
+}
+.btns-enable-67x20:hover {
+	color: #fff;
+	@include sprite-wrap($btn_bg_67x20_ee9);
+}
+
+.btns-disable-67x20 {
+	*display: block!important;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	cursor: default;
+	@include sprite-wrap($btn_bg_67x20_ccc);
+}
+
+/* btn 80x30 */
+.btns-enable-80x30 {
+	*display: block!important;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	@include sprite-wrap($btn_bg_80x30_f60);
+}
+.btns-enable-80x30:hover {
+	color: #fff;
+	@include sprite-wrap($btn_bg_80x30_ee9);
+}
+
+/*============== face icons  =========================*/
+.icon-face-smile-orange {
+	@include sprite-wrap($face_smile_f60);
+}
+
+.icon-face-frown-blue {
+	@include sprite-wrap($face_frown_61b);
+}
+
+.icon-face-frown-orange {
+	@include sprite-wrap($face_frown_f60);
+}
+
+.icon-face-sad-orange {
+	@include sprite-wrap($face_sad_f60);
+}
+
+/*============== pages icons =====================*/
+
+.icon-prev-small-disable {
+	@include sprite-wrap($icon_prev_20x20_disable);
+}
+.icon-prev-small-enable {
+	@include sprite-wrap($icon_prev_20x20_enable);
+}
+
+.icon-next-small-disable {
+	@include sprite-wrap($icon_next_20x20_disable);
+}
+.icon-next-small-enable {
+	@include sprite-wrap($icon_next_20x20_enable);
+}
+
+/*============== order list icons ===================*/
+.icon-phone-blue {
+	@include sprite-wrap($icon_phone_20x20_61b);
+}
+.icon-phone-orange {
+	@include sprite-wrap($icon_phone_20x20_f60);
+}
+
+.icon-o2o-blue {
+	@include sprite-wrap($icon_o2o_61b);
+}
+
+.icon-box-normal {
+	@include sprite-wrap($icon_checkbox_nochecked);
+  	vertical-align: middle;
+}
+
+.icon-box-checked {
+	@include sprite-wrap($icon_checkbox_checked);
+}
+
+
+/*============== select corner =======================*/
+.icon-gray-left {
+	@include sprite-wrap($corner_gray_left);
+}
+.icon-gray-right {
+	@include sprite-wrap($corner_gray_right);
+}
+
+/*============== order detail icons =======================*/
+.icon-detail-delete {
+	@include sprite-wrap($icon_delete_8c8);
+}
+.icon-detail-chat {
+	@include sprite-wrap($icon_detail_chat);
+}
+
+.icon-circle-blue {
+	@include sprite-wrap($icon_detail_circle_blue);
+}
+.icon-circle-gray {
+	@include sprite-wrap($icon_detail_circle_gray);
+}
+
+.icon-count-time {
+	@include sprite-wrap($da_icon_time);
+}
+
+/* ===================== order evaluate icons =================================*/
+.icon-star-on {
+	@include sprite-wrap($icon_star_on);
+}
+.icon-star-off {
+	@include sprite-wrap($icon_star_off);
+}
+/* ========================= aftersales apply icons ===========================*/
+.icon-warn-small {
+	//margin: 0 5px;
+	@include sprite-wrap($icon_warn_14x14_f60);
+}
+.icon-tip-wrong {
+	@include sprite-wrap($icon_warn_14x14_c13);
+}
+.icon-tip-ok {
+	@include sprite-wrap($icon_tip_ok);
+}
+.icon-refund-delete {
+	@include sprite-wrap($icon_delete_fff);
+}
+.icon-refund-find {
+	@include sprite-wrap($icon_find_fff);
+}
+/*============= corner tab nav icon ===========================*/
+.corner-tab-nav a .icon-c-nav-l {
+	@include sprite-wrap($icon_tab_nav_left_8c8);
+}
+.corner-tab-nav a:hover .icon-c-nav-l {
+	@include sprite-wrap($icon_tab_nav_left_61b);
+}
+.corner-tab-nav a.cur .icon-c-nav-l {
+	@include sprite-wrap($icon_tab_nav_left_61b);
+}
+
+.corner-tab-nav a .icon-c-nav-r {
+	@include sprite-wrap($icon_tab_nav_right_8c8);
+}
+.corner-tab-nav a:hover .icon-c-nav-r {
+	@include sprite-wrap($icon_tab_nav_right_61b);
+}
+.corner-tab-nav a.cur .icon-c-nav-r {
+	@include sprite-wrap($icon_tab_nav_right_61b);
+}
+
+/* ================ delete icons && cart icons ======================*/
+.icon-delete-tpl {
+	vertical-align: middle;
+}
+.icon-cart-tpl {
+	margin: 0 10px;
+	vertical-align: middle;
+}
+.icon-cart-num {
+	@include sprite-wrap($icon_cart_num);
+}
+/* delete icons */
+.icon-delete-8c8 {
+	@extend .icon-delete-tpl;
+	@include sprite-wrap($icon_delete_8c8);
+}
+.icon-delete-8c8:hover {
+	@include sprite-wrap($icon_delete_f60);
+}
+
+.icon-delete-ccc {
+	@extend .icon-delete-tpl;
+	@include sprite-wrap($icon_delete_ccc);
+	cursor: default;
+}
+
+/* cart icons */
+.icon-cart-ccc {
+	@extend .icon-cart-tpl;
+	@include sprite-wrap($icon_cart_ccc);
+	cursor: default;
+}
+
+.icon-cart-8c8 {
+	@extend .icon-cart-tpl;
+	@include sprite-wrap($icon_cart_8c8);
+}
+.icon-cart-8c8:hover {
+	@include sprite-wrap($icon_cart_f60);
+}
+
+.icon-cart-f60 {
+	@extend .icon-cart-tpl;
+	@include sprite-wrap($icon_cart_f60);
+}
+.icon-cart-fff {
+  @extend .icon-cart-tpl;
+  @include sprite-wrap($icon_cart_fff);
+}
+
+/* cart empty icons */
+.icon-shopping-cart {
+	@include sprite-wrap($icon_shopping_cart);
+}
+/* cart step icons */
+.icon-step-on {
+	@include sprite-wrap($icon_step_on);
+}
+.icon-step-off {
+	@include sprite-wrap($icon_step_off);
+}
+.icon-step-point-on {
+	@include sprite-wrap($icon_step_point_on);
+}
+.icon-step-point-off {
+	@include sprite-wrap($icon_step_point_off);
+}
+.icon-cart-favorite-on {
+	@include sprite-wrap($icon_cart_favorite_on);
+}
+.icon-cart-favorite-off {
+	@include sprite-wrap($icon_cart_favorite_off);
+}
+/*==== person-address icons ==================*/
+/* modify icon */
+.icon-modify-8c8 {
+	@include sprite-wrap($icon_modify_8c8);
+}
+.icon-modify-8c8:hover {
+	@include sprite-wrap($icon_modify_f60);
+}
+// point icon
+.icon-point-on {
+	@include sprite-wrap($icon_point_61b);
+}
+.icon-point-off {
+	@include sprite-wrap($icon_point_333);
+}
+/*======================== register ========================*/
+.icon-select-up-2f6 {
+	@include sprite-wrap($icon_select_down_hover);
+}
+.icon-select-up-2f6:hover {
+	@include sprite-wrap($icon_select_up_2f6);
+}
+/*==================================== points center icons ================================*/
+.icon-hot-1 {
+	@include sprite-wrap($icon_hot_1);
+}
+.icon-hot-2 {
+	@include sprite-wrap($icon_hot_2);
+}
+.icon-hot-3 {
+	@include sprite-wrap($icon_hot_3);
+}
+.icon-hot-4 {
+	@include sprite-wrap($icon_hot_4);
+}
+.icon-hot-5 {
+	@include sprite-wrap($icon_hot_5);
+}
+.icon-hot-6 {
+	@include sprite-wrap($icon_hot_6);
+}
+.icon-hot-7 {
+	@include sprite-wrap($icon_hot_7);
+}
+.icon-hot-8 {
+	@include sprite-wrap($icon_hot_8);
+}
+.icon-hot-9 {
+	@include sprite-wrap($icon_hot_9);
+}
+.icon-hot-10 {
+	@include sprite-wrap($icon_hot_10);
+}
+/* club level icons */
+.icon-level-0 {
+	@include sprite-wrap($icon_level_0);
+}
+.icon-level-1 {
+	@include sprite-wrap($icon_level_1);
+}
+.icon-level-2 {
+	@include sprite-wrap($icon_level_2);
+}
+.icon-level-3 {
+	@include sprite-wrap($icon_level_3);
+}
+.icon-level-4 {
+	@include sprite-wrap($icon_level_4);
+}
+/* help icon */
+.icon-help {
+	@include sprite-wrap($icon_help);
+}
+.icon-help:hover {
+  	@include sprite-wrap($icon_help);
+}
+/* icon point-right*/
+.icon-point-right {
+	@include sprite-wrap($icon_point_right_fff);
+}
+/*============ head nav icon ===============*/
+.icon-nav-hot {
+	@include sprite-wrap($icon_nav_hot);
+}
+.icon-point-down {
+	@include sprite-wrap($icon_point_down_f60);
+}
+.icon-point-down-333 {
+	@include sprite-wrap($icon_point_down_333);
+}
+
+.icon-focus-sina {
+	@include sprite-wrap($icon_focus_sina);
+}
+
+.icon-share-email {
+	@include sprite-wrap($icon_share_email);
+}
+
+/*============= member icons ===========================*/
+.icon-item-rebate {
+	@include sprite-wrap($icon_item_rebate);
+}
+.icon-item-points-exchange {
+	@include sprite-wrap($icon_item_points_exchange);
+}
+.icon-item-points-buy {
+	@include sprite-wrap($icon_item_points_buy);
+}
+.icon-chat-qq {
+	@include sprite-wrap($icon_chat_qq);
+}
+.icon-address-close {
+	@include sprite-wrap($icon_address_close);
+}
+.icon-select-down {
+	@include sprite-wrap($icon_select_down);
+}
+.icon-select-down-small {
+	@include sprite-wrap($icon_select_down_small);
+}
+/* float nav icons */
+.icon-float-qq {
+	@include sprite-wrap($icon_float_nav_qq);
+}
+.icon-float-cart {
+	@include sprite-wrap($icon_float_nav_cart);
+}
+.icon-float-wechat {
+	@include sprite-wrap($icon_float_nav_wechat);
+}
+.icon-float-feedback {
+	@include sprite-wrap($icon_float_nav_feedback);
+}
+.icon-float-top {
+	@include sprite-wrap($icon_float_nav_top);
+}
+.icon-float-phone {
+  	@include sprite-wrap($icon_min_bar_phone);
+}
+/* item service icons */
+.icon-item-service {
+	@include sprite-wrap($icon_item_servie);
+}
+/* item recomment list icons */
+.icon-item-rec-prev {
+	@include sprite-wrap($icon_item_rec_prev_gray);
+}
+.icon-item-rec-prev:hover {
+	@include sprite-wrap($icon_item_rec_prev_orange);
+}
+
+.icon-item-rec-next {
+	@include sprite-wrap($icon_item_rec_next_gray);
+}
+.icon-item-rec-next:hover {
+	@include sprite-wrap($icon_item_rec_next_orange);
+}
+.icon-item-rec-point {
+	@include sprite-wrap($icon_item_rec_point_right);
+}
+/*  club index icons  */
+.icon-single-tip-f60 {
+	@include sprite-wrap($icon_single_tip_f60);
+}
+.icon-crown-f60 {
+	@include sprite-wrap($icon_crown_f60);
+}
+/* my wallet icons */
+.icon-tip-right-blue {
+	@include sprite-wrap($icon_tip_right_blue);
+}
+.icon-tip-right-green {
+	@include sprite-wrap($icon_tip_right_green);
+}
+.icon-tip-right-orange {
+	@include sprite-wrap($icon_tip_right_orange);
+}
+
+/* member privilege icons */
+.icon-privilege-1 {
+	@include sprite-wrap($icon_member_privilege_1);
+}
+.icon-privilege-2 {
+	@include sprite-wrap($icon_member_privilege_2);
+}
+.icon-privilege-3 {
+	@include sprite-wrap($icon_member_privilege_3);
+}
+.icon-privilege-4 {
+	@include sprite-wrap($icon_member_privilege_4);
+}
+.icon-privilege-5 {
+	@include sprite-wrap($icon_member_privilege_5);
+}
+.icon-privilege-6 {
+	@include sprite-wrap($icon_member_privilege_6);
+}
+.icon-privilege-7 {
+	@include sprite-wrap($icon_member_privilege_7);
+}
+.icon-privilege-8 {
+	@include sprite-wrap($icon_member_privilege_8);
+}
+.icon-privilege-9 {
+	@include sprite-wrap($icon_member_privilege_9);
+}
+/* points index icons */
+.icon-points-tip-limit {
+	@include sprite-wrap($icon_points_tip_limit);
+}
+/* cart confirm icons */
+.icon-label-333 {
+	@include sprite-wrap($icon_label_333);
+}
+.icon-label-f60 {
+	@include sprite-wrap($icon_label_f60);
+}
+.icon-label-61b {
+	@include sprite-wrap($icon_label_61b);
+}
+/*=================== item page icons =========================*/
+.icon-item-fav-off {
+  @include sprite-wrap($icon_item_favorite_off);
+}
+.icon-item-fav-on {
+  @include sprite-wrap($icon_item_favorite_on);
+}
+.item-hot-point-up {
+  @include sprite-wrap($item_hot_point_up_link);
+}
+.item-hot-point-up:hover {
+  @include sprite-wrap($item_hot_point_up_hover);
+}
+.item-hot-point-down {
+  @include sprite-wrap($item_hot_point_down_link);
+}
+.item-hot-point-down:hover {
+  @include sprite-wrap($item_hot_point_down_hover);
+}
+.item-hot-check-off {
+   @include sprite-wrap($item_hot_check_off);
+ }
+.item-hot-check-on {
+  @include sprite-wrap($item_hot_check_on);
+}

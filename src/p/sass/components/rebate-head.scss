@@ -1,0 +1,80 @@
+/**
+ *  ---------------------------------------------
+ *      返利详情的头部
+ *      此模块用在返利详情页、创建小店（分享）、
+ *      返利小店（未创建、已创建、用户观看）
+ *      
+ *      author: zhangzhensheng
+ *      date  : 2016-04-05
+ * 
+ *  ---------------------------------------------
+ */
+ .rebate-detail-head {
+ 	width: 100%;
+ 	height: 420px;
+ 	background: url(#{$cdn}/images/rebate/rebate-head-bg.jpg) center no-repeat;
+ 	overflow: hidden;
+ 	.head-portrait {
+ 		position: relative;
+ 		margin: 40px auto 0;
+ 		width: 206px;
+ 		height: 206px;
+ 		border: 2px solid #70787f;
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 200px;
+			height: 200px;
+		}
+ 	}
+ 	.head-shopname {
+	    height: 78px;
+	    font-size: 18px;
+ 		text-align: center;
+	    line-height: 56px;
+ 		span {
+ 			color: #fff;
+ 		}
+ 		input {
+ 			display: none;
+ 			padding-left: 10px;
+ 			border-radius: 4px;
+ 		}
+ 		i {
+ 			margin: -9px 0 0 7px;
+ 			display: inline-block;
+ 			width: 20px;
+ 			height: 20px;
+ 			background: url(#{$cdn}/images/rebate/rebate-icon.png) -35px -5px no-repeat;
+ 		}
+ 	}
+ 	.head-toshop {
+ 		margin: 0 auto;
+ 		width: 210px;
+ 		height: 60px;
+ 		color: #fff;
+ 		font-size: 18px;
+ 		text-align: center;
+ 		line-height: 60px;
+ 		cursor: pointer;
+ 		background: url(#{$cdn}/images/rebate/backshop-btn.png) -2px -2px no-repeat;
+ 		&:hover {
+ 			background-position: -2px -64px;
+ 		}
+ 		a {
+ 			display: block;
+ 			color: #fff;
+ 		}
+ 		i {
+ 			margin: -2px 0 0 7px;
+ 			display: inline-block;
+ 			width: 20px;
+ 			height: 20px;
+ 			background: url(#{$cdn}/images/rebate/rebate-icon.png) -5px -36px no-repeat;
+ 		}
+ 	}
+ }

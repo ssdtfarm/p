@@ -1,0 +1,1 @@
+define("libpage.0.0/person-current-data",[],function(e,n,a){});

@@ -1,0 +1,800 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // 会员系统通用头部
+@import "../components/common-foot.scss";  // 全站通用底部
+
+@import "../components/member-ui.scss";     // 头部搜索框样式
+@import "../components/member-select.scss";    // 会员系统导航样式
+@import "../components/club-nav.scss";         // icon-sprite
+@import "../components/common-search-bar.scss";         // icon-sprite
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  club-rebate-index 会员俱乐部返利商城首页
+ *
+ *  author:JinJing
+ *  date:20150318
+ *
+ *  author:JinJing
+ *  date:20150403
+ */
+
+span {
+    vertical-align: top;
+}
+
+.w90 {
+    width: 90px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.club-rebate-index-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btn-orange {
+    color: #fff;
+    background: #f60;
+}
+
+.btn-blue {
+    color: #fff;
+    background: #2f6ceb;
+}
+
+.btn-blue:hover {
+    background: #ee950a;
+}
+
+.btn-90X30 {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+/*icon*/
+
+.creat-my-store .icon-point-right,
+.club-rebate-list-tab .icon-point-right {
+    position: relative;
+    left: 5px;
+    top: -1px;
+}
+/*首页顶部模块 幻灯*/
+
+.club-rebate-slider-warp {
+    width: 100%;
+    min-width: 1190px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.club-rebate-slider-warp .index-full-slider {
+    position: relative;
+    z-index: 98;
+    width: 100%;
+    height: 380px;
+    min-width: 1190px;
+}
+
+.index-full-slider .slider-item {
+    width: 100%;
+    min-width: 1190px;
+    height: 380px;
+    float: left;
+}
+
+.club-rebate-slider .slider-item .slider-item-href {
+    width: 100%;
+    height: 380px;
+    display: block;
+}
+/*幻灯数字控制按钮*/
+
+.index-full-slider .hd {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    min-width: 1190px;
+    text-align: center;
+}
+
+.index-full-slider .hd li {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    background: #333;
+    text-indent: -9999px;
+}
+
+.index-full-slider .hd li.on {
+    background: #f60;
+}
+/*返现商城总计数*/
+
+.club-rebate-total {
+    width: 750px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.club-rebate-total dd {
+    width: 50%;
+    float: left;
+}
+
+.club-rebate-total dd p {
+    margin-top: 7px;
+}
+
+.club-rebate-total dd .parameters {
+    font-size: 24px;
+}
+
+.club-rebate-total dd .quantity {
+    font-size: 48px;
+    font-weight: bold;
+}
+.club-rebate-total dd .quantity small{
+    font-size: 24px;
+}
+/*创建我的商城*/
+
+.creat-my-store {
+    position: relative;
+    z-index: 990;
+    height: 248px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+/*未登录*/
+
+.creat-my-store .unlogin {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.creat-my-store .unlogin dt {
+    height: 100px;
+    float: left;
+}
+
+.creat-my-store .unlogin dt img {
+    border: 1px solid #ccc;
+}
+
+.creat-my-store .unlogin dd {
+    width: 140px;
+    height: 97px;
+    float: left;
+    padding-top: 3px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.creat-my-store .login-now .no-have-id {
+    margin-top: 10px;
+    color: #f60;
+}
+
+.login-now .no-have-id span {
+    vertical-align: middle;
+}
+
+.login-now .no-have-id .register-href,.login-now .no-have-id .register-href:visited{
+    color: #f60;
+}
+.login-now .no-have-id .register-href:hover{
+    color: #f60;
+}
+
+/*会员信息部分*/
+
+.creat-my-store .member-detail {
+    width: 250px;
+    height: 100px;
+}
+
+.member-detail dt {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.member-detail dd {
+    width: 120px;
+    float: left;
+    padding-left: 10px;
+}
+
+.member-detail dt .member-head-img {
+    width: 98px;
+    height: 98px;
+    border: 1px solid #ccc;
+}
+
+.member-detail dd h5 {
+    width: 120px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*经验条*/
+
+.member-detail dd .experience-line {
+    position: relative;
+    z-index: 990;
+    width: 120px;
+    height: 10px;
+    margin-top: 15px;
+    *margin-top: 7px!important;
+    /* fixed IE7 */
+    
+    *margin-right: 5px!important;
+    /* fixed IE7 */
+    
+    text-indent: -9999px;
+}
+
+.member-detail dd .experience-line p {
+    position: absolute;
+    z-index: 991;
+    left: 0;
+    top: 0;
+}
+
+.member-detail dd .experience-line p.icon-experience-333 {
+    position: absolute;
+    z-index: 993;
+    width: 120px;
+    height: 10px;
+    display: inline-block;
+    background: url(../images/icon_experience_line_333.png);
+}
+
+.member-detail dd .experience-line p.icon-safe-green {
+    z-index: 994;
+    height: 10px;
+}
+
+.member-detail .icon-safe-green .experience-tip {
+    position: absolute;
+    z-index: 994;
+    right: -10px;
+    top: 10px;
+    width: 20px;
+    height: 25px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    text-indent: 0;
+    color: #fff;
+    background: url(../images/icons_my_kh.png) -63px -33px;
+}
+/*返现 邀请明细*/
+
+.creat-my-store .rabate-invite-info {
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 17px;
+    clear: both;
+}
+
+.creat-my-store .rabate-invite-info dl {
+    width: 124px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.rabate-invite-info dl dd {
+    margin-top: 3px;
+}
+
+.rabate-invite-info dl.info-2 {
+    border-right: none;
+}
+
+.rabate-invite-info dd .detail-href,.rabate-invite-info dd .detail-href:visited{
+    color: #2f6ceb;
+}
+.rabate-invite-info dd .detail-href:hover{
+    color: #f60;
+}
+
+.creat-my-store a.creat-my-store-btn {
+    position: absolute;
+    z-index: 991;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    background: #f60;
+}
+.creat-my-store a.creat-my-store-btn:hover {
+    background: #ee950a;
+}
+/*================== 左侧栏 ===================*/
+/*看看大家都在分享哪些商品*/
+
+.club-aside h3 {
+    position: relative;
+    z-index: 990;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0;
+}
+
+.club-aside h3 .triangle-down {
+    position: absolute;
+    z-index: 991;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    display: block;
+    margin-left: -5px;
+    font-size: 0;
+    border-width: 10px 7px 0 7px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid solid dashed solid;
+}
+/*top-2*/
+
+.club-aside .club-diy-share .share-goods-top-2 {
+    margin-top: 20px;
+}
+
+.club-diy-share .share-goods-top-2 .top-2-item {
+    margin-top: 10px;
+}
+
+.club-diy-share .share-goods-top-2 .pic {
+    position: relative;
+    float: left;
+    width: 140px;
+    height: 94px;
+    overflow: hidden;
+}
+
+.share-goods-top-2 .pic img {
+    width: 140px;
+    height: 94px;
+}
+
+.club-diy-share .share-goods-top-2 .goods-info {
+    float: left;
+    width: 140px;
+    height: 94px;
+    padding-left: 10px;
+}
+
+.share-goods-top-2 .goods-info .name {
+    height: 35px;
+    display: block;
+    margin-top: -3px;
+    overflow: hidden;
+    color: #8c8c8c;
+}
+
+.share-goods-top-2 .goods-info .name:hover {
+    color: #f60;
+}
+
+.share-goods-top-2 .goods-info .price {
+    margin-top: 2px;
+    color: #8c8c8c;
+}
+
+.share-goods-top-2 .goods-info .rebate-percent {
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #f60;
+}
+
+.share-goods-top-2 .goods-info .rebate-percent b {
+    font-size: 18px;
+}
+/*top-4*/
+
+.share-goods-top-4 {}
+
+.share-goods-top-4 .top-4-item {
+    position: relative;
+    z-index: 990;
+    width: 140px;
+    height: 94px;
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+.share-goods-top-4 .item-2,
+.share-goods-top-4 .item-4 {
+    margin-right: 0;
+}
+
+.share-goods-top-4 .top-4-item .info {
+    position: absolute;
+    z-index: 992;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 74px;
+    padding: 10px;
+    display: none;
+    color: #fff;
+}
+
+.top-4-item .info .name {
+    height: 34px;
+    overflow: hidden;
+    line-height: 18px;
+}
+
+.top-4-item .info .price {
+    margin-top: 2px;
+}
+
+.top-4-item .info .rebate-percent {
+    color: #f60;
+}
+
+.top-4-item .info .rebate-percent b {
+    font-size: 18px;
+}
+
+.share-goods-top-4 .top-4-item .info-bg {
+    position: absolute;
+    z-index: 991;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 94px;
+    display: none;
+    background: #000;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+.share-goods-top-4 .top-4-item:hover .info {
+    display: block;
+}
+
+.share-goods-top-4 .top-4-item:hover .info-bg {
+    display: block;
+}
+/*分享排行榜*/
+
+.share-top {
+    margin-top: 20px;
+    padding-top: 20px;
+    background: #ffeec1;
+}
+
+.share-top dt {
+    width: 170px;
+    margin: 0 auto;
+    padding: 7px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: 2px dotted #f60;
+    border-radius: 30px;
+}
+
+.share-top dt .icon-star-on {
+    display: inline-block;
+    margin: -4px 5px 0;
+}
+
+.share-top .share-top-table {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.share-top-table thead td {
+    padding: 8px 0 7px 0;
+    background: #fed586;
+}
+
+.share-top-table tbody tr {
+    border-top: 1px solid #fed586;
+}
+
+.share-top-table tbody th {
+    position: relative;
+}
+
+.share-top-table tbody th i {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 0;
+}
+
+.share-top-table tbody td {
+    padding: 10px 0;
+}
+
+.share-top-table tbody td .name {
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*广告栏*/
+
+aside .aside-AD-area {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+/*======================================================*/
+/*==========  筛选项目   ==========*/
+
+.club-rebate-filler-warp {
+    padding: 0 20px 10px 20px;
+    border: 1px solid #ccc;
+}
+
+.club-rebate-index-main .club-rebate-filler {
+    height: 30px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    /*overflow: hidden;*/
+    
+    border-bottom: 1px dashed #ccc;
+}
+
+.club-rebate-filler .filler-item {
+    margin-right: 10px;
+    /*overflow: hidden;*/
+    
+    float: left;
+}
+
+.club-rebate-filler .filler-item dt {
+    float: left;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+}
+
+.club-rebate-filler .filler-item dd {
+    float: left;
+    height: 30px;
+    margin: 0;
+}
+
+.club-rebate-filler .filler-search-btn {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background: #f60;
+}
+
+.club-rebate-filler .filler-search-btn:hover {
+    color: #fff;
+    background: #ee950a;
+}
+/*商品类别*/
+
+.club-rebate-filler-category {
+    padding-top: 10px;
+}
+
+.club-rebate-filler-category .category-item {
+    display: inline-block;
+    margin: 0 15px;
+    color: #333;
+    vertical-align: top;
+}
+
+.club-rebate-filler-category .cur,
+.club-rebate-filler-category .category-item:hover {
+    color: #f60;
+}
+/*==========  列表部分开始   ==========*/
+/*
+ *  club-rebate-index 会员俱乐部返利商城首页
+ *
+ *  author:LiuDan
+ *  date:20150318
+ */
+
+.btn-190x40 {
+    display: inline-block;
+    width: 190px;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 4px;
+}
+/* 橙色按钮 */
+
+.btn-orange {
+    background-color: #f60;
+}
+
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+/*table*/
+
+.club-rebate-brand-td {
+    position: relative;
+    z-index: 990;
+}
+
+.club-rebate-list-tab {
+    margin-top: 10px;
+}
+/*设置table中每行的样式*/
+
+.club-rebate-item {
+    border: 1px solid #b4b4b4;
+}
+.club-rebate-item:hover{
+    border-color: #f60;
+}
+/*table左侧图片*/
+
+.club-rebate-list-pict {
+    width: 46%;
+    padding-right: 15px;
+}
+
+.club-rebate-list-tab td {
+    vertical-align: top;
+}
+/*table右侧第一行字体样式*/
+
+.club-rebate-pic-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.club-rebate-pic-title a{
+    color: #8c8c8c;
+}
+.club-rebate-item:hover .club-rebate-pic-title a{
+    color: #f60;
+}
+
+.club-rebate-item:hover .club-rebate-pic-title{
+    color: #f60
+}
+/*右侧第二行字体样式*/
+
+.club-rebate-pic-activity {
+    margin-top: 5px;
+    font-size: 12px;
+}
+/*右侧第三行字体样式*/
+
+.club-rebate-price {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*右侧第四行字体样式*/
+
+.club-highest-rebate-price {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f60;
+}
+/*右侧第五行按钮*/
+
+.club-rebate-share {
+    margin-top: 10px;
+}
+/*右侧第六行字体样式*/
+
+.club-rebate-percent {
+    height: 24px;
+    margin-top: 5px;
+    color: #8c8c8c;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*右侧第七行字体样式*/
+
+.club-rebate-level {
+    margin-top: 8px;
+    color: #61bbe0;
+}
+/*活动时间*/
+
+.count-time {
+    position: absolute;
+    z-index: 991;
+    bottom: 10px;
+    left: 0;
+    color: #8c8c8c;
+}
+/*table右侧单元格小品牌样式*/
+
+.club-rebate-brand {
+    position: absolute;
+    z-index: 991;
+    right: 5px;
+    bottom: 10px;
+}
+/*空白行*/
+
+.club-rebate-blank-td {
+    height: 20px;
+}
+/*鼠标加载*/
+
+.club-rebate-mouse {
+    height: 160px;
+    font-size: 14px;
+    text-align: center;
+}

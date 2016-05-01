@@ -1,0 +1,151 @@
+ <!doctype html>
+<html>
+
+ <head>
+     <!-- 载入头部 -->
+     @@include("include_head.html",{
+         "cdn"   : "@@miscPath",
+         "name"  : "reg-succ",
+         "title" : "金海马商城--注册成功"
+     })
+ </head>
+
+ <body>
+     <!-- 顶部栏开始 -->
+     @@include("top-bar.html")
+     <!-- 顶部栏结束 -->
+     <!-- 头部开始 -->
+     @@include("member-header.html",{
+         "cdn" : "@@miscPath",
+         "headerName" : "注册金海马商城会员",
+         "search" : false
+     })
+     <!-- 头部结束 -->
+    <!-- 注册页面开始 -->
+    <section class="register-warp kh-row-24 clearfix">
+        <input type="hidden" id="security" name="1494676" value="2786325">
+        <div class="succ-tips">
+            <p class="tips-1"><i class="icon-face-smile-orange"></i>恭喜您，注册成功！</p>
+            <a class="shopping-btn" href="/">立即购物</a>
+            <p class="tips-2">首次下单即<span class="tips-3">送价值79元</span>的炫彩U型护颈枕</p>
+        </div>
+        <div class="user-info">
+            <form action="" id="succForm" action="123" method="get">
+                <div class="kh-form-wrap">
+                    <p class="tips">完善您的个人信息，有助于我们为您提供更优质的服务。</p>
+                </div>
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item J_need" name="userName" placeholder="您的称呼">
+                </div>
+                <div class="kh-form-wrap gender">
+                    <span class="gender-select" data-value="1"><i class="icon-radio-off icon-radio-on "></i>男士</span>
+                    <span class="gender-select" data-value="2"><i class="icon-radio-off"></i>女士</span>
+                    <input type="hidden" name="gender" value="1">
+                </div>
+                <div class="kh-form-wrap">
+                    <div class="kh-my-select J_select_province">
+                        <ul class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">所在省</h2>
+                        <input type="hidden" name="province">
+                    </div>
+                    <div class="kh-my-select J_select_city">
+                        <ul class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">所在市</h2>
+                        <input type="hidden" name="city">
+                    </div>
+                    <div class="kh-my-select J_select_area">
+                        <ul class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">所在区</h2>
+                        <input type="hidden" name="area">
+                    </div>
+                </div>
+                <div class="kh-form-wrap favors">
+                    <p>喜欢类型：</p>
+                    <span class="favors-select" data-value="1"><i class="icon-box-normal"></i><span>美式家具</span></span>                        
+                    <span class="favors-select" data-value="2"><i class="icon-box-normal"></i><span>欧式家具</span></span>
+                    <span class="favors-select" data-value="3"><i class="icon-box-normal"></i><span>日式家具</span></span>
+                    <span class="favors-select" data-value="4"><i class="icon-box-normal"></i><span>中式家具</span></span>
+                    <input type="hidden" name="favors" value="">
+                </div>
+                <div class="kh-form-wrap">
+                    <p >生日：</p>
+                    <div class="kh-my-select J_select_year">
+                        <ul class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">年</h2>
+                        <input type="hidden" name="year">
+                    </div>
+                    <div class="kh-my-select J_select_month">
+                        <ul class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">月</h2>
+                        <input type="hidden" name="month">
+                    </div>
+                    <div class="kh-my-select J_select_day">
+                        <ul id="J_birthDay" class="select-list"></ul>
+                        <span class="trianger-down"></span>
+                        <h2 class="select-title">日</h2>
+                        <input type="hidden" name="day">
+                    </div>
+                </div>                
+<!--                 <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item J_need" name="userName" placeholder="生日">
+                </div> -->
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item J_need" name="qq" placeholder="qq">
+                </div>
+                <!-- 手机注用户 显示邮箱验证 -->
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item email-item" name="email" placeholder="验证邮箱"><i class="icon-tip-ok"></i>
+                    <span class="email-check-btn J_getMailcode">获取邮箱验证码</span>
+                    <a href="#" class="mail-link">验证码发送成功，进入邮箱查看></a>
+                    <div class="error-tips mail-error-tips"><i class="icon-tip-wrong"></i><span class="tips-info"></span></div>
+                </div>
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item emailCode codeInput" name="emailCode" placeholder="请输入验证码"><i class="icon-tip-ok"></i>
+                    <div class="error-tips mail-error-tips"><i class="icon-tip-wrong"></i><span class="tips-info"></span></div>
+                </div>
+                <!-- 手机注册 显示邮箱验证结束 -->
+                <!-- 邮箱注册用户或者用户名注册用户 显示手机验证 -->
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item phone-item" name="phone" placeholder="手机号码"><i class="icon-tip-ok"></i>
+                    <span class="phone-check-btn J_getPhonecode">获取短信验证码</span>
+                    <span class="J_countDownWrap countDown"><span class="fc-f60 J_countDown">60</span>秒</span>
+                    <div class="error-tips mail-error-tips"><i class="icon-tip-wrong"></i><span class="tips-info"></span></div>
+                </div>
+                <div class="kh-form-wrap">
+                    <input type="text" class="kh-form-item phoneCode codeInput" name="phoneCode" placeholder="请输入验证码"><i class="icon-tip-ok"></i>
+                    <div class="error-tips mail-error-tips"><i class="icon-tip-wrong"></i><span class="tips-info"></span></div>
+                </div>
+                <!-- 邮箱注册用户或者用户名注册用户 显示手机验证结束 -->
+                <div class="kh-form-wrap">
+                    <div class="sub-btn J_subBtn not">提交并领取优惠券</div>
+                </div>
+                <div class="kh-form-wrap">
+                    <p class="shopping">稍后完善，<a href="/">立即购物</a> ></p>
+                </div>
+                <div class="succ-ad">
+                    <img class="succ-img" src="../../images/reg-succ-img.jpg" alt="">
+                    <span>注：</span>
+                    <p>1.赠送的60元现金券（金额满1000元使用）将发放到<br/>“我的优惠券”,详情请咨询客服。</p>
+                    <p>2.可与其他优惠券一同使用，秒杀订单除外。</p>
+                    <p>3.深圳市金海马电子商务有限公司拥有对本次活动的最终解释权。</p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- 注册页面结束 -->
+     <!-- 底部开始 -->
+     @@include("comment-footer.html")
+     <!-- 底部结束 -->
+     <!-- 载入底部引用 -->
+     @@include("include_bottom.html",{
+         "cdn" : "@@miscPath",
+         "name" : "reg-succ"
+     })
+</body>
+</html>

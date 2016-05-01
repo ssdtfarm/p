@@ -1,0 +1,85 @@
+<div class="recommend-left">
+    <div class="top">
+        <img class="lazy" data-original="<%=commentTitle.imgSRC%>" width="840" height="64" alt="今日推荐"/>
+    </div>
+    <div class="recommend-slider" id="J_recommendSlider">
+        <div class="hd">
+            <ul>
+                <%for(var i=0; i<list.length; i++) {%>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img class="lazy" data-original="<%=list[i].imgSRC%>!small" width="189" height="145" alt="<%=list[i].pTitle%>"/>
+                    </a>
+                    <span class="mark"><span><%=list[i].offPrice%>折</span></span>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <%for(var i=0; i<list.length; i++) {%>
+                <li class="JQ_recItem">
+                    <a href="<%=list[i].linkURL%>" target="_blank"><img _src="<%=list[i].imgSRC%>!max" width="640" height="490" alt="<%=list[i].pTitle%>"/></a>
+                    <a href="javascript:void(0);" class="point" style="left: <%=list[i].xPoint%>px; top: <%=list[i].yPoint%>px;">
+                        <span class="point-plus"></span>
+                        <span class="point-animate"></span>
+                    </a>
+                    <span class="point-box">
+                        <span class="point-text">
+                            <%=list[i].seoAlt%>
+                        </span>
+                        <span class="point-price">
+                            <small>RMB</small>
+                            <%=list[i].price%>
+                        </span>
+                        <a href="<%=list[i].linkURL%>" target="_blank" class="point-btn">立即购买</a>
+                        <span class="point-market-price">&yen; <%=list[i].mPrice%></span>
+                        <span class="point-sale-num">已有<%=list[i].saleNum%>人购买</span>
+                        <span class="point-mark"></span>
+                    </span>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="recommend-right">
+    <!-- 个性定制 -->
+    <div class="custom-box">
+        <a href="http://www.kinhom.com/custom" target="_blank">
+            免费申请
+            <i class="icon-index-custom-point"></i>
+        </a>
+    </div>
+    <!-- 热销排行 -->
+    <dl class="hot-sale">
+        <dt class="hot-sale-title">
+            <img class="lazy" data-original="http://static.jjcdn.com/p/images/index_hot_sale_list_head.jpg" width="290" height="107" alt="热销排行榜"/>
+        </dt>
+        <dd class="hot-sale-slider" id="J_hotSaleSlider">
+            <a href="javascript:void(0);" class="gray" id="J_hotSaleSliderBtn"></a>
+            <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="bd clearfix">
+                <ul>
+                    <%for(var i=0, j=1; i<hotList.length; i++,j++){%>
+
+                    <li class="sale-list-item <%if((i%2)==0){%>r-10<%}%>">
+                        <a class="item-link" href="<%=hotList[i].linkURL%>" target="_blank">
+                            <img _src="<%=hotList[i].imgSRC%>" width="140" height="94" alt="<%=hotList[i].pTitle%>"/>
+                            <span class="sale-mark"><%=hotList[i].pTitle%></span>
+                            <span class="sale-title"><label>RMB</label><%=hotList[i].price%></span>
+                        </a>
+                        <%if(j<=3){%><span class="sale-rank"><%=j%></span><%}%>
+                    </li>
+                    <%if(i!=0 && (i-3)%4==0){%>
+                </ul>
+                <%if((i+1)!=hotList.length){%><ul><%}%>
+                <%}%>
+                <%}%>
+
+            </div>
+        </dd>
+    </dl>
+</div>

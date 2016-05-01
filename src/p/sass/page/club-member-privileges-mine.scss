@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+@import "../layout/sprite.scss";         // icon-sprite
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // 会员系统通用头部
+@import "../components/common-foot.scss";  // 全站通用底部
+
+@import "../components/member-ui.scss";     // 头部搜索框样式
+@import "../components/club-nav.scss";    // 会员系统导航样式
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  club-member-privilegs-mine.css 会员特权-我的权益
+ *
+ *  author:❤JinJing❤
+ *  date:20150428
+ */
+
+.my-privileges-pic{
+	margin-top: 10px;
+	text-align: center;
+}

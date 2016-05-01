@@ -1,0 +1,733 @@
+/**
+ *  ---------------------------------------------
+ *      通用头部
+ *      主要是三大页在引用，这个头部可以加入搜索框
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+header {
+    overflow: hidden;
+}
+
+
+/*logo*/
+
+.logo {
+    width: 360px;
+    height: 96px;
+    overflow: hidden;
+    .head-logo {
+        display: inline-block;
+        width: 140px;
+        height: 96px;
+        overflow: hidden;
+    }
+    .head-logo-ad {
+        display: inline-block;
+        width: 200px;
+        height: 96px;
+        margin-left: 10px;
+        _margin-left: 5px;
+        *margin-left: 5px!important;
+        overflow: hidden;
+    }
+}
+
+/*search*/
+
+.head-search {
+    width: 500px;
+    margin-left: 30px;
+    _margin-left: 15px;
+    padding-top: 25px;
+    float: left;
+}
+
+.head-search .head-search-form {
+    position: relative;
+    z-index: 90;
+    margin-top: 25px;
+    height: 32px;
+}
+
+.head-search .head-search-btn {
+    position: relative;
+    z-index: 90;
+    float: left;
+    display: inline-block;
+    width: 50px;
+    background-color: #f60;
+}
+
+.head-search .head-search-btn:hover {
+    color: #fff;
+    background-color: #ee950a;
+}
+
+.head-search .head-search-hot-key {
+    width: 420px;
+    height: 24px;
+    line-height: 24px;
+    color: #aeaeae;
+    /* text-align:center; */
+}
+
+.head-search .head-search-hot-key a {
+    padding: 0 2px;
+    color: #8c8c8c;
+    text-decoration: none;
+}
+
+.head-search .head-search-hot-key a:hover {
+    color: #f60;
+    /*text-decoration:underline;*/
+}
+
+.head-search .head-search-hot-key a.hot-key {
+    color: #f60;
+}
+
+
+/*=========================*/
+
+
+/*    head nav style
+/*=========================*/
+
+.head-nav {
+    width: 100%;
+    min-width: 1190px;
+    height: 40px;
+    //overflow: hidden;
+    /*line-height:40px; */
+    /*background-color:#4674d3;*/
+    background-color: #2f6ceb;
+    color: #fff;
+}
+
+.head-nav .head-nav-list {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.aside-small {
+    width: 238px;
+}
+
+.head-nav-list .head-nav-all-category {
+    position: relative;
+    z-index: 9990;
+    float: left;
+    text-align: center;
+}
+
+.head-nav-list .head-nav-all-category a.all-cats-btn {
+    position: relative;
+    z-index: 990;
+    display: inline-block;
+    line-height: 40px;
+    color: #a1bdf6;
+    font-size: 14px;
+}
+
+.head-nav-list .head-nav-all-category a.all-cats-btn:after {
+    position: absolute;
+    z-index: 991;
+    top: 18px;
+    right: -14px;
+    display: inline-block;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #a1bdf6 transparent transparent transparent;
+    content: "";
+}
+
+.aside-border-bottom {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.head-nav-all-category .main-aside-menu {
+    position: absolute;
+    z-index: 9991;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 480px;
+    background-color: #fff;
+}
+
+.head-nav-all-category:hover .main-aside-menu {
+    display: block;
+}
+
+.head-nav-all-category .aside-menu-item {
+    position: relative;
+    z-index: 9993;
+    display: block;
+}
+
+.aside-small .main-aside-menu {
+    //display: block;
+    height: 380px;
+    color: #333;
+}
+
+.aside-small .aside-menu-item {
+    position: absolute;
+    display: block;
+    width: 236px;
+    min-height: 74px;
+    border: 1px solid #ebebeb;
+}
+
+.aside-small .hover {
+    z-index: 9994;
+    border-right: transparent;
+    border-left: 1px solid #2f6ceb;
+    border-top: 1px solid #2f6ceb;
+    border-bottom: 1px solid #2f6ceb;
+}
+
+.aside-menu-item .aside-item-line {
+    position: absolute;
+    z-index: 9995;
+    right: 1px;
+    top: 0;
+    display: block;
+    width: 1px;
+    height: 75px;
+    font-size: 0;
+    line-height: 0;
+    border-right: 1px solid #fff;
+}
+
+.aside-menu-item:hover .aside-item-line {
+    z-index: 9995;
+    right: -1px;
+}
+
+.aside-small .aside-item-1 {
+    top: 0;
+    height: 74px;
+}
+
+.aside-small .aside-item-2 {
+    top: 75px;
+    height: 75px;
+}
+
+.aside-small .aside-item-3 {
+    top: 151px;
+    height: 75px;
+}
+
+.aside-small .aside-item-4 {
+    bottom: 76px;
+    height: 75px;
+}
+
+.aside-small .aside-item-5 {
+    bottom: 0;
+    height: 75px;
+}
+
+.aside-small .aside-item-1 .aside-item-line {
+    height: 74px;
+}
+
+.aside-menu-item .aside-icons {
+    padding-top: 14px;
+    padding-bottom: 3px;
+    margin-left: 20px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.aside-menu-item .icons-cat-list a {
+    display: inline-block;
+    float: left;
+}
+
+.aside-menu-item .aside-icons .aside-icon-line {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    color: #333;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.aside-menu-item .aside-icons i {
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    vertical-align: middle;
+    background-image: url("http://misc.jjcdn.com/p/images/left_all_cats_icons.png");
+    background-repeat: no-repeat;
+}
+
+.aside-icons i.icon-aside-sofa {
+    background-position: -19px -12px;
+}
+
+.aside-icons i.icon-aside-bed {
+    background-position: -19px -87px;
+}
+
+.aside-icons i.icon-aside-office {
+    background-position: -19px -162px;
+}
+
+.aside-icons i.icon-aside-baby {
+    background-position: -19px -239px;
+}
+
+.aside-icons i.icon-aside-store {
+    background-position: -19px -314px;
+}
+
+.aside-menu-item .aside-icons label {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.aside-menu-item .aside-icons label a {
+    color: #333;
+    text-decoration: none;
+}
+
+.aside-menu-item .aside-icons label a:hover {
+    color: #f60;
+}
+
+.aside-menu-item .aside-hots {
+    height: 24px;
+    padding: 0 20px;
+    overflow: hidden;
+    line-height: 24px;
+    text-align: left;
+}
+
+.aside-menu-item .aside-hots a {
+    display: inline-block;
+    float: left;
+    padding: 0 10px 0 0;
+    color: #8c8c8c;
+    overflow: hidden;
+}
+
+.aside-menu-item .aside-hots a:hover {
+    color: #f60;
+}
+
+.aside-menu-item .aside-hots a.high-light {
+    color: #f60;
+}
+
+.aside-menu-item .aside-point-right {
+    position: absolute;
+    z-index: 9994;
+    right: 5px;
+    top: 50%;
+    width: 10px;
+    height: 20px;
+    margin-top: -8px;
+    color: #8C8C8C;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: arial, sans-serif;
+    text-indent: -9999px;
+    background: url("http://misc.jjcdn.com/p/images/left_all_cats_icons.png") -20px -384px no-repeat;
+}
+
+.aside-menu-item:hover .aside-icons label a:hover {
+    color: #f60;
+}
+
+.aside-menu-item:hover .aside-hots a {
+    //color: #fff;
+}
+
+.aside-menu-item:hover .aside-hots a:hover {
+    color: #f60;
+}
+
+.head-nav-all-category .aside-sub-menu {
+    position: absolute;
+    z-index: 9993;
+    left: 238px;
+    top: 0;
+    display: none;
+    width: 710px;
+    padding: 14px 19px;
+    border: 1px solid #2f6ceb;
+    background-color: #fff;
+}
+
+.aside-small .aside-sub-menu {
+    left: 236px;
+    height: 350px;
+}
+
+.aside-small .aside-item-1 .aside-sub-menu {
+    z-index: 9992;
+    top: -1px;
+    //border-left: 1px solid #2f6ceb;
+}
+
+.aside-small .aside-item-2 .aside-sub-menu {
+    top: -76px;
+}
+
+.aside-small .aside-item-3 .aside-sub-menu {
+    top: -152px;
+}
+
+.aside-small .aside-item-4 .aside-sub-menu {
+    top: -228px;
+}
+
+.aside-small .aside-item-5 .aside-sub-menu {
+    top: -304px;
+}
+
+//
+//.aside-menu-item:hover .aside-sub-menu{
+//  //display: block;
+//}
+.aside-small .hover .aside-sub-menu {
+    display: block;
+}
+
+.aside-small .hover .aside-point-right {
+    display: none;
+}
+
+.aside-sub-menu .sub-menu-left {
+    width: 464px;
+    /*  padding-right: 19px;
+      border-right: 1px solid #b4b4b4;*/
+}
+
+.aside-small .sub-menu-left {
+    height: 352px;
+}
+
+.aside-small .sub-menu-cats {
+    height: 190px;
+}
+
+.aside-sub-menu .sub-menu-ad {
+    height: 160px;
+    text-align: center;
+}
+
+.aside-sub-menu .sub-menu-ad a {
+    display: inline-block;
+    width: 390px;
+    height: 160px;
+    overflow: hidden;
+    text-align: center;
+    /*border: 1px solid #fff;*/
+}
+
+.aside-sub-menu .sub-menu-ad a:hover {
+    /*display: block;*/
+    /*border: 1px solid #333;*/
+}
+
+.aside-sub-menu .sub-menu-cats dl {
+    display: table;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.aside-sub-menu .sub-menu-cats dl dt {
+    display: table-cell;
+    width: 65px;
+    color: #333;
+    line-height: 24px;
+}
+
+.aside-sub-menu .sub-menu-cats dl dt a {
+    color: #333;
+}
+
+.aside-sub-menu .sub-menu-cats dl dt a:hover {
+    color: #f60;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd {
+    display: table-cell;
+    line-height: 24px;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd span {
+    display: inline-block;
+    padding: 0 5px;
+    color: #8c8c8c;
+    vertical-align: inherit;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd a {
+    color: #8c8c8c;
+    vertical-align: inherit;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd a:hover {
+    color: #f60;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd a.hot {
+    color: #f60;
+}
+
+.aside-sub-menu .sub-menu-cats dl dd a.hot:hover {
+    color: #f60;
+}
+
+.aside-sub-menu .sub-menu-right {
+    width: 200px;
+    padding-left: 30px;
+}
+
+.aside-small .sub-hot-sale {
+    width: 190px;
+    height: 180px;
+    text-align: left;
+    /*padding-bottom: 30px;*/
+}
+
+.sub-hot-sale .hot-sale-item {
+    /*line-height: 20px;*/
+}
+
+.sub-hot-sale .hot-sale-item img {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sub-hot-sale .hot-sale-item .hot-sale-title {
+    display: block;
+    width: 190px;
+    height: 16px;
+    overflow: hidden;
+    text-align: left;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+.sub-hot-sale .hot-sale-item:hover .hot-sale-title {
+    color: #f60;
+}
+
+.sub-hot-sale .hot-sale-text {
+    display: block;
+    width: 100%;
+    /*height: 24px;*/
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: left;
+    /*line-height: 24px;*/
+    vertical-align: inherit;
+}
+
+.sub-hot-sale .hot-sale-text label {
+    display: inline-block;
+    padding: 0 3px;
+    margin-right: 6px;
+    color: #fff;
+    background-color: #2f6ceb;
+    text-align: center;
+}
+
+.sub-hot-sale .hot-sale-text span {
+    display: inline-block;
+    color: #f60;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.head-nav-list .head-nav-menu {
+    position: relative;
+    z-index: 990;
+    width: 80%;
+    float: left;
+}
+
+.head-nav-list .head-nav-menu:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.head-nav-list .head-nav-menu a.nav-item {
+    position: relative;
+    z-index: 990;
+    float: left;
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.head-nav-list .head-nav-menu a.nav-item:hover {
+    color: #fff;
+}
+
+.head-nav-list .head-nav-menu a.nav-item .hot {
+    display: inline-block;
+    *display: block!important;
+    position: absolute;
+    z-index: 991;
+    top: -10px;
+    right: 10px;
+    width: 26px;
+    height: 17px;
+    line-height: 12px;
+    font-family: "Microsoft Yahei", "arial";
+    font-size: 10px;
+    font-weight: normal;
+    color: #fff;
+    /*text-indent:-999px;
+  overflow:hidden;*/
+}
+
+.head-nav-list .head-nav-menu .icon-nav-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.head-nav-list .head-nav-menu .head-nav-line {
+    position: absolute;
+    z-index: 899;
+    left: 0px;
+    bottom: 2px;
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    width: 60px;
+    border-bottom: 2px solid #fff;
+}
+
+.head-nav-list .head-nav-menu li.item {
+    position: relative;
+}
+
+.head-nav-list .head-nav-menu .nav-hot-menu {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 40px;
+    display: none;
+    width: 748px;
+    height: 378px;
+    /*padding: 0 9px;*/
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.head-nav-list .head-nav-menu li.item:hover .nav-hot-menu {
+    /*position: relative;*/
+    display: block;
+}
+
+.head-nav-list .head-nav-menu .nav-right-btn {
+    float: right;
+}
+
+.head-nav-list .head-nav-menu .nav-right-btn a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 28px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #f60;
+}
+
+.head-nav-list .head-nav-menu .nav-right-btn a:hover {
+    background-color: #ee950a;
+}
+
+.nav-rebate-icon {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    background: url("http://misc.jjcdn.com/p/images/index_sprite_2015.png") left top no-repeat;
+}
+
+
+/* nav-sub-menu */
+
+.nav-hot-menu .hd {
+    display: none;
+}
+
+.nav-hot-menu .bd ul {
+    width: 748px;
+    padding-top: 29px;
+    padding-left: 29px;
+}
+
+.nav-hot-menu .bd li {
+    float: left;
+    width: 190px;
+    height: 140px;
+    margin: 0 20px 30px 20px;
+}
+
+.nav-hot-menu .bd li a {
+    display: block;
+    width: 190px;
+    height: 160px;
+    padding: 0px;
+}
+
+.nav-hot-menu .next {
+    position: absolute;
+    /*display: none;*/
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 1;
+    background: url("http://misc.jjcdn.com/p/images/index_sprite_2015.png") left -40px no-repeat;
+}
+
+.nav-hot-menu .next:hover {
+    background: url("http://misc.jjcdn.com/p/images/index_sprite_2015.png") left -60px no-repeat;
+}
+
+.nav-hot-menu .gray {
+    position: absolute;
+    /*display: none;*/
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 1;
+    background: url("http://misc.jjcdn.com/p/images/index_sprite_2015.png") left -80px no-repeat;
+}

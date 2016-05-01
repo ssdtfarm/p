@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 载入头部 -->
+@@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "cart-confirm", "title" : "确认购物车页面" })
+</head>
+<body>
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+
+<!-- 头部开始 -->
+@@include("member-header.html",{"cdn":"@@miscPath","search":false, "headerName": "确认购物车"})
+<!-- 头部结束 -->
+
+<!-- 确认订单页开始 -->
+
+<!-- 购物步骤 -->
+<section class="kh-row-24 clearfix">
+    <section class="shoping-step">
+        <ul class="clearfix">
+            <li class="fc-f60">
+                <i class="icon-step-on">1</i>
+                <span>确认购物车</span>
+                <i class="icon-step-point-on"></i>
+            </li>
+            <li class="fc-f60">
+                <i class="icon-step-on">2</i>
+                <span>确认订单</span>
+                <i class="icon-step-point-on"></i>
+            </li>
+            <li class="fc-8c8">
+                <i class="icon-step-off">3</i>
+                <span>购买完成</span>
+            </li>
+        </ul>
+    </section>
+</section>
+
+<section class="kh-row-24 clearfix">
+	<!-- 收货地址管理 -->
+	<section class="ship-address clearfix">
+		<!-- 地址列表表头 -->
+		<div class="ship-address-top clearfix">
+			<label>确认收货地址</label>
+			<a href="../member/person-address.html" target="_blank">管理收货地址</a>
+			<a class="JQ_addNewAddress" href="javascript:void(0);">使用新地址</a>
+		</div>
+
+		<!-- 地址列表 -->
+		<section id="J_addressWrap" class="ship-address-wrap">
+			<div class="confirm-loading"><i></i></div>
+		</section>
+		
+		<!-- 产品列表表头 -->
+		<div class="ship-address-top clearfix">
+			<label>确认订单信息</label>
+		</div>
+		
+		<section class="ship-product">
+			<!-- 产品列表 -->
+			<table class="ship-pro-list" width="100%">
+				<thead>
+					<tr>
+						<td colspan="2">店铺商品</td>
+						<td>单价</td>
+						<td>数量</td>
+						<td>优惠（元）</td>
+						<td>小计</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="pro-list-item">
+						<td width="10%">
+							<a href="javascript:void(0);">
+								<img src="#" alt="" width="90" height="60">
+							</a>
+						</td>
+						<td width="20%">
+							<p class="pro-list-title">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</p>
+							<p class="pro-list-propery">颜色: 紫红色   类型: 单人位</p>
+                            <p class="pro-list-propery fc-f60">预计送货时间：2015-09-10</p>
+						</td>
+						<td width="15%">
+							<p class="fc-333">&yen;1800.00</p>
+						</td>
+						<td width="5%">
+							<p class="fc-8c8">1</p>
+						</td>
+						<td width="10%">
+							<p class="fc-8c8">预售</p>
+						</td>
+						<td width="30%">
+							<p class="fc-f60">
+								<span>&yen;</span>
+								<label class="JQ_subtotal">800</label>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<!-- 备注和优惠信息选择 -->
+			<table class="ship-privilege">
+				<tbody>
+					<tr>
+						<td width="8%" valign="top" align="right">
+							<p class="fc-b4b">给商家留言：</p>
+						</td>
+						<td width="33%" valign="top">
+							<div id="J_summary" class="privilege-textarea">
+								<textarea name="summary"></textarea>
+								<span class="privilege-placeholder JQ_placeHolder">
+									选填，告诉商家您的特殊要求，200字以内
+								</span>
+								<span class="privilege-tip">
+									<span>（</span>		
+									<label id="J_textMount" data-max="200" class="fc-f60">0</label>
+									<span>/200）</span>
+								</span>
+							</div>
+						</td>
+						<td width="22%">
+							&nbsp;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 统计区域 -->
+			<section class="ship-statistical">
+				<div class="iblock">
+					<!-- 商品总额 -->
+					<div class="statis-item">
+						<span>全款金额：</span>
+						<span class="statis-right">
+							&yen;
+							<label id="J_totalPrice">0.00</label>
+						</span>
+					</div>
+					<!-- 优惠券 -->
+					<div class="statis-item pre-sale-hide">
+						<span>-优惠券：</span>
+						<span class="statis-right">
+							&yen;
+							<label id="J_couponPrice">0.00</label>
+						</span>
+					</div>
+					<!-- 积分 -->
+					<div class="statis-item pre-sale-hide">
+						<span>-积分：</span>
+						<span class="statis-right">
+							&yen;
+							<label id="J_pointsPrice">0.00</label>
+						</span>
+					</div>
+					<!-- 运费 -->
+					<div class="statis-ship-item clearfix">
+						<div class="statis-right">
+							&yen;
+							<label id="J_shipPrice">0.00</label>
+						</div>
+						<div>+运费：</div>
+						
+						<div id="J_shiping" class="select-gray"></div>
+						<div>物流服务：</div>
+					</div>
+					<div class="clear"></div>
+					<!-- 分割线 -->
+					<div class="cut-line-wrap">
+						<span class="cut-line"></span>
+					</div>
+				</div>
+				<!-- 应付金额 -->
+				<div class="statis-item">
+					<span>应付金额：</span>
+					<span>
+						<b class="fc-f60 fs-18">&yen;</b>
+						<b class="fc-f60 fs-18 JQ_payPrice">0.00</b>
+					</span>
+				</div>
+				<!-- 获得积分 -->
+				<div class="points-item">
+					<span>获得积分：</span>
+					<span class="JQ_orderPoints">1000</span>
+				</div>
+				<!-- 按钮行 -->
+				<div class="btns-item">
+					<a id="J_submitBtn" href="javascript:void(0);" class="submit-cart-btn">
+						提交订单
+						<i class="icon-point-right"></i>
+					</a>
+					<a href="javascript:void(0);" class="disable-btn">
+						提交订单
+						<i class="icon-point-right"></i>
+					</a>
+				</div>
+                <!-- 预付提示 -->
+                <p class="pre-cart-tips fc-c13"><i class="icon-tip-wrong"></i>订单将于1小时后自动取消，预售数量有限，请及时付款哦</p>
+				<!-- 下载app连接 -->
+				<!-- <div class="loadWrap">
+                                    <a href="#" class="loadAppLink">手机下单立减5元，去下载APP &gt;</a>
+                                    <span class="loadAppImg"></span>
+                                </div> -->
+                
+			</section>
+		</section>
+		</form>
+	</section>
+</section>
+<!-- 确认订单页结束 -->
+
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{ "cdn" : "@@miscPath" ,"name" : "cart-confirm"})
+</body>
+</html>

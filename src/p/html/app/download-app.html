@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<!-- 载入头部 -->
+	@@include("include_head.html",{
+	"cdn"   : "@@miscPath",
+	"name"  : "download-app",
+	"title" : "app下载详情页-没有找到商品"
+	})
+</head>
+<body>
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+<body>
+<!-- App下载页开始 -->
+	<div class="load-head">
+		<div class="load-content">
+			<a target="_blank" href="//api.kinhom.com/download/index?type=2" class="iphoneLoad"></a>
+			<a href="//api.kinhom.com/download/index?type=1" class="androidLoad"></a>
+			<input type="hidden" name="url" id="down_url" value="http://api.kinhom.com/download/index">
+			<input type="hidden" name="wapurl" id="gowap_url" value=""> 
+			<div class="code"></div>
+			<div class="code1"></div>
+			<img src="http://misc.jjcdn.com/p/images/downAppimg1.png" alt="">
+		</div>
+	</div>
+	<div class="load-content">
+		<img src="http://misc.jjcdn.com/p/images/downAppimg2.png" alt="">
+	</div>
+	<div class="load-content">
+		<img src="http://misc.jjcdn.com/p/images/downAppimg3.png" alt="">
+	</div>
+	<div class="load-content">
+		<img src="http://misc.jjcdn.com/p/images/downAppimg4.png" alt="">
+	</div>
+	<div class="load-foot">
+		<div class="load-content">
+			<img src="http://misc.jjcdn.com/p/images/downAppimg5.png" alt="">
+		</div>
+	</div>
+<!-- App下载页结束 --> 
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+	"cdn" : "@@miscPath",
+	"name"  : "download-app" 
+})
+</html>

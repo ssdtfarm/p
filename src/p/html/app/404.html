@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    @@include("include_head.html", { "cdn": "@@miscPath", "name": "404", "title": "金海马商城|404" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("comment-header.html",{ "cdn" : "@@miscPath" })
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    <nav class="head-nav">
+        <dl class="head-nav-list">
+            <!-- 全部分类 -->
+            <dt class="head-nav-all-category aside-small JQ_headNavCats">
+                <span  class="no-cats-btn"></span>
+            </dt>
+            <!-- 主导航 -->
+            <dd class="head-nav-menu JQ_headNavMenu">
+                <ul>
+                    <li class="item">
+                        <a class="nav-item cur" href="http://www.kinhom.com/?from=daohang1" target="_blank">
+                    首页 </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://sale.kinhom.com/ac201506?from=daohang1" target="_blank">
+                    爆款推荐 <i class="icon-nav-hot hot">HOT</i>
+                </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://sale.kinhom.com/livingroom?from=daohang1" target="_blank">
+                    超值特卖 </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://sale.kinhom.com/1184.html?from=daohang1" target="_blank">
+                    套装搭配 <i class="icon-nav-hot hot">HOT</i>
+                </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://sale.kinhom.com/1196.html?from=daohang1" target="_blank">
+                    现代办公 </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://www.kinhom.com/offline?from=daohang1" target="_blank">
+                    体验馆 </a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-item" href="http://www.kinhom.com/articles/?from=daohang1" target="_blank">
+                    装修汇 </a>
+                    </li>
+                    <li class="nav-right-btn">
+                        <a href="http://my.kinhom.com/club/representshop" target="_blank">
+                            <i class="nav-rebate-icon"></i> 返利商城
+                        </a>
+                    </li>
+                </ul>
+                <span class="head-nav-line JQ_headNavLine" style="width: 28px; left: 15px;"></span>
+            </dd>
+        </dl>
+    </nav>
+    <!-- 导航结束 -->
+    <section class="erro-content">
+        <div class="w1190">
+            <div class="erro-main-bg">
+                <span class="erro-mainPic"></span>
+                <!-- <p class="erro-title"><b>404 ERROR</b></p> -->
+                <p class="erro-main-msg">您所访问的页面已下线或过期了！</p>
+                <p class="erro-back">倒数<span id="J_secOut"></span>秒后自动返回</p>
+                <p class="btn-line"><a id="J_btnBack" class="btn-back" href="http://www.kinhom.com">返回首页</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "404" })
+</body>
+
+</html>

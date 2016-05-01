@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "offline",
+    "title" : "o2o体验馆"
+    })
+</head>
+<body>
+
+<!-- 顶部广告开始 -->
+<section class="index-top-ad J_lazy" id="J_TopAd" data-tpl="tplTopAd" data-path="classific_topAd_hash.js" data-time="1440377537"></section>
+<!-- 顶部广告结束 -->
+
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+<!-- 头部开始 -->
+@@include("comment-header.html",{ "cdn" : "@@miscPath" })
+<!-- 头部结束 -->
+<!-- 导航开始 -->
+@@include("comment-head-nav.html")
+<!-- 导航结束 -->
+<!-- 主体开始 -->
+<section class="ofl-main">
+    <!-- 顶部大图开始 -->
+    <div class="ofl-banner"></div>    
+    <!-- 顶部大图结束 -->
+    <!-- 顶部广告图开始 -->
+    <div class="ofl-ad">
+        <a href="javascript:void(0)" class="ad-link"></a>
+    </div>
+    <!-- 顶部广告图结束 -->
+    <!-- 体验店列表开始 -->
+    <div class="kh-row-24 clearfix">
+        <div class="kh-col-24 ofl-sites">
+            <div class="kh-col-10 ofl-sites-map"></div>
+            <div class="kh-col-8 ofl-sites-list list">
+                <div class="selector-wrap">
+                    <div class="selector j_selector">
+                        <p class="title">地区</p>
+                        <i class="triangle  triangle-down"></i>
+                        <input type="text" class="selector-input">
+                        <ul class="list">
+                            <li><a href="javascript:void(0);">华东地区</a></li>
+                            <li><a href="#">华东地区</a></li>
+                            <li><a href="#">华东地区</a></li>
+                            <li><a href="#">华东地区</a></li>
+                        </ul>
+                    </div>
+                    <div class="selector j_selector">
+                        <p class="title">城市</p>
+                        <i class="triangle  triangle-down"></i>
+                        <input type="text" class="selector-input">
+                        <ul class="list">
+                            <li><a href="#">广州</a></li>
+                            <li><a href="#">广州</a></li>
+                            <li><a href="#">广州</a></li>
+                            <li><a href="#">广州</a></li>
+                            <li><a href="#">广州</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="J_sideMenu" class="side-menu">
+                    <h4 class="on hd">金海马维亚店<span class="link"><a href="#J_oflDetail">店铺实景</a><i>|</i><a href="#J_oflItem">顾客最爱</a></span><span class="arrow"></span></h4>
+                    <div class="bd">
+                        <p class="address">
+                            <i class="icon-site"></i>
+                            <span>天河区黄埔大道中科韵路303号维亚国际广场2-3楼天河区黄埔大道中科韵路。</span>
+                        </p>
+                        <p class="contact">
+                            <i class="icon-contact"></i>
+                            <span>020-85577004</span>
+                        </p>
+                        <p class="time">
+                            <i class="icon-time"></i>
+                            <span>10:00-22:00</span>
+                        </p>
+                        <div class="send-btn J_sendBtn">发送到手机</div>
+                    </div>                    
+                    <h4 class="hd">金海马广香店<span class="link"><a href="#J_oflDetail">店铺实景</a><i>|</i><a href="#J_oflItem">顾客最爱</a></span><span class="arrow"></span></h4>
+                    <div class="bd">
+                        <p class="address">
+                            <i class="icon-site"></i>
+                            <span>天河区黄埔大道中科韵路303号维亚国际广场2-3楼天河区黄埔大道中科韵路。</span>
+                        </p>
+                        <p class="contact">
+                            <i class="icon-contact"></i>
+                            <span>020-85577004</span>
+                        </p>
+                        <p class="time">
+                            <i class="icon-time"></i>
+                            <span>10:00-22:00</span>
+                        </p>
+                        <div class="send-btn J_sendBtn">发送到手机</div>
+                    </div>
+                    <h4 class="hd">金海马芳村店<span class="link"><a href="#J_oflDetail">店铺实景</a><i>|</i><a href="#J_oflItem">顾客最爱</a></span><span class="arrow"></span></h4>
+                    <div class="bd">
+                        <p class="address">
+                            <i class="icon-site"></i>
+                            <span>天河区黄埔大道中科韵路303号维亚国际广场2-3楼天河区黄埔大道中科韵路。</span>
+                        </p>
+                        <p class="contact">
+                            <i class="icon-contact"></i>
+                            <span>020-85577004</span>
+                        </p>
+                        <p class="time">
+                            <i class="icon-time"></i>
+                            <span>10:00-22:00</span>
+                        </p>
+                        <div class="send-btn J_sendBtn">发送到手机</div>
+                    </div>
+                </div>
+            </div>
+            <div class="kh-col-5 ofl-sites-active">
+                <div class="active-title">
+                    <span class="icon-circle-gray">活</span>
+                    <span class="icon-circle-gray">动</span>
+                    <span class="icon-circle-gray">情</span>
+                    <span class="icon-circle-gray">报</span>
+                    <span class="icon-circle-gray">站</span>
+                </div>
+                <div id="J_activePic" class="active-pic">
+                    <div class="hd">
+                        <ul><li class="on"></li><li class=""></li><li class=""></li></ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <li><a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/active-pic.jpg"></a></li>
+                            <li><a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/active-pic.jpg"></a></li>
+                            <li><a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/active-pic.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 体验店列表结束 -->
+    <!-- 体验店详情开始 -->
+    <div class="bg-fff">
+        <div class="kh-row-24">
+            <div id="J_oflDetail" class="ofl-detail clearfix">
+                <div class="kh-col-6 ofl-detail-dscr">
+                    <h3><span class="en-name"></span>金海马维亚店<i></i></h3>
+                    <div class="wrap J_detailWrap">
+                        <div class="list J_detailList">
+                            【整体介绍】金海马商城智能家居馆位于广州天河区，建筑面积超过1800平方米，共设客厅、餐厅、户外、家具小件、家庭办公、书房、卧室、定制家具区、儿童家具、家居百货等10个体验场景，倾力缔造“绿色、时尚、品位”的全屋家居全新生活，融合多重科技元素，开启数字化购物服务，向消费者提供轻松便捷的家居消费新体验，引领家居电商进入4.0时代。
+                             
+                            【未来之家】在未来之家，你可以通过手机、电脑、控制面板等5种方式，管理家中所有的带电设备，比如：电灯、家电、影音系统、电动窗帘等等。无论您是身在家中还是在全球的任何一个地方，都可以通过手机、电脑看到您家中所有带电设备的工作状态，并可控制它们的开关及扩展功能，如空调的模式、风速、温度、风向等，还可以通过远程监控功能关爱家中老人、小孩的生活状况，带给您安全、舒适、高品味的智能生活享受。
+
+                            【团队介绍】金海马维亚店在店长XX带领下，共有XX名销售精英，为您提供专业的家居购买保养意见，为您的家保驾护航。
+                             
+                            【商城寄语】金海马商城维亚店，邀请您共同重新感悟生活，发现不一样的自我，不一样的生活态度！
+                        </div>
+                    </div>
+                </div>
+                <div class="kh-col-11 ofl-detail-big">
+                    <div class="bd">
+                        <ul>
+                            <li><a target="_blank" href="javascript:void(0)"><img src="@@miscPath/p/images/offline/detail-big.jpg"></a></li>
+                            <li><a target="_blank" href="javascript:void(0)"><img src="@@miscPath/p/images/offline/detail-big.jpg"></a></li>
+                            <li><a target="_blank" href="javascript:void(0)"><img src="@@miscPath/p/images/offline/detail-big.jpg"></a></li>
+                            <li><a target="_blank" href="javascript:void(0)"><img src="@@miscPath/p/images/offline/detail-big.jpg"></a></li>
+                            <li><a target="_blank" href="javascript:void(0)"><img src="@@miscPath/p/images/offline/detail-big.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kh-col-19">
+                    <div class="ofl-detail-small hd">
+                        <div class="arrow sPrev"></div>
+                        <ul>
+                            <li class=""><img src="@@miscPath/p/images/offline/detail-small.jpg"></li>
+                            <li class=""><img src="@@miscPath/p/images/offline/detail-small.jpg"></li>
+                            <li class="on"><img src="@@miscPath/p/images/offline/detail-small.jpg"></li>
+                            <li class=""><img src="@@miscPath/p/images/offline/detail-small.jpg"></li>
+                            <li class=""><img src="@@miscPath/p/images/offline/detail-small.jpg"></li>
+                        </ul>
+                        <div class="arrow sNext"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 体验店详情结束 -->
+    <!-- 体验店商品开始 -->
+    <div class="kh-row-24 clearfix">
+        <div id="J_ofl-item" class="kh-col-24 ofl-item">
+            <h3>顾客最爱<span class="en-name"></span><i></i></h3>
+            <ul>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="kh-col-6">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0)" target="_blank"><img src="@@miscPath/p/images/offline/item-pic.jpg" alt=""></a>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">
+                                <span class="title">现代简约 黑胡桃色 优质中纤板 1桌4椅（配蓝色餐椅）限2行</span>
+                                <span class="price"><i class="pro mr-10">&yen;10688</i><i class="fc-f60">&yen;5388</i></span>
+                                <span class="buy-btn">立即购买</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 体验店商品结束 -->
+    <!-- 底部广告图开始 -->
+    <div class="ofl-ad">
+        <a href="javascript:void(0)" class="ad-link ad-bottom"></a>
+    </div>
+    <!-- 底部广告图结束 -->
+</section>
+<!-- 主体结束 -->
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=540032994E9eBAde72eea6c7f2e65849"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{
+    "cdn" : "@@miscPath",
+    "name"  : "offline"
+})
+</body>
+</html>

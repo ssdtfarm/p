@@ -1,0 +1,32 @@
+
+        <div class="left fl">
+            <h3 class="title">热门关键词</h3>
+            <div class="hot-link">
+                <%for(var i=0; i<hotKeyWord.length; i++) {%>
+                <a href="<%=hotKeyWord[i].proLink%>" class="link-item" target="_blank" title="<%=hotKeyWord[i].proTitle%>"><%=hotKeyWord[i].proName%></a>
+                <%}%>
+            </div>
+        </div>
+        <div class="right fr">
+            <div class="title classific-icon"></div>
+            <div class="list-wrap">
+                <i class="classific-icon hot-item hot-1"></i>
+                <i class="classific-icon hot-item hot-2"></i>
+                <i class="classific-icon hot-item hot-3"></i>
+
+                <ul class="list">
+                    <%for(var j=0; j<hotList.length; j++) {%>
+                    <li class="item">
+                        <a href="<%=hotList[j].proLink%>" class="pro-link" title="<%=hotList[j].proTitle%>" target="_blank">
+                            <div class="mark">
+                                <div class="bg"></div>
+                                <p class="pro-title" ><%=hotList[j].proTitle%></p>
+                            </div>
+                            <img  class="lazy" data-original="<%=hotList[j].imgURL%>"  alt="<%=hotList[j].proAlt%>" width="140" height="93">
+                        </a>
+                        <p class="info"><span class="price fc-f60">&yen;<%=hotList[j].proPrice%></span><span class="num">销量<%=hotList[j].saleNum%></span></p>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>

@@ -1,0 +1,199 @@
+/*===============================*/
+/*     
+/*  author  : linyandi
+/*  update  : 2014-09-18
+/*===============================*/
+
+.ui-login-dialog-mark{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1001;
+	width:100%;
+	height:100%;
+	background:#000;
+	background:rgba(0,0,0,.75);
+	opacity:0.75;
+	-webkit-opacity:0.75;
+	filter:alpha(opacity=75);
+}
+
+.ui-login-dialog{
+	position:fixed;
+	z-index:1002;
+	width:400px;
+	height:340px;
+	left:50%;
+	top:50%;
+	display:none;
+	margin:-170px 0 0 -200px;
+	background:#fff;
+	font-family:"Microsoft Yahei";
+}
+
+.ui-login-dialog .ui-login-dialog-head{
+	position:relative;
+	z-index:1002;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	font-size:18px;
+	font-weight:800;
+	text-align:center;
+	background-color:#2f6ceb;
+}
+.ui-login-dialog-head .login-dialog-close-btn{
+	position:absolute;
+	z-index:1003;
+	right:10px;
+	top:7px;
+	display:inline-block;
+	width:25px;
+	height:25px;
+	overflow:hidden;
+	background:url(../images/login-dialog-spire.png) left top no-repeat;
+}
+
+.ui-login-dialog-form{
+	padding:10px 0 0 0;
+	margin:0px;
+}
+.ui-login-dialog-form .ui-login-dialog-form-tr{
+	position:relative;
+	z-index:991;
+	height:40px;
+	padding:20px 0 0 0;
+	text-align:center;
+}
+.ui-login-dialog-form-tr label{
+	position:absolute;
+	z-index:992;
+	left:12.5%;
+	top:20px;
+	display:inline-block;
+	width:40px;
+	height:38px;
+	overflow:hidden;
+}
+.ui-login-dialog-form-tr .ui-login-dialog-icon-name{
+	background:url(../images/login-dialog-spire.png) 8px -154px no-repeat;
+}
+.ui-login-dialog-form-tr .ui-login-dialog-icon-pass{
+	background:url(../images/login-dialog-spire.png) 8px -216px no-repeat;
+}
+.ui-login-dialog-form-tr .ui-login-dialog-input{
+	display:block;
+	width:298px;
+	height:38px;
+	margin:0 auto;
+	border:1px solid #b4b4b4;
+	line-height:38px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	text-indent:40px;
+}
+.ui-login-dialog-form-tr .ui-login-dialog-input:focus{
+	border:1px solid #2f6ceb;
+}
+.ui-login-dialog-form-tr .ui-login-dialog-input-cur{
+	font-size:14px;
+	color:#b4b4b4;
+}
+.ui-login-dialog-form-tr .ui-login-show{
+	display:none;
+}
+
+.ui-login-dialog-form .ui-login-dialog-form-tr-text{
+	height:34px;
+	line-height:34px;
+	padding:0;
+	color:#8c8c8c;
+	font-size:14px;
+	text-align:center;
+}
+.ui-login-dialog-form .ui-login-dialog-form-tr-text a{
+	color:#ff6600;
+}
+.ui-login-dialog-form .ui-login-dialog-form-tr-text a:hover{
+	text-decoration:underline;
+}
+.ui-login-dialog-btn-login{
+	display:block;
+	outline:none;
+	border:0px;
+	width:75%;
+	height:40px;
+	line-height:40px;
+	margin:0 auto;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	letter-spacing:5px;
+	font-family:"Microsoft Yahei";
+	background-color:#ff6600;
+}
+.ui-login-dialog-btn-login:hover{
+	text-decoration:none;
+	background-color:#ee950a;
+}
+
+.ui-login-dialog-login-other{
+	text-align:center;
+	height:35px;
+	line-height:35px;
+	padding:10px 0 0 0px;
+}
+.ui-login-dialog-login-other li{
+	margin-left:8px;
+	display:inline-block;
+	float:left;
+}
+.ui-login-dialog-login-other li span{
+	line-height:45px;
+	vertical-align:middle;
+}
+.ui-login-dialog-login-other li a{
+	line-height:35px;
+	color:#f60;
+}
+.ui-login-dialog-login-other li a:hover{
+	color:#f60;
+	text-decoration:none;
+}
+.ui-login-dialog-login-other li a em{
+	padding-left:2px;
+	vertical-align:middle;
+}
+.ui-login-dialog-login-other li a i{
+	display:inline-block;
+	vertical-align:middle;
+}
+.ui-login-dialog-login-other li a i.ui-icon-qq{
+	width:24px;
+	height:27px;
+	overflow:hidden;
+	background:url(../images/ui-login_icon.png) left -82px no-repeat;
+}
+.ui-login-dialog-login-other li a i.ui-icon-sina{
+	width:31px;
+	height:25px;
+	overflow:hidden;
+	background:url(../images/ui-login_icon.png) left top no-repeat;
+}
+.ui-login-dialog-login-other li a i.ui-icon-net{
+	width:24px;
+	height:25px;
+	overflow:hidden;
+	background:url(../images/ui-login_icon.png) left -56px no-repeat;
+}
+.ui-login-dialog-login-other li a i.ui-icon-alipay{
+	width:27px;
+	height:25px;
+	overflow:hidden;
+	background:url(../images/ui-login_icon.png) left -29px no-repeat;
+}

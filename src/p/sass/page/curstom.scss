@@ -1,0 +1,1148 @@
+@charset "UTF-8";
+@import "../layout/layout.scss"; 
+
+@import "../components/common-top-bar.scss"; 
+@import "../components/common-min-bar.scss"; 
+@import "../components/common-head.scss"; 
+@import "../components/common-foot.scss"; 
+@import "../components/common-search-bar.scss"; 
+@import "../components/common-slider-3d.scss";
+@import "../components/common-dialog.scss";
+
+/**
+ *  定制馆百度地图样式
+ *  此模块只用在个人定制页面，其它页面不可用
+ *  author:  linyandi
+ *  modify:  linyandi
+ *  date  :  2016-04-03
+ =========================================================*/
+// 定制馆百度地图样式
+.BMapLib_SearchInfoWindow {
+    font: 12px arial, Microsoft Yahei, sans-serif;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: default;
+    .BMapLib_bubble_top {
+        border-bottom: 2px solid #333;
+        height: 34px
+    }
+    .BMapLib_bubble_title {
+        position: relative;
+        z-index: 991;
+        line-height: 34px;
+        background-color: #fff;
+        overflow: hidden;
+        height: 34px;
+        padding: 0 5px 0 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        .show_pralion {
+            display: inline-block;
+            right: 0;
+            top: 0;
+            width: 65px;
+            height: 20px;
+            padding: 0 0 0 5px;
+            margin: 0 0 0 10px;
+            line-height: 20px;
+            font-weight: normal;
+            font-size: 12px;
+            color: #fff;
+            font-family: "宋体";
+            text-decoration: none;
+            background: url(../images/map_spire.png) -50px -62px no-repeat;
+            &:hover {
+                text-decoration: none;
+                background: url(../images/map_spire.png) -121px -62px no-repeat;
+            }
+        }
+    }
+    .BMapLib_bubble_tools {
+        padding-right: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 30px;
+        width: 64px;
+        z-index: 10000 div {
+            float: right;
+            height: 20px;
+            width: 22px;
+            margin: 8px 0 0 0;
+            cursor: pointer;
+            cursor: pointer;
+            overflow: hidden
+        }
+    }
+    .BMapLib_bubble_close {
+        background: url(../images/iw_close.gif) no-repeat center center
+    }
+    .BMapLib_sendToPhone {
+        background: url(../images/phone.png) no-repeat center center
+    }
+    .BMapLib_bubble_center {
+        z-index: 3
+    }
+    .BMapLib_bubble_content {
+        padding: 3px 5px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        .ui_map_info {
+            padding: 0 0 0px 15px;
+            line-height: 24px;
+            color: #333;
+            font-size: 12px;
+            em {
+                color: #8c8c8c;
+            }
+        }
+    }
+    .BMapLib_bubble_bottom {
+        display: block;
+        z-index: 2
+    }
+    .BMapLib_trans {
+        z-index: 5;
+        position: absolute;
+        bottom: -31px;
+        *bottom: -32px;
+    }
+    .BMapLib_nav {
+        width: 100%;
+        height: 75px;
+        overflow: visibile;
+        position: relative;
+        input {
+            vertical-align: middle
+        }
+    }
+    .iw_bt,
+    .iw_bt_down,
+    .iw_bt_over {
+        width: 48px;
+        height: 26px;
+        line-height: 18px;
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') no-repeat 0 -87px;
+        vertical-align: middle
+    }
+    .iw_bt_over {
+        background-position: -52px -87px
+    }
+    .iw_bt_down {
+        background-position: -104px -87px;
+        font-weight: 700
+    }
+}
+
+.BMapLib_search_text {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #a5acb2
+}
+
+.BMapLib_trans_text {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #a5acb2;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.BMapLib_nav_tab {
+    height: 30px;
+    width: 100%;
+    background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') repeat-x 0 0;
+    li {
+        position: relative;
+        float: left;
+        width: 114px;
+        height: 25px;
+        padding-top: 5px;
+        text-align: center;
+        border-left: 1px solid #dadada;
+        cursor: pointer;
+        overflow: hidden;
+        width: 33%
+    }
+    .BMapLib_icon {
+        display: inline-block;
+        position: relative;
+        width: 10px;
+        height: 15px;
+        top: 3px;
+        margin-right: 7px;
+        background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') no-repeat 0 -136px
+    }
+    .BMapLib_icon_tohere {
+        background-position: -15px -136px
+    }
+    .BMapLib_icon_nbs {
+        width: 14px;
+        height: 14px;
+        background-position: -30px -136px
+    }
+    li {
+        &.BMapLib_first {
+            border-left: 0;
+        }
+        &:hover {
+            text-decoration: none
+        }
+        &.BMapLib_current {
+            color: #4d4d4d;
+            cursor: default;
+            background: url('http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/iw_bg.png') repeat-x 0 -44px
+        }
+    }
+}
+
+.BMapLib_nav_tab_content {
+    text-align: center;
+    li {
+        padding: 10px 0 0 0;
+        position: relative;
+        height: 22px;
+        font-family: "Microsoft Yahei"
+    }
+}
+
+.BMapLib_sms_tab_container {
+    height: 35px;
+    background: #fcfcfc;
+    position: relative;
+    z-index: 20;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 35px;
+    padding-left: 10px
+}
+
+.BMapLib_sms_pnl_phone {
+    position: relative;
+    z-index: 10;
+    padding: 10px 15px 10px 15px;
+    border-top: solid 1px #f2f2f2;
+    font-size: 12px
+}
+
+.BMapLib_ap {
+    float: left;
+    width: 263px;
+    height: 172px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    th {
+        text-align: right;
+        font-weight: normal
+    }
+}
+
+.BMapLib_mp {
+    background: #f6f6f6;
+    padding: 10px;
+    height: 152px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.BMapLib_mp_title {
+    font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+    padding-bottom: 5px;
+}
+
+.BMapLib_msgContent {
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.BMapLib_popup_close {
+    padding: 10px;
+    background: url('../images/iw_close.gif') no-repeat center center transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 13px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 14px;
+    z-index: 50
+}
+
+.BMapLib_sms_input {
+    ime-mode: disabled
+}
+
+.BMapLib_sms_input_l {
+    width: 90px
+}
+
+.BMapLib_sms_input_s {
+    width: 35px
+}
+
+.BMapLib_sms_declare_phone {
+    color: #707070
+}
+
+#BMapLib_sms_tip {
+    color: red;
+    padding-left: 20px
+}
+
+#BMapLib_success_tip {
+    font-size: 12px;
+    text-align: center;
+    padding: 50px 0 20px 0;
+    color: red
+}
+
+#BMapLib_activateTip {
+    padding-left: 5px;
+    color: red
+}
+
+.ui_area_infoContent {
+    padding: 10px 15px;
+    line-height: 24px;
+    a {
+        display: inline-block;
+        color: #333;
+        text-decoration: underline;
+        margin: 0 15px 0 0;
+        font-size: 13px;
+        &:hover {
+            color: #ff6600;
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+
+/**
+ *  这里是页面样式
+ *
+ *  author:  linyandi
+ *  modify:  linyandi
+ *  date  :  2016-04-03
+ =========================================================*/
+
+
+.main-aside-menu {
+    display: none;
+}
+
+.ui-wrap {
+    width: 100%;
+}
+
+.ui-warp-all-j {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.m5 {
+    margin: 5px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.w143 {
+    width: 143px;
+}
+
+.w300 {
+    width: 300px;
+}
+
+.curstom-apply-ouside-bg {
+    width: 100%;
+    height: 600px;
+    background: url(../images/curstom/diy_bg_1600X600_12.jpg) no-repeat scroll center center;
+}
+
+.curstom-apply-outside {
+    position: relative;
+    z-index: 99;
+    height: 600px;
+}
+
+.curstom-apply {
+    position: absolute;
+    width: 300px;
+    height: 415px;
+    z-index: 99;
+    top: 90px;
+    right: 20px;
+    font-size: 12px;
+    .title {
+        font-size: 18px;
+        color: #fff;
+        font-family: "Microsoft Yahei";
+        text-align: right;
+    }
+}
+
+.curstom-apply-bg {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    right: 0;
+    width: 340px;
+    height: 484px;
+    background: #fff;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.curstom-apply .lable {
+    position: absolute;
+    z-index: 98;
+    top: 7px;
+    left: 10px;
+    width: 275px;
+    font-size: 12px;
+    color: #b4b4b4;
+}
+
+.curstom-apply-input {
+    position: relative;
+    margin-top: 20px;
+}
+
+.curstom-apply-input .input,
+.curstom-apply-panel-select {
+    position: relative;
+    display: block;
+    height: 30px;
+    line-height: 30px\0;
+    *line-height: 30px;
+    border-radius: 4px;
+    border: solid #e9e9e9;
+    border-width: 0 1px;
+    background: url(../images/curstom/curstom_bg_2015.png) repeat-x 0 0;
+    text-indent: 10px;
+}
+
+.curstom-apply-input .input {
+    width: 300px;
+}
+
+.curstom-apply-panel {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.curstom-apply-panel-select {
+    line-height: 30px;
+}
+
+.curstom-apply-panel-select .curstom-select-label {
+    display: inline-block;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.curstom-apply-panel-select ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: -1px;
+    top: 32px;
+    width: 101%;
+    margin: 0;
+    padding: 0;
+}
+
+.curstom-apply-panel-select ul li {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    color: #333;
+    line-height: 27px;
+    text-indent: 10px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.curstom-apply-panel-select ul li:hover {
+    background: #ccc;
+}
+
+.curstom-apply-textarea {
+    position: relative;
+    margin-top: 10px;
+}
+
+.curstom-apply-textarea .textarea {
+    width: 280px;
+    height: 78px;
+    padding: 5px 10px;
+    line-height: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: solid #e9e9e9;
+    border-width: 2px 1px 0 1px;
+    outline: none;
+}
+
+#urwstyle {
+    overflow-y: scroll;
+    resize: none;
+}
+
+.choosed-icon-1,
+.choosed-icon-2,
+.choosed-icon-3 {
+    position: absolute;
+    z-index: 9;
+    top: 12px;
+    right: 10px;
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    border-color: #333 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 8px 4px 4px 4px;
+}
+
+.choosed-icon-1.cur,
+.choosed-icon-2.cur,
+.choosed-icon-3.cur {
+    border-color: #f60 transparent transparent transparent;
+}
+
+.curstom-apply-btn {
+    margin-top: 20px;
+}
+
+.curstom-apply-btn .button {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background: url(../images/curstom/curstom_bg_2015.png) no-repeat 0px -49px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.curstom-apply-btn .button:hover {
+    background-position: 0px -90px;
+}
+
+.curstom-apply-yhqicon {
+    position: absolute;
+    bottom: 0;
+    right: 195px;
+    width: 98px;
+    height: 98px;
+    background: url(../images/curstom/curstom_bg_2015.png) no-repeat 0 -291px;
+}
+
+.curstom-apply-yhq {
+    position: absolute;
+    bottom: 27px;
+    right: -8px;
+    width: 190px;
+    height: 40px;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #333;
+    strong {
+        font-weight: bold;
+    }
+}
+
+.curstom-apply .tip {
+    position: absolute;
+    display: inline-block;
+    z-index: 999;
+    top: 23px;
+    left: 10px;
+    background: #333;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    color: #fff;
+    padding: 4px 7px;
+    border-radius: 4px;
+    display: none;
+}
+
+.curstom-apply .tip i {
+    position: absolute;
+    z-index: 998;
+    top: -12px;
+    left: 10px;
+    display: block;
+    border-color: transparent transparent #333 transparent;
+    border-style: dashed dashed solid dashed;
+    border-width: 6px 6px 8px 6px;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.curstom-columnTitle {
+    position: relative;
+    height: 23px;
+    margin: 0;
+    border-bottom: 2px solid #333;
+}
+
+.curstom-columnTitle i {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background: url(../images/curstom/curstom_bg_2015.png) no-repeat;
+}
+
+.curstom-columnTitle .curstom-columnTitle-icon1 {
+    width: 157px;
+    height: 23px;
+    background-position: 0 -390px;
+}
+
+.curstom-columnTitle .curstom-columnTitle-icon2 {
+    width: 274px;
+    height: 24px;
+    background-position: 0 -415px;
+}
+
+.curstom-style {
+    margin-top: 50px;
+}
+
+.diy-3dslide {
+    width: 100%;
+    height: 580px;
+    margin-top: 20px;
+    background: #fff;
+}
+
+.diy-3d-content-wrap {
+    width: 100%;
+    height: 580px;
+}
+
+.ui-diy-3d-content {
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+    z-index: 990;
+}
+
+.diy-3dslide .diy-3d-tab {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.diy-3dslide .diy-3d-tab a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    background: url(../images/curstom/diy-3d-tab-lte9.png) left top no-repeat;
+}
+
+.diy-3dslide .diy-3d-tab a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: url(../images/curstom/diy-3d-tab-lte9.png) -100px top no-repeat;
+}
+
+.diy-3dslide .diy-3d-tab a.cur {
+    color: #fff;
+    background: url(../images/curstom/diy-3d-tab-lte9.png) -100px top no-repeat;
+}
+
+.slider3D-container {}
+
+.curstom-desingers {
+    margin-top: 50px;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+    .main-title {
+        margin-top: 20px;
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+    }
+    .desingers-btn-line {
+        margin-top: 20px;
+    }
+    .booking-btn {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+        background: url(../images/curstom/curstom_bg_2015.png) no-repeat -160px -294px;
+        &:hover {
+            background-position: -160px -336px;
+        }
+    }
+}
+
+.curstom-desingers-main {
+    padding: 0;
+    margin-top: 5px;
+    .item {
+        float: left;
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin: 25px 58px 25px 0;
+        .head-pic {
+            position: absolute;
+            z-index: 994;
+            left: 0;
+            top: 0;
+            width: 140px;
+            height: 140px;
+            cursor: pointer;
+        }
+        .detail {
+            display: none;
+            position: absolute;
+            z-index: 998;
+            top: -75px;
+            left: 160px;
+            width: 389px;
+            height: 253px;
+            padding: 18px 48px;
+            background: #fff;
+            border: 1px solid #ccc;
+            .tip-icon-w,
+            .tip-icon-g {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                width: 0;
+                height: 0;
+                margin-top: -5px;
+                font-size: 0;
+                overflow: hidden;
+                border-color: transparent #fff transparent transparent;
+                border-style: dashed solid dashed dashed;
+                border-width: 6px 8px 6px 6px;
+            }
+            .tip-icon-g {
+                z-index: 993;
+                left: -15px;
+                border-right-color: #ccc;
+            }
+            .tip-icon-w {
+                z-index: 994;
+                left: -14px;
+            }
+            .pic {
+                float: left;
+                width: 190px;
+                height: 253px;
+            }
+            .info {
+                float: left;
+                width: 189px;
+                height: 253px;
+                margin-left: 10px;
+                text-align: left;
+            }
+            &.cur {
+                display: block;
+            }
+        }
+    }
+}
+
+.curstom-desingers-main .item {
+    &.JQ_item5,
+    &.JQ_item6,
+    &.JQ_item11,
+    &.JQ_item12 {
+        .detail {
+            display: none;
+            left: -505px;
+            .tip-icon-w,
+            .tip-icon-g {
+                border-color: transparent transparent transparent #fff;
+                border-style: dashed dashed dashed solid;
+                border-width: 6px 6px 6px 8px;
+            }
+            .tip-icon-g {
+                left: 485px;
+                border-left-color: #ccc;
+            }
+            .tip-icon-w {
+                left: 484px;
+            }
+            &.cur {
+                display: block;
+            }
+        }
+    }
+}
+
+.curstom-desingers-main .detail {
+    .info {
+        .name {
+            margin-top: -5px;
+            color: #333;
+            font-size: 18px;
+            vertical-align: top;
+            text-align: center;
+        }
+        .title {
+            margin-top: 3px;
+            text-align: center;
+            span {
+                display: inline-block;
+                padding-top: 3px;
+                color: #8c8c8c;
+                border-top: 4px solid #333;
+            }
+        }
+        p {
+            margin-top: 25px;
+        }
+        p label {
+            color: #8c8c8c;
+        }
+        p span {
+            color: #333;
+        }
+    }
+}
+
+.curstom-map-wrap {
+    position: relative;
+    z-index: 990;
+    margin: 0;
+    font-size: 12px;
+    background-color: #000;
+    dd p {
+        margin: 0;
+    }
+    .offline-goto-btn {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+.curstom-map {
+    position: absolute;
+    left: 98px;
+    top: 21px;
+    width: 438px;
+    height: 291px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.curstom-map-info {
+    position: absolute;
+    z-index: 991;
+    left: 549px;
+    top: 21px;
+    width: 540px;
+    height: 293px;
+    font-family: "Microsoft Yahei";
+    overflow: hidden;
+    background: #ebebeb;
+}
+
+.curstom-map-info dl {
+    width: 438px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+
+.curstom-map-info dl dt {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px dotted #3c3c3c;
+}
+
+.curstom-map-info dl dd {
+    color: #8c8c8c;
+    line-height: 18px;
+    padding: 16px 0 0 0;
+    margin-left: 0;
+}
+
+.curstom-map-info dl dd label,
+#expInfo {
+    color: #333;
+}
+
+#expInfo {
+    display: inline;
+    height: 55px;
+    color: #8c8c8c;
+    overflow: hidden;
+}
+
+.curstom-map-btn,
+.curstom-map-btn:visited {
+    display: inline-block;
+    height: 30px;
+    padding: 0 30px;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #f60;
+}
+
+.curstom-map-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ee950a;
+}
+
+.ui-curstom-offline {
+    position: relative;
+    width: 1188px;
+    height: 385px;
+    margin: 75px auto 0 auto;
+    border: 2px solid #333;
+}
+
+.ui-curstom-offline-title {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 170px;
+    height: 30px;
+    margin-left: -95px;
+    padding: 10px;
+    font-family: "Microsoft Yahei";
+    color: #333;
+    text-align: center;
+    background: #fff;
+    h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    h4 {
+        margin-top: 10px;
+        color: #8c8c8c;
+        font-size: 12px;
+    }
+}
+
+.curstom-offline-tab {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.curstom-offline-tab {
+    width: 100%;
+    height: 30px;
+    .tab-container {
+        width: 178px;
+        height: 30px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-left: none;
+        .tab-item {
+            display: block;
+            float: left;
+            width: 88px;
+            height: 30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            border-left: 1px solid #ccc;
+            &:hover,
+            &.cur {
+                color: #f60;
+            }
+        }
+    }
+}
+
+.ui-curstom-alwaysdown {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    bottom: 0;
+    width: 645px;
+    height: 80px;
+    margin-left: -323px;
+    overflow: hidden;
+    .ui-curstom-warp {
+        font-family: "Microsoft Yahei";
+    }
+}
+
+.ui-curstom-alwaysdown .left {
+    float: left;
+    width: 330px;
+    padding: 18px 75px 0 0;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+    .text1 {
+        font-size: 18px;
+        color: #fff;
+    }
+    .text2 {
+        padding-top: 5px;
+        font-size: 12px;
+        color: #ffc92a;
+        strong {
+            font-size: 18px;
+            font-style: italic;
+            padding: 0 5px;
+        }
+    }
+}
+
+.ui-curstom-alwaysdown .right {
+    display: block;
+    width: 240px;
+    height: 80px;
+    background: url(../images/curstom/curstom_bg_2015.png) no-repeat 0 -130px;
+    opacity: 1;
+}
+
+.ui-curstom-alwaysdown .right:hover {
+    background-position: 0px -211px;
+}
+
+.ui-curstom-alwaysdown-bg {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    height: 80px;
+    background: #000;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+
+/* ================= */
+
+
+/* ================ */
+
+.ui-conments-dialog {
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    width: 400px;
+    margin: 0 0 0 -200px;
+    font-family: "宋体", Arial;
+    background: #fff;
+}
+
+.ui-conments-dialog-content {
+    width: 360px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.ui-conments-dialog-content .ui-conments-dialog-msgbig {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    padding: 10px 0 10px 10px;
+}
+
+.ui-conments-dialog-content .ui-conments-dialog-msgbig b {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+    line-height: 60px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: "microsoft Yahei";
+}
+
+.ui-conments-dialog-content .ui-conments-dialog-msgsp {
+    color: #8c8c8c;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ui-conments-dialog-content .ui-conments-dialog-content-inner {
+    line-height: 24px;
+    color: #333;
+    padding: 5px 8px;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: "宋体";
+    border: 1px dashed #ccc;
+}
+
+.ui-conments-dialog-content .ui-conments-dialog-content-inner em {
+    color: #8c8c8c;
+}
+
+
+/* icon */
+
+.ui-conments-dialog-content .ui-conments-dialog-icon-smile {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url(../images/curstom/curstom_bg_2015.png) no-repeat -99px -293px;
+}
+
+.ui-conments-footer {
+    padding: 10px 0 20px 0;
+}

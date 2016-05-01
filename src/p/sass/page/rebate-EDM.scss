@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/*
+ * rebate-EDM 返利分享邮件模板
+ *
+ *  author:LiuDan
+ *  date:20150319
+ */
+
+ /*table的样式*/
+
+ .btn-150x40 {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 4px;
+}
+/* 橙色按钮 */
+.btn-orange {
+    background-color: #f60;    
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+.EDM-table{
+	width: 640px;
+	height: 620px;
+	background-color: #fff;
+
+}
+
+.EDM-tr1-td2{
+	padding-bottom: 10px;
+	vertical-align: bottom;
+}
+
+
+.EDM-font-gray{
+	color: #8c8c8c;
+}
+/*table里面第一行的下边框为灰色*/
+.EDM-tr1{
+	height: 80px;
+
+	border-bottom: 1px solid #b4b4b4;
+}
+
+/*EDM内容样式*/
+.EDM-content-td{
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+
+.EDM-search-link{
+	color: #ff6600;
+}
+.EDM-content-p2{
+	text-indent: 25px;
+}
+
+
+
+.EDM-content-p2 span{
+	color: #ff6600
+}

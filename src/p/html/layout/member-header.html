@@ -1,0 +1,35 @@
+<!-- 会员俱乐部头部开始 -->
+    <header class="member-header">
+        <section class="kh-row-24">
+            <div class="kh-col-7">
+                <div class="member-logo">
+                    <a href="javascript:void(0);">
+                        <img src="@@cdn/p/images/logo.png" width="140" height="96" />
+                    </a>
+                    <a href="javascript:void(0)" class="member-logo-ad">
+                        <img src="@@cdn/p/images/ad-logo.png" alt="" width="200" height="96">
+                    </a>
+                </div>
+            </div> 
+            <div class="kh-col-7"> 
+                <p class="member-header-title">
+                    <span>@@headerName</span>
+                </p>
+            </div>
+            @@if(context.search){
+                <div class="kh-col-10 pos-rel">
+                    <!-- 顶部搜索 -->
+                    <div class="search-bar member-header-search">
+                        <form class="JQ_searchForm" action="javascript:void(0);" method="post">
+                            <input type="text" name="keyword" class="search-keyword JQ_searchKeyword w380" />
+                                <a class="seach-btn JQ_searchBarBtn" href="javascript:void(0);">
+                                    <i class="icon-m-search"></i>
+                                </a>
+                            <span class="JQ_hotKeyTip hot-keyword-tip">金海马床垫</span>
+                        </form>
+                    </div>
+                </div>
+            }
+        </section>
+    </header>
+<!-- 会员俱乐部头部结束 -->

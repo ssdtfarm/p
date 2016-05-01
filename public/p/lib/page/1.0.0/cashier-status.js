@@ -1,0 +1,1 @@
+define("libpage.0.0/cashier-status",[],function(o,i,t){$(function(){function o(){i=s.height(),t=$(window).scrollTop()+$(window).height()-i+"px",$(document.body).height()<$(window).height()?(s.css({position:"absolute",marginTop:0,top:t}),s.show()):(s.css({position:"static"}),s.show())}var i=0,t=0,s=$(".member-foot");o(),$(window).scroll(o).resize(o)})});

@@ -1,0 +1,205 @@
+/*上面和下面的外部包裹*/
+
+/*通用设置*/
+.ac-w{
+	width:1190px;
+	margin:0 auto;
+	background-color:#000;
+}
+.ac-second-wrap{
+	width:1000px;
+	margin:0 auto;
+	background-color:#b51122;
+}
+.ac-second-w{
+	width:936px;
+	margin:0 auto;
+}
+/*增加砸金蛋的图片*/
+.ac-egg-w{
+	width:1190px;
+	height:296px;
+	overflow:hidden;
+	margin:0 auto;
+	text-align:center;
+	background-color:#da1216;
+}
+/*顶部*/
+.ac-second-head{
+	border-bottom:1px dotted #82050e;
+}
+.ac-second-head-left{
+	float:left;
+	width:326px;
+	padding-bottom:10px;
+	padding-top:30px;
+}
+.ac-second-head-left .ac-second-head-time-text{
+	text-indent:25px;
+	font-size:12px;
+	padding:7px 0;
+	font-family:"Microsoft Yahei";
+	color:#fff;
+	font-style:italic;
+}
+.ac-second-head-time{
+	padding:0 0 0 25px;
+}
+.ac-second-head-time li{
+	float:left;
+	width:84px;
+	height:94px;
+	overflow:hidden;
+	line-height:78px;
+	text-indent:10px;
+	margin-right:14px;
+	color:#fff;
+	font-size:56px;
+	font-family:Arial;
+}
+.ac-second-head-time li.ac-hou{
+	background:url(img/ac-second-spire.png) -236px -169px no-repeat;
+}
+.ac-second-head-time li.ac-min{
+	background:url(img/ac-second-spire.png) -334px -169px no-repeat;
+}
+.ac-second-head-time li.ac-sec{
+	background:url(img/ac-second-spire.png) -432px -169px no-repeat;
+}
+
+.ac-second-head-right{
+	float:left;
+	width:610px;
+	padding-top:10px;
+}
+.ac-second-head-right .ac-second-right-text{
+	font-style:italic;
+	color:#fff;
+	font-size:18px;
+	font-family:"Microsoft Yahei";
+}
+.ac-second-head-right .ac-second-right-text span{
+	display:inline-block;
+	padding-left:89px;
+	font-size:35px;
+	background:url(img/ac-second-spire.png) -244px -292px no-repeat;
+}
+/*右边状态*/
+.ac-second-head-right .ac-second-head-list-wrap{
+	padding-top:0px;
+}
+.ac-second-head-list-wrap li{
+	float:left;
+	width:194px;
+	height:56px;
+	margin-left:8px;
+	overflow:hidden;
+}
+/*10点钟状态块*/
+.t-ten-start{
+	background:url(img/ac-second-spire.png) -235px top no-repeat;
+}
+.t-ten-on{
+	background:url(img/ac-second-spire.png) -235px -56px no-repeat;
+}
+.t-ten-over{
+	background:url(img/ac-second-spire.png) -235px -112px no-repeat;
+}
+/*15点钟状态块*/
+.t-fity-start{
+	background:url(img/ac-second-spire.png) -432px top no-repeat;
+}
+.t-fity-on{
+	background:url(img/ac-second-spire.png) -432px -57px no-repeat;
+}
+.t-fity-over{
+	background:url(img/ac-second-spire.png) -432px -112px no-repeat;
+}
+/*22点钟状态块*/
+.t-twenty-start{
+	background:url(img/ac-second-spire.png) -626px top no-repeat;
+}
+.t-twenty-on{
+	background:url(img/ac-second-spire.png) -626px -57px no-repeat;
+}
+.t-twenty-over{
+	background:url(img/ac-second-spire.png) -626px -112px no-repeat;
+}
+
+/*主要内容*/
+.ac-second-con{
+	border-top:1px dotted #bf4449;
+}
+/*图片列表*/
+.ac-second-list{
+	padding:18px 0 0 0;
+	*padding:2px 0 0 0!important;
+}
+.ac-second-list li{
+	position:relative;
+	z-index:90;
+	float:left;
+	display:inline;
+}
+.ac-second-list li a{
+	display:inline-block;
+	overflow:hidden;
+}
+/*遮罩层*/
+.ac-second-list li .ac-list-mark{
+	position:absolute;
+	z-index:91;
+	left:0; 
+	top:0;
+	display:inline-block;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.45;
+	filter:alpha(opacity=45);
+}
+/*销售状态层*/
+.ac-second-list li .ac-list-status{
+	position:absolute;
+	z-index:92;
+	left:50%;
+	top:50%;
+	display:inline-block;
+	width:235px;
+	height:125px;
+	margin:-63px 0 0 -118px;
+	overflow:hidden;
+}
+.ten-over{
+	background:url(img/ac-second-spire.png) left top no-repeat;
+}
+.fity-over{
+	background:url(img/ac-second-spire.png) left -126px no-repeat;
+}
+.twenty-over{
+	background:url(img/ac-second-spire.png) left -252px no-repeat;
+}
+/*li的间距*/
+.ac-second-list li:nth-child(2){
+	margin-right:1px;
+}
+.ac-second-list li:nth-child(3){
+	margin-right:1px;
+}
+.ac-second-list .ac-list-item-first{
+	*margin-top:16px!important;
+}
+.ac-second-list .ac-list-item-first a{ 
+	width:936px;
+	height:328px;
+}
+.ac-second-list .ac-list-item-nor{
+	margin-top:4px;
+	width:311px;
+	height:355px;
+}
+
+/*浮动导航栏*/
+.nav_float{
+	z-index: 999;
+}

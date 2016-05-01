@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-aside.scss";     // member-aside
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/member-select.scss";         // icon-sprite
+@import "../components/common-search-bar.scss";         // icon-sprite
+@import "../components/common-pages.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  aftersales-service-list 售后服务列表页样式
+ *
+ *  author:JinJing
+ *  date:20150215
+*/
+
+body {
+    background: #e4e4e4;
+}
+/*售后列表基本样式*/
+.aftersales-list {
+    margin-left: 20px;
+}
+.aftersales-list-table {
+    text-align: center;
+    font-family: "宋体";
+}
+.aftersales-list-table .aftersales-list-thead th {
+    padding: 8px 0;
+    text-align: center;
+    color: #fff;
+    background: #61bbe0;
+}
+.aftersales-list-table .aftersales-list-tbody {
+    background: #fff;
+}
+.aftersales-list-table .aftersales-list-tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.aftersales-list-table .aftersales-list-tbody tr:last-child {
+    border: none;
+}
+.aftersales-list-table .aftersales-list-tbody td {
+    padding: 23px 0 22px;
+}
+/*售后列表页面模拟下拉菜单*/
+.member-affterSales-top-search {
+    height: 32px;
+    padding: 30px 0 20px 0;
+}
+/*突出显示文字颜色*/
+
+.aftersales-list-table .aftersales-list-tbody td.refund-num, .aftersales-list-table .aftersales-list-tbody td.order-num {
+    color: #2f6ceb;
+}
+.aftersales-list-table .aftersales-list-tbody td.aftersales-succeful {
+    color: #61bbe0;
+}
+/*取消查看*/
+
+.aftersales-list-table .aftersales-list-table-btn {
+    color: #2f6ceb;
+}
+.aftersales-list-table .aftersales-list-table-btn:hover {
+    color: #f60;
+}
+/*没有交易记录*/
+.aftersales-list-table .aftersales-list-tbody .aftersales-list-none{
+    height: 90px;
+    padding-top: 30px;
+    vertical-align: top;
+}

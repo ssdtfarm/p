@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+@import "../layout/sprite.scss";        
+          
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";    
+
+/*
+ *  rebate-preview 定制返现分享页
+ *
+ *  author:lijinrong
+ *  date:2015/4/28
+ */
+body {
+    background: #e4e4e4;
+}
+.w60 {
+    width: 60px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt40 {
+    margin-top: 40px;
+}
+.mb188 {
+    margin-bottom: 188px;
+}
+.font-bold {
+    font-weight: bold;
+}
+.rebate-center-main {
+    margin: 0 auto;
+    width: 940px;
+}
+.rebate-center-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+.rebate-center-main .icon-box-normal {
+    width: 20px;
+    height: 20px;
+}
+.rebate-center-main .icon-box-checked {
+    width: 20px;
+    height: 20px;
+}
+/*LOGO*/
+
+.rebate-center-main .rebate-center-share-logo {
+    position: relative;
+    height: 60px;
+    padding-left: 48px;
+    text-align: left;
+    background: #fff;
+}
+.rebate-center-main .rebate-center-share-logo  .shop-name-wrap {
+    position: absolute;
+    left: 170px;
+    top:10px;
+    border-left: 1px solid #ccc;
+    height: 26px;
+    padding-top: 14px;
+    padding-left:   10px;
+    font-size: 18px;
+    color: #333;
+}
+.rebate-center-main .rebate-center-share-open {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    color: #fff;
+    background: #f3e7a4;
+}
+.rebate-center-main .rebate-center-share-open p {
+    width: 585px;
+    height: 90px;
+    margin:0 auto;
+    padding-top: 100px;
+}
+.rebate-preview-main .share-main-title {
+    background: #fff;
+     font-size: 14px;
+}
+.rebate-preview-main .share-main-title p{
+    width: 840px;
+    line-height: 22px;
+    padding: 26px 0;
+    margin:0 auto; 
+    color: #333;
+    text-indent: 28px;
+}
+.rebate-preview-main .share-main-title span {
+    position: relative;
+    top: -2px;
+    color: #f60;
+}
+.rebate-preview-main .share-main-title .icon-point-down{
+    margin-left: 10px;
+}
+.rebate-preview-main .share-list {
+    width: 885px;
+    padding-left: 55px;
+    background: #fff;
+    clear: both;
+    overflow: hidden;
+}
+.rebate-preview-main .share-list .share-item {
+    float: left;
+    width: 240px;
+    height: 246px;
+    margin: 0 55px 40px 0;
+    text-align: left;
+    background: #fff;
+}
+.share-item {
+    position: relative;
+}
+.share-item .pic {
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+}
+.share-item .pic .item-img img {
+    width: 240px;
+    height: 160px;
+}
+.share-item .name {
+    width: 230px;
+    height: 30px;
+    padding: 0 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.share-item .name .item-name {
+    color: #8c8c8c;
+}
+.share-item:hover .name .item-name {
+    color: #f60;
+}
+.share-item .price .item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f60;
+}
+.share-item .price .item-price span{
+    position: relative;
+    font-size: 12px;
+}
+.share-item .price .item-price-original {
+    margin-left: 10px;
+    color: #8c8c8c;
+    text-decoration: line-through;
+}
+.share-item .share {
+    height: 30px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.share-item .share .share-rebate-button {
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background: #f60;
+}
+.share-item .share .share-rebate-button:hover {
+    background: #ee950a;
+}
+.share-footer{
+    padding-top: 14px;
+    height: 160px;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+.share-footer-in {
+    padding-left: 150px;
+} 
+.share-footer-in .info-left {
+    float: left;
+    padding-right: 19px;
+    overflow: hidden;
+}
+.share-footer-in .item {
+    float: left;
+    margin-right: 10px;
+    width: 90px;
+    height: 134px;
+    text-align: center;
+    color: #333;
+    background-color: #ccc;
+}
+.share-footer-in img {
+    display: block;
+    margin-bottom: 6px;
+}
+.share-footer-in span {
+    font-weight: bold;
+}
+.share-footer-in .last {
+    margin-top: 36px;
+}
+.share-footer-in .wb {
+    display: block;
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 60px; height: 2px;
+}
+
+.share-footer-in .info-right {
+    float: left;
+    height: 134px; 
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+}
+.share-footer-in .info-right h3{
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #333;
+}
+.share-footer-in .info-right p {
+    color: #8c8c8c;
+    line-height: 22px;
+    font-size: 12px;
+}
+.share-footer-in .info-right strong {
+    position: relative;
+    bottom: -2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.share-footer-in .info-right .special{
+    text-indent: -4px;
+}
+
+.share-item .share-btn {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+    padding-top: 6px;
+    background: url(http://misc.jjcdn.com/p/images/rebate-preview-share-btn.png);
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    width: 60px;
+    height: 54px;
+}
+.share-item .share-btn b{
+    font-size: 18px;
+}
+
+
+
+
+
+

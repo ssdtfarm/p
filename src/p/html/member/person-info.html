@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "person-info",
+        "title": "我的金海马-个人信息"
+    })
+</head>
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "个人信息",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 个人信息列表页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <!--<a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>-->
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-coupon"></i>
+                            <label>我的优惠券</label>
+                        </a>
+                    </dt>
+
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item item-on">
+                        <span>
+                        <i class="m-icon icon-config"></i>
+                        <label>账户设置</label>
+                    </span>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">账号信息与安全</a>
+                        <a href="javascript:void(0);" class="on">个人信息</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-20">
+            <div class="person-info-main">
+            	<div class="corner-tab-nav">
+                    <a href="account-information.html" class="clearfix"><i class="icon-c-nav-l"></i><label>账户信息</label><i class="icon-c-nav-r"></i></a>
+                    <a href="person-info.html" class="clearfix cur"><i class="icon-c-nav-l"></i><label>个人信息</label><i class="icon-c-nav-r"></i></a>
+                    <a href="person-address.html" class="clearfix"><i class="icon-c-nav-l"></i><label>收货地址</label><i class="icon-c-nav-r"></i></a>
+                </div>
+                <form id="J_personForm" class="person-info-form" action="http://www.baidu.com" method="post">
+                    <input type="hidden" name="form" />
+                    <table class="person-info-table">
+                        <tbody>
+                            <tr class="person-info-item">
+                                <th class="">真实姓名：</th>
+                                <td>
+                                    <input class="person-info-input JQ_noNeed" name="personName" />
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th>性别：</th>
+                                <td>
+                                <div class="person-info-sex">                                       
+                                       <label for="" class="sex-item JQ_sex">
+                                           <a href="javascript:void(0) " class="icon icon-radio-on" data-value="1"></a><span>男士</span>
+                                       </label>
+                                       <label for="" class="sex-item JQ_sex">
+                                           <a href="javascript:void(0)" class="icon icon-radio-off" data-value="2"></a><span>女士</span>
+                                       </label>
+                                       <input type="hidden" name="personSex" value="1" />                                                                  
+                                </div>                             
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">生日：</th>
+                                <td>
+                                    <div id="J_selectBirthYear" class="select-gray fl person-birth-year">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w90">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul id="J_birthYear"></ul>
+                                        <input type="hidden" name="personBirthYear">
+                                    </div>
+                                
+                                    <div id="J_selectBirthMonth" class="select-gray fl person-birth-month">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w90">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul id="J_birthMonth"></ul>
+                                        <input type="hidden" name="personBirthMonth">
+                                    </div> 
+                              
+                                    <div id="J_selectBirthDay" class="select-gray fl person-birth-day">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w90">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a> 
+                                        <ul id="J_birthDay"></ul>
+                                        <input type="hidden" name="personBirthDay">
+                                    </div>
+                              
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">邮箱：</th>
+                                <td>
+                                	<input id="J_personEmail" class="person-info-input" name="personEmail" />
+                                    <label class="person-info-tip"><span>*</span></label>
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">QQ：</th>
+                                <td>
+                                   <input class="person-info-input" name="personQQ" />
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">固话：</th>
+                                <td>
+                                    <input id="J_personTel" class="person-info-input" name="personTel" />
+                                    <label class="person-info-tip"><span>*</span> (示例：020-88888888-990)</label>
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">手机：</th>
+                                <td>
+                                    <input id="J_personPhone" class="person-info-input" name="personPhone" />
+                                    <label class="person-info-tip"><span>*</span>（手机固话至少必填一个）</label>
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">所在地区：</th>
+                                <td id="J_selectAddress"></td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <th class="">星座：</th>
+                                <td>
+                                   <input class="person-info-input" name="personConst" />
+                                </td>
+                            </tr>
+                             <tr class="person-info-item">
+                                <th class="">兴趣爱好：</th>
+                                <td>
+                                <div class="person-info-habit">                                       
+                                       <label for="" class="habit-item JQ_interest">
+                                           <a href="javascript:void(0) " class="icon icon-box-normal" data-value="1"></a><span>美式家具</span>
+                                       </label>
+                                       <label for="" class="habit-item JQ_interest">
+                                           <a href="javascript:void(0)" class="icon icon-box-normal" data-value="2"></a><span>欧式家具</span>
+                                       </label>
+                                       <label for="" class="habit-item JQ_interest">
+                                           <a href="javascript:void(0)" class="icon icon-box-normal" data-value="3"></a><span>日式家具</span>
+                                       </label>  
+                                       <label for="" class="habit-item JQ_interest">
+                                           <a href="javascript:void(0)" class="icon icon-box-normal" data-value="4"></a><span>中式家具</span>
+                                       </label> 
+                                       <input type="hidden" name="personInterest">                                     
+                                </div>
+                                </td>
+                            </tr>
+                            </tr>
+                             <tr class="person-info-item">
+                                <th class="">婚姻状况：</th>
+                                <td>
+                                <div class="person-info-marriage">                                       
+                                       <label for="" class="marriage-item JQ_mar">
+                                           <a href="javascript:void(0) " class="icon icon-radio-on" data-value="1"></a><span>未婚</span>
+                                       </label>
+                                       <label for="" class="marriage-item JQ_mar">
+                                           <a href="javascript:void(0)" class="icon icon-radio-off" data-value="2"></a><span>已婚</span>
+                                       </label>
+                                       <input type="hidden" name="personMarital" value="1">                                                                
+                                </div>                                     
+                                </td>
+                            </tr>
+                            </tr>
+                             <tr class="person-info-item">
+                                <th class="">月收入：</th>
+                                <td>
+                                    <div id="J_selectIncome" class="select-gray fl">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w130" data-value="0">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);" data-value="3000">3000</a></li>
+                                            <li><a href="javascript:void(0);" data-value="3000-5000">3000-5000</a></li>
+                                            <li><a href="javascript:void(0);" data-value="5000-8000">5000-8000</a></li>
+                                            <li><a href="javascript:void(0);" data-value="8000以上">8000以上</a></li>
+                                        </ul>
+                                        <input type="hidden" name="personIncome">
+                                    </div>                                      
+                                </td>
+                            </tr>
+                            </tr>
+                             <tr class="person-info-item">
+                                <th class="">教育程度：</th>
+                                <td>
+                                    <div id="J_selectEducation" class="select-gray fl">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w130" data-value="0">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:void(0)" data-value="1">社会学毕业</a></li>
+                                            <li><a href="javascript:void(0)" data-value="2">高中</a></li>
+                                            <li><a href="javascript:void(0)" data-value="3">大学</a></li>
+                                            <li><a href="javascript:void(0)" data-value="4">硕士</a></li>
+                                            <li><a href="javascript:void(0)" data-value="5">硕士及以上</a></li>
+                                        </ul>
+                                        <input type="hidden" name="personEducation">
+                                    </div>                                     
+                                </td>
+                            </tr>
+                            </tr>
+                             <tr class="person-info-item">
+                                <th class="">行业：</th>
+                                <td>
+                                    <div id="J_selectIndustry" class="select-gray fl" style="width: 160px;">
+                                        <i class="select-corner icon-gray-left"></i>
+                                        <label class="JQ_option select-option w130" data-value="0">请选择</label>
+                                        <i class="select-corner icon-gray-right"></i>
+                                        <a id="J_applyType" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);" data-value="1">IT信息技术</a></li>
+                                            <li><a href="javascript:void(0);" data-value="2">金融</a></li>
+                                            <li><a href="javascript:void(0);" data-value="3">互联网</a></li>
+                                            <li><a href="javascript:void(0);" data-value="4">广告传媒</a></li>
+                                            <li><a href="javascript:void(0);" data-value="5">贸易零售</a></li>
+                                            <li><a href="javascript:void(0);" data-value="6">交通物流</a></li>
+                                            <li><a href="javascript:void(0);" data-value="7">房地产</a></li>
+                                            <li><a href="javascript:void(0);" data-value="8">旅游餐饮</a></li>
+                                            <li><a href="javascript:void(0);" data-value="9">加工制造业</a></li>
+                                            <li><a href="javascript:void(0);" data-value="10">石化采掘</a></li>
+                                            <li><a href="javascript:void(0);" data-value="11">农林牧渔</a></li>
+                                            <li><a href="javascript:void(0);" data-value="12">社会服务</a></li>
+                                            <li><a href="javascript:void(0);" data-value="13">医药生物</a></li>
+                                            <li><a href="javascript:void(0);" data-value="14">教育培训科研</a></li>
+                                        </ul>
+                                        <input type="hidden" name="personIndustry">
+                                    </div>                                      
+                                </td>
+                            </tr>
+                            <tr class="person-info-item">
+                                <td>&nbsp;</td>                            
+                                <td>
+                                    <a id="J_submitBtn" href="javascript:void(0);" class="btn-130x30 btn-orange submit-btn">提交</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 售后列表页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "person-info"
+    })
+</body>
+
+</html>

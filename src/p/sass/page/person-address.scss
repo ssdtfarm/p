@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+ 
+          
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";
+@import "../components/member-select.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/member-aside.scss";
+@import "../components/member-nav.scss";
+@import "../components/common-address-form.scss";
+@import "../components/common-dialog.scss";
+@import "../components/common-min-bar.scss";    // min-bar
+
+
+/*
+ *  person-address 个人信息
+ *
+ *  author:Liu Dan
+ *  date:20150316
+ *  edit by linyandi date 2015-03-20
+*/
+body {
+    background: #e4e4e4;
+}
+.w130{
+    width: 90px;
+}
+.btn-130x30 {
+    display:  inline-block;
+    width: 130px;
+    height:  30px;
+    margin-top: 10px;
+    line-height:  30px;
+    color:  #fff;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 橙色按钮 */
+.btn-orange {
+    background-color: #f60;    
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+/*灰色字体*/
+.address-font-gray{
+    color:#8c8c8c;
+}
+
+/*顶部可保存的收货地址数字字体的颜色*/
+.address-account{
+    color: #333;
+}
+/*===============  收货地址的信息显示table ==============*/
+/*地址信息table*/
+.person-address-info-table{    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.person-address-info-item{
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+}
+/*默认地址按钮样式*/
+.defult-address{
+    width:65px; 
+    height:20px;
+    background-color:#333;
+    color: #fff;
+}
+/*===============  新增收货地址table ==============*/
+
+/*================================= 地址列表 =========================================*/
+.address-list {
+    margin-top: 10px;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+.address-list dt {
+    float: left;
+    width: 80%;
+    height: 20px;
+    overflow: hidden;
+    color: #333;
+    font-family: "宋体";
+}
+.address-list i {
+    vertical-align: middle;
+}
+.address-list dt span {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.address-list dd {
+    float: right;
+    width: 20%;
+    text-align: right;
+}
+.address-list dd a {
+    margin: 0 10px;
+    color: #8c8c8c;
+    vertical-align: middle;
+}
+.address-list dd a:hover {
+    color: #f60;
+}
+/* 姓名 */
+.address-list dt label {
+    display: inline-block;
+    max-width: 50px;
+    max-height: 14px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+/* 省市区 */
+.address-list .address-area {
+    max-width: 120px;
+    max-height: 14px;
+    overflow: hidden;
+}
+/* 详细地址 */
+.address-list .address-detail {
+    max-width: 210px;
+    max-height: 14px;
+    overflow: hidden;
+}
+/* 显示默认地址 */
+.address-list .default-address-btn {
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 0;
+    color: #fff;
+    background-color: #333;
+}

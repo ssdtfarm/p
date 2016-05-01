@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "security-validate-phone",
+        "title": "我的金海马-安全中心-验证手机"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "安全中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 验证手机页面开始 -->
+    <section class="kh-row-24 security-main-box clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                        <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);" class="on">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 验证手机页面右边开始 -->
+        <div class="kh-col-20">
+            <div class="security-phone-box">
+                <!-- 验证手机 开始 -->
+                <!-- 安全码 -->
+                <input type="hidden" id="security" name="security" value="123456">
+                <h2>验证手机</h2>
+                <form id="J_editPassForm" class="security-phone-form validate-phone-form">
+                    <div class="security-phone-item">
+                        <p class="clearfix">
+                            <label for="#J_phone">手机号：</label>
+                            <input type="text" name="phone" id="J_phone" maxlength="11">
+                        </p>
+                        <p class="tips"></p>
+                    </div>
+                    <div class="security-phone-item">
+                        <p class="clearfix phone-code">
+                            <label for="#J_phoneCode">短信验证码：</label>
+                            <input class="security-code" type="text" name="phone_code" id="J_phoneCode" maxlength="6">
+                            <span class="get-security-code" id="J_getValidatePhoneCode">获取验证码</span>
+                            <span class="get-security-code security-code-active" id="J_countDown">60秒</span>
+                        </p>
+                        <p class="tips"></p>
+                    </div>
+                    <div class="security-phone-item clearfix">
+                        <a id="J_submitBtn" class="submit-btn">提&nbsp;交</a>
+                    </div>
+                </form>
+                <!-- 验证手机 结束 -->
+            </div>
+        </div>
+        <!-- 验证手机页面右边结束-->
+    </section>
+    <!-- 验证手机机页面结束-->
+    <!-- 底部开始 -->
+    @@include("member-footer.html")
+    <!-- 底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "security-validate-phone"
+    })
+</body>
+
+</html>

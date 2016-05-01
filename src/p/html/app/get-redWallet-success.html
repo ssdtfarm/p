@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "get-redWallet-success", "title" : "金海马商城-领取优惠券成功" })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("comment-header.html",{ "cdn" : "@@miscPath" })
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    @@include("comment-head-nav.html")
+    <!-- 导航结束 -->
+    <!-- 领取优惠券成功开始 -->
+    <section class="kh-row-24 clearfix">
+        <div class="redWallet-wrap">
+            <h2 class="title"><i class="icon-face-smile-orange"></i><span>恭喜您已成功领取了满返红包！</span></h2>
+            <dl class="redWallet-info">
+                <dt class="left">
+                    <div class="redWallet-bg">
+                        <p class="price-line"><span>￥</span><b class="price">1500</b></p>
+                    </div>
+                </dt>
+                <dd class="right">
+                    <li class="item">
+                        <p><i class="icon-dot">.</i><span>红包编号：</span></p>
+                        <br/>
+                        <label>XNELV8U</label>
+                    </li>
+                    <li class="item">
+                        <p><i class="icon-dot">.</i><span>有效期：</span></p>
+                        <br/>
+                        <label class="date">2015-05-10至2015-05-30</label>
+                    </li>
+                    <li class="item">
+                        <p><i class="icon-dot">.</i><span>使用条件：</span></p>
+                        <br/>
+                        <label>单次消费满¥3999.00,全场（除团购/限购/秒杀）可用单次消费满¥3999.00,全场（除团购/限购/秒杀）可用</label>
+                    </li>
+                    <blockquote class="btn-line">
+                        <a class="use-link">立即使用</a>
+                        <a class="my-redWallet">查看我的所有红包></a>
+                    </blockquote>
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <!-- 领取优惠券成功结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{ "cdn" : "@@miscPath", "name" : "get-redWallet-success" })
+</body>
+
+</html>

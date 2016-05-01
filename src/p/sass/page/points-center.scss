@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";
+ @import "../components/club-aside.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-pages.scss";
+@import "../components/member-select.scss";
+
+/*
+ *  points-center-consumption-list 
+ *
+ *  author:JinJing
+ *  date:20150316
+ */
+
+body {
+    background: #e4e4e4;
+}
+.fc-4ca {
+    color: #4ca579;
+}
+.pr10{
+    padding-right: 10px;
+}
+.points-center-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+.my-points-info-main {
+    display: block;
+    padding: 30px 0;
+    background: #fff;
+}
+.points-center-main .my-points-info-main .left-part {
+    float: left;
+    border-right: 1px solid #ccc;
+}
+.my-points-info-main .left-part .my-points-info-table {
+    width: 100%
+}
+.left-part .my-points-info-table .my-points-info-item th {
+    text-align: right;
+}
+.my-points-info-table .my-points-info-item td {
+    height: 35px;
+    text-align: left;
+}
+.my-points-info-table thead .my-points-info-item {
+    font-size: 18px;
+    color: #333;
+}
+.left-part .my-points-info-table tbody th {
+    color: #8c8c8c;
+}
+.left-part .my-points-info-table tbody td {
+    font-size: 18px;
+    color: #f60;
+}
+.left-part .my-points-info-table .exchange-now-btn,.left-part .my-points-info-table .exchange-now-btn:visited{
+    position: relative;
+    top: -3px;
+    font-size: 12px;
+    color: #2f6ceb;
+}
+.left-part .my-points-info-table .exchange-now-btn:hover{
+    color: #f60;
+}
+.exchange-now-btn .icon-circle-right {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+.points-center-main .my-points-info-main .right-part {
+    float: left;
+    padding-left: 30px;
+}
+.right-part .my-points-info-table tbody {
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+
+.my-points-detail-mian {
+    display: block;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    background: #fff;
+}
+.my-points-detail-mian .my-points-detail-head{
+    height: 30px;
+    clear: both;
+}
+.my-points-detail-head .my-points-detail-title {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    background: #4ca579;
+}
+.my-points-detail-head .my-points-detail-title:before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -10px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent transparent #4ca579;
+    border-width: 0 0 20px 10px;
+}
+.my-points-detail-head .my-points-detail-title:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -10px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #4ca579;
+    border-width: 20px 0 0 10px;
+}
+
+
+.my-points-detail-mian .my-points-detail-search {
+    padding-left: 10px;
+    margin-top: 20px;
+    color: #8c8c8c;
+}
+.my-points-detail-search span {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+}
+.my-points-detail-search .detail-search-input {
+    position: relative;
+    width: 78px;
+    height: 18px;
+    display: inline-block;
+    padding: 0 10px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #b4b4b4;
+}
+.my-points-detail-search .detail-search-btn {
+    display: inline-block;
+    padding: 2px 6px;
+    text-align: center;
+    color: #fff;
+    background: #8c8c8c;
+    border-radius: 2px;
+}
+
+.my-points-detail{
+    margin-top: 20px;
+}
+.my-points-detail .my-points-detail-table {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+.my-points-detail .my-points-detail-table thead {
+    color: #8c8c8c;
+    background: #ccc;
+}
+.my-points-detail-table thead td {
+    padding: 10px 0;
+}
+.my-points-detail-table tbody tr{
+    border-bottom: 1px solid #ccc;
+}
+.my-points-detail-table tbody td {
+    padding: 10px 0;
+    width: 25%;
+}

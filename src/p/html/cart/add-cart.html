@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 载入头部 -->
+ @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "add-cart", "title" : "购物车页面" })
+</head>
+<body>
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+
+<!-- 头部开始 -->
+@@include("member-header.html",{"cdn":"@@miscPath","search":false, "headerName": "加入购物车"})
+<!-- 头部结束 -->
+
+<!-- 页面开始  -->
+<section id="J_addCartContainer" class="kh-row-24 add-cart clearfix tc">
+	<div class="add-cart-tip kh-col-24">
+        <i class="icon-face-smile-orange"></i>
+        <span>您的商品已成功加入购物车！</span>
+    </div>
+    <div class="add-cart-btns kh-col-24">
+        <a class="add-cart-btn" href="javascript:void(0);">
+            去购物车结算
+            <i class="icon-point-right"></i>
+        </a>
+    </div>
+    <div class="add-cart-text kh-col-24">
+        <span>您还可以</span>
+        <a href="javascript:void(0);">继续购物</a>  
+    </div>
+</section>
+<!-- 页面结束 -->
+
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{ "cdn" : "@@miscPath" ,"name" : "add-cart"})
+</body>
+</html>

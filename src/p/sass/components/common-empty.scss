@@ -1,0 +1,53 @@
+/**
+ *  ---------------------------------------------
+ *      全站为空提示样式
+ *      这个组件引用的页面名称不详
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+.cart-empty {
+    padding: 50px 0 200px 0;
+    .cart-empty-left {
+        float: left;
+        width: 40%;
+        text-align: right;
+    }
+    .cart-empty-right {
+        float: left;
+        width: 55%;
+    }
+    .empty-tip {
+        padding-top: 10px;
+        font-size: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+    .empty-btns {
+        padding: 10px 0;
+        a {
+            display: inline-block;
+            padding: 5px 20px;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        .btn-blue {
+            background-color: #2f6ceb;
+            &:hover {
+                background-color: #ee950a;
+            }
+        }
+        .btn-orange {
+            background-color: #f60;
+            &:hover {
+                background-color: #ee950a;
+            }
+        }
+    }
+}

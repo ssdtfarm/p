@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "rebate-center-diy-list",
+        "title": "我的金海马-定制返利分享列表页"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "返现中心",
+        "search": false
+    })
+    <!-- 头部结束 -->
+
+    <!-- 页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <!-- 延迟部分 -->
+        <div class="kh-col-5 pos-rel" id="J_clubAside">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateClubAside" type="text/html">
+            <aside class="club-aside">
+                <div class="club-aside-icons">
+                    <div class="club-aside-info">
+                        <p class="club-title">会员俱乐部</p>
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" />
+                        </a>
+                        <p class="club-menber-name"><span>沙发君沙发君沙发君君沙发君沙发君君沙发君沙发君君沙发君沙发君</span><i class="icon"></i>
+                        </p>
+                    </div>
+                    <div class="club-aside-option">
+                        <p><a href="javascript:void(0)">完善个人资料 ></a>
+                        </p>
+                        <p><a href="javascript:void(0)">绑定手机、邮箱，提升账户安全度 ></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="club-hotRebate">
+                    <p class="club-hotRebate-more"><a href="javascript:void(0)">更多></a>
+                    </p>
+                    <div class="club-hotRebate-title">
+                        <p><b>热门返利</b>
+                        </p>
+                        <p><span>RANKING LIST</span>
+                        </p>
+                    </div>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-1"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">返利比例10%</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-2"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-1"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">返利比例10%</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-3"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-2"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-4"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-3"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="club-hotRebate-item">
+                        <dt class="pic"><i class="icon icon-hot-5"></i>
+                            <a href="javascript:void(0)" class="item-img"><i class="icon-4"></i><img src="http://misc.jjcdn.com/p/images/110X74_1.jpg" width="110" height="74" />
+                            </a>
+                        </dt>
+                        <dd class="info">
+                            <p class="name"><a href="javascript:void(0)" class="item-name">银配茶色 涤纶 床品五件套</a>
+                            </p>
+                            <p class="price"><a href="javascript:void(0)" class="item-price">￥855.00</a>
+                            </p>
+                            <p class="rebate-percent"><a href="javascript:void(0)" class="item-rebate-percent">最高返利金额200元</a>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="club-help-center"><a href="javascript:void(0);" class="club-help-center-button"><i class="icon icon-help"></i>帮助中心</a></div>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的金海马右边开始 -->
+        <div class="kh-col-19 rebate-center-main">
+            <!-- 子菜单导航开始 -->
+            <menu class="rebate-center-menu">
+                <div class="corner-tab-nav">
+                    <a href="javascript:void(0);" class="page-name clearfix cur"><i class="icon-c-nav-l"></i><label>定制返利分享页</label><i class="icon-c-nav-r"></i></a>
+                    <a href="javascript:void(0);" class="page-name clearfixr"><i class="icon-c-nav-l"></i><label>返利商品订单</label><i class="icon-c-nav-r"></i></a>
+                </div>
+                <div class="rebate-store-index"><a href="javascript:void(0)">返利商场首页></a>
+                </div>
+            </menu>
+            <!-- 子菜单导航结束 -->
+            <!-- 筛选部分开始 -->
+            <form action="javascript:void(0);" method="post">
+                <div class="rebate-center-filler pt10 mt10 clearfix">
+                    <dl class="filler-item clearfix">
+                        <dt>返利方式：</dt>
+                        <dd id="J_selectRebateStyle" class="select-gray">
+                            <i class="select-corner icon-gray-left"></i>
+                            <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a id="J_applyReason" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                            <ul>
+                                <li><a href="javascript:void(0);" data-value="0">返利</a>
+                                </li>
+                                <li><a href="javascript:void(0);" data-value="0">返利+返积分</a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="rebateStyle">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="rebate-center-filler clearfix">
+                        <dl class="filler-item">
+                            <dt>返利比例：</dt>
+                            <dd id="J_selectRebateScale" class="select-gray">
+                                <i class="select-corner icon-gray-left"></i>
+                                <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a id="J_applyReason" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-value="0">0%~20%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="1">21%~50%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="2">51%~80%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="4">81%~100%</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="rebateScale">
+                            </dd>
+                        </dl>
+                        <dl class="filler-item">
+                            <dt>返积分比例：</dt>
+                            <dd id="J_selectPointScale" class="select-gray">
+                                <i class="select-corner icon-gray-left"></i>
+                                <label class="JQ_option select-option w90">全部</label><i class="select-corner icon-gray-right"></i><a id="J_applyReason" href="javascript:void(0);" class="select-btn JQ_selectBtn"><i class="triangle-down"></i></a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-value="0">0%~20%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="1">21%~50%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="2">51%~80%</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-value="3">81%~100%</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="pointScale">
+                            </dd>
+                        </dl>
+                        <a id="J_submitSearch" href="javascript:void(0);" class="filler-search-btn">确定</a>
+                </div>
+            </form>
+            <div class="rebate-center-filler-category">
+                <span>商品类型：</span>
+                    <a href="javascript:void(0)" class="category-item cur">全部</a>
+                    <a href="javascript:void(0)" class="category-item" class="category-item">客厅</a>
+                    <a href="javascript:void(0)" class="category-item">餐厅</a>
+                    <a href="javascript:void(0)" class="category-item">卧房</a>
+                    <a href="javascript:void(0)" class="category-item">书房</a>
+                    <a href="javascript:void(0)" class="category-item">办公家具</a>
+                    <a href="javascript:void(0)" class="category-item">儿童家具</a>
+                    <a href="javascript:void(0)" class="category-item">家居百货</a>
+            </div>
+            <!-- 筛选部分结束 -->
+            <!-- 列表部分开始 -->
+            <form id="J_chkForm" action="javvascript:void(0);" method="post">
+            <div class="rebate-center-goods-list clearfix">
+                <table class="goods-list-table" border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th width="90">
+                                    <label class="select-all">
+                                        <a href="javascript:void(0);" class="icon icon-box-normal JQ_chkAll"></a>
+                                        &nbsp;
+                                        <span>全选</span>
+                                        
+                                    </label>
+                                </th>
+                                <td width="260">商品</td>
+                                <td width="90">单价</td>
+                                <td width="100">邀请者返利比例</td>
+                                <td width="110">被邀请者返利比例</td>
+                                <td width="100">返利会员等级</td>
+                                <td width="90">返积分比例</td>
+                                <td width="100">返积分会员等级</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                                    <input type="hidden" name="chkItem"  value="222" />
+                                </th>
+                                <td class="goods-info">
+                                    <p class="pic">
+                                        <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                        </a>
+                                    </p>
+                                    <p class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </p>
+                                </td>
+                                <td>￥10000.00</td>
+                                <td class="rebater-percent">30%</td>
+                                <td class="rebated-percent">20%</td>
+                                <td class="rebater-level">V1</td>
+                                <td class="repoints-percent"><span class="repoints-percent-none">无</span>
+                                </td>
+                                <td class="repoints-level">---</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                                    <input type="hidden" name="chkItem"  value="333" />
+                                </th>
+                                <td class="goods-info">
+                                    <p class="pic">
+                                        <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                        </a>
+                                    </p>
+                                    <p class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </p>
+                                </td>
+                                <td>￥10000.00</td>
+                                <td class="rebater-percent">30%</td>
+                                <td class="rebated-percent">20%</td>
+                                <td class="rebater-level">V1</td>
+                                <td class="repoints-percent">5%
+                                </td>
+                                <td class="repoints-level">V1</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="javascript:void(0)" class="icon icon-box-normal JQ_chkItem"></a>
+                                    <input type="hidden" name="chkItem"  value="333" />
+                                </th>
+                                <td class="goods-info">
+                                    <p class="pic">
+                                        <a href="javascript:void(0)" class="goods-img"><img src="http://misc.jjcdn.com/p/images/240X160_1.jpg" alt="" width="90" height="60">
+                                        </a>
+                                    </p>
+                                    <p class="name"><a href="javascript:void(0);" class="goods-name">梵尔特系列 现代简约 米白色 真皮 双人软床（1.5*1.9米） 博士架A</a>
+                                    </p>
+                                </td>
+                                <td>￥10000.00</td>
+                                <td class="rebater-percent">30%</td>
+                                <td class="rebated-percent">20%</td>
+                                <td class="rebater-level">V1</td>
+                                <td class="repoints-percent">5%
+                                </td>
+                                <td class="repoints-level">V1</td>
+                            </tr>
+                        </tbody>
+                </table>
+                
+            </div>
+            <!-- 列表部分结束 -->
+            <!-- 页码部分开始 -->
+            <div class="pages-small mt-10 tr">
+                <a href="javascript:void(0);" class="icon-prev-small-disable"></a>
+                <a href="javascript:void(0);" class="page-cur">1</a>
+                <a href="javascript:void(0);" class="page-nor">2</a>
+                <a href="javascript:void(0);" class="page-nor">3</a>
+                <a href="javascript:void(0);" class="page-nor">4</a>
+                <a href="javascript:void(0);" class="page-nor">5</a>
+                <a href="javascript:void(0);" class="page-nor">6</a>
+                <span>...</span>
+                <a href="javascript:void(0);" class="page-nor">20</a>
+                <a href="javascript:void(0);" class="icon-next-small-enable"></a>
+                <span class="go-page">
+                            去第
+                            <input type="text" maxlength="4">
+                            页
+                        </span>
+                <a href="javascript:void(0);" class="page-btn">确定</a>
+            </div>
+            <!-- 页码部分结束 -->
+            <!-- 操作按钮开始 -->
+            <div class="rebate-center-share-buttons tr">
+                <a id="J_previewShare" href="rebate-center-diy-share.html" class="share-buttons preview-page-button JQ_submitForm">预览页面</a>
+                <a id="J_createShare" href="rebate-center-diy-share.html" class="share-buttons mass-produce-share-button">生成批量分享页<i class="icon icon-point-right"></i></a>
+            </div>
+            </form>
+            <!-- 操作按钮结束 -->
+        </div>
+        <!-- 我的金海马右边结束 -->
+    </section>
+    <!-- 页面结束 -->
+
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "rebate-center-diy-list"
+    })
+</body>
+
+</html>

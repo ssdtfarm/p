@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="tab_ul">
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+		<li>文字</li>
+	</ul>
+	<script>
+		var obj = document.getElementById("tab_ul");
+		var sonArr = obj.getElementsByTagName("li");
+		var ind = 0;
+		for(var i=0; i<sonArr.length; i++){
+			addEvent("click", sonArr[i]);
+		}
+
+		function addEvent(type, obj, index){
+			if(document.addEventListener) {
+				obj.addEventListener(type, setColor, false);
+			}else{
+				obj.attachEvent(type, setColor);
+			}
+		}
+		function setColor() {
+			clearColor();
+			this.style.color = "#ff0000";
+		}
+		function clearColor() {
+			for(var i=0; i<sonArr.length; i++){
+				sonArr[i].removeAttribute("style");
+			}
+		}
+	</script>
+</body>
+</html>

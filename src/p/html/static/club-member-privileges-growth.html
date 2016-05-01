@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{ "cdn" : "@@miscPath", "name" : "club-member-privileges-growth", "title" : "我的成长" })
+</head>
+
+<body>
+<!-- 顶部栏开始 -->
+@@include("top-bar.html")
+<!-- 顶部栏结束 -->
+
+<!-- 头部开始 -->
+@@include("member-header.html",{"cdn":"@@miscPath","search":true, "headerName": "会员特权"})
+<!-- 头部结束 -->
+<!-- 会员俱乐部导航菜单部分开始 -->
+<section class="club-nav-warp">
+    <div class="kh-row-24 clearfix">
+        <!-- 延迟部分 -->
+        <div class="kh-col-24 pos-rel" id="J_clubNav">
+            <div class="loading"><i class="icon-loading-small"></i>
+            </div>
+        </div>
+        <!-- 加载部分 -->
+        <script id="J_templateClubNav" type="text/html">
+            <!-- 会员俱乐部导航栏开始 -->
+            <div class="club-nav kh-col-24">
+                <a href="javascript:void(0);" class="clearfix">
+                    <label>首页</label>
+                </a>
+                <a href="javascript:void(0);" class="clearfix">
+                    <label>返利商城</label>
+                </a>
+                <a href="javascript:void(0);" class="clearfix">
+                    <label>积分商城</label>
+                </a>
+                <a href="javascript:void(0);" class="clearfix cur">
+                    <label>会员特权</label>
+                </a>
+            </div>
+            <!-- 会员俱乐部导航栏结束 -->
+        </script>
+    </div>
+</section>
+<!-- 会员俱乐部导航菜单部分结束 -->
+<!-- 我的成长 开始 -->
+<section class="kh-row-24 clearfix">
+    <menu class="kh-col-24 member-privileges-menu">
+        <div class="corner-tab-nav">
+            <a href="javascript:void(0);" class="page-name clearfix cur"><i class="icon-c-nav-l"></i><label>我的成长</label><i
+                    class="icon-c-nav-r"></i></a>
+            <a href="javascript:void(0);" class="page-name clearfixr"><i class="icon-c-nav-l"></i><label>我的权益</label><i
+                    class="icon-c-nav-r"></i></a>
+        </div>
+    </menu>
+    <div class="kh-col-24">
+        <dl id="J_memberDetail" class="member-detail clearfix">
+            <dt class="member-pic">
+                <!-- 链接指向我的金海马首页 -->
+                <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif"
+                                                   width="100" height="100" class="lazy"></a>
+            </dt>
+            <dd class="member-info">
+                <!-- 链接指向我的金海马首页 -->
+                <h2><a class="member-name" href="javascript:void(0);">我叫沙发君</a><i class="icon-level-k2"></i><span
+                        class="growth-value"><i class="icon-growth"></i>200成长值</span><span class="growth-msg">已超过15%的用户，会员资格永久有效</span>
+                </h2>
+
+                <div class="experience-schedule-warp">
+                    <p class="experience-schedule" style="width:40%"><span class="get-experience">200</span><span
+                            class="distance-experience">9800</span>
+                    </p>
+                </div>
+                <p class="distance-experience-text">加油！升级到K3会员还差：9800积分</p>
+            </dd>
+            <dd class="level-pic">
+                <p class="level-title icon-level-title-k2"></p>
+            </dd>
+        </dl>
+        <div id="J_growthLevel" class="member-grow-section"></div>
+        <div id="J_growthLevelUp" class="member-grow-section"></div>
+        <div id="J_growthLevelRule" class="member-grow-section"></div>
+    </div>
+</section>
+<!-- 我的成长 结束 -->
+<!-- 底部开始 -->
+@@include("comment-footer.html")
+<!-- 底部结束 -->
+<!-- 载入底部引用 -->
+@@include("include_bottom.html",{ "cdn" : "@@miscPath" ,"name" : "club-member-privileges-growth"})
+</body>
+
+</html>

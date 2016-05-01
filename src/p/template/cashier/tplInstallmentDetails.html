@@ -1,0 +1,15 @@
+<div class="details-wrap">
+    <div class="triangle">
+        <div class="triangle-up select-type-<%=num%>"></div>
+    </div>
+    <div class="financing-info">
+        <p>付款总额：&yen;<span class="fc-f60 financing-total"><%=ORDER_PRICE*1+fee*1%></span>= 应付金额&yen;<span class="fc-f60 order-total"><%=ORDER_PRICE%></span> ＋ 分期手续费&yen;<span class="fc-f60 fee"><%=fee%></span>（分期手续费具体以银行收取为准）</p>
+            <p>首期还款：&yen;<span class="fc-f60 financing-one"><%=firstFee%></span></p>
+        <%if(lastFee) {%>
+            <p>每期应付：&yen;<span class="fc-f60 financing-one"><%=preFee%></span> x <span class="fc-f60 financing-num"><%=periods[num] -2%></span>期</p>
+            <p>尾期还款：&yen;<span class="fc-f60 financing-one"><%=lastFee%></span> x <span class="fc-f60 financing-num">1</span>期</p>
+        <%} else {%>
+            <p>每期应付：&yen;<span class="fc-f60 financing-one"><%=preFee%></span> x <span class="fc-f60 financing-num"><%=periods[num] -1%></span>期</p>
+        <%}%>
+    </div>
+</div>

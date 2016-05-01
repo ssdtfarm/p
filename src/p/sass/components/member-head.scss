@@ -1,0 +1,55 @@
+/**
+ *  ---------------------------------------------
+ *      会员系统通用头部
+ *      此样式与全站通用的头部有区别，大量应用于会员
+ *      系统
+ *      
+ *      author : linyandi
+ *      date   :2016-04-02
+ *      
+ *      modify : linyandi
+ *      date   : 2016-04-03
+ * 
+ *  ---------------------------------------------
+ */
+
+.member-header {
+    width: 100%;
+    min-width: 1190px;
+    min-height: 96px;
+    max-height: 96px;
+    border-bottom: 4px solid #2f6ceb;
+    background-color: #fff;
+    .member-logo {
+        display: inline-block;
+        width: 360px;
+    }
+    .member-logo-ad {
+        margin-left: 10px;
+    }
+    .member-header-title {
+        position: relative;
+        z-index: 999;
+        height: 65px;
+        margin: 15px 0 0 0;
+        border-left: 1px solid #ccc;
+        color: #2f6ceb;
+        font-size: 20px;
+        text-indent: 10px;
+        span {
+            position: absolute;
+            z-index: 991;
+            bottom: 0;
+            left: 0;
+            display: inline-block;
+        }
+    }
+}
+
+// top search 
+.member-header-search {
+    position: absolute;
+    z-index: 990;
+    right: 0;
+    top: 35px;
+}

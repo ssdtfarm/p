@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- 载入头部 -->
+    @@include("include_head.html",{
+    "cdn"   : "@@miscPath",
+    "name"  : "member-card",
+    "title" : "金海马商城-我的银行卡"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html",{
+        "cdn": "@@miscPath",
+        "headerName" : "我的订单",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 订单页面开始 -->
+    <section class="kh-row-24 clearfix">
+        <!-- 我的金海马导航栏开始 -->
+        <div class="member-nav kh-col-24">
+            <a href="javascript:void(0);" class="clearfix cur"><i class="icon-m-nav-l"></i><label>首页</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>积分中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>返利中心</label><i class="icon-m-nav-r"></i></a>
+            <a href="javascript:void(0);" class="clearfix"><i class="icon-m-nav-l"></i><label>我的钱包</label><i class="icon-m-nav-r"></i></a>
+        </div>
+        <!-- 我的金海马导航栏结束 -->
+        <!-- 侧边菜单开始 -->
+        <div class="kh-col-4 pos-rel" id="J_memberAside">
+            <div class="loading"><i class="icon-loading-small"></i></div>
+        </div>
+        <script id="J_templateMemberAside" type="text/html">
+            <aside class="member-aside">
+                <dl class="member-aside-icons">
+                    <!-- 个人图像和名称开始 -->
+                    <dt class="member-aside-info">
+                        <a href="javascript:void(0);"><img src="http://misc.jjcdn.com/p/images/member-default-portrait.gif" width="100" height="100" /></a>
+                    <p>晚上好，沙发君</p>
+                    </dt>
+                    <!-- 我的金海马开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-customer"></i>
+                            <label>我的金海马</label>
+                        </a>
+                    </dt>
+                    <!-- 我的订单开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-order"></i>
+                            <label>我的订单</label>
+                        </a>
+                    </dt>
+                    <!-- 我的优惠券开始 -->
+                    <dt class="member-aside-item  item-on">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-asset"></i>
+                            <label>我的资产</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的钱包</a>
+                        <a href="javascript:void(0);">我的银行卡</a>
+                        <a href="javascript:void(0);">我的优惠券</a>
+                    </dd>
+                    <!-- 我的收藏开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-favorite"></i>
+                            <label>我的收藏</label>
+                        </a>
+                    </dt>
+                    <!-- 售后管理开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-service"></i>
+                            <label>售后管理</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">退款管理</a>
+                        <a href="javascript:void(0);">售后管理</a>
+                    </dd>
+                    <!-- 账户设置开始 -->
+                    <dt class="member-aside-item">
+                        <a href="javascript:void(0);">
+                            <i class="m-icon icon-config"></i>
+                            <label>账户设置</label>
+                        </a>
+                    </dt>
+                    <dd class="member-aside-list">
+                        <a href="javascript:void(0);">我的资料</a>
+                        <a href="javascript:void(0);">安全中心</a>
+                        <a href="javascript:void(0);">收货地址</a>
+                    </dd>
+                </dl>
+            </aside>
+        </script>
+        <!-- 侧边菜单结束 -->
+        <!-- 我的银行卡右边开始 -->
+        <div class="kh-col-20 clearfix">
+            <div class="member-card-cash">
+                <div class="card-cash-title">
+                    <h4>我的提现银行卡</h4>
+                    <p>提现仅支持储蓄卡，且不需要开通网银</p>
+                </div>
+                <ul class="card-cash-list">
+                    <li class="no-card">
+                        <div class="dscr">
+                            您还没有提现银行卡
+                        </div>
+                    </li>
+                    <li class="has-card" id="11">
+                        <div class="img-wrap minsheng">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_cashDelete delete"></span>
+                        </div>
+                    </li>
+                    <li class="has-card" id="12">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_cashDelete delete"></span>
+                        </div>
+                    </li>
+                    <li class="has-card" id="13">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_cashDelete delete"></span>
+                        </div>
+                    </li>
+                    <li class="has-card" id="14">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_cashDelete delete"></span>
+                        </div>
+                    </li>
+                    <li class="card-cash-add">
+                        <a>添加银行卡&nbsp;&gt;</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="member-card-quick">
+                <div class="card-quick-title">
+                    <h4>我的快捷支付</h4>
+                    <p><i class="ques-icon"></i><a href="javascript:void(0)">常见问题</a></p>
+                </div>
+                <ul class="card-quick-list">
+                    <li class="no-card">
+                        <div class="dscr">
+                            您还没有开通快捷支付
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_quickDelete delete"></span>
+                        </div>
+                    </li>
+                    <li class="has-card">
+                        <div class="img-wrap">
+                            <img src="http://misc.jjcdn.com/p/images/member-card/2.png" alt="光大银行">
+                        </div>
+                        <div class="dscr">
+                            <span class="type">储蓄卡</span>
+                            <span class="tail-num">尾号&nbsp;*8888</span>
+                            <span class="J_quickDelete delete"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我的银行卡右边开始 -->
+    </section>
+    <!-- 订单页面结束 -->
+    <!-- 底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 底部结束 -->
+    <!-- 载入底部引用 -->
+    @@include("include_bottom.html",{
+        "cdn" : "@@miscPath",
+        "name" : "member-card"
+    })
+</body>
+
+</html>

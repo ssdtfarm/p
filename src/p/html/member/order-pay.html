@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    @@include("include_head.html", {
+        "cdn": "@@miscPath",
+        "name": "member-order-pay",
+        "title": "我的金海马-订单支付"
+    })
+</head>
+
+<body>
+    <!-- 顶部栏开始 -->
+    @@include("top-bar.html")
+    <!-- 顶部栏结束 -->
+    <!-- 头部开始 -->
+    @@include("member-header.html", {
+        "cdn": "@@miscPath",
+        "headerName": "我的订单",
+        "search": false
+    })
+    <!-- 头部结束 -->
+    <!-- 订单支付页面开始 -->
+    <div class="w1190 order-pay">
+        <input type="hidden" class="JQ_curtTime" data-endTime="1445778015" data-curTime="1445777980" />
+        <!-- 付款信息 -->
+        <div class="order-pay-info">
+            <p class="pay-info-tr fc-2f6">
+                <span class="pay-info-cell">订单号：</span>RZ00289937
+            </p>
+            <p class="pay-info-tr">
+                <span class="pay-info-cell">应付金额：</span>
+                <label class="pay-amount">&yen; 10500.00</label> 若有价格修改，请 <a id="J_refreshBtn" href="javascript:void(0);">刷新</a>
+            </p>
+            <p class="pay-info-tr">
+                <span class="pay-info-cell">收件人：</span>何旭梅
+                <br>
+                <span class="pay-info-cell">地　址：</span>湖北武汉硚口区中山大道215号武汉市第一医院
+                <br>
+                <span class="pay-info-cell">手机号码：</span>15927040775
+            </p>
+        </div>
+        <!-- 付款方式选择 -->
+        <section class="order-pay-text">请选择支付方式</section>
+        <section class="order-pay-way clearfix">
+            <div class="order-pay-bag">
+                <a href="javascript:void(0);" class="icon-box-normal"></a>
+                <span>账户余额：</span>
+                <label id="J_bagRemain" class="fc-f60">&yen;100.00</label>
+                <span>元</span>
+                <span class="bag-tip">使用金海马商城电子钱包余额支付，更便捷，更安全。</span>
+            </div>
+            <ul class="order-pay-tab" id="J_orderPayTab">
+                <li class="tab-item-1 on">在线支付</li>
+                <li class="tab-item-2">微信支付<!--<i class="icon-weixinPay-10off"></i>--></li>
+                <li class="tab-item-3">转账支付</li>
+            </ul>
+            <div class="order-pay-content">
+                <!-- 在线支付 -->
+                <blockquote id="J_content_0">
+                    <form action="javascript:void(0);" method="post" target="_blank">
+                        <!-- 平台支付 -->
+                        <p class="fc-8c8">为了保证及时处理您的订单，请于下单<span class="fc-f60">24小时</span>内付款，预期未付款订单将被取消，需重新下单。</p>
+                        <p class="order-payment-method">
+                            <label>支付平台</label>
+                        </p>
+                        <p class="online-pay-tr">
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment on" data-pay="alipay"><img src="//misc.jjcdn.com/p/images/paylogo/alipay.png" width="100" height="30" /></a>
+                        </p>
+                        <!-- 网银支付 -->
+                        <p class="online-pay-tr fc-8c8">支付网银（支持信用卡/储蓄卡）
+                            <A href="javascript:void(0);">了解网银支付限额 ></A>
+                        </p>
+                        <p class="order-payment-method">
+                            <label>支付网银</label>
+                        </p>
+                        <p class="online-pay-tr JQ_payRadio">
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="cmbpay"><img src="//misc.jjcdn.com/p/images/paylogo/cmbpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="abcpay"><img src="//misc.jjcdn.com/p/images/paylogo/abcpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="njcbpay"><img src="//misc.jjcdn.com/p/images/paylogo/njcbpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="cgbpay"><img src="//misc.jjcdn.com/p/images/paylogo/cgbpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="commpay"><img src="//misc.jjcdn.com/p/images/paylogo/commpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="cebpay"><img src="//misc.jjcdn.com/p/images/paylogo/cebpay.png" width="100" height="30" /></a>
+                            <a href="javascript:void(0);" class="pay-logo JQ_onlinePayment" data-pay="ccbpay"><img src="//misc.jjcdn.com/p/images/paylogo/ccbpay.png" width="100" height="30" /></a>
+                        </p>
+                        <p class="pay-line JQ_payLine">
+                            <a href="javascript:void(0);" class="btns-130x30" id="J_onlinePay">去付款</a>
+                            <span class="pre-cut-item JQ_cutTime"><!-- 支付剩余时间：<em class="pay-countdown">13: 35: 53</em> --></span>
+                        </p>
+                        <input type="hidden" name="payType" value="alipay" />
+                    </form>
+                </blockquote>
+                <!-- 微信支付 -->
+                <blockquote id="J_content_1" class="hide_content clearfix">
+                    <div class="fc-8c8 dis-block">通过微信扫描二维码，完成支付，方便快捷。</div>
+                    <div class="code-info clearfix">
+                        <div class="weixin-2d">
+                            <p class="icon-weixin-pay"></p>
+                            <p class="code-img fl" id="JQ_code_img">
+                                <img src="" alt="">
+                            </p>
+                            <p class="tips-img JQ_tips_img"><img src="http://misc.jjcdn.com/p/images/weixin-pay/img_weixin_pay.png"></p>
+                        </div>
+                        <div class="code-pay-tips fl">
+                            <!--<p class="fc-f60 active-title">微信支付立减10元，还有随机红包领！</p>-->
+                            <!--<p class="fc-8c8 active-txt">订单满2000元可用；活动时间：2015年11月27日--2015年12月15日</p>-->
+                            <p class="weixin-tip" title="请使用微信扫描二维码以完成支付" alt="请使用微信扫描二维码以完成支付"></p>
+                            <p class="fc-8c8 ask-for-kf">如有疑问，请联系客服
+                                <a href="javascript:void(0);" class="icon-order-pay"></a>
+                            </p>
+                        </div>
+                    </div>
+                </blockquote>
+                <!-- 转账支付 -->
+                <blockquote id="J_content_2" class="hide clearfix">
+                    <div class="fc-8c8 dis-block">通过转账到商城账户，完成订单付付款！</div>
+                    <div class="order-transfer-form fl  mt10">
+                        <form action="javascript:void(0);" method="post">
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇款人姓名：</label>
+                                <input type="text" class="transfer-form-input" name="name" />
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇入银行：</label>
+                                <input type="text" class="transfer-form-input" name="bankName" />
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇入帐号：</label>
+                                <input type="text" class="transfer-form-input" name="bankaccount" />
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇款金额：</label>
+                                <input type="text" class="transfer-form-input" name="remitAmount" />
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇款单号：</label>
+                                <input type="text" class="transfer-form-input" name="remitOrderID" />
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr JQ_validateTr">
+                                <label>汇款日期：</label>
+                                <input type="text" readonly class="transfer-form-input" name="remitDate" id="J_datepicker" />
+                                <i class="icon-date-picker pick-date" id="J_pickDateBtn"></i>
+                                <span class="fc-f60">*</span>
+                            </p>
+                            <p class="transfer-form-tip"></p>
+                            <p class="transfer-form-tr">
+                                <label>备注：</label>
+                                <textarea rows="5" cols="30" name="summary"></textarea>
+                            </p>
+                            <p class="transfer-form-tr mt10">
+                                <label>&nbsp;</label>
+                                <a href="javascript:void(0);" class="btns-130x30" id="J_remitPayBtn">确认付款</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="bank-account-info fc-8c8 fl">
+                        <h2>金海马商城银行账户信息</h2>
+                        <p class="fc-333">
+                            <label>商户名称：</label>深圳市香江祥龙电子商务有限公司（金海马商城）</p>
+                        <p class="fc-333">
+                            <label>开户行：</label>招行广州天安支行</p>
+                        <p class="fc-333">
+                            <label>银行账号：</label><span class="bank-number">7559-2196-5810-113</span></p>
+                        <p class="fc-8c8 mt10">如有疑问，请联系客服
+                            <a href="javascript:void(0);" class="icon-order-pay"></a>
+                        </p>
+                    </div>
+                </blockquote>
+            </div>
+        </section>
+    </div>
+    <!-- 订单支付页面结束 -->
+    <!-- 会员系统通用底部开始 -->
+    @@include("comment-footer.html")
+    <!-- 会员系统通用底部结束 -->
+    @@include("include_bottom.html", {
+        "cdn": "@@miscPath",
+        "name": "member-order-pay"
+    })
+</body>
+
+</html>

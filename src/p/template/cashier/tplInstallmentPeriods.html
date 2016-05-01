@@ -1,0 +1,10 @@
+<p class="title">选择分期期数：</p>
+<ul class="list clearfix">
+    <%for(var i=0; i<periods.length; i++) {%>
+        <%if(i==0){%>
+            <li class="bank-selected periods-item" data-num="<%=i%>" data-type="<%=type%>"><%=periods[i]%> 期</li>
+        <%} else {%>
+            <li class="periods-item" data-num="<%=i%>" data-type="<%=type%>"><%=periods[i]%> 期</li>
+        <%}%>
+    <%}%>
+</ul>

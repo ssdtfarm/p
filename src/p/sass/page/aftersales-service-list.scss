@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/member-head.scss";    // main-head
+@import "../components/common-foot.scss";  // global-footer
+
+@import "../components/member-nav.scss";    // member-system-nav
+@import "../components/member-aside.scss";     // member-aside
+@import "../components/member-select.scss";         // icon-sprite
+@import "../components/common-search-bar.scss";         // icon-sprite
+@import "../components/kindeditor-theme.scss";
+@import "../components/common-dialog.scss";    // art-dialog
+@import "../components/common-min-bar.scss";    // min-bar
+
+/*
+ *  aftersales-service-list 售后服务列表页样式
+ *
+ *  author:JinJing
+ *  date:20150215
+*/
+body {
+    background: #e4e4e4;
+}
+/* ============  btns =====================*/
+.btn-130x30 {
+    display:  inline-block;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.btn-orange {
+    background-color: #f60;
+}
+.btn-orange:hover {
+    background-color: #ee950a;
+}
+.btn-gray {
+    background-color: #ccc;
+    cursor: default;
+    display: none;
+}
+.btn-gray:hover {
+    background-color: #ccc;
+}
+.margin-left {
+    margin-left: 10px;
+}
+/*售后列表基本样式*/
+
+.aftersales-list {
+    /*margin-left: 20px;*/
+}
+.aftersales-list-table {
+    width: 100%;
+    text-align: center;
+    font-family: "宋体";
+}
+.aftersales-list-table .aftersales-list-thead th {
+    padding: 8px 0;  
+    text-align: center;
+    color: #fff;
+    background: #61bbe0;
+}
+.aftersales-list-table .aftersales-list-tbody {
+    background: #fff;
+}
+.aftersales-list-table .aftersales-list-tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.aftersales-list-table .aftersales-list-tbody tr:last-child {
+    border: none;
+}
+.aftersales-list-table .aftersales-list-tbody td {
+    padding: 23px 0 22px;
+}
+/*售后列表页面模拟下拉菜单*/
+.member-affterSales-top-search {
+    height: 32px;
+    padding: 30px 0 20px 0;
+}
+/*突出显示文字颜色*/
+
+.aftersales-list-table .aftersales-list-tbody td.refund-num, .aftersales-list-table .aftersales-list-tbody td.order-num {
+    color: #2f6ceb;
+}
+.aftersales-list-table .aftersales-list-tbody td.aftersales-succeful {
+    color: #61bbe0;
+}
+/*取消查看*/
+
+.aftersales-list-table .aftersales-list-table-btn {
+    color: #2f6ceb;
+}
+.aftersales-list-table .aftersales-list-table-btn:hover {
+    color: #f60;
+}
+/*没有交易记录*/
+.aftersales-list-table .aftersales-list-tbody .aftersales-list-none{
+    height: 90px;
+    padding-top: 30px;
+    vertical-align: top;
+}
+/*================================== 弹出表单样式 ====================================*/
+.refund-form {
+    width: 100%;
+}
+.refund-form .refund-form-tr{
+}
+.refund-form-tr td {
+    padding: 10px 0;
+}
+.refund-form-tr .refund-form-th {
+    display: inline-block;
+    width: 120px;
+    color: #333;
+    text-align: right;
+}
+.refund-form-amount {
+    width: 148px;
+    height: 28px;
+    padding: 0 5px;
+    margin: 0 10px;
+    color: #333;
+    border: 1px solid #b4b4b4;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.refund-form-note {
+    width: 358px;
+    height: 88px;
+    margin: 0 4px;
+    padding: 5px;
+    border: 1px solid #b4b4b4;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    resize: none;
+}
+.refund-form-pictures {
+    width: 100%;
+    height: 60px;
+    overflow:  hidden;
+}
+.refund-form-pictures li {
+    position: relative;
+    z-index: 990;
+    float: left;
+    width: 78px;
+    height: 58px;
+    overflow: hidden;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+.refund-form-pictures .item-mark {
+    position: absolute;
+    z-index: 991;
+    left:0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    -webkit-opacity: 0.7;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background-color: #000;
+}
+.refund-form-pictures li:hover .item-mark {
+    display: inline-block;
+}
+.refund-form-pictures .item-mark a {
+    margin: 0 2px;
+    text-indent: -9999px;
+}
+.refund-form-pictures li img{
+    width: 78px;
+    height: 58px;
+}

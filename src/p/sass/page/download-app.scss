@@ -1,0 +1,113 @@
+//layout
+@charset "UTF-8";
+@import "../layout/layout.scss";          // base
+           // grid-system
+          // icon-system
+@import "../components/common-top-bar.scss";       // global-top-bar
+
+@import "../components/common-min-bar.scss";    // min-bar
+@import "../components/common-head.scss";    // main-head
+//@import "../components/common-crumbs.scss";  // main-breadcrumb-trail
+@import "../components/common-foot.scss";  // global-footer
+@import "../components/common-search-bar.scss"; 
+
+
+.load-head {
+  width: 100%;
+  background: url(../images/downAppBg1.png) no-repeat center -1px;
+}
+.load-content {
+  position: relative;
+  width: 1190px;
+  margin:0 auto;
+}
+.load-content img {
+  vertical-align: middle;
+  display: block;
+}
+.load-foot {
+  width: 100%;
+  background: url(../images/downAppBg2.png) no-repeat center -1px;
+}
+.iphoneLoad, .androidLoad, .code ,.code1{
+  position: absolute;
+  top: 501px;
+  width: 239px;
+  height: 117px;
+  border-radius: 4px;
+}
+.iphoneLoad {
+  left: 44px;
+}
+.androidLoad {
+  left:333px;
+}
+.code {
+  left: 623px;
+}
+.code canvas, .code table {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+}
+
+.code1 {
+  left: 915px;
+}
+.code1 canvas, .code1 table {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+}
+
+.member-foot {
+  margin-top: 0;
+}
+.code2 {
+  position: absolute;
+  width: 98px;
+  height: 98px;
+  left: 95px;
+  top: 411px;
+}
+
+.code2 canvas, .code2 table {
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+
+.ios-tips {
+  position: absolute;
+  bottom: 202px;
+  left: 86px;
+  width: 402px;
+  height: 61px;
+  background: url(../images/download-ios-tips.png);
+  display: none;
+}
+.appLogo {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../images/applogoMin.png);
+}
+.wapLogo{
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url(../images/download_wapLogo.png);
+}
+.load-head .appLogo {
+  left: 670px;
+  bottom: 128px;
+}
+.load-head .wapLogo{
+  left: 968px;
+  bottom: 130px;
+}
+.load-foot .appLogo {
+  left: 131px;
+  bottom: 252px;
+}

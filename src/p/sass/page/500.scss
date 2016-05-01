@@ -1,0 +1,79 @@
+/**
+ *  ---------------------------------------------
+ *      500页面样式
+ *      全站通用的500页面样式
+ *      
+ *      author : jinjing
+ *      date   :2016-04-25
+
+ *  ---------------------------------------------
+ */
+
+@charset "UTF-8";
+@import "../layout/layout.scss"; // base
+// grid-system
+// icon-system
+@import "../components/common-top-bar.scss"; // global-top-bar
+@import "../components/common-head.scss"; // main-head
+@import "../components/common-foot.scss"; // global-footer
+@import "../components/common-min-bar.scss"; // min-bar
+@import "../components/common-crumbs.scss"; // main-breadcrumb-trail
+@import "../components/common-search-bar.scss"; // head-search-bar
+@import "../layout/layout.scss";
+
+body{
+    background: #fff;
+}
+.erro-content {
+    text-align: center;
+    color: #333;
+    .erro-main-bg {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -288px;
+        margin-top: -161px;
+        width: 576px;
+        height: 323px;
+        //background: url(#{$cdn}/images/404_bg.jpg) no-repeat center 0;
+    }
+    .erro-mainPic {
+        display: inline-block;
+        width: 400px;
+        height: 245px;
+        background: url(../images/erro/500_16.gif) no-repeat center bottom;
+    }
+    .erro-title {
+        font-size: 48px;
+    }
+    .erro-main-msg {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .erro-back {
+        margin-top: 20px;
+        font-size: 14px;
+        a {
+            color: #f60;
+            text-decoration: underline;
+        }
+        span {
+            color: #f60;
+        }
+    }
+    .btn-line {
+        margin-top: 20px;
+        text-align: center;
+        .btn-back {
+            display: inline-block;
+            width: 88px;
+            height: 28px;
+            border: 1px solid #333;
+            border-radius: 2px;
+            line-height: 28px;
+            text-align: center;
+            color: #333;
+            font-size: 14px;
+        }
+    }
+}

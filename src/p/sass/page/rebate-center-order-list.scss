@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@import "../layout/layout.scss";          
+           
+ 
+@import "../components/common-top-bar.scss";       
+
+@import "../components/member-head.scss";    
+@import "../components/common-foot.scss";  
+
+@import "../components/member-ui.scss";     
+@import "../components/member-nav.scss";
+@import "../components/common-search-bar.scss";
+@import "../components/common-pages.scss";
+ @import "../components/club-aside.scss";
+
+/*
+ *  rebate-center-order-list 返现商品订单
+ *
+ *  author:JinJing
+ *  date:20150314
+ */
+
+body {
+    background: #e4e4e4;
+}
+.w60 {
+    width: 60px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt40 {
+    margin-top: 40px;
+}
+.mb188 {
+    margin-bottom: 188px;
+}
+.font-bold {
+    font-weight: bold;
+}
+.rebate-center-main .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+.rebate-center-main .icon-box-normal {
+    width: 20px;
+    height: 20px;
+}
+.rebate-center-main .icon-box-checked {
+    width: 20px;
+    height: 20px;
+}
+/*============== 返利中心定制分享顶部导航  ================*/
+/*rebate-center-menu*/
+
+.rebate-center-menu {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+/* rebate-center nav style */
+
+.rebate-center-nav {
+    width: 740px;
+    height: 40px;
+    padding: 0;
+}
+/* normal nav */
+
+.rebate-center-nav a {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    background: #8c8c8c;
+}
+.rebate-center-nav a i {
+    float: left;
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: hidden;
+}
+.rebate-center-nav a label {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* normal nav hover */
+
+.rebate-center-nav a:hover {
+    color: #fff;
+}
+.rebate-center-nav a:hover i {
+    visibility: visible;
+}
+.rebate-center-nav a:hover label {
+    position: relative;
+    padding: 0 10px;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a:hover label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/* nav cur */
+
+.rebate-center-nav a.cur i {
+    visibility: visible;
+}
+.rebate-center-nav a.cur label {
+    position: relative;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #61bbe0;
+}
+.rebate-center-nav a.cur label:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-color: #61bbe0 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width: 15px 8px 8px 8px;
+}
+/*===== 我的收藏操作导航菜单  =====*/
+/*返利商场首页*/
+
+.rebate-center-menu .rebate-store-index {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 10px;
+    width: 90px;
+    height: 20px;
+}
+.rebate-center-menu .rebate-store-index a {
+    color: #f60;
+}
+.rebate-center-menu .rebate-store-index a:hover {
+    color: #ee950a;
+}
+/*筛选切换部分开始*/
+.rebate-center-main .rebate-center-filler-tab{
+    width: 920px;
+    padding: 10px 10px 20px 10px;
+    margin-top: 10px;
+    background: #fff;
+}
+.rebate-center-filler-tab .filler-tab-item{
+    display:block;
+    width: 90px;
+    height: 30px;
+    float: left;
+    margin: 10px 10px 0 0;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+}
+.rebate-center-filler-tab .filler-tab-item.cur,.rebate-center-filler-tab .filler-tab-item:hover{
+    color: #61bbe0;
+    border-color: #61bbe0;
+}
+
+/*返现商品列表*/
+.rebate-center-order-list .order-list-table {
+    width: 100%;
+    text-align: center;
+}
+.order-list-table th {
+    text-align: center;
+}
+.order-list-table thead th, .order-list-table thead td {
+    padding: 6px 0;
+    background: #ccc;
+}
+.order-list-table tbody {
+    background: #fff;
+}
+.order-list-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+.order-list-table tbody th {
+    position: relative;
+}
+.order-list-table tbody td {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+.order-list-table tbody th .icon {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 20px;
+}
+/*商品/下单时间*/
+.order-list-table .order-goods-info .pic {
+    float: left;
+    width: 90px;
+    height: 60px;
+    overflow: hidden;
+}
+.order-list-table .order-goods-info .goods-img img {
+    width: 90px;
+    height: 60px;
+}
+.order-list-table .order-goods-info .info {
+    width: 118px;
+    height: 70px;
+    float: left;
+    margin-top: -5px;
+    padding-left: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+.order-goods-info .info .name{
+    height: 34px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.order-list-table .order-goods-info .goods-name {
+    height: 34px;
+    display: block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    color: #8c8c8c;
+}
+.order-list-table .order-goods-info .goods-name:hover {
+    color: #f60;
+}
+/*返现活动名称*/
+.order-list-table .active-name{
+    text-align: left;
+    color: #8c8c8c;
+}
+/*单价*/
+.order-list-table .price{
+    color: #f60;
+}
+/*购买数*/
+.order-list-table .quantity{
+    color: #8c8c8c;
+}
+/*返现会员等级*/
+.order-list-table .rebate-member-level{
+    color: #8c8c8c;
+}
+/*订单状态*/
+.order-list-table .order-status .aftersales-status{
+    color: #333;
+}
+.order-list-table .order-status .aftersales-status:hover{
+    cursor: text;
+    color: #333;
+}
+/*返现状态*/
+.order-list-table .rebate-status .reason-href{
+    color: #2f6ceb;
+}
+.order-list-table .rebate-status .reason-href:hover{
+    color: #f60;
+}
+ .rebate-status .rebate-already{
+    color: #f60;
+}
+/*邀请返现现金*/
+.order-list-table .rebater-details,.order-list-table .rebated-details{
+    color: #8c8c8c;
+}
+.rebater-details p{
+    width: 67px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.order-list-table .rebater-details .rebate-already,.order-list-table .rebated-details .rebate-already{
+    color: #f60;
+}

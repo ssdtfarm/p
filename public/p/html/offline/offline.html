@@ -592,16 +592,20 @@
     <!-- 顶部大图结束 -->
     <!-- 顶部广告图开始 -->
     <div class="ofl-ad">
-        <a href="javascript:void(0)" class="ad-link"></a>
+        <a href="javascript:void(0)" class="ad-link" target="_blank"></a>
     </div>
     <!-- 顶部广告图结束 -->
     <!-- 体验店列表开始 -->
     <div class="kh-row-24 clearfix">
         <div class="kh-col-24 ofl-sites">
-            <div class="kh-col-10 ofl-sites-map"></div>
+            <div class="kh-col-10 ofl-sites-map">
+                <div id="J_mapContainer" class="map-container"></div>
+                <div id="J_zoomOut" class="map-zoom out"></div>
+                <div id="J_zoomIn" class="map-zoom in"></div>
+            </div>
             <div class="kh-col-8 ofl-sites-list list">
                 <div class="selector-wrap">
-                    <div class="selector j_selector">
+                    <div class="selector J_selector">
                         <p class="title">地区</p>
                         <i class="triangle  triangle-down"></i>
                         <input type="text" class="selector-input">
@@ -612,7 +616,7 @@
                             <li><a href="#">华东地区</a></li>
                         </ul>
                     </div>
-                    <div class="selector j_selector">
+                    <div class="selector J_selector">
                         <p class="title">城市</p>
                         <i class="triangle  triangle-down"></i>
                         <input type="text" class="selector-input">
@@ -706,14 +710,14 @@
             <div id="J_oflDetail" class="ofl-detail clearfix">
                 <div class="kh-col-6 ofl-detail-dscr">
                     <h3><span class="en-name"></span>金海马维亚店<i></i></h3>
-                    <div class="wrap J_detailWrap">
-                        <div class="list J_detailList">
+                    <div class="wrap" id="J_detailWrap">
+                        <div class="list" id="J_detailList">
                             【整体介绍】金海马商城智能家居馆位于广州天河区，建筑面积超过1800平方米，共设客厅、餐厅、户外、家具小件、家庭办公、书房、卧室、定制家具区、儿童家具、家居百货等10个体验场景，倾力缔造“绿色、时尚、品位”的全屋家居全新生活，融合多重科技元素，开启数字化购物服务，向消费者提供轻松便捷的家居消费新体验，引领家居电商进入4.0时代。
-                             
+                             <br/><br/>
                             【未来之家】在未来之家，你可以通过手机、电脑、控制面板等5种方式，管理家中所有的带电设备，比如：电灯、家电、影音系统、电动窗帘等等。无论您是身在家中还是在全球的任何一个地方，都可以通过手机、电脑看到您家中所有带电设备的工作状态，并可控制它们的开关及扩展功能，如空调的模式、风速、温度、风向等，还可以通过远程监控功能关爱家中老人、小孩的生活状况，带给您安全、舒适、高品味的智能生活享受。
-
+                            <br/><br/>
                             【团队介绍】金海马维亚店在店长XX带领下，共有XX名销售精英，为您提供专业的家居购买保养意见，为您的家保驾护航。
-                             
+                             <br/><br/>
                             【商城寄语】金海马商城维亚店，邀请您共同重新感悟生活，发现不一样的自我，不一样的生活态度！
                         </div>
                     </div>
@@ -727,6 +731,10 @@
                             <li><a target="_blank" href="javascript:void(0)"><img src="http://misc.jjcdn.com:80/p/images/offline/detail-big.jpg"></a></li>
                             <li><a target="_blank" href="javascript:void(0)"><img src="http://misc.jjcdn.com:80/p/images/offline/detail-big.jpg"></a></li>
                         </ul>
+                    </div>
+                    <div class="arrow">
+                        <a href="javascript:void(0)" class="prev"></a>
+                        <a href="javascript:void(0)" class="next"></a>
                     </div>
                 </div>
                 <div class="kh-col-19">
@@ -748,7 +756,7 @@
     <!-- 体验店详情结束 -->
     <!-- 体验店商品开始 -->
     <div class="kh-row-24 clearfix">
-        <div id="J_ofl-item" class="kh-col-24 ofl-item">
+        <div id="J_oflItem" class="kh-col-24 ofl-item">
             <h3>顾客最爱<span class="en-name"></span><i></i></h3>
             <ul>
                 <li class="kh-col-6">

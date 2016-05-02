@@ -96,9 +96,32 @@ $icon_ofl_slide_gray: -343px -2px no-repeat;
     padding: 100px 0;
     // height: 344px;
     .ofl-sites-map {
+        position: relative;
         margin-left: 0;
         height: 344px;
-        background-color: #000;
+        background-color: #fff;
+    }
+    .map-container {
+        width: 488px;
+        height: 342px;
+        border: 1px solid $base-color-ccc;
+    }
+    .map-zoom {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        z-index: 10;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        &.out {
+            right: 60px;
+            background: url($offlineSprite) $icon_ofl_sub;
+        }
+        &.in {
+            right: 20px;
+            background: url($offlineSprite) $icon_ofl_plus;
+        }
     }
     .ofl-sites-list {
         overflow: hidden;
@@ -303,6 +326,7 @@ $icon_ofl_slide_gray: -343px -2px no-repeat;
             .list {
                 position: absolute;
                 width: 290px;
+                line-height: 18px;
             }
             .scrollbox {
                 opacity: 0;
@@ -337,6 +361,41 @@ $icon_ofl_slide_gray: -343px -2px no-repeat;
     		width: 540px;
     		height: 360px;
     	}
+        .arrow {
+            position: absolute;
+            bottom: 0;
+            right: -64px;
+            font-size: 0;
+            a {
+                position: relative;
+                display: inline-block;
+                margin-right: 2px;
+                width: 40px;
+                height: 40px;
+                background-color: $base-color-ccc;
+                &:hover {
+                    background-color: $base-color-f60;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 14px;
+                    height: 20px;
+                }
+            }
+            .prev:after {
+                background: url($offlineSprite) $icon_ofl_arrow_left_333;
+            }
+            .next:after {
+                background: url($offlineSprite) $icon_ofl_arrow_right_fff;
+            }
+
+        }
     }
     .ofl-detail-small {
         position: relative;
@@ -469,4 +528,62 @@ $icon_ofl_slide_gray: -343px -2px no-repeat;
 			text-align: center;
 		}
 	}
+}
+
+.send-dialog {
+    p {
+        margin-bottom: 10px;
+        color: $base-color-8c8;
+        text-indent: 10px;
+    }
+    .send-content {
+        margin: 0 auto;
+        padding: 0 10px;
+        width: 338px;
+        border: 1px dashed $base-color-ccc;
+        color: $base-color-333;
+        line-height: 26px;
+        span {
+            color: $base-color-8c8;
+        }
+    }
+    .send-op {
+        position: relative;
+        margin-top: 10px;
+        text-align: center;
+        .send-input {
+            display: block;
+            margin: 0 auto 20px;
+            width: 128px;
+            height: 28px;
+            border: 1px solid $base-color-ccc;
+            border-radius: 4px;
+            text-indent: 10px;
+        }
+        .send-tips {
+            position: absolute;
+            display: none;
+            margin-top: -20px;
+            margin-left: -66px;
+            color: #f60;
+        }
+        .send-getcode {
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 75px;
+            width: 90px;
+            height: 30px;
+            border-radius: 4px;
+            color: #fff;
+            line-height: 30px;
+            background-color: $base-color-8c8;
+        }
+    }
+}
+.ui-dialog-header {
+    background-color: #f60;
+    .ui-dialog-close {
+        color: #f60;
+        background-color: rgba(255,255,255,.75);
+    }
 }

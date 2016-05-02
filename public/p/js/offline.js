@@ -1,1 +1,1 @@
-seajs.config({preload:["jquery","util"]}),seajs.use(["lib/page/offline"]);
+seajs.config({preload:["jquery","util"]}),seajs.use(["lib/page/offline.js"]);

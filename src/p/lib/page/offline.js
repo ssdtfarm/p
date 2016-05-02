@@ -8,10 +8,11 @@
  *  ---------------------------------------------
  */
 define(function(require, exports, module) {
-    var DiyScroll = require("../components/diyScroll/diyScroll");
+    var DiyScroll = require("../components/diyScroll/diyScroll");//IE8有兼容问题
     var slider = require("../components/slider/1.0.0/slider");
     var Dialog = require("../components/dialog/1.0.0/dialog");
-    new DiyScroll(".J_detailWrap", ".J_detailList", { boxClass: "scrollbox", barClass: "scrollbar" });
+    var tempoffline = require("../template/tempoffline");
+    new DiyScroll("#J_detailWrap", "#J_detailList", { boxClass: "scrollbox", barClass: "scrollbar", barHeight: 10 });
     // 体验馆列表（手风琴效果）
     $("#J_sideMenu").slide({
         titCell: ".hd",
@@ -20,9 +21,11 @@ define(function(require, exports, module) {
         effect: "slideDown",
         delayTime: 300,
         trigger: "click",
-        returnDefault: false
+        returnDefault: false,
+        autoPlay: true,
+        interTime: 8000
     });
-    // 切换手风琴右上角样式
+    // 切换体验馆列表右上角样式
     $(document).on("click", "#J_sideMenu .hd", function(e) {
         var self = $(this);
         if(self.hasClass("on")){
@@ -44,12 +47,18 @@ define(function(require, exports, module) {
             }
         });
     });
+    // 体验店地图
+    var map = new BMap.Map("J_mapContainer");//初始化地图,map暴露为全局对象
+    map.centerAndZoom("广州天河区", 12);// 初始化地图,设置城市和地图级别。
+    map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
     // 发送到手机的弹窗
     $(document).on("click", ".J_sendBtn", function(){
         var d = new Dialog({
             title: "免费发送到手机",
-            width: 400,
-            height: 400,
+            content: tempoffline("tplSendPhone"),
+            width: 384,
+            height: 210,
             fixed: true,
             zIndex: 198502,
             button: [{
@@ -69,13 +78,14 @@ define(function(require, exports, module) {
     $("#J_oflDetail").slide({
         mainCell: ".bd ul",
         effect: "left",
-        autoPlay: true
+        autoPlay: true,
+        pnLoop: false
     });
     //自定义下拉  
     !(function() {
         $(document).on('click', '.selector', function(e) {
             e.stopPropagation();
-            $('.j_selector').removeAttr('data-open')
+            $('.J_selector').removeAttr('data-open')
                 .find('.list').slideUp('fast')
                 .end()
                 .find('.triangle').removeClass('triangle-up-active');

@@ -35,10 +35,11 @@ define(function(require, exports, module) {
 
         this.settings = {
             boxClass: 'scrollbox',
-            barClass: 'scrollbar'
+            barClass: 'scrollbar',
+            barHeight: 0
         }
 
-        this.h = 0; 
+        this.h = 0;
         this.t = 0;
         this.barMaxTop = 0;
         this.contentMaxTop = 0;
@@ -61,7 +62,9 @@ define(function(require, exports, module) {
             this.wrap.appendChild(this.scrollBox);
 
 
-            this.h = this.scale * this.scrollBox.scrollHeight;
+            // this.h = this.scale * this.scrollBox.scrollHeight;
+            // 这里实现自定义bar的高度
+            this.settings.barHeight == 0 ? this.h = this.scale * this.scrollBox.scrollHeight : this.h = this.settings.barHeight;
             this.barMaxTop = this.scrollBox.scrollHeight - this.h;
             this.contentMaxTop = this.wrap.clientHeight - this.list.scrollHeight;
             if (this.scale == 1) this.scrollBox.style.display = 'none';
